@@ -1,0 +1,92 @@
+
+
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("//heq2wz-cr.myshopify.com/cdn/fonts/source_serif_4/sourceserif4_n4.0b3e8927bb8678aae824c5f2b6a3826350623570.woff2") format("woff2"),
+       url("//heq2wz-cr.myshopify.com/cdn/fonts/source_serif_4/sourceserif4_n4.5759d0c758bab9c1ee75668d3957dcd23b6fac99.woff") format("woff");
+}
+
+@font-face {
+  font-family: Figtree;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("//heq2wz-cr.myshopify.com/cdn/fonts/figtree/figtree_n4.3c0838aba1701047e60be6a99a1b0a40ce9b8419.woff2") format("woff2"),
+       url("//heq2wz-cr.myshopify.com/cdn/fonts/figtree/figtree_n4.c0575d1db21fc3821f17fd6617d3dee552312137.woff") format("woff");
+}
+
+@font-face {
+  font-family: Figtree;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("//heq2wz-cr.myshopify.com/cdn/fonts/figtree/figtree_n5.3b6b7df38aa5986536945796e1f947445832047c.woff2") format("woff2"),
+       url("//heq2wz-cr.myshopify.com/cdn/fonts/figtree/figtree_n5.f26bf6dcae278b0ed902605f6605fa3338e81dab.woff") format("woff");
+}
+
+
+
+  @font-face {
+  font-family: "Source Serif 4";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("//heq2wz-cr.myshopify.com/cdn/fonts/source_serif_4/sourceserif4_n5.66195e19da512871e13720719446b02eb0ad6d08.woff2") format("woff2"),
+       url("//heq2wz-cr.myshopify.com/cdn/fonts/source_serif_4/sourceserif4_n5.7190fbb7deb53a7711fe3457e449d3c716a05f42.woff") format("woff");
+}
+
+
+
+
+  @font-face {
+  font-family: Figtree;
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("//heq2wz-cr.myshopify.com/cdn/fonts/figtree/figtree_n6.9d1ea52bb49a0a86cfd1b0383d00f83d3fcc14de.woff2") format("woff2"),
+       url("//heq2wz-cr.myshopify.com/cdn/fonts/figtree/figtree_n6.f0fcdea525a0e47b2ae4ab645832a8e8a96d31d3.woff") format("woff");
+}
+
+
+
+
+  @font-face {
+  font-family: Figtree;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("//heq2wz-cr.myshopify.com/cdn/fonts/figtree/figtree_n5.3b6b7df38aa5986536945796e1f947445832047c.woff2") format("woff2"),
+       url("//heq2wz-cr.myshopify.com/cdn/fonts/figtree/figtree_n5.f26bf6dcae278b0ed902605f6605fa3338e81dab.woff") format("woff");
+}
+
+
+
+
+
+
+
+  @font-face {
+  font-family: Figtree;
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("//heq2wz-cr.myshopify.com/cdn/fonts/figtree/figtree_i4.89f7a4275c064845c304a4cf8a4a586060656db2.woff2") format("woff2"),
+       url("//heq2wz-cr.myshopify.com/cdn/fonts/figtree/figtree_i4.6f955aaaafc55a22ffc1f32ecf3756859a5ad3e2.woff") format("woff");
+}
+
+
+
+  @font-face {
+  font-family: Figtree;
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+  src: url("//heq2wz-cr.myshopify.com/cdn/fonts/figtree/figtree_i5.969396f679a62854cf82dbf67acc5721e41351f0.woff2") format("woff2"),
+       url("//heq2wz-cr.myshopify.com/cdn/fonts/figtree/figtree_i5.93bc1cad6c73ca9815f9777c49176dfc9d2890dd.woff") format("woff");
+}
+
+

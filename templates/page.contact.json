@@ -1,0 +1,210 @@
+{
+  "sections": {
+    "hero": {
+      "type": "section-hero",
+      "blocks": {
+        "ba154bea-be2d-4c2d-a88f-2ac4d686f9c4": {
+          "type": "heading",
+          "settings": {
+            "title": "Contact Us",
+            "text_size": 10
+          }
+        }
+      },
+      "block_order": [
+        "ba154bea-be2d-4c2d-a88f-2ac4d686f9c4"
+      ],
+      "settings": {
+        "height": "use_screen_one_third",
+        "overlay_opacity": 70,
+        "overlay_color": "#102310",
+        "enable_overlay_text": false,
+        "preload_image": false,
+        "content_width": 2000,
+        "text_align": "align--middle-center",
+        "text_color": "text--white",
+        "color_bg": "hero__content--transparent",
+        "width": "wrapper--none",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "page",
+      "settings": {
+        "kicker": "",
+        "kicker_size": 3,
+        "show_title": true,
+        "title_size": 8,
+        "show_content": true,
+        "content_size": 5,
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "section bg--neutral",
+        "width": "wrapper--narrow",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "contact": {
+      "type": "section-contact",
+      "blocks": {
+        "name": {
+          "type": "text",
+          "settings": {
+            "title": "Full Name"
+          }
+        },
+        "email": {
+          "type": "email",
+          "settings": {
+            "title": "Email"
+          }
+        },
+        "message": {
+          "type": "body",
+          "settings": {
+            "title": "Message"
+          }
+        }
+      },
+      "block_order": [
+        "name",
+        "email",
+        "message"
+      ],
+      "settings": {
+        "title": "Get in touch",
+        "align_text": "text-left",
+        "button_size": "btn--long",
+        "button_color": "btn--neutral",
+        "button_style": "btn--outline",
+        "text_color": "text--neutral",
+        "bg": "section bg--neutral",
+        "width": "wrapper--narrow",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "faq": {
+      "type": "section-faq",
+      "blocks": {
+        "faq-0": {
+          "type": "text",
+          "settings": {
+            "title": "How long will my items take to ship?",
+            "content": "<p>All orders are shipped within 12-36 hours from our warehouse in Bellingham WA.  Delivery times will depend on your shipping option but all orders are tracked from our facility to your door.  </p>"
+          }
+        },
+        "faq-1": {
+          "type": "text",
+          "settings": {
+            "title": "Where do I find my tracking number?",
+            "content": "<p>Your tracking number will show on your thank you page when your order is placed.  A link to that page will also be emailed to you along with your receipt so you can return to track the package at any time.  </p>"
+          }
+        },
+        "faq-2": {
+          "type": "text",
+          "settings": {
+            "title": "What shipping carriers do you use?",
+            "content": "<p>We use all major carriers, and local courier partners. use the shipping estimator in the cart to check your shipping rates.</p>"
+          }
+        },
+        "f29e1459-b16f-49bd-874e-117d92f197ba": {
+          "type": "text",
+          "settings": {
+            "title": "Can I return my product?",
+            "content": "<p>We always aim for make sure our customers love our products, but if you do need to return an order, we’re happy to help. Just email us directly and we’ll take you through the process.</p>"
+          }
+        },
+        "8a29f451-7e50-4743-8b86-47e5df3e210e": {
+          "type": "text",
+          "settings": {
+            "title": "Can I buy your products in a store?",
+            "content": "<p>Not yet, but we are working on it!  Sign up in our email newsletter in the footer to receive updates on when and where you can buy our products locally.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq-0",
+        "faq-1",
+        "faq-2",
+        "f29e1459-b16f-49bd-874e-117d92f197ba",
+        "8a29f451-7e50-4743-8b86-47e5df3e210e"
+      ],
+      "settings": {
+        "title": "",
+        "title_align": "text-left",
+        "title_size": 4,
+        "heading_size": 5,
+        "text_size": 5,
+        "text_color": "text--neutral",
+        "bg": "section bg--neutral",
+        "width": "wrapper--narrow",
+        "padding_top": 72,
+        "padding_bottom": 130
+      }
+    },
+    "1632080767855d34cc": {
+      "type": "section-icons",
+      "blocks": {
+        "1632080767855d34cc-0": {
+          "type": "icon_block",
+          "settings": {
+            "icon_name": "icon-basket-return",
+            "icon_color": "#766456",
+            "title": "Free returns",
+            "text": "<p>Returns within 30 days receive a full refund.</p>",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "1632080767855d34cc-1": {
+          "type": "icon_block",
+          "settings": {
+            "icon_name": "icon-shipment-world",
+            "icon_color": "#766456",
+            "title": "Worldwide shipping",
+            "text": "<p>Ship anywhere, rates available at checkout.</p>",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "1632080767855d34cc-2": {
+          "type": "icon_block",
+          "settings": {
+            "icon_name": "icon-phone",
+            "icon_color": "#766456",
+            "title": "24/7 support",
+            "text": "<p>Call us anytime at 1(800) 555-1234.</p>",
+            "link_text": "",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "1632080767855d34cc-0",
+        "1632080767855d34cc-1",
+        "1632080767855d34cc-2"
+      ],
+      "settings": {
+        "title": "",
+        "bg": "palette--light bg--accent",
+        "icons_size": 30,
+        "icon_alignment": "icon--top",
+        "layout": "grid--stacked",
+        "align_text": "text-center",
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "main",
+    "contact",
+    "faq",
+    "1632080767855d34cc"
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "kicker": "",
+        "kicker_size": 3,
+        "show_title": true,
+        "title_size": 8,
+        "show_content": true,
+        "content_size": 5,
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "palette--light bg--neutral",
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "663ee088-3cda-4f01-9b46-278976143c68": {
+      "type": "section-double",
+      "blocks": {
+        "template--15375069347933__663ee088-3cda-4f01-9b46-278976143c68-167146227157b2fd83-0": {
+          "type": "text",
+          "settings": {
+            "kicker": "",
+            "title": "Ethical, sustainable and natural beauty products. Do right by yourself and the skin you're in.",
+            "text": "",
+            "font_size": 8,
+            "text_columns": 1,
+            "align_text": "text-left",
+            "button_text": "",
+            "button_url": "",
+            "button_color": "btn--neutral",
+            "button_style": "caps--link",
+            "text_color": "text--neutral",
+            "bg_color": "#f8f0e7"
+          }
+        },
+        "template--15375069347933__663ee088-3cda-4f01-9b46-278976143c68-167146227157b2fd83-1": {
+          "type": "image",
+          "settings": {
+            "overlay_opacity": 15,
+            "overlay_color": "#e7caac",
+            "enable_overlay_text": false,
+            "kicker": "",
+            "title": "",
+            "richtext": "",
+            "text_align": "align--middle-center",
+            "text_color": "text--white",
+            "link_text": "",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "btn uppercase"
+          }
+        }
+      },
+      "block_order": [
+        "template--15375069347933__663ee088-3cda-4f01-9b46-278976143c68-167146227157b2fd83-0",
+        "template--15375069347933__663ee088-3cda-4f01-9b46-278976143c68-167146227157b2fd83-1"
+      ],
+      "settings": {
+        "height": "use_pixels_650",
+        "brick_gutter": 0,
+        "borders": false,
+        "bg_color": "",
+        "preload_image": false,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 18
+      }
+    },
+    "8fc3f118-41b9-404b-a88c-fa88edf53f4f": {
+      "type": "section-double",
+      "blocks": {
+        "template--15375069347933__8fc3f118-41b9-404b-a88c-fa88edf53f4f-1671461392f67ac3d2-1": {
+          "type": "image",
+          "settings": {
+            "overlay_opacity": 15,
+            "overlay_color": "#e7caac",
+            "enable_overlay_text": false,
+            "kicker": "",
+            "title": "",
+            "richtext": "",
+            "text_align": "align--middle-center",
+            "text_color": "text--white",
+            "link_text": "",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "btn uppercase"
+          }
+        },
+        "template--15375069347933__8fc3f118-41b9-404b-a88c-fa88edf53f4f-1671461392f67ac3d2-0": {
+          "type": "text",
+          "settings": {
+            "kicker": "",
+            "title": "Effective ingredients that are both safe for you and the planet, with stunning results.",
+            "text": "",
+            "font_size": 8,
+            "text_columns": 1,
+            "align_text": "text-left",
+            "button_text": "",
+            "button_url": "",
+            "button_color": "btn--neutral",
+            "button_style": "caps--link",
+            "text_color": "text--neutral",
+            "bg_color": "#f8f0e7"
+          }
+        }
+      },
+      "block_order": [
+        "template--15375069347933__8fc3f118-41b9-404b-a88c-fa88edf53f4f-1671461392f67ac3d2-1",
+        "template--15375069347933__8fc3f118-41b9-404b-a88c-fa88edf53f4f-1671461392f67ac3d2-0"
+      ],
+      "settings": {
+        "height": "use_pixels_650",
+        "brick_gutter": 0,
+        "borders": false,
+        "bg_color": "",
+        "preload_image": false,
+        "width": "wrapper",
+        "padding_top": 18,
+        "padding_bottom": 18
+      }
+    },
+    "01b163f7-5292-4efe-bf0a-53f25e4a048f": {
+      "type": "section-double",
+      "blocks": {
+        "template--15375069347933__01b163f7-5292-4efe-bf0a-53f25e4a048f-1671461392f67ac3d2-0": {
+          "type": "text",
+          "settings": {
+            "kicker": "",
+            "title": "Our Founder",
+            "text": "<p>We started making the products we wanted to see in the world and we did this with an uncompromising approach to sustainability and animal testing. We promote our products because we believe in them and we stand behind our product. Our products bring together the finest materials and stunning design to create something very special. We believe in quality, care, and creating unique products that everyone can enjoy. Colorful, creative, and inspired by what we see everyday, each product represents what we love about the world we live in. We hope they’ll inspire you too.</p>",
+            "font_size": 5,
+            "text_columns": 1,
+            "align_text": "text-left",
+            "button_text": "",
+            "button_url": "",
+            "button_color": "btn--neutral",
+            "button_style": "caps--link",
+            "text_color": "text--neutral",
+            "bg_color": "#f8f0e7"
+          }
+        },
+        "template--15375069347933__01b163f7-5292-4efe-bf0a-53f25e4a048f-1671461392f67ac3d2-1": {
+          "type": "image",
+          "settings": {
+            "overlay_opacity": 15,
+            "overlay_color": "#e7caac",
+            "enable_overlay_text": false,
+            "kicker": "",
+            "title": "",
+            "richtext": "",
+            "text_align": "align--middle-center",
+            "text_color": "text--white",
+            "link_text": "",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "btn uppercase"
+          }
+        }
+      },
+      "block_order": [
+        "template--15375069347933__01b163f7-5292-4efe-bf0a-53f25e4a048f-1671461392f67ac3d2-0",
+        "template--15375069347933__01b163f7-5292-4efe-bf0a-53f25e4a048f-1671461392f67ac3d2-1"
+      ],
+      "settings": {
+        "height": "use_pixels_650",
+        "brick_gutter": 0,
+        "borders": false,
+        "bg_color": "",
+        "preload_image": false,
+        "width": "wrapper",
+        "padding_top": 18,
+        "padding_bottom": 36
+      }
+    },
+    "d86ca4af-d66e-47ce-b363-a85ac9cad437": {
+      "type": "section-collection",
+      "settings": {
+        "title": "An uncompromising approach",
+        "collection": "all",
+        "grid": 4,
+        "rows": 1,
+        "grid_mobile": "2",
+        "bg": "palette--light bg--neutral",
+        "show_view_all": false,
+        "width": "wrapper",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "368132a5-dd8e-4671-9942-89443477113c": {
+      "type": "section-logos",
+      "blocks": {
+        "template--15375069347933__368132a5-dd8e-4671-9942-89443477113c-1671460889aa0c782b-2": {
+          "type": "logo_image",
+          "settings": {
+            "link": "",
+            "new_tab": true,
+            "width": 140,
+            "spacing": 50
+          }
+        },
+        "template--15375069347933__368132a5-dd8e-4671-9942-89443477113c-1671460889aa0c782b-1": {
+          "type": "logo_image",
+          "settings": {
+            "link": "",
+            "new_tab": true,
+            "width": 140,
+            "spacing": 50
+          }
+        },
+        "template--15375069347933__368132a5-dd8e-4671-9942-89443477113c-1671460889aa0c782b-0": {
+          "type": "logo_image",
+          "settings": {
+            "link": "",
+            "new_tab": true,
+            "width": 140,
+            "spacing": 50
+          }
+        },
+        "template--15375069347933__368132a5-dd8e-4671-9942-89443477113c-1671460889aa0c782b-3": {
+          "type": "logo_image",
+          "settings": {
+            "link": "",
+            "new_tab": true,
+            "width": 140,
+            "spacing": 50
+          }
+        },
+        "template--15375069347933__368132a5-dd8e-4671-9942-89443477113c-1671460889aa0c782b-4": {
+          "type": "logo_image",
+          "settings": {
+            "link": "",
+            "new_tab": false,
+            "width": 140,
+            "spacing": 50
+          }
+        }
+      },
+      "block_order": [
+        "template--15375069347933__368132a5-dd8e-4671-9942-89443477113c-1671460889aa0c782b-2",
+        "template--15375069347933__368132a5-dd8e-4671-9942-89443477113c-1671460889aa0c782b-1",
+        "template--15375069347933__368132a5-dd8e-4671-9942-89443477113c-1671460889aa0c782b-0",
+        "template--15375069347933__368132a5-dd8e-4671-9942-89443477113c-1671460889aa0c782b-3",
+        "template--15375069347933__368132a5-dd8e-4671-9942-89443477113c-1671460889aa0c782b-4"
+      ],
+      "settings": {
+        "title": "",
+        "bg": "palette--dark bg--invert--accent",
+        "enable_marquee": true,
+        "marquee_speed": 35,
+        "width": "wrapper--none",
+        "padding_top": 54,
+        "padding_bottom": 58
+      }
+    }
+  },
+  "order": [
+    "main",
+    "663ee088-3cda-4f01-9b46-278976143c68",
+    "8fc3f118-41b9-404b-a88c-fa88edf53f4f",
+    "01b163f7-5292-4efe-bf0a-53f25e4a048f",
+    "d86ca4af-d66e-47ce-b363-a85ac9cad437",
+    "368132a5-dd8e-4671-9942-89443477113c"
+  ]
+}

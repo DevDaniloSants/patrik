@@ -1,0 +1,93 @@
+<!-- /snippets/product-size-and-remaining.liquid -->
+
+{%- if block.settings.info_page != blank -%}
+  {%- liquid
+    assign size_page = pages[block.settings.info_page]
+    assign size_page_title = block.settings.title | default: size_page.title
+    assign action_style = 'product__info__link'
+  -%}
+{%- endif -%}
+
+{% comment %} Preorder products show a variant countdown but not sold out or in stock states {% endcomment %}
+{%- if product.metafields.theme.preorder.value == true -%}
+  {% assign is_preorder = true %}
+{% endif %}
+
+{%- capture size_chart -%}
+  {%- if block.settings.info_page != blank -%}
+    <a href="{{ size_page.url }}" class="{{ action_style }}" data-popup-{{ section.id }}="size-{{ section.id }}">
+      {{ size_page_title }}
+    </a>
+    <div class="modal micromodal-slide" id="size-{{ section.id }}" data-modal aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <button data-micromodal-close class="modal__close" aria-label="{{ 'general.accessibility.close' | t }}"></button>
+        <div class="modal__container modal__container--inline"
+          data-modal-content
+          role="dialog"
+          aria-modal="true"
+          aria-label="{{ size_page_title | strip_html | escape }}">
+          <div class="rte">{{ size_page.content }}</div>
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+{%- endcapture -%}
+
+<div class="product__block__remaining" style="--PB: {{ block.settings.padding_bottom }}px;" {{ block.shopify_attributes }}>
+  {%- if block.settings.show_remaining or size_page -%}
+    {%- assign packed_class = '' -%}
+    {%- if block.settings.show_remaining and size_page -%}
+      {%- assign packed_class = 'product__button__meta--packed' -%}
+    {%- endif -%}
+    <div class="product__button__meta {{ packed_class }}">
+      {%- if size_page -%}
+        {{ size_chart }}
+      {%- endif -%}
+
+      {%- if block.settings.show_remaining -%}
+        {% liquid
+          assign current_variant = product.selected_or_first_available_variant
+
+          assign show_always = false
+
+          if block.settings.show_remaining_style == 'always'
+            assign show_always = true
+          endif
+
+          # The inventory at which the "countdown" begins, e.g. "Only 9 products left"
+          assign low_threshold = block.settings.countdown
+
+          assign is_in_stock = false
+          assign is_low_stock = false
+          assign is_out_of_stock = false
+
+          assign current_inventory = current_variant.inventory_quantity
+
+          if current_variant.inventory_quantity > low_threshold
+            assign is_in_stock = true
+          endif
+
+          if current_variant.inventory_quantity > 0 and current_variant.inventory_quantity <= low_threshold
+            assign is_low_stock = true
+          endif
+
+          if current_variant.inventory_quantity < 1
+            assign is_out_of_stock = true
+          endif
+        %}
+
+        {% if current_variant.inventory_management == 'shopify' and current_variant.inventory_policy == 'deny' %}
+          <p class="variant__countdown">
+            {% if is_in_stock and show_always %}
+              <span class="variant__countdown--in">{{ 'products.product.in_stock' | t }}</span>
+            {% elsif is_low_stock %}
+              <span class="variant__countdown--low">{{ 'products.product.remaining_html' | t: inventory: current_inventory }}</span>
+            {% elsif is_out_of_stock %}
+              <span class="variant__countdown--out">{{ 'products.product.out_of_stock' | t }}</span>
+            {% endif %}
+          </p>
+        {% endif %}
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+</div>
