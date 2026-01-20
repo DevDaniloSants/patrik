@@ -19843,9 +19843,6 @@ Collection grid item
 }
 .js-grid {
   display: grid;
-  -moz-column-gap: var(--gutter);
-  column-gap: var(--gutter);
-  row-gap: var(--gutter);
 }
 .js-grid > * {
   min-width: 0;
@@ -20051,7 +20048,9 @@ Collection grid item
 .produt-flex-item {
   display: flex;
   flex-direction: column;
-  background-color: blue;
+  background-image: linear-gradient(to bottom right, #e0e0e0, #f3f2f3);
+  padding: 1rem;
+  overflow: hidden;
 }
 .product-grid-item {
   position: relative;
