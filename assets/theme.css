@@ -17507,6 +17507,7 @@ html:not(.no-js) body:not(.focus-enabled) *:focus {
 
 #product-section-main {
   position: relative;
+  background-image: linear-gradient(to bottom right, #e0e0e0, #f3f2f3) !important;
 }
 
 #btn--add-to-cart {
@@ -24144,7 +24145,7 @@ label.quatity-selector {
   opacity: 1;
   visibility: visible;
   transition-delay: 0s;
-  background-image: var(--product-gradient, linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)));
+  background-image: linear-gradient(to bottom right, #e0e0e0, #f3f2f3);
 }
 
 /* PGI pagination */
