@@ -56,6 +56,17 @@
             calc(85vw - {{ section.settings.image_spacing | times: 2 }}px)
           {%- endcapture -%}
 
+          {% capture image_content %}
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'title' %}
+                  {% render 'product-title', product: product, block: block, section: section %}
+                {% when 'price' %}
+                  {% render 'product-price', product: product, block: block, section: section %}
+              {% endcase %}
+            {% endfor %}
+          {% endcapture %}
+
           {%- render 'image',
             img_object: media.preview_image,
             cover: true,
@@ -66,7 +77,8 @@
             fetchpriority: fetchpriority,
             placeholder: false,
             alt: alt,
-            loading_animation: loading_animation
+            loading_animation: loading_animation,
+            content: image_content
           -%}
           {% if section.settings.zoom_enable or has_ruler %}
             <div class="media__buttons__holder">

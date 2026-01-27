@@ -25,7 +25,7 @@
   data-form-holder
   data-enable-video-looping="{{ section.settings.enable_video_looping }}"
   data-enable-history-state="true"
-  style="--PT: {{ section.settings.padding_top }}px; --PB: {{ section.settings.padding_bottom }}px; --IMAGE-SPACING: {{ section.settings.image_spacing }}px; {{ gradient_css }}">
+  style="--PT: {{ section.settings.padding_top }}px; --PB: {{ section.settings.padding_bottom }}px; --IMAGE-SPACING: {{ section.settings.image_spacing }}px;">
   {%- liquid
   assign images_settings = section.settings.layout | split: '@'
   assign wrapper_class = section.settings.width
@@ -236,7 +236,7 @@
         {%- endif -%}
       </div>
 
-      <div class="product__main__content grid__item {{ product_description_width }}"style="background: {{ section.settings.content_bg_gradient }};" >
+      <div class="product__main__content grid__item {{ product_description_width }}">
         <div class="product__inner is-sticky" data-product-form-wrapper>
           {% if product_has_breadcrumbs %}
             <nav class="breadcrumb small-down--hide{% unless wrapper_class == 'wrapper--none' %} medium-up--hide{% endunless %}" aria-label="breadcrumbs">
@@ -250,9 +250,10 @@
                 <div class='contents' data-morph-skip>
                   {% render block %}
                 </div>
-              {% comment %} Title moved to media wrapper {% endcomment %}
+              {% comment %} {% when 'title' %}
+                {% render 'product-title', product: product, block: block, section: section %}
               {% when 'price' %}
-                {% render 'product-price', product: product, block: block, section: section %}
+                {% render 'product-price', product: product, block: block, section: section %} {% endcomment %}
               {% when 'add-buttons' %}
                 {% render 'product-buttons' product: product, uniq_id: product_form_id, block: block %}
               {% when 'quantity' %}
@@ -2203,12 +2204,6 @@
 							"label": "Product list"
 						}
 					]
-				},
-				{
-				"type": "color_background",
-				"id": "content_bg_gradient",
-				"label": "Cor de fundo (Degradê)",
-				"default": "linear-gradient(to bottom right, #e0e0e0, #f3f2f3)"
 				},
 				{
 					"type": "paragraph",

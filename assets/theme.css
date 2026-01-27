@@ -25705,17 +25705,23 @@ a.product__form__link:after {
   align-items: center;
 }
 
-.product__title {
-  margin: 0;
-  word-break: break-word;
-  position: absolute;
-  bottom: 114%;
-  max-width: 50%;
-  transform: translateY(50%);
+@media only screen and (max-width: 1024px) {
+  .product__title {
+    margin: 0;
+    word-break: break-word;
+    position: absolute;
+    bottom: 50px;
+    max-width: 50%;
+    color: white;
+    left: 20px;
+  }
 }
 
 .product__price {
   line-height: 1em;
+  color: white;
+  left: 20px;
+  position: absolute;
 }
 
 /* Above button stockout na size chart */
