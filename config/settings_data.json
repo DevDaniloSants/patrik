@@ -315,8 +315,6 @@
     }
   },
   "platform_customizations": {
-    "custom_css": [
-      ".product__main__content {background: linear-gradient(to bottom right, #e0e0e0, #f3f2f3) !important;}"
-    ]
+    "custom_css": []
   }
 }
