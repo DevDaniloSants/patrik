@@ -69,6 +69,7 @@
               <button
                 type="submit"
                 name="add"
+                id="btn--add-to-cart"
                 class="btn--outline btn--full btn--primary btn--add-to-cart"
                 data-add-to-cart
                 {% comment %} Explicitly add aria label so that button text isn't read out in screen readers in uppercase {% endcomment %}
@@ -84,17 +85,7 @@
                     {{ button_text }}
                   </span>
                   {% if current_variant %}
-                    <span class="cta__dot opacity-50">•</span>
-                    <span
-                      data-button-price
-                        x-text="$formatCurrency({{- current_variant.price  -}} * Math.max(quantity, 1), { form: 'short', currency: '{{ cart.currency.iso_code }}' })"
-                    >
-                      {%- if settings.currency_code_enable -%}
-                        {{ current_variant.price | money_with_currency }}
-                      {%- else -%}
-                        {{ current_variant.price | money }}
-                      {%- endif -%}
-                    </span>
+                    <p></p>
                   {% endif %}
                 </span>
 

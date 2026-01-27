@@ -6,9 +6,16 @@
   if section.settings.product_breadcrumbs
     assign padding_top = padding_top | divided_by: 2
   endif
+  
+  assign custom_gradient = section.settings.custom_gradient
+  if custom_gradient != blank
+    assign gradient_css = '--product-gradient: ' | append: custom_gradient | append: ';'
+  else
+    assign gradient_css = ''
+  endif
 -%}
 
-<div class="product-section section-padding {{ section.settings.bg }}"
+<div id="product-section-main" class="product-section section-padding {{ section.settings.bg }}"
   data-product-handle="{{ product.handle }}"
   {% if product.selected_variant.featured_media %}
     data-initial-variant-media-id="{{ product.selected_variant.featured_media.id }}"
@@ -18,7 +25,7 @@
   data-form-holder
   data-enable-video-looping="{{ section.settings.enable_video_looping }}"
   data-enable-history-state="true"
-  style="--PT: {{ section.settings.padding_top }}px; --PB: {{ section.settings.padding_bottom }}px; --IMAGE-SPACING: {{ section.settings.image_spacing }}px;">
+  style="--PT: {{ section.settings.padding_top }}px; --PB: {{ section.settings.padding_bottom }}px; --IMAGE-SPACING: {{ section.settings.image_spacing }}px; {{ gradient_css }}">
   {%- liquid
   assign images_settings = section.settings.layout | split: '@'
   assign wrapper_class = section.settings.width
@@ -229,7 +236,7 @@
         {%- endif -%}
       </div>
 
-      <div class="product__main__content grid__item {{ product_description_width }}">
+      <div class="product__main__content grid__item {{ product_description_width }}"style="background: {{ section.settings.content_bg_gradient }};" >
         <div class="product__inner is-sticky" data-product-form-wrapper>
           {% if product_has_breadcrumbs %}
             <nav class="breadcrumb small-down--hide{% unless wrapper_class == 'wrapper--none' %} medium-up--hide{% endunless %}" aria-label="breadcrumbs">
@@ -243,8 +250,7 @@
                 <div class='contents' data-morph-skip>
                   {% render block %}
                 </div>
-              {% when 'title' %}
-                {% render 'product-title', product: product, block: block, section: section %}
+              {% comment %} Title moved to media wrapper {% endcomment %}
               {% when 'price' %}
                 {% render 'product-price', product: product, block: block, section: section %}
               {% when 'add-buttons' %}
@@ -590,6 +596,12 @@
 					"label": "Bright accent"
 				}
 			]
+		},
+		{
+			"type": "text",
+			"id": "custom_gradient",
+			"label": "Degradê personalizado da imagem",
+			"info": "Ex: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)). Deixe vazio para usar o padrão."
 		},
 		{
 			"type": "header",
@@ -2197,6 +2209,12 @@
 							"label": "Product list"
 						}
 					]
+				},
+				{
+				"type": "color_background",
+				"id": "content_bg_gradient",
+				"label": "Cor de fundo (Degradê)",
+				"default": "linear-gradient(to bottom right, #e0e0e0, #f3f2f3)"
 				},
 				{
 					"type": "paragraph",
