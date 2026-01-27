@@ -7,7 +7,7 @@
     assign padding_top = padding_top | divided_by: 2
   endif
   
-  assign custom_gradient = section.settings.custom_gradient
+  assign custom_gradient = product.metafields.custom.gradient.value
   if custom_gradient != blank
     assign gradient_css = '--product-gradient: ' | append: custom_gradient | append: ';'
   else
@@ -596,12 +596,6 @@
 					"label": "Bright accent"
 				}
 			]
-		},
-		{
-			"type": "text",
-			"id": "custom_gradient",
-			"label": "Degradê personalizado da imagem",
-			"info": "Ex: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)). Deixe vazio para usar o padrão."
 		},
 		{
 			"type": "header",
