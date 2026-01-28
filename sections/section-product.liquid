@@ -248,6 +248,21 @@
             </nav>
           {% endif %}
 
+          {%- assign title_block = nil -%}
+          {%- assign price_block = nil -%}
+          {%- assign buttons_block = nil -%}
+          
+          {%- comment -%} Capture specific blocks to render them together later {%- endcomment -%}
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'title' -%}
+               {%- assign title_block = block -%}
+            {%- elsif block.type == 'price' -%}
+               {%- assign price_block = block -%}
+            {%- elsif block.type == 'add-buttons' -%}
+               {%- assign buttons_block = block -%}
+            {%- endif -%}
+          {%- endfor -%}
+
           {% for block in section.blocks %}
             {% case block.type %}
               {%- when '@app' -%}
@@ -255,11 +270,17 @@
                   {% render block %}
                 </div>
               {% when 'title' %}
-                {% render 'product-title', product: product, block: block, section: section %}
+                <div class="product__block__title ">
+                   {% render 'product-title', product: product, block: block, section: section %}
+                </div>
               {% when 'price' %}
-                {% render 'product-price', product: product, block: block, section: section %}
+                <div class="product__block__price ">
+                   {% render 'product-price', product: product, block: block, section: section %}
+                </div>
               {% when 'add-buttons' %}
-                {% render 'product-buttons' product: product, uniq_id: product_form_id, block: block %}
+                <div class="product__block__buttons ">
+                   {% render 'product-buttons' product: product, uniq_id: product_form_id, block: block %}
+                </div>
               {% when 'quantity' %}
                 {% render 'product-quantity' product: product, uniq_id: product_form_id, block: block %}
               {% when 'variant-selectors' %}
@@ -441,6 +462,21 @@
                 {%- endif -%}
             {% endcase %}
           {% endfor %}
+
+          <div class="!flex !justify-between !absolute bottom-0 w-full z-10 p-4 bg-white/80 backdrop-blur-md lg:hidden">
+            {%- if title_block -%}
+              {% render 'product-title', product: product, block: title_block, section: section %}
+            {%- endif -%}
+            
+            <div class="flex items-center gap-4">
+              {%- if price_block -%}
+                 {% render 'product-price', product: product, block: price_block, section: section %}
+              {%- endif -%}
+              {%- if buttons_block -%}
+                 {% render 'product-buttons' product: product, uniq_id: product_form_id | append: '-mobile', block: buttons_block %}
+              {%- endif -%}
+            </div>
+          </div>
 
           {%- comment -%}
             Render and hide the <product-form> when there is no 'add-buttons' block

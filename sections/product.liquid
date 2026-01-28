@@ -173,6 +173,29 @@
           {% endif %}
         </div>
 
+        {% comment %} Mobile product info - rendered outside the carousel {% endcomment %}
+		 {% comment %} Descomentar dependendo do que vier da reunião adicionar absolute bottom-0{% endcomment %}
+         <div class="mobile-product-content flex lg:!hidden px-5 py-3 absolute bottom-0">
+          <div class="mobile-product-info flex flex-col">
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'title' %}
+                  {% render 'product-title', product: product, block: block, section: section %}
+                {% when 'price' %}
+                  {% render 'product-price', product: product, block: block, section: section %}
+              {% endcase %}
+            {% endfor %}
+          </div>
+          <div class="mobile-product-buy">
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'add-buttons' %}
+                  {% render 'product-buttons' product: product, uniq_id: product_form_id, block: block %}
+              {% endcase %}
+            {% endfor %}
+          </div>
+        </div>
+
         {% assign first_3d_model = product_media | where: "media_type", "model" | first %}
         {% if first_3d_model %}
           <button
@@ -251,15 +274,15 @@
                   {% render block %}
                 </div>
               {% when 'title' %}
-                <div class="hidden lg:block">
+                <div class="hidden lg:!block">
                   {% render 'product-title', product: product, block: block, section: section %}
                 </div>
               {% when 'price' %}
-                <div class="hidden lg:block">
+                <div class="hidden lg:!block">
                   {% render 'product-price', product: product, block: block, section: section %}
                 </div>
               {% when 'add-buttons' %}
-                <div class="hidden lg:block">
+                <div class="hidden lg:!block">
                   {% render 'product-buttons' product: product, uniq_id: product_form_id, block: block %}
                 </div>
               {% when 'quantity' %}

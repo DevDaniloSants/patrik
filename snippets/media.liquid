@@ -55,20 +55,28 @@
             (min-width: 768px) 50vw,
             calc(85vw - {{ section.settings.image_spacing | times: 2 }}px)
           {%- endcapture -%}
-
-          {% capture image_content %}
-            {% for block in section.blocks %}
-              {% case block.type %}
-                {% when 'title' %}
-                  {% render 'product-title', product: product, block: block, section: section %}
-                {% when 'price' %}
-                  {% render 'product-price', product: product, block: block, section: section %}
-                {% when 'add-buttons' %}
-                  {% assign product_form_id = 'product-form-' | append: section.id | append: '-' | append: product.id %}
-                  {% render 'product-buttons' product: product, uniq_id: product_form_id, block: block %}
-              {% endcase %}
-            {% endfor %}
-          {% endcapture %}
+          {% comment %} COMENTAR CASO NECESSARIO {% endcomment %}
+          {% comment %} {% capture image_content %}
+            <div class="mobile-product-info">
+              {% for block in section.blocks %}
+                {% case block.type %}
+                  {% when 'title' %}
+                    {% render 'product-title', product: product, block: block, section: section %}
+                  {% when 'price' %}
+                    {% render 'product-price', product: product, block: block, section: section %}
+                {% endcase %}
+              {% endfor %}
+            </div>
+            <div class="mobile-product-buy">
+              {% for block in section.blocks %}
+                {% case block.type %}
+                  {% when 'add-buttons' %}
+                    {% assign product_form_id = 'product-form-' | append: section.id | append: '-' | append: product.id %}
+                    {% render 'product-buttons' product: product, uniq_id: product_form_id, block: block %}
+                {% endcase %}
+              {% endfor %}
+            </div>
+          {% endcapture %} {% endcomment %}
 
           {%- render 'image',
             img_object: media.preview_image,
@@ -84,7 +92,7 @@
             content: image_content
           -%}
           {% if section.settings.zoom_enable or has_ruler %}
-            <div class="media__buttons__holder">
+            <div class="media__buttons__holder hidden lg:block">
               {% if section.settings.zoom_enable %}
                 <button class="media__button media__button--zoom" data-zoom-button>
                   {% render 'icon-core-magnify' %}

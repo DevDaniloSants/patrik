@@ -58,7 +58,7 @@
               {%- assign button_text =  'products.product.sold_out' | t -%}
             {%- endif -%}
 
-            <div class="product__submit__buttons{% if product.has_only_default_variant %} product__submit__buttons--clear{% endif %}">
+            <div class="product__submit__buttons {% if product.has_only_default_variant %} product__submit__buttons--clear{% endif %}">
               <span class="sr-only" aria-live="polite" x-show="isLoading">
                 {{ 'products.product.adding_to_cart' | t }}
               </span>
@@ -70,7 +70,7 @@
                 type="submit"
                 name="add"
                 id="btn--add-to-cart"
-                class="btn--outline btn--full btn--primary btn--add-to-cart bottom-[50%]"
+                class="btn--outline btn--full btn--primary btn--add-to-cart bottom-[50%] !border-none !rounded-full lg:!rounded-none !bg-white border-none lg:!bg-black !w-fit lg:!w-full !text-black lg:!text-white"
                 data-add-to-cart
                 {% comment %} Explicitly add aria label so that button text isn't read out in screen readers in uppercase {% endcomment %}
                 aria-label="{{ button_text }}"
