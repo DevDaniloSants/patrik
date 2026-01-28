@@ -250,12 +250,18 @@
                 <div class='contents' data-morph-skip>
                   {% render block %}
                 </div>
-              {% comment %} {% when 'title' %}
-                {% render 'product-title', product: product, block: block, section: section %}
+              {% when 'title' %}
+                <div class="hidden lg:block">
+                  {% render 'product-title', product: product, block: block, section: section %}
+                </div>
               {% when 'price' %}
-                {% render 'product-price', product: product, block: block, section: section %} {% endcomment %}
+                <div class="hidden lg:block">
+                  {% render 'product-price', product: product, block: block, section: section %}
+                </div>
               {% when 'add-buttons' %}
-                {% render 'product-buttons' product: product, uniq_id: product_form_id, block: block %}
+                <div class="hidden lg:block">
+                  {% render 'product-buttons' product: product, uniq_id: product_form_id, block: block %}
+                </div>
               {% when 'quantity' %}
                 {% render 'product-quantity' product: product, uniq_id: product_form_id, block: block %}
               {% when 'variant-selectors' %}

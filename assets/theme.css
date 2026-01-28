@@ -169,6 +169,12 @@
   line-height: 1;
 }
 
+@media screen and (max-width: 1024px) {
+  .flickity-page-dots {
+    display: none !important;
+  }
+}
+
 .flickity-rtl .flickity-page-dots {
   direction: rtl;
 }
@@ -17513,12 +17519,11 @@ html:not(.no-js) body:not(.focus-enabled) *:focus {
 #btn--add-to-cart {
   background-color: white;
   position: absolute;
-  bottom: 114%;
   right: 5px;
   width: fit-content;
   border-radius: 500px;
   color: black;
-  border-color: black;
+  border: 0;
 }
 
 
@@ -23755,7 +23760,6 @@ Collection grid item
   display: flex;
   flex-direction: column;
   background-image: #fff;
-  padding: 1rem;
   overflow: hidden;
 }
 
@@ -23835,7 +23839,6 @@ body.focus-enabled .product-grid-item:focus-within {
   text-transform: var(--FONT-BODY-TRANSFORM);
   font-size: calc(var(--font-4) * var(--FONT-ADJUST-BODY));
   line-height: var(--leading-normal);
-  margin: 8px 0 2px 0;
   word-break: break-word;
   text-transform: none;
   letter-spacing: 0;
@@ -25712,16 +25715,13 @@ a.product__form__link:after {
     position: absolute;
     bottom: 50px;
     max-width: 50%;
-    color: white;
     left: 20px;
   }
 }
 
 .product__price {
   line-height: 1em;
-  color: white;
   left: 20px;
-  position: absolute;
 }
 
 /* Above button stockout na size chart */

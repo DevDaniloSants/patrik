@@ -75,7 +75,7 @@
 
   assign wrapper_class = wrapper_class | default: ''
   capture wrapper_classes
-    echo 'relative block w-full h-full overflow-hidden'
+    echo 'relative block w-full h-full overflow-hidden '
     if wh_ratio != 0 and wh_ratio != blank
       echo ' aspect-[--wh-ratio]'
     endif

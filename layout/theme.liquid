@@ -272,7 +272,7 @@
       scripts.parentNode.insertBefore(polyfill, scripts);
     }
   </script>
-
+  {{ 'tailwind.output.css' | asset_url | stylesheet_tag }}
   <!-- Shopify app scripts =========================================================== -->
   {{ content_for_header }}
 </head>

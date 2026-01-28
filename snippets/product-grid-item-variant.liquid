@@ -178,7 +178,7 @@
   {% if visible != true %} hidden {% endif %}
   aria-label="{{ variant.title }}"
 >
-  <div class="product-grid-item__container" data-error-boundary>
+  <div class="product-grid-item__container pb-[100px]" data-error-boundary>
     <div data-error-display class="product-grid-item__error-display">&nbsp;</div>
     <a href="{{ product.url }}" data-grid-link aria-label="{{ product.title | strip_html | escape }}">
       <div

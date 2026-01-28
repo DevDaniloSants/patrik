@@ -50,7 +50,7 @@
 <div class="product__block__price" style="--PB: {{ block.settings.padding_bottom }}px;" {{ block.shopify_attributes }}>
   <div class="product__price__wrap">
     <div class="product__price__main" data-price-wrapper>
-      <span class="product__price {{ price_size_class }}">
+      <span class="product__price">
         <span data-product-price {% if compare_at_price > price %} class="product__price--sale"{% endif %}>
           {%- if settings.currency_code_enable -%}
             {{ price | money_with_currency }}
