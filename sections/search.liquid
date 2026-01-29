@@ -22,7 +22,8 @@
   endif
 -%}
 
-<section class="page-search {{ section.settings.width }} section-padding"
+<section
+  class="page-search {{ section.settings.width }} section-padding"
   data-section-type="search-page"
   data-section-id="{{ section.id }}"
   style="--PT: {{ section.settings.padding_top }}px; --PB: {{ section.settings.padding_bottom }}px;">
@@ -33,9 +34,11 @@
       <div class="search__page__query note">
         <p>
           {%- if search.results_count > 0 -%}
-            {{ 'general.search.results_for' | t }} <span class="strong">{{ search.terms | escape }}</span>
+            {{ 'general.search.results_for' | t }}
+            <span class="strong">{{ search.terms | escape }}</span>
           {%- else -%}
-            {{ 'general.search.no_results_for' | t }} <span class="strong">{{ search.terms | escape }}</span>
+            {{ 'general.search.no_results_for' | t }}
+            <span class="strong">{{ search.terms | escape }}</span>
           {%- endif -%}
         </p>
       </div>
@@ -67,7 +70,7 @@
         {%- endfor -%}
       {%- endcapture -%}
 
-      <nav class="collection__nav" data-collection-tools>
+      <nav class="collection__nav wrapper !flex !flex-row-reverse !border-0" data-collection-tools>
         <div class="collection__nav__buttons">
           {% if filter_count > 0 %}
             {% capture current_filters_count %}
@@ -75,9 +78,9 @@
             {% endcapture %}
           {% endif %}
 
-          <button class="collection__filters__toggle filters--default-visible drawer--visible" data-filters-toggle="filters">
-            <span class="hide-filters">{{ 'collections.sidebar.hide_filters' | t }}</span>
-            <span class="show-filters">{{ 'collections.sidebar.filter' | t }}</span>
+          <button class="collection__filters__toggle !rounded-full !border !border-black" data-filters-toggle="filters">
+            <span class="hide-filters !text-black">{{ 'collections.sidebar.filter' | t }}</span>
+            <span class="show-filters !text-black">{{ 'collections.sidebar.filter' | t }}</span>
             <span data-active-filters-count>{{ current_filters_count }}</span>
             {% render 'icon-core-filter' %}
           </button>
@@ -88,7 +91,10 @@
     <div class="collection__active__filters__wrapper{% unless filter_count > 0 %} is-hidden{% endunless %}">
       <div class="collection__active__filters" data-active-filters>
         {%- if filter_count > 1 -%}
-        <a href="{{ routes.search_url }}?{{ types }}&q={{ search.terms | url_encode }}" class="active__filters__clear" data-filter-update-url>{{ 'collections.sidebar.all_tags' | t }}</a>
+          <a
+            href="{{ routes.search_url }}?{{ types }}&q={{ search.terms | url_encode }}"
+            class="active__filters__clear"
+            data-filter-update-url>{{ 'collections.sidebar.all_tags' | t }}</a>
         {%- endif -%}
         {{- filter_clears -}}
       </div>
@@ -105,14 +111,26 @@
     <div class="collection__content">
 
       {%- if has_filters -%}
-        <div class="collection__filters__wrapper filters--default-visible" data-collection-sidebar data-filters="filters" data-default-hide="false">
-          <div class="collection__filters__outer">
-            <div class="drawer__top">
+        <!-- Overlay - FORA do drawer para receber cliques -->
+        <div
+          class="filters-overlay fixed inset-0 w-screen h-screen bg-black/50 opacity-0 invisible transition-all duration-300 z-6999 cursor-pointer"
+          data-filters-underlay
+          data-filters-toggle="filters"
+          aria-hidden="true"></div>
+
+        <aside
+          class="collection__filters__wrapper fixed top-0 right-0 h-screen w-full md:!w-[450px] max-w-[90vw] bg-white z-[9999] translate-x-full transition-transform duration-300 ease-out overflow-y-auto shadow-2xl [&.drawer--visible]:translate-x-0"
+          data-collection-sidebar
+          data-filters="filters"
+          data-default-hide="true">
+          <div class="collection__filters__outer h-full flex flex-col">
+            <div class="drawer__top flex justify-between items-center p-5 border-b border-gray-200 sticky top-0 bg-white z-10">
               <div class="drawer__top__left">
-                <p class="cart__drawer__title">{{ 'collections.sidebar.filter' | t }}</p>
+                <p class="cart__drawer__title text-lg font-semibold">{{ 'collections.sidebar.filter' | t }}</p>
               </div>
 
-              <button class="drawer__button drawer__close"
+              <button
+                class="drawer__button drawer__close p-2 hover:bg-gray-100 rounded-full transition-colors"
                 data-first-focus
                 data-filters-toggle="filters"
                 aria-label="{{ 'general.accessibility.close' | t }}">
@@ -120,135 +138,126 @@
               </button>
             </div>
 
-            <div class="collection__filters__inner">
+            <div class="collection__filters__inner flex-1 overflow-y-auto p-5 lg:!px-10">
               <form data-sidebar-filter-form>
-                <input type="hidden" name="q" value="{{ search.terms }}">
+                <input
+                  type="hidden"
+                  name="q"
+                  value="{{ search.terms }}">
 
                 {%- for filter in search.filters -%}
-                  {% render 'filters',
-                    filter: filter,
-                    forloop: forloop,
-                    accordion_open_boolean: accordion_open_boolean,
-                    accordion_initial_state: accordion_initial_state %}
+                  {% render 'filters'
+                    ,
+ filter: filter
+                    ,
+ forloop: forloop
+                    ,
+ accordion_open_boolean: accordion_open_boolean
+                    ,
+ accordion_initial_state: accordion_initial_state %}
                 {%- endfor -%}
               </form>
             </div>
           </div>
-
-          <span class="drawer__underlay" data-filters-underlay>
-            <span class="drawer__underlay__fill"></span>
-            <span class="drawer__underlay__blur"></span>
-          </span>
-        </div>
+        </aside>
 
       {%- endif -%}
 
       <div class="collection__products" data-products-grid>
         {% paginate search.results by section.settings.pagination_count %}
+          <div class="svg-loader-container">
+            <svg
+              height="18"
+              width="18"
+              class="svg-loader">
+              <circle
+                r="7"
+                cx="9"
+                cy="9" />
+              <circle
+                stroke-dasharray="87.96459430051421 87.96459430051421"
+                r="7"
+                cx="9"
+                cy="9" />
+            </svg>
+          </div>
+          <div
+            class="js-grid"
+            data-grid-large="4"
+            data-grid-small="2">
+
             {% for item in search.results %}
-              <div class="search__item__generic">
-                {% if item.image or item.featured_media.preview_image %}
+              {% if item.object_type == 'product' %}
+                <div>
+                  {%- liquid
+                    assign preload = false
+                    assign eagerload = false
 
-                  <div class="search__item__generic__image">
-                    <a href="{{ item.url }}" title="{{ item.title | escape }}">
-                      {% assign image = item.featured_media.preview_image | default: item.image %}
-                      {% assign image_width = 70 | at_most: image.width %}
-                      {% assign image_width_2x = image_width | times: 2 | at_most: image.width %}
-                      {% assign alt = image.alt %}
+                    if forloop.index0 < 4
+                      assign preload = true
+                    endif
 
-                      {% capture srcset %}
-                        {{ image | image_url: width: image_width_2x }} 2x,
-                        {{ image | image_url: width: image_width }}
-                      {% endcapture %}
+                    if forloop.index0 < 12
+                      assign eagerload = true
+                    endif
+                  -%}
+                  {% render 'product-grid-item'
+                    , product: item
+                    , preload: preload
+                    , eagerload: eagerload %}
+                </div>
+              {% else %}
+                <!-- Outros tipos de resultados (artigos, páginas, etc) -->
+                <div class="search__item__generic">
+                  {% if item.image or item.featured_media.preview_image %}
+                    <div class="search__item__generic__image">
+                      <a href="{{ item.url }}" title="{{ item.title | escape }}">
+                        {% assign image = item.featured_media.preview_image | default: item.image %}
+                        {% assign image_width = 70 | at_most: image.width %}
+                        {% assign image_width_2x = image_width | times: 2 | at_most: image.width %}
+                        {% assign alt = image.alt %}
 
-                      {%- render 'image',
-                        img_object: image,
-                        wh_ratio: image.aspect_ratio,
-                        width: image_width,
-                        srcset: srcset,
-                        alt: alt
-                      -%}
-                    </a>
-                  </div>
-
-                {% endif %}
-
-                <div class="search__item__generic__text">
-                  <p class="product__inline__title">
-                    {{ item.title | link_to: item.url }}
-                  </p>
-
-                  {% if item.object_type == 'product' %}
-                    <p class="product__inline__price">
-                      {%- assign product = item -%}
-                      {%- assign on_sale = false -%}
-                      {%- assign sold_out = true -%}
-                      {%- assign current_variant = product.first_available_variant -%}
-
-                      {%- if product.compare_at_price > item.price -%}
-                        {%- assign on_sale = true -%}
-                      {%- endif -%}
-
-                      {%- if product.available -%}
-                        {%- assign sold_out = false -%}
-                      {%- endif -%}
-
-                      <span class="price{% if on_sale %} on-sale{% endif %}">
-                        {% if product.price_varies %}{{ 'products.general.from' | t }} {% endif %}
-                        {% if settings.currency_code_enable %}
-                          {{ product.price | money_with_currency }}
-                        {% else %}
-                          {{ product.price | money }}
-                        {% endif %}
-                      </span>
-
-                      {% if on_sale %}
-                        <span class="compare-at">
-                          {% if settings.currency_code_enable %}
-                            {{ product.compare_at_price | money_with_currency }}
-                          {% else %}
-                            {{ product.compare_at_price | money }}
-                          {% endif %}
-                        </span>
-                      {% endif %}
-
-                      {% if current_variant.unit_price %}
-                        {% capture unit_price_separator %}
-                          <span aria-hidden="true">/</span><span class="visually-hidden">{{ 'general.accessibility.unit_price_separator' | t }}&nbsp;</span>
+                        {% capture srcset %}
+                          {{ image | image_url: width: image_width_2x }} 2x,
+                          {{ image | image_url: width: image_width }}
                         {% endcapture %}
 
-                        {% capture unit_price_base_unit %}
-                          {% if current_variant.unit_price_measurement.reference_value != 1 %}
-                            {{ current_variant.unit_price_measurement.reference_value }}
-                          {% endif %}
-                          {{ current_variant.unit_price_measurement.reference_unit }}
-                        {% endcapture %}
-
-                          <br />
-                          <span class="visually-hidden">{{ 'products.product.unit_price_label' | t }}</span>
-                          <span class="price-per-unit">{{ current_variant.unit_price | money }}{{ unit_price_separator }}{{ unit_price_base_unit }}</span>
-                      {% endif %}
-
-                      {% if sold_out %}
-                        <br /><em>{{ 'products.product.sold_out' | t }}</em>
-                      {% endif %}
-                    </p>
-                    {%- if settings.product_grid_show_rating and product.metafields.reviews.rating.value != blank -%}
-                      <div class="rating__wrapper__search">
-                        {% render 'product-rating', product: product, show_rating_count: settings.product_grid_show_rating_count %}
-                      </div>
-                    {%- endif -%}
+                        {%- render 'image'
+                          ,
+ img_object: image
+                          ,
+ wh_ratio: image.aspect_ratio
+                          ,
+ width: image_width
+                          ,
+ srcset: srcset
+                          ,
+ alt: alt
+                        -%}
+                      </a>
+                    </div>
                   {% endif %}
+
+                  <div class="search__item__generic__text">
+                    <p class="product__inline__title">
+                      {{ item.title | link_to: item.url }}
+                    </p>
                   </div>
                 </div>
-              {% unless forloop.last %}<hr>{% endunless %}
-            {% endfor %}
-
-            {% if paginate.pages > 1 %}
-              <div class="text-center pt-r11">
-                {% render 'pagination-custom', paginate: paginate %}
+              {% endif %}
+            {% else %}
+              <div class="js-grid__full-row">
+                <p>{{ 'general.search.no_results' | t }}</p>
               </div>
-            {% endif %}
+            {% endfor %}
+          </div>
+
+          {% if paginate.pages > 1 %}
+            <div class="text-center">
+              {% render 'pagination-custom'
+                , paginate: paginate %}
+            </div>
+          {% endif %}
         {% endpaginate %}
       </div>
     </div>
@@ -256,90 +265,82 @@
 </section>
 
 {% schema %}
-{
-	"name": "Search",
-	"settings": [
-		{
-			"type": "header",
-			"content": "Search"
-		},
-		{
-			"type": "checkbox",
-			"id": "show_filters",
-			"default": true,
-			"label": "Show product filters"
-		},
-		{
-			"type": "checkbox",
-			"id": "collapse_filters",
-			"label": "Collapse filter accordions",
-			"info": "Active filters will remain open",
-			"default": false
-		},
-		{
-			"type": "checkbox",
-			"id": "show_products_count",
-			"label": "Show products count",
-			"info": "Product count will be shown when filters are active",
-			"default": true
-		},
-		{
-			"type": "range",
-			"id": "pagination_count",
-			"min": 3,
-			"max": 50,
-			"step": 1,
-			"label": "Results per page",
-			"default": 24
-		},
-		{
-			"type": "header",
-			"content": "Section spacing"
-		},
-		{
-			"type": "select",
-			"id": "width",
-			"label": "Width",
-			"default": "wrapper",
-			"options": [
-				{
-					"value": "wrapper--full",
-					"label": "Full width padded"
-				},
-				{
-					"value": "wrapper",
-					"label": "Page width"
-				},
-				{
-					"value": "wrapper--narrow",
-					"label": "Page width narrow"
-				},
-				{
-					"value": "wrapper--tiny",
-					"label": "Page width extra narrow"
-				}
-			]
-		},
-		{
-			"type": "range",
-			"id": "padding_top",
-			"min": 0,
-			"max": 180,
-			"step": 2,
-			"unit": "px",
-			"label": "Padding top",
-			"default": 36
-		},
-		{
-			"type": "range",
-			"id": "padding_bottom",
-			"min": 0,
-			"max": 180,
-			"step": 2,
-			"unit": "px",
-			"label": "Padding bottom",
-			"default": 36
-		}
-	]
-}
+  {
+    "name": "Search",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Search"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_filters",
+        "default": true,
+        "label": "Show product filters"
+      },
+      {
+        "type": "checkbox",
+        "id": "collapse_filters",
+        "label": "Collapse filter accordions",
+        "info": "Active filters will remain open",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "show_products_count",
+        "label": "Show products count",
+        "info": "Product count will be shown when filters are active",
+        "default": true
+      }, {
+        "type": "range",
+        "id": "pagination_count",
+        "min": 3,
+        "max": 50,
+        "step": 1,
+        "label": "Results per page",
+        "default": 24
+      }, {
+        "type": "header",
+        "content": "Section spacing"
+      }, {
+        "type": "select",
+        "id": "width",
+        "label": "Width",
+        "default": "wrapper",
+        "options": [
+          {
+            "value": "wrapper--full",
+            "label": "Full width padded"
+          }, {
+            "value": "wrapper",
+            "label": "Page width"
+          }, {
+            "value": "wrapper--narrow",
+            "label": "Page width narrow"
+          }, {
+            "value": "wrapper--tiny",
+            "label": "Page width extra narrow"
+          }
+        ]
+      }, {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 180,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding top",
+        "default": 36
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 180,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding bottom",
+        "default": 36
+      }
+    ]
+  }
 {% endschema %}

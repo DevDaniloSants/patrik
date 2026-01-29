@@ -37,7 +37,7 @@
           {%- endif -%}
 
           {% if collection_sidebar or section.settings.collection_sorting or section.settings.enable_layout_toggle %}
-            <nav class="collection__nav" data-collection-tools>
+            <nav class="collection__nav wrapper !flex !flex-row-reverse !border-0" data-collection-tools>
               <div class="collection__nav__buttons">
                 {% if collection_sidebar %}
                   {% capture current_filters_count %}
@@ -49,9 +49,13 @@
                   <div class="badge">{{ filter_count }}</div>
                 {%- endif -%}
               {% endcapture %}
-                  <button class="collection__filters__toggle {{ default_show_filters }}" data-filters-toggle="filters">
-                    <span class="hide-filters">{{ 'collections.sidebar.hide_filters' | t }}</span>
-                    <span class="show-filters">{{ 'collections.sidebar.filter' | t }}</span>
+                  <button class="collection__filters__toggle !rounded-full !border !border-black {{ default_show_filters }}" data-filters-toggle="filters">
+                    {% comment %} 
+                                                                  Botão de esconder filtros comentar o de baixo se for pra colocar o botão de mostrar e esconder filtros 
+                                                                  <span class="hide-filters">{{ 'collections.sidebar.hide_filters' | t }}</span>
+                                                            {% endcomment %}
+                    <span class="hide-filters !text-black">{{ 'collections.sidebar.filter' | t }}</span>
+                    <span class="show-filters !text-black">{{ 'collections.sidebar.filter' | t }}</span>
                     <span data-active-filters-count>{{ current_filters_count }}</span>
                     {% render 'icon-core-filter' %}
                   </button>
@@ -91,36 +95,39 @@
 
           <div class="collection__content">
             {% if collection_sidebar %}
+              <!-- Overlay - FORA do drawer para receber cliques -->
+              <div
+                class="filters-overlay fixed inset-0 w-screen h-screen bg-black/50 opacity-0 invisible transition-all duration-300 z-6999 cursor-pointer"
+                data-filters-underlay
+                data-filters-toggle="filters"
+                aria-hidden="true"></div>
+
               <aside
-                class="collection__filters__wrapper {{ default_show_filters }}"
+                class="collection__filters__wrapper {{ default_show_filters }} fixed top-0 right-0 h-screen w-full md:!w-[450px] max-w-[90vw] bg-white z-[9999] translate-x-full transition-transform duration-300 ease-out overflow-y-auto shadow-2xl [&.drawer--visible]:translate-x-0"
                 data-collection-sidebar
                 data-filters="filters"
                 data-default-hide="{{ section.settings.hide_sidebar }}">
-                <div class="collection__filters__outer">
-                  <div class="drawer__top">
+                <div class="collection__filters__outer h-full flex flex-col">
+                  <div class="drawer__top flex justify-between items-center p-5 border-b border-gray-200 sticky top-0 bg-white z-10">
 
                     <div class="drawer__top__left">
-                      <p class="cart__drawer__title">{{ 'collections.sidebar.filter' | t }}</p>
+                      <p class="cart__drawer__title text-lg font-semibold">{{ 'collections.sidebar.filter' | t }}</p>
                     </div>
 
                     <button
-                      class="drawer__button drawer__close"
+                      class="drawer__button drawer__close p-2 hover:bg-gray-100 rounded-full transition-colors"
                       data-first-focus
                       data-filters-toggle="filters"
                       aria-label="{{ 'general.accessibility.close' | t }}">
                       {% render 'icon-core-x' %}
                     </button>
                   </div>
-                  <div class="collection__filters__inner">
+                  <div class="collection__filters__inner flex-1 overflow-y-auto p-5 lg:!px-10">
                     {% render 'collection-filters-sidebar'
                       , section: section
                       , collection: collection %}
                   </div>
                 </div>
-                <span class="drawer__underlay" data-filters-underlay>
-                  <span class="drawer__underlay__fill"></span>
-                  <span class="drawer__underlay__blur"></span>
-                </span>
               </aside>
             {% endif %}
 

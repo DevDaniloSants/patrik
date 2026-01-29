@@ -340,7 +340,7 @@ assign placeholder = placeholder | default: false
     >
       <p class="visually-hidden">{{ product.title | strip_html | escape }}</p>
 
-      <div class="product__grid__title__wrapper">
+      <div class="product__grid__title__wrapper px-4 pt-6">
         <p id="product-{{ product.id }}-title" class="product__grid__title">
           {{ product.title | strip_html | escape }}
         </p>
@@ -351,7 +351,7 @@ assign placeholder = placeholder | default: false
         {%- endif -%}
       </div>
 
-      <div class="product__grid__price font-bold !text-lg {% if settings.show_cutline %} product__grid__price--nowrap{% endif %}">
+      <div class="product__grid__price font-bold px-4 pb-6 !text-sm {% if settings.show_cutline %} product__grid__price--nowrap{% endif %}">
         {%- if settings.show_cutline -%}
           <span class="product__grid__cutline">{{ product.metafields.theme.cutline.value }}</span>
         {%- endif -%}
