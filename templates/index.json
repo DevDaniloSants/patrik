@@ -59,7 +59,7 @@
         "video_bg": "shopify://files/videos/Animação_de_Modelo_em_Monte_Carlo.mp4",
         "object_position": "center-center",
         "image": "shopify://shop_images/Imagem_banner_home_8d053981-b069-46f1-ace8-f649b6a46226.png",
-        "banner_link": "",
+        "banner_link": "shopify://collections/aneis",
         "preload_image": false,
         "text_align": "align--bottom-left",
         "text_color": "text--white",
@@ -912,7 +912,7 @@
       "settings": {
         "image": "shopify://shop_images/Imagem_banner_home.png",
         "mobile_image": "shopify://shop_images/Imagem_banner_home_8d053981-b069-46f1-ace8-f649b6a46226.png",
-        "banner_link": "",
+        "banner_link": "shopify://collections",
         "height": "use_screen_three_quarters",
         "overlay_opacity": 0,
         "overlay_color": "#3c190b",
