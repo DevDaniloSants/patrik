@@ -184,123 +184,6 @@
         "padding_bottom": 36
       }
     },
-    "section_columns_7cGjJf": {
-      "type": "section-columns",
-      "blocks": {
-        "text_block_WwiMGB": {
-          "type": "text_block",
-          "name": "Anéis",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/ANEL.png",
-            "shape_class": "",
-            "title": "Anéis",
-            "text": "",
-            "button_label": "",
-            "button_link": "shopify://collections/aneis",
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
-        },
-        "text_block_fXNdz4": {
-          "type": "text_block",
-          "name": "Brincos",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/BRINCO.png",
-            "shape_class": "",
-            "title": "Brincos",
-            "text": "",
-            "button_label": "",
-            "button_link": "shopify://collections/brinco",
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
-        },
-        "text_block_4FmjiW": {
-          "type": "text_block",
-          "name": "Colares",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/COLAR.png",
-            "shape_class": "",
-            "title": "Colares",
-            "text": "",
-            "button_label": "",
-            "button_link": "shopify://collections/colar",
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
-        },
-        "text_block_xzfVbA": {
-          "type": "text_block",
-          "name": "Pendentes",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/PINGENTE.png",
-            "shape_class": "",
-            "title": "Pendentes",
-            "text": "",
-            "button_label": "",
-            "button_link": "shopify://collections/pendente",
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
-        },
-        "text_block_J8Bky3": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/PULSIERA.png",
-            "shape_class": "",
-            "title": "Pulseiras",
-            "text": "",
-            "button_label": "",
-            "button_link": "shopify://collections/pulseira",
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
-        }
-      },
-      "block_order": [
-        "text_block_WwiMGB",
-        "text_block_fXNdz4",
-        "text_block_4FmjiW",
-        "text_block_xzfVbA",
-        "text_block_J8Bky3"
-      ],
-      "custom_css": [],
-      "name": "Categorias - Text columns with images",
-      "settings": {
-        "title": "Conheça nossas Jóias",
-        "bg": "palette--light bg--neutral",
-        "align_text": "text-center",
-        "scale_image": false,
-        "wh_ratio": 1,
-        "grid_large": 5,
-        "grid_medium": 4,
-        "grid_mobile": 2.3,
-        "progress_bar_mobile": false,
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "section_list_collections_ftJBTL": {
       "type": "section-list-collections",
       "blocks": {
@@ -569,7 +452,7 @@
           "type": "logo_image",
           "settings": {
             "image": "shopify://shop_images/DIAMANTE_a671ccd6-9fb0-4f38-bebc-9d84b88e36da.png",
-            "text_image": "",
+            "text_image": "diamante",
             "link": "",
             "new_tab": true,
             "width": 140,
@@ -580,7 +463,7 @@
           "type": "logo_image",
           "settings": {
             "image": "shopify://shop_images/MORGANITA.png",
-            "text_image": "",
+            "text_image": "morgatina",
             "link": "",
             "new_tab": true,
             "width": 140,
@@ -591,7 +474,7 @@
           "type": "logo_image",
           "settings": {
             "image": "shopify://shop_images/TOPAZIO_IMPERIAL.png",
-            "text_image": "",
+            "text_image": "topazio imperial",
             "link": "",
             "new_tab": true,
             "width": 140,
@@ -602,7 +485,7 @@
           "type": "logo_image",
           "settings": {
             "image": "shopify://shop_images/TURMALINA_PARAIBA.png",
-            "text_image": "",
+            "text_image": "turmalina",
             "link": "",
             "new_tab": true,
             "width": 140,
@@ -986,7 +869,6 @@
   "order": [
     "section_video_ykPNyn",
     "section_gallery_slider_LmhCKt",
-    "section_columns_7cGjJf",
     "section_list_collections_ftJBTL",
     "section_columns_X6EhLY",
     "tabs",
