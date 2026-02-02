@@ -15,8 +15,8 @@
       class="section--image fade-in-child js-overflow-container aspect-[--wh-ratio] {{ section.settings.height }}"
       {%- assign video_wh_ratio = section.settings.video_bg.aspect_ratio | default: section.settings.image.aspect_ratio | default: 1 -%}
       style="--wh-ratio: {{ video_wh_ratio }};">
-      <div class="hero__content__wrapper {{ section.settings.text_align }}">
-        <div class="hero__content js-overflow-content {% if section.settings.enable_overlay_text %} backdrop--hero{% endif %}" {% if section.settings.enable_overlay_text %} style="--bg: {{ section.settings.overlay_color }}; --opacity: {{ section.settings.overlay_opacity | times: 0.01 }};"{% endif %}>
+      <div class="hero__content__wrapper {{ section.settings.text_align }}" style="z-index: 22; pointer-events: none;">
+        <div class="hero__content js-overflow-content {% if section.settings.enable_overlay_text %} backdrop--hero{% endif %}" {% if section.settings.enable_overlay_text %} style="--bg: {{ section.settings.overlay_color }}; --opacity: {{ section.settings.overlay_opacity | times: 0.01 }};"{% endif %} style="pointer-events: none;">
           {%- assign animation_anchor = "[data-section-id='" | append: section.id | append: "']" -%}
           {%- assign elements_counter = 0 -%}
 
@@ -33,6 +33,7 @@
                   data-aos="hero"
                   data-aos-anchor="{{ animation_anchor }}"
                   data-aos-order="{{ elements_counter }}"
+                  style="pointer-events: none;"
                   {{ block.shopify_attributes }}>
                   <p>{{ block.settings.kicker }}</p>
                 </div>
@@ -44,6 +45,7 @@
                   data-aos="hero"
                   data-aos-anchor="{{ animation_anchor }}"
                   data-aos-order="{{ elements_counter }}"
+                  style="pointer-events: none;"
                   {{ block.shopify_attributes }}>
                   <p>{{ block.settings.title }}</p>
                 </div>
@@ -56,6 +58,7 @@
                   data-aos="hero"
                   data-aos-anchor="{{ animation_anchor }}"
                   data-aos-order="{{ elements_counter }}"
+                  style="pointer-events: none;"
                   {{ block.shopify_attributes }}>
                   {{ block.settings.text }}
                 </div>
@@ -89,7 +92,8 @@
         href="{{ btn_link | default: '#' }}"
         data-aos="hero"
         data-aos-anchor="{{ animation_anchor }}"
-        data-aos-order="{{ elements_counter }}">
+        data-aos-order="{{ elements_counter }}"
+        style="position: relative; z-index: 22; pointer-events: auto;">
         {{ btn_text | escape }}
       </a>
     {% endcapture %}
@@ -105,7 +109,7 @@
                     data-aos="hero"
                     data-aos-anchor="{{ animation_anchor }}"
                     data-aos-order="{{ elements_counter }}"
-                    style="--icon-play-size: {{ block.settings.button_width }}px;"
+                    style="--icon-play-size: {{ block.settings.button_width }}px; position: relative; z-index: 22; pointer-events: auto;"
                     {{ block.shopify_attributes }}>
                     {% render 'video-popup', video: block.settings.video_link, unique: section.id, text: block.settings.popup_text %}
                   </div>
@@ -125,6 +129,32 @@
       {% unless section.settings.enable_overlay_text %}
         <div class="image-overlay" style="--bg:{{ section.settings.overlay_color }}; opacity:{{ section.settings.overlay_opacity | times: 0.01 }};"></div>
       {% endunless %}
+
+      {% assign banner_link = section.settings.banner_link %}
+      {% if banner_link == blank %}
+        {% for block in section.blocks %}
+          {% if block.type == 'button' %}
+            {% if block.settings.link_1 != blank %}
+              {% assign banner_link = block.settings.link_1 %}
+              {% break %}
+            {% elsif block.settings.link_2 != blank %}
+              {% assign banner_link = block.settings.link_2 %}
+              {% break %}
+            {% elsif block.settings.link_3 != blank %}
+              {% assign banner_link = block.settings.link_3 %}
+              {% break %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+
+      {% if banner_link != blank %}
+        <a
+          class="link-over-image"
+          href="{{ banner_link }}"
+          aria-label="{{ section.settings.image.alt | default: 'Video Banner' | strip_html | escape }}"
+          style="z-index: 21;"></a>
+      {% endif %}
 
       {%- if section.settings.video_bg != nil -%}
         {% assign default_width = 1920 %}
@@ -163,7 +193,7 @@
 
       {% if section.settings.height == 'use_screen_full' %}
         <div class="scroll_icon_wrap">
-          <button data-scroll-down class="scroll_link bloop" aria-label="{{ 'general.accessibility.scroll' | t }}">
+          <button data-scroll-down class="scroll_link bloop" aria-label="{{ 'general.accessibility.scroll' | t }}" style="z-index: 22; pointer-events: auto;">
             <span class="scroll_icon">{% render 'icon-core-chevron-down' %}</span>
           </button>
         </div>
@@ -301,6 +331,12 @@
 			"type": "image_picker",
 			"id": "image",
 			"label": "Image"
+		},
+		{
+			"type": "url",
+			"id": "banner_link",
+			"label": "Banner link",
+			"info": "Make the entire banner clickable"
 		},
 		{
 			"type": "checkbox",

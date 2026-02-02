@@ -32,8 +32,8 @@
   --CONTENT-WIDTH: {{ section.settings.content_width }}px;">
   <div class="{{ section.settings.width }} section-padding">
     <div class="section__inner">
-      <div class="hero__content__wrapper {{ section.settings.text_align }}">
-        <div class="{{ hero_content_class }} {{ section.settings.color_bg }} js-overflow-content">
+      <div class="hero__content__wrapper {{ section.settings.text_align }}" style="z-index: 22; pointer-events: none;">
+        <div class="{{ hero_content_class }} {{ section.settings.color_bg }} js-overflow-content" style="pointer-events: none;">
           {%- assign animation_anchor = "[data-section-id='" | append: section.id | append: "']" -%}
           {%- assign elements_counter = 0 -%}
 
@@ -57,6 +57,7 @@
                       data-aos="hero"
                       data-aos-anchor="{{ animation_anchor }}"
                       data-aos-order="{{ elements_counter }}"
+                      style="pointer-events: none;"
                       {{ block.shopify_attributes }}>
                       <p>{{ block.settings.kicker }}</p>
                     </div>
@@ -70,6 +71,7 @@
                       data-aos="hero"
                       data-aos-anchor="{{ animation_anchor }}"
                       data-aos-order="{{ elements_counter }}"
+                      style="pointer-events: none;"
                       {{ block.shopify_attributes }}>
                       <p>{{ block.settings.title }}</p>
                     </div>
@@ -83,6 +85,7 @@
                       data-aos="hero"
                       data-aos-anchor="{{ animation_anchor }}"
                       data-aos-order="{{ elements_counter }}"
+                      style="pointer-events: none;"
                       {{ block.shopify_attributes }}>
                       {{ block.settings.richtext }}
                     </div>
@@ -117,7 +120,8 @@
         href="{{ btn_link | default: '#' }}"
         data-aos="hero"
         data-aos-anchor="{{ animation_anchor }}"
-        data-aos-order="{{ elements_counter }}">
+        data-aos-order="{{ elements_counter }}"
+        style="position: relative; z-index: 22; pointer-events: auto;">
         {{ btn_text | escape }}
       </a>
     {% endcapture %}
@@ -136,7 +140,7 @@
                     data-aos-anchor="{{ animation_anchor }}"
                     data-aos-order="{{ elements_counter }}"
                     {{ block.shopify_attributes }}>
-                    {%- if block.settings.image_link != blank -%}<a href="{{ block.settings.image_link }}">{%- endif -%}
+                    {%- if block.settings.image_link != blank -%}<a href="{{ block.settings.image_link }}" style="pointer-events: auto;">{%- endif -%}
 
                     {%- assign wh_ratio = block.settings.image.aspect_ratio | default: 1 -%}
 
@@ -229,7 +233,8 @@
         <a
           class="link-over-image"
           href="{{ section.settings.banner_link }}"
-          aria-label="{{ section.settings.title | strip_html | escape }}"></a>
+          aria-label="{{ section.settings.title | strip_html | escape }}"
+          style="z-index: 21;"></a>
       {% endif %}
 
       {%- assign alt = section.settings.image.alt | default: 'Banner Image' -%}
@@ -247,7 +252,8 @@
           <button
             data-scroll-down
             class="scroll_link bloop {{ section.settings.text_color }}"
-            aria-label="{{ 'general.accessibility.scroll' | t }}">
+            aria-label="{{ 'general.accessibility.scroll' | t }}"
+            style="z-index: 22; pointer-events: auto;">
             <span class="scroll_icon">{% render 'icon-core-chevron-down' %}</span>
           </button>
         </div>

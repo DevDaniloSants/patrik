@@ -13575,6 +13575,16 @@ ol.alpha {
   fill: none;
   stroke: none;
   stroke-width: 0;
+  width: 200px;
+  aspect-ratio: 1 / 1;
+  background: #6c5ce7;
+
+  clip-path: polygon(25% 0%,
+      75% 0%,
+      100% 50%,
+      75% 100%,
+      25% 100%,
+      0% 50%);
 }
 
 [data-header-cart-full="true"] .icon-cart-full {
