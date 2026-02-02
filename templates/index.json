@@ -125,22 +125,6 @@
             "video_button_color": "text--white"
           }
         },
-        "text_block_NDn4fF": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "shape_class": "",
-            "title": "Category title",
-            "text": "<p>Category description text goes here.</p>",
-            "button_label": "",
-            "button_link": "",
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
-        },
         "text_block_pPdqQA": {
           "type": "text_block",
           "settings": {
@@ -180,7 +164,6 @@
         "text_block_3ptcC6",
         "text_block_j6E9FP",
         "text_block_Wjp9yX",
-        "text_block_NDn4fF",
         "text_block_pPdqQA",
         "text_block_TYjF4H"
       ],
@@ -191,7 +174,7 @@
         "align_text": "text-center",
         "scale_image": true,
         "wh_ratio": 1,
-        "slides_desktop": 3,
+        "slides_desktop": 5,
         "slides_tablet": 2,
         "slides_mobile": 1.2,
         "show_arrows": true,
