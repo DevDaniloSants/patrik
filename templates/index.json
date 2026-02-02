@@ -518,7 +518,7 @@
           "type": "logo_image",
           "settings": {
             "image": "shopify://shop_images/AGUA-MARINHA.png",
-            "text_image": "",
+            "text_image": "agua marina",
             "link": "",
             "new_tab": true,
             "width": 140,
