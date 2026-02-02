@@ -33020,3 +33020,26 @@ a.siblings__more-link {
     max-width: 100vw;
   }
 }
+
+/* Custom Hex Icon Badge */
+.hex {
+  width: 20px;
+  aspect-ratio: 1 / 1;
+  background: #006652;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.header-cart-icon-wrapper {
+  position: relative;
+  display: inline-flex;
+}
