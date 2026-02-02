@@ -2903,7 +2903,7 @@
                 });
                 this.counts.forEach((count)=>{
                     count.setAttribute(selectors$Q.count, this.cart.item_count);
-                    count.innerHTML = `(${this.cart.item_count})`;
+                    count.innerHTML = `${this.cart.item_count}`;
                 });
                 this.dots.forEach((dot)=>{
                     const full = this.cart.item_count > 0;

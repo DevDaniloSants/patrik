@@ -218,9 +218,9 @@
     <span data-header-cart-price="{{ cart.total_price }}">
       {{ cart.total_price | money }}
     </span>
-    <span data-header-cart-count="{{ cart.item_count }}">
+    {% comment %} <span data-header-cart-count="{{ cart.item_count }} text-[15px] text-white">
       ({{ cart.item_count }})
-    </span>
+    </span> {% endcomment %}
     <span {{ cart_status_simple }}></span>
   </span>
 {% endcapture %}

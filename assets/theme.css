@@ -19268,7 +19268,9 @@ body:not(.theme-animate-hover) .header__desktop__buttons--icons .header__desktop
 }
 
 /* ================ Header cart status ================ */
-[data-header-cart-count],
+[data-header-cart-count] {
+  display: block;
+}
 [data-header-cart-price] {
   display: none;
 }

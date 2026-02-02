@@ -839,12 +839,6 @@
       background-color: color-mix(in oklab, var(--color-black) 50%, transparent);
     }
   }
-  .bg-red-500 {
-    background-color: var(--color-red-500);
-  }
-  .bg-red-500\! {
-    background-color: var(--color-red-500) !important;
-  }
   .bg-transparent {
     background-color: transparent;
   }
@@ -994,6 +988,12 @@
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
   }
+  .text-\[12px\] {
+    font-size: 12px;
+  }
+  .text-\[15px\] {
+    font-size: 15px;
+  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
@@ -1041,6 +1041,9 @@
   }
   .text-\[color\:var\(--text\)\] {
     color: var(--text);
+  }
+  .text-white {
+    color: var(--color-white);
   }
   .capitalize {
     text-transform: capitalize;
@@ -1425,24 +1428,10 @@
       margin-inline-end: calc(var(--spacing) * 0);
     }
   }
-  .hover\:\!bg-red-500 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-red-500) !important;
-      }
-    }
-  }
   .hover\:bg-gray-100 {
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-gray-100);
-      }
-    }
-  }
-  .hover\:bg-red-500\! {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-red-500) !important;
       }
     }
   }
