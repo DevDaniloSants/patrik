@@ -496,7 +496,7 @@
           "type": "logo_image",
           "settings": {
             "image": "shopify://shop_images/ESMERALDA.png",
-            "text_image": "",
+            "text_image": "esmeralda",
             "link": "",
             "new_tab": true,
             "width": 140,
@@ -507,7 +507,7 @@
           "type": "logo_image",
           "settings": {
             "image": "shopify://shop_images/SAFIRA.png",
-            "text_image": "",
+            "text_image": "safira",
             "link": "",
             "new_tab": true,
             "width": 140,
