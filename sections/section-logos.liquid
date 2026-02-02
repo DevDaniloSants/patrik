@@ -35,6 +35,9 @@
           {% endcapture %}
 
           {% render 'image', cover: false, img_object: block.settings.image, srcset: srcset, width: image_width, class: 'max-h-[--width]' %}
+		  {%  if block.settings.text_image %}
+			<p class="text-black text-[16px] "> {{ block.settings.text_image }}</p>
+			{% endif %}
         {% else %}
           {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
         {% endif %}
@@ -209,6 +212,11 @@
 					"id": "image",
 					"label": "Image",
 					"info": "640 x 640px .png recommended"
+				},
+								{
+					"type": "text",
+					"id": "text_image",
+					"label": "Text Image",
 				},
 				{
 					"type": "url",
