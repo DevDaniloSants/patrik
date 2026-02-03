@@ -400,6 +400,9 @@
   .\!flex {
     display: flex !important;
   }
+  .\!hidden {
+    display: none !important;
+  }
   .block {
     display: block;
   }
@@ -1333,6 +1336,12 @@
       --scale: 100%;
     }
   }
+  .after\:\!hidden {
+    &::after {
+      content: var(--tw-content);
+      display: none !important;
+    }
+  }
   .first\:ms-0 {
     &:first-child {
       margin-inline-start: calc(var(--spacing) * 0);
@@ -1819,6 +1828,11 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-content {
+  syntax: "*";
+  initial-value: "";
+  inherits: false;
+}
 @property --tw-scale-x {
   syntax: "*";
   inherits: false;
@@ -1886,6 +1900,7 @@
       --tw-backdrop-sepia: initial;
       --tw-duration: initial;
       --tw-ease: initial;
+      --tw-content: "";
       --tw-scale-x: 1;
       --tw-scale-y: 1;
       --tw-scale-z: 1;

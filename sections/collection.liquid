@@ -51,9 +51,9 @@
               {% endcapture %}
                   <button class="collection__filters__toggle !rounded-full !border !border-black {{ default_show_filters }}" data-filters-toggle="filters">
                     {% comment %} 
-                                                                  Botão de esconder filtros comentar o de baixo se for pra colocar o botão de mostrar e esconder filtros 
-                                                                  <span class="hide-filters">{{ 'collections.sidebar.hide_filters' | t }}</span>
-                                                            {% endcomment %}
+                                                                                        Botão de esconder filtros comentar o de baixo se for pra colocar o botão de mostrar e esconder filtros 
+                                                                                        <span class="hide-filters">{{ 'collections.sidebar.hide_filters' | t }}</span>
+                                                                                {% endcomment %}
                     <span class="hide-filters !text-black">{{ 'collections.sidebar.filter' | t }}</span>
                     <span class="show-filters !text-black">{{ 'collections.sidebar.filter' | t }}</span>
                     <span data-active-filters-count>{{ current_filters_count }}</span>
@@ -68,7 +68,7 @@
                 {% endif %}
               </div>
               {% if section.settings.enable_layout_toggle %}
-                <div class="collection__layout">
+                <div class="collection__layout after:!hidden">
                   <button
                     data-focus-element
                     aria-label="{{ 'general.accessibility.toggle_with_count' | t: count: 1 }}"
