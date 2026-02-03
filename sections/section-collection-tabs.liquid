@@ -38,7 +38,7 @@
 
   {%- capture tabs -%}
     {{ tabs }}
-    <div class="tab-content tab-content-{{ forloop.index0 }}{% if forloop.first %} current{% endif %}">
+    <div class="tab-content tab-content-{{ forloop.index0 }}{% if forloop.first %} {% endif %}">
       <flickity-carousel>
         <div
           data-carousel
@@ -83,25 +83,38 @@
   {%- endcapture -%}
 {%- endfor -%}
 
-<div class="section-collection-tabs {{ section.settings.bg }} {{ additional_classes }}"
+<div
+  class="section-collection-tabs {{ section.settings.bg }} {{ additional_classes }}"
   data-section-id="{{ section.id }}"
   data-section-type="collection-tabs"
   style="--PT: {{ section.settings.padding_top }}px; --PB: {{ section.settings.padding_bottom }}px;">
-  <div class="{{ section.settings.width }} section-padding title-center" data-tabs-holder data-wrapper>
+  <div
+    class="{{ section.settings.width }} section-padding title-center"
+    data-tabs-holder
+    data-wrapper>
     <div class="collection-tabs">
       {% if section.settings.title != blank %}
         <h2 class="kicker-flourished mb-r11">{{ section.settings.title | escape }}</h2>
       {% endif %}
       <div class="tab__scroll">
-        <div class="tabs tabs--center tabs--pill" data-scrollbar data-scrollbar-slider>
+        <div
+          class="tabs tabs--center tabs--pill"
+          data-scrollbar
+          data-scrollbar-slider>
           {{ tabs_navigation }}
         </div>
 
-        <button type="button" class="tabs__arrow tabs__arrow--prev tabs-collections__arrow tabs-collections__arrow--prev is-hidden" data-scrollbar-arrow-prev>
+        <button
+          type="button"
+          class="tabs__arrow tabs__arrow--prev tabs-collections__arrow tabs-collections__arrow--prev is-hidden"
+          data-scrollbar-arrow-prev>
           <span class="visually-hidden">{{ 'general.accessibility.see_all' | t }}</span>
         </button>
 
-        <button type="button" class="tabs__arrow tabs__arrow--next tabs-collections__arrow tabs-collections__arrow--next is-hidden" data-scrollbar-arrow-next>
+        <button
+          type="button"
+          class="tabs__arrow tabs__arrow--next tabs-collections__arrow tabs-collections__arrow--next is-hidden"
+          data-scrollbar-arrow-next>
           <span class="visually-hidden">{{ 'general.accessibility.see_all' | t }}</span>
         </button>
       </div>
@@ -112,204 +125,182 @@
 </div>
 
 {% schema %}
-{
-	"name": "Product slider tabs",
-	"settings": [
-		{
-			"type": "text",
-			"id": "title",
-			"label": "Title",
-			"default": "Featured products"
-		},
-		{
-			"type": "select",
-			"id": "progress_bar",
-			"label": "Progress bar style",
-			"default": "mobile",
-			"options": [
-				{
-					"value": "hidden",
-					"label": "Hidden"
-				},
-				{
-					"value": "mobile",
-					"label": "Mobile only"
-				},
-				{
-					"value": "desktop",
-					"label": "Desktop only"
-				},
-				{
-					"value": "both",
-					"label": "Mobile and desktop"
-				}
-			]
-		},
-		{
-			"type": "header",
-			"content": "Products per row"
-		},
-		{
-			"type": "range",
-			"id": "grid_large",
-			"min": 3,
-			"max": 6,
-			"step": 1,
-			"label": "Desktop",
-			"default": 4
-		},
-		{
-			"type": "range",
-			"id": "grid_medium",
-			"min": 1,
-			"max": 4,
-			"step": 1,
-			"label": "Tablet",
-			"default": 3
-		},
-		{
-			"type": "range",
-			"id": "grid_mobile",
-			"min": 1,
-			"max": 3,
-			"step": 0.1,
-			"label": "Mobile",
-			"default": 1.2
-		},
-		{
-			"type": "range",
-			"id": "limit",
-			"min": 1,
-			"max": 20,
-			"step": 1,
-			"default": 6,
-			"label": "Product limit",
-			"info": "Loading a large number of products can affect page speed"
-		},
-		{
-			"type": "select",
-			"id": "bg",
-			"label": "Background color",
-			"default": "palette--light bg--neutral",
-			"options": [
-				{
-					"value": "palette--light bg--neutral",
-					"label": "Default"
-				},
-				{
-					"value": "palette--light bg--accent",
-					"label": "Light"
-				},
-				{
-					"value": "palette--dark bg--invert",
-					"label": "Dark"
-				},
-				{
-					"value": "palette--dark bg--invert--accent",
-					"label": "Dark accent"
-				},
-				{
-					"value": "palette--bright bg--bright",
-					"label": "Bright"
-				},
-				{
-					"value": "palette--bright bg--bright--accent",
-					"label": "Bright accent"
-				}
-			]
-		},
-		{
-			"type": "header",
-			"content": "Section spacing"
-		},
-		{
-			"type": "select",
-			"id": "width",
-			"label": "Width",
-			"default": "wrapper",
-			"options": [
-				{
-					"value": "wrapper--full",
-					"label": "Full width padded"
-				},
-				{
-					"value": "wrapper",
-					"label": "Page width"
-				},
-				{
-					"value": "wrapper--narrow",
-					"label": "Page width narrow"
-				},
-				{
-					"value": "wrapper--tiny",
-					"label": "Page width extra narrow"
-				}
-			]
-		},
-		{
-			"type": "range",
-			"id": "padding_top",
-			"min": 0,
-			"max": 180,
-			"step": 2,
-			"unit": "px",
-			"label": "Padding top",
-			"default": 36
-		},
-		{
-			"type": "range",
-			"id": "padding_bottom",
-			"min": 0,
-			"max": 180,
-			"step": 2,
-			"unit": "px",
-			"label": "Padding bottom",
-			"default": 36
-		}
-	],
-	"blocks": [
-		{
-			"type": "collection",
-			"name": "Collection",
-			"settings": [
-				{
-					"label": "Collection",
-					"id": "collection",
-					"type": "collection"
-				},
-				{
-					"label": "Tab heading",
-					"id": "title",
-					"type": "text"
-				}
-			]
-		}
-	],
-	"presets": [
-		{
-			"name": "Product slider tabs",
-			"blocks": [
-				{
-					"type": "collection",
-					"settings": {
-						"title": "First collection"
-					}
-				},
-				{
-					"type": "collection",
-					"settings": {
-						"title": "Second collection"
-					}
-				}
-			]
-		}
-	],
-	"disabled_on": {
-		"groups": [
-			"header",
-			"footer",
-			"aside"
-		]
-	}
-}
+  {
+    "name": "Product slider tabs",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Featured products"
+      },
+      {
+        "type": "select",
+        "id": "progress_bar",
+        "label": "Progress bar style",
+        "default": "mobile",
+        "options": [
+          {
+            "value": "hidden",
+            "label": "Hidden"
+          }, {
+            "value": "mobile",
+            "label": "Mobile only"
+          }, {
+            "value": "desktop",
+            "label": "Desktop only"
+          }, {
+            "value": "both",
+            "label": "Mobile and desktop"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Products per row"
+      },
+      {
+        "type": "range",
+        "id": "grid_large",
+        "min": 3,
+        "max": 6,
+        "step": 1,
+        "label": "Desktop",
+        "default": 4
+      }, {
+        "type": "range",
+        "id": "grid_medium",
+        "min": 1,
+        "max": 4,
+        "step": 1,
+        "label": "Tablet",
+        "default": 3
+      }, {
+        "type": "range",
+        "id": "grid_mobile",
+        "min": 1,
+        "max": 3,
+        "step": 0.1,
+        "label": "Mobile",
+        "default": 1.2
+      }, {
+        "type": "range",
+        "id": "limit",
+        "min": 1,
+        "max": 20,
+        "step": 1,
+        "default": 6,
+        "label": "Product limit",
+        "info": "Loading a large number of products can affect page speed"
+      }, {
+        "type": "select",
+        "id": "bg",
+        "label": "Background color",
+        "default": "palette--light bg--neutral",
+        "options": [
+          {
+            "value": "palette--light bg--neutral",
+            "label": "Default"
+          },
+          {
+            "value": "palette--light bg--accent",
+            "label": "Light"
+          },
+          {
+            "value": "palette--dark bg--invert",
+            "label": "Dark"
+          },
+          {
+            "value": "palette--dark bg--invert--accent",
+            "label": "Dark accent"
+          }, {
+            "value": "palette--bright bg--bright",
+            "label": "Bright"
+          }, {
+            "value": "palette--bright bg--bright--accent",
+            "label": "Bright accent"
+          }
+        ]
+      }, {
+        "type": "header",
+        "content": "Section spacing"
+      }, {
+        "type": "select",
+        "id": "width",
+        "label": "Width",
+        "default": "wrapper",
+        "options": [
+          {
+            "value": "wrapper--full",
+            "label": "Full width padded"
+          }, {
+            "value": "wrapper",
+            "label": "Page width"
+          }, {
+            "value": "wrapper--narrow",
+            "label": "Page width narrow"
+          }, {
+            "value": "wrapper--tiny",
+            "label": "Page width extra narrow"
+          }
+        ]
+      }, {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 180,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding top",
+        "default": 36
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 180,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding bottom",
+        "default": 36
+      }
+    ],
+    "blocks": [
+      {
+        "type": "collection",
+        "name": "Collection",
+        "settings": [
+          {
+            "label": "Collection",
+            "id": "collection",
+            "type": "collection"
+          }, {
+            "label": "Tab heading",
+            "id": "title",
+            "type": "text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product slider tabs",
+        "blocks": [
+          {
+            "type": "collection",
+            "settings": {
+              "title": "First collection"
+            }
+          }, {
+            "type": "collection",
+            "settings": {
+              "title": "Second collection"
+            }
+          }
+        ]
+      }
+    ],
+    "disabled_on": {
+      "groups": ["header", "footer", "aside"]
+    }
+  }
 {% endschema %}
