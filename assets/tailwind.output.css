@@ -467,6 +467,9 @@
   .\!flex {
     display: flex !important;
   }
+  .\!hidden {
+    display: none !important;
+  }
   .block {
     display: block;
   }
@@ -1571,6 +1574,12 @@
   .group-data-\[viewed\]\/section\:\[--scale\:100\%\] {
     &:is(:where(.group\/section)[data-viewed] *) {
       --scale: 100%;
+    }
+  }
+  .after\:\!hidden {
+    &::after {
+      content: var(--tw-content);
+      display: none !important;
     }
   }
   .peer-\[\.drawer--visible\]\:visible {
