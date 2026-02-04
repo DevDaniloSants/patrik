@@ -27,88 +27,54 @@
       data-section-id="{{ section.id }}"
       data-section-type="collection"
       data-sort="{{ section.settings.collection_sorting }}"
-      style="--PT: {{ section.settings.padding_top }}px; --PB: {{ section.settings.padding_bottom }}px;">
+      style="--PT: 0px; --PB: {{ section.settings.padding_bottom }}px;">
 
-      <div class="collection {{ mobile_compact_class }}" data-sidebar-toggle>
+      <div class="collection {{ mobile_compact_class }} !pt-0 !mt-0" data-sidebar-toggle>
         <div class="!px-0">
           {%- assign collection_sidebar = false -%}
           {%- if section.blocks.size > 0 -%}
             {%- assign collection_sidebar = true -%}
           {%- endif -%}
 
-          {% if collection_sidebar or section.settings.collection_sorting or section.settings.enable_layout_toggle %}
-            <nav class="collection__nav wrapper !flex !flex-row-reverse !border-0" data-collection-tools>
-              <div class="collection__nav__buttons">
-                {% if collection_sidebar %}
-                  {% capture current_filters_count %}
-                {%- assign filter_count = 0 -%}
-                {%- for filter in collection.filters -%}
-                  {%- assign filter_count = filter_count | plus: filter.active_values.size -%}
-                {%- endfor -%}
-                {%- if filter_count > 0 -%}
-                  <div class="badge">{{ filter_count }}</div>
-                {%- endif -%}
-              {% endcapture %}
-                  <button class="collection__filters__toggle !rounded-full !border !border-black {{ default_show_filters }}" data-filters-toggle="filters">
-                    {% comment %} 
-                                                                  Botão de esconder filtros comentar o de baixo se for pra colocar o botão de mostrar e esconder filtros 
-                                                                  <span class="hide-filters">{{ 'collections.sidebar.hide_filters' | t }}</span>
-                                                            {% endcomment %}
-                    <span class="hide-filters !text-black">{{ 'collections.sidebar.filter' | t }}</span>
-                    <span class="show-filters !text-black">{{ 'collections.sidebar.filter' | t }}</span>
-                    <span data-active-filters-count>{{ current_filters_count }}</span>
-                    {% render 'icon-core-filter' %}
-                  </button>
-                {% endif %}
-                {% if section.settings.collection_sorting %}
-                  <div class="collection__sort">
-                    {% render 'collection-sorting'
-                      , collection: collection %}
-                  </div>
-                {% endif %}
-              </div>
-              {% if section.settings.enable_layout_toggle %}
-                <div class="collection__layout">
-                  <button
-                    data-focus-element
-                    aria-label="{{ 'general.accessibility.toggle_with_count' | t: count: 1 }}"
-                    data-toggle-grid="1">{% render 'icon-fill-grid-1' %}</button>
-                  <button
-                    data-focus-element
-                    aria-label="{{ 'general.accessibility.toggle_with_count' | t: count: 2 }}"
-                    data-toggle-grid="2">{% render 'icon-fill-grid-2' %}</button>
-                  <button
-                    data-focus-element
-                    aria-label="{{ 'general.accessibility.toggle_with_count' | t: count: 3 }}"
-                    data-toggle-grid="3">{% render 'icon-fill-grid-3' %}</button>
-                  <button
-                    data-focus-element
-                    aria-label="{{ 'general.accessibility.toggle_with_count' | t: count: 4 }}"
-                    data-toggle-grid="4">{% render 'icon-fill-grid-4' %}</button>
-                </div>
-              {% endif %}
-            </nav>
-          {% endif %}
+          {% comment %}
+          Collection nav bar removed to eliminate whitespace. 
+          Sorting and layout toggles were here.
+          {% endcomment %}
 
           {% render 'filters-active' collection: collection
             , show_products_count: section.settings.show_products_count %}
 
           <div class="collection__content">
             {% if collection_sidebar %}
-              <!-- Overlay - FORA do drawer para receber cliques -->
+
+              <!-- Overlay - Desktop Only -->
               <div
-                class="filters-overlay fixed inset-0 w-screen h-screen bg-black/50 opacity-0 invisible transition-all duration-300 z-6999 cursor-pointer"
+                class="filters-overlay fixed inset-0 w-screen h-screen bg-black/50 opacity-0 invisible transition-all duration-300 z-[9990] cursor-pointer peer-[.drawer--visible]:opacity-100 peer-[.drawer--visible]:visible hidden md:block"
                 data-filters-underlay
                 data-filters-toggle="filters"
                 aria-hidden="true"></div>
 
+              <style>
+                @media (max-width: 767px) {
+                  .drawer-left-override {
+                    left: 0 !important;
+                    right: auto !important;
+                    transform: translateX(-100%) !important;
+                  }
+                  .drawer-left-override.drawer--visible {
+                    transform: translateX(0) !important;
+                  }
+                }
+              </style>
               <aside
-                class="collection__filters__wrapper {{ default_show_filters }} fixed top-0 right-0 h-screen w-full md:!w-[450px] max-w-[90vw] bg-white z-[9999] translate-x-full transition-transform duration-300 ease-out overflow-y-auto shadow-2xl [&.drawer--visible]:translate-x-0"
+                class="collection__filters__wrapper drawer-left-override peer {{ default_show_filters }} fixed top-0 h-screen !w-screen !max-w-[100vw] md:!w-[450px] md:!max-w-[450px] md:right-0 md:left-auto md:translate-x-full md:[&.drawer--visible]:translate-x-0 bg-transparent z-[9999] transition-transform duration-300 ease-out shadow-2xl flex"
                 data-collection-sidebar
                 data-filters="filters"
                 data-default-hide="{{ section.settings.hide_sidebar }}">
-                <div class="collection__filters__outer h-full flex flex-col">
-                  <div class="drawer__top flex justify-between items-center p-5 border-b border-gray-200 sticky top-0 bg-white z-10">
+                
+                <!-- Drawer Content -->
+                <div class="collection__filters__outer h-full flex flex-col !w-full bg-white">
+                  <div class="drawer__top flex justify-between items-center p-5 border-b border-gray-200 sticky top-0 bg-white z-10 !transform-none !transition-none">
 
                     <div class="drawer__top__left">
                       <p class="cart__drawer__title text-lg font-semibold">{{ 'collections.sidebar.filter' | t }}</p>
@@ -122,7 +88,7 @@
                       {% render 'icon-core-x' %}
                     </button>
                   </div>
-                  <div class="collection__filters__inner flex-1 overflow-y-auto p-5 lg:!px-10">
+                  <div class="collection__filters__inner flex-1 overflow-y-auto p-5 lg:!px-10 !transform-none !transition-none">
                     {% render 'collection-filters-sidebar'
                       , section: section
                       , collection: collection %}
@@ -239,11 +205,6 @@
             ],
             "default": "2"
           }, {
-            "type": "checkbox",
-            "id": "enable_layout_toggle",
-            "label": "Show product layout buttons",
-            "default": true
-          }, {
             "type": "select",
             "id": "color_bg",
             "label": "Background color",
@@ -272,14 +233,6 @@
                 "label": "Bright accent"
               }
             ]
-          }, {
-            "type": "header",
-            "content": "Collection sorting"
-          }, {
-            "type": "checkbox",
-            "id": "collection_sorting",
-            "label": "Show collection sorting",
-            "default": true
           }, {
             "type": "header",
             "content": "Collection filter sidebar"

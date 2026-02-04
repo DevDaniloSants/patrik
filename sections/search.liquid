@@ -31,7 +31,7 @@
     {% render 'search-bar' %}
 
     {%- if search.terms.size > 0 -%}
-      <div class="search__page__query note">
+      <div class="search__page__query note hidden md:block">
         <p>
           {%- if search.results_count > 0 -%}
             {{ 'general.search.results_for' | t }}
@@ -70,7 +70,9 @@
         {%- endfor -%}
       {%- endcapture -%}
 
-      <nav class="collection__nav wrapper !flex !flex-row-reverse !border-0" data-collection-tools>
+      <nav class="collection__nav wrapper !flex !border-0 justify-between w-full !mt-4 md:!mt-0 md:justify-end before:!hidden after:!hidden" data-collection-tools>
+        <span class="text-sm font-bold md:hidden self-center">Produtos ({{ search.results_count }})</span>
+
         <div class="collection__nav__buttons">
           {% if filter_count > 0 %}
             {% capture current_filters_count %}
@@ -118,13 +120,25 @@
           data-filters-toggle="filters"
           aria-hidden="true"></div>
 
+        <style>
+          @media (max-width: 767px) {
+            .drawer-left-override {
+              left: 0 !important;
+              right: auto !important;
+              transform: translateX(-100%) !important;
+            }
+            .drawer-left-override.drawer--visible {
+              transform: translateX(0) !important;
+            }
+          }
+        </style>
         <aside
-          class="collection__filters__wrapper fixed top-0 right-0 h-screen w-full md:!w-[450px] max-w-[90vw] bg-white z-[9999] translate-x-full transition-transform duration-300 ease-out overflow-y-auto shadow-2xl [&.drawer--visible]:translate-x-0"
+          class="collection__filters__wrapper drawer-left-override fixed top-0 h-screen !w-screen !max-w-[100vw] md:!w-[450px] md:!max-w-[450px] md:right-0 md:left-auto md:translate-x-full md:[&.drawer--visible]:translate-x-0 bg-white z-[9999] transition-transform duration-300 ease-out overflow-y-auto shadow-2xl"
           data-collection-sidebar
           data-filters="filters"
           data-default-hide="true">
-          <div class="collection__filters__outer h-full flex flex-col">
-            <div class="drawer__top flex justify-between items-center p-5 border-b border-gray-200 sticky top-0 bg-white z-10">
+          <div class="collection__filters__outer h-full flex flex-col !w-full">
+            <div class="drawer__top flex justify-between items-center p-5 border-b border-gray-200 sticky top-0 bg-white z-10 !transform-none !transition-none">
               <div class="drawer__top__left">
                 <p class="cart__drawer__title text-lg font-semibold">{{ 'collections.sidebar.filter' | t }}</p>
               </div>
@@ -138,7 +152,7 @@
               </button>
             </div>
 
-            <div class="collection__filters__inner flex-1 overflow-y-auto p-5 lg:!px-10">
+            <div class="collection__filters__inner flex-1 overflow-y-auto p-5 lg:!px-10 !transform-none !transition-none">
               <form data-sidebar-filter-form>
                 <input
                   type="hidden"

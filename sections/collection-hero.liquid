@@ -52,13 +52,45 @@
 
   {%- if show_image == false or title_below or description_below -%}
     {% unless title_below == false and description_below and section.settings.show_description and collection.description == blank %}
-      <div style="--PT: {{ section.settings.padding_top_text }}px; --PB: {{ section.settings.padding_bottom_text }}px;">
+      <div style="--PT: {{ section.settings.padding_top_text | divided_by: 2 }}px; --PB: {{ section.settings.padding_top_text | divided_by: 2 }}px;">
         <div class="collection__text-content {{ section.settings.width_text }} section-padding">
           <div class="collection__heading {{ section.settings.text_align }}">
             {%- if title_below and section.settings.show_title -%}
-              <h1 class="standard__heading heading-size-8 collection__heading__text">
-                {{ collection.title }}
-              </h1>
+              <div class="flex flex-wrap items-center justify-between gap-4 w-full">
+                <div class="relative group flex items-center">
+                  <h1 class="standard__heading heading-size-8 collection__heading__text flex items-center gap-2 cursor-pointer !m-0">
+                    {{ collection.title }}
+                    {% render 'icon-core-chevron-down' %}
+                  </h1>
+                  <select class="absolute inset-0 w-full h-full opacity-0 cursor-pointer appearance-none" onchange="window.location.href=this.value">
+                    <option value="{{ collection.url }}" selected>{{ collection.title }}</option>
+                    {%- assign sorted_collections = collections | sort: 'title' -%}
+                    {%- for col in sorted_collections -%}
+                      {%- unless col.handle == collection.handle -%}
+                        <option value="{{ col.url }}">{{ col.title }}</option>
+                      {%- endunless -%}
+                    {%- endfor -%}
+                  </select>
+                </div>
+
+                <div class="collection-hero__filters">
+                  {% capture current_filters_count %}
+                    {%- assign filter_count = 0 -%}
+                    {%- for filter in collection.filters -%}
+                      {%- assign filter_count = filter_count | plus: filter.active_values.size -%}
+                    {%- endfor -%}
+                    {%- if filter_count > 0 -%}
+                      <div class="badge">{{ filter_count }}</div>
+                    {%- endif -%}
+                  {% endcapture %}
+                  <button class="collection__filters__toggle !rounded-full !border !border-black !py-3 !px-6" data-filters-toggle="filters">
+                    <span class="hide-filters !text-black">{{ 'collections.sidebar.filter' | t }}</span>
+                    <span class="show-filters !text-black">{{ 'collections.sidebar.filter' | t }}</span>
+                    <span data-active-filters-count>{{ current_filters_count }}</span>
+                    {% render 'icon-core-filter' %}
+                  </button>
+                </div>
+              </div>
             {%- endif -%}
             {%- if description_below and section.settings.show_description and collection.description != blank -%}
               <div class="rte standard__rte collection__heading__text">

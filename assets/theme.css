@@ -24519,7 +24519,6 @@ label.quatity-selector {
     left: 0;
     height: 100%;
     min-width: 70%;
-    max-width: 90%;
     background: var(--bg);
     box-shadow:
       0 2px 8px rgba(0, 0, 0, 0.06),
