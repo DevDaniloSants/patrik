@@ -647,6 +647,20 @@
 				"info": "If there are two images in the slideshow, the second image will show immediately on hover"
 			},
 			{
+				"type": "checkbox",
+				"id": "product_card_manual_slider_enable",
+				"label": "Enable manual slider navigation",
+				"info": "Shows arrow controls and enables drag/swipe for product image navigation",
+				"default": false
+			},
+			{
+				"type": "checkbox",
+				"id": "product_card_disable_hover_change",
+				"label": "Disable hover image change",
+				"info": "Disables automatic image change on hover (images will only change with manual slider navigation)",
+				"default": false
+			},
+			{
 				"type": "header",
 				"content": "Image scaling"
 			},

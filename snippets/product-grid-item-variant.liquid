@@ -1,4 +1,4 @@
-<!-- /snippets/product-grid-item-variant.liquid -->
+﻿<!-- /snippets/product-grid-item-variant.liquid -->
 
 {% comment %}
   Inner content for a grid item
@@ -539,3 +539,91 @@
     {%- endif -%}
   </div>
 </product-grid-item-variant>
+
+{% comment %} Product Card Manual Slider Styles & Script {% endcomment %}
+{%- if settings.product_card_manual_slider_enable -%}
+  <style>
+    .product-card-slider-arrows {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: 5;
+    }
+    
+    .product-card-slider-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      cursor: pointer;
+      pointer-events: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      transition: all 0.2s ease;
+      opacity: 0;
+      color: #000;
+    }
+    
+    .product-card-slider-arrow:hover:not(:disabled) {
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transform: translateY(-50%) scale(1.1);
+    }
+    
+    .product-card-slider-arrow:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+    
+    .product-card-slider-arrow--prev {
+      left: 8px;
+    }
+    
+    .product-card-slider-arrow--next {
+      right: 8px;
+    }
+    
+    /* Show arrows on hover (desktop) */
+    @media (min-width: 768px) {
+      product-grid-item-variant:hover .product-card-slider-arrow:not(:disabled) {
+        opacity: 1;
+      }
+    }
+    
+    /* Always show on mobile */
+    @media (max-width: 767px) {
+      .product-card-slider-arrow:not(:disabled) {
+        opacity: 0.8;
+      }
+      
+      .product-card-slider-arrow {
+        width: 28px;
+        height: 28px;
+      }
+    }
+    
+    /* Prevent text selection during drag */
+    [data-grid-images] {
+      user-select: none;
+      -webkit-user-select: none;
+    }
+  </style>
+  
+  <script src="{{ 'product-card-slider.js' | asset_url }}" defer></script>
+  
+  <script>
+    // Pass settings to JavaScript
+    window.theme = window.theme || {};
+    window.theme.settings = window.theme.settings || {};
+    window.theme.settings.product_card_manual_slider_enable = {{ settings.product_card_manual_slider_enable | json }};
+  </script>
+{%- endif -%}
