@@ -17,16 +17,24 @@
 -%}
 
 
-<section class="{{ section.settings.color_bg }}"
+<section
+  class="{{ section.settings.color_bg }}"
   data-section-id="{{ section.id }}"
   data-section-type="hero">
   {% if show_image %}
     <div style="--PT: {{ section.settings.padding_top }}px; --PB: {{ section.settings.padding_bottom }}px;">
       <div class="collection__hero {{ section.settings.width }} section-padding">
-        <div class="section--image fade-in-child js-overflow-container {{ section.settings.text_color }}"
-          {% if section.settings.width == "wrapper--none" and section.settings.padding_top == 0 %} data-overlay-header {% endif %}>
+        <div
+          class="section--image fade-in-child js-overflow-container {{ section.settings.text_color }}"
+          {% if section.settings.width == "wrapper--none" and section.settings.padding_top == 0 %}
+          data-overlay-header
+          {% endif %}>
           <div class="hero__content__wrapper {{ section.settings.text_align }}">
-            <div class="hero__content js-overflow-content {% if section.settings.enable_overlay_text %} backdrop--hero{% endif %}" {% if section.settings.enable_overlay_text %} style="--bg: {{ section.settings.overlay_color }}; --opacity: {{ section.settings.overlay_opacity | times: 0.01 }};"{% endif %}>
+            <div
+              class="hero__content js-overflow-content {% if section.settings.enable_overlay_text %} backdrop--hero{% endif %}"
+              {% if section.settings.enable_overlay_text %}
+              style="--bg: {{ section.settings.overlay_color }}; --opacity: {{ section.settings.overlay_opacity | times: 0.01 }};"
+              {% endif %}>
 
               {%- if section.settings.show_title and section.settings.show_title_below == false -%}
                 <h1 class="hero__title heading-size-9">
@@ -44,7 +52,13 @@
             <div class="image-overlay" style="--bg:{{ section.settings.overlay_color }}; opacity:{{ section.settings.overlay_opacity | times: 0.01 }};"></div>
           {%- endunless -%}
 
-          {% render 'image-parallax', img_object: collection.image, frame_height_class: section.settings.image_height, bg_position: section.settings.bg_position, preload: true, loading: 'eager', fetchpriority: 'high' %}
+          {% render 'image-parallax'
+            , img_object: collection.image
+            , frame_height_class: section.settings.image_height
+            , bg_position: section.settings.bg_position
+            , preload: true
+            , loading: 'eager'
+            , fetchpriority: 'high' %}
         </div>
       </div>
     </div>
@@ -57,12 +71,34 @@
           <div class="collection__heading {{ section.settings.text_align }}">
             {%- if title_below and section.settings.show_title -%}
               <div class="flex flex-wrap items-center justify-between gap-4 w-full">
-                <div class="relative group flex items-center">
-                  <h1 class="standard__heading heading-size-8 collection__heading__text flex items-center gap-2 cursor-pointer !m-0">
+                <div
+                  class="relative group flex items-center z-20"
+                  tabindex="-1"
+                  onblur="if(!this.contains(event.relatedTarget)){this.querySelector('.mobile-collection-dropdown').classList.add('hidden')}">
+                  <h1 class="standard__heading heading-size-8 collection__heading__text flex items-center gap-2 cursor-pointer !m-0" onclick="this.parentElement.querySelector('.mobile-collection-dropdown').classList.toggle('hidden')">
                     {{ collection.title }}
                     {% render 'icon-core-chevron-down' %}
                   </h1>
-                  <select class="absolute inset-0 w-full h-full opacity-0 cursor-pointer appearance-none" onchange="window.location.href=this.value">
+
+                  <!-- Mobile Custom Dropdown -->
+                  <div class="mobile-collection-dropdown hidden md:hidden absolute top-full left-0 mt-2 min-w-[240px] w-max max-w-[90vw] bg-white shadow-xl rounded-sm z-50 border border-gray-100 max-h-[60vh] overflow-y-auto">
+                    <div class="flex flex-col">
+                      <div class="px-5 py-4 bg-gray-50 font-bold text-sm text-black flex items-center justify-between border-l-4 border-black">
+                        <span class="uppercase tracking-widest">{{ collection.title }}</span>
+                      </div>
+                      {%- assign sorted_collections = collections | sort: 'title' -%}
+                      {%- for col in sorted_collections -%}
+                        {%- unless col.handle == collection.handle -%}
+                          <a href="{{ col.url }}" class="px-5 py-4 text-sm text-gray-600 hover:text-black hover:bg-gray-50 border-l-4 border-transparent hover:border-gray-200 transition-colors uppercase tracking-widest">
+                            {{ col.title }}
+                          </a>
+                        {%- endunless -%}
+                      {%- endfor -%}
+                    </div>
+                  </div>
+
+                  <!-- Desktop Native Select (Hidden on Mobile) -->
+                  <select class="hidden md:block absolute inset-0 w-full h-full opacity-0 cursor-pointer appearance-none" onchange="window.location.href=this.value">
                     <option value="{{ collection.url }}" selected>{{ collection.title }}</option>
                     {%- assign sorted_collections = collections | sort: 'title' -%}
                     {%- for col in sorted_collections -%}
@@ -83,7 +119,7 @@
                       <div class="badge">{{ filter_count }}</div>
                     {%- endif -%}
                   {% endcapture %}
-                  <button class="collection__filters__toggle !rounded-full !border !border-black !py-3 !px-6" data-filters-toggle="filters">
+                  <button class="collection__filters__toggle !rounded-full !border !border-black !py-2 !px-6" data-filters-toggle="filters">
                     <span class="hide-filters !text-black">{{ 'collections.sidebar.filter' | t }}</span>
                     <span class="show-filters !text-black">{{ 'collections.sidebar.filter' | t }}</span>
                     <span data-active-filters-count>{{ current_filters_count }}</span>
@@ -105,353 +141,311 @@
 </section>
 
 {% schema %}
-{
-	"name": "Collection title",
-	"settings": [
-		{
-			"type": "header",
-			"content": "Layout"
-		},
-		{
-			"type": "select",
-			"id": "text_align",
-			"label": "Text alignment",
-			"default": "align--middle-center",
-			"options": [
-				{
-					"value": "align--top-left",
-					"label": "Top left"
-				},
-				{
-					"value": "align--top-center",
-					"label": "Top center"
-				},
-				{
-					"value": "align--top-right",
-					"label": "Top right"
-				},
-				{
-					"value": "align--middle-left",
-					"label": "Middle left"
-				},
-				{
-					"value": "align--middle-center",
-					"label": "Absolute center"
-				},
-				{
-					"value": "align--middle-right",
-					"label": "Middle right"
-				},
-				{
-					"value": "align--bottom-left",
-					"label": "Bottom left"
-				},
-				{
-					"value": "align--bottom-center",
-					"label": "Bottom center"
-				},
-				{
-					"value": "align--bottom-right",
-					"label": "Bottom right"
-				}
-			]
-		},
-		{
-			"type": "checkbox",
-			"id": "show_title",
-			"label": "Show collection title",
-			"default": true
-		},
-		{
-			"type": "checkbox",
-			"id": "show_title_below",
-			"label": "Title below image",
-			"default": false
-		},
-		{
-			"type": "checkbox",
-			"id": "show_description",
-			"label": "Show collection description",
-			"default": true
-		},
-		{
-			"type": "checkbox",
-			"id": "show_description_below",
-			"label": "Description below image",
-			"default": false
-		},
-		{
-			"type": "select",
-			"id": "color_bg",
-			"label": "Background color",
-			"default": "palette--light bg--neutral",
-			"options": [
-				{
-					"value": "palette--light bg--neutral",
-					"label": "Default"
-				},
-				{
-					"value": "palette--light bg--accent",
-					"label": "Light"
-				},
-				{
-					"value": "palette--dark bg--invert",
-					"label": "Dark"
-				},
-				{
-					"value": "palette--dark bg--invert--accent",
-					"label": "Dark accent"
-				},
-				{
-					"value": "palette--bright bg--bright",
-					"label": "Bright"
-				},
-				{
-					"value": "palette--bright bg--bright--accent",
-					"label": "Bright accent"
-				}
-			]
-		},
-		{
-			"type": "header",
-			"content": "Feature image"
-		},
-		{
-			"type": "checkbox",
-			"id": "show_image",
-			"label": "Show feature image",
-			"default": true
-		},
-		{
-			"type": "select",
-			"id": "bg_position",
-			"label": "Image position",
-			"default": "center-center",
-			"options": [
-				{
-					"label": "Top",
-					"value": "center-top"
-				},
-				{
-					"label": "Right",
-					"value": "right-center"
-				},
-				{
-					"label": "Center",
-					"value": "center-center"
-				},
-				{
-					"label": "Left",
-					"value": "left-center"
-				},
-				{
-					"label": "Bottom",
-					"value": "center-bottom"
-				}
-			]
-		},
-		{
-			"type": "select",
-			"id": "image_height",
-			"label": "Image height",
-			"default": "use_screen_one_third",
-			"options": [
-				{
-					"value": "use_screen_full",
-					"label": "Full screen height"
-				},
-				{
-					"value": "use_screen_three_quarters",
-					"label": "Three quarters of screen height"
-				},
-				{
-					"value": "use_screen_two_thirds",
-					"label": "Two thirds of screen height"
-				},
-				{
-					"value": "use_screen_one_half",
-					"label": "One half of screen height"
-				},
-				{
-					"value": "use_screen_one_third",
-					"label": "One third of screen height"
-				},
-				{
-					"value": "use_screen_one_fifth",
-					"label": "One fifth of screen height"
-				},
-				{
-					"value": "use_pixels_800",
-					"label": "800px"
-				},
-				{
-					"value": "use_pixels_650",
-					"label": "650px"
-				},
-				{
-					"value": "use_pixels_500",
-					"label": "500px"
-				},
-				{
-					"value": "use_image",
-					"label": "Image height"
-				}
-			]
-		},
-		{
-			"type": "range",
-			"id": "overlay_opacity",
-			"min": 0,
-			"max": 100,
-			"step": 5,
-			"label": "Image overlay opacity",
-			"info": "Increase contrast for legible text.",
-			"default": 20
-		},
-		{
-			"type": "color",
-			"id": "overlay_color",
-			"label": "Overlay color",
-			"default": "#000"
-		},
-		{
-			"type": "checkbox",
-			"id": "enable_overlay_text",
-			"label": "Overlay behind text only",
-			"default": false
-		},
-		{
-			"type": "select",
-			"id": "text_color",
-			"label": "Text color",
-			"default": "text--white",
-			"options": [
-				{
-					"value": "text--neutral",
-					"label": "Normal text"
-				},
-				{
-					"value": "text--white",
-					"label": "White"
-				},
-				{
-					"value": "text--primary",
-					"label": "Primary accent"
-				},
-				{
-					"value": "text--secondary",
-					"label": "Secondary accent"
-				},
-				{
-					"value": "text--black",
-					"label": "Black"
-				},
-				{
-					"value": "text--invert--primary",
-					"label": "Primary dark accent"
-				},
-				{
-					"value": "text--invert--secondary",
-					"label": "Secondary dark accent"
-				},
-				{
-					"value": "text--invert",
-					"label": "Inverted text color"
-				},
-				{
-					"value": "text--bright--primary",
-					"label": "Primary bright accent"
-				},
-				{
-					"value": "text--bright--secondary",
-					"label": "Secondary bright accent"
-				}
-			]
-		},
-		{
-			"type": "header",
-			"content": "Section spacing (with image)"
-		},
-		{
-			"type": "select",
-			"id": "width",
-			"label": "Width",
-			"default": "wrapper--none",
-			"options": [
-				{
-					"value": "wrapper--none",
-					"label": "Full width"
-				},
-				{
-					"value": "wrapper--full",
-					"label": "Full width padded"
-				},
-				{
-					"value": "wrapper",
-					"label": "Page width"
-				}
-			]
-		},
-		{
-			"type": "range",
-			"id": "padding_top",
-			"min": 0,
-			"max": 180,
-			"step": 2,
-			"unit": "px",
-			"label": "Padding top",
-			"default": 0
-		},
-		{
-			"type": "range",
-			"id": "padding_bottom",
-			"min": 0,
-			"max": 180,
-			"step": 2,
-			"unit": "px",
-			"label": "Padding bottom",
-			"default": 0
-		},
-		{
-			"type": "header",
-			"content": "Section spacing (no image)"
-		},
-		{
-			"type": "select",
-			"id": "width_text",
-			"label": "Width",
-			"default": "wrapper",
-			"options": [
-				{
-					"value": "wrapper--full",
-					"label": "Full width padded"
-				},
-				{
-					"value": "wrapper",
-					"label": "Page width"
-				}
-			]
-		},
-		{
-			"type": "range",
-			"id": "padding_top_text",
-			"min": 0,
-			"max": 180,
-			"step": 2,
-			"unit": "px",
-			"label": "Padding top",
-			"default": 36
-		},
-		{
-			"type": "range",
-			"id": "padding_bottom_text",
-			"min": 0,
-			"max": 180,
-			"step": 2,
-			"unit": "px",
-			"label": "Padding bottom",
-			"default": 0
-		}
-	]
-}
+  {
+    "name": "Collection title",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Layout"
+      },
+      {
+        "type": "select",
+        "id": "text_align",
+        "label": "Text alignment",
+        "default": "align--middle-center",
+        "options": [
+          {
+            "value": "align--top-left",
+            "label": "Top left"
+          },
+          {
+            "value": "align--top-center",
+            "label": "Top center"
+          },
+          {
+            "value": "align--top-right",
+            "label": "Top right"
+          },
+          {
+            "value": "align--middle-left",
+            "label": "Middle left"
+          }, {
+            "value": "align--middle-center",
+            "label": "Absolute center"
+          }, {
+            "value": "align--middle-right",
+            "label": "Middle right"
+          }, {
+            "value": "align--bottom-left",
+            "label": "Bottom left"
+          }, {
+            "value": "align--bottom-center",
+            "label": "Bottom center"
+          }, {
+            "value": "align--bottom-right",
+            "label": "Bottom right"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "show_title",
+        "label": "Show collection title",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_title_below",
+        "label": "Title below image",
+        "default": false
+      }, {
+        "type": "checkbox",
+        "id": "show_description",
+        "label": "Show collection description",
+        "default": true
+      }, {
+        "type": "checkbox",
+        "id": "show_description_below",
+        "label": "Description below image",
+        "default": false
+      }, {
+        "type": "select",
+        "id": "color_bg",
+        "label": "Background color",
+        "default": "palette--light bg--neutral",
+        "options": [
+          {
+            "value": "palette--light bg--neutral",
+            "label": "Default"
+          },
+          {
+            "value": "palette--light bg--accent",
+            "label": "Light"
+          },
+          {
+            "value": "palette--dark bg--invert",
+            "label": "Dark"
+          },
+          {
+            "value": "palette--dark bg--invert--accent",
+            "label": "Dark accent"
+          }, {
+            "value": "palette--bright bg--bright",
+            "label": "Bright"
+          }, {
+            "value": "palette--bright bg--bright--accent",
+            "label": "Bright accent"
+          }
+        ]
+      }, {
+        "type": "header",
+        "content": "Feature image"
+      }, {
+        "type": "checkbox",
+        "id": "show_image",
+        "label": "Show feature image",
+        "default": true
+      }, {
+        "type": "select",
+        "id": "bg_position",
+        "label": "Image position",
+        "default": "center-center",
+        "options": [
+          {
+            "label": "Top",
+            "value": "center-top"
+          },
+          {
+            "label": "Right",
+            "value": "right-center"
+          },
+          {
+            "label": "Center",
+            "value": "center-center"
+          },
+          {
+            "label": "Left",
+            "value": "left-center"
+          }, {
+            "label": "Bottom",
+            "value": "center-bottom"
+          }
+        ]
+      }, {
+        "type": "select",
+        "id": "image_height",
+        "label": "Image height",
+        "default": "use_screen_one_third",
+        "options": [
+          {
+            "value": "use_screen_full",
+            "label": "Full screen height"
+          },
+          {
+            "value": "use_screen_three_quarters",
+            "label": "Three quarters of screen height"
+          },
+          {
+            "value": "use_screen_two_thirds",
+            "label": "Two thirds of screen height"
+          },
+          {
+            "value": "use_screen_one_half",
+            "label": "One half of screen height"
+          }, {
+            "value": "use_screen_one_third",
+            "label": "One third of screen height"
+          }, {
+            "value": "use_screen_one_fifth",
+            "label": "One fifth of screen height"
+          }, {
+            "value": "use_pixels_800",
+            "label": "800px"
+          }, {
+            "value": "use_pixels_650",
+            "label": "650px"
+          }, {
+            "value": "use_pixels_500",
+            "label": "500px"
+          }, {
+            "value": "use_image",
+            "label": "Image height"
+          }
+        ]
+      }, {
+        "type": "range",
+        "id": "overlay_opacity",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "label": "Image overlay opacity",
+        "info": "Increase contrast for legible text.",
+        "default": 20
+      }, {
+        "type": "color",
+        "id": "overlay_color",
+        "label": "Overlay color",
+        "default": "#000"
+      }, {
+        "type": "checkbox",
+        "id": "enable_overlay_text",
+        "label": "Overlay behind text only",
+        "default": false
+      }, {
+        "type": "select",
+        "id": "text_color",
+        "label": "Text color",
+        "default": "text--white",
+        "options": [
+          {
+            "value": "text--neutral",
+            "label": "Normal text"
+          },
+          {
+            "value": "text--white",
+            "label": "White"
+          },
+          {
+            "value": "text--primary",
+            "label": "Primary accent"
+          },
+          {
+            "value": "text--secondary",
+            "label": "Secondary accent"
+          }, {
+            "value": "text--black",
+            "label": "Black"
+          }, {
+            "value": "text--invert--primary",
+            "label": "Primary dark accent"
+          }, {
+            "value": "text--invert--secondary",
+            "label": "Secondary dark accent"
+          }, {
+            "value": "text--invert",
+            "label": "Inverted text color"
+          }, {
+            "value": "text--bright--primary",
+            "label": "Primary bright accent"
+          }, {
+            "value": "text--bright--secondary",
+            "label": "Secondary bright accent"
+          }
+        ]
+      }, {
+        "type": "header",
+        "content": "Section spacing (with image)"
+      }, {
+        "type": "select",
+        "id": "width",
+        "label": "Width",
+        "default": "wrapper--none",
+        "options": [
+          {
+            "value": "wrapper--none",
+            "label": "Full width"
+          }, {
+            "value": "wrapper--full",
+            "label": "Full width padded"
+          }, {
+            "value": "wrapper",
+            "label": "Page width"
+          }
+        ]
+      }, {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 180,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding top",
+        "default": 0
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 180,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding bottom",
+        "default": 0
+      }, {
+        "type": "header",
+        "content": "Section spacing (no image)"
+      }, {
+        "type": "select",
+        "id": "width_text",
+        "label": "Width",
+        "default": "wrapper",
+        "options": [
+          {
+            "value": "wrapper--full",
+            "label": "Full width padded"
+          }, {
+            "value": "wrapper",
+            "label": "Page width"
+          }
+        ]
+      }, {
+        "type": "range",
+        "id": "padding_top_text",
+        "min": 0,
+        "max": 180,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding top",
+        "default": 36
+      }, {
+        "type": "range",
+        "id": "padding_bottom_text",
+        "min": 0,
+        "max": 180,
+        "step": 2,
+        "unit": "px",
+        "label": "Padding bottom",
+        "default": 0
+      }
+    ]
+  }
 {% endschema %}

@@ -37,7 +37,7 @@
           {%- endif -%}
 
           {% if collection_sidebar or section.settings.collection_sorting or section.settings.enable_layout_toggle %}
-            <nav class="collection__nav wrapper !flex !flex-row-reverse !border-0" data-collection-tools>
+            <nav class="collection__nav wrapper !flex !flex-row-reverse !border-0 !h-[1px]" data-collection-tools>
               <div class="collection__nav__buttons">
                 {% if collection_sidebar %}
                   {% capture current_filters_count %}
@@ -49,11 +49,11 @@
                   <div class="badge">{{ filter_count }}</div>
                 {%- endif -%}
               {% endcapture %}
-                  <button class="collection__filters__toggle !rounded-full !border !border-black {{ default_show_filters }}" data-filters-toggle="filters">
+                  <button class="collection__filters__toggle !rounded-full !border !border-black !hidden {{ default_show_filters }}" data-filters-toggle="filters">
                     {% comment %} 
-                                                                                        Botão de esconder filtros comentar o de baixo se for pra colocar o botão de mostrar e esconder filtros 
-                                                                                        <span class="hide-filters">{{ 'collections.sidebar.hide_filters' | t }}</span>
-                                                                                {% endcomment %}
+                                                                                                                                                                                                                            Botão de esconder filtros comentar o de baixo se for pra colocar o botão de mostrar e esconder filtros 
+                                                                                                                                                                                                                            <span class="hide-filters">{{ 'collections.sidebar.hide_filters' | t }}</span>
+                                                                                                                                                                                                        {% endcomment %}
                     <span class="hide-filters !text-black">{{ 'collections.sidebar.filter' | t }}</span>
                     <span class="show-filters !text-black">{{ 'collections.sidebar.filter' | t }}</span>
                     <span data-active-filters-count>{{ current_filters_count }}</span>
@@ -120,7 +120,7 @@
                 data-collection-sidebar
                 data-filters="filters"
                 data-default-hide="{{ section.settings.hide_sidebar }}">
-                
+
                 <!-- Drawer Content -->
                 <div class="collection__filters__outer h-full flex flex-col !w-full bg-white">
                   <div class="drawer__top flex justify-between items-center p-5 border-b border-gray-200 sticky top-0 bg-white z-10 !transform-none !transition-none">

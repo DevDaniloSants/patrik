@@ -31,7 +31,7 @@
     {% render 'search-bar' %}
 
     {%- if search.terms.size > 0 -%}
-      <div class="search__page__query note hidden md:block">
+      <div class="search__page__query note hidden">
         <p>
           {%- if search.results_count > 0 -%}
             {{ 'general.search.results_for' | t }}
@@ -70,17 +70,17 @@
         {%- endfor -%}
       {%- endcapture -%}
 
-      <nav class="collection__nav wrapper !flex !border-0 justify-between w-full !mt-4 md:!mt-0 md:justify-end before:!hidden after:!hidden" data-collection-tools>
-        <span class="text-sm font-bold md:hidden self-center">Produtos ({{ search.results_count }})</span>
+      <nav class="collection__nav wrapper !flex !border-0 justify-between w-full !mt-6 md:!mt-4 md:justify-end before:!hidden after:!hidden" data-collection-tools>
+        <span class="text-sm font-bold self-center">Produtos ({{ search.results_count }})</span>
 
-        <div class="collection__nav__buttons">
+        <div class="collection__nav__buttons !h-full flex items-center">
           {% if filter_count > 0 %}
             {% capture current_filters_count %}
               <div class="badge">{{ filter_count }}</div>
             {% endcapture %}
           {% endif %}
 
-          <button class="collection__filters__toggle !rounded-full !border !border-black" data-filters-toggle="filters">
+          <button class="collection__filters__toggle max-h-[37px] !rounded-full !border !border-black !py-2 !px-6" data-filters-toggle="filters">
             <span class="hide-filters !text-black">{{ 'collections.sidebar.filter' | t }}</span>
             <span class="show-filters !text-black">{{ 'collections.sidebar.filter' | t }}</span>
             <span data-active-filters-count>{{ current_filters_count }}</span>
