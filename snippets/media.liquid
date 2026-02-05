@@ -119,7 +119,7 @@
       </div>
     {% when 'video' %}
       <div class="media__contain" style="padding-top: {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%;">
-        {{ media | video_tag: class: 'media-video', image_size: image_size }}
+        {{ media | video_tag: class: 'media-video', image_size: image_size, autoplay: true, loop: section.settings.enable_video_looping, muted: true, playsinline: true, controls: true }}
       </div>
     {% when 'external_video' %}
       <div data-video-id="{{ media.external_id }}"></div>

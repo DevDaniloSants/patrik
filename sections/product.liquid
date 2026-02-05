@@ -175,7 +175,7 @@
 
         {% comment %} Mobile product info - rendered outside the carousel {% endcomment %}
 		 {% comment %} Descomentar dependendo do que vier da reunião adicionar absolute bottom-0{% endcomment %}
-         <div class="mobile-product-content flex lg:!hidden px-5 py-3 absolute bottom-0">
+         <div class="mobile-product-content flex lg:!hidden px-5 py-3 absolute bottom-0 w-full! justify-between!">
           <div class="mobile-product-info flex flex-col">
             {% for block in section.blocks %}
               {% case block.type %}
@@ -339,9 +339,7 @@
                     {{ block.settings.title }}
                   </div>
                 {% endif %}
-			<div>
-					<button>Guia de Medidas: </button>
-			</div>
+
               {% when 'vendor' %}
                 {% if product.vendor %}
                   <div class="product__block__text" style="--PB: {{ block.settings.padding_bottom }}px;" {{ block.shopify_attributes }}>
@@ -451,6 +449,10 @@
 
                     {%- render 'image' img_object: block.settings.image, srcset: srcset, width: image_width -%}
                   </div>
+                </div>
+              {% when 'size-guide' %}
+                <div class="product__block__size-guide" style="--PB: {{ block.settings.padding_bottom }}px;" {{ block.shopify_attributes }}>
+                  {% render 'size-guide', block: block %}
                 </div>
               {% when 'taxes_included' %}
                 {%- if cart.taxes_included or cart.duties_included or shop.shipping_policy.body != blank -%}
@@ -890,8 +892,29 @@
 		{
 			"type": "@app"
 		},
-		{
-			"type": "variant-selectors",
+        {
+          "type": "ring_sizes",
+          "name": "Seletor de Tamanho",
+          "limit": 1,
+          "settings": [
+             {
+               "type": "paragraph",
+               "content": "Exibe botões de escolha baseados no metafield 'custom.tamanho_do_anel'."
+             },
+             {
+               "type": "range",
+               "id": "padding_bottom",
+               "min": 0,
+               "max": 100,
+               "step": 2,
+               "unit": "px",
+               "label": "Padding bottom",
+               "default": 20
+             }
+          ]
+        },
+        {
+          "type": "variant-selectors",
 			"name": "Variant options",
 			"limit": 1,
 			"settings": [
@@ -2904,6 +2927,143 @@
 					"unit": "px",
 					"label": "Padding bottom",
 					"default": 10
+				}
+			]
+		}
+	,
+		{
+			"type": "size-guide",
+			"name": "Guia de Medidas",
+			"limit": 1,
+			"settings": [
+                {
+                    "type": "text",
+                    "id": "text",
+                    "label": "Link Text",
+                    "default": "guia de medidas"
+                },
+                {
+                    "type": "color",
+                    "id": "text_color",
+                    "label": "Text Color",
+                    "default": "#000000"
+                },
+                {
+                    "type": "range",
+                    "id": "text_size",
+                    "min": 10,
+                    "max": 30,
+                    "step": 1,
+                    "unit": "px",
+                    "label": "Font Size",
+                    "default": 14
+                },
+                {
+                    "type": "select",
+                    "id": "font_weight",
+                    "label": "Font Weight",
+                    "default": "font-medium",
+                    "options": [
+                        { "value": "font-normal", "label": "Normal" },
+                        { "value": "font-medium", "label": "Medium" },
+                        { "value": "font-bold", "label": "Bold" }
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "id": "text_underline",
+                    "label": "Underline",
+                    "default": true
+                },
+				{
+					"type": "range",
+					"id": "padding_bottom",
+					"min": 0,
+					"max": 100,
+					"step": 2,
+					"unit": "px",
+					"label": "Padding bottom",
+					"default": 20
+				}
+				,
+				{
+					"type": "header",
+					"content": "Content"
+				},
+				{
+					"type": "richtext",
+					"id": "guide_content",
+					"label": "Guide Content",
+					"default": "<p>Add your size guide information here.</p>"
+				},
+				{
+					"type": "image_picker",
+					"id": "guide_image",
+					"label": "Guide Image"
+				},
+				{
+					"type": "header",
+					"content": "Modal Customization"
+				},
+				{
+					"type": "color",
+					"id": "modal_title_color",
+					"label": "Modal Title Color",
+					"default": "#000000"
+				},
+				{
+					"type": "text",
+					"id": "modal_subtitle",
+					"label": "Subtitle / Lead",
+					"default": "Encontre o ajuste perfeito. Baixe nosso gabarito exclusivo para descobrir o tamanho do seu aro em casa."
+				},
+				{
+					"type": "checkbox",
+					"id": "show_icon",
+					"label": "Show Icon",
+					"default": true
+				},
+				{
+					"type": "image_picker",
+					"id": "custom_icon",
+					"label": "Custom Icon (Optional)"
+				},
+				{
+					"type": "header",
+					"content": "PDF / CTA Button"
+				},
+				{
+					"type": "url",
+					"id": "pdf_url",
+					"label": "PDF Link / Button URL"
+				},
+				{
+					"type": "text",
+					"id": "cta_text",
+					"label": "Button Text",
+					"default": "BAIXAR GABARITO"
+				},
+				{
+					"type": "color",
+					"id": "cta_bg_color",
+					"label": "Button Background Color",
+					"default": "#000000"
+				},
+				{
+					"type": "color",
+					"id": "cta_text_color",
+					"label": "Button Text Color",
+					"default": "#FFFFFF"
+				},
+				{
+                    "type": "header",
+                    "content": "Microcopy / Warning"
+                },
+				{
+					"type": "textarea",
+					"id": "microcopy_text",
+					"label": "Safety Instruction",
+					"default": "Certifique-se de imprimir em tamanho real (100%) e conferir a escala com uma régua."
 				}
 			]
 		}

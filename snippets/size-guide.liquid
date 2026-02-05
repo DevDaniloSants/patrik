@@ -1,0 +1,134 @@
+<div x-data="{ open: false }" class="size-guide-block inline-block">
+  <!-- Trigger -->
+  <div 
+    @click="open = true" 
+    class="cursor-pointer {{ block.settings.font_weight }} hover:opacity-80"
+    style="
+      color: {{ block.settings.text_color }};
+      font-size: {{ block.settings.text_size }}px;
+      {% if block.settings.text_underline %}text-decoration: underline;{% endif %}
+    "
+  >
+    {{ block.settings.text }}
+  </div>
+
+  <!-- Modal Portal -->
+  <template x-teleport="body">
+    <div 
+      x-show="open"
+      x-transition:enter="transition ease-out duration-300"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      x-transition:leave="transition ease-in duration-200"
+      x-transition:leave-start="opacity-100"
+      x-transition:leave-end="opacity-0"
+      class="fixed inset-0 z-[99999] flex items-center justify-end"
+      style="display: none;"
+    >
+      <!-- Overlay -->
+      <div 
+        class="absolute inset-0 bg-black opacity-50"
+        @click="open = false"
+      ></div>
+
+      <!-- Modal Content -->
+      <div 
+        class="relative bg-white ml-auto h-full w-full lg:max-w-[600px] overflow-y-auto shadow-2xl p-8 z-10 flex flex-col items-center text-center"
+        @click.stop
+      >
+        <button 
+          @click="open = false" 
+          class="absolute top-4 right-4 p-2 text-gray-500 hover:text-black"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="black">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <!-- Dynamic Content Layout -->
+        
+        <!-- 1. Title -->
+        <h2 
+          class="!text-xl mb-4 font-normal"
+          style="color: {{ block.settings.modal_title_color | default: '#000000' }}; font-family: 'Times New Roman', Times, serif;"
+        >
+          GUIA DE MEDIDAS
+        </h2>
+        
+        <!-- 2. Subtitle/Lead -->
+        {% if block.settings.modal_subtitle != blank %}
+          <div class="text-sm text-gray-600 mb-8 max-w-sm mx-auto leading-relaxed">
+            {{ block.settings.modal_subtitle }}
+          </div>
+        {% endif %}
+
+        <!-- 3. Icon (Optional) -->
+        {% if block.settings.show_icon %}
+          <div class="mb-8">
+            {% if block.settings.custom_icon != blank %}
+              <img 
+                src="{{ block.settings.custom_icon | image_url: width: 200 }}" 
+                alt="Guide Icon" 
+                width="{{ block.settings.custom_icon.width }}"
+                height="{{ block.settings.custom_icon.height }}"
+                loading="lazy"
+                class="w-16 h-16 mx-auto object-contain"
+              >
+            {% else %}
+               <!-- Default Icon (Ruler/Measurement) -->
+               <svg class="w-16 h-16 mx-auto text-gray-400" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 6H3C1.89543 6 1 6.89543 1 8V16C1 17.1046 1.89543 18 3 18H21C22.1046 18 23 17.1046 23 16V8C23 6.89543 22.1046 6 21 6Z" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5 6V10" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 6V10" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13 6V12" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17 6V10" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 6V10" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        <!-- 4. CTA Button (PDF Link) -->
+        {% if block.settings.pdf_url != blank %}
+          <a 
+            href="{{ block.settings.pdf_url }}" 
+            target="_blank" 
+            class="inline-block px-8 py-3 mb-6 text-xs font-bold tracking-widest uppercase transition-colors duration-200"
+            style="
+              background-color: {{ block.settings.cta_bg_color | default: '#000000' }}; 
+              color: {{ block.settings.cta_text_color | default: '#FFFFFF' }};
+            "
+          >
+            {{ block.settings.cta_text }}
+          </a>
+        {% endif %}
+
+        <!-- 5. Safety Microcopy -->
+        {% if block.settings.microcopy_text != blank %}
+          <div class="text-xs text-gray-400 max-w-xs mx-auto mb-8 border-t pt-4 border-gray-100">
+            <span class="block mb-1 text-gray-900 font-bold uppercase tracking-wide text-[10px]">Atenção</span>
+            {{ block.settings.microcopy_text }}
+          </div>
+        {% endif %}
+
+        <!-- Additional Content (Old Fields for backwards compatibility/extra text) -->
+        {% if block.settings.guide_content != blank or block.settings.guide_image != blank %}
+          <div class="w-full text-left border-t border-gray-200 pt-8 mt-4">
+             {% if block.settings.guide_content != blank %}
+              <div class="rte mb-6 text-sm text-gray-600">
+                {{ block.settings.guide_content }}
+              </div>
+            {% endif %}
+            
+            {% if block.settings.guide_image != blank %}
+              <div class="w-full">
+                {% render 'image', img_object: block.settings.guide_image, class: 'w-full h-auto rounded' %}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </template>
+</div>

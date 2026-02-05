@@ -202,7 +202,7 @@
                 <div class="select-popout" data-popout data-popout-prevent="true">
                   <button type="button" class="select-popout__toggle" aria-expanded="false" aria-controls="{{ uniq_id }}-select-{{ option.name | handle }}-{{ forloop.index }}" aria-labelledby="{{ uniq_id }}-select-{{ option.name | handle }}-label-{{ forloop.index }}" data-popout-toggle>
                     {{ option.selected_value }}
-                    {%- render 'icon-core-chevron-down' -%}
+                    {%- render 'icon-core-chevron-down-transparent' -%}
                   </button>
 
                   <ul id="{{ uniq_id }}-select-{{ option.name | handle }}-{{ forloop.index }}" class="select-popout__list" data-popout-list data-scroll-lock-scrollable>

@@ -283,8 +283,14 @@
                   style="--wh-ratio: {{ video_wh_ratio }};"
                 {% endif %}
               >
-                <div class="hero__content__wrapper {{ block.settings.text_align }}">
-                  <div class="hero__content" data-overflow-content>
+                {%- liquid
+                  assign video_autoplay = block.settings.enable_autoplay
+                  if video_autoplay == nil
+                    assign video_autoplay = true
+                  endif
+                -%}
+                <div class="hero__content__wrapper {{ block.settings.text_align }}" {% unless video_autoplay %}style="pointer-events: none;"{% endunless %}>
+                  <div class="hero__content" data-overflow-content {% unless video_autoplay %}style="pointer-events: auto;"{% endunless %}>
                     {% unless block.settings.kicker == '' %}
                       <p class="hero__kicker"
                         data-aos="hero"
@@ -334,13 +340,20 @@
                   </div>
                 </div>
 
-                <div class="image-overlay" style="--bg:{{ block.settings.overlay_color }}; opacity:{{ block.settings.overlay_opacity | times: 0.01 }};"></div>
+                <div class="image-overlay" style="--bg:{{ block.settings.overlay_color }}; opacity:{{ block.settings.overlay_opacity | times: 0.01 }}; {% unless video_autoplay %}pointer-events: none;{% endunless %}"></div>
 
                 {%- if block.settings.video_bg != nil -%}
-                  <div class="video-autoplay-wrapper">
-                    {%- assign video_styles = block.settings.object_position | replace: '-', ' ' | prepend: 'object-position: ' -%}
-                    {{ block.settings.video_bg | video_tag: autoplay: true, loop: true, muted: true, controls: false, playsinline: true, image_size: '1200x', style: video_styles, data-video-autoplay: '' }}
-                  </div>
+                  {%- assign video_styles = block.settings.object_position | replace: '-', ' ' | prepend: 'object-position: ' -%}
+                  
+                  {%- if video_autoplay -%}
+                    <div class="video-autoplay-wrapper">
+                      {{ block.settings.video_bg | video_tag: autoplay: true, loop: true, muted: true, controls: false, playsinline: true, image_size: '1200x', style: video_styles, data-video-autoplay: '' }}
+                    </div>
+                  {%- else -%}
+                    <div class="video-wrapper" style="width: 100%; height: 100%;">
+                      {{ block.settings.video_bg | video_tag: autoplay: false, loop: true, muted: false, controls: true, playsinline: true, image_size: '1200x', style: video_styles, class: 'w-full h-full object-cover pointer-events-auto' }}
+                    </div>
+                  {%- endif -%}
                 {%- else -%}
                   {%- capture srcset -%}
                     {%- render 'image-grid-srcset',
@@ -1176,6 +1189,12 @@
 					"type": "video",
 					"id": "video_bg",
 					"label": "Video background"
+				},
+				{
+					"type": "checkbox",
+					"id": "enable_autoplay",
+					"label": "Enable Autoplay",
+					"default": true
 				},
 				{
 					"type": "select",
