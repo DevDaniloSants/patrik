@@ -27749,8 +27749,11 @@ a.product__form__link:after {
   margin-bottom: 2px;
 }
 
-.cart__drawer .cart__items__total {
-  display: none;
+.cart__drawer .cart__items__price .cart__items__total {
+  display: block;
+  margin-top: 8px;
+  font-weight: var(--FONT-WEIGHT-BODY-BOLD);
+  color: var(--text-dark);
 }
 
 .cart__drawer .cart--hidden {
@@ -27879,8 +27882,8 @@ a.product__form__link:after {
 }
 
 .cart__items__grid {
-  display: grid;
-  grid-template-columns: 90px 1fr;
+  display: flex;
+  /* grid-template-columns: 90px 1fr; */
   grid-column-gap: var(--gutter);
   grid-row-gap: 6px;
 }
@@ -28014,8 +28017,8 @@ a.product__form__link:after {
 
   .cart__template .cart__items__grid {
     display: grid;
-    grid-template-areas: "image title price quantity total" "image remove price quantity total" "image savings price quantity total";
-    grid-template-columns: 90px 2fr 1fr 1fr 1fr;
+    grid-template-areas: "image title price quantity" "image remove price quantity" "image savings price quantity";
+    grid-template-columns: 90px 2fr 1fr 1fr;
   }
 
   .cart__template .cart__items__image {
@@ -28027,6 +28030,13 @@ a.product__form__link:after {
   .cart__template .cart__items__title {
     grid-area: title;
     padding-inline-end: 0;
+  }
+
+  .cart__template .cart__items__price .cart__items__total {
+    display: block;
+    margin-top: 8px;
+    font-weight: var(--FONT-WEIGHT-BODY-BOLD);
+    color: var(--text-dark);
   }
 
   .cart__template .cart__items__price {
@@ -28066,13 +28076,6 @@ a.product__form__link:after {
     display: none;
   }
 
-  .cart__template .cart__items__total {
-    grid-area: total;
-    text-align: end;
-    justify-content: flex-end;
-  }
-
-  .cart__template .cart__items__row .cart__items__total,
   .cart__template .cart__items__row .cart__items__price {
     display: flex;
     align-items: center;
@@ -28132,7 +28135,7 @@ a.product__form__link:after {
 /* ================ Cart page footer ================ */
 .template__cart__footer {
   margin-top: 2em;
-  display: grid;
+  /* display: grid; */
   grid-template-areas: "product product total total" "notes notes update checkout" "shipping shipping empty empty";
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
@@ -28197,6 +28200,10 @@ a.product__form__link:after {
 .template__cart__footer .cart__footer__total .cart__message--custom p {
   padding: 5px 8px;
   text-align: end;
+}
+
+.figtree-sansSerif {
+  font-family: "Figtree", sans-serif !important;
 }
 
 .template__cart__footer .cart__footer__label {
@@ -28290,8 +28297,11 @@ a.product__form__link:after {
     border: 0;
   }
 
-  .cart__template .cart__items__total {
-    display: none;
+  .cart__template .cart__items__price .cart__items__total {
+    display: block;
+    margin-top: 8px;
+    font-weight: var(--FONT-WEIGHT-BODY-BOLD);
+    color: var(--text-dark);
   }
 
   .cart__template .checkout__button {
@@ -30976,7 +30986,7 @@ body:not(.focus-enabled) .plyr.plyr--full-ui.plyr--video {
   width: 100%;
   padding-inline: var(--form-left) 28px;
   padding-block: var(--form-top);
-  border: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
   border-radius: 3px;
   line-height: 1.3;
   color: var(--text-dark);

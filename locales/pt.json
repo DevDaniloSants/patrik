@@ -172,8 +172,8 @@
 	},
 	"cart": {
 		"general": {
-			"title": "Carrinho de Compras",
-			"remove": "Eliminar",
+			"title": "Carrinho de compras",
+			"remove": "REMOVER",
 			"note": "Instruções especiais para o vendedor",
 			"subtotal": "Subtotal",
 			"shipping_at_checkout": "Envios e descontos calculados no checkout",
