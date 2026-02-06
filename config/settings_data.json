@@ -52,6 +52,8 @@
     "animations_scroll_enable": true,
     "favicon": "shopify://shop_images/Simbolo_K_cz_-_transp.png",
     "collection_text_alignment": "text-left",
+    "product_card_manual_slider_enable": true,
+    "product_card_disable_hover_change": true,
     "product_grid_image": "uneven",
     "product_card_wh_ratio": 0.9,
     "product_background_grey": false,
