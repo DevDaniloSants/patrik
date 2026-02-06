@@ -57,7 +57,7 @@
     "product_grid_image": "uneven",
     "product_card_wh_ratio": 0.9,
     "product_background_grey": false,
-    "instant_add_enable": true,
+    "instant_add_enable": false,
     "quickview_enable": false,
     "quick_add_button_color": "stain-button-black",
     "swatches_squares": true,
