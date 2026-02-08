@@ -67,12 +67,12 @@
         {% endfor %}
       </div>
       
-      {%- if section.settings.show_arrows -%}
-        <button class="gallery-slider__arrow gallery-slider__arrow--prev" data-slider-prev aria-label="Previous slide">
-          <div class="arrow-left"></div>
+			{%- if section.settings.show_arrows -%}
+				<button class="gallery-slider__arrow gallery-slider__arrow--prev bg-transparent!" data-slider-prev aria-label="Previous slide">
+          <div class=""></div>
         </button>
-        <button class="gallery-slider__arrow gallery-slider__arrow--next" data-slider-next aria-label="Next slide">
-          <div class="arrow-right"></div>
+				<button class="gallery-slider__arrow gallery-slider__arrow--next bg-transparent!" data-slider-next aria-label="Next slide">
+          <div class=""></div>
         </button>
       {%- endif -%}
     </div>
@@ -93,11 +93,24 @@
     overflow: hidden;
   }
 
-  .gallery-slider {
-    display: flex;
-    gap: 20px;
-    transition: transform 0.3s ease;
-  }
+	.gallery-slider {
+		display: flex;
+		gap: 20px;
+		transition: transform 0.3s ease;
+		cursor: grab;
+		user-select: none;
+		will-change: transform;
+		touch-action: pan-y;
+	}
+
+	.gallery-slider.is-dragging {
+		cursor: grabbing;
+		transition: none !important;
+	}
+
+	.gallery-slider--no-transition {
+		transition: none !important;
+	}
 
   .gallery-slider__item {
     flex: 0 0 auto;
@@ -132,6 +145,12 @@
     justify-content: center;
   }
 
+	.gallery-slider__arrow.is-disabled {
+		opacity: 0.4;
+		cursor: not-allowed;
+		pointer-events: none;
+	}
+
   .gallery-slider__arrow--prev {
     left: 10px;
   }
@@ -162,41 +181,330 @@
     gap: 8px;
     margin-top: 20px;
   }
+
+	.gallery-slider__dot {
+		width: 10px;
+		height: 10px;
+		border-radius: 999px;
+		border: none;
+		background-color: currentColor;
+		opacity: 0.3;
+		padding: 0;
+		cursor: pointer;
+		transition: opacity 0.2s ease;
+	}
+
+	.gallery-slider__dot.is-active {
+		opacity: 0.9;
+	}
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const sliders = document.querySelectorAll('[data-section-type="section-gallery-slider"]');
-    
-    sliders.forEach(slider => {
-      const sliderElement = slider.querySelector('[data-slider]');
-      const prevButton = slider.querySelector('[data-slider-prev]');
-      const nextButton = slider.querySelector('[data-slider-next]');
-      let currentIndex = 0;
-      
-      if (prevButton && nextButton) {
-        prevButton.addEventListener('click', () => {
-          if (currentIndex > 0) {
-            currentIndex--;
-            updateSlider();
-          }
-        });
-        
-        nextButton.addEventListener('click', () => {
-          const slides = sliderElement.querySelectorAll('[data-slide]');
-          if (currentIndex < slides.length - 1) {
-            currentIndex++;
-            updateSlider();
-          }
-        });
-      }
-      
-      function updateSlider() {
-        const slideWidth = sliderElement.querySelector('[data-slide]').offsetWidth + 20;
-        sliderElement.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-      }
-    });
-  });
+	(function() {
+		const selectors = {
+			section: '[data-section-type="section-gallery-slider"]',
+			slider: '[data-slider]',
+			slide: '[data-slide]',
+			prev: '[data-slider-prev]',
+			next: '[data-slider-next]',
+			pagination: '[data-slider-pagination]'
+		};
+
+		const debounce = (fn, delay = 120) => {
+			let timer;
+			return (...args) => {
+				clearTimeout(timer);
+				timer = setTimeout(() => fn(...args), delay);
+			};
+		};
+
+		const getSections = (scope) => {
+			if (!scope) {
+				return [];
+			}
+
+			if (typeof scope.matches === 'function' && scope.matches(selectors.section)) {
+				return [scope];
+			}
+
+			return scope.querySelectorAll(selectors.section);
+		};
+
+		const initGallerySliders = (scope = document) => {
+			const sections = Array.from(getSections(scope));
+
+			sections.forEach(section => {
+				const sliderElement = section.querySelector(selectors.slider);
+				if (!sliderElement || sliderElement.dataset.sliderReady === 'true') {
+					return;
+				}
+
+				const slides = sliderElement.querySelectorAll(selectors.slide);
+				if (!slides.length) {
+					return;
+				}
+
+				sliderElement.dataset.sliderReady = 'true';
+
+				const prevButton = section.querySelector(selectors.prev);
+				const nextButton = section.querySelector(selectors.next);
+				const paginationWrapper = section.querySelector(selectors.pagination);
+				let paginationDots = [];
+
+				const state = {
+					currentIndex: 0,
+					gap: 0,
+					slideWidth: 0,
+					visibleSlides: 1,
+					maxIndex: slides.length - 1,
+					startX: 0,
+					dragOffset: 0,
+					isDragging: false,
+					pointerId: null
+				};
+
+				const clampIndex = (index) => {
+					return Math.max(0, Math.min(index, state.maxIndex));
+				};
+
+				const readGap = () => {
+					const styles = window.getComputedStyle(sliderElement);
+					const gapValue = parseFloat(styles.columnGap || styles.gap || 0);
+					state.gap = Number.isNaN(gapValue) ? 0 : gapValue;
+				};
+
+				const measureSlideWidth = () => {
+					const firstSlide = sliderElement.querySelector(selectors.slide);
+					if (!firstSlide) {
+						return sliderElement.getBoundingClientRect().width;
+					}
+					return firstSlide.getBoundingClientRect().width + state.gap;
+				};
+
+				const measureVisibleSlides = () => {
+					if (!state.slideWidth) {
+						return 1;
+					}
+					return Math.max(Math.round(sliderElement.getBoundingClientRect().width / state.slideWidth), 1);
+				};
+
+				const rebuildPagination = () => {
+					if (!paginationWrapper) {
+						return;
+					}
+
+					paginationWrapper.innerHTML = '';
+					paginationDots = [];
+
+					const totalDots = Math.max(state.maxIndex + 1, 1);
+
+					for (let index = 0; index < totalDots; index += 1) {
+						const dot = document.createElement('button');
+						dot.type = 'button';
+						dot.className = 'gallery-slider__dot';
+						dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+						dot.addEventListener('click', () => {
+							state.currentIndex = clampIndex(index);
+							updateSlider();
+						});
+
+						paginationWrapper.appendChild(dot);
+						paginationDots.push(dot);
+					}
+
+					updateControls();
+				};
+
+				const updateControls = () => {
+					if (prevButton) {
+						const isDisabled = state.currentIndex === 0;
+						prevButton.classList.toggle('is-disabled', isDisabled);
+						prevButton.setAttribute('aria-disabled', isDisabled);
+						prevButton.tabIndex = isDisabled ? -1 : 0;
+					}
+
+					if (nextButton) {
+						const isDisabled = state.currentIndex === state.maxIndex;
+						nextButton.classList.toggle('is-disabled', isDisabled);
+						nextButton.setAttribute('aria-disabled', isDisabled);
+						nextButton.tabIndex = isDisabled ? -1 : 0;
+					}
+
+					if (paginationDots.length) {
+						paginationDots.forEach((dot, index) => {
+							dot.classList.toggle('is-active', index === state.currentIndex);
+						});
+					}
+				};
+
+				const updateSlider = ({ animate = true } = {}) => {
+					sliderElement.classList.toggle('gallery-slider--no-transition', !animate);
+					sliderElement.style.transform = `translateX(-${state.currentIndex * state.slideWidth}px)`;
+					if (!animate) {
+						requestAnimationFrame(() => {
+							sliderElement.classList.remove('gallery-slider--no-transition');
+						});
+					}
+					updateControls();
+				};
+
+				const recalculate = ({ rebuildDots = false } = {}) => {
+					readGap();
+					state.slideWidth = measureSlideWidth();
+					state.visibleSlides = measureVisibleSlides();
+					state.maxIndex = Math.max(slides.length - state.visibleSlides, 0);
+					state.currentIndex = clampIndex(state.currentIndex);
+
+					if (rebuildDots) {
+						rebuildPagination();
+					}
+
+					updateSlider({ animate: false });
+				};
+
+				const handlePrev = () => {
+					state.currentIndex = clampIndex(state.currentIndex - 1);
+					updateSlider();
+				};
+
+				const handleNext = () => {
+					state.currentIndex = clampIndex(state.currentIndex + 1);
+					updateSlider();
+				};
+
+				if (prevButton) {
+					prevButton.addEventListener('click', handlePrev);
+				}
+
+				if (nextButton) {
+					nextButton.addEventListener('click', handleNext);
+				}
+
+				const onPointerDown = (event) => {
+					if (event.pointerType === 'mouse' && event.button !== 0) {
+						return;
+					}
+
+					state.isDragging = true;
+					state.startX = event.clientX;
+					state.dragOffset = 0;
+					state.pointerId = event.pointerId;
+					sliderElement.classList.add('is-dragging');
+					if (sliderElement.setPointerCapture && typeof state.pointerId === 'number') {
+						sliderElement.setPointerCapture(state.pointerId);
+					}
+				};
+
+				const onPointerMove = (event) => {
+					if (!state.isDragging) {
+						return;
+					}
+
+					if (event.pointerType === 'touch' && event.cancelable) {
+						event.preventDefault();
+					}
+
+					state.dragOffset = event.clientX - state.startX;
+					sliderElement.style.transform = `translateX(${(-state.currentIndex * state.slideWidth) + state.dragOffset}px)`;
+				};
+
+				const onPointerUp = () => {
+					if (!state.isDragging) {
+						return;
+					}
+
+					if (sliderElement.releasePointerCapture && typeof state.pointerId === 'number') {
+						try {
+							sliderElement.releasePointerCapture(state.pointerId);
+						} catch (error) {
+							/* noop */
+						}
+					}
+
+					sliderElement.classList.remove('is-dragging');
+
+					if (state.slideWidth && Math.abs(state.dragOffset) > state.slideWidth * 0.2) {
+						if (state.dragOffset < 0) {
+							state.currentIndex = clampIndex(state.currentIndex + 1);
+						} else {
+							state.currentIndex = clampIndex(state.currentIndex - 1);
+						}
+					}
+
+					state.isDragging = false;
+					state.dragOffset = 0;
+					state.pointerId = null;
+					updateSlider();
+				};
+
+				const preventNativeDrag = (event) => event.preventDefault();
+
+				sliderElement.addEventListener('pointerdown', onPointerDown);
+				sliderElement.addEventListener('pointermove', onPointerMove, { passive: false });
+				sliderElement.addEventListener('pointerup', onPointerUp);
+				sliderElement.addEventListener('pointerleave', onPointerUp);
+				sliderElement.addEventListener('pointercancel', onPointerUp);
+				sliderElement.addEventListener('dragstart', preventNativeDrag);
+
+				recalculate({ rebuildDots: true });
+
+				let resizeObserver;
+				let resizeHandler;
+
+				if (window.ResizeObserver) {
+					resizeObserver = new ResizeObserver(() => recalculate({ rebuildDots: true }));
+					resizeObserver.observe(sliderElement);
+				} else {
+					resizeHandler = debounce(() => recalculate({ rebuildDots: true }), 150);
+					window.addEventListener('resize', resizeHandler);
+				}
+
+				const cleanup = () => {
+					delete sliderElement.dataset.sliderReady;
+					if (prevButton) {
+						prevButton.removeEventListener('click', handlePrev);
+					}
+					if (nextButton) {
+						nextButton.removeEventListener('click', handleNext);
+					}
+
+					sliderElement.removeEventListener('pointerdown', onPointerDown);
+					sliderElement.removeEventListener('pointermove', onPointerMove);
+					sliderElement.removeEventListener('pointerup', onPointerUp);
+					sliderElement.removeEventListener('pointerleave', onPointerUp);
+					sliderElement.removeEventListener('pointercancel', onPointerUp);
+					sliderElement.removeEventListener('dragstart', preventNativeDrag);
+
+					if (resizeObserver) {
+						resizeObserver.disconnect();
+					}
+
+					if (resizeHandler) {
+						window.removeEventListener('resize', resizeHandler);
+					}
+
+					if (paginationWrapper) {
+						paginationWrapper.innerHTML = '';
+					}
+					paginationDots = [];
+				};
+
+				const handleSectionUnload = (event) => {
+					if (event.target && event.target.contains(section)) {
+						cleanup();
+						document.removeEventListener('shopify:section:unload', handleSectionUnload);
+					}
+				};
+
+				document.addEventListener('shopify:section:unload', handleSectionUnload);
+			});
+		};
+
+		document.addEventListener('DOMContentLoaded', () => initGallerySliders());
+		document.addEventListener('shopify:section:load', (event) => {
+			initGallerySliders(event.target);
+		});
+	})();
 </script>
 
 {% schema %}

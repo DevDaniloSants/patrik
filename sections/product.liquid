@@ -175,8 +175,8 @@
 
         {% comment %} Mobile product info - rendered outside the carousel {% endcomment %}
 		 {% comment %} Descomentar dependendo do que vier da reunião adicionar absolute bottom-0{% endcomment %}
-         <div class="mobile-product-content flex lg:!hidden px-5 py-3 absolute bottom-0 w-full! justify-between!">
-          <div class="mobile-product-info flex flex-col">
+         <div class="mobile-product-content flex lg:hidden! px-5 pt-3 absolute bottom-[5px] w-full! justify-between! z-[40]! pointer-events-none!">
+          <div class="mobile-product-info flex flex-col pointer-events-auto!">
             {% for block in section.blocks %}
               {% case block.type %}
                 {% when 'title' %}
@@ -186,7 +186,7 @@
               {% endcase %}
             {% endfor %}
           </div>
-          <div class="mobile-product-buy">
+          <div class="mobile-product-buy pointer-events-auto!">
             {% for block in section.blocks %}
               {% case block.type %}
                 {% when 'add-buttons' %}
@@ -451,7 +451,7 @@
                   </div>
                 </div>
               {% when 'size-guide' %}
-                <div class="product__block__size-guide" style="--PB: {{ block.settings.padding_bottom }}px;" {{ block.shopify_attributes }}>
+                <div class="product__block__size-guide mb-4!" style="--PB: {{ block.settings.padding_bottom }}px;" {{ block.shopify_attributes }}>
                   {% render 'size-guide', block: block %}
                 </div>
               {% when 'taxes_included' %}

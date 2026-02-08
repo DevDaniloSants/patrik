@@ -1,3 +1,4 @@
+{% if product.metafields.custom.guia_de_medidas != blank %}
 <div x-data="{ open: false }" class="size-guide-block inline-block">
   <!-- Trigger -->
   <div 
@@ -89,10 +90,28 @@
         {% endif %}
 
         <!-- 4. CTA Button (PDF Link) -->
-        {% if block.settings.pdf_url != blank %}
+        <!-- 4. CTA Button (PDF Link) -->
+        {% if product.metafields.custom.guia_de_medidas != blank %}
+          {% assign file_ref = product.metafields.custom.guia_de_medidas.value %}
+          
+          {% assign final_url = '#' %}
+          
+          {% if file_ref.guia_de_medidas %}
+            {% assign final_url = file_ref.guia_de_medidas.value.url | default: file_ref.guia_de_medidas.url %}
+            {% unless final_url %}
+              <!-- Fallback if value/url access fails, try file_url filter on the field itself -->
+              {% assign final_url = file_ref.guia_de_medidas | file_url %}
+            {% endunless %}
+          {% elsif file_ref.url %}
+             {% assign final_url = file_ref.url %}
+          {% else %}
+             {% assign final_url = file_ref | file_url %}
+          {% endif %}
+
           <a 
-            href="{{ block.settings.pdf_url }}" 
-            target="_blank" 
+            href="{{ final_url }}" 
+            download
+            target="_blank"
             class="inline-block px-8 py-3 mb-6 text-xs font-bold tracking-widest uppercase transition-colors duration-200"
             style="
               background-color: {{ block.settings.cta_bg_color | default: '#000000' }}; 
@@ -132,3 +151,4 @@
     </div>
   </template>
 </div>
+{% endif %}
