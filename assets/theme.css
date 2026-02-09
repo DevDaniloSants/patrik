@@ -21132,7 +21132,7 @@ html.js [x-data^="announcementSlider"]:not(.flickity-enabled)>*:not(:first-child
 .tabs--pill>.tab-link.current {
   border: none;
   color: var(--text);
-  background-color: var(--hairline);
+  /* background-color: var(--hairline); */
 }
 
 .tab-content {
@@ -23831,8 +23831,13 @@ body.focus-enabled .product-grid-item:focus-within {
 }
 
 .product__grid__info {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
   padding: 8px 0 0 0;
+  pointer-events: auto;
 }
 
 .product__grid__info a {
@@ -24141,9 +24146,8 @@ label.quatity-selector {
 }
 
 .product-grid-item__image-wrapper {
-  background: var(--bg)
-    /* Failsafe to ensure that if multiple images with transparent backgrounds are used, the background is still white */
-    display: block;
+  background: transparent;
+  display: block;
   position: absolute;
   inset: 0;
   width: 100%;
@@ -24160,7 +24164,26 @@ label.quatity-selector {
   opacity: 1;
   visibility: visible;
   transition-delay: 0s;
+  z-index: 2;
+}
+
+/* Gradient layer: sits below text and image */
+.product-grid-item__images {
+  position: relative;
+}
+
+.product-grid-item__images::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
   background-image: linear-gradient(to bottom right, #e0e0e0, #f3f2f3);
+  pointer-events: none;
+}
+
+/* Z-index layering: image wrapper above info text */
+.product-grid-item__image-wrapper .product-grid-item__image {
+  position: relative;
 }
 
 /* PGI pagination */
@@ -27903,12 +27926,12 @@ a.product__form__link:after {
 }
 
 .cart__items__title {
-  font-family: var(--FONT-STACK-BODY);
+  /* font-family: var(--FONT-STACK-BODY);
   font-style: var(--FONT-STYLE-BODY);
   font-weight: var(--FONT-WEIGHT-BODY);
   font-weight: var(--FONT-WEIGHT-BODY-BOLD);
   letter-spacing: var(--FONT-BODY-LETTER-SPACING);
-  text-transform: var(--FONT-BODY-TRANSFORM);
+  text-transform: var(--FONT-BODY-TRANSFORM); */
   color: var(--text-dark);
   padding-inline-end: 25px;
   word-break: break-word;
@@ -28023,8 +28046,8 @@ a.product__form__link:after {
 
   .cart__template .cart__items__image {
     grid-area: image;
-    width: 90px;
-    height: 90px;
+    /* width: 90px; */
+    /* height: 90px; */
   }
 
   .cart__template .cart__items__title {
@@ -28321,7 +28344,7 @@ a.product__form__link:after {
     font-style: var(--FONT-STYLE-ACCENT);
     font-weight: var(--FONT-WEIGHT-ACCENT);
     font-weight: var(--FONT-WEIGHT-ACCENT-BOLD);
-    text-transform: var(--FONT-ACCENT-TRANSFORM);
+    /* text-transform: var(--FONT-ACCENT-TRANSFORM); */
     letter-spacing: var(--FONT-ACCENT-LETTER-SPACING);
     font-size: calc(var(--font-5) * var(--FONT-ADJUST-ACCENT));
     line-height: var(--leading-snug);
