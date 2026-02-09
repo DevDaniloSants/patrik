@@ -118,8 +118,8 @@
         {{ media | model_viewer_tag: image_size: image_size, reveal: 'interaction', toggleable: true, data-model-id: media.id, interaction-prompt-threshold: 500 }}
       </div>
     {% when 'video' %}
-      <div class="media__contain" style="padding-top: {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%;">
-        {{ media | video_tag: class: 'media-video', image_size: image_size, autoplay: true, loop: section.settings.enable_video_looping, muted: true, playsinline: true, controls: true }}
+      <div class="media__contain" style="padding-top: {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%; pointer-events: none;">
+        {{ media | video_tag: class: 'media-video', image_size: image_size, autoplay: true, loop: true, muted: true, playsinline: true, controls: false }}
       </div>
     {% when 'external_video' %}
       <div data-video-id="{{ media.external_id }}"></div>

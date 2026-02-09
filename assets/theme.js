@@ -6743,7 +6743,7 @@
                 rightToLeft: window.isRTL,
                 dragThreshold: 80,
                 contain: true,
-                fade: true
+                fade: false
             };
             if (this.mobileStyle == 'carousel') {
                 mobileOptions.contain = false;
@@ -6778,7 +6778,7 @@
                 rightToLeft: window.isRTL,
                 dragThreshold: 80,
                 contain: true,
-                fade: true
+                fade: false
             };
             this.createSlider(desktopOptions);
             this.hasDesktopSlider = true;
@@ -6836,16 +6836,15 @@
         }
         addMediaEventListeners(media) {
             if (!media) return;
-            media.addEventListener('play', ()=>{
-                if (resolution.isMobile() || resolution.isTouch()) {
-                    this.updateDraggable(false);
-                }
-            });
-            media.addEventListener('pause', ()=>{
-                if (resolution.isMobile() || resolution.isTouch()) {
-                    this.updateDraggable(true);
-                }
-            });
+            // Prevent adding duplicate listeners
+            if (media.hasAttribute('data-carousel-listeners-added')) {
+                return;
+            }
+            media.setAttribute('data-carousel-listeners-added', 'true');
+            
+            // Note: We no longer toggle draggable on play/pause events
+            // This was causing issues with the carousel getting stuck
+            // The draggable state is now managed entirely by setDraggable()
         }
         doFlktyChange(index) {
             var ref, ref5;
@@ -6927,25 +6926,48 @@
             }));
         }
         setDraggable() {
+            console.log('[DEBUG] setDraggable called, currentSlide:', this.currentSlide?.getAttribute('data-type'));
             if (this.currentSlide) {
                 this.mediaType = this.currentSlide.getAttribute(selectors$o.mediaType);
+                console.log('[DEBUG] mediaType:', this.mediaType);
                 if (this.mediaType === 'model' || this.mediaType === 'video' || this.mediaType === 'external_video') {
+                    // Always play video and restart from beginning
+                    const video = this.currentSlide.querySelector('video');
+                    if (video) {
+                        console.log('[DEBUG] Found video, restarting and playing');
+                        video.currentTime = 0;
+                        video.muted = true;
+                        video.play().catch(e => console.log('[DEBUG] video.play() error:', e));
+                    }
+                    this.currentSlide.dispatchEvent(new CustomEvent('play'));
+                    
                     if (!resolution.isMobile() || !resolution.isTouch()) {
-                        // Play on Desktop
-                        this.currentSlide.dispatchEvent(new CustomEvent('play'));
+                        // Desktop
+                        console.log('[DEBUG] Desktop mode, calling updateDraggable(false)');
                         this.updateDraggable(false);
                     } else {
-                        this.updateDraggable(true); // Triggering this to ensure the first video also has the 'draggable' elements active on Mobile
+                        console.log('[DEBUG] Mobile mode, calling updateDraggable(true)');
+                        this.updateDraggable(true); // Mobile keeps draggable
                     }
                 } else {
+                    console.log('[DEBUG] Not video, calling updateDraggable(true)');
                     this.updateDraggable(true);
                 }
+            } else {
+                // If currentSlide is null or mediaType is missing, default to true
+                console.log('[DEBUG] No currentSlide, calling updateDraggable(true)');
+                this.updateDraggable(true);
             }
         }
         updateDraggable(state) {
-            if (!this.flkty) return;
+            console.log('[DEBUG] updateDraggable called with state:', state);
+            if (!this.flkty) {
+                console.log('[DEBUG] flkty is null!');
+                return;
+            }
             this.flkty.options.draggable = state;
             this.flkty.updateDraggable();
+            console.log('[DEBUG] After updateDraggable, flkty.options.draggable:', this.flkty.options.draggable);
             this.slideshow.classList.toggle(classes$e.enableVideoDraggable, state);
         }
         detect3d() {

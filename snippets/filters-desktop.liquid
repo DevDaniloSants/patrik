@@ -1,0 +1,124 @@
+{%- liquid
+  assign is_swatch_option = false
+
+  if settings.swatches_enable
+    capture swatch_translation
+      echo 'general.swatches.color' | t
+    endcapture
+    assign translation_array = swatch_translation | append: ',' | split: "," | uniq
+    assign option_handle = filter.label | downcase | lstrip | rstrip | escape_once
+    for translation in translation_array
+      assign translation_handle = translation | downcase | lstrip | rstrip | escape_once
+      if translation_handle == option_handle
+        assign is_swatch_option = true
+        break
+      endif
+    endfor
+  endif
+
+  if filter.presentation == 'swatch'
+    assign is_swatch_option = true
+  endif
+
+  if filter.presentation == 'image'
+    assign is_swatch_option = false
+  endif
+
+  assign is_open = false
+  if filter.active_values.size > 0
+    assign is_open = true
+  endif
+  if filter.type == 'price_range'
+    if filter.min_value.value != nil or filter.max_value.value != nil
+      assign is_open = true
+    endif
+  endif
+-%}
+
+<div class="border-b border-gray-200 py-6 desktop-filter-accordion">
+  <button type="button" 
+    class="flex justify-between items-center w-full text-left uppercase font-black tracking-widest text-base hover:text-gray-600 transition-colors"
+    data-desktop-accordion-toggle="desktop-filter-{{ filter.label | handle }}-{{ forloop.index }}">
+    <span class="desktop-filter-label {% if is_open %}underline decoration-2 underline-offset-4{% endif %}" style="font-size: 14px; font-weight: 800;">{{ filter.label }}</span>
+    <span class="icon-plus font-bold {% if is_open %}hidden{% endif %}" style="font-weight: 900; stroke-width: 3;">{% render 'icon-core-plus' %}</span>
+    <span class="icon-minus font-bold {% unless is_open %}hidden{% endunless %}" style="font-weight: 900; stroke-width: 3;">{% render 'icon-core-minus' %}</span>
+  </button>
+
+  <div id="desktop-filter-{{ filter.label | handle }}-{{ forloop.index }}" 
+       class="desktop-filter-content overflow-hidden" 
+       style="{% if is_open %}max-height: 1000px;{% endif %}">
+    <div class="pt-6 pb-2">
+    {%- case filter.type -%}
+      {%- when 'list' or 'boolean' -%}
+        <ul class="flex flex-col gap-y-2">
+          {%- for filter_value in filter.values -%}
+            <li>
+              <a href="{{ filter_value.url_to_add }}" class="block text-sm text-gray-600 hover:text-black hover:underline decoration-1 underline-offset-4 {% if filter_value.active %}font-bold text-black{% endif %}">
+                <span class="flex items-center gap-2">
+                  {%- if is_swatch_option -%}
+                    {%- if filter_value.swatch.image -%}
+                      <span class="inline-block w-4 h-4 rounded-full border border-gray-200" style="background-image: url({{ filter_value.swatch.image | image_url: width: 32 }}); background-size: cover;"></span>
+                    {%- elsif filter_value.swatch.color -%}
+                      <span class="inline-block w-4 h-4 rounded-full border border-gray-200" style="background-color: {{ filter_value.swatch.color }};"></span>
+                    {%- endif -%}
+                  {%- endif -%}
+                  
+                  {{ filter_value.label }}
+                  
+                  {%- if filter_value.active -%}
+                    {% render 'icon-core-checkmark' %}
+                  {%- endif -%}
+                </span>
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      
+      {%- when 'price_range' -%}
+        <div class="filter__price">
+            {%- liquid
+                assign currencies_using_comma_decimals = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,TRY,UYU,VES,VND' | split: ','
+                assign uses_comma_decimals = false
+                if currencies_using_comma_decimals contains cart.currency.iso_code
+                    assign uses_comma_decimals = true
+                endif
+            -%}
+            
+            <div class="filter__price__fields flex justify-between items-center text-sm text-gray-600">
+                <div class="flex items-center gap-1">
+                    <span>{{ cart.currency.symbol }}</span>
+                    <input class="w-20 border-b border-gray-300 p-1 text-right focus:border-black focus:outline-none"
+                           name="{{ filter.min_value.param_name }}"
+                           id="Filter-{{ filter.label | escape }}-GTE"
+                           {%- if filter.min_value.value -%}
+                             {%- if uses_comma_decimals -%}value="{{ filter.min_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' }}"{%- else -%}value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"{%- endif %}
+                           {%- endif -%}
+                           type="number"
+                           placeholder="0"
+                           min="0"
+                           step="any">
+                </div>
+                <span>-</span>
+                <div class="flex items-center gap-1">
+                    <span>{{ cart.currency.symbol }}</span>
+                    <input class="w-20 border-b border-gray-300 p-1 text-right focus:border-black focus:outline-none"
+                           name="{{ filter.max_value.param_name }}"
+                           id="Filter-{{ filter.label | escape }}-LTE"
+                           {%- if filter.max_value.value -%}
+                             {%- if uses_comma_decimals -%}value="{{ filter.max_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' }}"{%- else -%}value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"{%- endif %}
+                           {%- endif -%}
+                           type="number"
+                           placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+                           min="0"
+                           step="any">
+                </div>
+            </div>
+            <!-- Submit button for price range -->
+            <div class="mt-4 text-right">
+                <input type="submit" value="Aplicar" class="text-xs font-bold uppercase tracking-widest border-b border-black cursor-pointer hover:border-gray-500 hover:text-gray-500">
+            </div>
+        </div>
+    {%- endcase -%}
+    </div>
+  </div>
+</div>

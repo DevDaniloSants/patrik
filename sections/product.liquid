@@ -24,8 +24,17 @@
   data-section-type="product"
   data-form-holder
   data-enable-video-looping="{{ section.settings.enable_video_looping }}"
-  data-enable-history-state="true"
   style="--PT: {{ section.settings.padding_top }}px; --PB: {{ section.settings.padding_bottom }}px; --IMAGE-SPACING: {{ section.settings.image_spacing }}px;">
+  
+  <style>
+    /* Force hide video controls native browser */
+    #product-section-main video::-webkit-media-controls {
+      display: none !important;
+    }
+    #product-section-main video::-webkit-media-controls-enclosure {
+      display: none !important;
+    }
+  </style>
   {%- liquid
   assign images_settings = section.settings.layout | split: '@'
   assign wrapper_class = section.settings.width
@@ -520,6 +529,141 @@
 
 <script type="application/ld+json">
   {{ product | structured_data }}
+</script>
+
+<style>
+  /* Hide Plyr controls in product carousel */
+  .product__media .plyr__controls,
+  .product__media .plyr__control,
+  .product__media .plyr__progress,
+  .product__media .plyr__time,
+  .product__media .plyr__volume,
+  .product__media .plyr__menu,
+  .product__media .plyr--video .plyr__controls,
+  [data-product-slideshow] .plyr__controls,
+  [data-product-slideshow] .plyr--video .plyr__controls {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+  
+  /* Disable Plyr control hover/focus */
+  .product__media .plyr:hover .plyr__controls,
+  .product__media .plyr--stopped .plyr__controls,
+  .product__media .plyr--paused .plyr__controls,
+  [data-product-slideshow] .plyr:hover .plyr__controls,
+  [data-product-slideshow] .plyr--stopped .plyr__controls,
+  [data-product-slideshow] .plyr--paused .plyr__controls {
+    display: none !important;
+    opacity: 0 !important;
+  }
+  
+  /* Always hide the big play button */
+  .product__media .plyr__control--overlaid,
+  [data-product-slideshow] .plyr__control--overlaid {
+    display: none !important;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    function initVideoLogic() {
+      const slideshow = document.querySelector('[data-product-slideshow]');
+      if (!slideshow) return;
+
+      // Check if Flickity is available
+      if (typeof Flickity === 'undefined' || !Flickity.data(slideshow)) {
+        setTimeout(initVideoLogic, 200);
+        return;
+      }
+
+      const flkty = Flickity.data(slideshow);
+
+      function prepareVideo(video) {
+        if (!video) return;
+        video.removeAttribute('controls');
+        video.style.pointerEvents = 'none';
+        video.muted = true; 
+        video.loop = true;
+        video.playsInline = true;
+        video.autoplay = true;
+        video.setAttribute('data-controls-hidden', 'true');
+        
+        // Hide Plyr wrapper controls if present
+        const plyrWrapper = video.closest('.plyr');
+        if (plyrWrapper) {
+          plyrWrapper.classList.add('plyr--hide-controls');
+          plyrWrapper.style.setProperty('--plyr-control-spacing', '0');
+          const controls = plyrWrapper.querySelector('.plyr__controls');
+          if (controls) controls.style.display = 'none';
+        }
+      }
+
+      function cleanSlide(slide, shouldRestart = true) {
+          if (!slide) return;
+          const video = slide.querySelector('video');
+          if (video) {
+              prepareVideo(video);
+              
+              // Restart from beginning if requested
+              if (shouldRestart) {
+                video.currentTime = 0;
+              }
+              
+              // Force play
+              video.play().catch(e => {});
+              
+              // Fight against external scripts re-enabling controls
+              let attempts = 0;
+              const interval = setInterval(() => {
+                  prepareVideo(video);
+                  if (video.paused) video.play().catch(e => {});
+                  attempts++;
+                  if (attempts > 20) clearInterval(interval); // Stop after ~1s
+              }, 50);
+          }
+      }
+      
+      // Cleanup all videos initially
+      const allVideos = slideshow.querySelectorAll('video');
+      allVideos.forEach(v => {
+        prepareVideo(v);
+        v.pause(); // Start paused, let the active slide logic handle play
+      });
+
+      // Initial Active Slide (don't restart, just resume)
+      cleanSlide(flkty.selectedElement, false);
+
+      flkty.on('settle', function(index) {
+        console.log('[Video Debug] settle event fired, index:', index);
+        console.log('[Video Debug] selectedElement:', flkty.selectedElement);
+        
+        // Pause all other videos
+        allVideos.forEach(v => v.pause());
+
+        // Handle Active Slide - restart from beginning
+        cleanSlide(flkty.selectedElement, true);
+      });
+      
+      
+      // Force draggable to be true (fix for first slide stuck)
+      // if (flkty.options.draggable === false || flkty.options.draggable === '!important') {
+      //    flkty.options.draggable = true;
+      //    flkty.updateDraggable();
+      // }
+      
+      // Safety check: Ensure all slides have pointer-events enabled by default
+      // (Flickity needs the wrapper to be interactive)
+      flkty.cells.forEach(cell => {
+         cell.element.style.pointerEvents = '';
+      });
+
+    }
+    
+    // Initial call
+    initVideoLogic();
+  });
 </script>
 
 {% schema %}
