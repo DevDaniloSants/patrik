@@ -341,7 +341,7 @@ assign placeholder = placeholder | default: false
       <p class="visually-hidden">{{ product.title | strip_html | escape }}</p>
 
       <div class="product__grid__title__wrapper px-4 pt-6">
-        <p id="product-{{ product.id }}-title" class="product__grid__title">
+        <p id="product-{{ product.id }}-title" class="product__grid__title" style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;">
           {{ product.title | strip_html | escape }}
         </p>
         {%- if settings.product_grid_show_rating and product.metafields.reviews.rating.value != blank -%}
