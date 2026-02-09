@@ -33,7 +33,7 @@
   </div>
   {% comment %} Cart is full {% endcomment %}
   <div
-    class="{{ section.settings.width }} section-padding {{ full_init }}"
+    class="{{ section.settings.width }} section-padding px-0! lg:px-[50px]! lg:py-9! {{ full_init }}"
     data-cart-form
     data-cart-loading>
     <form
@@ -41,7 +41,7 @@
       method="post"
       novalidate
       class="cart">
-      <h3 class="cart__page__title body-size-8">{{ 'cart.general.title' | t }}</h3>
+      <h3 class="cart__page__title flex! justify-start! tracking-normal! lg:tracking-normal! body-size-8 w-full! text-[36px]! lg:text-[48px]! lg:px-0! px-4! font-light! text-black! mb-0!  pb-4! pt-2!" style="font-family: 'Inter', sans-serif;">{{ 'cart.general.title' | t }}</h3>
       <div
         class="errors"
         data-form-errors
@@ -71,18 +71,18 @@
 
           {% comment %} Preciso renderizar aqui o preço total dos produtos (somando tudo) {% endcomment %}
           {% comment %} <div class="cart__items__total">
-                                                                                                                        {% if settings.currency_code_enable %}
-                                                                                                                          {{ line_item.final_line_price | money_with_currency }}
-                                                                                                                        {% else %}
-                                                                                                                          {{ line_item.final_line_price | money }}
-                                                                                                                        {% endif %}
-                                                                                                    </div> {% endcomment %}
+                                                                                                                                                                                                                                                                                                                                                                                    {% if settings.currency_code_enable %}
+                                                                                                                                                                                                                                                                                                                                                                                      {{ line_item.final_line_price | money_with_currency }}
+                                                                                                                                                                                                                                                                                                                                                                                    {% else %}
+                                                                                                                                                                                                                                                                                                                                                                                      {{ line_item.final_line_price | money }}
+                                                                                                                                                                                                                                                                                                                                                                                    {% endif %}
+                                                                                                                                                                                                                                                                                                                      </div> {% endcomment %}
 
           <div data-cart-form>
             {% comment %} 
-                                                                                                                                                                                                                                                                                        The following snippet is refreshed via ajax with 
-                                                                                                                                                                                                                                                                                        cart.items.liquid when the quantity is adjusted.
-                                                                                                                                                                                                                                                {% endcomment %}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              The following snippet is refreshed via ajax with 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              cart.items.liquid when the quantity is adjusted.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            {% endcomment %}
             <div data-line-items>
               {% render 'cart-line-items' %}
             </div>
@@ -104,7 +104,7 @@
             <button
               type="submit"
               name="checkout"
-              class="btn btn--primary btn--large checkout__button w-full uppercase">
+              class="btn btn--primary bg-black! btn--large checkout__button w-full uppercase">
               REALIZAR COMPRA
             </button>
           </div>

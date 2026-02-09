@@ -9,26 +9,13 @@
         class="item--loadbar"
         data-item-loadbar
         style="display: none;">&nbsp;</div>
-      <div class="cart__items__grid h-[234px]! py-4! items-center gap-0!" items data-item>
-        <div class="cart__items__remove">
-          <a
-            href="{{ routes.cart_change_url }}?line={{ forloop.index }}&amp;quantity=0"
-            data-remove-key="{{ line_item.key }}"
-            tabindex="0">
-            <span class="cart__remove__icon">
-              {%- render 'icon-core-trash' -%}
-            </span>
-            <span class="cart__remove text-base! text-black! border-b! border-black! border-solid!">
-              {{ 'cart.general.remove' | t }}
-            </span>
-          </a>
-        </div>
+      <div class="cart__items__grid h-auto! lg:h-[234px]! lg:py-4! items-center gap-0! lg:gap-5! flex-col! flex! lg:flex-row!" items data-item>
 
-        <div class="cart__items__image{% unless line_item.image %} product-no-image{% endunless %}">
+        <div class="cart__items__image{% unless line_item.image %} w-full! h-full! product-no-image{% endunless %} w-full! h-auto! lg:w-[260px]! lg:h-[202px]! ml-0! lg:ml-[10px]!">
           <a href="{{ line_item.url }}">
             {% if line_item.image %}
               {% assign image = line_item.image %}
-              {% assign image_width = 90 | at_most: image.width %}
+              {% assign image_width = 600 | at_most: image.width %}
               {% assign image_width_2x = image_width | times: 2 | at_most: image.width %}
               {% assign alt = line_item.title %}
 
@@ -37,56 +24,58 @@
                 {{ image | image_url: width: image_width }}
               {% endcapture %}
 
-              {%- render 'image'
-                ,
- img_object: image
-                ,
- wh_ratio: image.aspect_ratio
-                ,
- width: image_width
-                ,
- srcset: srcset
-                ,
- alt: alt
-                ,
- class: 'cart__items__img'
+              {%- render 'image',
+                img_object: image,
+                wh_ratio: 0,
+                width: image_width,
+                srcset: srcset,
+                alt: alt,
+                class: 'cart__items__img w-full! h-auto! aspect-[1.28114/1]! lg:w-full! lg:h-full! lg:aspect-auto! object-cover!'
               -%}
+              <!-- image_width debug: {{ image_width }} width_default: {{ 260 | at_most: image.width }} -->
             {% endif %}
           </a>
         </div>
 
-        <div class="cart__items__title text-[20px]!">
+        <div class="cart__items__title h-auto! lg:h-auto! text-[16px]! lg:text-[20px]! w-full! px-4! lg:px-0!">
           <p>
-            <a href="{{ line_item.url }}" class="" style="display: block; overflow: hidden; text-overflow: ellipsis;">
+            <a href="{{ line_item.url }}" class="pb-2! lg:leading-[1.2]! font-semibold!" style="display: block; overflow: hidden; text-overflow: ellipsis; font-family: 'Inter', sans-serif;">
               {{ line_item.product.title }}
             </a>
           </p>
-          <div class="flex flex-col gap-2 items-start">
+          <div class="flex flex-col items-start">
                       <div class="cart__items__quantity">
-            <div class="quantity__wrapper" data-quantity-selector>
-              <button
-                class="quantity__button quantity__button--minus"
+            <div class="quantity__wrapper gap-2! max-w-none! w-fit! lg:py-1! h-[32px]! lg:h-auto!" data-quantity-selector>
+                <label for="updates_{{ line_item.key }}" class="text-[12px]! lg:text-[14px]! text-nowrap! font-light! text-black!">{{ 'cart.label.quantity' | t }}</label>
+                <div class="flex items-center">
+                               <button
+                class="quantity__button quantity__button--minus static! w-4! h-4! p-0! flex! items-center! justify-center!"
                 data-decrease-quantity
-                type="button"
-                style="font-size: 28px;">&minus;</button>
-              <label for="updates_{{ line_item.key }}" class="visually-hidden">{{ 'cart.label.quantity' | t }}</label>
+                type="button">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 6H10" stroke="#3B3A3B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                </button>
               <input
                 data-quantity-input
                 data-update-cart="{{ line_item.key }}"
-                class="quantity__input border-0!"
+                class="quantity__input border-0! text-black! p-0! w-[40px]! text-center! text-[14px]!"
                 type="number"
                 min="0"
                 id="updates_{{ line_item.key }}"
                 name="updates[]"
                 value="{{ line_item.quantity }}" />
               <button
-                class="quantity__button quantity__button--plus font-light! text-[28px]!"
+                class="quantity__button quantity__button--plus static! font-light! text-[28px]! px-0!"
                 data-increase-quantity
-                type="button">+</button>
+                type="button">
+               <svg width="12" height="12" viewBox="0 0 24 24"  fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 12H20M12 4V20" stroke="#3B3A3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg> 
+                </button>
+                </div>
             </div>
           </div>
-          <div class="cart__items__price flex! flex-row-reverse! justify-between! text-nowrap! gap-2!">
-            <p class="line__price flex! flex-row! text-[14px]! text-black! font-light!">
+          <div class="cart__items__price flex! flex-row-reverse! justify-between! text-nowrap! gap-2! py-1! lg:py-0!">
+            <p class="line__price flex! flex-row! text-[12px]! lg:text-[14px]! text-black! font-light!">
               Preço unitário:
               {%- assign discounted = false -%}
               {%- if line_item.original_price > line_item.final_price -%}
@@ -190,14 +179,29 @@
               </p>
             {% endif %}
 
-            <div class="cart__items__total mt-0! text-[14px]! font-bold!">
+            <div class="cart__items__total mt-0! text-[12px]! lg:text-[14px]! font-bold! flex! gap-2!">
               {% if settings.currency_code_enable %}
                 {{ line_item.final_line_price | money_with_currency }}
               {% else %}
-                Preço: {{ line_item.final_line_price | money }}
+                <span class="font-light!">Preço:</span> {{ line_item.final_line_price | money }}
               {% endif %}
             </div>
           </div>
+           <div class="cart__items__remove block! static! pb-[12px]! lg:pb-0!">
+          <a
+            class="block!"
+            href="{{ routes.cart_change_url }}?line={{ forloop.index }}&amp;quantity=0"
+            data-remove-key="{{ line_item.key }}"
+            tabindex="0">
+            <span class="lg:hidden text-base! text-black! border-b! border-black! border-solid! my-[10px]! leading-[12px]! underline-offset-8! py-[5px]!">REMOVER</span>
+            <span class="cart__remove__icon hidden lg:inline">
+              {%- render 'icon-core-trash' -%}
+            </span>
+            <span class="cart__remove block! text-base! text-black! border-b! border-black! border-solid! my-[10px]!">
+              {{ 'cart.general.remove' | t }}
+            </span>
+          </a>
+        </div>
 
           </div>
         </div>

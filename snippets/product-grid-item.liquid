@@ -332,7 +332,7 @@ assign placeholder = placeholder | default: false
     %}
   {% endif %}
 
-  <div class="product__grid__info bg-transparent !absolute  bottom-[3px] {{ text_align | default: settings.collection_text_alignment | default: 'text-center' }}">
+  <div class="product__grid__info bg-transparent absolute! bottom-0 left-0 right-0 z-[1] {{ text_align | default: settings.collection_text_alignment | default: 'text-center' }}" data-product-grid-info>
     <a
       href="{{ product.url }}" data-grid-link aria-label="{{ product.title | strip_html | escape }}"
       {% comment %} The link wrapping the product variant image is already focusable, so this does not need to be {% endcomment %}
