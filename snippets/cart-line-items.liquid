@@ -45,7 +45,7 @@
           </p>
           <div class="flex flex-col items-start">
                       <div class="cart__items__quantity">
-            <div class="quantity__wrapper gap-2! max-w-none! w-fit! lg:py-1!" data-quantity-selector>
+            <div class="quantity__wrapper gap-2! max-w-none! w-fit! lg:py-1! h-[32px]! lg:h-auto!" data-quantity-selector>
                 <label for="updates_{{ line_item.key }}" class="text-[12px]! lg:text-[14px]! text-nowrap! font-light! text-black!">{{ 'cart.label.quantity' | t }}</label>
                 <div class="flex items-center">
                                <button
@@ -74,7 +74,7 @@
                 </div>
             </div>
           </div>
-          <div class="cart__items__price flex! flex-row-reverse! justify-between! text-nowrap! gap-2!">
+          <div class="cart__items__price flex! flex-row-reverse! justify-between! text-nowrap! gap-2! py-1! lg:py-0!">
             <p class="line__price flex! flex-row! text-[12px]! lg:text-[14px]! text-black! font-light!">
               Preço unitário:
               {%- assign discounted = false -%}
@@ -187,7 +187,7 @@
               {% endif %}
             </div>
           </div>
-           <div class="cart__items__remove block! static!">
+           <div class="cart__items__remove block! static! pb-[12px]! lg:pb-0!">
           <a
             class="block!"
             href="{{ routes.cart_change_url }}?line={{ forloop.index }}&amp;quantity=0"
