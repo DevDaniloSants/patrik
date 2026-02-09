@@ -34,7 +34,7 @@
 
       <!-- Modal Content -->
       <div 
-        class="relative bg-white ml-auto h-full w-full lg:max-w-[600px] overflow-y-auto shadow-2xl p-8 z-10 flex flex-col items-center text-center"
+        class="relative bg-white ml-auto h-full w-full lg:max-w-[600px] overflow-y-auto shadow-2xl p-8 z-10 flex flex-col items-center text-center justify-around"
         @click.stop
       >
         <button 
@@ -77,14 +77,7 @@
               >
             {% else %}
                <!-- Default Icon (Ruler/Measurement) -->
-               <svg class="w-16 h-16 mx-auto text-gray-400" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21 6H3C1.89543 6 1 6.89543 1 8V16C1 17.1046 1.89543 18 3 18H21C22.1046 18 23 17.1046 23 16V8C23 6.89543 22.1046 6 21 6Z" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M5 6V10" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M9 6V10" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M13 6V12" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M17 6V10" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M21 6V10" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+               <img src="https://cdn.shopify.com/s/files/1/0655/8505/3779/files/Novo_Projeto.webp?v=1770621439" alt="Guide Icon" width="303" height="183" loading="lazy" class="w-[303px]! h-[183px]! mx-auto object-contain">
             {% endif %}
           </div>
         {% endif %}
@@ -134,9 +127,9 @@
         {% if block.settings.guide_content != blank or block.settings.guide_image != blank %}
           <div class="w-full text-left border-t border-gray-200 pt-8 mt-4">
              {% if block.settings.guide_content != blank %}
-              <div class="rte mb-6 text-sm text-gray-600">
+              {% comment %} <div class="rte mb-6 text-sm text-gray-600">
                 {{ block.settings.guide_content }}
-              </div>
+              </div> {% endcomment %}
             {% endif %}
             
             {% if block.settings.guide_image != blank %}
