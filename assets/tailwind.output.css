@@ -631,9 +631,6 @@
   .h-\[32px\]\! {
     height: 32px !important;
   }
-  .h-\[183px\]\! {
-    height: 183px !important;
-  }
   .h-auto {
     height: auto;
   }
@@ -717,9 +714,6 @@
   }
   .w-\[40px\]\! {
     width: 40px !important;
-  }
-  .w-\[303px\]\! {
-    width: 303px !important;
   }
   .w-auto {
     width: auto;
@@ -911,9 +905,6 @@
   }
   .\!justify-between {
     justify-content: space-between !important;
-  }
-  .justify-around {
-    justify-content: space-around;
   }
   .justify-between {
     justify-content: space-between;
