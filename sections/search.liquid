@@ -27,21 +27,11 @@
   data-section-type="search-page"
   data-section-id="{{ section.id }}"
   style="--PT: {{ section.settings.padding_top }}px; --PB: {{ section.settings.padding_bottom }}px;">
-  <div class="search__page__heading">
-    {% render 'search-bar' %}
-
-    {%- if search.terms.size > 0 -%}
-      <div class="search__page__query note hidden">
-        <p>
-          {%- if search.results_count > 0 -%}
-            {{ 'general.search.results_for' | t }}
-            <span class="strong">{{ search.terms | escape }}</span>
-          {%- else -%}
-            {{ 'general.search.no_results_for' | t }}
-            <span class="strong">{{ search.terms | escape }}</span>
-          {%- endif -%}
-        </p>
-      </div>
+  <div class="search__page__heading text-center !mb-12 lg:!mb-16">
+    {%- if search.performed -%}
+      <p class="text-xl font-bold !normal-case text-[#1a1a1a]">
+        {{ search.terms | escape }}
+      </p>
     {%- endif -%}
   </div>
 
@@ -71,7 +61,9 @@
       {%- endcapture -%}
 
       <nav class="collection__nav wrapper !flex !border-0 justify-between w-full !mt-6 md:!mt-4 md:justify-end before:!hidden after:!hidden" data-collection-tools>
-        <span class="text-sm font-bold self-center">Produtos ({{ search.results_count }})</span>
+        <span class="text-sm font-bold self-center text-black/40">
+          {{ search.results_count }} resultados da busca
+        </span>
 
         <div class="collection__nav__buttons !h-full flex items-center">
           {% if filter_count > 0 %}
