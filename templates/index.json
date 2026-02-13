@@ -15,7 +15,7 @@
         "7c3cb134-606a-4424-8af4-58a35c6d9088": {
           "type": "kicker",
           "settings": {
-            "kicker": "Conheça a coleção",
+            "kicker": "A beleza que surge das entranhas Gaia",
             "enable_line": false,
             "text_size": 3
           }
@@ -30,7 +30,7 @@
         "407c1424-5f23-4fe9-8abc-21c4027807ef": {
           "type": "heading",
           "settings": {
-            "title": "Coleção Resort",
+            "title": "Coleção Organica",
             "text_size": 11
           }
         },
@@ -45,7 +45,7 @@
         "fdfd9dcc-76bf-4071-80e8-20d097945246": {
           "type": "button",
           "settings": {
-            "link_text_1": "Shop now",
+            "link_text_1": "Conheça",
             "link_1": "shopify://collections",
             "button_size_1": "btn--medium",
             "button_style_1": "btn uppercase",
