@@ -9,30 +9,46 @@
  */
 {
   "sections": {
-    "section_video_ykPNyn": {
-      "type": "section-video",
+    "hero": {
+      "type": "section-hero",
       "blocks": {
-        "heading_DT7bw9": {
+        "7c3cb134-606a-4424-8af4-58a35c6d9088": {
+          "type": "kicker",
+          "settings": {
+            "kicker": "Conheça a coleção",
+            "enable_line": false,
+            "text_size": 3
+          }
+        },
+        "3b0fccbc-3710-42f6-8b1f-211d5082b6ab": {
+          "type": "spacer",
+          "settings": {
+            "spacer_padding": 10,
+            "show_line": false
+          }
+        },
+        "407c1424-5f23-4fe9-8abc-21c4027807ef": {
           "type": "heading",
           "settings": {
             "title": "Coleção Resort",
-            "text_size": 10
+            "text_size": 11
           }
         },
-        "text_HqTpwA": {
+        "a74ee68a-ff75-4a7c-aa9c-6cdaf660dfdf": {
           "type": "text",
+          "disabled": true,
           "settings": {
-            "text": "<p>Conheça a coleção que transmite a elegância dos balneários</p>",
+            "richtext": "<p>Fresher than a bubble bath, cleaner than a network tv show</p>",
             "text_size": 6
           }
         },
-        "button_bhUYPT": {
+        "fdfd9dcc-76bf-4071-80e8-20d097945246": {
           "type": "button",
           "settings": {
-            "link_text_1": "Shop Now",
-            "link_1": "shopify://collections/aneis",
-            "button_size_1": "btn--long",
-            "button_style_1": "btn",
+            "link_text_1": "Shop now",
+            "link_1": "shopify://collections",
+            "button_size_1": "btn--medium",
+            "button_style_1": "btn uppercase",
             "button_color_1": "btn--white",
             "link_text_2": "",
             "link_2": "",
@@ -42,30 +58,32 @@
             "link_text_3": "",
             "link_3": "",
             "button_size_3": "btn--long",
-            "button_style_3": "btn-text-thick-line",
+            "button_style_3": "caps--link",
             "button_color_3": "btn--white"
           }
         }
       },
       "block_order": [
-        "heading_DT7bw9",
-        "text_HqTpwA",
-        "button_bhUYPT"
+        "7c3cb134-606a-4424-8af4-58a35c6d9088",
+        "3b0fccbc-3710-42f6-8b1f-211d5082b6ab",
+        "407c1424-5f23-4fe9-8abc-21c4027807ef",
+        "a74ee68a-ff75-4a7c-aa9c-6cdaf660dfdf",
+        "fdfd9dcc-76bf-4071-80e8-20d097945246"
       ],
-      "name": "Video banner",
+      "name": "Hero",
       "settings": {
+        "image": "shopify://shop_images/Campanha_Organica_-_Desktop_1920x1080_4079509a-289b-4ce9-b71f-7e6d6007d2e3.png",
+        "mobile_image": "shopify://shop_images/Campanha_Organica_-_Mobile_-_720x1080_70ac4bc1-11b0-4fca-9760-4335f7ae9bae.png",
+        "banner_link": "shopify://collections",
         "height": "use_screen_three_quarters",
-        "color_bg": "palette--light bg--neutral",
-        "video_bg": "shopify://files/videos/Animação_de_Modelo_em_Monte_Carlo.mp4",
-        "object_position": "center-center",
-        "image": "shopify://shop_images/Imagem_banner_home_8d053981-b069-46f1-ace8-f649b6a46226.png",
-        "banner_link": "shopify://collections/aneis",
-        "preload_image": false,
+        "overlay_opacity": 0,
+        "overlay_color": "#3c190b",
+        "enable_overlay_text": false,
+        "preload_image": true,
+        "content_width": 2000,
         "text_align": "align--bottom-left",
         "text_color": "text--white",
-        "overlay_opacity": 15,
-        "overlay_color": "#000000",
-        "enable_overlay_text": false,
+        "color_bg": "hero__content--transparent",
         "width": "wrapper--none",
         "padding_top": 0,
         "padding_bottom": 0
@@ -242,6 +260,8 @@
         "grid_large": 2,
         "grid_medium": 2,
         "grid_mobile": 1.2,
+        "text_layout": "overlay",
+        "enable_hover": true,
         "font_family": "body",
         "title_size": 4,
         "accent_size": 3,
@@ -442,6 +462,9 @@
           "settings": {
             "image": "shopify://shop_images/RUBI_402d8064-2a78-4f9e-8e04-35ec8447792b.png",
             "text_image": "",
+            "text_color": "text--black",
+            "text_size": 16,
+            "text_weight": "font-normal",
             "link": "",
             "new_tab": true,
             "width": 140,
@@ -453,6 +476,9 @@
           "settings": {
             "image": "shopify://shop_images/DIAMANTE_a671ccd6-9fb0-4f38-bebc-9d84b88e36da.png",
             "text_image": "diamante",
+            "text_color": "text--black",
+            "text_size": 16,
+            "text_weight": "font-normal",
             "link": "",
             "new_tab": true,
             "width": 140,
@@ -464,6 +490,9 @@
           "settings": {
             "image": "shopify://shop_images/MORGANITA.png",
             "text_image": "morgatina",
+            "text_color": "text--black",
+            "text_size": 16,
+            "text_weight": "font-normal",
             "link": "",
             "new_tab": true,
             "width": 140,
@@ -475,6 +504,9 @@
           "settings": {
             "image": "shopify://shop_images/TOPAZIO_IMPERIAL.png",
             "text_image": "topazio imperial",
+            "text_color": "text--black",
+            "text_size": 16,
+            "text_weight": "font-normal",
             "link": "",
             "new_tab": true,
             "width": 140,
@@ -486,6 +518,9 @@
           "settings": {
             "image": "shopify://shop_images/TURMALINA_PARAIBA.png",
             "text_image": "turmalina",
+            "text_color": "text--black",
+            "text_size": 16,
+            "text_weight": "font-normal",
             "link": "",
             "new_tab": true,
             "width": 140,
@@ -497,6 +532,9 @@
           "settings": {
             "image": "shopify://shop_images/ESMERALDA.png",
             "text_image": "esmeralda",
+            "text_color": "text--black",
+            "text_size": 16,
+            "text_weight": "font-normal",
             "link": "",
             "new_tab": true,
             "width": 140,
@@ -508,6 +546,9 @@
           "settings": {
             "image": "shopify://shop_images/SAFIRA.png",
             "text_image": "safira",
+            "text_color": "text--black",
+            "text_size": 16,
+            "text_weight": "font-normal",
             "link": "",
             "new_tab": true,
             "width": 140,
@@ -519,6 +560,9 @@
           "settings": {
             "image": "shopify://shop_images/AGUA-MARINHA.png",
             "text_image": "agua marina",
+            "text_color": "text--black",
+            "text_size": 16,
+            "text_weight": "font-normal",
             "link": "",
             "new_tab": true,
             "width": 140,
@@ -730,10 +774,10 @@
         "padding_bottom": 36
       }
     },
-    "hero": {
+    "section_hero_eV6Yh3": {
       "type": "section-hero",
       "blocks": {
-        "7c3cb134-606a-4424-8af4-58a35c6d9088": {
+        "kicker_qNGL9L": {
           "type": "kicker",
           "settings": {
             "kicker": "Conheça a coleção",
@@ -741,21 +785,21 @@
             "text_size": 3
           }
         },
-        "3b0fccbc-3710-42f6-8b1f-211d5082b6ab": {
+        "spacer_BdxNTy": {
           "type": "spacer",
           "settings": {
             "spacer_padding": 10,
             "show_line": false
           }
         },
-        "407c1424-5f23-4fe9-8abc-21c4027807ef": {
+        "heading_9iQjEq": {
           "type": "heading",
           "settings": {
             "title": "Coleção Resort",
             "text_size": 11
           }
         },
-        "a74ee68a-ff75-4a7c-aa9c-6cdaf660dfdf": {
+        "text_ngJfeL": {
           "type": "text",
           "disabled": true,
           "settings": {
@@ -763,7 +807,7 @@
             "text_size": 6
           }
         },
-        "fdfd9dcc-76bf-4071-80e8-20d097945246": {
+        "button_jXCpwB": {
           "type": "button",
           "settings": {
             "link_text_1": "Shop now",
@@ -785,11 +829,11 @@
         }
       },
       "block_order": [
-        "7c3cb134-606a-4424-8af4-58a35c6d9088",
-        "3b0fccbc-3710-42f6-8b1f-211d5082b6ab",
-        "407c1424-5f23-4fe9-8abc-21c4027807ef",
-        "a74ee68a-ff75-4a7c-aa9c-6cdaf660dfdf",
-        "fdfd9dcc-76bf-4071-80e8-20d097945246"
+        "kicker_qNGL9L",
+        "spacer_BdxNTy",
+        "heading_9iQjEq",
+        "text_ngJfeL",
+        "button_jXCpwB"
       ],
       "name": "Hero",
       "settings": {
@@ -805,6 +849,68 @@
         "text_align": "align--bottom-left",
         "text_color": "text--white",
         "color_bg": "hero__content--transparent",
+        "width": "wrapper--none",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "section_video_ykPNyn": {
+      "type": "section-video",
+      "blocks": {
+        "heading_DT7bw9": {
+          "type": "heading",
+          "settings": {
+            "title": "Coleção Resort",
+            "text_size": 10
+          }
+        },
+        "text_HqTpwA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Conheça a coleção que transmite a elegância dos balneários</p>",
+            "text_size": 6
+          }
+        },
+        "button_bhUYPT": {
+          "type": "button",
+          "settings": {
+            "link_text_1": "Shop Now",
+            "link_1": "shopify://collections/aneis",
+            "button_size_1": "btn--long",
+            "button_style_1": "btn",
+            "button_color_1": "btn--white",
+            "link_text_2": "",
+            "link_2": "",
+            "button_size_2": "btn--long",
+            "button_style_2": "btn-text-thick-line",
+            "button_color_2": "btn--white",
+            "link_text_3": "",
+            "link_3": "",
+            "button_size_3": "btn--long",
+            "button_style_3": "btn-text-thick-line",
+            "button_color_3": "btn--white"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DT7bw9",
+        "text_HqTpwA",
+        "button_bhUYPT"
+      ],
+      "name": "Video banner",
+      "settings": {
+        "height": "use_screen_three_quarters",
+        "color_bg": "palette--light bg--neutral",
+        "video_bg": "shopify://files/videos/Animação_de_Modelo_em_Monte_Carlo.mp4",
+        "object_position": "center-center",
+        "image": "shopify://shop_images/Imagem_banner_home_8d053981-b069-46f1-ace8-f649b6a46226.png",
+        "banner_link": "shopify://collections/aneis",
+        "preload_image": false,
+        "text_align": "align--bottom-left",
+        "text_color": "text--white",
+        "overlay_opacity": 15,
+        "overlay_color": "#000000",
+        "enable_overlay_text": false,
         "width": "wrapper--none",
         "padding_top": 0,
         "padding_bottom": 0
@@ -867,7 +973,7 @@
     }
   },
   "order": [
-    "section_video_ykPNyn",
+    "hero",
     "section_gallery_slider_LmhCKt",
     "section_list_collections_ftJBTL",
     "section_columns_X6EhLY",
@@ -876,7 +982,8 @@
     "section_logos_Cd4AwJ",
     "section_pair_hotspots_showcase_RGxViq",
     "section_mosaic_FgTQfb",
-    "hero",
+    "section_hero_eV6Yh3",
+    "section_video_ykPNyn",
     "section_icons_Fcggry"
   ]
 }
