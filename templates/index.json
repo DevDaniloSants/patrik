@@ -194,7 +194,7 @@
         "wh_ratio": 1,
         "slides_desktop": 5,
         "slides_tablet": 3,
-        "slides_mobile": 1.2,
+        "slides_mobile": 2,
         "show_arrows": true,
         "show_pagination": false,
         "width": "wrapper",
