@@ -96,10 +96,10 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/ANEL.png",
+            "image": "shopify://shop_images/categoria_anel_canto100_express.png",
             "shape_class": "",
-            "title": "anéis",
-            "text": "<p>Category description text goes here.</p>",
+            "title": "Anéis",
+            "text": "",
             "button_label": "",
             "button_link": "",
             "button_color": "btn--neutral",
