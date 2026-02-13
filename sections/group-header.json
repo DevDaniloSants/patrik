@@ -132,7 +132,7 @@
       "settings": {
         "header_style": "logo_center",
         "logo": "shopify://shop_images/Patrik_cz_-_transp_-_copia.png",
-        "logo_max_limit": 110,
+        "logo_max_limit": 125,
         "logo_padding": 25,
         "logo_text_size": 5,
         "main_menu_linklist": "main-menu",
