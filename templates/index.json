@@ -113,7 +113,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/BRINCO.png",
+            "image": "shopify://shop_images/Categoria_Brinco.png",
             "shape_class": "",
             "title": "Brincos",
             "text": "",
@@ -159,31 +159,13 @@
             "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
             "video_button_color": "text--white"
           }
-        },
-        "text_block_TYjF4H": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/PINGENTE.png",
-            "shape_class": "",
-            "title": "pingentes",
-            "text": "<p>Category description text goes here.</p>",
-            "button_label": "",
-            "button_link": "",
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
         }
       },
       "block_order": [
         "text_block_3ptcC6",
         "text_block_j6E9FP",
         "text_block_Wjp9yX",
-        "text_block_pPdqQA",
-        "text_block_TYjF4H"
+        "text_block_pPdqQA"
       ],
       "name": "Gallery Slider",
       "settings": {
@@ -192,7 +174,7 @@
         "align_text": "text-center",
         "scale_image": false,
         "wh_ratio": 1,
-        "slides_desktop": 5,
+        "slides_desktop": 4,
         "slides_tablet": 3,
         "slides_mobile": 1.8,
         "show_arrows": true,
