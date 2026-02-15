@@ -268,7 +268,7 @@
         "kicker_nWTtnb": {
           "type": "kicker",
           "settings": {
-            "kicker": "A beleza que surge das curvas de Gaia",
+            "kicker": "",
             "enable_line": false,
             "text_size": 3
           }
@@ -283,7 +283,7 @@
         "heading_WrwMmN": {
           "type": "heading",
           "settings": {
-            "title": "Coleção Organica",
+            "title": "Anéis de Noivadoo",
             "text_size": 11
           }
         },
@@ -297,6 +297,7 @@
         },
         "button_qr79DX": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "link_text_1": "Conheça",
             "link_1": "shopify://collections",
