@@ -178,8 +178,8 @@
         "slides_tablet": 3,
         "slides_mobile": 1.8,
         "show_arrows": false,
-        "show_pagination": true,
-        "width": "wrapper--narrow",
+        "show_pagination": false,
+        "width": "wrapper--full",
         "padding_top": 36,
         "padding_bottom": 36
       }
