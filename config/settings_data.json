@@ -39,7 +39,7 @@
     "font_heading_family": "source_serif_4_n4",
     "font_body_family": "figtree_n4",
     "font_accent_family": "figtree_n5",
-    "font_scaling_system": "small",
+    "font_scaling_system": "medium",
     "type_nav_font": "accent_bold",
     "type_button_font": "accent_normal",
     "font_heading_uppercase": false,
