@@ -89,86 +89,6 @@
         "padding_bottom": 0
       }
     },
-    "section_hero_mEN6xM": {
-      "type": "section-hero",
-      "blocks": {
-        "kicker_nWTtnb": {
-          "type": "kicker",
-          "settings": {
-            "kicker": "A beleza que surge das curvas de Gaia",
-            "enable_line": false,
-            "text_size": 3
-          }
-        },
-        "spacer_VLzd9L": {
-          "type": "spacer",
-          "settings": {
-            "spacer_padding": 10,
-            "show_line": false
-          }
-        },
-        "heading_WrwMmN": {
-          "type": "heading",
-          "settings": {
-            "title": "Coleção Organica",
-            "text_size": 11
-          }
-        },
-        "text_rYU48H": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "richtext": "<p>Fresher than a bubble bath, cleaner than a network tv show</p>",
-            "text_size": 6
-          }
-        },
-        "button_qr79DX": {
-          "type": "button",
-          "settings": {
-            "link_text_1": "Conheça",
-            "link_1": "shopify://collections",
-            "button_size_1": "btn--medium",
-            "button_style_1": "btn uppercase",
-            "button_color_1": "btn--white",
-            "link_text_2": "",
-            "link_2": "",
-            "button_size_2": "btn--long",
-            "button_style_2": "btn-text-thick-line",
-            "button_color_2": "btn--white",
-            "link_text_3": "",
-            "link_3": "",
-            "button_size_3": "btn--long",
-            "button_style_3": "caps--link",
-            "button_color_3": "btn--white"
-          }
-        }
-      },
-      "block_order": [
-        "kicker_nWTtnb",
-        "spacer_VLzd9L",
-        "heading_WrwMmN",
-        "text_rYU48H",
-        "button_qr79DX"
-      ],
-      "name": "Hero",
-      "settings": {
-        "image": "shopify://shop_images/Campanha_Organica_-_Desktop_1920x1080_4079509a-289b-4ce9-b71f-7e6d6007d2e3.png",
-        "mobile_image": "shopify://shop_images/Campanha_Organica_-_Mobile_-_720x1080_70ac4bc1-11b0-4fca-9760-4335f7ae9bae.png",
-        "banner_link": "shopify://collections",
-        "height": "use_screen_three_quarters",
-        "overlay_opacity": 0,
-        "overlay_color": "#3c190b",
-        "enable_overlay_text": false,
-        "preload_image": true,
-        "content_width": 2000,
-        "text_align": "align--bottom-left",
-        "text_color": "text--white",
-        "color_bg": "hero__content--transparent",
-        "width": "wrapper--none",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "section_richtext_cnmM7B": {
       "type": "section-richtext",
       "blocks": {
@@ -340,6 +260,86 @@
         "width": "wrapper",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "section_hero_mEN6xM": {
+      "type": "section-hero",
+      "blocks": {
+        "kicker_nWTtnb": {
+          "type": "kicker",
+          "settings": {
+            "kicker": "A beleza que surge das curvas de Gaia",
+            "enable_line": false,
+            "text_size": 3
+          }
+        },
+        "spacer_VLzd9L": {
+          "type": "spacer",
+          "settings": {
+            "spacer_padding": 10,
+            "show_line": false
+          }
+        },
+        "heading_WrwMmN": {
+          "type": "heading",
+          "settings": {
+            "title": "Coleção Organica",
+            "text_size": 11
+          }
+        },
+        "text_rYU48H": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "richtext": "<p>Fresher than a bubble bath, cleaner than a network tv show</p>",
+            "text_size": 6
+          }
+        },
+        "button_qr79DX": {
+          "type": "button",
+          "settings": {
+            "link_text_1": "Conheça",
+            "link_1": "shopify://collections",
+            "button_size_1": "btn--medium",
+            "button_style_1": "btn uppercase",
+            "button_color_1": "btn--white",
+            "link_text_2": "",
+            "link_2": "",
+            "button_size_2": "btn--long",
+            "button_style_2": "btn-text-thick-line",
+            "button_color_2": "btn--white",
+            "link_text_3": "",
+            "link_3": "",
+            "button_size_3": "btn--long",
+            "button_style_3": "caps--link",
+            "button_color_3": "btn--white"
+          }
+        }
+      },
+      "block_order": [
+        "kicker_nWTtnb",
+        "spacer_VLzd9L",
+        "heading_WrwMmN",
+        "text_rYU48H",
+        "button_qr79DX"
+      ],
+      "name": "Noivado",
+      "settings": {
+        "image": "shopify://shop_images/Campanha_Organica_-_Desktop_1920x1080_4079509a-289b-4ce9-b71f-7e6d6007d2e3.png",
+        "mobile_image": "shopify://shop_images/Campanha_Organica_-_Mobile_-_720x1080_70ac4bc1-11b0-4fca-9760-4335f7ae9bae.png",
+        "banner_link": "shopify://collections",
+        "height": "use_screen_three_quarters",
+        "overlay_opacity": 0,
+        "overlay_color": "#3c190b",
+        "enable_overlay_text": false,
+        "preload_image": true,
+        "content_width": 2000,
+        "text_align": "align--bottom-left",
+        "text_color": "text--white",
+        "color_bg": "hero__content--transparent",
+        "width": "wrapper--none",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "section_list_collections_ftJBTL": {
@@ -1114,11 +1114,11 @@
   },
   "order": [
     "hero",
-    "section_hero_mEN6xM",
     "section_richtext_cnmM7B",
     "section_gallery_slider_LmhCKt",
     "section_richtext_UkKtct",
     "section_richtext_kTiLHV",
+    "section_hero_mEN6xM",
     "section_list_collections_ftJBTL",
     "section_columns_X6EhLY",
     "tabs",
