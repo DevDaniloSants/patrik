@@ -170,7 +170,7 @@
       "name": "Gallery Slider",
       "settings": {
         "title": "",
-        "bg": "palette--light bg--neutral",
+        "bg": "palette--dark bg--invert--accent",
         "align_text": "text-center",
         "scale_image": false,
         "wh_ratio": 1,
