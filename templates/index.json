@@ -169,7 +169,7 @@
       ],
       "name": "Gallery Slider",
       "settings": {
-        "title": "",
+        "title": "Escolha por Categoria",
         "bg": "palette--dark bg--invert--accent",
         "align_text": "text-center",
         "scale_image": false,
