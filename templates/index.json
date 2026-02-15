@@ -97,7 +97,7 @@
           "settings": {
             "enable_image": true,
             "image": "shopify://shop_images/categoria_anel_canto100_express.png",
-            "shape_class": "rounded-lg",
+            "shape_class": "rounded-full",
             "title": "Anéis",
             "text": "",
             "button_label": "",
@@ -114,7 +114,7 @@
           "settings": {
             "enable_image": true,
             "image": "shopify://shop_images/Categoria_Brinco2.png",
-            "shape_class": "rounded-lg",
+            "shape_class": "rounded-full",
             "title": "Brincos",
             "text": "",
             "button_label": "",
@@ -131,7 +131,7 @@
           "settings": {
             "enable_image": true,
             "image": "shopify://shop_images/Categoria_Colar.png",
-            "shape_class": "rounded-lg",
+            "shape_class": "rounded-full",
             "title": "Colares",
             "text": "",
             "button_label": "",
@@ -148,7 +148,7 @@
           "settings": {
             "enable_image": true,
             "image": "shopify://shop_images/Categoria_Pulseira.png",
-            "shape_class": "rounded-lg",
+            "shape_class": "rounded-full",
             "title": "Pulseiras",
             "text": "",
             "button_label": "",
