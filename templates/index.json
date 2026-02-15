@@ -180,8 +180,8 @@
         "show_arrows": false,
         "show_pagination": false,
         "width": "wrapper--narrow",
-        "padding_top": 58,
-        "padding_bottom": 58
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "section_list_collections_ftJBTL": {
