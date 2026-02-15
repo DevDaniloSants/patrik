@@ -255,7 +255,7 @@
       "settings": {
         "align_text": "text-left",
         "text_color": "text--neutral",
-        "bg": "palette--light bg--neutral",
+        "bg": "palette--dark bg--invert--accent",
         "content_width": 2000,
         "width": "wrapper",
         "padding_top": 36,
@@ -325,8 +325,8 @@
       ],
       "name": "Noivado",
       "settings": {
-        "image": "shopify://shop_images/Campanha_Organica_-_Desktop_1920x1080_4079509a-289b-4ce9-b71f-7e6d6007d2e3.png",
-        "mobile_image": "shopify://shop_images/Campanha_Organica_-_Mobile_-_720x1080_70ac4bc1-11b0-4fca-9760-4335f7ae9bae.png",
+        "image": "shopify://shop_images/Noivado_teste_-_desk.png",
+        "mobile_image": "shopify://shop_images/Noivado_teste_-_mobile.png",
         "banner_link": "shopify://collections",
         "height": "use_screen_three_quarters",
         "overlay_opacity": 0,
