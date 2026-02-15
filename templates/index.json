@@ -261,8 +261,8 @@
       "name": "Noivado e Casamento",
       "settings": {
         "title": "Anéis de Noivado e Casamento",
-        "bg": "palette--dark bg--invert--accent",
-        "carousel_enabled_on": "hidden",
+        "bg": "palette--light bg--neutral",
+        "carousel_enabled_on": "both",
         "collection_limit": 36,
         "wh_ratio": 1.5,
         "grid_large": 2,
