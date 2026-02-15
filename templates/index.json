@@ -179,7 +179,7 @@
         "slides_mobile": 1.8,
         "show_arrows": false,
         "show_pagination": false,
-        "width": "wrapper--narrow",
+        "width": "wrapper",
         "padding_top": 36,
         "padding_bottom": 36
       }
