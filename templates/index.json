@@ -491,7 +491,7 @@
         "font_family": "body",
         "title_size": 4,
         "accent_size": 3,
-        "width": "wrapper--full",
+        "width": "wrapper",
         "padding_top": 36,
         "padding_bottom": 36
       }
