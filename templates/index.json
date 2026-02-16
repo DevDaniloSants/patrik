@@ -431,16 +431,16 @@
           "type": "collection",
           "settings": {
             "collection": "",
-            "image": "shopify://shop_images/Anel_Noivado_700x500_Glden_Hur.png",
-            "mobile_image": "shopify://shop_images/Anel_Noivado_700x500_Glden_Hur.png",
+            "image": "shopify://shop_images/Noivado_teste_-_desk.png",
+            "mobile_image": "shopify://shop_images/Noivado_teste_-_mobile.png",
             "overlay_color": "#616161",
             "overlay_opacity": 0,
             "top_text": "",
             "top_text_disabled": true,
             "title": "",
             "title_disabled": true,
-            "bottom_text": "",
-            "bottom_text_disabled": true,
+            "bottom_text": "Anéis de Noivado",
+            "bottom_text_disabled": false,
             "collection_url": "",
             "text_color": "text--white"
           }
@@ -449,16 +449,16 @@
           "type": "collection",
           "settings": {
             "collection": "",
-            "image": "shopify://shop_images/Gemini_Generated_Image_p7a17jp7a17jp7a1.png",
-            "mobile_image": "shopify://shop_images/Gemini_Generated_Image_p7a17jp7a17jp7a1.png",
+            "image": "shopify://shop_images/Aliancas_Casamento.png",
+            "mobile_image": "shopify://shop_images/Aliancas_Casamento_-_mobile.png",
             "overlay_color": "#616161",
             "overlay_opacity": 0,
             "top_text": "Product Count",
             "top_text_disabled": true,
             "title": "Collection Name",
             "title_disabled": true,
-            "bottom_text": "",
-            "bottom_text_disabled": true,
+            "bottom_text": "Alianças de Casamento",
+            "bottom_text_disabled": false,
             "collection_url": "",
             "text_color": "text--white"
           }
@@ -468,7 +468,6 @@
         "collection_ymAemN",
         "collection_GnhUgy"
       ],
-      "disabled": true,
       "custom_css": [
         ".custom-scrollbar.small-down--show {display: none !important;}",
         ".custom-scrollbar.small-down--show::-webkit-scrollbar {display: none;}"
