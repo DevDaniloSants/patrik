@@ -478,7 +478,7 @@
       ],
       "name": "Noivado e Casamento",
       "settings": {
-        "title": "Saiba como fazer a escolha correta",
+        "title": "A união perfeita começa com a escolha certa",
         "bg": "palette--dark bg--invert--accent",
         "carousel_enabled_on": "hidden",
         "collection_limit": 36,
@@ -584,8 +584,8 @@
       ],
       "name": "Personalizáveis V2",
       "settings": {
-        "title": "Personalize as suas Jóias",
-        "bg": "palette--light bg--neutral",
+        "title": "Eternize os Momentos Marcantes da Vida",
+        "bg": "palette--dark bg--invert--accent",
         "align_text": "text-center",
         "scale_image": true,
         "wh_ratio": 1,
