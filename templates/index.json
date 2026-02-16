@@ -598,6 +598,40 @@
         "padding_bottom": 36
       }
     },
+    "section_richtext_9ND8Jh": {
+      "type": "section-richtext",
+      "blocks": {
+        "heading_jiBmpG": {
+          "type": "heading",
+          "settings": {
+            "heading": "Letras e Personalizados",
+            "text_size": 6
+          }
+        },
+        "text_enBaH8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Letras e </p>",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        }
+      },
+      "block_order": [
+        "heading_jiBmpG",
+        "text_enBaH8"
+      ],
+      "name": "Título Personalizados",
+      "settings": {
+        "align_text": "text-center",
+        "text_color": "text--white",
+        "bg": "palette--dark bg--invert--accent",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "section_hero_cU6KrK": {
       "type": "section-hero",
       "blocks": {
@@ -619,7 +653,7 @@
         "heading_KjPHiX": {
           "type": "heading",
           "settings": {
-            "title": "Anéis de Noivado",
+            "title": "",
             "text_size": 7
           }
         },
@@ -662,8 +696,8 @@
       ],
       "name": "Letras e Personalizadoos",
       "settings": {
-        "image": "shopify://shop_images/Noivado_teste_-_desk.png",
-        "mobile_image": "shopify://shop_images/Noivado_teste_-_mobile.png",
+        "image": "shopify://shop_images/letras.png",
+        "mobile_image": "shopify://shop_images/letras.png",
         "banner_link": "shopify://collections",
         "height": "use_screen_one_fifth",
         "overlay_opacity": 0,
@@ -679,10 +713,10 @@
         "padding_bottom": 0
       }
     },
-    "section_richtext_9ND8Jh": {
+    "section_richtext_Mijpwb": {
       "type": "section-richtext",
       "blocks": {
-        "text_enBaH8": {
+        "text_gYGFiK": {
           "type": "text",
           "settings": {
             "text": "",
@@ -692,7 +726,7 @@
         }
       },
       "block_order": [
-        "text_enBaH8"
+        "text_gYGFiK"
       ],
       "name": "Espaçamento",
       "settings": {
@@ -1342,8 +1376,9 @@
     "section_list_collections_ftJBTL",
     "section_richtext_q8gnYc",
     "section_columns_X6EhLY",
-    "section_hero_cU6KrK",
     "section_richtext_9ND8Jh",
+    "section_hero_cU6KrK",
+    "section_richtext_Mijpwb",
     "tabs",
     "section_columns_BncX3A",
     "section_logos_Cd4AwJ",
