@@ -123,7 +123,7 @@
           "settings": {
             "enable_image": true,
             "image": "shopify://shop_images/categoria_anel_canto100_express.png",
-            "shape_class": "rounded-full",
+            "shape_class": "",
             "title": "Anéis",
             "text": "",
             "button_label": "",
@@ -140,7 +140,7 @@
           "settings": {
             "enable_image": true,
             "image": "shopify://shop_images/Categoria_Brinco2.png",
-            "shape_class": "rounded-full",
+            "shape_class": "rounded-lg",
             "title": "Brincos",
             "text": "",
             "button_label": "",
@@ -157,7 +157,7 @@
           "settings": {
             "enable_image": true,
             "image": "shopify://shop_images/Categoria_Colar.png",
-            "shape_class": "rounded-full",
+            "shape_class": "rounded-lg",
             "title": "Colares",
             "text": "",
             "button_label": "",
@@ -174,7 +174,7 @@
           "settings": {
             "enable_image": true,
             "image": "shopify://shop_images/Categoria_Pulseira.png",
-            "shape_class": "rounded-full",
+            "shape_class": "rounded-lg",
             "title": "Pulseiras",
             "text": "",
             "button_label": "",
@@ -251,6 +251,7 @@
       "block_order": [
         "text_YPVMLb"
       ],
+      "disabled": true,
       "name": "Espaçamento",
       "settings": {
         "align_text": "text-left",
