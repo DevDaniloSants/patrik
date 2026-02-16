@@ -606,42 +606,23 @@
           "name": "Noivado",
           "settings": {
             "collection": "",
-            "image": "shopify://shop_images/Noivado_teste_-_desk.png",
-            "mobile_image": "shopify://shop_images/Noivado_teste_-_mobile.png",
+            "image": "shopify://shop_images/letras.png",
+            "mobile_image": "shopify://shop_images/letras.png",
             "overlay_color": "#616161",
             "overlay_opacity": 0,
             "top_text": "",
             "top_text_disabled": true,
             "title": "",
             "title_disabled": true,
-            "bottom_text": "Jóias para Noivado",
-            "bottom_text_disabled": false,
-            "collection_url": "",
-            "text_color": "text--white"
-          }
-        },
-        "collection_gVEmci": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "image": "shopify://shop_images/Aliancas_Casamento.png",
-            "mobile_image": "shopify://shop_images/Aliancas_Casamento_-_mobile.png",
-            "overlay_color": "#616161",
-            "overlay_opacity": 0,
-            "top_text": "Product Count",
-            "top_text_disabled": true,
-            "title": "Collection Name",
-            "title_disabled": true,
-            "bottom_text": "Jóias para Casamento",
-            "bottom_text_disabled": false,
+            "bottom_text": "",
+            "bottom_text_disabled": true,
             "collection_url": "",
             "text_color": "text--white"
           }
         }
       },
       "block_order": [
-        "collection_PbtR3t",
-        "collection_gVEmci"
+        "collection_PbtR3t"
       ],
       "custom_css": [
         ".custom-scrollbar.small-down--show {display: none !important;}",
