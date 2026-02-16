@@ -298,6 +298,7 @@
         "text_rYU48H",
         "button_qr79DX"
       ],
+      "disabled": true,
       "name": "Noivado",
       "settings": {
         "image": "shopify://shop_images/Noivado_teste_-_desk.png",
@@ -332,6 +333,7 @@
       "block_order": [
         "text_YPVMLb"
       ],
+      "disabled": true,
       "name": "Espaçamento",
       "settings": {
         "align_text": "text-left",
@@ -405,6 +407,7 @@
         "text_FE8r9R",
         "button_de7jFB"
       ],
+      "disabled": true,
       "name": "Alianças de Casamento",
       "settings": {
         "image": "shopify://shop_images/Aliancas_Casamento.png",
@@ -474,7 +477,7 @@
       ],
       "name": "Noivado e Casamento",
       "settings": {
-        "title": "Anéis de Noivado e Casamento",
+        "title": "Saiba como fazer a escolha correta",
         "bg": "palette--dark bg--invert--accent",
         "carousel_enabled_on": "hidden",
         "collection_limit": 36,
