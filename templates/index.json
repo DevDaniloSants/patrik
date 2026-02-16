@@ -432,6 +432,7 @@
       "blocks": {
         "collection_ymAemN": {
           "type": "collection",
+          "name": "Noivado",
           "settings": {
             "collection": "",
             "image": "shopify://shop_images/Noivado_teste_-_desk.png",
@@ -442,7 +443,7 @@
             "top_text_disabled": true,
             "title": "",
             "title_disabled": true,
-            "bottom_text": "Noivado",
+            "bottom_text": "Jóias para Noivado",
             "bottom_text_disabled": false,
             "collection_url": "",
             "text_color": "text--white"
@@ -460,7 +461,7 @@
             "top_text_disabled": true,
             "title": "Collection Name",
             "title_disabled": true,
-            "bottom_text": "Casamento",
+            "bottom_text": "Jóias para Casamento",
             "bottom_text_disabled": false,
             "collection_url": "",
             "text_color": "text--white"
