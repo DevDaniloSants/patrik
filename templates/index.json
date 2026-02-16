@@ -195,7 +195,7 @@
       ],
       "name": "Categorias - Gallery Slider",
       "settings": {
-        "title": "",
+        "title": "Conheça nossas jóias por categoria",
         "bg": "palette--dark bg--invert--accent",
         "align_text": "text-center",
         "scale_image": false,
@@ -491,6 +491,32 @@
         "font_family": "body",
         "title_size": 4,
         "accent_size": 3,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_richtext_q8gnYc": {
+      "type": "section-richtext",
+      "blocks": {
+        "text_neYbgQ": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        }
+      },
+      "block_order": [
+        "text_neYbgQ"
+      ],
+      "name": "Espaçamento",
+      "settings": {
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "palette--dark bg--invert--accent",
+        "content_width": 2000,
         "width": "wrapper",
         "padding_top": 36,
         "padding_bottom": 36
@@ -1207,6 +1233,7 @@
     "section_richtext_kTiLHV",
     "section_hero_UhTiib",
     "section_list_collections_ftJBTL",
+    "section_richtext_q8gnYc",
     "section_columns_X6EhLY",
     "tabs",
     "section_columns_BncX3A",
