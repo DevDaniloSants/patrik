@@ -407,8 +407,8 @@
       ],
       "name": "Alianças de Casamento",
       "settings": {
-        "image": "shopify://shop_images/Noivado_teste_-_desk.png",
-        "mobile_image": "shopify://shop_images/Noivado_teste_-_mobile.png",
+        "image": "shopify://shop_images/Aliancas_Casamento.png",
+        "mobile_image": "shopify://shop_images/Aliancas_Casamento_-_mobile.png",
         "banner_link": "shopify://collections",
         "height": "use_screen_one_fifth",
         "overlay_opacity": 0,
