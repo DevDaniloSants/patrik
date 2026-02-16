@@ -284,8 +284,8 @@
         "heading_WrwMmN": {
           "type": "heading",
           "settings": {
-            "title": "Anéis de Noivadoo",
-            "text_size": 11
+            "title": "Anéis de Noivado",
+            "text_size": 8
           }
         },
         "text_rYU48H": {
@@ -330,7 +330,7 @@
         "image": "shopify://shop_images/Noivado_teste_-_desk.png",
         "mobile_image": "shopify://shop_images/Noivado_teste_-_mobile.png",
         "banner_link": "shopify://collections",
-        "height": "use_screen_three_quarters",
+        "height": "use_screen_one_fifth",
         "overlay_opacity": 0,
         "overlay_color": "#3c190b",
         "enable_overlay_text": false,
