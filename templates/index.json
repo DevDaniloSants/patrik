@@ -582,7 +582,7 @@
         "text_block_f78Fzx",
         "text_block_HLG8Pp"
       ],
-      "name": "Personalizáveis V2",
+      "name": "Momentos Marcantes da Vida",
       "settings": {
         "title": "Eternize os Momentos Marcantes da Vida",
         "bg": "palette--dark bg--invert--accent",
@@ -598,119 +598,73 @@
         "padding_bottom": 36
       }
     },
-    "section_richtext_9ND8Jh": {
-      "type": "section-richtext",
+    "section_list_collections_zLWnz9": {
+      "type": "section-list-collections",
       "blocks": {
-        "heading_jiBmpG": {
-          "type": "heading",
+        "collection_PbtR3t": {
+          "type": "collection",
+          "name": "Noivado",
           "settings": {
-            "heading": "Letras e Personalizados",
-            "text_size": 6
+            "collection": "",
+            "image": "shopify://shop_images/Noivado_teste_-_desk.png",
+            "mobile_image": "shopify://shop_images/Noivado_teste_-_mobile.png",
+            "overlay_color": "#616161",
+            "overlay_opacity": 0,
+            "top_text": "",
+            "top_text_disabled": true,
+            "title": "",
+            "title_disabled": true,
+            "bottom_text": "Jóias para Noivado",
+            "bottom_text_disabled": false,
+            "collection_url": "",
+            "text_color": "text--white"
           }
         },
-        "text_enBaH8": {
-          "type": "text",
+        "collection_gVEmci": {
+          "type": "collection",
           "settings": {
-            "text": "<p>Letras e </p>",
-            "text_size": 4,
-            "text_columns": 1
+            "collection": "",
+            "image": "shopify://shop_images/Aliancas_Casamento.png",
+            "mobile_image": "shopify://shop_images/Aliancas_Casamento_-_mobile.png",
+            "overlay_color": "#616161",
+            "overlay_opacity": 0,
+            "top_text": "Product Count",
+            "top_text_disabled": true,
+            "title": "Collection Name",
+            "title_disabled": true,
+            "bottom_text": "Jóias para Casamento",
+            "bottom_text_disabled": false,
+            "collection_url": "",
+            "text_color": "text--white"
           }
         }
       },
       "block_order": [
-        "heading_jiBmpG",
-        "text_enBaH8"
+        "collection_PbtR3t",
+        "collection_gVEmci"
       ],
-      "name": "Título Personalizados",
+      "custom_css": [
+        ".custom-scrollbar.small-down--show {display: none !important;}",
+        ".custom-scrollbar.small-down--show::-webkit-scrollbar {display: none;}"
+      ],
+      "name": "Personalizáveis",
       "settings": {
-        "align_text": "text-center",
-        "text_color": "text--white",
+        "title": "Letras e Jóias Persoonalizadas",
         "bg": "palette--dark bg--invert--accent",
-        "content_width": 2000,
+        "carousel_enabled_on": "hidden",
+        "collection_limit": 36,
+        "wh_ratio": 1,
+        "grid_large": 2,
+        "grid_medium": 2,
+        "grid_mobile": 1,
+        "text_layout": "outside",
+        "enable_hover": false,
+        "font_family": "body",
+        "title_size": 4,
+        "accent_size": 3,
         "width": "wrapper",
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "section_hero_cU6KrK": {
-      "type": "section-hero",
-      "blocks": {
-        "kicker_XmpzAr": {
-          "type": "kicker",
-          "settings": {
-            "kicker": "",
-            "enable_line": false,
-            "text_size": 3
-          }
-        },
-        "spacer_bBiyeq": {
-          "type": "spacer",
-          "settings": {
-            "spacer_padding": 10,
-            "show_line": false
-          }
-        },
-        "heading_KjPHiX": {
-          "type": "heading",
-          "settings": {
-            "title": "",
-            "text_size": 7
-          }
-        },
-        "text_kMw3Wc": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "richtext": "<p>Fresher than a bubble bath, cleaner than a network tv show</p>",
-            "text_size": 6
-          }
-        },
-        "button_f9BGKQ": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "link_text_1": "Conheça",
-            "link_1": "shopify://collections",
-            "button_size_1": "btn--medium",
-            "button_style_1": "btn uppercase",
-            "button_color_1": "btn--white",
-            "link_text_2": "",
-            "link_2": "",
-            "button_size_2": "btn--long",
-            "button_style_2": "btn-text-thick-line",
-            "button_color_2": "btn--white",
-            "link_text_3": "",
-            "link_3": "",
-            "button_size_3": "btn--long",
-            "button_style_3": "caps--link",
-            "button_color_3": "btn--white"
-          }
-        }
-      },
-      "block_order": [
-        "kicker_XmpzAr",
-        "spacer_bBiyeq",
-        "heading_KjPHiX",
-        "text_kMw3Wc",
-        "button_f9BGKQ"
-      ],
-      "name": "Letras e Personalizadoos",
-      "settings": {
-        "image": "shopify://shop_images/letras.png",
-        "mobile_image": "shopify://shop_images/letras.png",
-        "banner_link": "shopify://collections",
-        "height": "use_screen_one_fifth",
-        "overlay_opacity": 0,
-        "overlay_color": "#3c190b",
-        "enable_overlay_text": false,
-        "preload_image": true,
-        "content_width": 2000,
-        "text_align": "align--bottom-left",
-        "text_color": "text--white",
-        "color_bg": "hero__content--transparent",
-        "width": "wrapper--none",
-        "padding_top": 0,
-        "padding_bottom": 0
       }
     },
     "section_richtext_Mijpwb": {
@@ -1376,8 +1330,7 @@
     "section_list_collections_ftJBTL",
     "section_richtext_q8gnYc",
     "section_columns_X6EhLY",
-    "section_richtext_9ND8Jh",
-    "section_hero_cU6KrK",
+    "section_list_collections_zLWnz9",
     "section_richtext_Mijpwb",
     "tabs",
     "section_columns_BncX3A",
