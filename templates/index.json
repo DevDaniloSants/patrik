@@ -485,7 +485,7 @@
         "wh_ratio": 1,
         "grid_large": 2,
         "grid_medium": 2,
-        "grid_mobile": 2,
+        "grid_mobile": 1,
         "text_layout": "outside",
         "enable_hover": false,
         "font_family": "body",
