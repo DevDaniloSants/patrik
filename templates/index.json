@@ -598,6 +598,32 @@
         "padding_bottom": 36
       }
     },
+    "section_richtext_Mijpwb": {
+      "type": "section-richtext",
+      "blocks": {
+        "text_gYGFiK": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        }
+      },
+      "block_order": [
+        "text_gYGFiK"
+      ],
+      "name": "Espaçamento",
+      "settings": {
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "palette--dark bg--invert--accent",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "section_list_collections_zLWnz9": {
       "type": "section-list-collections",
       "blocks": {
@@ -648,10 +674,10 @@
         "padding_bottom": 36
       }
     },
-    "section_richtext_Mijpwb": {
+    "section_richtext_RTzH8K": {
       "type": "section-richtext",
       "blocks": {
-        "text_gYGFiK": {
+        "text_eDLqYV": {
           "type": "text",
           "settings": {
             "text": "",
@@ -661,7 +687,7 @@
         }
       },
       "block_order": [
-        "text_gYGFiK"
+        "text_eDLqYV"
       ],
       "name": "Espaçamento",
       "settings": {
@@ -680,7 +706,7 @@
         "collection_TT7wEV": {
           "type": "collection",
           "settings": {
-            "collection": "dual-collection",
+            "collection": "aneis",
             "title": ""
           }
         }
@@ -696,11 +722,11 @@
       "settings": {
         "title": "",
         "progress_bar": "mobile",
-        "grid_large": 4,
+        "grid_large": 3,
         "grid_medium": 3,
-        "grid_mobile": 1.5,
+        "grid_mobile": 1,
         "limit": 6,
-        "bg": "palette--light bg--neutral",
+        "bg": "palette--dark bg--invert--accent",
         "width": "wrapper",
         "padding_top": 40,
         "padding_bottom": 36
@@ -1311,8 +1337,9 @@
     "section_list_collections_ftJBTL",
     "section_richtext_q8gnYc",
     "section_columns_X6EhLY",
-    "section_list_collections_zLWnz9",
     "section_richtext_Mijpwb",
+    "section_list_collections_zLWnz9",
+    "section_richtext_RTzH8K",
     "tabs",
     "section_columns_BncX3A",
     "section_logos_Cd4AwJ",
