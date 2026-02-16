@@ -439,7 +439,7 @@
             "top_text_disabled": true,
             "title": "",
             "title_disabled": true,
-            "bottom_text": "Anéis de Noivado",
+            "bottom_text": "Noivado",
             "bottom_text_disabled": false,
             "collection_url": "",
             "text_color": "text--white"
@@ -457,7 +457,7 @@
             "top_text_disabled": true,
             "title": "Collection Name",
             "title_disabled": true,
-            "bottom_text": "Alianças de Casamento",
+            "bottom_text": "Casamento",
             "bottom_text_disabled": false,
             "collection_url": "",
             "text_color": "text--white"
@@ -475,8 +475,8 @@
       "name": "Noivado e Casamento",
       "settings": {
         "title": "Anéis de Noivado e Casamento",
-        "bg": "palette--light bg--neutral",
-        "carousel_enabled_on": "both",
+        "bg": "palette--dark bg--invert--accent",
+        "carousel_enabled_on": "hidden",
         "collection_limit": 36,
         "wh_ratio": 1,
         "grid_large": 2,
@@ -486,7 +486,7 @@
         "enable_hover": false,
         "font_family": "body",
         "title_size": 4,
-        "accent_size": 7,
+        "accent_size": 3,
         "width": "wrapper",
         "padding_top": 36,
         "padding_bottom": 36
