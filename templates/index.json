@@ -74,7 +74,7 @@
       "settings": {
         "image": "shopify://shop_images/Campanha_Organica_-_Desktop_1920x1080_4079509a-289b-4ce9-b71f-7e6d6007d2e3.png",
         "mobile_image": "shopify://shop_images/Campanha_Organica_-_Mobile_-_720x1080_70ac4bc1-11b0-4fca-9760-4335f7ae9bae.png",
-        "banner_link": "shopify://collections",
+        "banner_link": "shopify://pages/colecao-organica",
         "height": "use_screen_three_quarters",
         "overlay_opacity": 0,
         "overlay_color": "#3c190b",
