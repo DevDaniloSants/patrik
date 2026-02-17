@@ -430,9 +430,12 @@
     },
     "page-lookbook-7": {
       "type": "collection-split",
+      "name": "Conjunto Berilo",
       "settings": {
-        "collection": "",
+        "collection": "conjunto-berilo",
         "product_list": [],
+        "image": "shopify://shop_images/Berilo_verde_brinco_e_colar.png",
+        "mobile_image": "shopify://shop_images/Berilo_verde_brinco_e_colar.png",
         "sticky_image_enable": true,
         "swap": false,
         "overlay_opacity": 15,
