@@ -309,7 +309,6 @@
     },
     "page-lookbook-7": {
       "type": "collection-split",
-      "custom_css": [],
       "name": "Conjunto Berilo - Drewdrops",
       "settings": {
         "collection": "conjunto-berilo",
@@ -337,194 +336,78 @@
         "padding_bottom": 10
       }
     },
-    "page-lookbook-3": {
-      "type": "section-collection-slider",
+    "section_richtext_U7xN3c": {
+      "type": "section-richtext",
+      "blocks": {
+        "kicker_kU4AE9": {
+          "type": "kicker",
+          "disabled": true,
+          "settings": {
+            "kicker": "Introducing",
+            "enable_line": true,
+            "text_size": 3
+          }
+        },
+        "heading_BXT3wU": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Rich text",
+            "text_size": 7
+          }
+        },
+        "button_XqNenM": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "link_text_1": "Shop all",
+            "link_1": "shopify://collections/all",
+            "button_size_1": "btn--medium",
+            "button_style_1": "btn-text-thick-line",
+            "button_color_1": "btn--neutral",
+            "link_text_2": "",
+            "link_2": "",
+            "button_size_2": "btn--medium",
+            "button_style_2": "btn-text-thick-line",
+            "button_color_2": "btn--neutral",
+            "link_text_3": "",
+            "link_3": "",
+            "button_size_3": "btn--long",
+            "button_style_3": "btn-text-thick-line",
+            "button_color_3": "btn--white"
+          }
+        }
+      },
+      "block_order": [
+        "kicker_kU4AE9",
+        "heading_BXT3wU",
+        "button_XqNenM"
+      ],
+      "name": "Espaçamento",
       "settings": {
-        "collection": "",
+        "align_text": "text-center",
+        "text_color": "text--white",
+        "bg": "palette--dark bg--invert--accent",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 40,
+        "padding_bottom": 42
+      }
+    },
+    "section_collection_slider_JBximM": {
+      "type": "section-collection-slider",
+      "name": "Product slider",
+      "settings": {
+        "collection": "organica-diamantes",
         "product_limit": 12,
-        "title": "",
+        "title": "Diamantes",
         "align_text": "title-center",
         "progress_bar": "mobile",
         "grid_large": 4,
         "grid_medium": 3,
         "grid_mobile": 1.2,
-        "bg": "palette--light bg--neutral",
+        "bg": "palette--dark bg--invert--accent",
         "width": "wrapper",
-        "padding_top": 10,
-        "padding_bottom": 36
-      }
-    },
-    "page-lookbook-8": {
-      "type": "collection-split",
-      "settings": {
-        "collection": "",
-        "product_list": [],
-        "sticky_image_enable": true,
-        "swap": true,
-        "overlay_opacity": 15,
-        "overlay_color": "#000000",
-        "kicker": "Introducing",
-        "heading": "Featured products",
-        "text_color": "text--white",
-        "link_text": "View products",
-        "link": "",
-        "button_color": "btn--white",
-        "button_style": "btn",
-        "grid_large": 2,
-        "grid_small": 1.2,
-        "limit": 4,
-        "bg": "palette--light bg--neutral",
-        "object_position": "center-center",
-        "width": "wrapper",
-        "padding_top": 10,
-        "padding_bottom": 10
-      }
-    },
-    "page-lookbook-9": {
-      "type": "section-mosaic",
-      "blocks": {
-        "template--14288112255060__page-lookbook-9-1666051609b19e44b5-1": {
-          "type": "image",
-          "settings": {
-            "overlay_opacity": 15,
-            "overlay_color": "#000000",
-            "title_text": "Image",
-            "title_size": 8,
-            "text_align": "text-left tile--bottom",
-            "kicker_text": "",
-            "kicker_size": 3,
-            "link_text": "",
-            "link_url": "",
-            "link_size": 3
-          }
-        },
-        "template--14288112255060__page-lookbook-9-1666051609b19e44b5-0": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "show_title": true,
-            "text_align": "text-left tile--bottom",
-            "custom_title": "",
-            "title_size": 8,
-            "kicker_text": "",
-            "kicker_size": 3,
-            "show_price": false,
-            "price_size": 3,
-            "overlay_opacity": 15,
-            "overlay_color": "#000000"
-          }
-        },
-        "4fadb0d4-bcd4-4adc-8bae-77c4bc206e58": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "show_title": true,
-            "text_align": "text-left tile--bottom",
-            "custom_title": "",
-            "title_size": 8,
-            "kicker_text": "",
-            "kicker_size": 3,
-            "show_price": false,
-            "price_size": 3,
-            "overlay_opacity": 15,
-            "overlay_color": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "template--14288112255060__page-lookbook-9-1666051609b19e44b5-1",
-        "template--14288112255060__page-lookbook-9-1666051609b19e44b5-0",
-        "4fadb0d4-bcd4-4adc-8bae-77c4bc206e58"
-      ],
-      "settings": {
-        "first_block_height": "tall",
-        "wh_ratio": 0.8,
-        "split": "center",
-        "color_bg": "palette--light bg--neutral",
-        "width": "wrapper",
-        "padding_top": 10,
-        "padding_bottom": 36
-      }
-    },
-    "page-lookbook-10": {
-      "type": "section-collection-tabs",
-      "blocks": {
-        "template--14288112255060__page-lookbook-10-16660516121dd994ec-0": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "title": "First collection"
-          }
-        },
-        "template--14288112255060__page-lookbook-10-16660516121dd994ec-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "title": "Second collection"
-          }
-        }
-      },
-      "block_order": [
-        "template--14288112255060__page-lookbook-10-16660516121dd994ec-0",
-        "template--14288112255060__page-lookbook-10-16660516121dd994ec-1"
-      ],
-      "settings": {
-        "title": "Featured products",
-        "progress_bar": "mobile",
-        "grid_large": 4,
-        "grid_medium": 3,
-        "grid_mobile": 1.2,
-        "limit": 6,
-        "bg": "palette--light bg--neutral",
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "page-lookbook-11": {
-      "type": "section-mosaic",
-      "blocks": {
-        "505a65f3-84f9-4adb-848b-a88459274d48": {
-          "type": "image",
-          "settings": {
-            "overlay_opacity": 15,
-            "overlay_color": "#000000",
-            "title_text": "Previous Lookbook",
-            "title_size": 8,
-            "text_align": "text-center tile--bottom",
-            "kicker_text": "",
-            "kicker_size": 3,
-            "link_text": "",
-            "link_url": "",
-            "link_size": 3
-          }
-        },
-        "e5d42614-03af-47c7-8e09-185043c3ed56": {
-          "type": "image",
-          "settings": {
-            "overlay_opacity": 15,
-            "overlay_color": "#000000",
-            "title_text": "Next Lookbook",
-            "title_size": 8,
-            "text_align": "text-center tile--bottom",
-            "kicker_text": "",
-            "kicker_size": 3,
-            "link_text": "",
-            "link_url": "",
-            "link_size": 3
-          }
-        }
-      },
-      "block_order": [
-        "505a65f3-84f9-4adb-848b-a88459274d48",
-        "e5d42614-03af-47c7-8e09-185043c3ed56"
-      ],
-      "settings": {
-        "first_block_height": "short",
-        "wh_ratio": 0.5,
-        "split": "center",
-        "color_bg": "palette--light bg--neutral",
-        "width": "wrapper--full",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -538,10 +421,7 @@
     "section_richtext_pn4Uxe",
     "section_richtext_FMkDrN",
     "page-lookbook-7",
-    "page-lookbook-3",
-    "page-lookbook-8",
-    "page-lookbook-9",
-    "page-lookbook-10",
-    "page-lookbook-11"
+    "section_richtext_U7xN3c",
+    "section_collection_slider_JBximM"
   ]
 }
