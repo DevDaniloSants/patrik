@@ -246,13 +246,22 @@
       "blocks": {
         "kicker_ABVnh4": {
           "type": "kicker",
+          "disabled": true,
           "settings": {
-            "kicker": "Orvalho ao amanhecer eternizado em ouro e luz.",
+            "kicker": "",
             "enable_line": true,
             "text_size": 3
           }
         },
         "text_Gh4xXh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Orvalho ao amanhecer eternizado em ouro e luz.</p>",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        },
+        "text_yEcmgy": {
           "type": "text",
           "settings": {
             "text": "<p>Um berilo verde luminoso envolto por um halo de diamantes, como a gota delicada que repousa sobre uma folha recém-nascida.</p>",
@@ -285,6 +294,7 @@
       "block_order": [
         "kicker_ABVnh4",
         "text_Gh4xXh",
+        "text_yEcmgy",
         "button_j8ycAe"
       ],
       "settings": {
