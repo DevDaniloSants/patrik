@@ -81,12 +81,12 @@
             "kicker": "",
             "title": "",
             "richtext": "",
-            "text_align": "align--middle-center",
+            "text_align": "align--bottom-center",
             "text_color": "text--white",
-            "link_text": "",
+            "link_text": "Compre agora",
             "link": "shopify://products/anel-em-ouro-branco-18k-com-diamante-hosgor-ceyran",
             "button_color": "btn--white",
-            "button_style": "btn"
+            "button_style": "btn--outline"
           }
         }
       },
@@ -121,199 +121,6 @@
         "width": "wrapper",
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "page-lookbook-7": {
-      "type": "collection-split",
-      "name": "Conjunto Berilo",
-      "settings": {
-        "collection": "conjunto-berilo",
-        "product_list": [],
-        "image": "shopify://shop_images/Berilo_verde_brinco_e_colar.png",
-        "mobile_image": "shopify://shop_images/Berilo_verde_brinco_e_colar.png",
-        "sticky_image_enable": true,
-        "swap": false,
-        "overlay_opacity": 15,
-        "overlay_color": "#000000",
-        "kicker": "Introduzindo o conjunto",
-        "heading": "Dewdrops",
-        "text_color": "text--white",
-        "link_text": "View products",
-        "link": "",
-        "button_color": "btn--white",
-        "button_style": "btn",
-        "grid_large": 2,
-        "grid_small": 1.2,
-        "limit": 4,
-        "bg": "palette--light bg--neutral",
-        "object_position": "center-center",
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 10
-      }
-    },
-    "page-lookbook-0": {
-      "type": "section-mosaic",
-      "blocks": {
-        "template--14288112255060__page-lookbook-0-1666050591718034de-1": {
-          "type": "image",
-          "settings": {
-            "overlay_opacity": 0,
-            "overlay_color": "#000000",
-            "title_text": "",
-            "title_size": 8,
-            "text_align": "text-left tile--bottom",
-            "kicker_text": "",
-            "kicker_size": 3,
-            "link_text": "",
-            "link_url": "",
-            "link_size": 3
-          }
-        },
-        "3030db7b-d3d9-45f0-9a5b-e9ff36eace55": {
-          "type": "image",
-          "settings": {
-            "overlay_opacity": 0,
-            "overlay_color": "#000000",
-            "title_text": "",
-            "title_size": 8,
-            "text_align": "text-left tile--bottom",
-            "kicker_text": "",
-            "kicker_size": 3,
-            "link_text": "",
-            "link_url": "",
-            "link_size": 3
-          }
-        },
-        "bbc96846-6fd6-4380-9b94-f891807f1b73": {
-          "type": "image",
-          "settings": {
-            "overlay_opacity": 0,
-            "overlay_color": "#000000",
-            "title_text": "",
-            "title_size": 8,
-            "text_align": "text-left tile--bottom",
-            "kicker_text": "",
-            "kicker_size": 3,
-            "link_text": "",
-            "link_url": "",
-            "link_size": 3
-          }
-        }
-      },
-      "block_order": [
-        "template--14288112255060__page-lookbook-0-1666050591718034de-1",
-        "3030db7b-d3d9-45f0-9a5b-e9ff36eace55",
-        "bbc96846-6fd6-4380-9b94-f891807f1b73"
-      ],
-      "settings": {
-        "first_block_height": "tall",
-        "wh_ratio": 0.8,
-        "split": "center",
-        "color_bg": "palette--light bg--neutral",
-        "width": "wrapper",
-        "padding_top": 10,
-        "padding_bottom": 10
-      }
-    },
-    "page-lookbook-2": {
-      "type": "section-gallery",
-      "blocks": {
-        "page-lookbook-2-0": {
-          "type": "image",
-          "settings": {
-            "link": ""
-          }
-        },
-        "page-lookbook-2-1": {
-          "type": "image",
-          "settings": {
-            "link": ""
-          }
-        },
-        "page-lookbook-2-2": {
-          "type": "image",
-          "settings": {
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "page-lookbook-2-0",
-        "page-lookbook-2-1",
-        "page-lookbook-2-2"
-      ],
-      "settings": {
-        "scale_image": true,
-        "wh_ratio": 1,
-        "bg": "palette--light bg--neutral",
-        "add_gutters": true,
-        "progress_bar": "mobile",
-        "grid_large": 3,
-        "grid_medium": 2,
-        "grid_mobile": 1.2,
-        "width": "wrapper",
-        "padding_top": 10,
-        "padding_bottom": 10
-      }
-    },
-    "page-lookbook-3": {
-      "type": "section-collection-slider",
-      "settings": {
-        "collection": "",
-        "product_limit": 12,
-        "title": "",
-        "align_text": "title-center",
-        "progress_bar": "mobile",
-        "grid_large": 4,
-        "grid_medium": 3,
-        "grid_mobile": 1.2,
-        "bg": "palette--light bg--neutral",
-        "width": "wrapper",
-        "padding_top": 10,
-        "padding_bottom": 36
-      }
-    },
-    "page-lookbook-4": {
-      "type": "section-look",
-      "blocks": {
-        "template--14288112255060__page-lookbook-4-166605059683c691ad-0": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "position_x": 40,
-            "position_y": 20,
-            "position_x_mobile": 50,
-            "position_y_mobile": 50
-          }
-        },
-        "template--14288112255060__page-lookbook-4-166605059683c691ad-1": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "position_x": 60,
-            "position_y": 60,
-            "position_x_mobile": 50,
-            "position_y_mobile": 50
-          }
-        }
-      },
-      "block_order": [
-        "template--14288112255060__page-lookbook-4-166605059683c691ad-0",
-        "template--14288112255060__page-lookbook-4-166605059683c691ad-1"
-      ],
-      "settings": {
-        "wh_ratio": 1.7,
-        "default_open": true,
-        "dot_color": "palette--dark bg--invert",
-        "card_color": "palette--light bg--neutral",
-        "position": "look__products__holder--right",
-        "grid_small": 1.2,
-        "image_mobile_enable": false,
-        "wh_ratio_mobile": 1,
-        "width": "wrapper",
-        "padding_top": 0,
-        "padding_bottom": 0
       }
     },
     "page-lookbook-6": {
@@ -380,6 +187,52 @@
         "width": "wrapper",
         "padding_top": 20,
         "padding_bottom": 20
+      }
+    },
+    "page-lookbook-7": {
+      "type": "collection-split",
+      "name": "Conjunto Berilo - Drewdrops",
+      "settings": {
+        "collection": "conjunto-berilo",
+        "product_list": [],
+        "image": "shopify://shop_images/Berilo_verde_brinco_e_colar.png",
+        "mobile_image": "shopify://shop_images/Berilo_verde_brinco_e_colar.png",
+        "sticky_image_enable": true,
+        "swap": false,
+        "overlay_opacity": 15,
+        "overlay_color": "#000000",
+        "kicker": "Introduzindo o conjunto",
+        "heading": "Dewdrops",
+        "text_color": "text--white",
+        "link_text": "View products",
+        "link": "",
+        "button_color": "btn--white",
+        "button_style": "btn",
+        "grid_large": 2,
+        "grid_small": 1.2,
+        "limit": 4,
+        "bg": "palette--light bg--neutral",
+        "object_position": "center-center",
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 10
+      }
+    },
+    "page-lookbook-3": {
+      "type": "section-collection-slider",
+      "settings": {
+        "collection": "",
+        "product_limit": 12,
+        "title": "",
+        "align_text": "title-center",
+        "progress_bar": "mobile",
+        "grid_large": 4,
+        "grid_medium": 3,
+        "grid_mobile": 1.2,
+        "bg": "palette--light bg--neutral",
+        "width": "wrapper",
+        "padding_top": 10,
+        "padding_bottom": 36
       }
     },
     "page-lookbook-8": {
@@ -562,12 +415,9 @@
     "hero",
     "section_double_VL4mjF",
     "main",
-    "page-lookbook-7",
-    "page-lookbook-0",
-    "page-lookbook-2",
-    "page-lookbook-3",
-    "page-lookbook-4",
     "page-lookbook-6",
+    "page-lookbook-7",
+    "page-lookbook-3",
     "page-lookbook-8",
     "page-lookbook-9",
     "page-lookbook-10",
