@@ -34,7 +34,8 @@
         "heading-lookbook-block"
       ],
       "settings": {
-        "image": "shopify://shop_images/ChatGPT_Image_Feb_17_2026_10_25_11_AM_-_copia.png",
+        "image": "shopify://shop_images/Organica_page_desktop.png",
+        "mobile_image": "shopify://shop_images/Organica_page_mobile.png",
         "banner_link": "",
         "height": "use_screen_two_thirds",
         "overlay_opacity": 0,
@@ -73,6 +74,7 @@
         "image_ji9aND": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/ANL02016_3_Anel_em_Ouroo_Branco_18k_AMBIENTADO.png",
             "overlay_opacity": 15,
             "overlay_color": "#000",
             "enable_overlay_text": false,
@@ -81,8 +83,8 @@
             "richtext": "",
             "text_align": "align--middle-center",
             "text_color": "text--white",
-            "link_text": "Shop Now",
-            "link": "",
+            "link_text": "",
+            "link": "shopify://products/anel-em-ouro-branco-18k-com-diamante-hosgor-ceyran",
             "button_color": "btn--white",
             "button_style": "btn"
           }
