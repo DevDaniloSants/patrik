@@ -246,26 +246,17 @@
       "blocks": {
         "kicker_ABVnh4": {
           "type": "kicker",
-          "disabled": true,
           "settings": {
-            "kicker": "Introducing",
+            "kicker": "Orvalho ao amanhecer eternizado em ouro e luz.",
             "enable_line": true,
             "text_size": 3
-          }
-        },
-        "heading_EpaQtN": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Rich text",
-            "text_size": 7
           }
         },
         "text_Gh4xXh": {
           "type": "text",
           "settings": {
-            "text": "<p>Texto pooéticoo sobre as gotas de oorvalho</p>",
-            "text_size": 6,
+            "text": "<p>Um berilo verde luminoso envolto por um halo de diamantes, como a gota delicada que repousa sobre uma folha recém-nascida.</p>",
+            "text_size": 4,
             "text_columns": 1
           }
         },
@@ -293,7 +284,6 @@
       },
       "block_order": [
         "kicker_ABVnh4",
-        "heading_EpaQtN",
         "text_Gh4xXh",
         "button_j8ycAe"
       ],
