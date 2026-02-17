@@ -59,7 +59,7 @@
           "settings": {
             "kicker": "A beleza que surge das formas de Gaia",
             "title": "",
-            "text": "<p>A coleção ORGANICA nasce do entendimento de que toda criação humana — da arquitetura à inteligência artificial, das viagens espaciais aos algoritmos mais sofisticados — tem sua origem silenciosa na natureza.<br/>É a Terra que ensina.<br/><br/>As espirais das galáxias ecoam as conchas marinhas.<br/>Os circuitos lembram nervuras de folhas.<br/>Os fluxos de dados repetem os fluxos dos rios.<br/><br/>Nada é novo. Tudo é tradução.</p>",
+            "text": "<p>A coleção ORGANICA nasce do entendimento de que toda criação humana — da arquitetura à inteligência artificial, das viagens espaciais aos algoritmos mais sofisticados — tem sua origem silenciosa na natureza.<br/>É a Terra que ensina.<br/><br/>As espirais das galáxias ecoam as conchas marinhas.<br/>Os circuitos lembram nervuras de folhas.<br/>Os fluxos de dados repetem os fluxos dos rios.<br/><br/>Nada é novo. Tudo é tradução.</p><p>A inovação tem suas raízes na natureza.</p>",
             "font_size": 4,
             "text_columns": 1,
             "align_text": "text-left",
@@ -75,7 +75,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/ANL02016_3_Anel_em_Ouroo_Branco_18k_AMBIENTADO_folhas_-_SQUARE.png",
-            "overlay_opacity": 15,
+            "overlay_opacity": 0,
             "overlay_color": "#000000",
             "enable_overlay_text": false,
             "kicker": "",
