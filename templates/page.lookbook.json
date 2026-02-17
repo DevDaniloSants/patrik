@@ -56,6 +56,7 @@
       "blocks": {
         "text_Qc6T6j": {
           "type": "text",
+          "name": "Narrativa Coleção",
           "settings": {
             "kicker": "A beleza que surge das formas de Gaia",
             "title": "",
@@ -67,7 +68,7 @@
             "button_url": "",
             "button_color": "btn--neutral",
             "button_style": "btn-text-thick-line",
-            "text_color": "text--neutral",
+            "text_color": "text--white",
             "bg_color": ""
           }
         },
@@ -94,12 +95,12 @@
         "text_Qc6T6j",
         "image_ji9aND"
       ],
-      "name": "Image with text",
+      "name": "Narrativa Coleção",
       "settings": {
         "height": "use_screen_one_half",
         "brick_gutter": 0,
         "borders": false,
-        "bg_color": "",
+        "bg_color": "#192a26",
         "preload_image": false,
         "width": "wrapper",
         "padding_top": 36,
@@ -108,6 +109,7 @@
     },
     "main": {
       "type": "page",
+      "disabled": true,
       "settings": {
         "kicker": "",
         "kicker_size": 3,
@@ -140,15 +142,7 @@
           "disabled": true,
           "settings": {
             "heading": "Rich text",
-            "text_size": 8
-          }
-        },
-        "template--14288112255060__page-lookbook-6-166605104694452869-2": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Break up the images with a brief quote</p>",
-            "text_size": 11,
-            "text_columns": 1
+            "text_size": 7
           }
         },
         "template--14288112255060__page-lookbook-6-166605104694452869-3": {
@@ -176,17 +170,83 @@
       "block_order": [
         "template--14288112255060__page-lookbook-6-166605104694452869-0",
         "template--14288112255060__page-lookbook-6-166605104694452869-1",
-        "template--14288112255060__page-lookbook-6-166605104694452869-2",
         "template--14288112255060__page-lookbook-6-166605104694452869-3"
+      ],
+      "name": "Espaçamento",
+      "settings": {
+        "align_text": "text-center",
+        "text_color": "text--white",
+        "bg": "palette--dark bg--invert--accent",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 40,
+        "padding_bottom": 42
+      }
+    },
+    "section_richtext_FMkDrN": {
+      "type": "section-richtext",
+      "blocks": {
+        "kicker_ABVnh4": {
+          "type": "kicker",
+          "disabled": true,
+          "settings": {
+            "kicker": "Introducing",
+            "enable_line": true,
+            "text_size": 3
+          }
+        },
+        "heading_EpaQtN": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Rich text",
+            "text_size": 7
+          }
+        },
+        "text_Gh4xXh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Texto pooéticoo sobre as gotas de oorvalho</p>",
+            "text_size": 6,
+            "text_columns": 1
+          }
+        },
+        "button_j8ycAe": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "link_text_1": "Shop all",
+            "link_1": "shopify://collections/all",
+            "button_size_1": "btn--medium",
+            "button_style_1": "btn-text-thick-line",
+            "button_color_1": "btn--neutral",
+            "link_text_2": "",
+            "link_2": "",
+            "button_size_2": "btn--medium",
+            "button_style_2": "btn-text-thick-line",
+            "button_color_2": "btn--neutral",
+            "link_text_3": "",
+            "link_3": "",
+            "button_size_3": "btn--long",
+            "button_style_3": "btn-text-thick-line",
+            "button_color_3": "btn--white"
+          }
+        }
+      },
+      "block_order": [
+        "kicker_ABVnh4",
+        "heading_EpaQtN",
+        "text_Gh4xXh",
+        "button_j8ycAe"
       ],
       "settings": {
         "align_text": "text-center",
-        "text_color": "text--neutral",
-        "bg": "palette--light bg--neutral",
+        "text_color": "text--white",
+        "bg": "palette--dark bg--invert--accent",
         "content_width": 2000,
         "width": "wrapper",
-        "padding_top": 20,
-        "padding_bottom": 20
+        "padding_top": 40,
+        "padding_bottom": 42
       }
     },
     "page-lookbook-7": {
@@ -206,12 +266,12 @@
         "text_color": "text--white",
         "link_text": "View products",
         "link": "",
-        "button_color": "btn--white",
-        "button_style": "btn",
+        "button_color": "btn--primary",
+        "button_style": "btn--outline",
         "grid_large": 2,
         "grid_small": 1.2,
         "limit": 4,
-        "bg": "palette--light bg--neutral",
+        "bg": "palette--dark bg--invert--accent",
         "object_position": "center-center",
         "width": "wrapper",
         "padding_top": 36,
@@ -416,6 +476,7 @@
     "section_double_VL4mjF",
     "main",
     "page-lookbook-6",
+    "section_richtext_FMkDrN",
     "page-lookbook-7",
     "page-lookbook-3",
     "page-lookbook-8",
