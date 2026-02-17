@@ -46,7 +46,7 @@
           "type": "button",
           "settings": {
             "link_text_1": "Conheça",
-            "link_1": "shopify://collections",
+            "link_1": "shopify://pages/colecao-organica",
             "button_size_1": "btn--medium",
             "button_style_1": "btn uppercase",
             "button_color_1": "btn--white",
