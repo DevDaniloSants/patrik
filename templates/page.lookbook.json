@@ -394,6 +394,20 @@
         "padding_bottom": 42
       }
     },
+    "section_image_hBPyj3": {
+      "type": "section-image",
+      "name": "Image",
+      "settings": {
+        "image": "shopify://shop_images/diamoonds_on_basalt_rocks.png",
+        "mobile_image": "shopify://shop_images/diamoonds_on_basalt_rocks.png",
+        "max_width": 100,
+        "x_align": "center",
+        "color_bg": "palette--dark bg--invert--accent",
+        "width": "wrapper--none",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "section_collection_slider_JBximM": {
       "type": "section-collection-slider",
       "name": "Product slider",
@@ -422,6 +436,7 @@
     "section_richtext_FMkDrN",
     "page-lookbook-7",
     "section_richtext_U7xN3c",
+    "section_image_hBPyj3",
     "section_collection_slider_JBximM"
   ]
 }
