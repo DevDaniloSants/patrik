@@ -106,6 +106,54 @@
         "padding_bottom": 36
       }
     },
+    "page-lookbook-5": {
+      "type": "section-custom-content",
+      "blocks": {
+        "11c08857-43e7-4fc9-91b2-6e4b97cfa320": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Berilo_verde_brinco_e_colar.png",
+            "overlay_opacity": 5,
+            "overlay_color": "#000000",
+            "enable_overlay_text": false,
+            "kicker": "",
+            "title": "",
+            "richtext": "",
+            "text_align": "align--middle-center",
+            "text_color": "text--white",
+            "link_text": "",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "btn"
+          }
+        },
+        "8c819451-502c-498c-928e-434ef1d29696": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "kicker": "",
+            "align_text": "text-center",
+            "text_color": "text--neutral",
+            "bg_color": "#f7f7f7",
+            "bg_accent": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "11c08857-43e7-4fc9-91b2-6e4b97cfa320",
+        "8c819451-502c-498c-928e-434ef1d29696"
+      ],
+      "settings": {
+        "height": "use_screen_two_thirds",
+        "brick_gutter": 0,
+        "borders": false,
+        "bg_color": "",
+        "preload_image": false,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "main": {
       "type": "page",
       "settings": {
@@ -121,6 +169,33 @@
         "width": "wrapper",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "page-lookbook-1": {
+      "type": "collection-split",
+      "settings": {
+        "collection": "",
+        "product_list": [],
+        "image": "shopify://shop_images/Berilo_verde_brinco_e_colar.png",
+        "sticky_image_enable": true,
+        "swap": false,
+        "overlay_opacity": 5,
+        "overlay_color": "#000000",
+        "kicker": "Introducing",
+        "heading": "Featured products",
+        "text_color": "text--neutral",
+        "link_text": "View products",
+        "link": "",
+        "button_color": "btn--white",
+        "button_style": "btn",
+        "grid_large": 2,
+        "grid_small": 1.2,
+        "limit": 2,
+        "bg": "palette--light bg--neutral",
+        "object_position": "center-center",
+        "width": "wrapper",
+        "padding_top": 10,
+        "padding_bottom": 10
       }
     },
     "page-lookbook-0": {
@@ -182,32 +257,6 @@
         "wh_ratio": 0.8,
         "split": "center",
         "color_bg": "palette--light bg--neutral",
-        "width": "wrapper",
-        "padding_top": 10,
-        "padding_bottom": 10
-      }
-    },
-    "page-lookbook-1": {
-      "type": "collection-split",
-      "settings": {
-        "collection": "",
-        "product_list": [],
-        "sticky_image_enable": true,
-        "swap": false,
-        "overlay_opacity": 5,
-        "overlay_color": "#000000",
-        "kicker": "Introducing",
-        "heading": "Featured products",
-        "text_color": "text--neutral",
-        "link_text": "View products",
-        "link": "",
-        "button_color": "btn--white",
-        "button_style": "btn",
-        "grid_large": 2,
-        "grid_small": 1.2,
-        "limit": 2,
-        "bg": "palette--light bg--neutral",
-        "object_position": "center-center",
         "width": "wrapper",
         "padding_top": 10,
         "padding_bottom": 10
@@ -311,53 +360,6 @@
         "width": "wrapper",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "page-lookbook-5": {
-      "type": "section-custom-content",
-      "blocks": {
-        "11c08857-43e7-4fc9-91b2-6e4b97cfa320": {
-          "type": "image",
-          "settings": {
-            "overlay_opacity": 5,
-            "overlay_color": "#000000",
-            "enable_overlay_text": false,
-            "kicker": "",
-            "title": "",
-            "richtext": "",
-            "text_align": "align--middle-center",
-            "text_color": "text--white",
-            "link_text": "",
-            "link": "",
-            "button_color": "btn--white",
-            "button_style": "btn"
-          }
-        },
-        "8c819451-502c-498c-928e-434ef1d29696": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "kicker": "Shop the look",
-            "align_text": "text-center",
-            "text_color": "text--neutral",
-            "bg_color": "#f7f7f7",
-            "bg_accent": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "11c08857-43e7-4fc9-91b2-6e4b97cfa320",
-        "8c819451-502c-498c-928e-434ef1d29696"
-      ],
-      "settings": {
-        "height": "use_screen_one_half",
-        "brick_gutter": 0,
-        "borders": false,
-        "bg_color": "",
-        "preload_image": false,
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "page-lookbook-6": {
@@ -631,13 +633,13 @@
   "order": [
     "hero",
     "section_double_VL4mjF",
+    "page-lookbook-5",
     "main",
-    "page-lookbook-0",
     "page-lookbook-1",
+    "page-lookbook-0",
     "page-lookbook-2",
     "page-lookbook-3",
     "page-lookbook-4",
-    "page-lookbook-5",
     "page-lookbook-6",
     "page-lookbook-7",
     "page-lookbook-8",
