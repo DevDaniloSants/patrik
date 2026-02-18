@@ -140,7 +140,7 @@
           "settings": {
             "enable_image": true,
             "image": "shopify://shop_images/BRN02148_3_categ_Brincos_1000x1000_1246c222-0db7-48d4-8e19-4fc8f8e5269e.png",
-            "shape_class": "rounded-lg",
+            "shape_class": "",
             "title": "Brincos",
             "text": "",
             "button_label": "",
