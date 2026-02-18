@@ -489,7 +489,7 @@
             "title_disabled": true,
             "bottom_text": "Jóias para Noivado",
             "bottom_text_disabled": false,
-            "collection_url": "",
+            "collection_url": "/pages/noivado",
             "text_color": "text--white"
           }
         },
@@ -507,7 +507,7 @@
             "title_disabled": true,
             "bottom_text": "Jóias para Casamento",
             "bottom_text_disabled": false,
-            "collection_url": "",
+            "collection_url": "/pages/casamento",
             "text_color": "text--white"
           }
         }
