@@ -156,7 +156,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Categoria_Colar.png",
+            "image": "shopify://shop_images/CLR01430_3_Categ_Colar_1000x1000_1c1cb9ff-33c0-493c-9cc0-bce786dc2092.png",
             "shape_class": "rounded-lg",
             "title": "Colares",
             "text": "",
@@ -213,7 +213,7 @@
       ],
       "name": "Categorias - Gallery Slider",
       "settings": {
-        "title": "Conheça nossas jóias por categoria",
+        "title": "Descubra a Patrik por categoria",
         "bg": "palette--dark bg--invert--accent",
         "align_text": "text-center",
         "scale_image": false,
