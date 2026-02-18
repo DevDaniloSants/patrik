@@ -122,8 +122,8 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/ANL02085_3._Categ._Aneis_V3.png",
-            "shape_class": "",
+            "image": "shopify://shop_images/Categorias-Anel_PATRIK-v7.png",
+            "shape_class": "rounded-lg",
             "title": "Anéis",
             "text": "",
             "button_label": "",
@@ -139,8 +139,8 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/BRN02148_3_categ_Brincos_1000x1000_1246c222-0db7-48d4-8e19-4fc8f8e5269e.png",
-            "shape_class": "",
+            "image": "shopify://shop_images/Categorias-_Brinco_PATRIK-v7.png",
+            "shape_class": "rounded-lg",
             "title": "Brincos",
             "text": "",
             "button_label": "",
