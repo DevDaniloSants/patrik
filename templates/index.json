@@ -213,7 +213,7 @@
       ],
       "name": "Categorias - Gallery Slider",
       "settings": {
-        "title": "",
+        "title": "Categorias",
         "bg": "palette--dark bg--invert--accent",
         "align_text": "text-center",
         "scale_image": false,
