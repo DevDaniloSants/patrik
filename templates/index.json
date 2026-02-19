@@ -540,6 +540,18 @@
         "padding_bottom": 36
       }
     },
+    "section_image_neGRcR": {
+      "type": "section-image",
+      "name": "Image",
+      "settings": {
+        "max_width": 100,
+        "x_align": "center",
+        "color_bg": "palette--light bg--neutral",
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "section_columns_X6EhLY": {
       "type": "section-columns",
       "blocks": {
@@ -726,8 +738,8 @@
             "enable_image": true,
             "image": "shopify://shop_images/Captura_de_Tela_2025-12-24_as_17.36.21.png",
             "shape_class": "",
-            "title": "ASSESSORIA DE ESPECIALISTA",
-            "text": "<p>Nossos especialistas estão sempre disponíveis para assessorar a sua escolha. Nosso time está preparado para as melhores recomendações, a fim de que sua jóia seja perfeita para o momento a ser celebrado.</p>",
+            "title": "Assessoria de Especialista",
+            "text": "<p>Nossos especialistas está disponível online e preparado para as melhores recomendações, a fim de que sua jóia seja perfeita para o momento a ser celebrado.</p>",
             "button_label": "",
             "button_link": "",
             "button_color": "btn--neutral",
@@ -762,8 +774,8 @@
       ],
       "name": "Experiência Patrik",
       "settings": {
-        "title": "OFERECEMOS A MELHOR EXPERIÊNCIA",
-        "bg": "palette--light bg--neutral",
+        "title": "Desfrute da experiência Patrik",
+        "bg": "palette--dark bg--invert--accent",
         "align_text": "text-center",
         "scale_image": true,
         "wh_ratio": 1,
@@ -902,6 +914,7 @@
         "logo_image_HC8NAt",
         "logo_image_yNNpRQ"
       ],
+      "disabled": true,
       "name": "Lista de GEMAS",
       "settings": {
         "title": "OFERECEMOS AS MELHORES PEDRAS",
@@ -1011,6 +1024,7 @@
           "block_order": []
         }
       },
+      "disabled": true,
       "custom_css": [
         ".custom-scrollbar.small-down--show {display: none !important;}",
         ".hero__kicker.accent-size-4.block__kicker--flourished {color: #d4d6d0 !important;}"
@@ -1085,6 +1099,7 @@
         "image_fXNaUh",
         "image_7Tfwff"
       ],
+      "disabled": true,
       "name": "Mosaic",
       "settings": {
         "first_block_height": "short",
@@ -1157,6 +1172,7 @@
         "text_ngJfeL",
         "button_jXCpwB"
       ],
+      "disabled": true,
       "name": "Hero",
       "settings": {
         "image": "shopify://shop_images/Imagem_banner_home.png",
@@ -1219,6 +1235,7 @@
         "text_HqTpwA",
         "button_bhUYPT"
       ],
+      "disabled": true,
       "name": "Video banner",
       "settings": {
         "height": "use_screen_three_quarters",
@@ -1283,14 +1300,14 @@
       "name": "Icon columns",
       "settings": {
         "title": "",
-        "bg": "palette--light bg--neutral",
+        "bg": "palette--dark bg--invert",
         "icons_size": 30,
         "icon_alignment": "icon--top",
         "layout": "grid--stacked",
         "align_text": "text-center",
         "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 50,
+        "padding_bottom": 50
       }
     }
   },
@@ -1304,6 +1321,7 @@
     "section_hero_UhTiib",
     "section_list_collections_ftJBTL",
     "section_richtext_q8gnYc",
+    "section_image_neGRcR",
     "section_columns_X6EhLY",
     "section_richtext_Mijpwb",
     "section_richtext_RTzH8K",
