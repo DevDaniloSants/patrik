@@ -542,6 +542,7 @@
     },
     "section_image_neGRcR": {
       "type": "section-image",
+      "disabled": true,
       "name": "Image",
       "settings": {
         "image": "shopify://shop_images/Collection_Vitral_desktop_2.png",
@@ -552,6 +553,86 @@
         "width": "wrapper",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "section_hero_eV6Yh3": {
+      "type": "section-hero",
+      "blocks": {
+        "kicker_qNGL9L": {
+          "type": "kicker",
+          "settings": {
+            "kicker": "Conheça a coleção",
+            "enable_line": false,
+            "text_size": 3
+          }
+        },
+        "spacer_BdxNTy": {
+          "type": "spacer",
+          "settings": {
+            "spacer_padding": 10,
+            "show_line": false
+          }
+        },
+        "heading_9iQjEq": {
+          "type": "heading",
+          "settings": {
+            "title": "Vitral",
+            "text_size": 11
+          }
+        },
+        "text_ngJfeL": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "richtext": "<p>Fresher than a bubble bath, cleaner than a network tv show</p>",
+            "text_size": 6
+          }
+        },
+        "button_jXCpwB": {
+          "type": "button",
+          "settings": {
+            "link_text_1": "Shop now",
+            "link_1": "shopify://collections",
+            "button_size_1": "btn--medium",
+            "button_style_1": "btn uppercase",
+            "button_color_1": "btn--white",
+            "link_text_2": "",
+            "link_2": "",
+            "button_size_2": "btn--long",
+            "button_style_2": "btn-text-thick-line",
+            "button_color_2": "btn--white",
+            "link_text_3": "",
+            "link_3": "",
+            "button_size_3": "btn--long",
+            "button_style_3": "caps--link",
+            "button_color_3": "btn--white"
+          }
+        }
+      },
+      "block_order": [
+        "kicker_qNGL9L",
+        "spacer_BdxNTy",
+        "heading_9iQjEq",
+        "text_ngJfeL",
+        "button_jXCpwB"
+      ],
+      "name": "Hero",
+      "settings": {
+        "image": "shopify://shop_images/Collection_Vitral_desktop_2.png",
+        "mobile_image": "shopify://shop_images/Collection_Vitral_mobile_2.png",
+        "banner_link": "shopify://collections",
+        "height": "use_screen_one_fifth",
+        "overlay_opacity": 0,
+        "overlay_color": "#3c190b",
+        "enable_overlay_text": false,
+        "preload_image": true,
+        "content_width": 2000,
+        "text_align": "align--bottom-left",
+        "text_color": "text--white",
+        "color_bg": "hero__content--transparent",
+        "width": "wrapper--none",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "section_richtext_LbFBAr": {
@@ -1165,10 +1246,10 @@
         "padding_bottom": 36
       }
     },
-    "section_hero_eV6Yh3": {
+    "section_hero_p3denR": {
       "type": "section-hero",
       "blocks": {
-        "kicker_qNGL9L": {
+        "kicker_CxT8bF": {
           "type": "kicker",
           "settings": {
             "kicker": "Conheça a coleção",
@@ -1176,21 +1257,21 @@
             "text_size": 3
           }
         },
-        "spacer_BdxNTy": {
+        "spacer_qDdxkL": {
           "type": "spacer",
           "settings": {
             "spacer_padding": 10,
             "show_line": false
           }
         },
-        "heading_9iQjEq": {
+        "heading_cztbWd": {
           "type": "heading",
           "settings": {
             "title": "Coleção Resort",
             "text_size": 11
           }
         },
-        "text_ngJfeL": {
+        "text_xqB94U": {
           "type": "text",
           "disabled": true,
           "settings": {
@@ -1198,7 +1279,7 @@
             "text_size": 6
           }
         },
-        "button_jXCpwB": {
+        "button_NTGxKT": {
           "type": "button",
           "settings": {
             "link_text_1": "Shop now",
@@ -1220,11 +1301,11 @@
         }
       },
       "block_order": [
-        "kicker_qNGL9L",
-        "spacer_BdxNTy",
-        "heading_9iQjEq",
-        "text_ngJfeL",
-        "button_jXCpwB"
+        "kicker_CxT8bF",
+        "spacer_qDdxkL",
+        "heading_cztbWd",
+        "text_xqB94U",
+        "button_NTGxKT"
       ],
       "disabled": true,
       "name": "Hero",
@@ -1376,6 +1457,7 @@
     "section_list_collections_ftJBTL",
     "section_richtext_q8gnYc",
     "section_image_neGRcR",
+    "section_hero_eV6Yh3",
     "section_richtext_LbFBAr",
     "section_richtext_jRYTUM",
     "section_columns_X6EhLY",
@@ -1386,7 +1468,7 @@
     "section_logos_Cd4AwJ",
     "section_pair_hotspots_showcase_RGxViq",
     "section_mosaic_FgTQfb",
-    "section_hero_eV6Yh3",
+    "section_hero_p3denR",
     "section_video_ykPNyn",
     "section_icons_Fcggry"
   ]
