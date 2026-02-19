@@ -544,11 +544,63 @@
       "type": "section-image",
       "name": "Image",
       "settings": {
-        "image": "shopify://shop_images/Collectioon_Vitral.png",
+        "image": "shopify://shop_images/Collection_Vitral_desktop_2.png",
         "mobile_image": "shopify://shop_images/Collection_Vitral_mobile_2.png",
         "max_width": 100,
         "x_align": "center",
         "color_bg": "palette--dark bg--invert--accent",
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_richtext_LbFBAr": {
+      "type": "section-richtext",
+      "blocks": {
+        "text_PR9jaj": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        }
+      },
+      "block_order": [
+        "text_PR9jaj"
+      ],
+      "name": "Espaçamento",
+      "settings": {
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "palette--dark bg--invert--accent",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_richtext_jRYTUM": {
+      "type": "section-richtext",
+      "blocks": {
+        "text_jcWwEX": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        }
+      },
+      "block_order": [
+        "text_jcWwEX"
+      ],
+      "name": "Espaçamento",
+      "settings": {
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "palette--dark bg--invert--accent",
+        "content_width": 2000,
         "width": "wrapper",
         "padding_top": 36,
         "padding_bottom": 36
@@ -1324,6 +1376,8 @@
     "section_list_collections_ftJBTL",
     "section_richtext_q8gnYc",
     "section_image_neGRcR",
+    "section_richtext_LbFBAr",
+    "section_richtext_jRYTUM",
     "section_columns_X6EhLY",
     "section_richtext_Mijpwb",
     "section_richtext_RTzH8K",
