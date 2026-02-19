@@ -544,8 +544,8 @@
       "type": "section-image",
       "name": "Image",
       "settings": {
-        "image": "shopify://shop_images/Colecao_Vitral.png",
-        "mobile_image": "shopify://shop_images/Colecao_Vitral.png",
+        "image": "shopify://shop_images/Collectioon_Vitral.png",
+        "mobile_image": "shopify://shop_images/Collection_Vitral_mobile_2.png",
         "max_width": 100,
         "x_align": "center",
         "color_bg": "palette--dark bg--invert--accent",
