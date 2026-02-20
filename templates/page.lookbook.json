@@ -309,7 +309,7 @@
     },
     "page-lookbook-7": {
       "type": "collection-split",
-      "name": "Conjunto Berilo - Drewdrops",
+      "name": "Conjunto Berilo - Drewdrops - Products with image",
       "settings": {
         "collection": "conjunto-berilo",
         "product_list": [],
@@ -574,6 +574,85 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "section_collection_gUiQKm": {
+      "type": "section-collection",
+      "name": "Product grid",
+      "settings": {
+        "title": "Featured Products",
+        "collection": "organica-diamantes",
+        "grid": 3,
+        "rows": 1,
+        "grid_mobile": "2",
+        "bg": "palette--light bg--neutral",
+        "show_view_all": false,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_collection_tabs_QNBKTq": {
+      "type": "section-collection-tabs",
+      "blocks": {
+        "collection_7aqP7X": {
+          "type": "collection",
+          "settings": {
+            "collection": "aneis",
+            "title": "First collection"
+          }
+        },
+        "collection_XkaGdf": {
+          "type": "collection",
+          "settings": {
+            "collection": "brinco",
+            "title": "Second collection"
+          }
+        }
+      },
+      "block_order": [
+        "collection_7aqP7X",
+        "collection_XkaGdf"
+      ],
+      "name": "Product slider tabs",
+      "settings": {
+        "title": "Featured products",
+        "progress_bar": "mobile",
+        "grid_large": 4,
+        "grid_medium": 3,
+        "grid_mobile": 1.2,
+        "limit": 6,
+        "bg": "palette--light bg--neutral",
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collection_split_P4NgPn": {
+      "type": "collection-split",
+      "name": "Products with image",
+      "settings": {
+        "collection": "",
+        "product_list": [],
+        "sticky_image_enable": true,
+        "swap": false,
+        "overlay_opacity": 15,
+        "overlay_color": "#000000",
+        "kicker": "Introducing",
+        "heading": "Featured products",
+        "text_color": "text--white",
+        "link_text": "View products",
+        "link": "",
+        "button_color": "btn--white",
+        "button_style": "btn",
+        "grid_large": 2,
+        "grid_small": 1.2,
+        "limit": 10,
+        "bg": "palette--light bg--neutral",
+        "object_position": "center-center",
+        "width": "wrapper--none",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -588,6 +667,9 @@
     "section_image_hBPyj3",
     "section_collection_slider_JBximM",
     "section_list_collections_products_E96FV9",
-    "section_pair_hotspots_showcase_HkVhWL"
+    "section_pair_hotspots_showcase_HkVhWL",
+    "section_collection_gUiQKm",
+    "section_collection_tabs_QNBKTq",
+    "collection_split_P4NgPn"
   ]
 }
