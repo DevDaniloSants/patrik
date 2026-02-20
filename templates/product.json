@@ -198,6 +198,41 @@
         "padding_bottom": 36
       }
     },
+    "section_richtext_tnYiLL": {
+      "type": "section-richtext",
+      "blocks": {
+        "text_XtGtgY": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        },
+        "text_8LVpg4": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        }
+      },
+      "block_order": [
+        "text_XtGtgY",
+        "text_8LVpg4"
+      ],
+      "name": "Espaçamento - Rich text",
+      "settings": {
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "palette--dark bg--invert--accent",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "section_double_LMg3p9": {
       "type": "section-double",
       "blocks": {
@@ -213,7 +248,7 @@
             "button_text": "FALE COM UM ESPECIALISTA NO CHAT",
             "button_url": "",
             "button_color": "btn--primary",
-            "button_style": "btn btn--long",
+            "button_style": "btn--outline btn--long",
             "text_color": "text--white",
             "bg_color": ""
           }
@@ -251,41 +286,6 @@
         "borders": false,
         "bg_color": "#142b26",
         "preload_image": false,
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "section_richtext_tnYiLL": {
-      "type": "section-richtext",
-      "blocks": {
-        "text_XtGtgY": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_size": 4,
-            "text_columns": 1
-          }
-        },
-        "text_8LVpg4": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_size": 4,
-            "text_columns": 1
-          }
-        }
-      },
-      "block_order": [
-        "text_XtGtgY",
-        "text_8LVpg4"
-      ],
-      "name": "Espaçamento - Rich text",
-      "settings": {
-        "align_text": "text-left",
-        "text_color": "text--neutral",
-        "bg": "palette--dark bg--invert--accent",
-        "content_width": 2000,
         "width": "wrapper",
         "padding_top": 36,
         "padding_bottom": 36
