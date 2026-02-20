@@ -613,6 +613,41 @@
         "padding_top": 80,
         "padding_bottom": 80
       }
+    },
+    "section_richtext_EpCULc": {
+      "type": "section-richtext",
+      "blocks": {
+        "text_rtbKLf": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        },
+        "text_PHEBY4": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        }
+      },
+      "block_order": [
+        "text_rtbKLf",
+        "text_PHEBY4"
+      ],
+      "name": "Espaçamento - Rich text",
+      "settings": {
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "palette--light bg--neutral",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -625,6 +660,7 @@
     "section_double_44RwtT",
     "section_double_RtygiW",
     "section_richtext_6YQAyd",
-    "related"
+    "related",
+    "section_richtext_EpCULc"
   ]
 }
