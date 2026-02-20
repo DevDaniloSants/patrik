@@ -256,6 +256,76 @@
         "padding_bottom": 36
       }
     },
+    "section_richtext_tnYiLL": {
+      "type": "section-richtext",
+      "blocks": {
+        "text_XtGtgY": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        },
+        "text_8LVpg4": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        }
+      },
+      "block_order": [
+        "text_XtGtgY",
+        "text_8LVpg4"
+      ],
+      "name": "Espaçamento - Rich text",
+      "settings": {
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "palette--dark bg--invert--accent",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_richtext_nxceCr": {
+      "type": "section-richtext",
+      "blocks": {
+        "text_ghwGWA": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        },
+        "text_bDeyJC": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        }
+      },
+      "block_order": [
+        "text_ghwGWA",
+        "text_bDeyJC"
+      ],
+      "name": "Espaçamento - Rich text",
+      "settings": {
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "palette--dark bg--invert--accent",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "section_pair_before_after_j4gCcV": {
       "type": "section-pair-before-after",
       "blocks": {
@@ -342,6 +412,41 @@
         "width": "wrapper",
         "padding_top": 0,
         "padding_bottom": 20
+      }
+    },
+    "section_richtext_zQiRDP": {
+      "type": "section-richtext",
+      "blocks": {
+        "text_kBhe7Y": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        },
+        "text_rVbeLQ": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        }
+      },
+      "block_order": [
+        "text_kBhe7Y",
+        "text_rVbeLQ"
+      ],
+      "name": "Espaçamento - Rich text",
+      "settings": {
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "palette--dark bg--invert--accent",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "section_double_44RwtT": {
@@ -454,30 +559,37 @@
         "padding_bottom": 36
       }
     },
-    "section_gallery_text_fprimA": {
-      "type": "section-gallery-text",
+    "section_richtext_6YQAyd": {
+      "type": "section-richtext",
       "blocks": {
-        "text_MAEqjD": {
+        "text_9XEX7N": {
           "type": "text",
           "settings": {
-            "title": "",
-            "title_size": 3,
             "text": "",
-            "body_size": 4,
-            "text_align": "text-left"
+            "text_size": 4,
+            "text_columns": 1
+          }
+        },
+        "text_3h38qT": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
           }
         }
       },
       "block_order": [
-        "text_MAEqjD"
+        "text_9XEX7N",
+        "text_3h38qT"
       ],
-      "name": "Gallery text",
+      "name": "Espaçamento - Rich text",
       "settings": {
+        "align_text": "text-left",
+        "text_color": "text--neutral",
         "bg": "palette--dark bg--invert--accent",
-        "grid_large": 1,
-        "grid_medium": 1,
-        "grid_mobile": 1,
-        "width": "wrapper--full",
+        "content_width": 2000,
+        "width": "wrapper",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -505,11 +617,14 @@
   },
   "order": [
     "main",
+    "section_richtext_tnYiLL",
     "section_double_LMg3p9",
+    "section_richtext_nxceCr",
     "section_pair_before_after_j4gCcV",
+    "section_richtext_zQiRDP",
     "section_double_44RwtT",
     "section_double_RtygiW",
-    "section_gallery_text_fprimA",
+    "section_richtext_6YQAyd",
     "related"
   ]
 }
