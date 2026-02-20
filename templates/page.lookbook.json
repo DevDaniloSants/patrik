@@ -627,31 +627,49 @@
         "padding_bottom": 36
       }
     },
-    "collection_split_P4NgPn": {
-      "type": "collection-split",
-      "name": "Products with image",
+    "section_look_RzWU8x": {
+      "type": "section-look",
+      "blocks": {
+        "product_F8mbMz": {
+          "type": "product",
+          "settings": {
+            "product": "brinco-argola-aquarela-em-ouro-18k-com-topazio-peridoto-citrino-e-brilhantes",
+            "position_x": 40,
+            "position_y": 20,
+            "position_x_mobile": 50,
+            "position_y_mobile": 50
+          }
+        },
+        "product_4TaFN3": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "position_x": 60,
+            "position_y": 60,
+            "position_x_mobile": 50,
+            "position_y_mobile": 50
+          }
+        }
+      },
+      "block_order": [
+        "product_F8mbMz",
+        "product_4TaFN3"
+      ],
+      "name": "Shop the look",
       "settings": {
-        "collection": "",
-        "product_list": [],
-        "sticky_image_enable": true,
-        "swap": false,
-        "overlay_opacity": 15,
-        "overlay_color": "#000000",
-        "kicker": "Introducing",
-        "heading": "Featured products",
-        "text_color": "text--white",
-        "link_text": "View products",
-        "link": "",
-        "button_color": "btn--white",
-        "button_style": "btn",
-        "grid_large": 2,
+        "image": "shopify://shop_images/Collection_Vitral_desktop_3.png",
+        "wh_ratio": 1.7,
+        "default_open": true,
+        "dot_color": "palette--dark bg--invert",
+        "card_color": "palette--light bg--neutral",
+        "position": "look__products__holder--right",
         "grid_small": 1.2,
-        "limit": 10,
-        "bg": "palette--light bg--neutral",
-        "object_position": "center-center",
+        "image_mobile_enable": false,
+        "image_mobile": "shopify://shop_images/Collection_Vitral_desktop_3.png",
+        "wh_ratio_mobile": 1,
         "width": "wrapper--none",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
@@ -670,6 +688,6 @@
     "section_pair_hotspots_showcase_HkVhWL",
     "section_collection_gUiQKm",
     "section_collection_tabs_QNBKTq",
-    "collection_split_P4NgPn"
+    "section_look_RzWU8x"
   ]
 }
