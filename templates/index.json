@@ -621,7 +621,7 @@
         "image": "shopify://shop_images/Collection_Vitral_desktop_3.png",
         "mobile_image": "shopify://shop_images/Collection_Vitral_mobile_2.png",
         "banner_link": "shopify://collections",
-        "height": "use_screen_two_thirds",
+        "height": "use_screen_full",
         "overlay_opacity": 0,
         "overlay_color": "#3c190b",
         "enable_overlay_text": false,
