@@ -618,10 +618,10 @@
       ],
       "name": "Hero",
       "settings": {
-        "image": "shopify://shop_images/Collectioon_Vitral.png",
+        "image": "shopify://shop_images/Collection_Vitral_desktop_3.png",
         "mobile_image": "shopify://shop_images/Collection_Vitral_mobile_2.png",
         "banner_link": "shopify://collections",
-        "height": "use_screen_one_half",
+        "height": "use_screen_two_thirds",
         "overlay_opacity": 0,
         "overlay_color": "#3c190b",
         "enable_overlay_text": false,
