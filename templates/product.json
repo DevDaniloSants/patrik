@@ -245,9 +245,9 @@
             "font_size": 4,
             "text_columns": 1,
             "align_text": "text-center",
-            "button_text": "FALE COM UM ESPECIALISTA NO CHAT",
+            "button_text": "CHAT COM ESPECIALISTA",
             "button_url": "",
-            "button_color": "btn--primary",
+            "button_color": "btn--white",
             "button_style": "btn--outline btn--long",
             "text_color": "text--white",
             "bg_color": ""
