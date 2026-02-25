@@ -67,46 +67,49 @@
   {%- if show_image == false or title_below or description_below -%}
     {% unless title_below == false and description_below and section.settings.show_description and collection.description == blank %}
       <div style="--PT: {{ section.settings.padding_top_text | divided_by: 2 }}px; --PB: {{ section.settings.padding_top_text | divided_by: 2 }}px;">
-        <div class="collection__text-content {{ section.settings.width_text }} section-padding">
+        <div class="collection__text-content {{ section.settings.width_text }} section-padding max-w-[1200px]!">
           <div class="collection__heading {{ section.settings.text_align }}">
             {%- if title_below and section.settings.show_title -%}
-              <div class="flex flex-wrap items-center justify-between gap-4 w-full">
+              <div class="flex flex-wrap items-center justify-between gap-4 w-full mx-auto!">
                 <div
-                  class="relative group flex items-center z-20"
+                  class="relative flex items-center z-20 parent collection-hero-dropdown-wrapper"
                   tabindex="-1"
-                  onblur="if(!this.contains(event.relatedTarget)){this.querySelector('.mobile-collection-dropdown').classList.add('hidden')}">
-                  <h1 class="standard__heading heading-size-8 collection__heading__text flex items-center gap-2 cursor-pointer !m-0" onclick="this.parentElement.querySelector('.mobile-collection-dropdown').classList.toggle('hidden')">
+                  onblur="if(!this.contains(event.relatedTarget)){this.querySelector('.header__dropdown').classList.remove('is-visible')}">
+                  <h1 class="standard__heading text-[14px]! uppercase tracking-widest collection__heading__text flex items-center gap-2 cursor-pointer !m-0" onclick="this.parentElement.querySelector('.header__dropdown').classList.toggle('is-visible')">
                     {{ collection.title }}
                     {% render 'icon-core-chevron-down' %}
                   </h1>
 
-                  <!-- Mobile Custom Dropdown -->
-                  <div class="mobile-collection-dropdown hidden md:hidden absolute top-full left-0 mt-2 min-w-[240px] w-max max-w-[90vw] bg-white shadow-xl rounded-sm z-50 border border-gray-100 max-h-[60vh] overflow-y-auto">
-                    <div class="flex flex-col">
-                      <div class="px-5 py-4 bg-gray-50 font-bold text-sm text-black flex items-center justify-between border-l-4 border-black">
-                        <span class="uppercase tracking-widest">{{ collection.title }}</span>
-                      </div>
-                      {%- assign sorted_collections = collections | sort: 'title' -%}
-                      {%- for col in sorted_collections -%}
-                        {%- unless col.handle == collection.handle -%}
-                          <a href="{{ col.url }}" class="px-5 py-4 text-sm text-gray-600 hover:text-black hover:bg-gray-50 border-l-4 border-transparent hover:border-gray-200 transition-colors uppercase tracking-widest">
-                            {{ col.title }}
+                  <!-- Cross-platform Custom Dropdown Mimicking Header Dropdown -->
+                  <style>
+                    .collection-hero-dropdown-wrapper .header__dropdown {
+                      display: block;
+                      top: calc(100% + 15px);
+                      left: -15px;
+                      width: max-content;
+                      transition: opacity 0.2s ease-out;
+                      padding: 6px 32px 18px;
+                    }
+                  </style>
+                  <div class="custom-dropdown-menu header__dropdown absolute z-50 text-left">
+                    <div class="header__dropdown__wrapper">
+                      <div class="header__dropdown__inner">
+                        <div class="dropdown__family dropdown__family--child">
+                          <a href="{{ collection.url }}" class="navlink navlink--child highlight--link block w-full px-[15px] py-[5px]">
+                            <span class="navtext text-center!">{{ collection.title }}</span>
                           </a>
-                        {%- endunless -%}
-                      {%- endfor -%}
+                          {%- assign sorted_collections = collections | sort: 'title' -%}
+                          {%- for col in sorted_collections -%}
+                            {%- unless col.handle == collection.handle -%}
+                              <a href="{{ col.url }}" class="navlink navlink--child block w-full px-[15px] py-[5px]">
+                                <span class="navtext text-center!">{{ col.title }}</span>
+                              </a>
+                            {%- endunless -%}
+                          {%- endfor -%}
+                        </div>
+                      </div>
                     </div>
                   </div>
-
-                  <!-- Desktop Native Select (Hidden on Mobile) -->
-                  <select class="hidden md:block absolute inset-0 w-full h-full opacity-0 cursor-pointer appearance-none" onchange="window.location.href=this.value">
-                    <option value="{{ collection.url }}" selected>{{ collection.title }}</option>
-                    {%- assign sorted_collections = collections | sort: 'title' -%}
-                    {%- for col in sorted_collections -%}
-                      {%- unless col.handle == collection.handle -%}
-                        <option value="{{ col.url }}">{{ col.title }}</option>
-                      {%- endunless -%}
-                    {%- endfor -%}
-                  </select>
                 </div>
 
                 <div class="collection-hero__filters">
@@ -120,8 +123,8 @@
                     {%- endif -%}
                   {% endcapture %}
                   <button class="collection__filters__toggle !rounded-full !border !border-black !py-2 !px-6" data-filters-toggle="filters">
-                    <span class="hide-filters !text-black">{{ 'collections.sidebar.filter' | t }}</span>
-                    <span class="show-filters !text-black">{{ 'collections.sidebar.filter' | t }}</span>
+                    <span class="hide-filters !text-black text-[14px]!">{{ 'collections.sidebar.filter' | t }}</span>
+                    <span class="show-filters !text-black text-[14px]!">{{ 'collections.sidebar.filter' | t }}</span>
                     <span data-active-filters-count>{{ current_filters_count }}</span>
                     {% render 'icon-core-filter' %}
                   </button>

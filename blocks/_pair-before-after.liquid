@@ -1,14 +1,46 @@
 <!-- blocks/_pair-before-after.liquid -->
 
+{%- liquid
+  assign p_material = product.metafields.shopify['jewelry-material'] | default: product.metafields.custom['shopify--jewelry-material']
+  
+  assign product_material_text = p_material | json | downcase
+  assign target_material = block.settings.target_material | downcase | strip
+  assign show_block = true
+
+  if target_material != blank
+    if product_material_text contains target_material
+      assign show_block = true
+    else
+      assign show_block = false
+    endif
+  endif
+-%}
+
+{%- if show_block or request.design_mode -%}
 <div class="relative brick__block" data-overflow-frame {{ block.shopify_attributes }}>
   {% render 'core-before-after', class: 'h-full', _settings: block.settings %}
+
+  {%- if show_block == false and request.design_mode -%}
+    <div class="absolute inset-0 flex items-center justify-center p-4 z-50 pointer-events-none" style="background: rgba(0,0,0,0.7);">
+      <div class="bg-black text-white p-3 text-xs w-full text-center border border-white/20">
+        Este bloco de Antes/Depois ficará OCULTO na loja porque o produto não tem "{{ block.settings.target_material }}" no material.<br>
+      </div>
+    </div>
+  {%- endif -%}
 </div>
+{%- endif -%}
 
 {% schema %}
 {
 	"name": "Before/After",
 	"tag": null,
 	"settings": [
+		{
+			"type": "text",
+			"id": "target_material",
+			"label": "Condição: Material Específico",
+			"info": "Puxa do metacampo 'shopify--jewelry-material'. Deixe vazio para mostrar sempre. Ex: 'Ouro', 'Prata'."
+		},
 		{
 			"type": "image_picker",
 			"id": "after_image",

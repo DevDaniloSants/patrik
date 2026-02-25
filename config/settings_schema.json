@@ -264,6 +264,40 @@
 				"id": "font_accent_family",
 				"label": "Accent font",
 				"default": "harmonia_sans_n4"
+			},
+			{
+				"type": "header",
+				"content": "Custom Fonts (Overrides Shopify Fonts)"
+			},
+			{
+				"type": "select",
+				"id": "custom_heading_font",
+				"label": "Heading font override",
+				"options": [
+					{ "value": "none", "label": "Use Shopify font" },
+					{ "value": "Avenir", "label": "Avenir" }
+				],
+				"default": "none"
+			},
+			{
+				"type": "select",
+				"id": "custom_body_font",
+				"label": "Body text font override",
+				"options": [
+					{ "value": "none", "label": "Use Shopify font" },
+					{ "value": "Avenir", "label": "Avenir" }
+				],
+				"default": "none"
+			},
+			{
+				"type": "select",
+				"id": "custom_accent_font",
+				"label": "Accent font override",
+				"options": [
+					{ "value": "none", "label": "Use Shopify font" },
+					{ "value": "Avenir", "label": "Avenir" }
+				],
+				"default": "none"
 			}
 		]
 	},

@@ -150,6 +150,7 @@
         "transparent_blog": false,
         "transparent_article": false,
         "transparent_page": true,
+        "transparent_product": true,
         "transparent_text_color": "#ffffff",
         "transparent_logo": "shopify://shop_images/patrik_logo_white_transparent_0f80b7a2-759a-4bba-a7b3-5f8bd86fddd4.png",
         "show_collection_images": true,

@@ -104,9 +104,9 @@
         {%- endcapture -%}
 
         {%- capture card_content -%}
-          <div class="hero__content__wrapper align-space-between-vertical">
+          <div class="hero__content__wrapper align-space-between-vertical text-center!">
             {%- assign subtitle_collection = block.settings.top_text | default: collection_grid_subtitle_default -%}
-            <p class="collection-grid-item__subtitle strong {{ accent_size_class }}{% unless subtitle_collection != blank and block.settings.top_text_disabled == false %} invisible{% endunless %}">
+            <p class="collection-grid-item__subtitle strong {{ accent_size_class }}{% unless subtitle_collection != blank and block.settings.top_text_disabled == false %} invisible h-0!{% endunless %}">
               {%- if subtitle_collection != blank and block.settings.top_text_disabled == false -%}
                 {{ subtitle_collection }}
               {%- else -%}
@@ -310,13 +310,13 @@
         {{ collections_list }}
 
         {% comment %} 
-                                        <!-- Desktop bar not used in current design, included for easy customization --> 
-                                        {% if show_desktop_bar %}
-                                        <div class="custom-scrollbar medium-up--show">
-                                        <div class="custom-scrollbar__track" data-carousel-track></div>
-                                        </div> 
-                                        {% endif %}
-                                {% endcomment %}
+                                                                                                              <!-- Desktop bar not used in current design, included for easy customization --> 
+                                                                                                              {% if show_desktop_bar %}
+                                                                                                              <div class="custom-scrollbar medium-up--show">
+                                                                                                              <div class="custom-scrollbar__track" data-carousel-track></div>
+                                                                                                              </div> 
+                                                                                                              {% endif %}
+                                                                                        {% endcomment %}
 
         {% if show_mobile_bar %}
           <div class="custom-scrollbar small-down--show" data-custom-scrollbar>
@@ -336,9 +336,17 @@
 </div>
 
 {% style %}
+  @media only screen and (min-width: 768px) {
+    #shopify-section-{{ section.id }} .float-grid {
+      --gutter: {{ section.settings.desktop_gutter | default: 25 | append: 'px' }}
+       !important;
+      --gutter-offset: -{{ section.settings.desktop_gutter | default: 25 | append: 'px' }}!important;
+    }
+  }
+
   .collection-grid-item__content-below {
     display: block;
-    padding: 16px 0 0;
+    padding: 8px 0 0;
     text-decoration: none;
   }
   .collection-grid-item__content-below .hero__content__wrapper {
@@ -471,6 +479,15 @@
         "step": 0.1,
         "label": "Mobile",
         "default": 1.2
+      }, {
+        "type": "range",
+        "id": "desktop_gutter",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Desktop Gutter",
+        "default": 25
       }, {
         "type": "header",
         "content": "Text"

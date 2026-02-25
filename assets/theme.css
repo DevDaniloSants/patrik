@@ -14446,7 +14446,7 @@ a:focus,
   font-size: calc(var(--font-3) * var(--TYPE-ADJUST-BUTTON));
 }
 
-.text-btn-arrow-right:after {
+/* .text-btn-arrow-right:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -14458,7 +14458,7 @@ a:focus,
   border-style: solid;
   border-color: currentcolor;
   margin-top: 0;
-}
+} */
 
 .text-btn-arrow-right:hover:after {
   animation: move-right 2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -18157,6 +18157,7 @@ body .shopify-email-marketing-confirmation__container {
   flex-wrap: wrap;
 }
 
+
 .header__inner {
   width: 100%;
 }
@@ -18534,7 +18535,7 @@ body .shopify-email-marketing-confirmation__container {
   font-weight: var(--TYPE-WEIGHT-NAV);
   text-transform: var(--FONT-NAV-TRANSFORM);
   letter-spacing: var(--FONT-NAV-LETTER-SPACING);
-  font-size: calc(var(--font-2) * var(--TYPE-ADJUST-NAV));
+  font-size: 14px !important;
   white-space: nowrap;
   display: block;
 }
@@ -18733,6 +18734,20 @@ body:not(.theme-animate-hover) .header__desktop__buttons--icons .header__desktop
 [data-header-transparent="true"]+.header__backfill {
   display: none;
 }
+
+/* ================ Force transparent header on product pages ================ */
+body.template-product .theme__header {
+  background-color: transparent !important;
+  border-bottom-color: transparent !important;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+body.template-product .js__header__stuck .theme__header {
+  background-color: var(--bg) !important;
+  border-bottom-color: var(--border) !important;
+}
+
+
 
 /* ================ Large / Small Display Logic ================ */
 @media only screen and (max-width: 479px) {

@@ -85,3 +85,41 @@
 {% if body_font_bold_italic %}
   {{ body_font_bold_italic | font_face: font_display: 'swap' }}
 {% endif %}
+
+{%- if settings.custom_heading_font == 'Avenir' or settings.custom_body_font == 'Avenir' or settings.custom_accent_font == 'Avenir' -%}
+  @font-face {
+    font-family: 'Avenir';
+    src: url('{{ "Avenir/Avenir Regular.ttf" | asset_url }}') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Avenir';
+    src: url('{{ "Avenir/Avenir Medium.ttf" | asset_url }}') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Avenir';
+    src: url('{{ "Avenir/Avenir Heavy.ttf" | asset_url }}') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Avenir';
+    src: url('{{ "Avenir/Avenir Black.ttf" | asset_url }}') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Avenir';
+    src: url('{{ "Avenir/Avenir Light.ttf" | asset_url }}') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+{%- endif -%}
