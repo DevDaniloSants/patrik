@@ -1,5 +1,30 @@
 <!-- /sections/section-double.liquid -->
 
+{%- liquid
+  assign p_material_shopify = product.metafields.shopify['jewelry-material']
+  assign p_material_custom = product.metafields.custom['shopify--jewelry-material']
+  
+  assign p_material = p_material_shopify | default: p_material_custom
+  
+  assign product_material_text = p_material.value | json | downcase
+  if product_material_text == 'null' or product_material_text == blank
+    assign product_material_text = p_material | json | downcase
+  endif
+
+  assign target_material = section.settings.target_material | downcase | strip
+  assign show_section = true
+
+  if target_material != blank
+    if product_material_text contains target_material
+      assign show_section = true
+    else
+      assign show_section = false
+    endif
+  endif
+-%}
+
+{%- if show_section or request.design_mode -%}
+
 {% liquid
   assign blockList = ''
   for block in section.blocks
@@ -58,6 +83,14 @@
     section_width: section.settings.width
   %}
 {%- endcapture -%}
+
+{%- if show_section == false and request.design_mode -%}
+  <div class="relative w-full z-50">
+    <div class="bg-black text-white p-3 text-xs w-full text-center border border-white/20">
+      Esta seção inteira ficará OCULTA na loja porque o produto não tem "{{ section.settings.target_material }}" no material.
+    </div>
+  </div>
+{%- endif -%}
 
 <section data-section-id="{{ section.id }}"
   data-section-type="custom-content"
@@ -596,7 +629,7 @@
     {% endif %}
   </div>
 </section>
-
+{%- endif -%}
 
 {% schema %}
 {
@@ -1883,6 +1916,12 @@
 		},
 	],
 	"settings": [
+		{
+			"type": "text",
+			"id": "target_material",
+			"label": "Condição: Material Específico",
+			"info": "Puxa automaticamente do metacampo 'Material de Joias'. Deixe vazio para mostrar sempre. Ex: 'Ouro Branco', 'Gold'."
+		},
 		{
 			"type": "select",
 			"id": "height",

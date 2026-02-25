@@ -1,5 +1,29 @@
 <!-- sections/section-pair-before-after.liquid -->
 
+{%- liquid
+  assign p_data_shopify = product.metafields.shopify['gemstone-type'] | default: product.metafields.shopify['jewelry-material']
+  assign p_data_custom = product.metafields.custom['shopify--gemstone-type'] | default: product.metafields.custom['shopify--jewelry-material']
+  
+  assign p_data = p_data_shopify | default: p_data_custom
+  
+  assign product_data_text = p_data.value | json | downcase
+  if product_data_text == 'null' or product_data_text == blank
+    assign product_data_text = p_data | json | downcase
+  endif
+
+  assign target_data = section.settings.target_data | downcase | strip
+  assign show_section = true
+
+  if target_data != blank
+    if product_data_text contains target_data
+      assign show_section = true
+    else
+      assign show_section = false
+    endif
+  endif
+-%}
+
+{%- if show_section or request.design_mode -%}
 
 {% liquid
   assign border_class = ''
@@ -33,6 +57,14 @@
     @shopify:section:deselect.window='if ($wasSelectedSection) { isPlaying = true }'
   {% endif %}
 >
+  {%- if show_section == false and request.design_mode -%}
+    <div class="relative w-full z-50">
+      <div class="bg-black text-white p-3 text-xs w-full text-center border border-white/20">
+        Esta seção inteira ficará OCULTA na loja porque o produto não tem "{{ section.settings.target_data }}" na categoria escolhida.
+      </div>
+    </div>
+  {%- endif -%}
+
   <div class="section-padding {{ section.settings.width }}" data-wrapper>
     <div
       class="
@@ -57,12 +89,19 @@
     </div>
   </div>
 </section>
+{%- endif -%}
 
 {% schema %}
 {
 	"name": "Pair: Before/After & Text",
 	"tag": "div",
 	"settings": [
+		{
+			"type": "text",
+			"id": "target_data",
+			"label": "Condição: Pedra Preciosa Específica",
+			"info": "Puxa automaticamente do metacampo 'Tipo de pedra preciosa'. Deixe vazio para mostrar sempre. Ex: 'esmeralda', 'diamond'."
+		},
 		{
 			"type": "select",
 			"id": "order",
