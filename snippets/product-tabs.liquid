@@ -14,7 +14,9 @@
   {%- if product_description_content != blank and block.settings.enable_description -%}
     {%- capture tab_links_html -%}
       <button type="button" class="tab-link tab-link-0" data-block-id="{{ section.id | append: '-0' }}" data-focus-element data-tab="0" tabindex="0" data-attributes-placeholder>
-        {%- render 'icon-setting', filename: block.settings.icon_description -%}
+        {%- if block.settings.icon_description != blank -%}
+          {{ block.settings.icon_description }}
+        {%- endif -%}
         {{ 'products.general.description' | t }}
       </button>
     {%- endcapture -%}
@@ -58,7 +60,9 @@
 
         <button type="button" class="tab-link tab-link-{{ count }}" data-focus-element data-tab="{{ count }}" data-block-id="{{ block.id }}" tabindex="0" {{ block.shopify_attributes }}>
           {%- assign icon_name = 'icon_name_' | append: i -%}
-          {%- render 'icon-setting', filename: block.settings[icon_name] -%}
+          {%- if block.settings[icon_name] != blank -%}
+            {{ block.settings[icon_name] }}
+          {%- endif -%}
           {{ _title }}
         </button>
       {%- endcapture -%}
@@ -118,7 +122,9 @@
               aria-haspopup="true"
               aria-expanded="false">
               {%- assign icon_name = 'icon_name_' | append: i -%}
-              {%- render 'icon-setting', filename: block.settings[icon_name] -%}
+              {%- if block.settings[icon_name] != blank -%}
+                {{ block.settings[icon_name] }}
+              {%- endif -%}
 
               {{ _title }}
             </button>
@@ -130,7 +136,9 @@
 
             <label for="accordion-{{ block_id }}--{{i}}-checkbox" class="accordion__title no-js">
               {%- assign icon_name = 'icon_name_' | append: i -%}
-              {%- render 'icon-setting', filename: block.settings[icon_name] -%}
+              {%- if block.settings[icon_name] != blank -%}
+                {{ block.settings[icon_name] }}
+              {%- endif -%}
 
               {{ _title }}
             </label>
@@ -151,7 +159,9 @@
           aria-controls="{{ block_id }}"
           aria-haspopup="true"
           aria-expanded="{{ block.settings.description_expanded }}">
-          {%- render 'icon-setting', filename: block.settings.icon_description -%}
+          {%- if block.settings.icon_description != blank -%}
+            {{ block.settings.icon_description }}
+          {%- endif -%}
           {{ 'products.general.description' | t }}
         </button>
 
@@ -162,7 +172,9 @@
           {% if block.settings.description_expanded %}checked{% endif %}>
 
         <label for="accordion-{{ block_id }}-checkbox" class="accordion__title no-js">
-          {%- render 'icon-setting', filename: block.settings.icon_description -%}
+          {%- if block.settings.icon_description != blank -%}
+            {{ block.settings.icon_description }}
+          {%- endif -%}
           {{ 'products.general.description' | t }}
         </label>
 
