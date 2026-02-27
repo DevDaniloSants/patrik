@@ -332,8 +332,9 @@ assign placeholder = placeholder | default: false
     %}
   {% endif %}
 
-  <div class="product__grid__info bg-transparent absolute! bottom-0 left-0 right-0 z-[1] {{ text_align | default: settings.collection_text_alignment | default: 'text-center' }}" data-product-grid-info>
+  <div class="product__grid__info bg-transparent absolute! bottom-0 left-0 right-0 z-1 ![--text-dark:#000] {{ text_align | default: settings.collection_text_alignment | default: 'text-center' }}" data-product-grid-info>
     <a
+      class="text-black!"
       href="{{ product.url }}" data-grid-link aria-label="{{ product.title | strip_html | escape }}"
       {% comment %} The link wrapping the product variant image is already focusable, so this does not need to be {% endcomment %}
       tabindex="-1"
@@ -351,7 +352,7 @@ assign placeholder = placeholder | default: false
         {%- endif -%}
       </div>
 
-      <div class="product__grid__price font-bold px-4 pb-6 !text-sm {% if settings.show_cutline %} product__grid__price--nowrap{% endif %}">
+      <div class="product__grid__price px-4 pb-6 text-sm! {% if settings.show_cutline %} product__grid__price--nowrap{% endif %}">
         {%- if settings.show_cutline -%}
           <span class="product__grid__cutline">{{ product.metafields.theme.cutline.value }}</span>
         {%- endif -%}

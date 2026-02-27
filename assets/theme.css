@@ -17532,10 +17532,20 @@ html:not(.no-js) body:not(.focus-enabled) *:focus {
 #product-section-main {
   position: relative;
   /* background-image: linear-gradient(to bottom right, #e0e0e0, #f3f2f3) !important; */
+  padding-top: 0 !important;
 }
+/* 
+.product__grid .product__grid--mosaic {
+  position: relative;
+  top: 112px;
+} */
 
-
-
+@media only screen and (min-width: 1024px) {
+  .flickity-lock-height {
+    position: relative;
+    top: -112px !important;
+  }
+}
 
 /* ============================================================================
   #Colors
@@ -23869,11 +23879,12 @@ body.focus-enabled .product-grid-item:focus-within {
   font-weight: var(--FONT-WEIGHT-BODY-BOLD);
   letter-spacing: var(--FONT-BODY-LETTER-SPACING);
   text-transform: var(--FONT-BODY-TRANSFORM);
-  font-size: calc(var(--font-4) * var(--FONT-ADJUST-BODY));
+  /* font-size: calc(var(--font-4) * var(--FONT-ADJUST-BODY)); */
   line-height: var(--leading-normal);
   word-break: break-word;
   text-transform: none;
   letter-spacing: 0;
+  font-size: 14px;
 }
 
 .product__grid__price {

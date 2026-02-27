@@ -1,3 +1,11 @@
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+{%- assign product_reference_code = current_variant.sku | strip -%}
+{%- if product_reference_code != blank -%}
+  <p class="p" data-product-reference>
+    {{ 'customer.order.sku' | t }}: <span data-product-reference-value>{{ product_reference_code }}</span>
+  </p>
+{%- endif -%}
+
 <!-- /snippets/product-title.liquid -->
 
 {%- if block.settings.text_size -%}

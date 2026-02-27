@@ -300,41 +300,35 @@
               {% when 'variant-selectors' %}
                 {% render 'product-variant-options' product: product, uniq_id: product_form_id, block: block, has_alt_text_filtered_images: has_alt_text_filtered_images %}
               {% when 'siblings' %}
-                {% render 'product-siblings' product: product, uniq_id: product_form_id, block: block %}
-              {% when 'subscription' %}
-                {%- if block.settings.subscriptions_enable_selectors -%}
-                  {% render 'product-subscription' product: product, uniq_id: product_form_id, block: block %}
-                {%- endif -%}
-              {% when 'size-remaining' %}
-                {% render 'product-size-and-remaining' product: product, block: block %}
-              {% when 'description' %}
-                <div data-morph-skip class="product__block__description rte body-size-4" style="--PB: {{ block.settings.padding_bottom }}px;" {{ block.shopify_attributes }}>
-                  {%- assign product_description_content = product.description | strip -%}
-                  {%- assign truncate_string = 'products.general.read_more' | t -%}
-                  {%- assign truncate_html = '<button type="button" class="p button-with-underline" data-truncated-button>' | append: truncate_string | append: '</button>' -%}
+								{% render 'product-siblings' product: product, uniq_id: product_form_id, block: block %}
+							{% when 'description' %}
+								<div data-morph-skip class="product__block__description rte body-size-4" style="--PB: {{ block.settings.padding_bottom }}px;" {{ block.shopify_attributes }}>
+									{%- assign product_description_content = product.description | strip -%}
+									{%- assign truncate_string = 'products.general.read_more' | t -%}
+									{%- assign truncate_html = '<button type="button" class="p button-with-underline" data-truncated-button>' | append: truncate_string | append: '</button>' -%}
 
-                  {%- if block.settings.style == 'none' -%}
-                    {% if block.settings.read_more %}
-                      <div class="product-description__holder product-description__holder--truncate" data-truncated-holder>
-                        <div class="product-description__inner">
-                          <div class="product-description__content" data-truncated-content="product-description__content--truncate">
-                            {{ product_description_content }}
-                          </div>
-                        </div>
+									{%- if block.settings.style == 'none' -%}
+										{% if block.settings.read_more %}
+											<div class="product-description__holder product-description__holder--truncate" data-truncated-holder>
+												<div class="product-description__inner">
+													<div class="product-description__content" data-truncated-content="product-description__content--truncate">
+														{{ product_description_content }}
+													</div>
+												</div>
 
-                        <div class="product-description__actions">
-                          {{ truncate_html }}
-                        </div>
-                      </div>
-                    {% else %}
-                      {{ product.description }}
-                    {% endif %}
-                  {% else %}
-                    <div class="tabs-wrapper">
-                      {% render 'product-tabs', section: section, block: block, product: product, product_description_content: product_description_content, truncate_html: truncate_html %}
-                    </div>
-                  {%- endif -%}
-                </div>
+												<div class="product-description__actions">
+													{{ truncate_html }}
+												</div>
+											</div>
+										{% else %}
+											{{ product.description }}
+										{% endif %}
+									{% else %}
+										<div class="tabs-wrapper">
+											{% render 'product-tabs', section: section, block: block, product: product, product_description_content: product_description_content, truncate_html: truncate_html %}
+										</div>
+									{%- endif -%}
+								</div>
               {% when 'sharing' %}
                 <div class="product__block__share {{ block.settings.target_device }}" style="--PB: {{ block.settings.padding_bottom }}px;" {{ block.shopify_attributes }}>
                   {% render 'share' product: product, label: block.settings.share_label, block: block %}
