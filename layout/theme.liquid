@@ -283,9 +283,8 @@
 
 
 <body id="{{ page_title | handle }}" class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }} {{ settings.default_background }}{% if customer %} customer-logged-in{% endif %}">
-  {%- if template.name != 'product' -%}
   <style>
-    /* Esconde o balão do Shopify Inbox em todas as páginas, exceto produtos */
+    /* Esconde o balão flutuante do Shopify Inbox em todas as páginas */
     #shopify-chat, 
     iframe[id^="dummy-chat-button-iframe"] {
       display: none !important;
@@ -294,7 +293,6 @@
       pointer-events: none !important;
     }
   </style>
-{%- endif -%}
 
   <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
 

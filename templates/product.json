@@ -96,6 +96,13 @@
             "padding_bottom": 20
           }
         },
+        "chat_especialista": {
+          "type": "chat-button",
+          "settings": {
+            "button_text": "compre com um especialista",
+            "padding_bottom": 20
+          }
+        },
         "spacer_yCjLBw": {
           "type": "spacer",
           "settings": {
@@ -169,6 +176,7 @@
         "subscriptions",
         "quantity",
         "buttons",
+        "chat_especialista",
         "spacer_yCjLBw",
         "description",
         "upsell",
