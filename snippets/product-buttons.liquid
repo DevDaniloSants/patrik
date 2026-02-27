@@ -70,7 +70,7 @@
                 type="submit"
                 name="add"
                 id="btn--add-to-cart"
-                class="btn--outline btn--full btn--primary btn--add-to-cart bottom-[50%] !border-none !rounded-full lg:!rounded-none !bg-white border-none lg:!bg-black !w-fit lg:!w-full !text-black lg:!text-white"
+                class="btn--outline btn--full btn--primary btn--add-to-cart bottom-[50%] !border-none !rounded-full !bg-white border-none md:!bg-black !w-fit md:!w-full !text-black md:!text-white"
                 data-add-to-cart
                 onclick="
                   if (window.innerWidth < 1024) {
@@ -93,7 +93,7 @@
                 }"
                 {% unless current_variant.available %} disabled="disabled" {% endunless %}
               >
-                <span class="btn-state-ready flex justify-center">
+                <span class="btn-state-ready flex justify-center rounded-full!">
                   <span data-add-to-cart-text>
                     {{ button_text }}
                   </span>

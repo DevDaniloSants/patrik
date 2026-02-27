@@ -51,7 +51,7 @@
   <div class="product__price__wrap">
     <div class="product__price__main" data-price-wrapper>
       <span class="product__price">
-        <span data-product-price class="text-white! lg:text-[#3c3f36]!" {% if compare_at_price > price %} class="product__price--sale"{% endif %}>
+        <span data-product-price class="text-white! md:text-[#3c3f36]!" {% if compare_at_price > price %} class="product__price--sale"{% endif %}>
           {%- if settings.currency_code_enable -%}
             {{ price | money_with_currency }}
           {%- else -%}

@@ -1,0 +1,900 @@
+<!-- /sections/section-double-pdp.liquid -->
+
+{%- liquid
+  assign p_material_shopify = product.metafields.shopify['jewelry-material']
+  assign p_material_custom = product.metafields.custom['shopify--jewelry-material']
+  
+  assign p_material = p_material_shopify | default: p_material_custom
+  
+  assign product_material_text = p_material.value | json | downcase
+  if product_material_text == 'null' or product_material_text == blank
+    assign product_material_text = p_material | json | downcase
+  endif
+
+  assign target_material = section.settings.target_material | downcase | strip
+  assign show_section = true
+
+  if target_material != blank
+    if product_material_text contains target_material
+      assign show_section = true
+    else
+      assign show_section = false
+    endif
+  endif
+-%}
+
+{%- if show_section or request.design_mode -%}
+
+{% liquid
+  assign border_class = ''
+  if section.settings.borders
+    assign border_class = 'brick--border'
+  endif
+
+  assign margin_class = ''
+  if section.settings.brick_gutter > 0
+    assign margin_class = 'brick--margin'
+  endif
+
+  assign animation_anchor = "[data-section-id='" | append: section.id | append: "']"
+
+  assign swaparoo_class = ''
+  if section.blocks[0].type == 'text' and section.blocks[1].type == 'video'
+    assign swaparoo_class = 'brick__section--reverse'
+  endif
+%}
+
+{%- if show_section == false and request.design_mode -%}
+  <div class="relative w-full z-50">
+    <div class="bg-black text-white p-3 text-xs w-full text-center border border-white/20">
+      Esta seção inteira ficará OCULTA na loja porque o produto não tem "{{ section.settings.target_material }}" no material.
+    </div>
+  </div>
+{%- endif -%}
+
+<section data-section-id="{{ section.id }}"
+  data-section-type="custom-content"
+  style="--PT: {{ section.settings.padding_top }}px;
+         --PB: {{ section.settings.padding_bottom }}px;
+         --BRICK-GUTTER: {{ section.settings.brick_gutter }}px;
+         {% if section.settings.bg_color != blank %}background-color: {{ section.settings.bg_color }};{% endif %}">
+  <div class="section-padding {{ section.settings.width }}" data-wrapper>
+    <div class="brick__section brick--{{ section.blocks.size }} {{ margin_class }} {{ border_class }} {{ section.settings.height }} {{ swaparoo_class }}"
+      data-overflow-wrapper>
+      {% for block in section.blocks %}
+        {% case block.type %}
+
+          {% when 'video' %}
+            {%- assign video_obj = product.metafields.custom.video_pdp.value -%}
+
+            {%- if video_obj != blank -%}
+              <div class="brick__block" data-overflow-frame {{ block.shopify_attributes }}>
+                <div
+                  class="brick__block__video aspect-[--wh-ratio] {{ block.settings.text_color }} {{ section.settings.height }}"
+                >
+                {%- liquid
+                  assign video_autoplay = block.settings.enable_autoplay
+                  if video_autoplay == nil
+                    assign video_autoplay = true
+                  endif
+                -%}
+                <div class="hero__content__wrapper {{ block.settings.text_align }}" {% unless video_autoplay %}style="pointer-events: none;"{% endunless %}>
+                  <div class="hero__content" data-overflow-content {% unless video_autoplay %}style="pointer-events: auto;"{% endunless %}>
+                    {% unless block.settings.kicker == '' %}
+                      <p class="hero__kicker"
+                        data-aos="hero"
+                        data-aos-anchor="{{ animation_anchor }}"
+                        data-aos-order="1">
+                        {{ block.settings.kicker | escape }}
+                      </p>
+                    {% endunless %}
+                    {% unless block.settings.title == '' %}
+                      <h1 class="hero__title heading-size-9"
+                        data-aos="hero"
+                        data-aos-anchor="{{ animation_anchor }}"
+                        data-aos-order="2">
+                        {{ block.settings.title | escape }}
+                      </h1>
+                    {% endunless %}
+                    {% unless block.settings.richtext == '' %}
+                      <div class="hero__description rte body-size-6"
+                        data-aos="hero"
+                        data-aos-anchor="{{ animation_anchor }}"
+                        data-aos-order="3">
+                        {{ block.settings.richtext }}
+                      </div>
+                    {% endunless %}
+
+                    {% if block.settings.link_text != '' %}
+                      <div class="hero__cta__wrapper">
+                        <a class="{{ block.settings.button_style }} {{ block.settings.button_color }} hero__btn"
+                          href="{{ block.settings.link }}"
+                          data-aos="hero"
+                          data-aos-anchor="{{ animation_anchor }}"
+                          data-aos-order="4">
+                          {{ block.settings.link_text | escape }}
+                        </a>
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+
+                <div class="image-overlay" style="--bg:{{ block.settings.overlay_color }}; opacity:{{ block.settings.overlay_opacity | times: 0.01 }}; {% unless video_autoplay %}pointer-events: none;{% endunless %}"></div>
+
+                {%- assign video_styles = block.settings.object_position | replace: '-', ' ' | prepend: 'object-position: ' -%}
+
+                {%- if video_autoplay -%}
+                  <div class="video-autoplay-wrapper">
+                    {{ video_obj | video_tag: autoplay: true, loop: true, muted: true, controls: false, playsinline: true, image_size: '1200x', style: video_styles, data-video-autoplay: '' }}
+                  </div>
+                {%- else -%}
+                  <div class="video-wrapper" style="width: 100%; height: 100%;">
+                    {{ video_obj | video_tag: autoplay: false, loop: true, muted: false, controls: true, playsinline: true, image_size: '1200x', style: video_styles, class: 'w-full h-full object-cover pointer-events-auto' }}
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+            {%- endif -%}
+
+          {% when 'text' %}
+            {%- liquid
+              assign kicker_line_class = ''
+              if block.settings.title == blank
+                assign kicker_line_class = 'kicker__line'
+              endif
+
+              assign characters = block.settings.text | size
+              assign justify_class = ''
+              if characters > 400 and block.settings.align_text == 'text-center' and block.settings.text_columns > 1
+                assign justify_class = 'text-justify'
+              endif
+
+              assign bg_color = block.settings.bg_color
+              assign transparent_spacing_class = ""
+              if bg_color == 'rgba(0,0,0,0)' or bg_color == blank
+                assign transparent_spacing_class = "brick__block__text--transparent"
+              endif
+            -%}
+            <div class="brick__block" data-prevent-transparent-header {{ block.shopify_attributes }}>
+              <div class="brick__block__text {{ transparent_spacing_class }} {{ block.settings.text_color }}" data-overflow-frame style="--bg: {{ bg_color }};">
+                <div class="brick__block__text__inner">
+                  <div class="text__standard {{ block.settings.align_text }}" data-overflow-content>
+                    {% assign text_size_class = block.settings.font_size | prepend: 'body-size-' %}
+
+                    {% if block.settings.kicker != blank %}
+                      <p class="standard__kicker {{ kicker_line_class }}"
+                        data-aos="hero"
+                        data-aos-anchor="{{ animation_anchor }}"
+                        data-aos-order="1">
+                        {{ block.settings.kicker }}
+                      </p>
+                    {% endif %}
+
+                    {% if block.settings.title != blank %}
+                      <h2 class="standard__heading heading-size-9"
+                        data-aos="hero"
+                        data-aos-anchor="{{ animation_anchor }}"
+                        data-aos-order="2">
+                        {{ block.settings.title }}
+                      </h2>
+                    {% endif %}
+
+                    {% if block.settings.text != blank %}
+                      {% assign text_columns_class = block.settings.text_columns | prepend: 'columns--' %}
+                      <div class="rte {{ text_size_class }} {{ text_columns_class }} {{ justify_class }}"
+                        data-aos="hero"
+                        data-aos-anchor="{{ animation_anchor }}"
+                        data-aos-order="3">
+                        {{ block.settings.text }}
+                      </div>
+                    {% endif %}
+
+                    {% if block.settings.button_text != blank %}
+                      <button
+                        type="button"
+                        class="standard__cta rounded-full! {{ block.settings.button_style }} {{ block.settings.button_color }}"
+                        data-chat-open-btn
+                        data-aos="hero"
+                        data-aos-anchor="{{ animation_anchor }}"
+                        data-aos-order="4">
+                        {{ block.settings.button_text }}
+                      </button>
+                    {% endif %}
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        {% endcase %}
+      {% endfor %}
+    </div>
+    {% if section.blocks.size == 0 %}
+      <div class="text-center">{{ 'home_page.onboarding.no_content' | t }}</div>
+    {% endif %}
+  </div>
+</section>
+{%- endif -%}
+
+<script>
+  // Chat com Especialista – abre o Shopify Inbox programaticamente
+  // Dois disparos: 1) mostra o ícone  2) clica para abrir o painel
+  document.addEventListener('DOMContentLoaded', function() {
+    var chatBtns = document.querySelectorAll('[data-chat-open-btn]');
+
+    function forceShowAll() {
+      var selectors = [
+        '#shopify-chat', 'shopify-chat',
+        'iframe[id^="dummy-chat-button-iframe"]',
+        'iframe[id*="chat"]',
+        '#ShopifyChat', '#shopify-chat-container',
+        '[class*="shopify-chat"]'
+      ];
+      selectors.forEach(function(sel) {
+        document.querySelectorAll(sel).forEach(function(el) {
+          el.style.setProperty('display', 'block', 'important');
+          el.style.setProperty('opacity', '1', 'important');
+          el.style.setProperty('visibility', 'visible', 'important');
+          el.style.setProperty('pointer-events', 'auto', 'important');
+          el.style.setProperty('z-index', '999999', 'important');
+        });
+      });
+    }
+
+    function clickShadowButton(root) {
+      if (!root) return false;
+      var btn = root.querySelector('button') ||
+                root.querySelector('[role="button"]') ||
+                root.querySelector('a');
+      if (btn) { btn.click(); return true; }
+      return false;
+    }
+
+    function openChat() {
+      var chat = document.querySelector('#shopify-chat') ||
+                 document.querySelector('shopify-chat');
+      if (!chat) return false;
+
+      forceShowAll();
+
+      // 1.o disparo – mostra o widget (ícone do chat)
+      if (chat.shadowRoot) {
+        clickShadowButton(chat.shadowRoot);
+        var shadowIframe = chat.shadowRoot.querySelector('iframe');
+        if (shadowIframe) {
+          shadowIframe.style.setProperty('display', 'block', 'important');
+          shadowIframe.style.setProperty('opacity', '1', 'important');
+          shadowIframe.style.setProperty('visibility', 'visible', 'important');
+          shadowIframe.style.setProperty('pointer-events', 'auto', 'important');
+        }
+      }
+      try { chat.click(); } catch(e) {}
+
+      // Broadcast para iframes de chat
+      document.querySelectorAll('iframe').forEach(function(iframe) {
+        var id = (iframe.id || '').toLowerCase();
+        var src = (iframe.src || '').toLowerCase();
+        if (id.indexOf('chat') > -1 || src.indexOf('inbox') > -1 || src.indexOf('chat') > -1) {
+          iframe.style.setProperty('display', 'block', 'important');
+          iframe.style.setProperty('opacity', '1', 'important');
+          iframe.style.setProperty('visibility', 'visible', 'important');
+          iframe.style.setProperty('pointer-events', 'auto', 'important');
+          iframe.style.setProperty('z-index', '999999', 'important');
+          try { iframe.click(); iframe.focus(); iframe.contentWindow.postMessage('shopify-chat:open', '*'); } catch(e) {}
+        }
+      });
+      return true;
+    }
+
+    chatBtns.forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        // Disparo 1 – garante que o ícone/widget fica visível
+        forceShowAll();
+        openChat();
+
+        // Disparo 2 – após breve delay, clica de novo para abrir o painel
+        setTimeout(function() {
+          forceShowAll();
+          openChat();
+        }, 400);
+
+        // Disparo 3 – retry extra caso o widget demore a montar
+        setTimeout(function() {
+          forceShowAll();
+          openChat();
+        }, 900);
+
+        // Polling – tenta clicar o botão dentro do shadow DOM até 3s
+        var attempts = 0;
+        var poller = setInterval(function() {
+          attempts++;
+          var chat = document.querySelector('#shopify-chat') ||
+                     document.querySelector('shopify-chat');
+          if (chat && chat.shadowRoot) {
+            // Procura painel aberto (iframe grande / container de conversa)
+            var panel = chat.shadowRoot.querySelector('iframe[style*="height"]') ||
+                        chat.shadowRoot.querySelector('[class*="open"]') ||
+                        chat.shadowRoot.querySelector('[aria-expanded="true"]');
+            if (panel) { clearInterval(poller); return; }
+            clickShadowButton(chat.shadowRoot);
+          }
+          if (attempts >= 8) clearInterval(poller);
+        }, 400);
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+	"name": "Video PDP",
+	"max_blocks": 2,
+	"blocks": [
+		{
+			"type": "video",
+			"name": "Video (metafield)",
+			"limit": 1,
+			"settings": [
+				{
+					"type": "paragraph",
+					"content": "O vídeo é puxado automaticamente do metacampo custom.video_pdp do produto. Certifique-se de que o metacampo é do tipo 'Video Shopify' (não arquivo/file)."
+				},
+				{
+					"type": "checkbox",
+					"id": "enable_autoplay",
+					"label": "Enable Autoplay",
+					"default": true
+				},
+				{
+					"type": "select",
+					"id": "object_position",
+					"label": "Video position",
+					"default": "center-center",
+					"options": [
+						{
+							"label": "Top",
+							"value": "center-top"
+						},
+						{
+							"label": "Right",
+							"value": "right-center"
+						},
+						{
+							"label": "Center",
+							"value": "center-center"
+						},
+						{
+							"label": "Left",
+							"value": "left-center"
+						},
+						{
+							"label": "Bottom",
+							"value": "center-bottom"
+						}
+					]
+				},
+				{
+					"type": "header",
+					"content": "Overlay"
+				},
+				{
+					"type": "range",
+					"id": "overlay_opacity",
+					"min": 0,
+					"max": 100,
+					"step": 5,
+					"label": "Overlay opacity",
+					"info": "Increase contrast for legible text.",
+					"default": 15
+				},
+				{
+					"type": "color",
+					"id": "overlay_color",
+					"label": "Overlay color",
+					"default": "#000"
+				},
+				{
+					"type": "header",
+					"content": "Text"
+				},
+				{
+					"type": "text",
+					"id": "kicker",
+					"label": "Kicker"
+				},
+				{
+					"type": "text",
+					"id": "title",
+					"label": "Title"
+				},
+				{
+					"type": "richtext",
+					"id": "richtext",
+					"label": "Text"
+				},
+				{
+					"type": "select",
+					"id": "text_align",
+					"label": "Alignment",
+					"default": "align--middle-center",
+					"options": [
+						{
+							"value": "align--top-left",
+							"label": "Top left"
+						},
+						{
+							"value": "align--top-center",
+							"label": "Top center"
+						},
+						{
+							"value": "align--top-right",
+							"label": "Top right"
+						},
+						{
+							"value": "align--middle-left",
+							"label": "Middle left"
+						},
+						{
+							"value": "align--middle-center",
+							"label": "Absolute center"
+						},
+						{
+							"value": "align--middle-right",
+							"label": "Middle right"
+						},
+						{
+							"value": "align--bottom-left",
+							"label": "Bottom left"
+						},
+						{
+							"value": "align--bottom-center",
+							"label": "Bottom center"
+						},
+						{
+							"value": "align--bottom-right",
+							"label": "Bottom right"
+						}
+					]
+				},
+				{
+					"type": "select",
+					"id": "text_color",
+					"label": "Text color",
+					"default": "text--white",
+					"options": [
+						{
+							"value": "text--neutral",
+							"label": "Normal text"
+						},
+						{
+							"value": "text--white",
+							"label": "White"
+						},
+						{
+							"value": "text--primary",
+							"label": "Primary accent"
+						},
+						{
+							"value": "text--secondary",
+							"label": "Secondary accent"
+						},
+						{
+							"value": "text--black",
+							"label": "Black"
+						},
+						{
+							"value": "text--invert--primary",
+							"label": "Primary dark accent"
+						},
+						{
+							"value": "text--invert--secondary",
+							"label": "Secondary dark accent"
+						},
+						{
+							"value": "text--invert",
+							"label": "Inverted text color"
+						},
+						{
+							"value": "text--bright--primary",
+							"label": "Primary bright accent"
+						},
+						{
+							"value": "text--bright--secondary",
+							"label": "Secondary bright accent"
+						}
+					]
+				},
+				{
+					"type": "header",
+					"content": "Button"
+				},
+				{
+					"type": "text",
+					"id": "link_text",
+					"label": "Text"
+				},
+				{
+					"type": "url",
+					"id": "link",
+					"label": "Link"
+				},
+				{
+					"type": "select",
+					"id": "button_color",
+					"label": "Color",
+					"default": "btn--white",
+					"options": [
+						{
+							"value": "btn--primary",
+							"label": "Bright accent"
+						},
+						{
+							"value": "btn--secondary",
+							"label": "Secondary accent"
+						},
+						{
+							"value": "btn--neutral",
+							"label": "Text color"
+						},
+						{
+							"value": "btn--black",
+							"label": "Black"
+						},
+						{
+							"value": "btn--white",
+							"label": "White"
+						}
+					]
+				},
+				{
+					"type": "select",
+					"id": "button_style",
+					"label": "Button style",
+					"default": "btn",
+					"options": [
+						{
+							"value": "btn",
+							"label": "Solid button"
+						},
+						{
+							"value": "btn--soft",
+							"label": "Soft button"
+						},
+						{
+							"value": "btn--outline",
+							"label": "Outlined button"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "text",
+			"name": "Text",
+			"settings": [
+				{
+					"type": "text",
+					"id": "kicker",
+					"label": "Kicker",
+					"default": "Video with text"
+				},
+				{
+					"type": "text",
+					"id": "title",
+					"label": "Title"
+				},
+				{
+					"type": "richtext",
+					"id": "text",
+					"label": "Text",
+					"default": "<p>Use this text to share information about your brand with your customers.</p>"
+				},
+				{
+					"type": "range",
+					"id": "font_size",
+					"label": "Text size",
+					"min": 1,
+					"max": 10,
+					"step": 1,
+					"default": 5
+				},
+				{
+					"type": "range",
+					"id": "text_columns",
+					"label": "Columns",
+					"min": 1,
+					"max": 3,
+					"step": 1,
+					"default": 1,
+					"info": "Desktop only"
+				},
+				{
+					"type": "select",
+					"id": "align_text",
+					"label": "Text alignment",
+					"default": "text-left",
+					"options": [
+						{
+							"value": "text-left",
+							"label": "Left"
+						},
+						{
+							"value": "text-center",
+							"label": "Centered"
+						},
+						{
+							"value": "text-right",
+							"label": "Right"
+						}
+					]
+				},
+				{
+					"type": "header",
+					"content": "Button"
+				},
+				{
+					"type": "text",
+					"id": "button_text",
+					"label": "Text"
+				},
+				{
+					"type": "select",
+					"id": "button_color",
+					"label": "Color",
+					"default": "btn--neutral",
+					"options": [
+						{
+							"value": "btn--primary",
+							"label": "Bright accent"
+						},
+						{
+							"value": "btn--secondary",
+							"label": "Secondary accent"
+						},
+						{
+							"value": "btn--neutral",
+							"label": "Text color"
+						},
+						{
+							"value": "btn--black",
+							"label": "Black"
+						},
+						{
+							"value": "btn--white",
+							"label": "White"
+						}
+					]
+				},
+				{
+					"type": "select",
+					"id": "button_style",
+					"label": "Button style",
+					"default": "btn-text-thick-line",
+					"options": [
+						{
+							"value": "btn-text-thick-line",
+							"label": "Capitalized text"
+						},
+						{
+							"value": "btn btn--long",
+							"label": "Solid button"
+						},
+						{
+							"value": "btn--soft btn--long",
+							"label": "Soft button"
+						},
+						{
+							"value": "btn--outline btn--long",
+							"label": "Outlined button"
+						}
+					]
+				},
+				{
+					"type": "header",
+					"content": "Style"
+				},
+				{
+					"type": "select",
+					"id": "text_color",
+					"label": "Text color",
+					"default": "text--neutral",
+					"options": [
+						{
+							"value": "text--neutral",
+							"label": "Normal text"
+						},
+						{
+							"value": "text--white",
+							"label": "White"
+						},
+						{
+							"value": "text--primary",
+							"label": "Primary accent"
+						},
+						{
+							"value": "text--secondary",
+							"label": "Secondary accent"
+						},
+						{
+							"value": "text--black",
+							"label": "Black"
+						},
+						{
+							"value": "text--invert--primary",
+							"label": "Primary dark accent"
+						},
+						{
+							"value": "text--invert--secondary",
+							"label": "Secondary dark accent"
+						},
+						{
+							"value": "text--invert",
+							"label": "Inverted text color"
+						},
+						{
+							"value": "text--bright--primary",
+							"label": "Primary bright accent"
+						},
+						{
+							"value": "text--bright--secondary",
+							"label": "Secondary bright accent"
+						}
+					]
+				},
+				{
+					"type": "color",
+					"id": "bg_color",
+					"label": "Background"
+				}
+			]
+		}
+	],
+	"settings": [
+		{
+			"type": "text",
+			"id": "target_material",
+			"label": "Condição: Material Específico",
+			"info": "Puxa automaticamente do metacampo 'Material de Joias'. Deixe vazio para mostrar sempre. Ex: 'Ouro Branco', 'Gold'."
+		},
+		{
+			"type": "select",
+			"id": "height",
+			"label": "Section height",
+			"default": "use_screen_one_half",
+			"options": [
+				{
+					"value": "use_screen_full",
+					"label": "Full screen height"
+				},
+				{
+					"value": "use_screen_three_quarters",
+					"label": "Three quarters of screen height"
+				},
+				{
+					"value": "use_screen_two_thirds",
+					"label": "Two thirds of screen height"
+				},
+				{
+					"value": "use_screen_one_half",
+					"label": "One half of screen height"
+				},
+				{
+					"value": "use_screen_one_third",
+					"label": "One third of screen height"
+				},
+				{
+					"value": "use_screen_one_fifth",
+					"label": "One fifth of screen height"
+				},
+				{
+					"value": "use_pixels_800",
+					"label": "800px"
+				},
+				{
+					"value": "use_pixels_650",
+					"label": "650px"
+				},
+				{
+					"value": "use_pixels_500",
+					"label": "500px"
+				}
+			]
+		},
+		{
+			"type": "range",
+			"id": "brick_gutter",
+			"min": 0,
+			"max": 50,
+			"step": 2,
+			"unit": "px",
+			"label": "Block spacing",
+			"default": 0
+		},
+		{
+			"type": "checkbox",
+			"id": "borders",
+			"label": "Add borders",
+			"default": false
+		},
+		{
+			"type": "color",
+			"id": "bg_color",
+			"label": "Background"
+		},
+		{
+			"type": "header",
+			"content": "Section spacing"
+		},
+		{
+			"type": "select",
+			"id": "width",
+			"label": "Width",
+			"default": "wrapper",
+			"options": [
+				{
+					"value": "wrapper--none",
+					"label": "Full width"
+				},
+				{
+					"value": "wrapper--full",
+					"label": "Full width padded"
+				},
+				{
+					"value": "wrapper",
+					"label": "Page width"
+				},
+				{
+					"value": "wrapper--narrow",
+					"label": "Page width narrow"
+				},
+				{
+					"value": "wrapper--tiny",
+					"label": "Page width extra narrow"
+				}
+			]
+		},
+		{
+			"type": "range",
+			"id": "padding_top",
+			"min": 0,
+			"max": 180,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding top",
+			"default": 36
+		},
+		{
+			"type": "range",
+			"id": "padding_bottom",
+			"min": 0,
+			"max": 180,
+			"step": 2,
+			"unit": "px",
+			"label": "Padding bottom",
+			"default": 36
+		}
+	],
+	"presets": [
+		{
+			"name": "Video PDP",
+			"blocks": [
+				{
+					"type": "video"
+				},
+				{
+					"type": "text"
+				}
+			]
+		}
+	],
+	"disabled_on": {
+		"groups": [
+			"header",
+			"footer",
+			"aside"
+		]
+	}
+}
+{% endschema %}

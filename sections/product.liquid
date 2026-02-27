@@ -185,7 +185,7 @@
 
         {% comment %} Mobile product info - rendered outside the carousel {% endcomment %}
 		 {% comment %} Descomentar dependendo do que vier da reunião adicionar absolute bottom-0{% endcomment %}
-         <div class="mobile-product-content flex lg:hidden! px-5 pt-3 absolute bottom-[5px] w-full! justify-between! z-[40]! pointer-events-none!">
+         <div class="mobile-product-content flex md:hidden! px-5 pt-3 absolute bottom-[5px] w-full! justify-between! z-[40]! pointer-events-none!">
           <div class="mobile-product-info flex flex-col pointer-events-auto!">
             {% for block in section.blocks %}
               {% case block.type %}
@@ -204,23 +204,6 @@
               {% endcase %}
             {% endfor %}
           </div>
-          {%- comment -%} Mobile chat button {%- endcomment -%}
-          {% for block in section.blocks %}
-            {% case block.type %}
-              {% when 'chat-button' %}
-                <div class="mobile-chat-button lg:hidden! mt-2 px-5 w-full pointer-events-auto!" {{ block.shopify_attributes }} {% if block.settings.button_url != blank %}data-chat-url="{{ block.settings.button_url }}"{% endif %}>
-                  <button
-                    type="button"
-                    class="btn btn--full btn--outline btn--chat-especialista"
-                    data-chat-open-btn
-                    style="display:flex; align-items:center; justify-content:center; gap:8px; width:100%;"
-                  >
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                    {{ block.settings.button_text }}
-                  </button>
-                </div>
-            {% endcase %}
-          {% endfor %}
         </div>
 
         {% assign first_3d_model = product_media | where: "media_type", "model" | first %}
@@ -301,28 +284,16 @@
                   {% render block %}
                 </div>
               {% when 'title' %}
-                <div class="hidden lg:!block">
+                <div class="hidden md:!block">
                   {% render 'product-title', product: product, block: block, section: section %}
                 </div>
               {% when 'price' %}
-                <div class="hidden lg:!block">
+                <div class="hidden md:!block">
                   {% render 'product-price', product: product, block: block, section: section %}
                 </div>
               {% when 'add-buttons' %}
-                <div class="hidden lg:!block">
+                <div class="hidden md:!block">
                   {% render 'product-buttons' product: product, uniq_id: product_form_id, block: block %}
-                </div>
-              {% when 'chat-button' %}
-                <div class="product__block__chat-button hidden lg:!block" style="--PB: {{ block.settings.padding_bottom }}px;" {{ block.shopify_attributes }} {% if block.settings.button_url != blank %}data-chat-url="{{ block.settings.button_url }}"{% endif %}>
-                  <button
-                    type="button"
-                    class="btn btn--full btn--outline btn--chat-especialista"
-                    data-chat-open-btn
-                    style="display:flex; align-items:center; justify-content:center; gap:8px; width:100%;"
-                  >
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                    {{ block.settings.button_text }}
-                  </button>
                 </div>
               {% when 'quantity' %}
                 {% render 'product-quantity' product: product, uniq_id: product_form_id, block: block %}
@@ -689,115 +660,6 @@
     
     // Initial call
     initVideoLogic();
-  });
-</script>
-
-<script>
-  // Chat com Especialista – abre o Shopify Inbox programaticamente
-  document.addEventListener('DOMContentLoaded', function() {
-    var chatBtns = document.querySelectorAll('[data-chat-open-btn]');
-
-    function showInboxElements() {
-      // Mostra todos os elementos do Shopify Inbox
-      var selectors = [
-        '#shopify-chat',
-        'iframe[id^="dummy-chat-button-iframe"]',
-        'iframe[id*="chat"]',
-        '#ShopifyChat',
-        '#shopify-chat-container',
-        '[class*="shopify-chat"]'
-      ];
-      selectors.forEach(function(sel) {
-        document.querySelectorAll(sel).forEach(function(el) {
-          el.style.setProperty('display', 'block', 'important');
-          el.style.setProperty('opacity', '1', 'important');
-          el.style.setProperty('visibility', 'visible', 'important');
-          el.style.setProperty('pointer-events', 'auto', 'important');
-          el.style.setProperty('z-index', '999999', 'important');
-        });
-      });
-    }
-
-    function clickInboxButton() {
-      // Tenta encontrar e clicar o botão real do Shopify Inbox
-      // O Shopify Inbox usa o custom element <shopify-chat> que tem shadowRoot
-      var shopifyChat = document.querySelector('#shopify-chat') || document.querySelector('shopify-chat');
-
-      if (shopifyChat) {
-        showInboxElements();
-
-        // Tenta acessar o shadowRoot do web component
-        if (shopifyChat.shadowRoot) {
-          var shadowBtn = shopifyChat.shadowRoot.querySelector('button') ||
-                          shopifyChat.shadowRoot.querySelector('[role="button"]') ||
-                          shopifyChat.shadowRoot.querySelector('a');
-          if (shadowBtn) {
-            shadowBtn.click();
-            return true;
-          }
-          // Tenta o iframe dentro do shadow DOM
-          var shadowIframe = shopifyChat.shadowRoot.querySelector('iframe');
-          if (shadowIframe) {
-            shadowIframe.style.setProperty('display', 'block', 'important');
-            shadowIframe.style.setProperty('opacity', '1', 'important');
-            shadowIframe.style.setProperty('visibility', 'visible', 'important');
-            shadowIframe.style.setProperty('pointer-events', 'auto', 'important');
-          }
-        }
-
-        // Tenta click direto no elemento
-        try { shopifyChat.click(); } catch(err) {}
-
-        // Tenta encontrar iframe do chat e simular click nele
-        var allIframes = document.querySelectorAll('iframe');
-        allIframes.forEach(function(iframe) {
-          var id = (iframe.id || '').toLowerCase();
-          var src = (iframe.src || '').toLowerCase();
-          if (id.indexOf('chat') > -1 || src.indexOf('inbox') > -1 || src.indexOf('chat') > -1) {
-            iframe.style.setProperty('display', 'block', 'important');
-            iframe.style.setProperty('opacity', '1', 'important');
-            iframe.style.setProperty('visibility', 'visible', 'important');
-            iframe.style.setProperty('pointer-events', 'auto', 'important');
-            iframe.style.setProperty('z-index', '999999', 'important');
-            // Simula click no iframe
-            try {
-              iframe.click();
-              iframe.focus();
-              iframe.contentWindow.postMessage('shopify-chat:open', '*');
-            } catch(err) {}
-          }
-        });
-
-        return true;
-      }
-      return false;
-    }
-
-    chatBtns.forEach(function(btn) {
-      btn.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        // Se o bloco tem um link alternativo, abre ele
-        var altUrl = btn.closest('[data-chat-url]');
-        if (altUrl && altUrl.dataset.chatUrl) {
-          window.open(altUrl.dataset.chatUrl, '_blank');
-          return;
-        }
-
-        // Primeiro tenta abrir direto
-        showInboxElements();
-
-        // Tenta abrir com pequeno delay para o DOM atualizar
-        setTimeout(function() {
-          clickInboxButton();
-
-          // Segundo attempt com mais delay, caso o primeiro não funcione
-          setTimeout(function() {
-            clickInboxButton();
-          }, 500);
-        }, 100);
-      });
-    });
   });
 </script>
 
@@ -1292,39 +1154,6 @@
 					"label": "Show recipient information form for gift card products",
 					"default": true,
 					"info": "Gift card products can optionally be sent direct to a recipient along with a personal message."
-				},
-				{
-					"type": "header",
-					"content": "Block spacing"
-				},
-				{
-					"type": "range",
-					"id": "padding_bottom",
-					"min": 0,
-					"max": 100,
-					"step": 2,
-					"unit": "px",
-					"label": "Padding bottom",
-					"default": 20
-				}
-			]
-		},
-		{
-			"type": "chat-button",
-			"name": "Chat com Especialista",
-			"limit": 1,
-			"settings": [
-				{
-					"type": "text",
-					"id": "button_text",
-					"label": "Texto do bot\u00e3o",
-					"default": "CHAT COM ESPECIALISTA"
-				},
-				{
-					"type": "url",
-					"id": "button_url",
-					"label": "Link alternativo (opcional)",
-					"info": "Se preenchido, o bot\u00e3o abre este link em vez do Shopify Inbox."
 				},
 				{
 					"type": "header",
