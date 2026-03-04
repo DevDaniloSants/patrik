@@ -265,7 +265,7 @@
             "align_text": "text-center",
             "button_text": "teste",
             "button_color": "btn--white",
-            "button_style": "btn-text-thick-line",
+            "button_style": "btn--outline btn--long",
             "text_color": "text--white",
             "bg_color": ""
           }
