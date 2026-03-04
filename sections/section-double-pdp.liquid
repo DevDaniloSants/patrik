@@ -245,52 +245,8 @@
     var chatBtns = document.querySelectorAll('[data-chat-open-btn]');
     console.log('[CHAT-DEBUG] Botões [data-chat-open-btn] encontrados:', chatBtns.length);
   
-    // 1. Injeta CSS no Shadow DOM para esconder APENAS o botão flutuante, não o painel
-    function killFloatingButton(chatNode) {
-      console.log('[CHAT-DEBUG] killFloatingButton chamado', chatNode ? chatNode.tagName : null, 'shadowRoot:', chatNode ? !!chatNode.shadowRoot : false, 'injected:', chatNode ? chatNode.dataset.styleInjected : null);
-      if (chatNode && chatNode.shadowRoot && !chatNode.dataset.styleInjected) {
-        var style = document.createElement('style');
-        style.textContent = `
-          /* Esconde apenas os iframes de botão, NÃO o painel de chat */
-          iframe[id*="dummy"],
-          iframe[id*="button"],
-          .chat-button {
-            display: none !important;
-            opacity: 0 !important;
-            pointer-events: none !important;
-          }
-        `;
-        chatNode.shadowRoot.appendChild(style);
-        chatNode.dataset.styleInjected = 'true';
-        console.log('[CHAT-DEBUG] CSS injetado no Shadow DOM com sucesso');
-        var shadowEls = chatNode.shadowRoot.querySelectorAll('*');
-        console.log('[CHAT-DEBUG] Elementos no Shadow DOM:', shadowEls.length);
-        shadowEls.forEach(function(el) { console.log('[CHAT-DEBUG]   >> ', el.tagName, 'id=' + (el.id || ''), 'class=' + (el.className || ''), el.src ? 'src=' + el.src : ''); });
-      }
-    }
-  
-    // 2. Observa o DOM para pegar o componente do chat quando nascer
-    var observer = new MutationObserver(function(mutations) {
-      mutations.forEach(function(mutation) {
-        mutation.addedNodes.forEach(function(node) {
-          if (node.tagName === 'SHOPIFY-CHAT' || node.id === 'shopify-chat') {
-            console.log('[CHAT-DEBUG] MutationObserver detectou shopify-chat!', node.tagName, node.id);
-            killFloatingButton(node);
-            setTimeout(function() { killFloatingButton(node); }, 500);
-            setTimeout(function() { killFloatingButton(node); }, 2000);
-          }
-        });
-      });
-    });
-  
-    observer.observe(document.body, { childList: true, subtree: true });
-  
-    var existingChat = document.querySelector('shopify-chat') || document.querySelector('#shopify-chat');
-    console.log('[CHAT-DEBUG] Chat existente no DOMContentLoaded:', existingChat ? existingChat.tagName + '#' + existingChat.id : 'NÃO ENCONTRADO');
-    if (existingChat) {
-      killFloatingButton(existingChat);
-      setTimeout(function() { killFloatingButton(existingChat); }, 1000);
-    }
+    // O Mutation Observer de killFloatingButton agora está rodando globalmente via theme.liquid!
+    // Mantemos aqui apenas a lógica de debugar estado tardio e os handlers do botão
   
     // Log tardio para verificar estado após carregamento completo
     setTimeout(function() {

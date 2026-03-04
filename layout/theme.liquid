@@ -284,14 +284,22 @@
 
 <body id="{{ page_title | handle }}" class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }} {{ settings.default_background }}{% if customer %} customer-logged-in{% endif %}">
   <style>
-    /* Esconde o balão flutuante do Shopify Inbox em todas as páginas */
-    /* #shopify-chat, 
+    /* Esconde APENAS o botão flutuante do Shopify Inbox, não o modal/painel */
+    #shopify-chat {
+      /* Mantém o componente no DOM mas sem ocupar espaço visual para o botão */
+      position: fixed !important;
+      bottom: 0 !important;
+      right: 0 !important;
+      z-index: 999998 !important;
+      pointer-events: none !important;
+    }
+    /* Esconde o iframe do botão flutuante */
     iframe[id^="dummy-chat-button-iframe"] {
       display: none !important;
       opacity: 0 !important;
       visibility: hidden !important;
       pointer-events: none !important;
-    } */
+    }
   </style>
 
   <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
@@ -318,7 +326,47 @@
   {%- endcomment -%}
 
   <!-- Paste popup code or third party scripts below this comment line ============== -->
-
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Oculta APENAS o botão flutuante nativo em todas as páginas do site
+      function killFloatingButton(chatNode) {
+        if (chatNode && chatNode.shadowRoot && !chatNode.dataset.styleInjected) {
+          var style = document.createElement('style');
+          style.textContent = `
+            iframe[id*="dummy"],
+            iframe[id*="button"],
+            .chat-button {
+              display: none !important;
+              opacity: 0 !important;
+              pointer-events: none !important;
+            }
+          `;
+          chatNode.shadowRoot.appendChild(style);
+          chatNode.dataset.styleInjected = 'true';
+        }
+      }
+    
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          mutation.addedNodes.forEach(function(node) {
+            if (node.tagName === 'SHOPIFY-CHAT' || node.id === 'shopify-chat') {
+              killFloatingButton(node);
+              setTimeout(function() { killFloatingButton(node); }, 500);
+              setTimeout(function() { killFloatingButton(node); }, 2000);
+            }
+          });
+        });
+      });
+    
+      observer.observe(document.body, { childList: true, subtree: true });
+    
+      var existingChat = document.querySelector('shopify-chat') || document.querySelector('#shopify-chat');
+      if (existingChat) {
+        killFloatingButton(existingChat);
+        setTimeout(function() { killFloatingButton(existingChat); }, 1000);
+      }
+    });
+  </script>
 
   <!-- And above this comment line ================================================== -->
 
