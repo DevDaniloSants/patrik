@@ -96,13 +96,6 @@
             "padding_bottom": 20
           }
         },
-        "chat_especialista": {
-          "type": "chat-button",
-          "settings": {
-            "button_text": "compre com um especialista",
-            "padding_bottom": 20
-          }
-        },
         "spacer_yCjLBw": {
           "type": "spacer",
           "settings": {
@@ -176,7 +169,6 @@
         "subscriptions",
         "quantity",
         "buttons",
-        "chat_especialista",
         "spacer_yCjLBw",
         "description",
         "upsell",
@@ -289,6 +281,7 @@
       ],
       "name": "Image with text",
       "settings": {
+        "target_material": "",
         "height": "use_screen_one_half",
         "brick_gutter": 0,
         "borders": false,
@@ -412,6 +405,7 @@
       },
       "name": "Pedra Preciosa",
       "settings": {
+        "target_data": "emerald",
         "order": "before-after-first",
         "height": "use_screen_one_third",
         "brick_gutter": 20,
@@ -502,6 +496,7 @@
       ],
       "name": "Metal",
       "settings": {
+        "target_material": "",
         "height": "use_screen_one_third",
         "brick_gutter": 0,
         "borders": false,
@@ -557,6 +552,7 @@
       ],
       "name": "Caixa especial Patrik",
       "settings": {
+        "target_material": "",
         "height": "use_screen_one_third",
         "brick_gutter": 0,
         "borders": false,
