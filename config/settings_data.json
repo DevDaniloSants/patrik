@@ -76,7 +76,7 @@
     "product_grid_show_rating_count": false,
     "badge_sale_type": "percentage",
     "variant_form": "dropdown",
-    "cart_style": "drawer",
+    "cart_style": "page",
     "free_shipping_limit": "1000",
     "currency_code_enable": false,
     "checkout_sidebar_background_color": "#f7f5f4",
