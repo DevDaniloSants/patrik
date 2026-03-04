@@ -233,6 +233,60 @@
         "padding_bottom": 36
       }
     },
+    "section_double_pdp_6xgTfd": {
+      "type": "section-double-pdp",
+      "blocks": {
+        "video_W3aXXa": {
+          "type": "video",
+          "settings": {
+            "enable_autoplay": true,
+            "object_position": "center-center",
+            "overlay_opacity": 15,
+            "overlay_color": "#000",
+            "kicker": "",
+            "title": "",
+            "richtext": "",
+            "text_align": "align--middle-center",
+            "text_color": "text--white",
+            "link_text": "",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "btn"
+          }
+        },
+        "text_E3ArCB": {
+          "type": "text",
+          "settings": {
+            "kicker": "Video with text",
+            "title": "",
+            "text": "<p>Use this text to share information about your brand with your customers.</p>",
+            "font_size": 5,
+            "text_columns": 1,
+            "align_text": "text-center",
+            "button_text": "teste",
+            "button_color": "btn--white",
+            "button_style": "btn-text-thick-line",
+            "text_color": "text--white",
+            "bg_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "video_W3aXXa",
+        "text_E3ArCB"
+      ],
+      "name": "Video PDP",
+      "settings": {
+        "target_material": "",
+        "height": "use_screen_one_half",
+        "brick_gutter": 0,
+        "borders": false,
+        "bg_color": "#142b26",
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "section_double_LMg3p9": {
       "type": "section-double",
       "blocks": {
@@ -622,6 +676,7 @@
   "order": [
     "main",
     "section_richtext_tnYiLL",
+    "section_double_pdp_6xgTfd",
     "section_double_LMg3p9",
     "section_richtext_nxceCr",
     "section_pair_before_after_j4gCcV",
