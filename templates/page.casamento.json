@@ -48,7 +48,7 @@
         "text_eBkXrd": {
           "type": "text",
           "settings": {
-            "richtext": "<p>Escolha o anel certo para o seu noivado</p>",
+            "richtext": "<p>Escolha a aliança perfeita para o casal</p>",
             "text_size": 6
           }
         }
@@ -133,6 +133,62 @@
         "padding_bottom": 36
       }
     },
+    "section_double_4cNXh3": {
+      "type": "section-double",
+      "blocks": {
+        "image_fJNEmg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Meia_Alianca.png",
+            "overlay_opacity": 15,
+            "overlay_color": "#000000",
+            "enable_overlay_text": false,
+            "kicker": "",
+            "title": "",
+            "richtext": "",
+            "text_align": "align--middle-center",
+            "text_color": "text--white",
+            "link_text": "",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "btn"
+          }
+        },
+        "text_AYbHfz": {
+          "type": "text",
+          "settings": {
+            "kicker": "",
+            "title": "Design",
+            "text": "<p>As alianças com design elaborado introduzem <strong>elementos joalheiros adicionais</strong>, como diamantes, cravações ou texturas especiais.</p><p>Elas mantêm o simbolismo da aliança tradicional, mas acrescentam um toque de <strong>personalidade, brilho e sofisticação</strong>.</p>",
+            "font_size": 5,
+            "text_columns": 1,
+            "align_text": "text-left",
+            "button_text": "",
+            "button_url": "",
+            "button_color": "btn--neutral",
+            "button_style": "btn-text-thick-line",
+            "text_color": "text--neutral",
+            "bg_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_fJNEmg",
+        "text_AYbHfz"
+      ],
+      "name": "Clássicas - Image with text",
+      "settings": {
+        "target_material": "",
+        "height": "use_screen_one_half",
+        "brick_gutter": 0,
+        "borders": false,
+        "bg_color": "",
+        "preload_image": false,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "section_richtext_FN8DKi": {
       "type": "section-richtext",
       "blocks": {
@@ -173,7 +229,7 @@
       "settings": {
         "collection": "engagement-rings",
         "product_limit": 12,
-        "title": "Escolha o seu Anel de Noivado",
+        "title": "Escolha a sua Aliança",
         "align_text": "title-center",
         "progress_bar": "mobile",
         "grid_large": 4,
@@ -233,14 +289,14 @@
         "heading_qJtYCy": {
           "type": "heading",
           "settings": {
-            "title": "Crie um Anel de Noivado",
+            "title": "Crie uma Aliança de Casamento",
             "text_size": 10
           }
         },
         "text_FC8Xfg": {
           "type": "text",
           "settings": {
-            "richtext": "<p>personalizado com nossos especialistas</p>",
+            "richtext": "<p>personalizada com nossos especialistas</p>",
             "text_size": 6
           }
         },
@@ -329,6 +385,7 @@
     "main",
     "section_hero_F6LiWT",
     "section_double_zaWwdb",
+    "section_double_4cNXh3",
     "section_richtext_FN8DKi",
     "section_collection_slider_T3cMTQ",
     "section_richtext_7nQqqJ",
