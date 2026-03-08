@@ -58,7 +58,7 @@
         "header-block-toolbar": {
           "type": "toolbar",
           "settings": {
-            "announcement_text": "<p>Frete grátis nas compras acima de<em><strong> R$ 1.000</strong></em></p>",
+            "announcement_text": "<p>Frete Expresso grátis em todos os pedidos</p>",
             "secondary_linklist": "",
             "show_menu_desktop": true,
             "show_menu_mobile": true,
