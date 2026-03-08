@@ -41,7 +41,7 @@
         "heading_R4XdpU": {
           "type": "heading",
           "settings": {
-            "title": "Engagement Rings",
+            "title": "Alianças de Casamento",
             "text_size": 10
           }
         },
@@ -60,12 +60,12 @@
       ],
       "name": "Image banner",
       "settings": {
-        "image": "shopify://shop_images/Anel_de_Noivado_wide_-_edited.png",
-        "mobile_image": "shopify://shop_images/Enggement_Ring_mobile.png",
+        "image": "shopify://shop_images/Aliancas_desktop.png",
+        "mobile_image": "shopify://shop_images/Alianca_de_Casamento_-_mobile.png",
         "banner_link": "",
         "height": "use_screen_two_thirds",
         "overlay_opacity": 0,
-        "overlay_color": "#000",
+        "overlay_color": "#000000",
         "enable_overlay_text": false,
         "preload_image": false,
         "content_width": 2000,
@@ -298,7 +298,7 @@
         "banner_link": "",
         "height": "use_screen_two_thirds",
         "overlay_opacity": 15,
-        "overlay_color": "#000",
+        "overlay_color": "#000000",
         "enable_overlay_text": false,
         "preload_image": false,
         "content_width": 2000,
