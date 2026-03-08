@@ -77,6 +77,62 @@
         "padding_bottom": 0
       }
     },
+    "section_double_zaWwdb": {
+      "type": "section-double",
+      "blocks": {
+        "text_9QYmdh": {
+          "type": "text",
+          "settings": {
+            "kicker": "Alianças Clássicas",
+            "title": "",
+            "text": "<p>As alianças clássicas são a forma mais tradicional dessa joia.<br/><br/>Caracterizam-se por um design limpo, atemporal e elegante, geralmente em <strong>ouro amarelo, ouro branco ou ouro rosé</strong>, com superfície polida ou acetinada.</p><p>Seu valor está na <strong>simplicidade perfeita da forma</strong>: um aro contínuo que simboliza o compromisso eterno entre duas pessoas.</p>",
+            "font_size": 5,
+            "text_columns": 1,
+            "align_text": "text-left",
+            "button_text": "",
+            "button_url": "",
+            "button_color": "btn--neutral",
+            "button_style": "btn-text-thick-line",
+            "text_color": "text--neutral",
+            "bg_color": ""
+          }
+        },
+        "image_y8mKNH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Aliancas_Classicas.png",
+            "overlay_opacity": 15,
+            "overlay_color": "#000",
+            "enable_overlay_text": false,
+            "kicker": "",
+            "title": "",
+            "richtext": "",
+            "text_align": "align--middle-center",
+            "text_color": "text--white",
+            "link_text": "",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "btn"
+          }
+        }
+      },
+      "block_order": [
+        "text_9QYmdh",
+        "image_y8mKNH"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "target_material": "",
+        "height": "use_screen_one_half",
+        "brick_gutter": 0,
+        "borders": false,
+        "bg_color": "",
+        "preload_image": false,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "section_richtext_FN8DKi": {
       "type": "section-richtext",
       "blocks": {
@@ -106,64 +162,6 @@
         "text_color": "text--neutral",
         "bg": "palette--light bg--neutral",
         "content_width": 2000,
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "section_columns_Gj3NJc": {
-      "type": "section-columns",
-      "blocks": {
-        "text_block_kXw6YF": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/Engagement_Ring3_-_CROP_13d9536a-62df-4b03-97e2-61548e357429.png",
-            "shape_class": "",
-            "title": "Solitário",
-            "text": "<p>O anel solitário surgiu no século XV, quando o arquiduque Maximiliano da Áustria ofereceu um diamante à sua noiva Maria de Borgonha. A pedra única simboliza um amor singular e eterno, refletindo a força do diamante, considerado o mineral mais resistente da natureza. É a escolha clássica para quem quer celebrar um amor único e central na vida.</p>",
-            "button_label": "",
-            "button_link": "",
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
-        },
-        "text_block_EYDPkN": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/Meia_Alianca.png",
-            "shape_class": "",
-            "title": "Meia Aliança",
-            "text": "<p>A meia aliança traz uma sequência de diamantes alinhados, representando o caminho que o casal começa a construir juntos. Na tradição joalheira, os diamantes simbolizam permanência e luz, refletindo a ideia de um amor que cresce e se fortalece com o tempo. É perfeita para quem vê o noivado como o início de uma jornada compartilhada.</p>",
-            "button_label": "",
-            "button_link": "",
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
-        }
-      },
-      "block_order": [
-        "text_block_kXw6YF",
-        "text_block_EYDPkN"
-      ],
-      "name": "Text columns with images",
-      "settings": {
-        "title": "Conheça os Três Anéis Clássicos da Patrik",
-        "bg": "palette--light bg--neutral",
-        "align_text": "text-center",
-        "scale_image": true,
-        "wh_ratio": 1,
-        "grid_large": 3,
-        "grid_medium": 3,
-        "grid_mobile": 1.2,
-        "progress_bar_mobile": false,
         "width": "wrapper",
         "padding_top": 36,
         "padding_bottom": 36
@@ -330,8 +328,8 @@
   "order": [
     "main",
     "section_hero_F6LiWT",
+    "section_double_zaWwdb",
     "section_richtext_FN8DKi",
-    "section_columns_Gj3NJc",
     "section_collection_slider_T3cMTQ",
     "section_richtext_7nQqqJ",
     "section_hero_pyEpff",
