@@ -173,7 +173,7 @@
       ],
       "name": "Text columns with images",
       "settings": {
-        "title": "Apresentamos os Três Clássicos da Patrik",
+        "title": "Conheça os Três Anéis Clássicos da Patrik",
         "bg": "palette--light bg--neutral",
         "align_text": "text-center",
         "scale_image": true,
