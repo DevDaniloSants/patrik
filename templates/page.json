@@ -253,14 +253,14 @@
         "heading_qJtYCy": {
           "type": "heading",
           "settings": {
-            "title": "Crie um Anel Personalizado",
+            "title": "Crie um Anel de Noivado",
             "text_size": 10
           }
         },
         "text_FC8Xfg": {
           "type": "text",
           "settings": {
-            "richtext": "<p>com nossos especialistas</p>",
+            "richtext": "<p>personalizado com nossos especialistas</p>",
             "text_size": 6
           }
         },
