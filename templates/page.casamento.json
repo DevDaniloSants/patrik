@@ -83,8 +83,8 @@
         "text_9QYmdh": {
           "type": "text",
           "settings": {
-            "kicker": "Alianças Clássicas",
-            "title": "",
+            "kicker": "",
+            "title": "Clássicas",
             "text": "<p>As alianças clássicas são a forma mais tradicional dessa joia.<br/><br/>Caracterizam-se por um design limpo, atemporal e elegante, geralmente em <strong>ouro amarelo, ouro branco ou ouro rosé</strong>, com superfície polida ou acetinada.</p><p>Seu valor está na <strong>simplicidade perfeita da forma</strong>: um aro contínuo que simboliza o compromisso eterno entre duas pessoas.</p>",
             "font_size": 5,
             "text_columns": 1,
@@ -102,7 +102,7 @@
           "settings": {
             "image": "shopify://shop_images/Aliancas_Classicas.png",
             "overlay_opacity": 15,
-            "overlay_color": "#000",
+            "overlay_color": "#000000",
             "enable_overlay_text": false,
             "kicker": "",
             "title": "",
