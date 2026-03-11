@@ -30,7 +30,7 @@
   {%- endfor -%}
 {%- endcapture -%}
 
-<div class="collection__active__filters__wrapper{% unless filter_count > 0 %} is-hidden{% endunless %}">
+<div class="collection__active__filters__wrapper px-4 lg:px-[30px] mx-auto {% unless filter_count > 0 %} is-hidden{% endunless %}">
   <div class="collection__active__filters" data-active-filters>
     {%- if filter_count > 1 -%}
       <a href="{{ collection.url }}?sort_by={{ collection_sort }}" class="active__filters__clear" data-filter-update-url>{{ 'collections.sidebar.all_tags' | t }}</a>

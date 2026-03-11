@@ -24925,6 +24925,8 @@ input:checked+label>.sidebar__heading-chevron,
 .collection__active__filters__wrapper {
   margin-top: calc(-1 * (var(--gutter) - var(--inner)));
   padding-bottom: calc(var(--inner) - 7px);
+  max-width: var(--LAYOUT-WIDTH);
+
 }
 
 @media only screen and (min-width: 768px) {

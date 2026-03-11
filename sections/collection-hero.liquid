@@ -76,7 +76,9 @@
                   tabindex="-1"
                   onblur="if(!this.contains(event.relatedTarget)){this.querySelector('.header__dropdown').classList.remove('is-visible')}">
                   <h1 class="standard__heading text-[14px]! uppercase tracking-widest collection__heading__text flex items-center gap-2 cursor-pointer !m-0" onclick="this.parentElement.querySelector('.header__dropdown').classList.toggle('is-visible')">
-                    {{ collection.title }}
+                    {% if collection.handle == 'all' %}Todas as joias
+                    {% else %}
+                      {{ collection.title }}{% endif %}
                     {% render 'icon-core-chevron-down' %}
                   </h1>
 
@@ -96,15 +98,29 @@
                       <div class="header__dropdown__inner">
                         <div class="dropdown__family dropdown__family--child">
                           <a href="{{ collection.url }}" class="navlink navlink--child highlight--link block w-full px-[15px] py-[5px]">
-                            <span class="navtext text-center!">{{ collection.title }}</span>
+                            <span class="navtext text-center!">
+                              {% if collection.handle == 'all' %}Todas as joias
+                              {% else %}
+                                {{ collection.title }}{% endif %}
+                            </span>
                           </a>
+
+                          {%- if collection.handle != 'all' -%}
+                            <a href="/collections/all" class="navlink navlink--child block w-full px-[15px] py-[5px]">
+                              <span class="navtext text-center!">Todas as joias</span>
+                            </a>
+                          {%- endif -%}
+
+                          {%- assign titulos_permitidos = "Anéis,Brincos,Colares,Pulseiras" | split: "," -%}
                           {%- assign sorted_collections = collections | sort: 'title' -%}
                           {%- for col in sorted_collections -%}
-                            {%- unless col.handle == collection.handle -%}
-                              <a href="{{ col.url }}" class="navlink navlink--child block w-full px-[15px] py-[5px]">
-                                <span class="navtext text-center!">{{ col.title }}</span>
-                              </a>
-                            {%- endunless -%}
+                            {%- if titulos_permitidos contains col.title -%}
+                              {%- unless col.title == collection.title -%}
+                                <a href="{{ col.url }}" class="navlink navlink--child block w-full px-[15px] py-[5px]">
+                                  <span class="navtext text-center!">{{ col.title }}</span>
+                                </a>
+                              {%- endunless -%}
+                            {%- endif -%}
                           {%- endfor -%}
                         </div>
                       </div>

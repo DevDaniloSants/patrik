@@ -390,8 +390,20 @@
                style="">
             <div class="pt-6 pb-2">
             <ul class="flex flex-col gap-y-2">
+              {%- assign titulos_excluidos = "Anéis,Brincos,Colares,Pulseiras" | split: "," -%}
               {% for collection_link in collections %}
                 {%- assign skip_collection = false -%}
+
+                {%- comment -%} Excluir frontpage {%- endcomment -%}
+                {%- if collection_link.handle == 'frontpage' -%}
+                  {%- assign skip_collection = true -%}
+                {%- endif -%}
+
+                {%- comment -%} Excluir Anéis, Brincos, Colares e Pulseiras {%- endcomment -%}
+                {%- if titulos_excluidos contains collection_link.title -%}
+                  {%- assign skip_collection = true -%}
+                {%- endif -%}
+
                 {%- for exclude in excluded_collections_strict -%}
                   {%- assign exclude_handle = exclude | handle -%}
                   {%- if exclude_handle == collection_link.handle -%}
