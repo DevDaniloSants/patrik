@@ -123,7 +123,7 @@
           "settings": {
             "enable_image": true,
             "image": "shopify://shop_images/Categorias-Anel_PATRIK-v7.png",
-            "shape_class": "rounded-lg",
+            "shape_class": "",
             "title": "Anéis",
             "text": "",
             "button_label": "",
@@ -140,7 +140,7 @@
           "settings": {
             "enable_image": true,
             "image": "shopify://shop_images/Categorias-_Brinco_PATRIK-v7.png",
-            "shape_class": "rounded-lg",
+            "shape_class": "",
             "title": "Brincos",
             "text": "",
             "button_label": "",
@@ -157,7 +157,7 @@
           "settings": {
             "enable_image": true,
             "image": "shopify://shop_images/Categorias-_PATRIK-Colares-v7.png",
-            "shape_class": "rounded-lg",
+            "shape_class": "",
             "title": "Colares",
             "text": "",
             "button_label": "",
@@ -174,7 +174,7 @@
           "settings": {
             "enable_image": true,
             "image": "shopify://shop_images/Categorias-_PATRIK-5.png",
-            "shape_class": "rounded-lg",
+            "shape_class": "",
             "title": "Pulseiras",
             "text": "",
             "button_label": "",
@@ -191,7 +191,7 @@
           "settings": {
             "enable_image": true,
             "image": "shopify://shop_images/Categorias-_PATRIK-_Todas_V7.png",
-            "shape_class": "rounded-lg",
+            "shape_class": "",
             "title": "Todas as Jóias",
             "text": "",
             "button_label": "",
@@ -481,7 +481,7 @@
             "title_disabled": true,
             "bottom_text": "Jóias para Casamento",
             "bottom_text_disabled": false,
-            "collection_url": "/pages/casamento",
+            "collection_url": "shopify://pages/casamento",
             "text_color": "text--white"
           }
         }
@@ -496,7 +496,7 @@
       ],
       "name": "Noivado e Casamento",
       "settings": {
-        "title": "Noivado e Casamento: faça a melhor escolha com a Assessoria da Patrik",
+        "title": "A Assessoria da Patrik lhe acompanha nas escolhas mais importantes da sua vida",
         "bg": "palette--dark bg--invert--accent",
         "carousel_enabled_on": "hidden",
         "collection_limit": 36,
@@ -504,6 +504,7 @@
         "grid_large": 2,
         "grid_medium": 2,
         "grid_mobile": 1,
+        "desktop_gutter": 25,
         "text_layout": "outside",
         "enable_hover": false,
         "font_family": "body",

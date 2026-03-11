@@ -41,14 +41,14 @@
         "heading_R4XdpU": {
           "type": "heading",
           "settings": {
-            "title": "Engagement Rings",
+            "title": "Alianças de Casamento",
             "text_size": 10
           }
         },
         "text_eBkXrd": {
           "type": "text",
           "settings": {
-            "richtext": "<p>Escolha o anel certo para o seu noivado</p>",
+            "richtext": "<p>Escolha a aliança perfeita para o casal</p>",
             "text_size": 6
           }
         }
@@ -60,12 +60,12 @@
       ],
       "name": "Image banner",
       "settings": {
-        "image": "shopify://shop_images/Anel_de_Noivado_wide_-_edited.png",
-        "mobile_image": "shopify://shop_images/Enggement_Ring_mobile.png",
+        "image": "shopify://shop_images/Aliancas_desktop.png",
+        "mobile_image": "shopify://shop_images/Alianca_de_Casamento_-_mobile.png",
         "banner_link": "",
         "height": "use_screen_two_thirds",
         "overlay_opacity": 0,
-        "overlay_color": "#000",
+        "overlay_color": "#000000",
         "enable_overlay_text": false,
         "preload_image": false,
         "content_width": 2000,
@@ -75,6 +75,118 @@
         "width": "wrapper--none",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "section_double_zaWwdb": {
+      "type": "section-double",
+      "blocks": {
+        "text_9QYmdh": {
+          "type": "text",
+          "settings": {
+            "kicker": "",
+            "title": "Clássicas",
+            "text": "<p>As alianças clássicas são a forma mais tradicional dessa joia.<br/><br/>Caracterizam-se por um design limpo, atemporal e elegante, geralmente em <strong>ouro amarelo, ouro branco ou ouro rosé</strong>, com superfície polida ou acetinada.</p><p>Seu valor está na <strong>simplicidade perfeita da forma</strong>: um aro contínuo que simboliza o compromisso eterno entre duas pessoas.</p>",
+            "font_size": 5,
+            "text_columns": 1,
+            "align_text": "text-left",
+            "button_text": "",
+            "button_url": "",
+            "button_color": "btn--neutral",
+            "button_style": "btn-text-thick-line",
+            "text_color": "text--neutral",
+            "bg_color": ""
+          }
+        },
+        "image_y8mKNH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Aliancas_Classicas.png",
+            "overlay_opacity": 15,
+            "overlay_color": "#000000",
+            "enable_overlay_text": false,
+            "kicker": "",
+            "title": "",
+            "richtext": "",
+            "text_align": "align--middle-center",
+            "text_color": "text--white",
+            "link_text": "",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "btn"
+          }
+        }
+      },
+      "block_order": [
+        "text_9QYmdh",
+        "image_y8mKNH"
+      ],
+      "name": "Clássicas - Image with text",
+      "settings": {
+        "target_material": "",
+        "height": "use_screen_one_half",
+        "brick_gutter": 0,
+        "borders": false,
+        "bg_color": "",
+        "preload_image": false,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_double_4cNXh3": {
+      "type": "section-double",
+      "blocks": {
+        "image_fJNEmg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Meia_Alianca.png",
+            "overlay_opacity": 15,
+            "overlay_color": "#000000",
+            "enable_overlay_text": false,
+            "kicker": "",
+            "title": "",
+            "richtext": "",
+            "text_align": "align--middle-center",
+            "text_color": "text--white",
+            "link_text": "",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "btn"
+          }
+        },
+        "text_AYbHfz": {
+          "type": "text",
+          "settings": {
+            "kicker": "",
+            "title": "Design",
+            "text": "<p>As alianças com design elaborado introduzem <strong>elementos joalheiros adicionais</strong>, como diamantes, cravações ou texturas especiais.</p><p>Elas mantêm o simbolismo da aliança tradicional, mas acrescentam um toque de <strong>personalidade, brilho e sofisticação</strong>.</p>",
+            "font_size": 5,
+            "text_columns": 1,
+            "align_text": "text-left",
+            "button_text": "",
+            "button_url": "",
+            "button_color": "btn--neutral",
+            "button_style": "btn-text-thick-line",
+            "text_color": "text--neutral",
+            "bg_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_fJNEmg",
+        "text_AYbHfz"
+      ],
+      "name": "Clássicas - Image with text",
+      "settings": {
+        "target_material": "",
+        "height": "use_screen_one_half",
+        "brick_gutter": 0,
+        "borders": false,
+        "bg_color": "",
+        "preload_image": false,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "section_richtext_FN8DKi": {
@@ -111,89 +223,13 @@
         "padding_bottom": 36
       }
     },
-    "section_columns_Gj3NJc": {
-      "type": "section-columns",
-      "blocks": {
-        "text_block_kXw6YF": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/Engagement_Ring3_-_CROP_13d9536a-62df-4b03-97e2-61548e357429.png",
-            "shape_class": "",
-            "title": "Solitário",
-            "text": "<p>O anel solitário surgiu no século XV, quando o arquiduque Maximiliano da Áustria ofereceu um diamante à sua noiva Maria de Borgonha. A pedra única simboliza um amor singular e eterno, refletindo a força do diamante, considerado o mineral mais resistente da natureza. É a escolha clássica para quem quer celebrar um amor único e central na vida.</p>",
-            "button_label": "",
-            "button_link": "",
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
-        },
-        "text_block_EYDPkN": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/Meia_Alianca.png",
-            "shape_class": "",
-            "title": "Meia Aliança",
-            "text": "<p>A meia aliança traz uma sequência de diamantes alinhados, representando o caminho que o casal começa a construir juntos. Na tradição joalheira, os diamantes simbolizam permanência e luz, refletindo a ideia de um amor que cresce e se fortalece com o tempo. É perfeita para quem vê o noivado como o início de uma jornada compartilhada.</p>",
-            "button_label": "",
-            "button_link": "",
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
-        },
-        "text_block_dy7CKW": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/Alianca.png",
-            "shape_class": "",
-            "title": "Aliança",
-            "text": "<p>A aliança tem origem nas tradições do Egito Antigo, onde o círculo simbolizava eternidade e união sem começo nem fim. Ao longo dos séculos, passou a representar compromisso e fidelidade entre duas pessoas. Simples e simbólica, é uma escolha que celebra a união e a promessa de uma vida em comum.</p>",
-            "button_label": "",
-            "button_link": "",
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
-        }
-      },
-      "block_order": [
-        "text_block_kXw6YF",
-        "text_block_EYDPkN",
-        "text_block_dy7CKW"
-      ],
-      "name": "Text columns with images",
-      "settings": {
-        "title": "Conheça os Três Anéis Clássicos da Patrik",
-        "bg": "palette--light bg--neutral",
-        "align_text": "text-center",
-        "scale_image": true,
-        "wh_ratio": 1,
-        "grid_large": 3,
-        "grid_medium": 3,
-        "grid_mobile": 1.2,
-        "progress_bar_mobile": false,
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "section_collection_slider_T3cMTQ": {
       "type": "section-collection-slider",
       "name": "Product slider",
       "settings": {
         "collection": "engagement-rings",
         "product_limit": 12,
-        "title": "Escolha o seu Anel de Noivado",
+        "title": "Escolha a sua Aliança",
         "align_text": "title-center",
         "progress_bar": "mobile",
         "grid_large": 4,
@@ -253,14 +289,14 @@
         "heading_qJtYCy": {
           "type": "heading",
           "settings": {
-            "title": "Crie um Anel de Noivado",
+            "title": "Crie uma Aliança de Casamento",
             "text_size": 10
           }
         },
         "text_FC8Xfg": {
           "type": "text",
           "settings": {
-            "richtext": "<p>personalizado com nossos especialistas</p>",
+            "richtext": "<p>personalizada com nossos especialistas</p>",
             "text_size": 6
           }
         },
@@ -298,7 +334,7 @@
         "banner_link": "",
         "height": "use_screen_two_thirds",
         "overlay_opacity": 15,
-        "overlay_color": "#000",
+        "overlay_color": "#000000",
         "enable_overlay_text": false,
         "preload_image": false,
         "content_width": 2000,
@@ -348,8 +384,9 @@
   "order": [
     "main",
     "section_hero_F6LiWT",
+    "section_double_zaWwdb",
+    "section_double_4cNXh3",
     "section_richtext_FN8DKi",
-    "section_columns_Gj3NJc",
     "section_collection_slider_T3cMTQ",
     "section_richtext_7nQqqJ",
     "section_hero_pyEpff",
