@@ -105,12 +105,6 @@
                             </span>
                           </a>
 
-                          {%- if collection.handle != 'all' -%}
-                            <a href="/collections/all" class="navlink navlink--child block w-full px-[15px] py-[5px]">
-                              <span class="navtext text-center!">Todas as joias</span>
-                            </a>
-                          {%- endif -%}
-
                           {%- assign titulos_permitidos = "Anéis,Brincos,Colares,Pulseiras" | split: "," -%}
                           {%- assign sorted_collections = collections | sort: 'title' -%}
                           {%- for col in sorted_collections -%}
@@ -122,6 +116,12 @@
                               {%- endunless -%}
                             {%- endif -%}
                           {%- endfor -%}
+
+                          {%- if collection.handle != 'all' -%}
+                            <a href="/collections/all" class="navlink navlink--child block w-full px-[15px] py-[5px]">
+                              <span class="navtext text-center!">Todas as joias</span>
+                            </a>
+                          {%- endif -%}
                         </div>
                       </div>
                     </div>
