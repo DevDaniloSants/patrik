@@ -2,7 +2,7 @@
 {%- assign product_reference_code = current_variant.sku | strip -%}
 {%- if product_reference_code != blank -%}
   <p class="p text-[12px] font-light" data-product-reference>
-  <span data-product-reference-value>{{ product_reference_code }}</span>
+  <span data-product-reference-value class="text-white! lg:text-black!">{{ product_reference_code }}</span>
   </p>
 {%- endif -%}
 

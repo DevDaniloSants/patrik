@@ -70,7 +70,7 @@
                 type="submit"
                 name="add"
                 id="btn--add-to-cart"
-                class="btn--outline btn--full btn--primary btn--add-to-cart bottom-[50%] !border-none !rounded-full !bg-white border-none md:!bg-black !w-fit md:!w-full !text-black md:!text-white"
+                class="btn--outline btn--full btn--primary px-[67px]! btn--add-to-cart bottom-[50%] !border-none !rounded-full !bg-white border-none md:!bg-black !w-fit md:!w-full !text-black md:!text-white"
                 data-add-to-cart
                 onclick="
                   if (window.innerWidth < 1024) {
@@ -124,7 +124,7 @@
               <button
                 type="button"
                 id="btn--specialist"
-                class="btn--outline btn--full btn--primary specialist-btn bg-black! text-white!"
+                class="btn--outline btn--full btn--primary specialist-btn bg-black! text-white! lg:text-black! lg:bg-transparent! lg:py-[19px]! min-h-[54px]!"
                 onclick="var m=document.getElementById('specialist-modal-{{ uniq_id }}');m.querySelector('.specialist-modal__card').style.display='';m.querySelector('[style*=backdrop-filter]').style.display='';m.classList.add('specialist-modal--open');m.style.display='flex';"
                 style="width: 100%; border-radius: 9999px; background: transparent; border: 1.5px solid #000; color: #000; font-size: 14px; font-weight: 500; padding: 12px 20px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; letter-spacing: 0.02em; transition: background 0.2s, color 0.2s;"
               >
@@ -193,7 +193,7 @@
       target="_blank"
       rel="noopener noreferrer"
       onclick="var m=this.closest('[id^=specialist-modal-]');if(m){m.classList.remove('specialist-modal--open');m.style.display='none';}"
-      style="display:flex; align-items:center; justify-content:center; gap:10px; width:100%; padding:14px 20px; background:#25D366; color:#fff; border-radius:9999px; font-size:15px; font-weight:600; text-decoration:none; margin-bottom:12px; transition:background 0.2s, transform 0.15s; box-shadow:0 4px 14px rgba(37,211,102,0.3);"
+      style="display:flex; align-items:center; justify-content:center; gap:10px; width:100%; padding:14px 20px; background:#25D366; color:#fff; border-radius:9999px; font-size:15px; font-weight:600; text-decoration:none; margin-bottom:12px; transition:background 0.2s, transform 0.15s;"
       onmouseover="this.style.background='#20bf5b'; this.style.transform='translateY(-1px)';"
       onmouseout="this.style.background='#25D366'; this.style.transform='translateY(0)';"
     >
