@@ -14322,7 +14322,6 @@ button:hover .cta__dot {
 }
 
 .btn--add-to-cart {
-  min-height: 54px;
   white-space: normal;
   line-height: normal;
 }

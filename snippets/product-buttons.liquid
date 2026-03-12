@@ -70,7 +70,7 @@
                 type="submit"
                 name="add"
                 id="btn--add-to-cart"
-                class="btn--outline btn--full btn--primary px-[67px]! btn--add-to-cart bottom-[50%] !border-none !rounded-full !bg-white border-none md:!bg-black !w-fit md:!w-full !text-black md:!text-white"
+                class="btn--outline max-h-[40px]! btn--full btn--primary px-[67px]! btn--add-to-cart lg:min-h-[54px] bottom-[50%] !border-none !rounded-full !bg-white border-none md:!bg-black !w-fit md:!w-full !text-black md:!text-white"
                 data-add-to-cart
                 onclick="
                   if (window.innerWidth < 1024) {
@@ -93,7 +93,7 @@
                 }"
                 {% unless current_variant.available %} disabled="disabled" {% endunless %}
               >
-                <span class="btn-state-ready flex justify-center rounded-full!">
+                <span class="btn-state-ready flex justify-center rounded-full! relative bottom-[2px] lg:bottom-0">
                   <span data-add-to-cart-text>
                     {{ button_text }}
                   </span>
@@ -124,7 +124,7 @@
               <button
                 type="button"
                 id="btn--specialist"
-                class="btn--outline btn--full btn--primary specialist-btn bg-black! text-white! lg:text-black! lg:bg-transparent! lg:py-[19px]! min-h-[54px]!"
+                class="btn--outline btn--full btn--primary specialist-btn bg-black! text-white! text-[12px]! lg:text-[14px]! lg:text-black! lg:bg-transparent! lg:py-[19px]! lg:min-h-[54px]!"
                 onclick="var m=document.getElementById('specialist-modal-{{ uniq_id }}');m.querySelector('.specialist-modal__card').style.display='';m.querySelector('[style*=backdrop-filter]').style.display='';m.classList.add('specialist-modal--open');m.style.display='flex';"
                 style="width: 100%; border-radius: 9999px; background: transparent; border: 1.5px solid #000; color: #000; font-size: 14px; font-weight: 500; padding: 12px 20px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; letter-spacing: 0.02em; transition: background 0.2s, color 0.2s;"
               >
@@ -161,7 +161,7 @@
   <div style="position:absolute; inset:0; background:rgba(0,0,0,0.45); backdrop-filter:blur(2px);"></div>
 
   <!-- Card -->
-  <div class="specialist-modal__card" style="position:relative; background:#fff; border-radius:20px; padding:36px 32px 28px; max-width:420px; width:100%; box-shadow:0 20px 60px rgba(0,0,0,0.18); text-align:center;">
+  <div class="specialist-modal__card lg:rounded-[20px]!" style="position:relative; background:#fff; padding:36px 32px 28px; max-width:420px; width:100%; text-align:center;">
     <!-- Handle mobile -->
     <div class="specialist-modal__handle" style="display:none; width:36px; height:4px; background:#ddd; border-radius:9999px; margin:0 auto 20px;"></div>
     <!-- Fechar -->
@@ -169,7 +169,7 @@
       type="button"
       aria-label="Fechar"
       onclick="var m=this.closest('[id^=specialist-modal-]');if(m){m.classList.remove('specialist-modal--open');m.style.display='none';}"
-      style="position:absolute; top:14px; right:16px; background:none; border:none; cursor:pointer; color:#666; padding:4px; display:flex; align-items:center;"
+      style="position:absolute; top:13px; right:16px; background:none; border:none; cursor:pointer; color:#666; padding:4px; display:flex; align-items:center;"
     >
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
@@ -183,8 +183,7 @@
       </svg>
     </div> {% endcomment %}
 
-    <h2 style="font-size:18px; font-weight:600; color:#111; margin:0 0 8px; line-height:1.3;">Escolha um canal de contato de sua preferência</h2>
-    <p style="font-size:13px; color:#777; margin:0 0 24px;">Estamos prontos para te ajudar a encontrar a joia perfeita.</p>
+    <span style="font-size:14px; font-weight:600; color:#111; margin:0 0 8px; line-height:1.3;">Escolha um canal de contato de sua preferência</span>
 
     <!-- Botão WhatsApp -->
     <a
@@ -193,7 +192,7 @@
       target="_blank"
       rel="noopener noreferrer"
       onclick="var m=this.closest('[id^=specialist-modal-]');if(m){m.classList.remove('specialist-modal--open');m.style.display='none';}"
-      style="display:flex; align-items:center; justify-content:center; gap:10px; width:100%; padding:14px 20px; background:#25D366; color:#fff; border-radius:9999px; font-size:15px; font-weight:600; text-decoration:none; margin-bottom:12px; transition:background 0.2s, transform 0.15s;"
+      style="display:flex; margin-top: 15px; align-items:center; justify-content:center; gap:10px; width:100%; padding:14px 20px; background:#25D366; color:#fff; border-radius:9999px; font-size:14px; font-weight:600; text-decoration:none; margin-bottom:12px; transition:background 0.2s, transform 0.15s;"
       onmouseover="this.style.background='#20bf5b'; this.style.transform='translateY(-1px)';"
       onmouseout="this.style.background='#25D366'; this.style.transform='translateY(0)';"
     >
@@ -208,7 +207,7 @@
       id="btn--specialist-chat"
       type="button"
       data-chat-open-btn
-      style="display:flex; align-items:center; justify-content:center; gap:10px; width:100%; padding:14px 20px; background:#111; color:#fff; border-radius:9999px; font-size:15px; font-weight:600; border:none; cursor:pointer; transition:background 0.2s, transform 0.15s; box-shadow:0 4px 14px rgba(0,0,0,0.15);"
+      style="display:flex; align-items:center; justify-content:center; gap:10px; width:100%; padding:14px 20px; background:#111; color:#fff; border-radius:9999px; font-size:14px; font-weight:600; border:none; cursor:pointer; transition:background 0.2s, transform 0.15s; box-shadow:0 4px 14px rgba(0,0,0,0.15);"
       onmouseover="this.style.background='#333'; this.style.transform='translateY(-1px)';"
       onmouseout="this.style.background='#111'; this.style.transform='translateY(0)';"
       onclick="var m=document.querySelector('[id^=specialist-modal-].specialist-modal--open');if(m){m.querySelector('.specialist-modal__card').style.display='none';m.querySelector('[style*=backdrop-filter]').style.display='none';m.classList.remove('specialist-modal--open');m.style.display='none';} specialistOpenChat();"
@@ -255,8 +254,7 @@
     [id^="specialist-modal-"] .specialist-modal__card {
       max-width: 100% !important;
       width: 100% !important;
-      border-radius: 20px 20px 0 0 !important;
-      padding: 12px 24px 32px !important;
+      padding: 20px 24px 32px !important;
       transform: translateY(100%);
       transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
     }
