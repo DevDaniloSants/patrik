@@ -241,147 +241,18 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    console.log('[CHAT-DEBUG] DOMContentLoaded disparado');
     var chatBtns = document.querySelectorAll('[data-chat-open-btn]');
-    console.log('[CHAT-DEBUG] Botões [data-chat-open-btn] encontrados:', chatBtns.length);
   
-    // O Mutation Observer de killFloatingButton agora está rodando globalmente via theme.liquid!
-    // Mantemos aqui apenas a lógica de debugar estado tardio e os handlers do botão
-  
-    // Log tardio para verificar estado após carregamento completo
-    setTimeout(function() {
-      var laterChat = document.querySelector('shopify-chat') || document.querySelector('#shopify-chat');
-      console.log('[CHAT-DEBUG] === ESTADO APÓS 3s ===');
-      console.log('[CHAT-DEBUG] Chat no DOM:', laterChat ? laterChat.tagName + '#' + laterChat.id : 'NÃO ENCONTRADO');
-      if (laterChat) {
-        console.log('[CHAT-DEBUG] shadowRoot:', !!laterChat.shadowRoot);
-        if (laterChat.shadowRoot) {
-          var sEls = laterChat.shadowRoot.querySelectorAll('*');
-          console.log('[CHAT-DEBUG] Elementos no Shadow DOM:', sEls.length);
-          sEls.forEach(function(el) { console.log('[CHAT-DEBUG]   >> ', el.tagName, 'id=' + (el.id || ''), el.src ? 'src=' + el.src : ''); });
-        }
-      }
-      var allIframes = document.querySelectorAll('iframe');
-      console.log('[CHAT-DEBUG] Total iframes na página:', allIframes.length);
-      allIframes.forEach(function(f) { console.log('[CHAT-DEBUG]   iframe: id=' + (f.id || '(sem id)'), 'src=' + (f.src || '(vazio)'), 'display=' + getComputedStyle(f).display); });
-      console.log('[CHAT-DEBUG] window.ShopifyChat:', typeof window.ShopifyChat, window.ShopifyChat || '');
-      console.log('[CHAT-DEBUG] window.Shopify:', typeof window.Shopify);
-      console.log('[CHAT-DEBUG] window.Shopify.chat:', window.Shopify ? window.Shopify.chat : 'N/A');
-      if (window.Shopify && window.Shopify.chat) { console.log('[CHAT-DEBUG] Shopify.chat keys:', Object.keys(window.Shopify.chat)); }
-    }, 3000);
-  
-    // 3. Abre o chat reabilitando o componente temporariamente
-    function forceOpenChat() {
-      console.log('[CHAT-DEBUG] === forceOpenChat() chamado ===');
-      var chatEl = document.querySelector('shopify-chat') || document.querySelector('#shopify-chat');
-      console.log('[CHAT-DEBUG] chatEl:', chatEl ? chatEl.tagName + '#' + chatEl.id : 'NÃO ENCONTRADO');
-  
-      // Reabilita pointer-events no container principal para permitir interação
-      if (chatEl) {
-        chatEl.style.setProperty('pointer-events', 'auto', 'important');
-        chatEl.style.setProperty('z-index', '999999', 'important');
-        console.log('[CHAT-DEBUG] pointer-events e z-index aplicados no chatEl');
-      }
-  
-      // Tenta abrir via API nativa do Shopify Inbox
-      console.log('[CHAT-DEBUG] Verificando APIs... ShopifyChat:', typeof window.ShopifyChat, '| Shopify.chat:', window.Shopify ? typeof window.Shopify.chat : 'N/A');
-      if (window.Shopify && window.Shopify.chat) { console.log('[CHAT-DEBUG] Shopify.chat keys:', Object.keys(window.Shopify.chat)); }
-      if (window.ShopifyChat && typeof window.ShopifyChat.open === 'function') {
-        console.log('[CHAT-DEBUG] ✅ Abrindo via ShopifyChat.open()');
-        window.ShopifyChat.open();
-        return;
-      }
-      if (window.Shopify && window.Shopify.chat && typeof window.Shopify.chat.open === 'function') {
-        console.log('[CHAT-DEBUG] ✅ Abrindo via Shopify.chat.open()');
-        window.Shopify.chat.open();
-        return;
-      }
-      console.log('[CHAT-DEBUG] ❌ Nenhuma API nativa encontrada');
-  
-      // Fallback: tenta clicar no botão dentro do Shadow DOM
-      if (chatEl && chatEl.shadowRoot) {
-        console.log('[CHAT-DEBUG] Shadow DOM disponível, listando elementos:');
-        var allShadow = chatEl.shadowRoot.querySelectorAll('*');
-        allShadow.forEach(function(el) { console.log('[CHAT-DEBUG]   >> ', el.tagName, 'id=' + (el.id || ''), 'class=' + (el.className || ''), el.src ? 'src=' + el.src : ''); });
-        var shadowBtn = chatEl.shadowRoot.querySelector('button');
-        console.log('[CHAT-DEBUG] Botão no Shadow DOM:', shadowBtn);
-        if (shadowBtn) {
-          console.log('[CHAT-DEBUG] ✅ Clicando no botão do Shadow DOM');
-          shadowBtn.style.setProperty('display', 'block', 'important');
-          shadowBtn.style.setProperty('opacity', '1', 'important');
-          shadowBtn.style.setProperty('pointer-events', 'auto', 'important');
-          shadowBtn.click();
-          setTimeout(function() {
-            shadowBtn.style.setProperty('display', 'none', 'important');
-            shadowBtn.style.setProperty('opacity', '0', 'important');
-            shadowBtn.style.setProperty('pointer-events', 'none', 'important');
-          }, 100);
-          return;
-        }
-  
-        // Fallback 2: tenta encontrar e mostrar o iframe do painel
-        var iframes = chatEl.shadowRoot.querySelectorAll('iframe');
-        console.log('[CHAT-DEBUG] Fallback 2 - Iframes no Shadow DOM:', iframes.length);
-        iframes.forEach(function(iframe) {
-          var src = (iframe.src || '').toLowerCase();
-          var id = (iframe.id || '').toLowerCase();
-          console.log('[CHAT-DEBUG]   iframe:', id, src);
-          
-          if (!id.includes('dummy') && !id.includes('button')) {
-            console.log('[CHAT-DEBUG] ✅ Mostrando iframe e enviando postMessage:', id);
-            iframe.style.setProperty('display', 'block', 'important');
-            iframe.style.setProperty('opacity', '1', 'important');
-            iframe.style.setProperty('visibility', 'visible', 'important');
-            iframe.style.setProperty('pointer-events', 'auto', 'important');
-            iframe.style.setProperty('z-index', '999999', 'important');
-            
-            try {
-              iframe.contentWindow.postMessage('shopify-chat:open', '*');
-              console.log('[CHAT-DEBUG] postMessage enviado');
-            } catch(e) { console.log('[CHAT-DEBUG] ❌ Erro postMessage:', e); }
-          }
-        });
-      } else {
-        console.log('[CHAT-DEBUG] ❌ chatEl sem shadowRoot ou chatEl null');
-      }
-  
-      // Fallback 3: iframes fora do shadow DOM
-      var frames = document.querySelectorAll('iframe');
-      console.log('[CHAT-DEBUG] Fallback 3 - Total iframes no document:', frames.length);
-      var chatIframeFound = false;
-      frames.forEach(function(iframe) {
-        var src = (iframe.src || '').toLowerCase();
-        var id = (iframe.id || '').toLowerCase();
-        
-        if ((src.includes('chat') || src.includes('inbox') || id.includes('chat')) && !id.includes('dummy') && !id.includes('button')) {
-          chatIframeFound = true;
-          console.log('[CHAT-DEBUG] ✅ Fallback 3 - iframe de chat encontrado:', id, src);
-          iframe.style.setProperty('display', 'block', 'important');
-          iframe.style.setProperty('opacity', '1', 'important');
-          iframe.style.setProperty('visibility', 'visible', 'important');
-          iframe.style.setProperty('pointer-events', 'auto', 'important');
-          iframe.style.setProperty('z-index', '999999', 'important');
-          
-          try {
-            iframe.contentWindow.postMessage('shopify-chat:open', '*');
-            console.log('[CHAT-DEBUG] postMessage enviado');
-          } catch(e) { console.log('[CHAT-DEBUG] ❌ Erro postMessage:', e); }
-        }
-      });
-      if (!chatIframeFound) { console.log('[CHAT-DEBUG] ❌ Nenhum iframe de chat encontrado fora do Shadow DOM'); }
-    }
-  
-    // 4. Adiciona eventos nos botões customizados
+    // Abre o modal de escolha (WhatsApp ou Chat)
     chatBtns.forEach(function(btn) {
-      console.log('[CHAT-DEBUG] Listener adicionado ao botão:', btn.textContent.trim());
       btn.addEventListener('click', function(e) {
-        console.log('[CHAT-DEBUG] 🖱️ BOTÃO CLICADO!');
         e.preventDefault();
-        forceOpenChat();
-        
-        // Retenta para cobrir delay de carregamento do app
-        setTimeout(forceOpenChat, 300);
-        setTimeout(forceOpenChat, 800);
+        // Abre o modal de especialista do product-buttons
+        var modal = document.querySelector('[id^="specialist-modal-"]');
+        if (modal) {
+          modal.classList.add('specialist-modal--open');
+          modal.style.display = 'flex';
+        }
       });
     });
   });

@@ -313,24 +313,29 @@
 
   <body id="{{ page_title | handle }}" class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }} {{ settings.default_background }}{% if customer %} customer-logged-in{% endif %}">
     <style>
-      /* Esconde APENAS o botão flutuante do Shopify Inbox, não o modal/painel */
-      #shopify-chat {
-        /* Mantém o componente no DOM mas sem ocupar espaço visual para o botão */
+      /* Esconde o botão flutuante mas permite o modal aparecer */
+      inbox-online-store-chat#ShopifyChat:not([is-open="true"]) {
         position: fixed !important;
         bottom: 0 !important;
         right: 0 !important;
-        z-index: 999998 !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
         pointer-events: none !important;
-        display: none !important;
-        opacity: 0 !important;
-        visibility: hidden !important;
+      }
+      /* Mostra o chat quando aberto */
+      inbox-online-store-chat[is-open="true"] {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        z-index: 2147483647 !important;
+        width: auto !important;
+        height: auto !important;
       }
       /* Esconde o iframe do botão flutuante */
       iframe[id^="dummy-chat-button-iframe"] {
         display: none !important;
-        opacity: 0 !important;
-        visibility: hidden !important;
-        pointer-events: none !important;
       }
     </style>
 

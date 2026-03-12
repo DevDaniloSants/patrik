@@ -20529,7 +20529,7 @@ html.js [x-data^="announcementSlider"]:not(.flickity-enabled)>*:not(:first-child
   font-weight: var(--TYPE-WEIGHT-NAV);
   text-transform: var(--FONT-NAV-TRANSFORM);
   letter-spacing: var(--FONT-NAV-LETTER-SPACING);
-  font-size: calc(var(--font-2) * var(--TYPE-ADJUST-NAV));
+  font-size: 14px;
   width: 100%;
   min-height: 50px;
   display: flex;

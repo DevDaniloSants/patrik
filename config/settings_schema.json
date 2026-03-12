@@ -275,7 +275,8 @@
 				"label": "Heading font override",
 				"options": [
 					{ "value": "none", "label": "Use Shopify font" },
-					{ "value": "Avenir", "label": "Avenir" }
+					{ "value": "Avenir", "label": "Avenir" },
+					{ "value": "Coldiac", "label": "Coldiac" }
 				],
 				"default": "none"
 			},

@@ -200,7 +200,7 @@
             {% for block in section.blocks %}
               {% case block.type %}
                 {% when 'add-buttons' %}
-                  {% render 'product-buttons' product: product, uniq_id: product_form_id, block: block %}
+                  {% render 'product-buttons' product: product, uniq_id: product_form_id | append: '--mobile-quick', block: block %}
               {% endcase %}
             {% endfor %}
           </div>
@@ -1154,6 +1154,16 @@
 					"label": "Show recipient information form for gift card products",
 					"default": true,
 					"info": "Gift card products can optionally be sent direct to a recipient along with a personal message."
+				},
+				{
+					"type": "header",
+					"content": "Especialista — WhatsApp"
+				},
+				{
+					"type": "url",
+					"id": "whatsapp_number",
+					"label": "Link do WhatsApp",
+					"info": "Cole o link do WhatsApp, ex: https://wa.me/5511999999999"
 				},
 				{
 					"type": "header",

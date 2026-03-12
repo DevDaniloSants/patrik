@@ -123,3 +123,27 @@
     font-display: swap;
   }
 {%- endif -%}
+
+{%- if settings.custom_heading_font == 'Coldiac' -%}
+  @font-face {
+    font-family: 'Coldiac';
+    src: url('{{ "Coldiac/Coldiac.otf" | asset_url }}') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Coldiac';
+    src: url('{{ "Coldiac/Coldiac.otf" | asset_url }}') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Coldiac';
+    src: url('{{ "Coldiac/Coldiac Italic.otf" | asset_url }}') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+{%- endif -%}
