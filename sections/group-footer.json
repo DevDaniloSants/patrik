@@ -33,9 +33,9 @@
         "text-3": {
           "type": "text",
           "settings": {
-            "title": "Our Promise",
-            "text": "<p>Experience the perfect blend of comfort and style with our premium products. Meticulously crafted with attention to detail, each item is designed to enhance your daily life. Discover quality that speaks for itself and elevate your experience with our thoughtfully designed collection.</p>",
-            "text_size": 4,
+            "title": "A Patrik",
+            "text": "<p><br/>A Patrik nasce entre dois olhares complementares.<br/>O conhecimento preciso da gemologia.<br/>E o olhar sensível capaz de reconhecer beleza onde<br/>poucos veem.<br/>Esse equilíbrio define cada criação,<br/>capaz de transformar matéria em significado, revelando a<br/>beleza invisível que cada pedra carrega.<br/><br/><br/></p>",
+            "text_size": 3,
             "accordion_default": ""
           }
         },
@@ -48,7 +48,7 @@
             "recaptcha_enabled": false,
             "kicker": "Newsletter",
             "heading": "",
-            "richtext": "<p>Join to get special offers, free giveaways, and once-in-a-lifetime deals.</p>",
+            "richtext": "<p>Se inscreva para receber todas as novidades da Patrik em primeira mão!</p>",
             "text_size": 4,
             "background_color": "#22271e",
             "text_color_value": "#ffffff"

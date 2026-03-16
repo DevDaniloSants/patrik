@@ -1400,7 +1400,7 @@
             "icon_name": "icon-basket-return",
             "icon_color": "#aaaaaa",
             "title": "DEVOLUÇÃO GRÁTIS",
-            "text": "<p>Returns within 30 days receive a full refund.</p>",
+            "text": "<p>Devolva o seu produto em até 7 dias e receba reembolso integral</p>",
             "link_text": "",
             "link_url": ""
           }
@@ -1411,7 +1411,7 @@
             "icon_name": "icon-shipment",
             "icon_color": "#aaaaaa",
             "title": "ENTREGA EXPRESSA",
-            "text": "<p>Ship anywhere, rates available at checkout.</p>",
+            "text": "<p>Entregas rápidas em todo Brasil </p>",
             "link_text": "",
             "link_url": ""
           }
@@ -1422,7 +1422,7 @@
             "icon_name": "icon-payment",
             "icon_color": "#aaaaaa",
             "title": "PARCELAMENTO EM 10X",
-            "text": "<p>Call us anytime at 1(800) 555-1234.</p>",
+            "text": "<p>Parcele o seu pedido em até 10 vezes sem juros! </p>",
             "link_text": "",
             "link_url": ""
           }
