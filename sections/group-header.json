@@ -68,24 +68,6 @@
             "show_currency_mobile": true
           }
         },
-        "image_wDtxHq": {
-          "type": "image",
-          "settings": {
-            "position": "2",
-            "wh_ratio": 1.6,
-            "image": "shopify://shop_images/Ju_Bochner_PIN.png",
-            "wide_element": false,
-            "overlay_opacity": 0,
-            "overlay_color": "#000000",
-            "title": "Esmeraldas",
-            "title_color": "text--white",
-            "button_style": "is-on-image",
-            "link_text": "Shop",
-            "link": "shopify://collections/esmeraldas",
-            "button_color": "btn--white",
-            "display": "all"
-          }
-        },
         "header-block-image-2": {
           "type": "image",
           "disabled": true,
@@ -125,7 +107,6 @@
       },
       "block_order": [
         "header-block-toolbar",
-        "image_wDtxHq",
         "header-block-image-2",
         "header-block-image-3"
       ],
