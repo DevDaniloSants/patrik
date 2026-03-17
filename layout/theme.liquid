@@ -316,8 +316,8 @@
       /* Esconde o botão flutuante mas permite o modal aparecer */
       inbox-online-store-chat#ShopifyChat:not([is-open="true"]) {
         position: fixed !important;
-        bottom: 0 !important;
-        right: 0 !important;
+        {% comment %} bottom: 0 !important; {% endcomment %}
+        {% comment %} right: 0 !important; {% endcomment %}
         width: 0 !important;
         height: 0 !important;
         overflow: hidden !important;
@@ -330,8 +330,9 @@
         visibility: visible !important;
         pointer-events: auto !important;
         z-index: 2147483647 !important;
-        width: auto !important;
+        width: 100% !important;
         height: auto !important;
+        max-width: 388px !important;
       }
       /* Esconde o iframe do botão flutuante */
       iframe[id^="dummy-chat-button-iframe"] {
