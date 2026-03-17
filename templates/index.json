@@ -198,7 +198,7 @@
             "title": "Todas as Jóias",
             "text": "",
             "button_label": "",
-            "button_link": "shopify://collections/pulseira",
+            "button_link": "/collections/all",
             "button_color": "btn--neutral",
             "button_style": "btn--soft",
             "enable_video": false,
