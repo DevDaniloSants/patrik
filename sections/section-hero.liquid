@@ -18,6 +18,8 @@
 {% if section.settings.width == 'wrapper--tiny' or section.settings.width == 'wrapper--narrow' %}
   {% assign hero_content_class = 'hero__content hero__content--large' %}
 {% endif %}
+{% assign hero_specialist_modal_id = 'specialist-modal-hero-' | append: section.id %}
+{% assign hero_has_specialist_modal_button = false %}
 
 <div
   class="section--image fade-in-child js-overflow-container {{ scroll_class }}"
@@ -109,21 +111,40 @@
                     {% assign btn_color = 'button_color_' | append: forloop.index %}
                     {% assign btn_color = block.settings[btn_color] %}
 
+                    {% assign btn_open_specialist_modal = 'open_specialist_modal_' | append: forloop.index %}
+                    {% assign btn_open_specialist_modal = block.settings[btn_open_specialist_modal] %}
+                    {% if btn_open_specialist_modal %}
+                      {% assign hero_has_specialist_modal_button = true %}
+                    {% endif %}
+
                     {% if btn_text != blank %}
                       {% assign elements_counter = elements_counter | plus: 1 %}
 
                       {% capture buttons_markup %}
       {{ buttons_markup }}
 
-      <a
-        class="standard__cta hero__btn rounded-full! {{ btn_style }} {{ btn_color }} {{ btn_size }}"
-        href="{{ btn_link | default: '#' }}"
-        data-aos="hero"
-        data-aos-anchor="{{ animation_anchor }}"
-        data-aos-order="{{ elements_counter }}"
-        style="position: relative; z-index: 22; pointer-events: auto;">
-        {{ btn_text | escape }}
-      </a>
+      {% if btn_open_specialist_modal %}
+        <button
+          type="button"
+          class="standard__cta hero__btn rounded-full! {{ btn_style }} {{ btn_color }} {{ btn_size }}"
+          data-aos="hero"
+          data-aos-anchor="{{ animation_anchor }}"
+          data-aos-order="{{ elements_counter }}"
+          onclick="console.log('[Hero Specialist] CTA clicked');var m=document.getElementById('{{ hero_specialist_modal_id }}');console.log('[Hero Specialist] modal found:',m);if(m){var card=m.querySelector('.specialist-modal__card');var backdrop=m.querySelector('[style*=backdrop-filter]');console.log('[Hero Specialist] card found:',card);console.log('[Hero Specialist] backdrop found:',backdrop);if(card){card.style.display='';}if(backdrop){backdrop.style.display='';}m.classList.add('specialist-modal--open');m.style.display='flex';console.log('[Hero Specialist] modal opened');}else{console.warn('[Hero Specialist] modal id not found: {{ hero_specialist_modal_id }}');}"
+          style="position: relative; z-index: 22; pointer-events: auto;">
+          {{ btn_text | escape }}
+        </button>
+      {% else %}
+        <a
+          class="standard__cta hero__btn rounded-full! {{ btn_style }} {{ btn_color }} {{ btn_size }}"
+          href="{{ btn_link | default: '#' }}"
+          data-aos="hero"
+          data-aos-anchor="{{ animation_anchor }}"
+          data-aos-order="{{ elements_counter }}"
+          style="position: relative; z-index: 22; pointer-events: auto;">
+          {{ btn_text | escape }}
+        </a>
+      {% endif %}
     {% endcapture %}
                     {% endif %}
                   {% endfor %}
@@ -261,6 +282,89 @@
     </div>
   </div>
 </div>
+
+{% if hero_has_specialist_modal_button %}
+  <div
+    id="{{ hero_specialist_modal_id }}"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Escolha um canal de contato"
+    style="display:none; position:fixed; inset:0; z-index:99999; align-items:center; justify-content:center; padding:16px;"
+    onclick="if(event.target===this){this.classList.remove('specialist-modal--open');this.style.display='none';}">
+    <div style="position:absolute; inset:0; background:rgba(0,0,0,0.45); backdrop-filter:blur(2px);"></div>
+
+    <div class="specialist-modal__card lg:rounded-[20px]!" style="position:relative; background:#fff; padding:36px 32px 28px; max-width:420px; width:100%; text-align:center;">
+      <div class="specialist-modal__handle" style="display:none; width:36px; height:4px; background:#ddd; border-radius:9999px; margin:0 auto 20px;"></div>
+
+      <button
+        type="button"
+        aria-label="Fechar"
+        onclick="var m=this.closest('[id^=specialist-modal-]');if(m){m.classList.remove('specialist-modal--open');m.style.display='none';}"
+        style="position:absolute; top:13px; right:16px; background:none; border:none; cursor:pointer; color:#666; padding:4px; display:flex; align-items:center;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+
+      <span style="font-size:14px; font-weight:600; color:#111; margin:0 0 8px; line-height:1.3;">Escolha um canal de contato de sua preferencia</span>
+
+      <a
+        href="https://wa.me/5511999999999"
+        target="_blank"
+        rel="noopener noreferrer"
+        onclick="var m=this.closest('[id^=specialist-modal-]');if(m){m.classList.remove('specialist-modal--open');m.style.display='none';}"
+        style="display:flex; margin-top: 15px; align-items:center; justify-content:center; gap:10px; width:100%; padding:14px 20px; background:#25D366; color:#fff; border-radius:9999px; font-size:14px; font-weight:600; text-decoration:none; margin-bottom:12px; transition:background 0.2s, transform 0.15s;">
+        Falar pelo WhatsApp
+      </a>
+
+      <button
+        type="button"
+        style="display:flex; align-items:center; justify-content:center; gap:10px; width:100%; padding:14px 20px; background:#111; color:#fff; border-radius:9999px; font-size:14px; font-weight:600; border:none; cursor:pointer; transition:background 0.2s, transform 0.15s;"
+        onclick="var m=this.closest('[id^=specialist-modal-]');if(m){m.classList.remove('specialist-modal--open');m.style.display='none';}var inboxChat=document.querySelector('inbox-online-store-chat')||window.ShopifyChat;if(inboxChat&&inboxChat.tagName&&inboxChat.tagName.toLowerCase()==='inbox-online-store-chat'){inboxChat.setAttribute('is-open','true');if(inboxChat.shadowRoot){var shadowBtn=inboxChat.shadowRoot.querySelector('button');if(shadowBtn)shadowBtn.click();}}">
+        Falar pelo Chat
+      </button>
+    </div>
+  </div>
+
+  <style>
+    #{{ hero_specialist_modal_id }} { display: none; }
+    #{{ hero_specialist_modal_id }}.specialist-modal--open { display: flex !important; }
+
+    @media (max-width: 767px) {
+      #{{ hero_specialist_modal_id }} {
+        align-items: flex-end !important;
+        padding: 0 !important;
+      }
+
+      #{{ hero_specialist_modal_id }} .specialist-modal__card {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 20px 24px 32px !important;
+      }
+
+      #{{ hero_specialist_modal_id }} .specialist-modal__handle {
+        display: block !important;
+      }
+    }
+  </style>
+
+  <script>
+    (function() {
+      var modalId = '{{ hero_specialist_modal_id }}';
+      function teleportModal() {
+        var modal = document.getElementById(modalId);
+        if (modal && modal.parentNode !== document.body) {
+          document.body.appendChild(modal);
+        }
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', teleportModal);
+      } else {
+        teleportModal();
+      }
+    })();
+  </script>
+{% endif %}
 
 {% schema %}
   {
@@ -541,6 +645,12 @@
             "label": "Link"
           },
           {
+            "type": "checkbox",
+            "id": "open_specialist_modal_1",
+            "label": "Abrir modal de especialista (em vez do link)",
+            "default": false
+          },
+          {
             "type": "select",
             "id": "button_size_1",
             "label": "Size",
@@ -619,6 +729,11 @@
             "id": "link_2",
             "label": "Link"
           }, {
+            "type": "checkbox",
+            "id": "open_specialist_modal_2",
+            "label": "Abrir modal de especialista (em vez do link)",
+            "default": false
+          }, {
             "type": "select",
             "id": "button_size_2",
             "label": "Size",
@@ -695,6 +810,11 @@
             "type": "url",
             "id": "link_3",
             "label": "Link"
+          }, {
+            "type": "checkbox",
+            "id": "open_specialist_modal_3",
+            "label": "Abrir modal de especialista (em vez do link)",
+            "default": false
           }, {
             "type": "select",
             "id": "button_size_3",

@@ -33170,3 +33170,8 @@ body.template-product .section-padding {
   background: #000 !important;
   opacity: 1 !important;
 }
+
+
+#ShopifyChat {
+  max-width: 400px !important;
+}
