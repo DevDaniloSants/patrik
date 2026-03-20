@@ -524,5 +524,14 @@
   },
   "date_formats": {
     "month_day_year": "%d de %B de %Y"
+  },
+  "shopify": {
+    "checkout": {
+      "order_summary": {
+        "vat_label_html": "&nbsp;",
+        "estimated_taxes_label": "&nbsp;",
+        "information_estimated_taxes_label": "&nbsp;"
+      }
+    }
   }
 }
