@@ -506,7 +506,7 @@
         ".custom-scrollbar.small-down--show {display: none !important;}",
         ".custom-scrollbar.small-down--show::-webkit-scrollbar {display: none;}",
         ".kicker-flourished {font-size: 20px !important;}",
-        ".collection-grid-item__btn {font-size: 20px;}"
+        ".collection-grid-item__btn {font-size: 1px;}"
       ],
       "name": "Noivado e Casamento",
       "settings": {
@@ -857,7 +857,7 @@
       "custom_css": [
         ".custom-scrollbar.small-down--show {display: none !important;}",
         ".custom-scrollbar.small-down--show::-webkit-scrollbar {display: none;}",
-        ".tab-link{font-size: 20px !important;}"
+        ".tab-link {font-size: 20px !important;}"
       ],
       "name": "Lista de Produtos",
       "settings": {
