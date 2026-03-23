@@ -245,14 +245,6 @@
     "section_hero_pyEpff": {
       "type": "section-hero",
       "blocks": {
-        "kicker_Kcp6wg": {
-          "type": "kicker",
-          "settings": {
-            "kicker": "",
-            "enable_line": false,
-            "text_size": 4
-          }
-        },
         "heading_qJtYCy": {
           "type": "heading",
           "settings": {
@@ -292,7 +284,6 @@
         }
       },
       "block_order": [
-        "kicker_Kcp6wg",
         "heading_qJtYCy",
         "text_FC8Xfg",
         "button_ahAWQB"
@@ -303,7 +294,7 @@
         "mobile_image": "shopify://shop_images/Projeto_customizado_-_Mobile.png",
         "banner_link": "",
         "height": "use_screen_two_thirds",
-        "overlay_opacity": 15,
+        "overlay_opacity": 30,
         "overlay_color": "#000000",
         "enable_overlay_text": false,
         "preload_image": false,
