@@ -506,7 +506,7 @@
         ".custom-scrollbar.small-down--show {display: none !important;}",
         ".custom-scrollbar.small-down--show::-webkit-scrollbar {display: none;}",
         ".kicker-flourished {font-size: 20px !important;}",
-        ".collection-grid-item__btn {font-size: 1px;}"
+        ".collection-grid-item__btn {font-size: 18px;}"
       ],
       "name": "Noivado e Casamento",
       "settings": {
