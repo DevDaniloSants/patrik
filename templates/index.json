@@ -506,7 +506,7 @@
         ".custom-scrollbar.small-down--show {display: none !important;}",
         ".custom-scrollbar.small-down--show::-webkit-scrollbar {display: none;}",
         ".kicker-flourished {font-size: 20px !important;}",
-        ".collection-grid-item__btn{font-size: 20px;}"
+        ".collection-grid-item__btn {font-size: 20px;}"
       ],
       "name": "Noivado e Casamento",
       "settings": {
@@ -768,6 +768,10 @@
         "text_block_f78Fzx",
         "text_block_HLG8Pp"
       ],
+      "custom_css": [
+        ".kicker-flourished {font-size: 20px !important;}",
+        ".accent-title-large {font-size: 18px;}"
+      ],
       "name": "Momentos Marcantes da Vida",
       "settings": {
         "title": "Eternize os Momentos Marcantes da Vida",
@@ -852,7 +856,8 @@
       ],
       "custom_css": [
         ".custom-scrollbar.small-down--show {display: none !important;}",
-        ".custom-scrollbar.small-down--show::-webkit-scrollbar {display: none;}"
+        ".custom-scrollbar.small-down--show::-webkit-scrollbar {display: none;}",
+        ".tab-link{font-size: 20px !important;}"
       ],
       "name": "Lista de Produtos",
       "settings": {
