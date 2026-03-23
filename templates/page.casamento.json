@@ -282,8 +282,8 @@
           "type": "kicker",
           "settings": {
             "kicker": "",
-            "enable_line": false,
-            "text_size": 4
+            "enable_line": true,
+            "text_size": 15
           }
         },
         "heading_qJtYCy": {
