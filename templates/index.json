@@ -603,8 +603,8 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Place_only_the_jewelry_on_a_gr_Nano_Banana_2_91415.jpg",
-            "shape_class": "rounded-lg",
+            "image": "shopify://shop_images/Personalizados-_Nome-_PATRIK.png",
+            "shape_class": "",
             "title": "Jóias para Nascimento",
             "text": "<p>Personalize pulseiras e colares com o nome de seus filhos e netos. Realize gravações em medalhas e pingentes.</p>",
             "button_label": "",
@@ -621,8 +621,8 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Place_only_the_jewelry_on_a_gr_Nano_Banana_2_95329.jpg",
-            "shape_class": "rounded-lg",
+            "image": "shopify://shop_images/Categorias-_Ritos_de_Passagem-_PATRIK-9.png",
+            "shape_class": "",
             "title": "Celebre Ritos de Passagem",
             "text": "<p>Presenteie os momentos marcantes, como Batizados, Bar Mitzvah, Casamentos, Formatura e Bodas.</p>",
             "button_label": "",
@@ -705,6 +705,32 @@
         "padding_bottom": 36
       }
     },
+    "section_richtext_RTzH8K": {
+      "type": "section-richtext",
+      "blocks": {
+        "text_eDLqYV": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        }
+      },
+      "block_order": [
+        "text_eDLqYV"
+      ],
+      "name": "Espaçamento",
+      "settings": {
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "palette--dark bg--invert--accent",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "tabs": {
       "type": "section-collection-tabs",
       "blocks": {
@@ -734,33 +760,7 @@
         "limit": 6,
         "bg": "palette--dark bg--invert--accent",
         "width": "wrapper",
-        "padding_top": 40,
-        "padding_bottom": 36
-      }
-    },
-    "section_richtext_RTzH8K": {
-      "type": "section-richtext",
-      "blocks": {
-        "text_eDLqYV": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_size": 4,
-            "text_columns": 1
-          }
-        }
-      },
-      "block_order": [
-        "text_eDLqYV"
-      ],
-      "name": "Espaçamento",
-      "settings": {
-        "align_text": "text-left",
-        "text_color": "text--neutral",
-        "bg": "palette--dark bg--invert--accent",
-        "content_width": 2000,
-        "width": "wrapper",
-        "padding_top": 36,
+        "padding_top": 20,
         "padding_bottom": 36
       }
     },
@@ -792,7 +792,7 @@
             "image": "shopify://shop_images/Assessoria.png",
             "shape_class": "",
             "title": "Assessoria de Especialista",
-            "text": "<p>Nossos especialistas está disponível online e preparado para as melhores recomendações, a fim de que sua jóia seja perfeita para o momento a ser celebrado.</p>",
+            "text": "<p>Nossos especialistas estão disponíveis online e preparados para as melhores recomendações, a fim de que sua jóia seja perfeita para o momento a ser celebrado.</p>",
             "button_label": "",
             "button_link": "",
             "open_specialist_modal": true,
@@ -809,8 +809,8 @@
             "enable_image": true,
             "image": "shopify://shop_images/Certificado_ouro.jpg",
             "shape_class": "",
-            "title": "Certificação do Ouro",
-            "text": "<p>A PATRIK oferece, junto a sua jóia, um serviço de Jewel Care, para que ela permaneça sempre da mesma forma que você a comprou. </p>",
+            "title": "Certificação da Jóia",
+            "text": "<p>A PATRIK oferece, junto a sua jóia, um certificado de autenticidade do ouro 18k e das pedras, para que você tenha segurança da sua escolha. </p>",
             "button_label": "",
             "button_link": "",
             "open_specialist_modal": false,
@@ -1344,7 +1344,7 @@
             "icon_name": "icon-payment",
             "icon_color": "#aaaaaa",
             "title": "PARCELAMENTO EM 10X",
-            "text": "<p>Parcele o seu pedido em até 10 vezes sem juros! </p>",
+            "text": "<p>Parcele o seu pedido em até 10 vezes sem juros</p>",
             "link_text": "",
             "link_url": ""
           }
@@ -1383,8 +1383,8 @@
     "section_richtext_jRYTUM",
     "section_columns_X6EhLY",
     "section_richtext_Mijpwb",
-    "tabs",
     "section_richtext_RTzH8K",
+    "tabs",
     "section_columns_BncX3A",
     "section_logos_Cd4AwJ",
     "section_pair_hotspots_showcase_RGxViq",
