@@ -738,7 +738,7 @@
           "type": "collection",
           "settings": {
             "collection": "aneis",
-            "title": ""
+            "title": "Conheça nossos Anéis"
           }
         }
       },
@@ -761,7 +761,7 @@
         "bg": "palette--dark bg--invert--accent",
         "width": "wrapper",
         "padding_top": 20,
-        "padding_bottom": 36
+        "padding_bottom": 100
       }
     },
     "section_columns_BncX3A": {
