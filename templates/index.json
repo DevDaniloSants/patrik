@@ -622,7 +622,7 @@
           "settings": {
             "enable_image": true,
             "image": "shopify://shop_images/Place_only_the_jewelry_on_a_gr_Nano_Banana_2_95329.jpg",
-            "shape_class": "",
+            "shape_class": "rounded-lg",
             "title": "Celebre Ritos de Passagem",
             "text": "<p>Presenteie os momentos marcantes, como Batizados, Bar Mitzvah, Casamentos, Formatura e Bodas.</p>",
             "button_label": "",
