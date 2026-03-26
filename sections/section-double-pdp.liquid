@@ -274,15 +274,23 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    var msg = {{ section.settings.specialist_message | json }};
     var chatBtns = document.querySelectorAll('[data-chat-open-btn]');
-  
-    // Abre o modal de escolha (WhatsApp ou Chat)
+
     chatBtns.forEach(function(btn) {
       btn.addEventListener('click', function(e) {
         e.preventDefault();
-        // Abre o modal de especialista do product-buttons
         var modal = document.querySelector('[id^="specialist-modal-"]');
         if (modal) {
+          if (msg) {
+            var wa = modal.querySelector('a[href*="wa.me"]');
+            if (wa) {
+              var base = wa.getAttribute('data-wa-base') || wa.href.split('?')[0];
+              wa.setAttribute('data-wa-base', base);
+              wa.href = base + '?text=' + encodeURIComponent(msg);
+            }
+            modal.setAttribute('data-specialist-message', msg);
+          }
           modal.classList.add('specialist-modal--open');
           modal.style.display = 'flex';
         }
@@ -671,6 +679,16 @@
         "id": "target_material",
         "label": "Condição: Material Específico",
         "info": "Puxa automaticamente do metacampo 'Material de Joias'. Deixe vazio para mostrar sempre. Ex: 'Ouro Branco', 'Gold'."
+      },
+      {
+        "type": "header",
+        "content": "Mensagem Padrão do Especialista"
+      },
+      {
+        "type": "text",
+        "id": "specialist_message",
+        "label": "Mensagem padrão (WhatsApp e Chat)",
+        "info": "Texto fixo para todas as PDPs. Preenchido automaticamente ao clicar em 'Consultar Especialista'."
       },
       {
         "type": "select",
