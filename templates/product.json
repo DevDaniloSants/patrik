@@ -93,6 +93,7 @@
           "settings": {
             "enable_payment_button": false,
             "enable_gift_card_recipient": false,
+            "whatsapp_number": "",
             "padding_bottom": 20
           }
         },
@@ -242,7 +243,7 @@
             "enable_autoplay": true,
             "object_position": "center-center",
             "overlay_opacity": 15,
-            "overlay_color": "#000",
+            "overlay_color": "#000000",
             "kicker": "",
             "title": "",
             "richtext": "",
@@ -282,65 +283,6 @@
         "brick_gutter": 0,
         "borders": false,
         "bg_color": "#142b26",
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "section_double_LMg3p9": {
-      "type": "section-double",
-      "blocks": {
-        "text_mC3XLy": {
-          "type": "text",
-          "settings": {
-            "kicker": "Veja a peça apresentada pelo nosso Especialista",
-            "title": "",
-            "text": "<p>Nosso time é treinado para apresentar nossos produtos de forma simples e profunda. Veja o video e se sinta como se estivesse no balcão da loja, ou fale ao vivo clicando no botão abaixo.</p>",
-            "font_size": 4,
-            "text_columns": 1,
-            "align_text": "text-center",
-            "button_text": "CHAT COM ESPECIALISTA",
-            "button_url": "",
-            "button_color": "btn--white",
-            "button_style": "btn--outline btn--long",
-            "text_color": "text--white",
-            "bg_color": ""
-          }
-        },
-        "video_HTLgd9": {
-          "type": "video",
-          "settings": {
-            "video_bg": "shopify://files/videos/ScreenRecording_01-07-2026 18-53-51_1.mov",
-            "enable_autoplay": false,
-            "object_position": "center-center",
-            "video_link": "",
-            "popup_text": "",
-            "kicker": "",
-            "title": "",
-            "richtext": "",
-            "text_align": "align--middle-center",
-            "text_color": "text--white",
-            "overlay_opacity": 15,
-            "overlay_color": "#000000",
-            "link_text": "",
-            "link": "",
-            "button_color": "btn--white",
-            "button_style": "btn"
-          }
-        }
-      },
-      "block_order": [
-        "text_mC3XLy",
-        "video_HTLgd9"
-      ],
-      "name": "Image with text",
-      "settings": {
-        "target_material": "",
-        "height": "use_screen_one_half",
-        "brick_gutter": 0,
-        "borders": false,
-        "bg_color": "#142b26",
-        "preload_image": false,
         "width": "wrapper",
         "padding_top": 36,
         "padding_bottom": 36
@@ -677,7 +619,6 @@
     "main",
     "section_richtext_tnYiLL",
     "section_double_pdp_6xgTfd",
-    "section_double_LMg3p9",
     "section_richtext_nxceCr",
     "section_pair_before_after_j4gCcV",
     "section_richtext_zQiRDP",
