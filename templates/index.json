@@ -15,9 +15,9 @@
         "7c3cb134-606a-4424-8af4-58a35c6d9088": {
           "type": "kicker",
           "settings": {
-            "kicker": "A beleza que surge das formas de Gaia",
+            "kicker": "Da natureza nasce toda a inspiração humana",
             "enable_line": false,
-            "text_size": 3
+            "text_size": 4
           }
         },
         "3b0fccbc-3710-42f6-8b1f-211d5082b6ab": {
@@ -256,8 +256,8 @@
         "bg": "palette--dark bg--invert--accent",
         "content_width": 2000,
         "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 10,
+        "padding_bottom": 32
       }
     },
     "section_hero_mEN6xM": {
@@ -551,8 +551,8 @@
         "bg": "palette--dark bg--invert--accent",
         "content_width": 2000,
         "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "section_image_neGRcR": {
@@ -565,115 +565,6 @@
         "max_width": 100,
         "x_align": "center",
         "color_bg": "palette--dark bg--invert--accent",
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "section_hero_eV6Yh3": {
-      "type": "section-hero",
-      "blocks": {
-        "kicker_qNGL9L": {
-          "type": "kicker",
-          "settings": {
-            "kicker": "Conheça a coleção",
-            "enable_line": false,
-            "text_size": 3
-          }
-        },
-        "spacer_BdxNTy": {
-          "type": "spacer",
-          "settings": {
-            "spacer_padding": 10,
-            "show_line": false
-          }
-        },
-        "heading_9iQjEq": {
-          "type": "heading",
-          "settings": {
-            "title": "Vitral",
-            "text_size": 11
-          }
-        },
-        "text_ngJfeL": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "richtext": "<p>Fresher than a bubble bath, cleaner than a network tv show</p>",
-            "text_size": 6
-          }
-        },
-        "button_jXCpwB": {
-          "type": "button",
-          "settings": {
-            "link_text_1": "Shop now",
-            "link_1": "shopify://collections",
-            "open_specialist_modal_1": false,
-            "button_size_1": "btn--medium",
-            "button_style_1": "btn uppercase",
-            "button_color_1": "btn--white",
-            "link_text_2": "",
-            "link_2": "",
-            "open_specialist_modal_2": false,
-            "button_size_2": "btn--long",
-            "button_style_2": "btn-text-thick-line",
-            "button_color_2": "btn--white",
-            "link_text_3": "",
-            "link_3": "",
-            "open_specialist_modal_3": false,
-            "button_size_3": "btn--long",
-            "button_style_3": "caps--link",
-            "button_color_3": "btn--white"
-          }
-        }
-      },
-      "block_order": [
-        "kicker_qNGL9L",
-        "spacer_BdxNTy",
-        "heading_9iQjEq",
-        "text_ngJfeL",
-        "button_jXCpwB"
-      ],
-      "name": "Hero",
-      "settings": {
-        "image": "shopify://shop_images/Collection_Vitral_desktop_3.png",
-        "mobile_image": "shopify://shop_images/Collection_Vitral_mobile_2.png",
-        "banner_link": "shopify://collections",
-        "height": "use_screen_three_quarters",
-        "overlay_opacity": 0,
-        "overlay_color": "#3c190b",
-        "enable_overlay_text": false,
-        "preload_image": true,
-        "content_width": 2000,
-        "text_align": "align--bottom-left",
-        "text_color": "text--white",
-        "color_bg": "hero__content--transparent",
-        "width": "wrapper--none",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "section_richtext_LbFBAr": {
-      "type": "section-richtext",
-      "blocks": {
-        "text_PR9jaj": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_size": 4,
-            "text_columns": 1
-          }
-        }
-      },
-      "block_order": [
-        "text_PR9jaj"
-      ],
-      "name": "Espaçamento",
-      "settings": {
-        "align_text": "text-left",
-        "text_color": "text--neutral",
-        "bg": "palette--dark bg--invert--accent",
-        "content_width": 2000,
         "width": "wrapper",
         "padding_top": 36,
         "padding_bottom": 36
@@ -701,8 +592,8 @@
         "bg": "palette--dark bg--invert--accent",
         "content_width": 2000,
         "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 26,
+        "padding_bottom": 26
       }
     },
     "section_columns_X6EhLY": {
@@ -810,8 +701,8 @@
         "bg": "palette--dark bg--invert--accent",
         "content_width": 2000,
         "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "section_richtext_RTzH8K": {
@@ -847,7 +738,7 @@
           "type": "collection",
           "settings": {
             "collection": "aneis",
-            "title": ""
+            "title": "Conheça nossos Anéis"
           }
         }
       },
@@ -869,8 +760,8 @@
         "limit": 6,
         "bg": "palette--dark bg--invert--accent",
         "width": "wrapper",
-        "padding_top": 40,
-        "padding_bottom": 36
+        "padding_top": 20,
+        "padding_bottom": 100
       }
     },
     "section_columns_BncX3A": {
@@ -880,9 +771,9 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/David_GIA.png",
+            "image": "shopify://shop_images/Gemini_Generated_Image_i3hdaqi3hdaqi3hd.png",
             "shape_class": "",
-            "title": "Gemólogo Certificado no GIA",
+            "title": "Gemólogo Certificado pelo GIA",
             "text": "<p>A PATRIK nasceu do amor de um de seus fundadores pela pedras preciosas. Nas peças únicas, David, Gemólogo certificado no GIA, escolhe a pedra e depois desenha a peça para aquela gema específica.</p>",
             "button_label": "",
             "button_link": "",
@@ -898,10 +789,10 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Assessoria.png",
+            "image": "shopify://shop_images/ChatGPT_Image_25_de_mar._de_2026_18_57_27.png",
             "shape_class": "",
             "title": "Assessoria de Especialista",
-            "text": "<p>Nossos especialistas está disponível online e preparado para as melhores recomendações, a fim de que sua jóia seja perfeita para o momento a ser celebrado.</p>",
+            "text": "<p>Nossos especialistas estão disponíveis online e preparados para as melhores recomendações, a fim de que sua jóia seja perfeita para o momento a ser celebrado.</p>",
             "button_label": "",
             "button_link": "",
             "open_specialist_modal": true,
@@ -916,10 +807,10 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Captura_de_Tela_2025-12-24_as_17.36.50.png",
+            "image": "shopify://shop_images/altere_onde_est_escrito_signat_Nano_Banana_2_42850.jpg",
             "shape_class": "",
-            "title": "Certificação do Ouro",
-            "text": "<p>A PATRIK oferece, junto a sua jóia, um serviço de Jewel Care, para que ela permaneça sempre da mesma forma que você a comprou. </p>",
+            "title": "Certificação da Jóia",
+            "text": "<p>A PATRIK oferece, junto a sua jóia, um certificado de autenticidade do ouro 18k e das pedras, para que você tenha segurança da sua escolha. </p>",
             "button_label": "",
             "button_link": "",
             "open_specialist_modal": false,
@@ -1453,7 +1344,7 @@
             "icon_name": "icon-payment",
             "icon_color": "#aaaaaa",
             "title": "PARCELAMENTO EM 10X",
-            "text": "<p>Parcele o seu pedido em até 10 vezes sem juros! </p>",
+            "text": "<p>Parcele o seu pedido em até 10 vezes sem juros</p>",
             "link_text": "",
             "link_url": ""
           }
@@ -1489,8 +1380,6 @@
     "section_list_collections_ftJBTL",
     "section_richtext_q8gnYc",
     "section_image_neGRcR",
-    "section_hero_eV6Yh3",
-    "section_richtext_LbFBAr",
     "section_richtext_jRYTUM",
     "section_columns_X6EhLY",
     "section_richtext_Mijpwb",
