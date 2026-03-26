@@ -13,12 +13,30 @@
 
   assign target_material = section.settings.target_material | downcase | strip
   assign show_section = true
+  assign hide_reason = ''
 
   if target_material != blank
     if product_material_text contains target_material
       assign show_section = true
     else
       assign show_section = false
+      assign hide_reason = 'material'
+    endif
+  endif
+
+  if show_section
+    assign video_obj = product.metafields.custom.video_pdp.value
+    assign has_video_block = false
+    for block in section.blocks
+      if block.type == 'video'
+        assign has_video_block = true
+        break
+      endif
+    endfor
+
+    if has_video_block and video_obj == blank
+      assign show_section = false
+      assign hide_reason = 'video'
     endif
   endif
 -%}
@@ -47,7 +65,11 @@
   {%- if show_section == false and request.design_mode -%}
     <div class="relative w-full z-50">
       <div class="bg-black text-white p-3 text-xs w-full text-center border border-white/20">
-        Esta seção inteira ficará OCULTA na loja porque o produto não tem "{{ section.settings.target_material }}" no material.
+        {%- if hide_reason == 'material' -%}
+          Esta seção inteira ficará OCULTA na loja porque o produto não tem "{{ section.settings.target_material }}" no material.
+        {%- elsif hide_reason == 'video' -%}
+          Esta seção inteira ficará OCULTA na loja porque o metacampo de vídeo (custom.video_pdp) está vazio.
+        {%- endif -%}
       </div>
     </div>
   {%- endif -%}
@@ -65,9 +87,8 @@
           {% case block.type %}
 
             {% when 'video' %}
-              {%- assign video_obj = product.metafields.custom.video_pdp.value -%}
 
-              {%- if video_obj != blank -%}
+              {%- if video_obj != blank or request.design_mode -%}
                 <div
                   class="brick__block"
                   data-overflow-frame
@@ -139,11 +160,23 @@
 
                     {%- if video_autoplay -%}
                       <div class="video-autoplay-wrapper">
-                        {{ video_obj | video_tag: autoplay: true, loop: true, muted: true, controls: false, playsinline: true, image_size: '1200x', style: video_styles, data-video-autoplay: '' }}
+                        {%- if video_obj != blank -%}
+                          {{ video_obj | video_tag: autoplay: true, loop: true, muted: true, controls: false, playsinline: true, image_size: '1200x', style: video_styles, data-video-autoplay: '' }}
+                        {%- else -%}
+                          <div class="w-full h-full bg-neutral-200 flex items-center justify-center text-neutral-400 italic">
+                            (Metafield "custom.video_pdp" vazio)
+                          </div>
+                        {%- endif -%}
                       </div>
                     {%- else -%}
                       <div class="video-wrapper" style="width: 100%; height: 100%;">
-                        {{ video_obj | video_tag: autoplay: false, loop: true, muted: false, controls: true, playsinline: true, image_size: '1200x', style: video_styles, class: 'w-full h-full object-cover pointer-events-auto' }}
+                        {%- if video_obj != blank -%}
+                          {{ video_obj | video_tag: autoplay: false, loop: true, muted: false, controls: true, playsinline: true, image_size: '1200x', style: video_styles, class: 'w-full h-full object-cover pointer-events-auto' }}
+                        {%- else -%}
+                          <div class="w-full h-full bg-neutral-200 flex items-center justify-center text-neutral-400 italic">
+                            (Metafield "custom.video_pdp" vazio)
+                          </div>
+                        {%- endif -%}
                       </div>
                     {%- endif -%}
                   </div>

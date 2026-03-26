@@ -1,6 +1,6 @@
 {%- liquid
   assign specialist_button_id = button_id | default: 'btn--specialist'
-  assign specialist_button_label = button_label | default: 'consultar especialista'
+  assign specialist_button_label = button_label | default: 'Consultar Especialista'
   assign specialist_button_class = button_class | default: 'btn--outline btn--full btn--primary specialist-btn bg-black! text-white! text-[12px]! lg:text-[14px]! lg:text-black! lg:bg-transparent! lg:py-[19px]! lg:min-h-[54px]!'
   assign specialist_button_style = button_style | default: 'width: 100%; border-radius: 9999px; background: transparent; border: 1.5px solid #000; color: #000; font-size: 14px; font-weight: 500; padding: 12px 20px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; letter-spacing: 0.02em; transition: background 0.2s, color 0.2s;'
   assign specialist_button_href = button_href | default: '#'
@@ -17,8 +17,7 @@
     class="{{ specialist_button_class }}"
     data-specialist-modal-open="specialist-modal-{{ uniq_id }}"
     onclick="var m=document.getElementById('specialist-modal-{{ uniq_id }}');m.querySelector('.specialist-modal__card').style.display='';m.querySelector('[style*=backdrop-filter]').style.display='';m.classList.add('specialist-modal--open');m.style.display='flex';"
-    style="{{ specialist_button_style }}"
-  >
+    style="{{ specialist_button_style }}">
     {{ specialist_button_label }}
   </button>
 {% else %}
@@ -26,8 +25,7 @@
     id="{{ specialist_button_id }}"
     class="{{ specialist_button_class }}"
     href="{{ specialist_button_href }}"
-    style="{{ specialist_button_style }}"
-  >
+    style="{{ specialist_button_style }}">
     {{ specialist_button_label }}
   </a>
 {% endif %}

@@ -16,6 +16,8 @@
     --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-gray-900: oklch(21% 0.034 264.665);
+    --color-neutral-200: oklch(92.2% 0 0);
+    --color-neutral-400: oklch(70.8% 0 0);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -1096,6 +1098,9 @@
   .bg-gray-300 {
     background-color: var(--color-gray-300);
   }
+  .bg-neutral-200 {
+    background-color: var(--color-neutral-200);
+  }
   .bg-transparent {
     background-color: transparent;
   }
@@ -1524,6 +1529,9 @@
   }
   .text-gray-900 {
     color: var(--color-gray-900);
+  }
+  .text-neutral-400 {
+    color: var(--color-neutral-400);
   }
   .text-white {
     color: var(--color-white);

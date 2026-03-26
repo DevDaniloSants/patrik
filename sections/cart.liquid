@@ -109,11 +109,15 @@
             </button>
           </div>
 
-          <ul class="space-y-4 text-base! leading-5 list-disc pl-5 mt-4 grid gap-2">
-            <li>Envio gratuito em um prazo de 2 a 5 dias úteis para capitais e em até 7 dias úteis demais cidades. A personalização pode adicionar até 7 a 12 dias úteis.</li>
-            <li>Você pode trocar uma peça Bvlgari que comprou online, dentro de 30 dias, ou solicitar um reembolso total, dentro de 7 dias a partir da data de entrega.</li>
-            <li>Pedidos personalizados não podem ser devolvidos ou trocados. Fragrâncias podem ser trocadas ou devolvidas em até 7 dias.</li>
-          </ul>
+          {%- if section.blocks.size > 0 -%}
+            <ul class="space-y-4 text-base! leading-5 list-disc pl-5 mt-4 grid gap-2">
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'html' -%}
+                  <li {{ block.shopify_attributes }}>{{ block.settings.content }}</li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
 
           {% comment %} Hidden elements to maintain theme compatibility {% endcomment %}
           <div class="hidden">
@@ -144,6 +148,20 @@
 {% schema %}
   {
     "name": "Cart",
+    "blocks": [
+      {
+        "type": "html",
+        "name": "Item de informação",
+        "settings": [
+          {
+            "type": "html",
+            "id": "content",
+            "label": "Conteúdo",
+            "default": "Digite aqui o texto do item."
+          }
+        ]
+      }
+    ],
     "settings": [
       {
         "type": "checkbox",
