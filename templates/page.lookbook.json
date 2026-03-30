@@ -24,7 +24,7 @@
         "heading-lookbook-block": {
           "type": "heading",
           "settings": {
-            "title": "Coleção Organica",
+            "title": "Coleção Orgânica",
             "text_size": 8
           }
         }
@@ -155,6 +155,7 @@
       ],
       "name": "Narrativa Coleção",
       "settings": {
+        "target_material": "",
         "height": "use_screen_one_half",
         "brick_gutter": 0,
         "borders": false,
