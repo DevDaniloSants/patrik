@@ -133,8 +133,7 @@
           data-aos="hero"
           data-aos-anchor="{{ animation_anchor }}"
           data-aos-order="{{ elements_counter }}"
-          data-specialist-message="{{ btn_specialist_msg | escape }}"
-          onclick="(function(btn){var m=document.getElementById('{{ hero_specialist_modal_id }}');var msg=btn.getAttribute('data-specialist-message');if(m){if(msg){var wa=m.querySelector('a[href*=\'wa.me\']');if(wa){var base=wa.getAttribute('data-wa-base')||wa.href.split('?')[0];wa.setAttribute('data-wa-base',base);wa.href=base+'?text='+encodeURIComponent(msg);}m.setAttribute('data-specialist-message',msg);}else{m.removeAttribute('data-specialist-message');}var card=m.querySelector('.specialist-modal__card');var backdrop=m.querySelector('[style*=backdrop-filter]');if(card){card.style.display='';}if(backdrop){backdrop.style.display='';}m.classList.add('specialist-modal--open');m.style.display='flex';}})(this)"
+          onclick="(function(){var m=document.getElementById('{{ hero_specialist_modal_id }}');var msg='{{ btn_specialist_msg | escape }}';if(m){var wa=m.querySelector('a[href*=\'wa.me\']');if(wa&&msg){var base=wa.getAttribute('data-wa-base')||wa.href.split('?')[0];wa.setAttribute('data-wa-base',base);wa.href=base+'?text='+encodeURIComponent(msg);}m.setAttribute('data-specialist-message',msg);var card=m.querySelector('.specialist-modal__card');var backdrop=m.querySelector('[style*=backdrop-filter]');if(card){card.style.display='';}if(backdrop){backdrop.style.display='';}m.classList.add('specialist-modal--open');m.style.display='flex';}})()"
           style="position: relative; z-index: 22; pointer-events: auto;">
           {{ btn_text | escape }}
         </button>
@@ -290,7 +289,7 @@
 {% if hero_has_specialist_modal_button %}
   {%- render 'specialist-modal',
     modal_id: hero_specialist_modal_id,
-    whatsapp_url: 'https://wa.me/5511999999999'
+    whatsapp_url: 'https://wa.me/5521974956097'
   -%}
 {% endif %}
 
