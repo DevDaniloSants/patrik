@@ -93,11 +93,14 @@
 
           <h3 class="text-[25px] font-light figtree-sansSerif">Resumo do pedido</h3>
 
-          <div class="flex justify-between items-center">
-            <span class="text-[24px]!">Subtotal</span>
+          <div class="flex flex-col items-between justify-center">
+         <div class="flex justify-between items-center w-full mb-2">
+             <span class="text-[24px]!">Subtotal</span>
             <span class="text-xl font-bold" data-cart-final>
               {{ cart.total_price | money_with_currency }}
             </span>
+         </div>
+            <span class="flex justify-between font-bold text-[21px]!">pague em até 10x <span class="text-[21px]!"> {{ cart.total_price | divided_by: 10 | money_with_currency }}</span></span>
           </div>
 
           <div class="cart__footer__checkout">

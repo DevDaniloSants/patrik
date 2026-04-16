@@ -185,7 +185,7 @@
 
         {% comment %} Mobile product info - rendered outside the carousel {% endcomment %}
 		 {% comment %} Descomentar dependendo do que vier da reunião adicionar absolute bottom-0{% endcomment %}
-         <div class="mobile-product-content flex md:hidden! px-5 pt-3 absolute bottom-[5px] w-full! justify-between! z-[40]! pointer-events-none!">
+         <div class="mobile-product-content flex md:hidden! px-5 pt-3 absolute bottom-[5px] w-full! justify-between! z-[40]! pointer-events-none! items-end!" style="align-items: end; padding-bottom: 8px;">
           <div class="mobile-product-info flex flex-col pointer-events-auto!">
             {% for block in section.blocks %}
               {% case block.type %}
@@ -196,7 +196,7 @@
               {% endcase %}
             {% endfor %}
           </div>
-          <div class="mobile-product-buy pointer-events-auto!">
+          <div class="mobile-product-buy pointer-events-auto! self-end">
             {% for block in section.blocks %}
               {% case block.type %}
                 {% when 'add-buttons' %}

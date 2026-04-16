@@ -29585,6 +29585,8 @@ video::-webkit-media-controls-panel {
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: stretch;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 @media only screen and (max-width: 767px) {

@@ -92,9 +92,30 @@
             content: image_content
           -%}
           {% if section.settings.zoom_enable or has_ruler %}
-            <div class="media__buttons__holder hidden lg:block">
+            <style>
+              .media__buttons__holder {
+                top: 20px !important;
+                right: 20px !important;
+                bottom: auto !important;
+                left: auto !important;
+                justify-content: flex-end !important;
+                width: fit-content !important;
+                display: flex !important;
+                z-index: 100 !important;
+              }
+              @media (min-width: 768px) {
+                .media__buttons__holder {
+                  top: auto !important;
+                  right: auto !important;
+                  bottom: 20px !important;
+                  left: 20px !important;
+                  justify-content: flex-start !important;
+                }
+              }
+            </style>
+            <div class="media__buttons__holder">
               {% if section.settings.zoom_enable %}
-                <button class="media__button media__button--zoom" data-zoom-button>
+                <button class="media__button media__button--zoom" style="position: relative !important; z-index: 110 !important;" data-zoom-button>
                   {% render 'icon-core-magnify' %}
                   <span class="visually-hidden">{{ 'general.accessibility.zoom' | t }}</span>
                 </button>

@@ -38,13 +38,6 @@
             "padding_bottom": 16
           }
         },
-        "text_JfWdNe": {
-          "type": "text",
-          "settings": {
-            "title": "<p><em>Parcele em até 10x</em></p>",
-            "padding_bottom": 20
-          }
-        },
         "size_guide": {
           "type": "size-guide",
           "settings": {
@@ -164,7 +157,6 @@
         "spacer_yHKKaV",
         "title",
         "price",
-        "text_JfWdNe",
         "size_guide",
         "variants",
         "subscriptions",

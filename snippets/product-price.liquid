@@ -47,7 +47,7 @@
   endif
 -%}
 
-<div class="product__block__price" style="--PB: {{ block.settings.padding_bottom }}px;" {{ block.shopify_attributes }}>
+<div class="product__block__price" style="--PB: 0px;" {{ block.shopify_attributes }}>
   <div class="product__price__wrap">
     <div class="product__price__main" data-price-wrapper>
       <span class="product__price">
@@ -57,6 +57,9 @@
           {%- else -%}
             {{ price | money }}
           {%- endif -%}
+        </span>
+        <span class="product__price--installments block mt-1 {{ price_size_class }} text-white! md:text-[#3c3f36]!">
+            ou 10x de {{ price | divided_by: 10.0 | money }}
         </span>
       </span>
 

@@ -1,8 +1,18 @@
 {%- assign current_variant = product.selected_or_first_available_variant -%}
 {%- assign product_reference_code = current_variant.sku | strip -%}
 {%- if product_reference_code != blank -%}
-  <p class="p text-[12px] font-light" data-product-reference>
-  <span data-product-reference-value class="text-white! lg:text-black!">{{ product_reference_code }}</span>
+  <style>
+    [data-product-reference-value] {
+      color: white !important;
+    }
+    @media (min-width: 768px) {
+      [data-product-reference-value] {
+        color: black !important;
+      }
+    }
+  </style>
+  <p class="p text-[12px] font-light text-white lg:text-black" data-product-reference>
+  <span data-product-reference-value class="md:text-black!">{{ product_reference_code }}</span>
   </p>
 {%- endif -%}
 

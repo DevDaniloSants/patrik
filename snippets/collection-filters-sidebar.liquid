@@ -88,13 +88,14 @@
           <div id="mobile-cat-dropdown" class="hidden bg-white border-t border-gray-100">
             <ul class="flex flex-col pl-4">
               {%- for collection_link in collections -%}
-                {% unless collection_link.handle == 'frontpage' %}
+                {%- assign handle_downcase = collection_link.handle | downcase -%}
+                {%- unless handle_downcase == 'frontpage' or handle_downcase == 'all' or handle_downcase == 'aneis' or handle_downcase == 'anel' or handle_downcase == 'brincos' or handle_downcase == 'brinco' or handle_downcase == 'pulseiras' or handle_downcase == 'pulseira' or handle_downcase == 'colares' or handle_downcase == 'colar' or handle_downcase == 'todas-as-joias' -%}
                   <li class="border-b border-gray-200 last:border-0">
                     <a href="{{ collection_link.url }}" class="block py-4 pr-4 ml-4 text-base font-bold text-gray-700 hover:text-black hover:bg-gray-50 flex justify-between items-center decoration-0">
                       <span style="font-weight: 700; font-size: 16px;">{{ collection_link.title }}</span>
                     </a>
                   </li>
-                {% endunless %}
+                {%- endunless -%}
               {%- endfor -%}
             </ul>
           </div>
@@ -390,12 +391,13 @@
                style="">
             <div class="pt-6 pb-2">
             <ul class="flex flex-col gap-y-2">
-              {%- assign titulos_excluidos = "Anéis,Brincos,Colares,Pulseiras" | split: "," -%}
+              {%- assign titulos_excluidos = "Anéis,Brincos,Colares,Pulseiras,Todas as Jóias,Todas as Joias" | split: "," -%}
               {% for collection_link in collections %}
                 {%- assign skip_collection = false -%}
+                {%- assign handle_downcase = collection_link.handle | downcase -%}
 
-                {%- comment -%} Excluir frontpage {%- endcomment -%}
-                {%- if collection_link.handle == 'frontpage' -%}
+                {%- comment -%} Excluir frontpage e all {%- endcomment -%}
+                {%- if handle_downcase == 'frontpage' or handle_downcase == 'all' or handle_downcase == 'todas-as-joias' or handle_downcase == 'aneis' or handle_downcase == 'anel' or handle_downcase == 'brincos' or handle_downcase == 'brinco' or handle_downcase == 'pulseiras' or handle_downcase == 'pulseira' or handle_downcase == 'colares' or handle_downcase == 'colar' -%}
                   {%- assign skip_collection = true -%}
                 {%- endif -%}
 

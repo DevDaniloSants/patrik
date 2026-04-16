@@ -20,7 +20,7 @@
   endif
 -%}
 
-<div class="product__block__buttons" style="--PB: {{ block.settings.padding_bottom }}px;" {{ block.shopify_attributes }} >
+<div class="product__block__buttons" style="--PB: 0px;" {{ block.shopify_attributes }} >
   <div data-product-form-outer>
     {% comment %} The [data-product-form] tag distinguishes the product form from upsell instant-add-buttons. {% endcomment %}
     {%- form 'product', product, id: uniq_id, data-product-form: '', data-product-handle: product.handle -%}
