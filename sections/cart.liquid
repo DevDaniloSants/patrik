@@ -26,7 +26,8 @@
   data-section-id="{{ section.id }}"
   data-section-type="cart"
   data-ajax-disable="{{ ajax_disable }}"
-  style="--PT: {{ section.settings.padding_top }}px; --PB: {{ section.settings.padding_bottom }}px;">
+  style="--PT: {{ section.settings.padding_top }}px; --PB: {{ section.settings.padding_bottom }}px;"
+>
   {% comment %} Cart is empty {% endcomment %}
   <div class="cart__empty__page {{ empty_init }}" data-cart-empty>
     {% render 'cart-empty' %}
@@ -35,24 +36,34 @@
   <div
     class="{{ section.settings.width }} section-padding px-0! lg:px-[50px]! lg:py-9! {{ full_init }}"
     data-cart-form
-    data-cart-loading>
+    data-cart-loading
+  >
     <form
       action="{{ routes.cart_url }}"
       method="post"
       novalidate
-      class="cart">
-      <h3 class="cart__page__title flex! justify-start! tracking-normal! lg:tracking-normal! body-size-8 w-full! text-[30px]! lg:text-[48px]! lg:px-0! px-4! font-light! text-black! mb-0!  pb-4! pt-2!" style="font-family: 'Inter', sans-serif;">{{ 'cart.general.title' | t }}</h3>
+      class="cart"
+    >
+      <h3
+        class="cart__page__title flex! justify-start! tracking-normal! lg:tracking-normal! body-size-8 w-full! text-[30px]! lg:text-[48px]! lg:px-0! px-4! font-light! text-black! mb-0!  pb-4! pt-2!"
+        style="font-family: 'Inter', sans-serif;"
+      >
+        {{ 'cart.general.title' | t }}
+      </h3>
       <div
         class="errors"
         data-form-errors
-        style="display: none;"></div>
+        style="display: none;"
+      ></div>
 
       <div class="template__cart__body md:grid md:grid-cols-12 md:gap-8 items-start">
-
         <div class="md:col-span-8">
           <div class="cart__items__grid cart__heading__wrapper hidden!">
             <div class="cart__heading__back">
-              <a href="{{ settings.cart_continue_browsing | default: routes.all_products_collection_url }}" class="cart__heading cart__return">
+              <a
+                href="{{ settings.cart_continue_browsing | default: routes.all_products_collection_url }}"
+                class="cart__heading cart__return"
+              >
                 {% render 'icon-core-chevron-left' %}
                 &nbsp;
                 {{ 'cart.general.continue_browsing' | t }}
@@ -70,44 +81,51 @@
           </div>
 
           {% comment %} Preciso renderizar aqui o preço total dos produtos (somando tudo) {% endcomment %}
-          {% comment %} <div class="cart__items__total">
-                                                                                                                                                                                                                                                                                                                                                                                                {% if settings.currency_code_enable %}
-                                                                                                                                                                                                                                                                                                                                                                                                  {{ line_item.final_line_price | money_with_currency }}
-                                                                                                                                                                                                                                                                                                                                                                                                {% else %}
-                                                                                                                                                                                                                                                                                                                                                                                                  {{ line_item.final_line_price | money }}
-                                                                                                                                                                                                                                                                                                                                                                                                {% endif %}
-                                                                                                                                                                                                                                                                                                                                </div> {% endcomment %}
+          {% comment %}
+            <div class="cart__items__total">
+                                                                            {% if settings.currency_code_enable %}
+                                                                              {{ line_item.final_line_price | money_with_currency }}
+                                                                            {% else %}
+                                                                              {{ line_item.final_line_price | money }}
+                                                                            {% endif %}
+            </div>
+          {% endcomment %}
 
           <div data-cart-form>
-            {% comment %} 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            The following snippet is refreshed via ajax with 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            cart.items.liquid when the quantity is adjusted.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        {% endcomment %}
+            {% comment %}
+              The following snippet is refreshed via ajax with
+              cart.items.liquid when the quantity is adjusted.
+            {% endcomment %}
             <div data-line-items>
               {% render 'cart-line-items' %}
             </div>
           </div>
         </div>
 
-        <div class="template__cart__footer md:col-span-4 sticky gap-6! top-8 bg-white p-6 rounded-[8px] shadow-md lg:flex! flex-col {% if additional_checkout_buttons and section.settings.cart_show_additional_buttons %} template__cart__footer--additional_buttons{% endif %}" data-cart-bottom>
-
+        <div
+          class="template__cart__footer md:col-span-4 sticky gap-6! top-8 bg-white p-6 rounded-[8px] shadow-md lg:flex! flex-col {% if additional_checkout_buttons and section.settings.cart_show_additional_buttons %} template__cart__footer--additional_buttons{% endif %}"
+          data-cart-bottom
+        >
           <h3 class="text-[25px] font-light figtree-sansSerif">Resumo do pedido</h3>
 
           <div class="flex flex-col items-between justify-center">
-         <div class="flex justify-between items-center w-full mb-2">
-             <span class="text-[24px]!">Subtotal</span>
-            <span class="text-xl font-bold" data-cart-final>
-              {{ cart.total_price | money_with_currency }}
-            </span>
-         </div>
-            <span class="flex justify-between font-bold text-[21px]!">pague em até 10x <span class="text-[21px]!"> {{ cart.total_price | divided_by: 10 | money_with_currency }}</span></span>
+            <div class="flex justify-between items-center w-full mb-2">
+              <span class="text-[24px]!">Subtotal</span>
+              <span class="text-xl font-bold" data-cart-final>
+                {{ cart.total_price | money }}
+              </span>
+            </div>
+            <span class="flex justify-between font-bold text-[17px]!"
+              >pague em até 10x <span class="text-[17px]!"> {{ cart.total_price | divided_by: 10 | money }}</span></span
+            >
           </div>
 
           <div class="cart__footer__checkout">
             <button
               type="submit"
               name="checkout"
-              class="btn btn--primary bg-black! btn--large checkout__button w-full uppercase">
+              class="btn btn--primary bg-black! btn--large checkout__button w-full uppercase"
+            >
               REALIZAR COMPRA
             </button>
           </div>
@@ -128,7 +146,8 @@
               <textarea
                 name="note"
                 id="CartSpecialInstructions"
-                data-cart-note>{{ cart.note }}</textarea>
+                data-cart-note
+              >{{ cart.note }}</textarea>
             </div>
             <div data-cart-subtotal>{% render 'cart-subtotal' %}</div>
             {% render 'cart-shipping-estimate' %}
@@ -149,180 +168,201 @@
 </div>
 
 {% schema %}
-  {
-    "name": "Cart",
-    "blocks": [
-      {
-        "type": "html",
-        "name": "Item de informação",
-        "settings": [
-          {
-            "type": "html",
-            "id": "content",
-            "label": "Conteúdo",
-            "default": "Digite aqui o texto do item."
-          }
-        ]
-      }
-    ],
-    "settings": [
-      {
-        "type": "checkbox",
-        "id": "cart_shipping_enable",
-        "label": "Enable shipping estimates",
-        "default": false
-      },
-      {
-        "type": "checkbox",
-        "id": "cart_show_quantity",
-        "label": "Show quantity selectors",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "cart_notes_enable",
-        "label": "Show cart notes",
-        "default": false
-      },
-      {
-        "type": "header",
-        "content": "Free shipping message"
-      }, {
-        "type": "checkbox",
-        "id": "show_free_shipping_message",
-        "label": "Show free shipping message",
-        "default": false
-      }, {
-        "type": "textarea",
-        "id": "message",
-        "label": "Message",
-        "info": "Use ||amount|| to display progress towards free shipping.",
-        "default": "Spend ||amount|| more for free shipping"
-      }, {
-        "type": "header",
-        "content": "Custom cart message"
-      }, {
-        "type": "checkbox",
-        "id": "cart_custom_message_enable",
-        "label": "Show custom message",
-        "default": false
-      }, {
-        "type": "richtext",
-        "id": "cart_custom_message_text",
-        "label": "Message text",
-        "default": "<p>Use code <strong>TENOFF</strong> at checkout for 10% off</p>"
-      }, {
-        "type": "header",
-        "content": "Colors"
-      }, {
-        "type": "select",
-        "id": "cart_color_bg",
-        "label": "Background color",
-        "default": "palette--light bg--neutral",
-        "options": [
-          {
-            "value": "palette--light bg--neutral",
-            "label": "Default"
-          },
-          {
-            "value": "palette--light bg--accent",
-            "label": "Light"
-          },
-          {
-            "value": "palette--dark bg--invert",
-            "label": "Dark"
-          },
-          {
-            "value": "palette--dark bg--invert--accent",
-            "label": "Dark accent"
-          }, {
-            "value": "palette--bright bg--bright",
-            "label": "Bright"
-          }, {
-            "value": "palette--bright bg--bright--accent",
-            "label": "Bright accent"
-          }
-        ]
-      }, {
-        "type": "header",
-        "content": "Additional checkout buttons"
-      }, {
-        "type": "paragraph",
-        "content": "Not recommended for drawer style and popup style cart"
-      }, {
-        "type": "checkbox",
-        "id": "cart_show_additional_buttons",
-        "label": "Show additional checkout options on cart",
-        "info": "Move buttons for Apple Pay, Amazon Pay and PayPal express from the first step of the checkout to the cart.",
-        "default": false
-      }, {
-        "type": "select",
-        "id": "bg",
-        "label": "Background color",
-        "default": "palette--light bg--neutral",
-        "options": [
-          {
-            "value": "palette--light bg--neutral",
-            "label": "Default"
-          },
-          {
-            "value": "palette--light bg--accent",
-            "label": "Light"
-          },
-          {
-            "value": "palette--dark bg--invert",
-            "label": "Dark"
-          },
-          {
-            "value": "palette--dark bg--invert--accent",
-            "label": "Dark accent"
-          }, {
-            "value": "palette--bright bg--bright",
-            "label": "Bright"
-          }, {
-            "value": "palette--bright bg--bright--accent",
-            "label": "Bright accent"
-          }
-        ]
-      }, {
-        "type": "header",
-        "content": "Section spacing"
-      }, {
-        "type": "select",
-        "id": "width",
-        "label": "Width",
-        "default": "wrapper",
-        "options": [
-          {
-            "value": "wrapper--full",
-            "label": "Full width padded"
-          }, {
-            "value": "wrapper",
-            "label": "Page width"
-          }, {
-            "value": "wrapper--narrow",
-            "label": "Page width narrow"
-          }
-        ]
-      }, {
-        "type": "range",
-        "id": "padding_top",
-        "min": 0,
-        "max": 180,
-        "step": 2,
-        "unit": "px",
-        "label": "Padding top",
-        "default": 36
-      }, {
-        "type": "range",
-        "id": "padding_bottom",
-        "min": 0,
-        "max": 180,
-        "step": 2,
-        "unit": "px",
-        "label": "Padding bottom",
-        "default": 36
-      }
-    ]
-  }
+{
+  "name": "Cart",
+  "blocks": [
+    {
+      "type": "html",
+      "name": "Item de informação",
+      "settings": [
+        {
+          "type": "html",
+          "id": "content",
+          "label": "Conteúdo",
+          "default": "Digite aqui o texto do item."
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "cart_shipping_enable",
+      "label": "Enable shipping estimates",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "cart_show_quantity",
+      "label": "Show quantity selectors",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "cart_notes_enable",
+      "label": "Show cart notes",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Free shipping message"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_free_shipping_message",
+      "label": "Show free shipping message",
+      "default": false
+    },
+    {
+      "type": "textarea",
+      "id": "message",
+      "label": "Message",
+      "info": "Use ||amount|| to display progress towards free shipping.",
+      "default": "Spend ||amount|| more for free shipping"
+    },
+    {
+      "type": "header",
+      "content": "Custom cart message"
+    },
+    {
+      "type": "checkbox",
+      "id": "cart_custom_message_enable",
+      "label": "Show custom message",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "cart_custom_message_text",
+      "label": "Message text",
+      "default": "<p>Use code <strong>TENOFF</strong> at checkout for 10% off</p>"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "select",
+      "id": "cart_color_bg",
+      "label": "Background color",
+      "default": "palette--light bg--neutral",
+      "options": [
+        {
+          "value": "palette--light bg--neutral",
+          "label": "Default"
+        },
+        {
+          "value": "palette--light bg--accent",
+          "label": "Light"
+        },
+        {
+          "value": "palette--dark bg--invert",
+          "label": "Dark"
+        },
+        {
+          "value": "palette--dark bg--invert--accent",
+          "label": "Dark accent"
+        },
+        {
+          "value": "palette--bright bg--bright",
+          "label": "Bright"
+        },
+        {
+          "value": "palette--bright bg--bright--accent",
+          "label": "Bright accent"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Additional checkout buttons"
+    },
+    {
+      "type": "paragraph",
+      "content": "Not recommended for drawer style and popup style cart"
+    },
+    {
+      "type": "checkbox",
+      "id": "cart_show_additional_buttons",
+      "label": "Show additional checkout options on cart",
+      "info": "Move buttons for Apple Pay, Amazon Pay and PayPal express from the first step of the checkout to the cart.",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "bg",
+      "label": "Background color",
+      "default": "palette--light bg--neutral",
+      "options": [
+        {
+          "value": "palette--light bg--neutral",
+          "label": "Default"
+        },
+        {
+          "value": "palette--light bg--accent",
+          "label": "Light"
+        },
+        {
+          "value": "palette--dark bg--invert",
+          "label": "Dark"
+        },
+        {
+          "value": "palette--dark bg--invert--accent",
+          "label": "Dark accent"
+        },
+        {
+          "value": "palette--bright bg--bright",
+          "label": "Bright"
+        },
+        {
+          "value": "palette--bright bg--bright--accent",
+          "label": "Bright accent"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "select",
+      "id": "width",
+      "label": "Width",
+      "default": "wrapper",
+      "options": [
+        {
+          "value": "wrapper--full",
+          "label": "Full width padded"
+        },
+        {
+          "value": "wrapper",
+          "label": "Page width"
+        },
+        {
+          "value": "wrapper--narrow",
+          "label": "Page width narrow"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 180,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 180,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ]
+}
 {% endschema %}
