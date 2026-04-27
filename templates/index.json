@@ -748,7 +748,7 @@
             "top_text_disabled": true,
             "title": "Collection Name",
             "title_disabled": true,
-            "bottom_text": "Jóias para Casamento",
+            "bottom_text": "Tanzanitas",
             "bottom_text_disabled": false,
             "collection_url": "shopify://pages/casamento",
             "text_color": "text--white"
@@ -771,7 +771,7 @@
         "bg": "palette--dark bg--invert--accent",
         "carousel_enabled_on": "hidden",
         "collection_limit": 35,
-        "wh_ratio": 0.5,
+        "wh_ratio": 0.7,
         "grid_large": 3,
         "grid_medium": 2,
         "grid_mobile": 1,
