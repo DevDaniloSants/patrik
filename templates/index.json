@@ -736,24 +736,6 @@
             "text_color": "text--white"
           }
         },
-        "collection_XmWLNj": {
-          "type": "collection",
-          "name": "Água Marinha",
-          "settings": {
-            "collection": "",
-            "image": "shopify://shop_images/put_the_necklace_in_white_gold_Nano_Banana_Pro_53217.png",
-            "overlay_color": "#000000",
-            "overlay_opacity": 15,
-            "top_text": "",
-            "top_text_disabled": true,
-            "title": "",
-            "title_disabled": true,
-            "bottom_text": "Água-Marinha",
-            "bottom_text_disabled": false,
-            "collection_url": "",
-            "text_color": "text--white"
-          }
-        },
         "collection_68jAMA": {
           "type": "collection",
           "settings": {
@@ -771,12 +753,30 @@
             "collection_url": "shopify://pages/casamento",
             "text_color": "text--white"
           }
+        },
+        "collection_XmWLNj": {
+          "type": "collection",
+          "name": "Água Marinha",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/take_out_that_earring_that_is__Nano_Banana_Pro_97656.png",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "top_text": "",
+            "top_text_disabled": true,
+            "title": "",
+            "title_disabled": true,
+            "bottom_text": "Água-Marinha",
+            "bottom_text_disabled": false,
+            "collection_url": "",
+            "text_color": "text--white"
+          }
         }
       },
       "block_order": [
         "collection_U7JaxJ",
-        "collection_XmWLNj",
-        "collection_68jAMA"
+        "collection_68jAMA",
+        "collection_XmWLNj"
       ],
       "custom_css": [
         ".custom-scrollbar.small-down--show {display: none !important;}",
