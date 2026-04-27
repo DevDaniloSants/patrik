@@ -722,7 +722,7 @@
           "name": "Noivado",
           "settings": {
             "collection": "",
-            "image": "shopify://shop_images/Ultra_high-end_jewelry_editori_Nano_Banana_Pro_11010.png",
+            "image": "shopify://shop_images/both_earrings_has_to_be_on_yel_Nano_Banana_Pro_42600.png",
             "mobile_image": "shopify://shop_images/Engagement_Ring3_-_CROP.png",
             "overlay_color": "#616161",
             "overlay_opacity": 0,
@@ -736,11 +736,28 @@
             "text_color": "text--white"
           }
         },
+        "collection_XmWLNj": {
+          "type": "collection",
+          "name": "Água Marinha",
+          "settings": {
+            "collection": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 15,
+            "top_text": "",
+            "top_text_disabled": false,
+            "title": "",
+            "title_disabled": false,
+            "bottom_text": "",
+            "bottom_text_disabled": false,
+            "collection_url": "",
+            "text_color": "text--white"
+          }
+        },
         "collection_68jAMA": {
           "type": "collection",
           "settings": {
             "collection": "",
-            "image": "shopify://shop_images/ChatGPT_Image_18_de_fev._de_2026_11_14_55.png",
+            "image": "shopify://shop_images/now_change_the_product_composi_Nano_Banana_Pro_14381.png",
             "mobile_image": "shopify://shop_images/ChatGPT_Image_18_de_fev._de_2026_11_14_55.png",
             "overlay_color": "#616161",
             "overlay_opacity": 0,
@@ -757,6 +774,7 @@
       },
       "block_order": [
         "collection_U7JaxJ",
+        "collection_XmWLNj",
         "collection_68jAMA"
       ],
       "custom_css": [
