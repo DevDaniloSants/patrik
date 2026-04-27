@@ -833,6 +833,32 @@
         "padding_bottom": 36
       }
     },
+    "section_richtext_UCkjER": {
+      "type": "section-richtext",
+      "blocks": {
+        "text_RcXgyd": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        }
+      },
+      "block_order": [
+        "text_RcXgyd"
+      ],
+      "name": "Espaçamento",
+      "settings": {
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "palette--dark bg--invert--accent",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 0,
+        "padding_bottom": 30
+      }
+    },
     "tabs": {
       "type": "section-collection-tabs",
       "blocks": {
@@ -1490,6 +1516,7 @@
     "section_richtext_Mijpwb",
     "section_list_collections_LeYE9C",
     "section_richtext_RTzH8K",
+    "section_richtext_UCkjER",
     "tabs",
     "section_columns_BncX3A",
     "section_logos_Cd4AwJ",
