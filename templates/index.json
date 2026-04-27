@@ -742,6 +742,7 @@
           "settings": {
             "collection": "",
             "image": "shopify://shop_images/take_out_that_earring_that_is__Nano_Banana_Pro_56236_92a3e30d-7e03-46ff-b040-36c99afc745c.png",
+            "mobile_image": "shopify://shop_images/take_out_that_earring_that_is__Nano_Banana_Pro_56236.png",
             "overlay_color": "#000000",
             "overlay_opacity": 0,
             "top_text": "",
