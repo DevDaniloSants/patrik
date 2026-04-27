@@ -714,6 +714,78 @@
         "padding_bottom": 12
       }
     },
+    "section_list_collections_LeYE9C": {
+      "type": "section-list-collections",
+      "blocks": {
+        "collection_U7JaxJ": {
+          "type": "collection",
+          "name": "Noivado",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Ultra_high-end_jewelry_editori_Nano_Banana_Pro_11010.png",
+            "mobile_image": "shopify://shop_images/Engagement_Ring3_-_CROP.png",
+            "overlay_color": "#616161",
+            "overlay_opacity": 0,
+            "top_text": "",
+            "top_text_disabled": true,
+            "title": "",
+            "title_disabled": true,
+            "bottom_text": "Esmeraldas",
+            "bottom_text_disabled": false,
+            "collection_url": "/pages/noivado",
+            "text_color": "text--white"
+          }
+        },
+        "collection_68jAMA": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/ChatGPT_Image_18_de_fev._de_2026_11_14_55.png",
+            "mobile_image": "shopify://shop_images/ChatGPT_Image_18_de_fev._de_2026_11_14_55.png",
+            "overlay_color": "#616161",
+            "overlay_opacity": 0,
+            "top_text": "Product Count",
+            "top_text_disabled": true,
+            "title": "Collection Name",
+            "title_disabled": true,
+            "bottom_text": "Jóias para Casamento",
+            "bottom_text_disabled": false,
+            "collection_url": "shopify://pages/casamento",
+            "text_color": "text--white"
+          }
+        }
+      },
+      "block_order": [
+        "collection_U7JaxJ",
+        "collection_68jAMA"
+      ],
+      "custom_css": [
+        ".custom-scrollbar.small-down--show {display: none !important;}",
+        ".custom-scrollbar.small-down--show::-webkit-scrollbar {display: none;}",
+        ".kicker-flourished {font-size: 20px !important;}",
+        ".collection-grid-item__btn {font-size: 18px;}"
+      ],
+      "name": "Noivado e Casamento",
+      "settings": {
+        "title": "Conheça as famosas gemas da patrik",
+        "bg": "palette--dark bg--invert--accent",
+        "carousel_enabled_on": "hidden",
+        "collection_limit": 36,
+        "wh_ratio": 1,
+        "grid_large": 3,
+        "grid_medium": 2,
+        "grid_mobile": 1,
+        "desktop_gutter": 25,
+        "text_layout": "outside",
+        "enable_hover": false,
+        "font_family": "body",
+        "title_size": 4,
+        "accent_size": 3,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "section_richtext_RTzH8K": {
       "type": "section-richtext",
       "blocks": {
@@ -1395,6 +1467,7 @@
     "section_richtext_jRYTUM",
     "section_columns_X6EhLY",
     "section_richtext_Mijpwb",
+    "section_list_collections_LeYE9C",
     "section_richtext_RTzH8K",
     "tabs",
     "section_columns_BncX3A",
