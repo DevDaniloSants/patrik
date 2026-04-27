@@ -766,7 +766,7 @@
         "grid_large": 3,
         "grid_medium": 3,
         "grid_mobile": 1,
-        "limit": 6,
+        "limit": 10,
         "bg": "palette--dark bg--invert--accent",
         "width": "wrapper",
         "padding_top": 20,
