@@ -732,7 +732,7 @@
             "title_disabled": true,
             "bottom_text": "Esmeraldas",
             "bottom_text_disabled": false,
-            "collection_url": "/pages/noivado",
+            "collection_url": "/collections/all?filter.v.t.shopify.gemstone-type=gid%3A%2F%2Fshopify%2FMetaobject%2F164625547347",
             "text_color": "text--white"
           }
         },
