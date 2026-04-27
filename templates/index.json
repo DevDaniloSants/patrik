@@ -1379,6 +1379,99 @@
         "padding_top": 50,
         "padding_bottom": 50
       }
+    },
+    "section_gallery_slider_tFxaRE": {
+      "type": "section-gallery-slider",
+      "blocks": {
+        "text_block_wYVPJE": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Ultra_high-end_jewelry_photogr_Nano_Banana_Pro_88248.png",
+            "shape_class": "",
+            "title": "Esmeraldas",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        },
+        "text_block_wBtGnU": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Ultra_high-end_jewelry_photogr_Nano_Banana_Pro_74501.png",
+            "shape_class": "",
+            "title": "Tanzanitas",
+            "text": "<p>Category description text goes here.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        },
+        "text_block_zqKnrH": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "shape_class": "",
+            "title": "Category title",
+            "text": "<p>Category description text goes here.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        },
+        "text_block_tkkriy": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "shape_class": "",
+            "title": "Category title",
+            "text": "<p>Category description text goes here.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_wYVPJE",
+        "text_block_wBtGnU",
+        "text_block_zqKnrH",
+        "text_block_tkkriy"
+      ],
+      "name": "Gallery Slider",
+      "settings": {
+        "title": "As gemas da Patrik",
+        "bg": "palette--dark bg--invert--accent",
+        "align_text": "text-center",
+        "scale_image": true,
+        "wh_ratio": 1,
+        "slides_desktop": 2,
+        "slides_tablet": 2,
+        "slides_mobile": 1.2,
+        "show_arrows": true,
+        "show_pagination": false,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -1390,6 +1483,7 @@
     "section_richtext_kTiLHV",
     "section_hero_UhTiib",
     "section_list_collections_ftJBTL",
+    "section_gallery_slider_tFxaRE",
     "section_richtext_q8gnYc",
     "section_image_neGRcR",
     "section_richtext_jRYTUM",
