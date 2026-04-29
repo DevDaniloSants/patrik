@@ -751,7 +751,7 @@
             "title_disabled": true,
             "bottom_text": "Água-Marinha",
             "bottom_text_disabled": false,
-            "collection_url": "https://collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Água+Marinha",
+            "collection_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Água+Marinha",
             "text_color": "text--white"
           }
         },
@@ -770,7 +770,7 @@
             "title_disabled": true,
             "bottom_text": "Tanzanitas",
             "bottom_text_disabled": false,
-            "collection_url": "https://collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Tanzanita",
+            "collection_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Tanzanita",
             "text_color": "text--white"
           }
         }
