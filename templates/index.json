@@ -886,6 +886,7 @@
         "grid_medium": 3,
         "grid_mobile": 1,
         "limit": 10,
+        "dark_gradient": true,
         "bg": "palette--dark bg--invert--accent",
         "width": "wrapper",
         "padding_top": 20,
