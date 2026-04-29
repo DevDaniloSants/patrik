@@ -24334,6 +24334,13 @@ label.quatity-selector {
   position: relative;
 }
 
+/* PLP: destaca a coluna central sem recortar imagens */
+@media only screen and (min-width: 480px) {
+  .collection__products .js-grid[data-grid-large="3"] {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, 1fr);
+  }
+}
+
 .collection__products .js-grid,
 .collection__products .float-grid,
 .collection__products .grid--full,

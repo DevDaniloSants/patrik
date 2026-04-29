@@ -95,7 +95,11 @@
 
   capture image_style
     echo 'object-position: ' | append: focal_or_setting | append: '; '
-    echo 'object-fit: contain !important; '
+    if cover == true
+      echo 'object-fit: cover !important; '
+    else
+      echo 'object-fit: contain !important; '
+    endif
     unless style == ''
       echo style
     endunless

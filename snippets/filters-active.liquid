@@ -4,6 +4,11 @@
 {%- assign collection_sort = collection.sort_by | default: collection.default_sort_by -%}
 {%- capture filter_clears -%}
   {%- for filter in collection.filters -%}
+    {%- assign label_downcase = filter.label | downcase -%}
+    {%- if label_downcase contains 'tipo de anel' and collection.handle != 'aneis' -%}
+      {%- continue -%}
+    {%- endif -%}
+
     {%- if filter.type == "price_range" -%}
       {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
         {%- if filter.min_value.value != 0 or filter.max_value.value != filter.range_max -%}

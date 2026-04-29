@@ -31,7 +31,9 @@
 <div
   class="image__hero__frame fade-in-child aspect-[--wh-ratio-mobile] md:aspect-[--wh-ratio] {{ height_class }} {{ frame_class }}"
   data-overflow-background
-  {% if parallax_enabled %}data-parallax-wrapper{% endif %}
+  {% if parallax_enabled %}
+    data-parallax-wrapper
+  {% endif %}
   {% if height_class == 'use_image' %}
     style="
       --wh-ratio:  {{ wh_ratio }};

@@ -43,6 +43,10 @@
                   {% capture current_filters_count %}
                 {%- assign filter_count = 0 -%}
                 {%- for filter in collection.filters -%}
+                  {%- assign label_downcase = filter.label | downcase -%}
+                  {%- if label_downcase contains 'tipo de anel' and collection.handle != 'aneis' -%}
+                    {%- continue -%}
+                  {%- endif -%}
                   {%- assign filter_count = filter_count | plus: filter.active_values.size -%}
                 {%- endfor -%}
                 {%- if filter_count > 0 -%}

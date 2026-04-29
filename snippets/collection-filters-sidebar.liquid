@@ -42,6 +42,11 @@
         {% endif %}
 
         {%- for filter in collection.filters -%}
+          {%- assign label_downcase = filter.label | downcase -%}
+          {%- if label_downcase contains 'tipo de anel' and collection.handle != 'aneis' -%}
+            {%- continue -%}
+          {%- endif -%}
+
           {% render 'filters-desktop',
             filter: filter,
             forloop: forloop
@@ -88,11 +93,28 @@
           <div id="mobile-cat-dropdown" class="hidden bg-white border-t border-gray-100">
             <ul class="flex flex-col pl-4">
               {%- for collection_link in collections -%}
+                {%- assign skip_collection = true -%}
                 {%- assign handle_downcase = collection_link.handle | downcase -%}
-                {%- unless handle_downcase == 'frontpage' or handle_downcase == 'all' or handle_downcase == 'aneis' or handle_downcase == 'anel' or handle_downcase == 'brincos' or handle_downcase == 'brinco' or handle_downcase == 'pulseiras' or handle_downcase == 'pulseira' or handle_downcase == 'colares' or handle_downcase == 'colar' or handle_downcase == 'todas-as-joias' -%}
+                {%- assign title_downcase = collection_link.title | downcase -%}
+
+                {%- if title_downcase contains 'noivado' or handle_downcase contains 'noivado' or handle_downcase contains 'engagement' -%}
+                  {%- assign skip_collection = false -%}
+                  {%- assign display_title = 'Noivado' -%}
+                {%- elsif title_downcase contains 'casamento' or handle_downcase contains 'casamento' or handle_downcase contains 'weding' or handle_downcase contains 'wedding' -%}
+                  {%- assign skip_collection = false -%}
+                  {%- assign display_title = 'Casamento' -%}
+                {%- elsif title_downcase contains 'organica' or handle_downcase contains 'organica' or title_downcase contains 'orgânica' -%}
+                  {%- assign skip_collection = false -%}
+                  {%- assign display_title = collection_link.title -%}
+                {%- elsif title_downcase contains 'religios' or handle_downcase contains 'religios' -%}
+                  {%- assign skip_collection = false -%}
+                  {%- assign display_title = collection_link.title -%}
+                {%- endif -%}
+
+                {%- unless skip_collection -%}
                   <li class="border-b border-gray-200 last:border-0">
                     <a href="{{ collection_link.url }}" class="block py-4 pr-4 ml-4 text-base font-bold text-gray-700 hover:text-black hover:bg-gray-50 flex justify-between items-center decoration-0">
-                      <span style="font-weight: 700; font-size: 16px;">{{ collection_link.title }}</span>
+                      <span style="font-weight: 700; font-size: 16px;">{{ display_title }}</span>
                     </a>
                   </li>
                 {%- endunless -%}
@@ -105,6 +127,10 @@
         {%- for filter in collection.filters -%}
           {%- assign label_downcase = filter.label | downcase -%}
           
+          {%- if label_downcase contains 'tipo de anel' and collection.handle != 'aneis' -%}
+            {%- continue -%}
+          {%- endif -%}
+
           {%- comment -%} Skip Price and Product Type (handled by Categorias logic) {%- endcomment -%}
           {%- unless filter.type == 'price_range' or label_downcase == 'product type' or label_downcase == 'tipo de produto' -%}
             
@@ -391,40 +417,31 @@
                style="">
             <div class="pt-6 pb-2">
             <ul class="flex flex-col gap-y-2">
-              {%- assign titulos_excluidos = "Anéis,Brincos,Colares,Pulseiras,Todas as Jóias,Todas as Joias" | split: "," -%}
               {% for collection_link in collections %}
-                {%- assign skip_collection = false -%}
+                {%- assign skip_collection = true -%}
                 {%- assign handle_downcase = collection_link.handle | downcase -%}
+                {%- assign title_downcase = collection_link.title | downcase -%}
 
-                {%- comment -%} Excluir frontpage e all {%- endcomment -%}
-                {%- if handle_downcase == 'frontpage' or handle_downcase == 'all' or handle_downcase == 'todas-as-joias' or handle_downcase == 'aneis' or handle_downcase == 'anel' or handle_downcase == 'brincos' or handle_downcase == 'brinco' or handle_downcase == 'pulseiras' or handle_downcase == 'pulseira' or handle_downcase == 'colares' or handle_downcase == 'colar' -%}
-                  {%- assign skip_collection = true -%}
+                {%- if title_downcase contains 'noivado' or handle_downcase contains 'noivado' or handle_downcase contains 'engagement' -%}
+                  {%- assign skip_collection = false -%}
+                  {%- assign display_title = 'Noivado' -%}
+                {%- elsif title_downcase contains 'casamento' or handle_downcase contains 'casamento' or handle_downcase contains 'weding' or handle_downcase contains 'wedding' -%}
+                  {%- assign skip_collection = false -%}
+                  {%- assign display_title = 'Casamento' -%}
+                {%- elsif title_downcase contains 'organica' or handle_downcase contains 'organica' or title_downcase contains 'orgânica' -%}
+                  {%- assign skip_collection = false -%}
+                  {%- assign display_title = collection_link.title -%}
+                {%- elsif title_downcase contains 'religios' or handle_downcase contains 'religios' -%}
+                  {%- assign skip_collection = false -%}
+                  {%- assign display_title = collection_link.title -%}
                 {%- endif -%}
-
-                {%- comment -%} Excluir Anéis, Brincos, Colares e Pulseiras {%- endcomment -%}
-                {%- if titulos_excluidos contains collection_link.title -%}
-                  {%- assign skip_collection = true -%}
-                {%- endif -%}
-
-                {%- for exclude in excluded_collections_strict -%}
-                  {%- assign exclude_handle = exclude | handle -%}
-                  {%- if exclude_handle == collection_link.handle -%}
-                    {%- assign skip_collection = true -%}
-                  {%- endif -%}
-                {%- endfor -%}
-                {%- for exclude in excluded_collections -%}
-                  {%- assign exclude_handle = exclude | handle -%}
-                  {%- if collection_link.handle contains exclude_handle -%}
-                    {%- assign skip_collection = true -%}
-                  {%- endif -%}
-                {%- endfor -%}
 
                 {% unless skip_collection %}
                   <li>
                     <a href="{{ routes.collections_url }}/{{ collection_link.handle }}" 
                        class="block text-sm text-gray-600 hover:text-black hover:underline decoration-1 underline-offset-4 {% if collection.handle == collection_link.handle %}font-bold text-black{% endif %}">
                       <span class="flex items-center gap-2">
-                        {{ collection_link.title }}
+                        {{ display_title }}
                       </span>
                     </a>
                   </li>
