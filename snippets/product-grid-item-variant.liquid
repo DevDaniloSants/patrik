@@ -125,18 +125,9 @@
 
 {%- liquid
   assign first_image = product.media[0].preview_image
-  assign container_wh_ratio = settings.product_card_wh_ratio
+  assign container_wh_ratio = 356.0 | divided_by: 531.0
+  assign image_wh_ratio = 356.0 | divided_by: 531.0
   assign image_cover = true
-
-  case settings.product_grid_image
-  when 'crop'
-    assign image_wh_ratio = container_wh_ratio
-  when 'uneven'
-    assign container_wh_ratio = first_image.aspect_ratio | default: settings.product_card_wh_ratio
-  when 'scale'
-    assign image_cover = false
-    assign image_wh_ratio = first_image.aspect_ratio | default: settings.product_card_wh_ratio
-  endcase
 
   # Behavior is inferred based on setting and passed into JS
   assign image_hover = 'disabled'
