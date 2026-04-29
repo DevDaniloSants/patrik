@@ -60,7 +60,7 @@
               class="slide-item product-grid-slide"
               data-carousel-slide
               data-item>
-              {% render 'product-grid-item', product: product %}
+              {% render 'product-grid-item', product: product, dark_gradient: section.settings.dark_gradient %}
             </div>
           {% else %}
             {% render 'onboarding-product-grid-item', limit: section.settings.limit, wrap: 'product-grid-slide slide-item' %}
@@ -192,7 +192,14 @@
         "default": 6,
         "label": "Product limit",
         "info": "Loading a large number of products can affect page speed"
-      }, {
+      },
+      {
+        "type": "checkbox",
+        "id": "dark_gradient",
+        "label": "Gradient Escuro",
+        "default": false
+      },
+      {
         "type": "select",
         "id": "bg",
         "label": "Background color",

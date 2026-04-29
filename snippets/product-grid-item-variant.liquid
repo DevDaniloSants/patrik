@@ -177,6 +177,7 @@
         data-grid-images data-grid-slide
         style="
           --wh-ratio: {{ container_wh_ratio }};
+          {% if dark_gradient %}--product-gradient: linear-gradient(80deg, #c8c8c8, #dcdedc);{% endif %}
         "
       >
         {%- if product.media.size > 0 -%}

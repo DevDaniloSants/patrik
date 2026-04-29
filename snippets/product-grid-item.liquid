@@ -256,41 +256,9 @@ assign placeholder = placeholder | default: false
         placeholder: placeholder,
         columns_desktop: columns_desktop,
         columns_tablet: columns_tablet,
-        columns_mobile: columns_mobile
+        columns_mobile: columns_mobile,
+        dark_gradient: dark_gradient
       %}
-
-      {% capture swatch_link_markup %}
-        {{ swatch_link_markup }}
-        <radio-swatch title="{{ swatch_value.name }}" class="swatch__button{% if in_stock_options.size == 0 %} sold-out{% endif %}{% if settings.swatches_squares %} swatch__button--square{% endif %}">
-          <a
-            href="{{ current_variant.url }}"
-            class="swatch__label"
-            {% if swatch_value.swatch != null %}
-              data-swatch
-              style="--swatch: {{ swatch_value.swatch.color }}"
-            {% else %}
-              data-swatch="{{ swatch_value | escape_once }}"
-            {% endif %}
-
-            data-grid-item-variant="{{ current_variant.id }}"
-            data-swatch-index="{{ forloop.index0 }}"
-
-            {% if visible %}aria-current="true"{%- endif -%}
-            {% if current_variant.featured_media %}
-              data-swatch-image="{{ current_variant.featured_media.preview_image.src }}"
-            {% endif %}
-
-            {% if current_variant.featured_media %}
-              data-swatch-image-id="{{ current_variant.featured_media.id }}"
-            {% endif %}
-          >
-            {% if swatch_value.swatch.image %}
-              {% render 'image', img_object: swatch_value.swatch.image, width: 34, wh_ratio: 1 %}
-            {% endif %}
-            <span class="visually-hidden">{{ swatch_value }}</span>
-          </a>
-        </radio-swatch>
-      {% endcapture %}
     {% endfor %}
   {% else %}
 
@@ -328,7 +296,8 @@ assign placeholder = placeholder | default: false
       placeholder: placeholder,
       columns_desktop: columns_desktop,
       columns_tablet: columns_tablet,
-      columns_mobile: columns_mobile
+      columns_mobile: columns_mobile,
+      dark_gradient: dark_gradient
     %}
   {% endif %}
 
