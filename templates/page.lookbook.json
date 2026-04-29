@@ -34,16 +34,16 @@
         "heading-lookbook-block"
       ],
       "settings": {
-        "image": "shopify://shop_images/Organica_page_desktop.png",
-        "mobile_image": "shopify://shop_images/Organica_page_mobile.png",
+        "image": "shopify://shop_images/banner_brn02052-clr01123-v2.png",
+        "mobile_image": "shopify://shop_images/banner_brn02063-072378-v2.png",
         "banner_link": "",
-        "height": "use_screen_two_thirds",
+        "height": "use_screen_three_quarters",
         "overlay_opacity": 0,
         "overlay_color": "#000000",
         "enable_overlay_text": false,
         "preload_image": true,
         "content_width": 2000,
-        "text_align": "align--middle-center",
+        "text_align": "align--middle-left",
         "text_color": "text--white",
         "color_bg": "hero__content--transparent",
         "width": "wrapper--none",
@@ -133,7 +133,7 @@
         "image_ji9aND": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/v2_ANL02016_3_Anel_em_Ouroo_Branco_18k_AMBIENTADO_folhas_-_SQUARE.png",
+            "image": "shopify://shop_images/banner_072376-v2.png",
             "overlay_opacity": 0,
             "overlay_color": "#000000",
             "enable_overlay_text": false,
@@ -622,6 +622,7 @@
         "grid_medium": 3,
         "grid_mobile": 1.2,
         "limit": 6,
+        "dark_gradient": false,
         "bg": "palette--light bg--neutral",
         "width": "wrapper",
         "padding_top": 36,
