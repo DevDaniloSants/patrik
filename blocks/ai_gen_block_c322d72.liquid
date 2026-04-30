@@ -96,7 +96,7 @@
   .ai-text-video-video-wrapper-{{ ai_gen_id }} {
     position: relative;
     width: 100%;
-    padding-bottom: {{ block.settings.video_aspect_ratio }}%;
+    aspect-ratio: {{ block.settings.aspect_ratio | default: '9/16' }};
     background-color: #f4f4f4;
   }
 
@@ -204,14 +204,14 @@
         <div class="ai-text-video-video-wrapper-{{ ai_gen_id }}">
           {% if block.settings.video != blank %}
             {% assign video_class = 'ai-text-video-video-' | append: ai_gen_id %}
-            {{ block.settings.video | video_tag: class: video_class, autoplay: block.settings.autoplay, loop: block.settings.loop, muted: block.settings.muted, controls: block.settings.controls, playsinline: true }}
+            {{ block.settings.video | video_tag: class: video_class, autoplay: block.settings.auto_play, loop: block.settings.loop, muted: block.settings.mute_video, controls: block.settings.show_controls, playsinline: true }}
           {% elsif block.settings.video_url != blank %}
             {% if block.settings.video_url contains 'youtube.com' or block.settings.video_url contains 'youtu.be' %}
               {% assign video_id = block.settings.video_url | split: 'v=' | last | split: '/' | last | split: '?' | first | split: '&' | first %}
-              {% assign autoplay_val = 0 %}{% if block.settings.autoplay %}{% assign autoplay_val = 1 %}{% endif %}
+              {% assign autoplay_val = 0 %}{% if block.settings.auto_play %}{% assign autoplay_val = 1 %}{% endif %}
               {% assign loop_val = 0 %}{% if block.settings.loop %}{% assign loop_val = 1 %}{% endif %}
-              {% assign mute_val = 0 %}{% if block.settings.muted %}{% assign mute_val = 1 %}{% endif %}
-              {% assign controls_val = 0 %}{% if block.settings.controls %}{% assign controls_val = 1 %}{% endif %}
+              {% assign mute_val = 0 %}{% if block.settings.mute_video %}{% assign mute_val = 1 %}{% endif %}
+              {% assign controls_val = 0 %}{% if block.settings.show_controls %}{% assign controls_val = 1 %}{% endif %}
               <iframe
                 class="ai-text-video-video-{{ ai_gen_id }}"
                 src="https://www.youtube.com/embed/{{ video_id }}?autoplay={{ autoplay_val }}&loop={{ loop_val }}&mute={{ mute_val }}&controls={{ controls_val }}&playlist={{ video_id }}"
@@ -221,9 +221,9 @@
               ></iframe>
             {% elsif block.settings.video_url contains 'vimeo.com' %}
               {% assign video_id = block.settings.video_url | split: '/' | last | split: '?' | first %}
-              {% assign autoplay_val = 0 %}{% if block.settings.autoplay %}{% assign autoplay_val = 1 %}{% endif %}
+              {% assign autoplay_val = 0 %}{% if block.settings.auto_play %}{% assign autoplay_val = 1 %}{% endif %}
               {% assign loop_val = 0 %}{% if block.settings.loop %}{% assign loop_val = 1 %}{% endif %}
-              {% assign mute_val = 0 %}{% if block.settings.muted %}{% assign mute_val = 1 %}{% endif %}
+              {% assign mute_val = 0 %}{% if block.settings.mute_video %}{% assign mute_val = 1 %}{% endif %}
               <iframe
                 class="ai-text-video-video-{{ ai_gen_id }}"
                 src="https://player.vimeo.com/video/{{ video_id }}?autoplay={{ autoplay_val }}&loop={{ loop_val }}&muted={{ mute_val }}"
@@ -256,9 +256,11 @@
       connectedCallback() {
         this.video = this.querySelector('.ai-text-video-video-{{ ai_gen_id }}');
         
+        {% if block.settings.auto_play %}
         if (this.video && this.video.tagName === 'VIDEO') {
           this.setupIntersectionObserver();
         }
+        {% endif %}
       }
 
       setupIntersectionObserver() {
@@ -485,15 +487,16 @@
       "info": "Usado se nenhum vídeo for enviado"
     },
     {
-      "type": "range",
-      "id": "video_aspect_ratio",
+      "type": "select",
+      "id": "aspect_ratio",
       "label": "Proporção do vídeo",
-      "min": 40,
-      "max": 100,
-      "step": 5,
-      "unit": "%",
-      "default": 55,
-      "info": "56.25% = 16:9, 75% = 4:3, 100% = 1:1"
+      "options": [
+        { "value": "16/9", "label": "16:9 (Horizontal)" },
+        { "value": "1/1", "label": "1:1 (Quadrado)" },
+        { "value": "3/4", "label": "3:4 (Vertical)" },
+        { "value": "9/16", "label": "9:16 (Vertical)" }
+      ],
+      "default": "9/16"
     },
     {
       "type": "range",
@@ -507,9 +510,9 @@
     },
     {
       "type": "checkbox",
-      "id": "autoplay",
+      "id": "auto_play",
       "label": "Reprodução automática",
-      "default": true
+      "default": false
     },
     {
       "type": "checkbox",
@@ -519,16 +522,15 @@
     },
     {
       "type": "checkbox",
-      "id": "muted",
+      "id": "mute_video",
       "label": "Sem som",
-      "default": true,
-      "info": "Recomendado para reprodução automática"
+      "default": false
     },
     {
       "type": "checkbox",
-      "id": "controls",
+      "id": "show_controls",
       "label": "Mostrar controles",
-      "default": false
+      "default": true
     },
     {
       "type": "header",
