@@ -204,7 +204,7 @@
         <div class="ai-text-video-video-wrapper-{{ ai_gen_id }}">
           {% if block.settings.video != blank %}
             {% assign video_class = 'ai-text-video-video-' | append: ai_gen_id %}
-            {{ block.settings.video | video_tag: class: video_class, autoplay: block.settings.auto_play, loop: block.settings.loop, muted: block.settings.mute_video, controls: block.settings.show_controls, playsinline: true }}
+            {{ block.settings.video | video_tag: image_size: '2048x', class: video_class, autoplay: block.settings.auto_play, loop: block.settings.loop, muted: block.settings.mute_video, controls: block.settings.show_controls, playsinline: true }}
           {% elsif block.settings.video_url != blank %}
             {% if block.settings.video_url contains 'youtube.com' or block.settings.video_url contains 'youtu.be' %}
               {% assign video_id = block.settings.video_url | split: 'v=' | last | split: '/' | last | split: '?' | first | split: '&' | first %}
