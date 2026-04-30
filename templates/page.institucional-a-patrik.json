@@ -251,6 +251,22 @@
         "ai_gen_block_c322d72_XbfKd3"
       ],
       "settings": {}
+    },
+    "section_collection_6r6GMC": {
+      "type": "section-collection",
+      "name": "Product grid",
+      "settings": {
+        "title": "Featured Products",
+        "collection": "",
+        "grid": 3,
+        "rows": 1,
+        "grid_mobile": "2",
+        "bg": "palette--light bg--neutral",
+        "show_view_all": false,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -258,6 +274,7 @@
     "section_hero_F6LiWT",
     "section_columns_Gj3NJc",
     "section_richtext_7nQqqJ",
-    "177756199056a08999"
+    "177756199056a08999",
+    "section_collection_6r6GMC"
   ]
 }
