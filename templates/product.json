@@ -405,6 +405,95 @@
         "padding_bottom": 20
       }
     },
+    "section_pair_before_after_cLGVGp": {
+      "type": "section-pair-before-after",
+      "blocks": {
+        "before-after": {
+          "type": "_pair-before-after",
+          "static": true,
+          "settings": {
+            "after_image": "shopify://shop_images/Gemini_Generated_Image_xx912exx912exx91.png",
+            "before_image": "shopify://shop_images/Gemini_Generated_Image_e7ue7we7ue7we7ue.png",
+            "orientation": "horizontal",
+            "handle_color": "#ffffff",
+            "start_position": 50
+          },
+          "blocks": {}
+        },
+        "text": {
+          "type": "_pair-content",
+          "static": true,
+          "settings": {
+            "vertical_placement": "center",
+            "horizontal_placement": "center",
+            "gap": "sm",
+            "text_color": "text--white",
+            "bg_color": "#142b26"
+          },
+          "blocks": {
+            "theme_group_e9HfL7": {
+              "type": "theme-group",
+              "settings": {
+                "flow": "row",
+                "alignment": "center",
+                "gap": "sm"
+              },
+              "blocks": {
+                "theme_kicker_Am86Me": {
+                  "type": "theme-kicker",
+                  "settings": {
+                    "kicker": "Esmeralda Colombiana com Certificado",
+                    "enable_line": true,
+                    "text_size": 4
+                  },
+                  "blocks": {}
+                },
+                "theme_spacer_DpcBQF": {
+                  "type": "theme-spacer",
+                  "settings": {
+                    "spacer_padding": 5,
+                    "line_stroke": 0,
+                    "line_color": "#000000",
+                    "line_width": "full"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "theme_kicker_Am86Me",
+                "theme_spacer_DpcBQF"
+              ]
+            },
+            "theme_text_richtext_gDPBzG": {
+              "type": "theme-text-richtext",
+              "settings": {
+                "text": "<p>A Esmeralda Colombiana é o padrão ouro no mundo das gemas coloridas. Com uma saturação inigualável e um tom verde-azulado característico das minas lendárias da região (como Muzo ou Chivor), esta gema exala sofisticação.</p><p>Todas as nossas pedras acompanham certificado realizado por profissional certificado GIA.</p>",
+                "font_family": "body",
+                "text_size": 4,
+                "max_width": 550
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "theme_group_e9HfL7",
+            "theme_text_richtext_gDPBzG"
+          ]
+        }
+      },
+      "name": "Pedra Preciosa",
+      "settings": {
+        "target_data": "Diamante",
+        "order": "before-after-first",
+        "height": "use_screen_one_third",
+        "brick_gutter": 20,
+        "borders": false,
+        "bg_color": "#142b26",
+        "width": "wrapper",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
     "section_richtext_zQiRDP": {
       "type": "section-richtext",
       "blocks": {
@@ -614,6 +703,7 @@
     "section_double_pdp_6xgTfd",
     "section_richtext_nxceCr",
     "section_pair_before_after_j4gCcV",
+    "section_pair_before_after_cLGVGp",
     "section_richtext_zQiRDP",
     "section_double_44RwtT",
     "section_double_RtygiW",
