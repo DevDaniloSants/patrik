@@ -203,8 +203,9 @@
     "177756199056a08999": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_c322d72_XbfKd3": {
+        "ai_gen_block_c322d72_4Dxpbz": {
           "type": "ai_gen_block_c322d72",
+          "name": "Texto e vídeo",
           "settings": {
             "layout": "text_left",
             "container_width": 1200,
@@ -214,8 +215,8 @@
             "content_gap": 20,
             "background_color": "#ffffff",
             "kicker": "",
-            "heading": "O Nome da Marca",
-            "text": "<p>Por trás da Patrik está David Cohen, gemólogo formado pelo Gemological Institute of America (GIA) — referência mundial em gemologia.<br/><br/>Há décadas dedicado ao universo das joias, David desenvolveu um olhar raro para aquilo que torna cada gema extraordinária. Ao seu lado está Patrik, seu filho, que inspira o nome da marca e já segue o mesmo caminho, aprofundando-se no estudo das gemas e da joalheria.<br/><br/>A Patrik nasce desse encontro entre gerações — de conhecimento que se transmite, de valores que permanecem e de um olhar que continua.<br/><br/></p>",
+            "heading": "Título da seção",
+            "text": "<p>Adicione seu texto descritivo aqui. Você pode formatar o texto e adicionar múltiplos parágrafos.</p>",
             "button_text": "",
             "button_link": "",
             "button_text_size": 16,
@@ -244,9 +245,51 @@
             "mobile_gap": 30
           },
           "blocks": {}
+        },
+        "ai_gen_block_c322d72_XbfKd3": {
+          "type": "ai_gen_block_c322d72",
+          "settings": {
+            "layout": "text_left",
+            "container_width": 1200,
+            "section_padding": 60,
+            "horizontal_padding": 30,
+            "gap": 60,
+            "content_gap": 20,
+            "background_color": "#ffffff",
+            "kicker": "",
+            "heading": "O Nome da Marca",
+            "text": "<p>Por trás da Patrik está David Cohen, gemólogo formado pelo Gemological Institute of America (GIA) — referência mundial em gemologia.<br/><br/>Há décadas dedicado ao universo das joias, David desenvolveu um olhar raro para aquilo que torna cada gema extraordinária. Ao seu lado está Patrik, seu filho, que inspira o nome da marca e já segue o mesmo caminho, aprofundando-se no estudo das gemas e da joalheria.<br/><br/>A Patrik nasce desse encontro entre gerações — de conhecimento que se transmite, de valores que permanecem e de um olhar que continua.<br/><br/></p>",
+            "button_text": "",
+            "button_link": "",
+            "button_text_size": 13,
+            "button_padding_vertical": 8,
+            "button_padding_horizontal": 16,
+            "button_radius": 0,
+            "button_bg_color": "#006652",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#3c3f36",
+            "button_hover_text_color": "#ffffff",
+            "video_url": "https://www.youtube.com/watch?v=1UIxZWSINXk",
+            "video_aspect_ratio": 100,
+            "media_radius": 10,
+            "autoplay": true,
+            "loop": true,
+            "muted": true,
+            "controls": false,
+            "kicker_size": 12,
+            "kicker_color": "#006652",
+            "heading_size": 40,
+            "heading_color": "#0a0a0c",
+            "text_size": 16,
+            "text_color": "#3c3f36",
+            "mobile_video_first": true,
+            "mobile_gap": 30
+          },
+          "blocks": {}
         }
       },
       "block_order": [
+        "ai_gen_block_c322d72_4Dxpbz",
         "ai_gen_block_c322d72_XbfKd3"
       ],
       "settings": {}
