@@ -5,6 +5,12 @@
 {% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
 
 {% style %}
+  {% assign ratio_str = block.settings.aspect_ratio | default: '9/16' %}
+  {% assign ratio_parts = ratio_str | split: '/' %}
+  {% assign ratio_w = ratio_parts[0] | times: 1.0 %}
+  {% assign ratio_h = ratio_parts[1] | times: 1.0 %}
+  {% assign ratio_decimal = ratio_w | divided_by: ratio_h %}
+
   .ai-text-video-{{ ai_gen_id }} {
     display: block;
     width: 100%;
@@ -98,15 +104,16 @@
     position: relative;
     width: 100%;
     display: flex;
-    background-color: #f4f4f4;
   }
 
   .ai-text-video-video-{{ ai_gen_id }} {
     width: 100%;
+    max-width: calc((80vh - 50px) * {{ ratio_decimal }});
     max-height: calc(80vh - 50px);
     aspect-ratio: {{ block.settings.aspect_ratio | default: '9/16' }};
     object-fit: cover;
     display: block;
+    margin: 0 auto;
   }
 
   .ai-text-video-custom-play-{{ ai_gen_id }} {
@@ -140,12 +147,14 @@
 
   .ai-text-video-placeholder-{{ ai_gen_id }} {
     width: 100%;
+    max-width: calc((80vh - 50px) * {{ ratio_decimal }});
     max-height: calc(80vh - 50px);
     aspect-ratio: {{ block.settings.aspect_ratio | default: '9/16' }};
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #f4f4f4;
+    margin: 0 auto;
   }
 
   .ai-text-video-placeholder-{{ ai_gen_id }} svg {
