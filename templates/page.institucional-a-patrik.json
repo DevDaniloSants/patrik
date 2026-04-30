@@ -256,9 +256,9 @@
       "type": "section-collection",
       "name": "Product grid",
       "settings": {
-        "title": "Featured Products",
-        "collection": "",
-        "grid": 3,
+        "title": "O ponto máximo da expressão Patrick — onde design e presença se encontram.",
+        "collection": "design-patrik",
+        "grid": 4,
         "rows": 1,
         "grid_mobile": "2",
         "bg": "palette--light bg--neutral",
