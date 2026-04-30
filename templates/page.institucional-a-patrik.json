@@ -30,6 +30,13 @@
     "section_hero_F6LiWT": {
       "type": "section-hero",
       "blocks": {
+        "text_gLqqQM": {
+          "type": "text",
+          "settings": {
+            "richtext": "<p>This area is used to describe your store.</p>",
+            "text_size": 6
+          }
+        },
         "kicker_C3kKAk": {
           "type": "kicker",
           "settings": {
@@ -54,10 +61,12 @@
         }
       },
       "block_order": [
+        "text_gLqqQM",
         "kicker_C3kKAk",
         "heading_R4XdpU",
         "text_eBkXrd"
       ],
+      "disabled": true,
       "name": "Image banner",
       "settings": {
         "image": "shopify://shop_images/Anel_de_Noivado_wide_-_edited.png",
@@ -75,40 +84,6 @@
         "width": "wrapper--none",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "section_richtext_FN8DKi": {
-      "type": "section-richtext",
-      "blocks": {
-        "heading_FgTLwV": {
-          "type": "heading",
-          "settings": {
-            "heading": "",
-            "text_size": 8
-          }
-        },
-        "text_cy9xKn": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_size": 4,
-            "text_columns": 1
-          }
-        }
-      },
-      "block_order": [
-        "heading_FgTLwV",
-        "text_cy9xKn"
-      ],
-      "name": "Espaçamento - Rich text",
-      "settings": {
-        "align_text": "text-left",
-        "text_color": "text--neutral",
-        "bg": "palette--light bg--neutral",
-        "content_width": 2000,
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "section_columns_Gj3NJc": {
@@ -225,47 +200,44 @@
         "padding_bottom": 36
       }
     },
-    "section_richtext_UrJddg": {
-      "type": "section-richtext",
+    "177756199056a08999": {
+      "type": "_blocks",
       "blocks": {
-        "heading_YbJGtz": {
-          "type": "heading",
+        "ai_gen_block_a4e8c2e_fVXDXn": {
+          "type": "ai_gen_block_a4e8c2e",
           "settings": {
-            "heading": "",
-            "text_size": 8
-          }
-        },
-        "text_ndBELz": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_size": 4,
-            "text_columns": 1
-          }
+            "layout": "video_left",
+            "video_width": 60,
+            "vertical_alignment": "center",
+            "gap": 50,
+            "video_url": "https://admin.shopify.com/store/heq2wz-cr/content/files/32648405090387?selectedView=all",
+            "video_border_radius": 8,
+            "heading": "O Nome da Marca",
+            "text": "<p>Por trás da Patrik está David Cohen, gemólogo formado pelo Gemological Institute of America (GIA) — referência mundial em gemologia. <br/><br/>Há décadas dedicado ao universo das joias, David desenvolveu um olhar raro para aquilo que torna cada gema extraordinária. Ao seu lado está Patrik, seu filho, que inspira o nome da marca e já segue o mesmo caminho, aprofundando-se no estudo das gemas e da joalheria. <br/><br/>A Patrik nasce desse encontro entre gerações — de conhecimento que se transmite, de valores que permanecem e de um olhar que continua.</p>",
+            "heading_size": 32,
+            "text_size": 14,
+            "heading_spacing": 20,
+            "background_color": "#ffffff",
+            "heading_color": "#3c3f36",
+            "text_color": "#3c3f36",
+            "container_width": 1200,
+            "section_padding": 50,
+            "horizontal_padding": 30
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "heading_YbJGtz",
-        "text_ndBELz"
+        "ai_gen_block_a4e8c2e_fVXDXn"
       ],
-      "name": "Espaçamento - Rich text",
-      "settings": {
-        "align_text": "text-left",
-        "text_color": "text--neutral",
-        "bg": "palette--light bg--neutral",
-        "content_width": 2000,
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
+      "settings": {}
     }
   },
   "order": [
     "main",
     "section_hero_F6LiWT",
-    "section_richtext_FN8DKi",
     "section_columns_Gj3NJc",
     "section_richtext_7nQqqJ",
-    "section_richtext_UrJddg"
+    "177756199056a08999"
   ]
 }
