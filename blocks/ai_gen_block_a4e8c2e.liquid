@@ -3,11 +3,7 @@
     um bloco onde de um lado eu vou incluir um vídeo e do outro vou incluir um texto
 {% enddoc %}
 {% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
-video {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+
 {% style %}
   .ai-video-text-block-{{ ai_gen_id }} {
     display: block;
