@@ -207,7 +207,7 @@
           "type": "ai_gen_block_c322d72",
           "settings": {
             "layout": "text_left",
-            "container_width": 1200,
+            "container_width": 1600,
             "section_padding": 60,
             "horizontal_padding": 30,
             "gap": 60,
@@ -226,7 +226,8 @@
             "button_text_color": "#ffffff",
             "button_hover_bg_color": "#3c3f36",
             "button_hover_text_color": "#ffffff",
-            "video_url": "https://youtube.com/shorts/qj-DGc6Dcyc?feature=share",
+            "video": "shopify://files/videos/patrik_1.mov",
+            "video_url": "",
             "video_aspect_ratio": 100,
             "media_radius": 0,
             "autoplay": true,
