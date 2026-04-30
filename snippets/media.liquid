@@ -10,7 +10,7 @@
 {% endcomment %}
 {%- assign image_size = '1024x1024' -%}
 {% capture data_player %}data-player="{{ section.id }}-{{ media.id }}"{% endcapture %}
-{% if media.media_type == "image" %}
+{% if media.media_type == 'image' %}
   {%- assign data_player = '' -%}
 {% endif %}
 {% assign alt_text = media.alt | strip_html %}
@@ -25,14 +25,18 @@
 {% endif %}
 {% assign loading_animation = loading_animation | default: false %}
 
-<div class="product__media"
+<div
+  class="product__media"
   data-media-slide
   data-media-id="{{ media.id }}"
   data-type="{{ media.media_type }}"
-  {% if media.host %} data-host="{{ media.host }}"{% endif %}
+  {% if media.host %}
+    data-host="{{ media.host }}"
+  {% endif %}
   aria-label="{{ alt_text_parts | first | escape }}"
   data-aspect-ratio="{% if media.aspect_ratio %}{{ media.aspect_ratio }}{% else %}{{ media.preview_image.aspect_ratio }}{% endif %}"
-  {{ data_player }}>
+  {{ data_player }}
+>
   {% case media.media_type %}
     {% when 'image' %}
       <div>
@@ -56,27 +60,29 @@
             calc(85vw - {{ section.settings.image_spacing | times: 2 }}px)
           {%- endcapture -%}
           {% comment %} COMENTAR CASO NECESSARIO {% endcomment %}
-          {% comment %} {% capture image_content %}
-            <div class="mobile-product-info">
-              {% for block in section.blocks %}
-                {% case block.type %}
-                  {% when 'title' %}
-                    {% render 'product-title', product: product, block: block, section: section %}
-                  {% when 'price' %}
-                    {% render 'product-price', product: product, block: block, section: section %}
-                {% endcase %}
-              {% endfor %}
-            </div>
-            <div class="mobile-product-buy">
-              {% for block in section.blocks %}
-                {% case block.type %}
-                  {% when 'add-buttons' %}
-                    {% assign product_form_id = 'product-form-' | append: section.id | append: '-' | append: product.id %}
-                    {% render 'product-buttons' product: product, uniq_id: product_form_id, block: block %}
-                {% endcase %}
-              {% endfor %}
-            </div>
-          {% endcapture %} {% endcomment %}
+          {% comment %}
+            {% capture image_content %}
+              <div class="mobile-product-info">
+                {% for block in section.blocks %}
+                  {% case block.type %}
+                    {% when 'title' %}
+                      {% render 'product-title', product: product, block: block, section: section %}
+                    {% when 'price' %}
+                      {% render 'product-price', product: product, block: block, section: section %}
+                  {% endcase %}
+                {% endfor %}
+              </div>
+              <div class="mobile-product-buy">
+                {% for block in section.blocks %}
+                  {% case block.type %}
+                    {% when 'add-buttons' %}
+                      {% assign product_form_id = 'product-form-' | append: section.id | append: '-' | append: product.id %}
+                      {% render 'product-buttons' product: product, uniq_id: product_form_id, block: block %}
+                  {% endcase %}
+                {% endfor %}
+              </div>
+            {% endcapture %}
+          {% endcomment %}
 
           {%- render 'image',
             img_object: media.preview_image,
@@ -105,17 +111,24 @@
               }
               @media (min-width: 768px) {
                 .media__buttons__holder {
-                  top: auto !important;
-                  right: auto !important;
-                  bottom: 20px !important;
-                  left: 20px !important;
-                  justify-content: flex-start !important;
+                  top: 15% !important;
+                  left: 0 !important;
+                  transform: translateX(0%) !important;
+                  justify-content: flex-end !important;
+                }
+                .media__buttons__holder svg {
+                  width: 50px !important;
+                  height: 50px !important;
                 }
               }
             </style>
             <div class="media__buttons__holder">
               {% if section.settings.zoom_enable %}
-                <button class="media__button media__button--zoom" style="position: relative !important; z-index: 110 !important;" data-zoom-button>
+                <button
+                  class="media__button media__button--zoom"
+                  style="position: relative !important; z-index: 110 !important;"
+                  data-zoom-button
+                >
                   {% render 'icon-core-magnify' %}
                   <span class="visually-hidden">{{ 'general.accessibility.zoom' | t }}</span>
                 </button>
@@ -136,11 +149,32 @@
       </div>
     {% when 'model' %}
       <div class="media__contain" style="padding-top: 100%;">
-        {{ media | model_viewer_tag: image_size: image_size, reveal: 'interaction', toggleable: true, data-model-id: media.id, interaction-prompt-threshold: 500 }}
+        {{
+          media
+          | model_viewer_tag:
+            image_size: image_size,
+            reveal: 'interaction',
+            toggleable: true,
+            data-model-id: media.id,
+            interaction-prompt-threshold: 500
+        }}
       </div>
     {% when 'video' %}
-      <div class="media__contain" style="padding-top: {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%; pointer-events: none;">
-        {{ media | video_tag: class: 'media-video', image_size: image_size, autoplay: true, loop: true, muted: true, playsinline: true, controls: false }}
+      <div
+        class="media__contain"
+        style="padding-top: {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%; pointer-events: none;"
+      >
+        {{
+          media
+          | video_tag:
+            class: 'media-video',
+            image_size: image_size,
+            autoplay: true,
+            loop: true,
+            muted: true,
+            playsinline: true,
+            controls: false
+        }}
       </div>
     {% when 'external_video' %}
       <div data-video-id="{{ media.external_id }}"></div>
@@ -149,7 +183,7 @@
       </div>
     {% else %}
       <div style="padding-top: {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%;">
-        {{ media | media_tag: class: "media__other" }}
+        {{ media | media_tag: class: 'media__other' }}
       </div>
   {% endcase %}
 </div>
