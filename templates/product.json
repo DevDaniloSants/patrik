@@ -394,7 +394,7 @@
       },
       "name": "Pedra Preciosa",
       "settings": {
-        "target_data": "emerald",
+        "target_data": "Esmeralda",
         "order": "before-after-first",
         "height": "use_screen_one_third",
         "brick_gutter": 20,
