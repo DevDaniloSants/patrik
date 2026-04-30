@@ -33185,6 +33185,15 @@ body.template-product .section-padding {
   max-width: 400px !important;
 }
 
+/* Custom style to show Flickity prev/next buttons on hover */
+[data-product-slideshow] .flickity-button {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+[data-product-slideshow]:hover .flickity-button {
+  opacity: 1;
+}
+
 #ai_gen_block_a4e8c2e_fVXDXn video,
 #ai_gen_block_a4e8c2e_fVXDXn iframe,
 #ai_gen_block_a4e8c2e_fVXDXn .video-container {
@@ -33192,4 +33201,3 @@ body.template-product .section-padding {
   object-fit: cover;
   width: 100%;
   height: auto;
-}
