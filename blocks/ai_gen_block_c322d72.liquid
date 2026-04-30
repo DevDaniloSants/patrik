@@ -203,31 +203,30 @@
       <div class="ai-text-video-media-{{ ai_gen_id }}">
         <div class="ai-text-video-video-wrapper-{{ ai_gen_id }}">
           {% if block.settings.video != blank %}
-            <video
-              class="ai-text-video-video-{{ ai_gen_id }}"
-              {% if block.settings.autoplay %}autoplay{% endif %}
-              {% if block.settings.loop %}loop{% endif %}
-              {% if block.settings.muted %}muted{% endif %}
-              {% if block.settings.controls %}controls{% endif %}
-              playsinline
-            >
-              <source src="{{ block.settings.video }}" type="video/mp4">
-            </video>
+            {% assign video_class = 'ai-text-video-video-' | append: ai_gen_id %}
+            {{ block.settings.video | video_tag: class: video_class, autoplay: block.settings.autoplay, loop: block.settings.loop, muted: block.settings.muted, controls: block.settings.controls, playsinline: true }}
           {% elsif block.settings.video_url != blank %}
             {% if block.settings.video_url contains 'youtube.com' or block.settings.video_url contains 'youtu.be' %}
-              {% assign video_id = block.settings.video_url | split: 'v=' | last | split: '/' | last | split: '&' | first %}
+              {% assign video_id = block.settings.video_url | split: 'v=' | last | split: '/' | last | split: '?' | first | split: '&' | first %}
+              {% assign autoplay_val = 0 %}{% if block.settings.autoplay %}{% assign autoplay_val = 1 %}{% endif %}
+              {% assign loop_val = 0 %}{% if block.settings.loop %}{% assign loop_val = 1 %}{% endif %}
+              {% assign mute_val = 0 %}{% if block.settings.muted %}{% assign mute_val = 1 %}{% endif %}
+              {% assign controls_val = 0 %}{% if block.settings.controls %}{% assign controls_val = 1 %}{% endif %}
               <iframe
                 class="ai-text-video-video-{{ ai_gen_id }}"
-                src="https://www.youtube.com/embed/{{ video_id }}?autoplay={{ block.settings.autoplay | default: 0 }}&loop={{ block.settings.loop | default: 0 }}&mute={{ block.settings.muted | default: 0 }}&controls={{ block.settings.controls | default: 1 }}&playlist={{ video_id }}"
+                src="https://www.youtube.com/embed/{{ video_id }}?autoplay={{ autoplay_val }}&loop={{ loop_val }}&mute={{ mute_val }}&controls={{ controls_val }}&playlist={{ video_id }}"
                 frameborder="0"
                 allow="autoplay; encrypted-media"
                 allowfullscreen
               ></iframe>
             {% elsif block.settings.video_url contains 'vimeo.com' %}
-              {% assign video_id = block.settings.video_url | split: '/' | last %}
+              {% assign video_id = block.settings.video_url | split: '/' | last | split: '?' | first %}
+              {% assign autoplay_val = 0 %}{% if block.settings.autoplay %}{% assign autoplay_val = 1 %}{% endif %}
+              {% assign loop_val = 0 %}{% if block.settings.loop %}{% assign loop_val = 1 %}{% endif %}
+              {% assign mute_val = 0 %}{% if block.settings.muted %}{% assign mute_val = 1 %}{% endif %}
               <iframe
                 class="ai-text-video-video-{{ ai_gen_id }}"
-                src="https://player.vimeo.com/video/{{ video_id }}?autoplay={{ block.settings.autoplay | default: 0 }}&loop={{ block.settings.loop | default: 0 }}&muted={{ block.settings.muted | default: 0 }}"
+                src="https://player.vimeo.com/video/{{ video_id }}?autoplay={{ autoplay_val }}&loop={{ loop_val }}&muted={{ mute_val }}"
                 frameborder="0"
                 allow="autoplay; fullscreen"
                 allowfullscreen
