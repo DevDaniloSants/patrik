@@ -207,9 +207,9 @@
           "type": "ai_gen_block_a4e8c2e",
           "settings": {
             "layout": "video_right",
-            "video_width": 50,
+            "video_width": 70,
             "vertical_alignment": "center",
-            "gap": 30,
+            "gap": 20,
             "video_url": "https://cdn.shopify.com/videos/c/o/v/703a799054f7480d9f84065e8634f881.mov",
             "video_border_radius": 24,
             "heading": "O Nome da Marca",
@@ -220,9 +220,9 @@
             "background_color": "#ffffff",
             "heading_color": "#3c3f36",
             "text_color": "#3c3f36",
-            "container_width": 1200,
-            "section_padding": 50,
-            "horizontal_padding": 20
+            "container_width": 800,
+            "section_padding": 30,
+            "horizontal_padding": 15
           },
           "blocks": {}
         }
