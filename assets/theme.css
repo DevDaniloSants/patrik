@@ -33184,3 +33184,11 @@ body.template-product .section-padding {
 #ShopifyChat {
   max-width: 400px !important;
 }
+#ai_gen_block_a4e8c2e_fVXDXn video,
+#ai_gen_block_a4e8c2e_fVXDXn iframe,
+#ai_gen_block_a4e8c2e_fVXDXn .video-container {
+  aspect-ratio: 9 / 16 !important;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
