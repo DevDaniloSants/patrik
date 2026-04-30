@@ -191,7 +191,7 @@
       ],
       "name": "Espaçamento - Rich text",
       "settings": {
-        "align_text": "text-left",
+        "align_text": "text-center",
         "text_color": "text--neutral",
         "bg": "palette--light bg--neutral",
         "content_width": 2000,
