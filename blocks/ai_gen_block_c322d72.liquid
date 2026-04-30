@@ -97,16 +97,18 @@
     position: relative;
     width: 100%;
     aspect-ratio: {{ block.settings.aspect_ratio | default: '9/16' }};
-    background-color: #f4f4f4;
+    {% comment %} background-color: #f4f4f4; {% endcomment %}
   }
 
   .ai-text-video-video-{{ ai_gen_id }} {
     position: absolute;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    max-height: calc(100vh - 50px);
   }
 
   .ai-text-video-placeholder-{{ ai_gen_id }} {
@@ -204,14 +206,37 @@
         <div class="ai-text-video-video-wrapper-{{ ai_gen_id }}">
           {% if block.settings.video != blank %}
             {% assign video_class = 'ai-text-video-video-' | append: ai_gen_id %}
-            {{ block.settings.video | video_tag: image_size: '2048x', class: video_class, autoplay: block.settings.auto_play, loop: block.settings.loop, muted: block.settings.mute_video, controls: block.settings.show_controls, playsinline: true }}
+            {{
+              block.settings.video
+              | video_tag:
+                image_size: '2048x',
+                class: video_class,
+                autoplay: block.settings.auto_play,
+                loop: block.settings.loop,
+                muted: block.settings.mute_video,
+                controls: block.settings.show_controls,
+                playsinline: true
+            }}
           {% elsif block.settings.video_url != blank %}
             {% if block.settings.video_url contains 'youtube.com' or block.settings.video_url contains 'youtu.be' %}
-              {% assign video_id = block.settings.video_url | split: 'v=' | last | split: '/' | last | split: '?' | first | split: '&' | first %}
-              {% assign autoplay_val = 0 %}{% if block.settings.auto_play %}{% assign autoplay_val = 1 %}{% endif %}
-              {% assign loop_val = 0 %}{% if block.settings.loop %}{% assign loop_val = 1 %}{% endif %}
-              {% assign mute_val = 0 %}{% if block.settings.mute_video %}{% assign mute_val = 1 %}{% endif %}
-              {% assign controls_val = 0 %}{% if block.settings.show_controls %}{% assign controls_val = 1 %}{% endif %}
+              {% assign video_id = block.settings.video_url
+                | split: 'v='
+                | last
+                | split: '/'
+                | last
+                | split: '?'
+                | first
+                | split: '&'
+                | first
+              %}
+              {% assign autoplay_val = 0 -%}
+              {%- if block.settings.auto_play %}{% assign autoplay_val = 1 %}{% endif %}
+              {% assign loop_val = 0 -%}
+              {%- if block.settings.loop %}{% assign loop_val = 1 %}{% endif %}
+              {% assign mute_val = 0 -%}
+              {%- if block.settings.mute_video %}{% assign mute_val = 1 %}{% endif %}
+              {% assign controls_val = 0 -%}
+              {%- if block.settings.show_controls %}{% assign controls_val = 1 %}{% endif %}
               <iframe
                 class="ai-text-video-video-{{ ai_gen_id }}"
                 src="https://www.youtube.com/embed/{{ video_id }}?autoplay={{ autoplay_val }}&loop={{ loop_val }}&mute={{ mute_val }}&controls={{ controls_val }}&playlist={{ video_id }}"
@@ -221,9 +246,12 @@
               ></iframe>
             {% elsif block.settings.video_url contains 'vimeo.com' %}
               {% assign video_id = block.settings.video_url | split: '/' | last | split: '?' | first %}
-              {% assign autoplay_val = 0 %}{% if block.settings.auto_play %}{% assign autoplay_val = 1 %}{% endif %}
-              {% assign loop_val = 0 %}{% if block.settings.loop %}{% assign loop_val = 1 %}{% endif %}
-              {% assign mute_val = 0 %}{% if block.settings.mute_video %}{% assign mute_val = 1 %}{% endif %}
+              {% assign autoplay_val = 0 -%}
+              {%- if block.settings.auto_play %}{% assign autoplay_val = 1 %}{% endif %}
+              {% assign loop_val = 0 -%}
+              {%- if block.settings.loop %}{% assign loop_val = 1 %}{% endif %}
+              {% assign mute_val = 0 -%}
+              {%- if block.settings.mute_video %}{% assign mute_val = 1 %}{% endif %}
               <iframe
                 class="ai-text-video-video-{{ ai_gen_id }}"
                 src="https://player.vimeo.com/video/{{ video_id }}?autoplay={{ autoplay_val }}&loop={{ loop_val }}&muted={{ mute_val }}"
@@ -235,9 +263,7 @@
           {% else %}
             <div class="ai-text-video-placeholder-{{ ai_gen_id }}">
               {{ 'image' | placeholder_svg_tag }}
-              <div class="ai-text-video-empty-state-{{ ai_gen_id }}">
-                Adicione um vídeo
-              </div>
+              <div class="ai-text-video-empty-state-{{ ai_gen_id }}">Adicione um vídeo</div>
             </div>
           {% endif %}
         </div>
@@ -255,7 +281,7 @@
 
       connectedCallback() {
         this.video = this.querySelector('.ai-text-video-video-{{ ai_gen_id }}');
-        
+
         {% if block.settings.auto_play %}
         if (this.video && this.video.tagName === 'VIDEO') {
           this.setupIntersectionObserver();
