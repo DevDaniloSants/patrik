@@ -207,22 +207,22 @@
           "type": "ai_gen_block_a4e8c2e",
           "settings": {
             "layout": "video_right",
-            "video_width": 60,
+            "video_width": 50,
             "vertical_alignment": "center",
-            "gap": 50,
+            "gap": 30,
             "video_url": "https://cdn.shopify.com/videos/c/o/v/703a799054f7480d9f84065e8634f881.mov",
             "video_border_radius": 24,
             "heading": "O Nome da Marca",
             "text": "<p>Por trás da Patrik está David Cohen, gemólogo formado pelo Gemological Institute of America (GIA) — referência mundial em gemologia. <br/><br/>Há décadas dedicado ao universo das joias, David desenvolveu um olhar raro para aquilo que torna cada gema extraordinária. Ao seu lado está Patrik, seu filho, que inspira o nome da marca e já segue o mesmo caminho, aprofundando-se no estudo das gemas e da joalheria. <br/><br/>A Patrik nasce desse encontro entre gerações — de conhecimento que se transmite, de valores que permanecem e de um olhar que continua.</p>",
-            "heading_size": 32,
-            "text_size": 14,
+            "heading_size": 24,
+            "text_size": 12,
             "heading_spacing": 20,
             "background_color": "#ffffff",
             "heading_color": "#3c3f36",
             "text_color": "#3c3f36",
             "container_width": 1200,
             "section_padding": 50,
-            "horizontal_padding": 30
+            "horizontal_padding": 20
           },
           "blocks": {}
         }
