@@ -6769,7 +6769,7 @@
             }
             const desktopOptions = {
                 autoPlay: false,
-                prevNextButtons: false,
+                prevNextButtons: true,
                 pageDots: false,
                 adaptiveHeight: true,
                 accessibility: true,
