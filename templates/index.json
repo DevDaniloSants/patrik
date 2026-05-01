@@ -564,6 +564,68 @@
         "padding_bottom": 20
       }
     },
+    "section_video_ykPNyn": {
+      "type": "section-video",
+      "blocks": {
+        "heading_DT7bw9": {
+          "type": "heading",
+          "settings": {
+            "title": "",
+            "text_size": 10
+          }
+        },
+        "text_HqTpwA": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 6
+          }
+        },
+        "button_bhUYPT": {
+          "type": "button",
+          "settings": {
+            "link_text_1": "",
+            "link_1": "",
+            "button_size_1": "btn--long",
+            "button_style_1": "btn",
+            "button_color_1": "btn--white",
+            "link_text_2": "",
+            "link_2": "",
+            "button_size_2": "btn--long",
+            "button_style_2": "btn-text-thick-line",
+            "button_color_2": "btn--white",
+            "link_text_3": "",
+            "link_3": "",
+            "button_size_3": "btn--long",
+            "button_style_3": "btn-text-thick-line",
+            "button_color_3": "btn--white"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DT7bw9",
+        "text_HqTpwA",
+        "button_bhUYPT"
+      ],
+      "name": "Video banner",
+      "settings": {
+        "height": "use_screen_full",
+        "color_bg": "palette--light bg--neutral",
+        "video_bg": "shopify://files/videos/patrik_1.mov",
+        "object_position": "center-center",
+        "image": "shopify://shop_images/Imagem_banner_home_8d053981-b069-46f1-ace8-f649b6a46226.png",
+        "banner_link": "",
+        "preload_image": false,
+        "text_align": "align--bottom-left",
+        "text_color": "text--black",
+        "overlay_opacity": 0,
+        "overlay_color": "#000000",
+        "enable_overlay_text": false,
+        "width": "wrapper--none",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "section_image_neGRcR": {
       "type": "section-image",
       "disabled": true,
@@ -1384,68 +1446,6 @@
         "padding_bottom": 0
       }
     },
-    "section_video_ykPNyn": {
-      "type": "section-video",
-      "blocks": {
-        "heading_DT7bw9": {
-          "type": "heading",
-          "settings": {
-            "title": "",
-            "text_size": 10
-          }
-        },
-        "text_HqTpwA": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_size": 6
-          }
-        },
-        "button_bhUYPT": {
-          "type": "button",
-          "settings": {
-            "link_text_1": "",
-            "link_1": "",
-            "button_size_1": "btn--long",
-            "button_style_1": "btn",
-            "button_color_1": "btn--white",
-            "link_text_2": "",
-            "link_2": "",
-            "button_size_2": "btn--long",
-            "button_style_2": "btn-text-thick-line",
-            "button_color_2": "btn--white",
-            "link_text_3": "",
-            "link_3": "",
-            "button_size_3": "btn--long",
-            "button_style_3": "btn-text-thick-line",
-            "button_color_3": "btn--white"
-          }
-        }
-      },
-      "block_order": [
-        "heading_DT7bw9",
-        "text_HqTpwA",
-        "button_bhUYPT"
-      ],
-      "name": "Video banner",
-      "settings": {
-        "height": "use_screen_full",
-        "color_bg": "palette--light bg--neutral",
-        "video_bg": "shopify://files/videos/patrik_1.mov",
-        "object_position": "center-center",
-        "image": "shopify://shop_images/Imagem_banner_home_8d053981-b069-46f1-ace8-f649b6a46226.png",
-        "banner_link": "",
-        "preload_image": false,
-        "text_align": "align--bottom-left",
-        "text_color": "text--black",
-        "overlay_opacity": 0,
-        "overlay_color": "#000000",
-        "enable_overlay_text": false,
-        "width": "wrapper--none",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "section_icons_Fcggry": {
       "type": "section-icons",
       "blocks": {
@@ -1512,6 +1512,7 @@
     "section_hero_UhTiib",
     "section_list_collections_ftJBTL",
     "section_richtext_q8gnYc",
+    "section_video_ykPNyn",
     "section_image_neGRcR",
     "section_richtext_jRYTUM",
     "section_columns_X6EhLY",
@@ -1525,7 +1526,6 @@
     "section_pair_hotspots_showcase_RGxViq",
     "section_mosaic_FgTQfb",
     "section_hero_p3denR",
-    "section_video_ykPNyn",
     "section_icons_Fcggry"
   ]
 }
