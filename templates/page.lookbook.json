@@ -316,7 +316,7 @@
         "image": "shopify://shop_images/Berilo_verde_brinco_e_colar.png",
         "mobile_image": "shopify://shop_images/Berilo_verde_brinco_e_colar.png",
         "sticky_image_enable": true,
-        "swap": false,
+        "swap": true,
         "overlay_opacity": 15,
         "overlay_color": "#000000",
         "kicker": "Introduzindo o conjunto",
