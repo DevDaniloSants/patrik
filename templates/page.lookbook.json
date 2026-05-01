@@ -50,6 +50,51 @@
         "padding_bottom": 0
       }
     },
+    "section_richtext_YmWhmT": {
+      "type": "section-richtext",
+      "blocks": {
+        "kicker_PmmkLb": {
+          "type": "kicker",
+          "disabled": true,
+          "settings": {
+            "kicker": "Introducing",
+            "enable_line": true,
+            "text_size": 4
+          }
+        },
+        "heading_Va8e6x": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Rich text",
+            "text_size": 8
+          }
+        },
+        "text_dYa47Q": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Na natureza, nada é perfeitamente simétrico — e ainda assim tudo é harmonia.<br/>Rochas, minerais e superfícies moldadas pelo temporevelam uma estética espontânea, orgânica e poderosa.<br/>Essa é a linguagem que inspira cada peça da coleção.</p>",
+            "text_size": 6,
+            "text_columns": 1
+          }
+        }
+      },
+      "block_order": [
+        "kicker_PmmkLb",
+        "heading_Va8e6x",
+        "text_dYa47Q"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "text-center",
+        "text_color": "text--white",
+        "bg": "palette--dark bg--invert--accent",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 158,
+        "padding_bottom": 156
+      }
+    },
     "page-lookbook-6": {
       "type": "section-richtext",
       "blocks": {
@@ -97,6 +142,7 @@
         "template--14288112255060__page-lookbook-6-166605104694452869-1",
         "template--14288112255060__page-lookbook-6-166605104694452869-3"
       ],
+      "disabled": true,
       "name": "Espaçamento",
       "settings": {
         "align_text": "text-center",
@@ -111,6 +157,24 @@
     "section_double_tiqCKW": {
       "type": "section-double",
       "blocks": {
+        "image_dJxaHL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/banner_072376-v4_1.png",
+            "overlay_opacity": 15,
+            "overlay_color": "#000",
+            "enable_overlay_text": false,
+            "kicker": "",
+            "title": "",
+            "richtext": "",
+            "text_align": "align--bottom-center",
+            "text_color": "text--white",
+            "link_text": "",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "btn--outline"
+          }
+        },
         "text_XdeyRA": {
           "type": "text",
           "settings": {
@@ -127,29 +191,11 @@
             "text_color": "text--white",
             "bg_color": ""
           }
-        },
-        "image_dJxaHL": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/banner_072376-v4_1.png",
-            "overlay_opacity": 15,
-            "overlay_color": "#000",
-            "enable_overlay_text": false,
-            "kicker": "",
-            "title": "",
-            "richtext": "",
-            "text_align": "align--bottom-center",
-            "text_color": "text--white",
-            "link_text": "Conhecer as jóias da coleção",
-            "link": "",
-            "button_color": "btn--white",
-            "button_style": "btn--outline"
-          }
         }
       },
       "block_order": [
-        "text_XdeyRA",
-        "image_dJxaHL"
+        "image_dJxaHL",
+        "text_XdeyRA"
       ],
       "name": "Narrativa coleção",
       "settings": {
@@ -316,65 +362,6 @@
         "width": "wrapper",
         "padding_top": 36,
         "padding_bottom": 10
-      }
-    },
-    "section_richtext_U7xN3c": {
-      "type": "section-richtext",
-      "blocks": {
-        "kicker_kU4AE9": {
-          "type": "kicker",
-          "disabled": true,
-          "settings": {
-            "kicker": "Introducing",
-            "enable_line": true,
-            "text_size": 3
-          }
-        },
-        "heading_BXT3wU": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Rich text",
-            "text_size": 7
-          }
-        },
-        "button_XqNenM": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "link_text_1": "Shop all",
-            "link_1": "shopify://collections/all",
-            "button_size_1": "btn--medium",
-            "button_style_1": "btn-text-thick-line",
-            "button_color_1": "btn--neutral",
-            "link_text_2": "",
-            "link_2": "",
-            "button_size_2": "btn--medium",
-            "button_style_2": "btn-text-thick-line",
-            "button_color_2": "btn--neutral",
-            "link_text_3": "",
-            "link_3": "",
-            "button_size_3": "btn--long",
-            "button_style_3": "btn-text-thick-line",
-            "button_color_3": "btn--white"
-          }
-        }
-      },
-      "block_order": [
-        "kicker_kU4AE9",
-        "heading_BXT3wU",
-        "button_XqNenM"
-      ],
-      "disabled": true,
-      "name": "Espaçamento",
-      "settings": {
-        "align_text": "text-center",
-        "text_color": "text--white",
-        "bg": "palette--dark bg--invert--accent",
-        "content_width": 2000,
-        "width": "wrapper",
-        "padding_top": 40,
-        "padding_bottom": 42
       }
     },
     "section_image_hBPyj3": {
@@ -676,17 +663,91 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "section_richtext_U7xN3c": {
+      "type": "section-richtext",
+      "blocks": {
+        "kicker_kU4AE9": {
+          "type": "kicker",
+          "disabled": true,
+          "settings": {
+            "kicker": "Introducing",
+            "enable_line": true,
+            "text_size": 3
+          }
+        },
+        "heading_BXT3wU": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Rich text",
+            "text_size": 7
+          }
+        },
+        "button_XqNenM": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "link_text_1": "Shop all",
+            "link_1": "shopify://collections/all",
+            "button_size_1": "btn--medium",
+            "button_style_1": "btn-text-thick-line",
+            "button_color_1": "btn--neutral",
+            "link_text_2": "",
+            "link_2": "",
+            "button_size_2": "btn--medium",
+            "button_style_2": "btn-text-thick-line",
+            "button_color_2": "btn--neutral",
+            "link_text_3": "",
+            "link_3": "",
+            "button_size_3": "btn--long",
+            "button_style_3": "btn-text-thick-line",
+            "button_color_3": "btn--white"
+          }
+        }
+      },
+      "block_order": [
+        "kicker_kU4AE9",
+        "heading_BXT3wU",
+        "button_XqNenM"
+      ],
+      "name": "Espaçamento",
+      "settings": {
+        "align_text": "text-center",
+        "text_color": "text--white",
+        "bg": "palette--dark bg--invert--accent",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 40,
+        "padding_bottom": 42
+      }
+    },
+    "section_collection_BJHPGq": {
+      "type": "section-collection",
+      "name": "Product grid",
+      "settings": {
+        "title": "Conheça os produtos da coleção Orgânica",
+        "collection": "organica",
+        "grid": 3,
+        "rows": 2,
+        "grid_mobile": "2",
+        "bg": "palette--dark bg--invert--accent",
+        "show_view_all": false,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "hero",
+    "section_richtext_YmWhmT",
     "page-lookbook-6",
     "section_double_tiqCKW",
     "main",
     "1777665162a2f00a62",
     "section_richtext_pn4Uxe",
     "page-lookbook-7",
-    "section_richtext_U7xN3c",
     "section_image_hBPyj3",
     "section_collection_slider_JBximM",
     "section_list_collections_products_E96FV9",
@@ -694,6 +755,8 @@
     "section_collection_gUiQKm",
     "section_collection_tabs_QNBKTq",
     "section_look_RzWU8x",
-    "section_image_hzQCjr"
+    "section_image_hzQCjr",
+    "section_richtext_U7xN3c",
+    "section_collection_BJHPGq"
   ]
 }
