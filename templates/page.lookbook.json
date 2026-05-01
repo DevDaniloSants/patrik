@@ -135,7 +135,7 @@
             "image": "shopify://shop_images/banner_072376-v4_1.png",
             "overlay_opacity": 0,
             "overlay_color": "#000000",
-            "enable_overlay_text": false,
+            "enable_overlay_text": true,
             "kicker": "",
             "title": "",
             "richtext": "",
@@ -200,7 +200,7 @@
           "disabled": true,
           "settings": {
             "heading": "Rich text",
-            "text_size": 7
+            "text_size": 6
           }
         },
         "button_4kMn6K": {
@@ -309,6 +309,7 @@
     },
     "page-lookbook-7": {
       "type": "collection-split",
+      "disabled": true,
       "name": "Conjunto Berilo - Drewdrops - Products with image",
       "settings": {
         "collection": "conjunto-berilo",
@@ -383,6 +384,7 @@
         "heading_BXT3wU",
         "button_XqNenM"
       ],
+      "disabled": true,
       "name": "Espaçamento",
       "settings": {
         "align_text": "text-center",
@@ -396,6 +398,7 @@
     },
     "section_image_hBPyj3": {
       "type": "section-image",
+      "disabled": true,
       "name": "Image",
       "settings": {
         "image": "shopify://shop_images/diamoonds_on_basalt_rocks.png",
@@ -410,6 +413,7 @@
     },
     "section_collection_slider_JBximM": {
       "type": "section-collection-slider",
+      "disabled": true,
       "name": "Product slider",
       "settings": {
         "collection": "organica-diamantes",
@@ -462,6 +466,7 @@
         "collection_6VGK4i",
         "collection_9T83mM"
       ],
+      "disabled": true,
       "name": "Collection product grid",
       "settings": {
         "title": "Catalog",
@@ -561,6 +566,7 @@
           "block_order": []
         }
       },
+      "disabled": true,
       "name": "Pair: Hotspots & Showcase",
       "settings": {
         "image": "shopify://shop_images/Berilo_verde_brinco_e_colar.png",
@@ -577,6 +583,7 @@
     },
     "section_collection_gUiQKm": {
       "type": "section-collection",
+      "disabled": true,
       "name": "Product grid",
       "settings": {
         "title": "Featured Products",
@@ -613,6 +620,7 @@
         "collection_7aqP7X",
         "collection_XkaGdf"
       ],
+      "disabled": true,
       "name": "Product slider tabs",
       "settings": {
         "title": "Featured products",
@@ -656,6 +664,7 @@
         "product_F8mbMz",
         "product_4TaFN3"
       ],
+      "disabled": true,
       "name": "Shop the look",
       "settings": {
         "image": "shopify://shop_images/Collection_Vitral_desktop_3.png",

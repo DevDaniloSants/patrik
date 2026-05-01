@@ -1500,6 +1500,10 @@
         "padding_top": 50,
         "padding_bottom": 50
       }
+    },
+    "1777664169ac2559d7": {
+      "type": "_blocks",
+      "settings": {}
     }
   },
   "order": [
@@ -1526,6 +1530,7 @@
     "section_pair_hotspots_showcase_RGxViq",
     "section_mosaic_FgTQfb",
     "section_hero_p3denR",
-    "section_icons_Fcggry"
+    "section_icons_Fcggry",
+    "1777664169ac2559d7"
   ]
 }
