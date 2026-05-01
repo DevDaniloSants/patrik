@@ -822,6 +822,7 @@
       "block_order": [
         "text_eDLqYV"
       ],
+      "disabled": true,
       "name": "Espaçamento",
       "settings": {
         "align_text": "text-left",
@@ -873,6 +874,7 @@
       "block_order": [
         "collection_TT7wEV"
       ],
+      "disabled": true,
       "custom_css": [
         ".custom-scrollbar.small-down--show {display: none !important;}",
         ".custom-scrollbar.small-down--show::-webkit-scrollbar {display: none;}",
@@ -1425,12 +1427,11 @@
         "text_HqTpwA",
         "button_bhUYPT"
       ],
-      "disabled": true,
       "name": "Video banner",
       "settings": {
-        "height": "use_screen_three_quarters",
+        "height": "use_screen_full",
         "color_bg": "palette--light bg--neutral",
-        "video_bg": "shopify://files/videos/Animação_de_Modelo_em_Monte_Carlo.mp4",
+        "video_bg": "shopify://files/videos/patrik_1.mov",
         "object_position": "center-center",
         "image": "shopify://shop_images/Imagem_banner_home_8d053981-b069-46f1-ace8-f649b6a46226.png",
         "banner_link": "shopify://collections/aneis",
