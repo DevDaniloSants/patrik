@@ -78,8 +78,8 @@
       ],
       "name": "Hero",
       "settings": {
-        "image": "shopify://shop_images/banner_brn02197-anl02140-v4_1.png",
-        "mobile_image": "shopify://shop_images/banner_brn02197-anl02140-v4_1_1055baed-7a86-4787-8d14-cfce767f6044.png",
+        "image": "shopify://shop_images/banner_brn02052-clr01123-v3_1.png",
+        "mobile_image": "shopify://shop_images/banner_brn02197-anl02140-v4_1_b1b46d22-18ac-4b7f-bbb5-79beb83737ca.png",
         "banner_link": "shopify://pages/colecao-organica",
         "height": "use_screen_full",
         "overlay_opacity": 0,
