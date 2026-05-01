@@ -119,7 +119,7 @@
             "text": "<p>Reconectar-se à natureza.<br/>Recordar que nela nasce toda inspiração humana.<br/>Sentir novamente que somos parte dela.<br/>A coleção Orgânica nasce desse chamado.<br/>Ela celebra as formas que o tempo esculpe —<br/>as curvas das rochas,<br/>as estruturas do reino mineral,<br/>as marcas deixadas por milhares de anos de transformação.</p>",
             "font_size": 6,
             "text_columns": 1,
-            "align_text": "text-left",
+            "align_text": "text-center",
             "button_text": "",
             "button_url": "",
             "button_color": "btn--white",
@@ -187,20 +187,20 @@
       "blocks": {
         "ai_gen_block_6344db4_gNQXiz": {
           "type": "ai_gen_block_6344db4",
+          "disabled": true,
           "settings": {
             "heading": "",
             "text": "<p>Na natureza, nada é perfeitamente simétrico —<br/>e ainda assim tudo é harmonia.<br/>Rochas, minerais e superfícies moldadas pelo tempo<br/>revelam uma estética espontânea, orgânica e poderosa.<br/>Essa é a linguagem que inspira cada peça da coleção.</p>",
-            "button_text": "..,.,.",
+            "button_text": "",
             "button_link": "",
             "image_1": "shopify://shop_images/banner_anl02123-brn02201-pul00202-v3_1.png",
-            "image_2": "shopify://shop_images/banner_brn02198-v4_1.png",
             "image_3": "shopify://shop_images/banner_pul00532-anl02043-v4_1.png",
-            "image_width": 45,
+            "image_width": 40,
             "image_aspect_ratio": "1/1",
-            "show_dots": true,
-            "show_arrows": true,
+            "show_dots": false,
+            "show_arrows": false,
             "autoplay": true,
-            "autoplay_speed": 4,
+            "autoplay_speed": 5,
             "desktop_width_percent": 100,
             "gap": 100,
             "padding": 100,
@@ -662,6 +662,19 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "section_image_hzQCjr": {
+      "type": "section-image",
+      "name": "Image",
+      "settings": {
+        "image": "shopify://shop_images/banner_anl02123-brn02201-pul00202-v3_1.png",
+        "max_width": 100,
+        "x_align": "center",
+        "color_bg": "palette--dark bg--invert--accent",
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -679,6 +692,7 @@
     "section_pair_hotspots_showcase_HkVhWL",
     "section_collection_gUiQKm",
     "section_collection_tabs_QNBKTq",
-    "section_look_RzWU8x"
+    "section_look_RzWU8x",
+    "section_image_hzQCjr"
   ]
 }
