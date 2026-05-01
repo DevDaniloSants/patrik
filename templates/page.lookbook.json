@@ -668,6 +668,7 @@
       "name": "Image",
       "settings": {
         "image": "shopify://shop_images/banner_anl02123-brn02201-pul00202-v3_1.png",
+        "mobile_image": "shopify://shop_images/banner_anl02123-brn02201-pul00202-v3_1.png",
         "max_width": 100,
         "x_align": "center",
         "color_bg": "palette--dark bg--invert--accent",
