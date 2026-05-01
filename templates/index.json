@@ -1404,7 +1404,7 @@
         "button_bhUYPT": {
           "type": "button",
           "settings": {
-            "link_text_1": "Shop Now",
+            "link_text_1": "",
             "link_1": "shopify://collections/aneis",
             "button_size_1": "btn--long",
             "button_style_1": "btn",
@@ -1438,7 +1438,7 @@
         "preload_image": false,
         "text_align": "align--bottom-left",
         "text_color": "text--white",
-        "overlay_opacity": 15,
+        "overlay_opacity": 0,
         "overlay_color": "#000000",
         "enable_overlay_text": false,
         "width": "wrapper--none",
