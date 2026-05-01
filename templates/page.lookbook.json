@@ -116,9 +116,9 @@
           "type": "text",
           "name": "Narrativa Coleção",
           "settings": {
-            "kicker": "A beleza que surge das formas de Gaia",
+            "kicker": "",
             "title": "",
-            "text": "<p>A coleção ORGANICA nasce do entendimento de que toda criação humana — da arquitetura à inteligência artificial, das viagens espaciais aos algoritmos mais sofisticados — tem sua origem silenciosa na natureza.<br/>É a Terra que ensina.<br/><br/>As espirais das galáxias ecoam as conchas marinhas.<br/>Os circuitos lembram nervuras de folhas.<br/>Os fluxos de dados repetem os fluxos dos rios.<br/><br/>Nada é novo. Tudo é tradução.</p><p>A inovação tem suas raízes na natureza.</p>",
+            "text": "<p>Reconectar-se à natureza.<br/>Recordar que nela nasce toda inspiração humana.<br/>Sentir novamente que somos parte dela.<br/>A coleção Orgânica nasce desse chamado.<br/>Ela celebra as formas que o tempo esculpe —<br/>as curvas das rochas,<br/>as estruturas do reino mineral,<br/>as marcas deixadas por milhares de anos de transformação.</p>",
             "font_size": 4,
             "text_columns": 1,
             "align_text": "text-left",
@@ -133,7 +133,7 @@
         "image_ji9aND": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/banner_072376-v2.png",
+            "image": "shopify://shop_images/banner_072376-v4_1.png",
             "overlay_opacity": 0,
             "overlay_color": "#000000",
             "enable_overlay_text": false,
@@ -142,8 +142,8 @@
             "richtext": "",
             "text_align": "align--bottom-center",
             "text_color": "text--white",
-            "link_text": "Compre agora",
-            "link": "shopify://products/anel-em-ouro-branco-18k-com-diamante-hosgor-ceyran",
+            "link_text": "conheça as jóias da coleção",
+            "link": "shopify://collections/organica",
             "button_color": "btn--white",
             "button_style": "btn--outline"
           }
