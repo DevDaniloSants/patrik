@@ -681,6 +681,62 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "section_double_tiqCKW": {
+      "type": "section-double",
+      "blocks": {
+        "text_XdeyRA": {
+          "type": "text",
+          "settings": {
+            "kicker": "",
+            "title": "",
+            "text": "<p>Reconectar-se à natureza.<br/>Recordar que nela nasce toda inspiração humana.<br/>Sentir novamente que somos parte dela.<br/>A coleção Orgânica nasce desse chamado.<br/>Ela celebra as formas que o tempo esculpe —<br/>as curvas das rochas,<br/>as estruturas do reino mineral,<br/>as marcas deixadas por milhares de anos de transformação.</p>",
+            "font_size": 6,
+            "text_columns": 1,
+            "align_text": "text-center",
+            "button_text": "",
+            "button_url": "",
+            "button_color": "btn--white",
+            "button_style": "btn-text-thick-line",
+            "text_color": "text--white",
+            "bg_color": ""
+          }
+        },
+        "image_dJxaHL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/banner_072376-v4_1.png",
+            "overlay_opacity": 15,
+            "overlay_color": "#000",
+            "enable_overlay_text": false,
+            "kicker": "",
+            "title": "",
+            "richtext": "",
+            "text_align": "align--bottom-center",
+            "text_color": "text--white",
+            "link_text": "Conhecer as jóias da coleção",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "btn--outline"
+          }
+        }
+      },
+      "block_order": [
+        "text_XdeyRA",
+        "image_dJxaHL"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "target_material": "",
+        "height": "use_screen_one_half",
+        "brick_gutter": 0,
+        "borders": false,
+        "bg_color": "#142b26",
+        "preload_image": false,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -698,6 +754,7 @@
     "section_pair_hotspots_showcase_HkVhWL",
     "section_collection_gUiQKm",
     "section_collection_tabs_QNBKTq",
-    "section_look_RzWU8x"
+    "section_look_RzWU8x",
+    "section_double_tiqCKW"
   ]
 }
