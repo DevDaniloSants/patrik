@@ -227,7 +227,7 @@
       "type": "section-collection-slider",
       "name": "Product slider",
       "settings": {
-        "collection": "engagement-rings-copy",
+        "collection": "wedding-rings",
         "product_limit": 12,
         "title": "Escolha a sua Aliança",
         "align_text": "title-center",
