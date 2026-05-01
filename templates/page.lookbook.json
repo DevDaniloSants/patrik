@@ -685,23 +685,6 @@
     "section_double_tiqCKW": {
       "type": "section-double",
       "blocks": {
-        "text_XdeyRA": {
-          "type": "text",
-          "settings": {
-            "kicker": "",
-            "title": "",
-            "text": "<p>Reconectar-se à natureza.<br/>Recordar que nela nasce toda inspiração humana.<br/>Sentir novamente que somos parte dela.<br/>A coleção Orgânica nasce desse chamado.<br/>Ela celebra as formas que o tempo esculpe —<br/>as curvas das rochas,<br/>as estruturas do reino mineral,<br/>as marcas deixadas por milhares de anos de transformação.</p>",
-            "font_size": 6,
-            "text_columns": 1,
-            "align_text": "text-center",
-            "button_text": "",
-            "button_url": "",
-            "button_color": "btn--white",
-            "button_style": "btn-text-thick-line",
-            "text_color": "text--white",
-            "bg_color": ""
-          }
-        },
         "image_dJxaHL": {
           "type": "image",
           "settings": {
@@ -719,11 +702,28 @@
             "button_color": "btn--white",
             "button_style": "btn--outline"
           }
+        },
+        "text_XdeyRA": {
+          "type": "text",
+          "settings": {
+            "kicker": "",
+            "title": "",
+            "text": "<p>Reconectar-se à natureza.<br/>Recordar que nela nasce toda inspiração humana.<br/>Sentir novamente que somos parte dela.<br/>A coleção Orgânica nasce desse chamado.<br/>Ela celebra as formas que o tempo esculpe —<br/>as curvas das rochas,<br/>as estruturas do reino mineral,<br/>as marcas deixadas por milhares de anos de transformação.</p>",
+            "font_size": 6,
+            "text_columns": 1,
+            "align_text": "text-center",
+            "button_text": "",
+            "button_url": "",
+            "button_color": "btn--white",
+            "button_style": "btn-text-thick-line",
+            "text_color": "text--white",
+            "bg_color": ""
+          }
         }
       },
       "block_order": [
-        "text_XdeyRA",
-        "image_dJxaHL"
+        "image_dJxaHL",
+        "text_XdeyRA"
       ],
       "name": "Image with text",
       "settings": {
