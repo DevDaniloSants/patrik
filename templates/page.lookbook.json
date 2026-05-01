@@ -111,24 +111,6 @@
     "section_double_VL4mjF": {
       "type": "section-double",
       "blocks": {
-        "text_Qc6T6j": {
-          "type": "text",
-          "name": "Narrativa Coleção",
-          "settings": {
-            "kicker": "",
-            "title": "",
-            "text": "<p>Reconectar-se à natureza.<br/>Recordar que nela nasce toda inspiração humana.<br/>Sentir novamente que somos parte dela.<br/>A coleção Orgânica nasce desse chamado.<br/>Ela celebra as formas que o tempo esculpe —<br/>as curvas das rochas,<br/>as estruturas do reino mineral,<br/>as marcas deixadas por milhares de anos de transformação.</p>",
-            "font_size": 6,
-            "text_columns": 1,
-            "align_text": "text-left",
-            "button_text": "",
-            "button_url": "",
-            "button_color": "btn--neutral",
-            "button_style": "btn-text-thick-line",
-            "text_color": "text--white",
-            "bg_color": ""
-          }
-        },
         "image_ji9aND": {
           "type": "image",
           "settings": {
@@ -146,11 +128,29 @@
             "button_color": "btn--white",
             "button_style": "btn--outline"
           }
+        },
+        "text_Qc6T6j": {
+          "type": "text",
+          "name": "Narrativa Coleção",
+          "settings": {
+            "kicker": "",
+            "title": "",
+            "text": "<p>Reconectar-se à natureza.<br/>Recordar que nela nasce toda inspiração humana.<br/>Sentir novamente que somos parte dela.<br/>A coleção Orgânica nasce desse chamado.<br/>Ela celebra as formas que o tempo esculpe —<br/>as curvas das rochas,<br/>as estruturas do reino mineral,<br/>as marcas deixadas por milhares de anos de transformação.</p>",
+            "font_size": 6,
+            "text_columns": 1,
+            "align_text": "text-left",
+            "button_text": "",
+            "button_url": "",
+            "button_color": "btn--neutral",
+            "button_style": "btn-text-thick-line",
+            "text_color": "text--white",
+            "bg_color": ""
+          }
         }
       },
       "block_order": [
-        "text_Qc6T6j",
-        "image_ji9aND"
+        "image_ji9aND",
+        "text_Qc6T6j"
       ],
       "name": "Narrativa Coleção",
       "settings": {
