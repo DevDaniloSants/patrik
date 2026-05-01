@@ -1390,14 +1390,14 @@
         "heading_DT7bw9": {
           "type": "heading",
           "settings": {
-            "title": "Coleção Resort",
+            "title": "",
             "text_size": 10
           }
         },
         "text_HqTpwA": {
           "type": "text",
           "settings": {
-            "text": "<p>Conheça a coleção que transmite a elegância dos balneários</p>",
+            "text": "",
             "text_size": 6
           }
         },
@@ -1405,7 +1405,7 @@
           "type": "button",
           "settings": {
             "link_text_1": "",
-            "link_1": "shopify://collections/aneis",
+            "link_1": "",
             "button_size_1": "btn--long",
             "button_style_1": "btn",
             "button_color_1": "btn--white",
@@ -1434,10 +1434,10 @@
         "video_bg": "shopify://files/videos/patrik_1.mov",
         "object_position": "center-center",
         "image": "shopify://shop_images/Imagem_banner_home_8d053981-b069-46f1-ace8-f649b6a46226.png",
-        "banner_link": "shopify://collections/aneis",
+        "banner_link": "",
         "preload_image": false,
         "text_align": "align--bottom-left",
-        "text_color": "text--white",
+        "text_color": "text--black",
         "overlay_opacity": 0,
         "overlay_color": "#000000",
         "enable_overlay_text": false,
