@@ -672,7 +672,7 @@
         "max_width": 100,
         "x_align": "center",
         "color_bg": "palette--dark bg--invert--accent",
-        "width": "wrapper",
+        "width": "wrapper--none",
         "padding_top": 36,
         "padding_bottom": 36
       }
