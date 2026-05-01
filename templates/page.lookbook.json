@@ -14,11 +14,10 @@
       "blocks": {
         "kicker-lookbook-block": {
           "type": "kicker",
-          "disabled": true,
           "settings": {
-            "kicker": "Introducing",
-            "enable_line": false,
-            "text_size": 3
+            "kicker": "Formas que o tempo esculpe",
+            "enable_line": true,
+            "text_size": 6
           }
         },
         "heading-lookbook-block": {
