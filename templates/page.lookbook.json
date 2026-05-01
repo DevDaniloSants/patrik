@@ -330,7 +330,7 @@
         "bg": "palette--dark bg--invert--accent",
         "content_width": 2000,
         "width": "wrapper",
-        "padding_top": 16,
+        "padding_top": 12,
         "padding_bottom": 14
       }
     },
