@@ -466,50 +466,71 @@
         "padding_bottom": 0
       }
     },
-    "section_list_collections_ftJBTL": {
+    "section_list_collections_LeYE9C": {
       "type": "section-list-collections",
       "blocks": {
-        "collection_ymAemN": {
+        "collection_U7JaxJ": {
           "type": "collection",
-          "name": "Noivado",
+          "name": "Esmeraldas",
           "settings": {
             "collection": "",
-            "image": "shopify://shop_images/Engagement_Ring3_-_CROP.png",
-            "mobile_image": "shopify://shop_images/Engagement_Ring3_-_CROP.png",
+            "image": "shopify://shop_images/both_earrings_has_to_be_on_yel_Nano_Banana_Pro_42600.png",
+            "mobile_image": "shopify://shop_images/both_earrings_has_to_be_on_yel_Nano_Banana_Pro_42600.png",
             "overlay_color": "#616161",
             "overlay_opacity": 0,
             "top_text": "",
             "top_text_disabled": true,
             "title": "",
             "title_disabled": true,
-            "bottom_text": "Jóias para Noivado",
+            "bottom_text": "Esmeraldas",
             "bottom_text_disabled": false,
-            "collection_url": "/pages/noivado",
+            "collection_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Esmeralda",
             "text_color": "text--white"
           }
         },
-        "collection_GnhUgy": {
+        "collection_XmWLNj": {
           "type": "collection",
+          "name": "Água Marinha",
           "settings": {
             "collection": "",
-            "image": "shopify://shop_images/ChatGPT_Image_18_de_fev._de_2026_11_14_55.png",
-            "mobile_image": "shopify://shop_images/ChatGPT_Image_18_de_fev._de_2026_11_14_55.png",
+            "image": "shopify://shop_images/take_out_that_earring_that_is__Nano_Banana_Pro_56236_92a3e30d-7e03-46ff-b040-36c99afc745c.png",
+            "mobile_image": "shopify://shop_images/take_out_that_earring_that_is__Nano_Banana_Pro_56236.png",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "top_text": "",
+            "top_text_disabled": true,
+            "title": "",
+            "title_disabled": true,
+            "bottom_text": "Água-Marinha",
+            "bottom_text_disabled": false,
+            "collection_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Água+Marinha",
+            "text_color": "text--white"
+          }
+        },
+        "collection_68jAMA": {
+          "type": "collection",
+          "name": "Tanzanitas",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/now_change_the_product_composi_Nano_Banana_Pro_14381.png",
+            "mobile_image": "shopify://shop_images/now_change_the_product_composi_Nano_Banana_Pro_14381.png",
             "overlay_color": "#616161",
             "overlay_opacity": 0,
             "top_text": "Product Count",
             "top_text_disabled": true,
             "title": "Collection Name",
             "title_disabled": true,
-            "bottom_text": "Jóias para Casamento",
+            "bottom_text": "Tanzanitas",
             "bottom_text_disabled": false,
-            "collection_url": "shopify://pages/casamento",
+            "collection_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Tanzanita",
             "text_color": "text--white"
           }
         }
       },
       "block_order": [
-        "collection_ymAemN",
-        "collection_GnhUgy"
+        "collection_U7JaxJ",
+        "collection_XmWLNj",
+        "collection_68jAMA"
       ],
       "custom_css": [
         ".custom-scrollbar.small-down--show {display: none !important;}",
@@ -517,14 +538,14 @@
         ".kicker-flourished {font-size: 20px !important;}",
         ".collection-grid-item__btn {font-size: 18px;}"
       ],
-      "name": "Noivado e Casamento",
+      "name": "Gemas",
       "settings": {
-        "title": "A Assessoria da Patrik lhe acompanha nas escolhas mais importantes da sua vida",
+        "title": "As gemas mais icônicas da Patrik",
         "bg": "palette--dark bg--invert--accent",
         "carousel_enabled_on": "hidden",
-        "collection_limit": 36,
-        "wh_ratio": 1,
-        "grid_large": 2,
+        "collection_limit": 35,
+        "wh_ratio": 0.7,
+        "grid_large": 3,
         "grid_medium": 2,
         "grid_mobile": 1,
         "desktop_gutter": 25,
@@ -667,6 +688,78 @@
         "padding_bottom": 26
       }
     },
+    "section_list_collections_ftJBTL": {
+      "type": "section-list-collections",
+      "blocks": {
+        "collection_ymAemN": {
+          "type": "collection",
+          "name": "Noivado",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Engagement_Ring3_-_CROP.png",
+            "mobile_image": "shopify://shop_images/Engagement_Ring3_-_CROP.png",
+            "overlay_color": "#616161",
+            "overlay_opacity": 0,
+            "top_text": "",
+            "top_text_disabled": true,
+            "title": "",
+            "title_disabled": true,
+            "bottom_text": "Jóias para Noivado",
+            "bottom_text_disabled": false,
+            "collection_url": "/pages/noivado",
+            "text_color": "text--white"
+          }
+        },
+        "collection_GnhUgy": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/ChatGPT_Image_18_de_fev._de_2026_11_14_55.png",
+            "mobile_image": "shopify://shop_images/ChatGPT_Image_18_de_fev._de_2026_11_14_55.png",
+            "overlay_color": "#616161",
+            "overlay_opacity": 0,
+            "top_text": "Product Count",
+            "top_text_disabled": true,
+            "title": "Collection Name",
+            "title_disabled": true,
+            "bottom_text": "Jóias para Casamento",
+            "bottom_text_disabled": false,
+            "collection_url": "shopify://pages/casamento",
+            "text_color": "text--white"
+          }
+        }
+      },
+      "block_order": [
+        "collection_ymAemN",
+        "collection_GnhUgy"
+      ],
+      "custom_css": [
+        ".custom-scrollbar.small-down--show {display: none !important;}",
+        ".custom-scrollbar.small-down--show::-webkit-scrollbar {display: none;}",
+        ".kicker-flourished {font-size: 20px !important;}",
+        ".collection-grid-item__btn {font-size: 18px;}"
+      ],
+      "name": "Noivado e Casamento",
+      "settings": {
+        "title": "A Assessoria da Patrik lhe acompanha nas escolhas mais importantes da sua vida",
+        "bg": "palette--dark bg--invert--accent",
+        "carousel_enabled_on": "hidden",
+        "collection_limit": 36,
+        "wh_ratio": 1,
+        "grid_large": 2,
+        "grid_medium": 2,
+        "grid_mobile": 1,
+        "desktop_gutter": 25,
+        "text_layout": "outside",
+        "enable_hover": false,
+        "font_family": "body",
+        "title_size": 4,
+        "accent_size": 3,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "section_columns_X6EhLY": {
       "type": "section-columns",
       "blocks": {
@@ -774,99 +867,6 @@
         "width": "wrapper",
         "padding_top": 12,
         "padding_bottom": 12
-      }
-    },
-    "section_list_collections_LeYE9C": {
-      "type": "section-list-collections",
-      "blocks": {
-        "collection_U7JaxJ": {
-          "type": "collection",
-          "name": "Esmeraldas",
-          "settings": {
-            "collection": "",
-            "image": "shopify://shop_images/both_earrings_has_to_be_on_yel_Nano_Banana_Pro_42600.png",
-            "mobile_image": "shopify://shop_images/both_earrings_has_to_be_on_yel_Nano_Banana_Pro_42600.png",
-            "overlay_color": "#616161",
-            "overlay_opacity": 0,
-            "top_text": "",
-            "top_text_disabled": true,
-            "title": "",
-            "title_disabled": true,
-            "bottom_text": "Esmeraldas",
-            "bottom_text_disabled": false,
-            "collection_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Esmeralda",
-            "text_color": "text--white"
-          }
-        },
-        "collection_XmWLNj": {
-          "type": "collection",
-          "name": "Água Marinha",
-          "settings": {
-            "collection": "",
-            "image": "shopify://shop_images/take_out_that_earring_that_is__Nano_Banana_Pro_56236_92a3e30d-7e03-46ff-b040-36c99afc745c.png",
-            "mobile_image": "shopify://shop_images/take_out_that_earring_that_is__Nano_Banana_Pro_56236.png",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "top_text": "",
-            "top_text_disabled": true,
-            "title": "",
-            "title_disabled": true,
-            "bottom_text": "Água-Marinha",
-            "bottom_text_disabled": false,
-            "collection_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Água+Marinha",
-            "text_color": "text--white"
-          }
-        },
-        "collection_68jAMA": {
-          "type": "collection",
-          "name": "Tanzanitas",
-          "settings": {
-            "collection": "",
-            "image": "shopify://shop_images/now_change_the_product_composi_Nano_Banana_Pro_14381.png",
-            "mobile_image": "shopify://shop_images/now_change_the_product_composi_Nano_Banana_Pro_14381.png",
-            "overlay_color": "#616161",
-            "overlay_opacity": 0,
-            "top_text": "Product Count",
-            "top_text_disabled": true,
-            "title": "Collection Name",
-            "title_disabled": true,
-            "bottom_text": "Tanzanitas",
-            "bottom_text_disabled": false,
-            "collection_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Tanzanita",
-            "text_color": "text--white"
-          }
-        }
-      },
-      "block_order": [
-        "collection_U7JaxJ",
-        "collection_XmWLNj",
-        "collection_68jAMA"
-      ],
-      "custom_css": [
-        ".custom-scrollbar.small-down--show {display: none !important;}",
-        ".custom-scrollbar.small-down--show::-webkit-scrollbar {display: none;}",
-        ".kicker-flourished {font-size: 20px !important;}",
-        ".collection-grid-item__btn {font-size: 18px;}"
-      ],
-      "name": "Gemas",
-      "settings": {
-        "title": "Conheça as famosas gemas da patrik",
-        "bg": "palette--dark bg--invert--accent",
-        "carousel_enabled_on": "hidden",
-        "collection_limit": 35,
-        "wh_ratio": 0.7,
-        "grid_large": 3,
-        "grid_medium": 2,
-        "grid_mobile": 1,
-        "desktop_gutter": 25,
-        "text_layout": "outside",
-        "enable_hover": false,
-        "font_family": "body",
-        "title_size": 4,
-        "accent_size": 3,
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "section_richtext_RTzH8K": {
@@ -1510,14 +1510,14 @@
     "section_hero_mEN6xM",
     "section_richtext_kTiLHV",
     "section_hero_UhTiib",
-    "section_list_collections_ftJBTL",
+    "section_list_collections_LeYE9C",
     "section_richtext_q8gnYc",
     "section_video_ykPNyn",
     "section_image_neGRcR",
     "section_richtext_jRYTUM",
+    "section_list_collections_ftJBTL",
     "section_columns_X6EhLY",
     "section_richtext_Mijpwb",
-    "section_list_collections_LeYE9C",
     "section_richtext_RTzH8K",
     "section_richtext_UCkjER",
     "tabs",
