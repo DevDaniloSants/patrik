@@ -119,7 +119,7 @@
             "text": "<p>Reconectar-se à natureza.<br/>Recordar que nela nasce toda inspiração humana.<br/>Sentir novamente que somos parte dela.<br/>A coleção Orgânica nasce desse chamado.<br/>Ela celebra as formas que o tempo esculpe —<br/>as curvas das rochas,<br/>as estruturas do reino mineral,<br/>as marcas deixadas por milhares de anos de transformação.</p>",
             "font_size": 6,
             "text_columns": 1,
-            "align_text": "text-center",
+            "align_text": "text-left",
             "button_text": "",
             "button_url": "",
             "button_color": "btn--white",
