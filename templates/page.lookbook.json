@@ -162,7 +162,7 @@
           "settings": {
             "image": "shopify://shop_images/banner_072376-v4_1.png",
             "overlay_opacity": 15,
-            "overlay_color": "#000",
+            "overlay_color": "#000000",
             "enable_overlay_text": false,
             "kicker": "",
             "title": "",
@@ -729,7 +729,7 @@
         "title": "Conheça os produtos da coleção Orgânica",
         "collection": "organica",
         "grid": 3,
-        "rows": 2,
+        "rows": 6,
         "grid_mobile": "2",
         "bg": "palette--dark bg--invert--accent",
         "show_view_all": false,
