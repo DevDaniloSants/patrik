@@ -92,12 +92,17 @@
 @media screen and (max-width: 749px) {
     .ai-clickable-banner-{{ ai_gen_id }} {
       width: 100%;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
+      overflow: hidden;
     }
 
     .ai-clickable-banner__image-wrapper-{{ ai_gen_id }} {
-      min-width: 768px;
+      min-width: unset;
+      width: 100%;
+    }
+
+    .ai-clickable-banner__image-{{ ai_gen_id }} {
+      width: 100%;
+      height: auto;
     }
   }
   
