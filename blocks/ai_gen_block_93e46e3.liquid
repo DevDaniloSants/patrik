@@ -89,12 +89,18 @@
     pointer-events: none;
     user-select: none;
   }
-
-  @media screen and (max-width: 749px) {
+@media screen and (max-width: 749px) {
     .ai-clickable-banner-{{ ai_gen_id }} {
       width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .ai-clickable-banner__image-wrapper-{{ ai_gen_id }} {
+      min-width: 768px;
     }
   }
+  
 {% endstyle %}
 
 <clickable-banner-{{ ai_gen_id }}
