@@ -532,6 +532,7 @@
         "collection_XmWLNj",
         "collection_68jAMA"
       ],
+      "disabled": true,
       "custom_css": [
         ".custom-scrollbar.small-down--show {display: none !important;}",
         ".custom-scrollbar.small-down--show::-webkit-scrollbar {display: none;}",
@@ -1240,10 +1241,11 @@
       "blocks": {
         "ai_gen_block_86eca1a_AiKn73": {
           "type": "ai_gen_block_86eca1a",
+          "disabled": true,
           "settings": {
             "banner_image": "shopify://shop_images/ChatGPT_Image_4_de_mai._de_2026_17_36_39.png",
             "desktop_width_percent": 100,
-            "hotspot_hover_color": "rgba(0, 0, 0, 0.1)",
+            "hotspot_hover_color": "#0000001a",
             "hotspot_focus_color": "#006652",
             "hotspot_1_enabled": true,
             "hotspot_1_url": "https://collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Esmeraldacollections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Esmeralda",
@@ -1330,11 +1332,11 @@
             "desktop_width_percent": 100,
             "hotspot_overlay_color": "#006652",
             "hotspot_opacity": 0.3,
-            "hotspot_hover_opacity": 0.5,
+            "hotspot_hover_opacity": 0.3,
             "hotspot_border_color": "#ffffff",
-            "hotspot_border_width": 2,
+            "hotspot_border_width": 0,
             "label_text_color": "#ffffff",
-            "label_font_size": 16,
+            "label_font_size": 10,
             "hotspot_1_enabled": true,
             "hotspot_1_label": "",
             "hotspot_1_url": "https://collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Esmeralda",
@@ -1430,6 +1432,7 @@
     "section_hero_mEN6xM",
     "section_richtext_kTiLHV",
     "section_hero_UhTiib",
+    "17779288275c16224c",
     "section_list_collections_LeYE9C",
     "section_richtext_q8gnYc",
     "section_video_ykPNyn",
@@ -1444,7 +1447,6 @@
     "section_icons_Fcggry",
     "1777664169ac2559d7",
     "17779271507e569dcf",
-    "1777928059709e541e",
-    "17779288275c16224c"
+    "1777928059709e541e"
   ]
 }
