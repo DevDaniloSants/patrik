@@ -59,19 +59,30 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: {{ block.settings.hotspot_overlay_color }};
-    opacity: {{ block.settings.hotspot_opacity }};
-    border: {{ block.settings.hotspot_border_width }}px solid {{ block.settings.hotspot_border_color }};
+    background-color: transparent;
+    opacity: 1;
+    border: none;
     transition: opacity 0.3s ease;
     cursor: pointer;
     text-decoration: none;
   }
 
-  .ai-clickable-banner__hotspot-{{ ai_gen_id }}:hover {
+  .ai-clickable-banner__hotspot-label-{{ ai_gen_id }} {
+    display: none;
+  }
+
+  .shopify-design-mode .ai-clickable-banner__hotspot-{{ ai_gen_id }} {
+    background-color: {{ block.settings.hotspot_overlay_color }};
+    opacity: {{ block.settings.hotspot_opacity }};
+    border: {{ block.settings.hotspot_border_width }}px solid {{ block.settings.hotspot_border_color }};
+  }
+
+  .shopify-design-mode .ai-clickable-banner__hotspot-{{ ai_gen_id }}:hover {
     opacity: {{ block.settings.hotspot_hover_opacity }};
   }
 
-  .ai-clickable-banner__hotspot-label-{{ ai_gen_id }} {
+  .shopify-design-mode .ai-clickable-banner__hotspot-label-{{ ai_gen_id }} {
+    display: block;
     font-size: {{ block.settings.label_font_size }}px;
     font-weight: 700;
     color: {{ block.settings.label_text_color }};
