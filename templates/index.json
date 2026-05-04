@@ -471,7 +471,6 @@
       "blocks": {
         "ai_gen_block_93e46e3_83q8Mh": {
           "type": "ai_gen_block_93e46e3",
-          "disabled": true,
           "settings": {
             "banner_image": "shopify://shop_images/ChatGPT_Image_4_de_mai._de_2026_17_36_39.png",
             "desktop_width_percent": 100,
