@@ -1,6 +1,816 @@
+{% doc %}
+  @prompt
+    Modify the existing clickable banner block to have 11 clickable areas (hotspots). Each area should be independently configurable with its own link URL, position (top % and left %), and size (width % and height %) settings, allowing merchants to define hotspot regions on the banner image that redirect to different URLs when clicked. The banner should display a background image with invisible clickable overlay zones.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-clickable-banner-{{ ai_gen_id }} {
+    position: relative;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    display: block;
+  }
+
+  .ai-clickable-banner__wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .ai-clickable-banner__image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .ai-clickable-banner__placeholder-{{ ai_gen_id }} {
+    background-color: #f4f4f4;
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-clickable-banner__empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .ai-clickable-banner__placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 500px;
+  }
+
+  .ai-clickable-banner__hotspot-{{ ai_gen_id }} {
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.2s ease;
+  }
+
+  .ai-clickable-banner__hotspot-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.hotspot_hover_color }};
+  }
+
+  .ai-clickable-banner__hotspot-{{ ai_gen_id }}:focus {
+    outline: 2px solid {{ block.settings.hotspot_focus_color }};
+    outline-offset: 2px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-clickable-banner-{{ ai_gen_id }} {
+      width: 100%;
+    }
+  }
+{% endstyle %}
+
+<clickable-banner-{{ ai_gen_id }}
+  class="ai-clickable-banner-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-clickable-banner__wrapper-{{ ai_gen_id }}">
+    {% if block.settings.banner_image %}
+      <img
+        src="{{ block.settings.banner_image | image_url: width: 2000 }}"
+        alt="{{ block.settings.banner_image.alt | escape }}"
+        loading="lazy"
+        width="{{ block.settings.banner_image.width }}"
+        height="{{ block.settings.banner_image.height }}"
+        class="ai-clickable-banner__image-{{ ai_gen_id }}"
+      >
+    {% else %}
+      <div class="ai-clickable-banner__placeholder-{{ ai_gen_id }}">
+        {{ 'hero-apparel-1' | placeholder_svg_tag }}
+        <div class="ai-clickable-banner__empty-state-{{ ai_gen_id }}">
+          Add a banner image to get started
+        </div>
+      </div>
+    {% endif %}
+
+    {% for i in (1..11) %}
+      {% liquid
+        assign hotspot_enabled_key = 'hotspot_' | append: i | append: '_enabled'
+        assign hotspot_url_key = 'hotspot_' | append: i | append: '_url'
+        assign hotspot_top_key = 'hotspot_' | append: i | append: '_top'
+        assign hotspot_left_key = 'hotspot_' | append: i | append: '_left'
+        assign hotspot_width_key = 'hotspot_' | append: i | append: '_width'
+        assign hotspot_height_key = 'hotspot_' | append: i | append: '_height'
+
+        assign hotspot_enabled = block.settings[hotspot_enabled_key]
+        assign hotspot_url = block.settings[hotspot_url_key]
+        assign hotspot_top = block.settings[hotspot_top_key]
+        assign hotspot_left = block.settings[hotspot_left_key]
+        assign hotspot_width = block.settings[hotspot_width_key]
+        assign hotspot_height = block.settings[hotspot_height_key]
+      %}
+
+      {% if hotspot_enabled and hotspot_url != blank %}
+        <a
+          href="{{ hotspot_url }}"
+          class="ai-clickable-banner__hotspot-{{ ai_gen_id }}"
+          style="
+            top: {{ hotspot_top }}%;
+            left: {{ hotspot_left }}%;
+            width: {{ hotspot_width }}%;
+            height: {{ hotspot_height }}%;
+          "
+          aria-label="Clickable area {{ i }}"
+        ></a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</clickable-banner-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class ClickableBanner{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.hotspots = this.querySelectorAll('.ai-clickable-banner__hotspot-{{ ai_gen_id }}');
+        this.setupEventListeners();
+      }
+
+      setupEventListeners() {
+        this.hotspots.forEach((hotspot) => {
+          hotspot.addEventListener('click', function(event) {
+            if (!hotspot.href || hotspot.href === '') {
+              event.preventDefault();
+            }
+          });
+        });
+      }
+    }
+
+    customElements.define('clickable-banner-{{ ai_gen_id }}', ClickableBanner{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Clickable banner",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Banner image"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Image"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Hotspot style"
+    },
+    {
+      "type": "color",
+      "id": "hotspot_hover_color",
+      "label": "Hover overlay color",
+      "default": "rgba(0, 0, 0, 0.1)"
+    },
+    {
+      "type": "color",
+      "id": "hotspot_focus_color",
+      "label": "Focus outline color",
+      "default": "#006652"
+    },
+    {
+      "type": "header",
+      "content": "Hotspot 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "hotspot_1_enabled",
+      "label": "Enable hotspot 1",
+      "default": false
+    },
+    {
+      "type": "url",
+      "id": "hotspot_1_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "range",
+      "id": "hotspot_1_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Top position",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "hotspot_1_left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Left position",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "hotspot_1_width",
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Width",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "hotspot_1_height",
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Height",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Hotspot 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "hotspot_2_enabled",
+      "label": "Enable hotspot 2",
+      "default": false
+    },
+    {
+      "type": "url",
+      "id": "hotspot_2_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "range",
+      "id": "hotspot_2_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Top position",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "hotspot_2_left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Left position",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "hotspot_2_width",
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Width",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "hotspot_2_height",
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Height",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Hotspot 3"
+    },
+    {
+      "type": "checkbox",
+      "id": "hotspot_3_enabled",
+      "label": "Enable hotspot 3",
+      "default": false
+    },
+    {
+      "type": "url",
+      "id": "hotspot_3_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "range",
+      "id": "hotspot_3_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Top position",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "hotspot_3_left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Left position",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "hotspot_3_width",
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Width",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "hotspot_3_height",
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Height",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Hotspot 4"
+    },
+    {
+      "type": "checkbox",
+      "id": "hotspot_4_enabled",
+      "label": "Enable hotspot 4",
+      "default": false
+    },
+    {
+      "type": "url",
+      "id": "hotspot_4_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "range",
+      "id": "hotspot_4_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Top position",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "hotspot_4_left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Left position",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "hotspot_4_width",
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Width",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "hotspot_4_height",
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Height",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Hotspot 5"
+    },
+    {
+      "type": "checkbox",
+      "id": "hotspot_5_enabled",
+      "label": "Enable hotspot 5",
+      "default": false
+    },
+    {
+      "type": "url",
+      "id": "hotspot_5_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "range",
+      "id": "hotspot_5_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Top position",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "hotspot_5_left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Left position",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "hotspot_5_width",
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Width",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "hotspot_5_height",
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Height",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Hotspot 6"
+    },
+    {
+      "type": "checkbox",
+      "id": "hotspot_6_enabled",
+      "label": "Enable hotspot 6",
+      "default": false
+    },
+    {
+      "type": "url",
+      "id": "hotspot_6_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "range",
+      "id": "hotspot_6_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Top position",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "hotspot_6_left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Left position",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "hotspot_6_width",
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Width",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "hotspot_6_height",
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Height",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Hotspot 7"
+    },
+    {
+      "type": "checkbox",
+      "id": "hotspot_7_enabled",
+      "label": "Enable hotspot 7",
+      "default": false
+    },
+    {
+      "type": "url",
+      "id": "hotspot_7_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "range",
+      "id": "hotspot_7_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Top position",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "hotspot_7_left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Left position",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "hotspot_7_width",
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Width",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "hotspot_7_height",
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Height",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Hotspot 8"
+    },
+    {
+      "type": "checkbox",
+      "id": "hotspot_8_enabled",
+      "label": "Enable hotspot 8",
+      "default": false
+    },
+    {
+      "type": "url",
+      "id": "hotspot_8_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "range",
+      "id": "hotspot_8_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Top position",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "hotspot_8_left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Left position",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "hotspot_8_width",
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Width",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "hotspot_8_height",
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Height",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Hotspot 9"
+    },
+    {
+      "type": "checkbox",
+      "id": "hotspot_9_enabled",
+      "label": "Enable hotspot 9",
+      "default": false
+    },
+    {
+      "type": "url",
+      "id": "hotspot_9_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "range",
+      "id": "hotspot_9_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Top position",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "hotspot_9_left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Left position",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "hotspot_9_width",
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Width",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "hotspot_9_height",
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Height",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Hotspot 10"
+    },
+    {
+      "type": "checkbox",
+      "id": "hotspot_10_enabled",
+      "label": "Enable hotspot 10",
+      "default": false
+    },
+    {
+      "type": "url",
+      "id": "hotspot_10_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "range",
+      "id": "hotspot_10_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Top position",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "hotspot_10_left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Left position",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "hotspot_10_width",
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Width",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "hotspot_10_height",
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Height",
+      "default": 15
+    },
+    {
+      "type": "header",
+      "content": "Hotspot 11"
+    },
+    {
+      "type": "checkbox",
+      "id": "hotspot_11_enabled",
+      "label": "Enable hotspot 11",
+      "default": false
+    },
+    {
+      "type": "url",
+      "id": "hotspot_11_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "range",
+      "id": "hotspot_11_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Top position",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "hotspot_11_left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Left position",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "hotspot_11_width",
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Width",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "hotspot_11_height",
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Height",
+      "default": 15
+    }
+  ],
+  "presets": [
+    {
+      "name": "Clickable banner"
+    }
+  ]
+}
 {% endschema %}
