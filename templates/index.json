@@ -81,7 +81,7 @@
         "image": "shopify://shop_images/banner_brn02052-clr01123-v3_1.png",
         "mobile_image": "shopify://shop_images/banner_brn02052-clr01123-v3_1_a7b8cccf-262c-40c5-9b13-6a1c96c49426.png",
         "banner_link": "shopify://pages/colecao-organica",
-        "height": "use_screen_one_half",
+        "height": "use_screen_full",
         "overlay_opacity": 0,
         "overlay_color": "#3c190b",
         "enable_overlay_text": false,
