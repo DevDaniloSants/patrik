@@ -81,7 +81,7 @@
         "image": "shopify://shop_images/banner_brn02052-clr01123-v3_1.png",
         "mobile_image": "shopify://shop_images/banner_brn02052-clr01123-v3_1_a7b8cccf-262c-40c5-9b13-6a1c96c49426.png",
         "banner_link": "shopify://pages/colecao-organica",
-        "height": "use_screen_full",
+        "height": "use_screen_one_half",
         "overlay_opacity": 0,
         "overlay_color": "#3c190b",
         "enable_overlay_text": false,
@@ -471,6 +471,7 @@
       "blocks": {
         "ai_gen_block_93e46e3_83q8Mh": {
           "type": "ai_gen_block_93e46e3",
+          "disabled": true,
           "settings": {
             "banner_image": "shopify://shop_images/ChatGPT_Image_4_de_mai._de_2026_17_36_39.png",
             "desktop_width_percent": 100,
@@ -633,7 +634,6 @@
         "collection_XmWLNj",
         "collection_68jAMA"
       ],
-      "disabled": true,
       "custom_css": [
         ".custom-scrollbar.small-down--show {display: none !important;}",
         ".custom-scrollbar.small-down--show::-webkit-scrollbar {display: none;}",
