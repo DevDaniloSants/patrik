@@ -121,7 +121,7 @@
         "full_width": false,
         "underline_current": true,
         "enable_search": true,
-        "enable_account": false,
+        "enable_account": true,
         "use_icons": true,
         "icons_type": "classic",
         "cart_icon": "bag",
