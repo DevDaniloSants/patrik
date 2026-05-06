@@ -129,22 +129,10 @@
 
 {% style %}
   :root  {
-    {% style %}
-  :root  {
     --COLOR-NAV-TEXT-TRANSPARENT: {{ section.settings.transparent_text_color }};
     --COLOR-HEADER-TRANSPARENT-GRADIENT: {{ overlay_color }};
     --LOGO-PADDING: {{ section.settings.logo_padding | append: 'px' }};
     --menu-backfill-height: auto;
-  }
-
-  .header__mobile__left {
-    gap: 16px;
-  }
-
-  .header__mobile__right {
-    gap: 16px;
-  }
-{% endstyle %}
   }
 {% endstyle %}
 
