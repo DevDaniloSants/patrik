@@ -134,6 +134,12 @@
     --LOGO-PADDING: {{ section.settings.logo_padding | append: 'px' }};
     --menu-backfill-height: auto;
   }
+
+  @media (max-width: 749px) {
+    .header__icons {
+      gap: 4px;
+    }
+  }
 {% endstyle %}
 
 {% capture logos %}
