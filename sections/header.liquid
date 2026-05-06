@@ -355,19 +355,6 @@
 
   <div class="header__desktop__buttons{% if section.settings.use_icons %} header__desktop__buttons--icons{% endif %}" {{ text_wrapper }}>
 
-    {%- if shop.customer_accounts_enabled and section.settings.enable_account -%}
-      <div class="header__desktop__button {% if request.path contains routes.account_url %} main-menu--active{% endif %}" {{ text_hover }}>
-        <a href="{{ routes.account_url }}" class="navlink">
-          {%- if section.settings.use_icons -%}
-            {{ account_icon }}
-            <span class="visually-hidden">{{ 'customer.account.title' | t }}</span>
-          {%- else -%}
-            <span class="navtext">{{ 'layout.customer.account' | t }}</span>
-          {%- endif -%}
-        </a>
-      </div>
-    {% endif %}
-
     {% if section.settings.enable_search %}
       <div class="header__desktop__button {% if request.path contains routes.search_url %} main-menu--active{% endif %}" {{ text_hover }}>
         <a href="{{ routes.search_url }}" class="navlink" data-popdown-toggle="search-popdown">
@@ -381,6 +368,21 @@
       </div>
     {% endif %}
 
+  {%- if shop.customer_accounts_enabled and section.settings.enable_account -%}
+      <div class="header__desktop__button {% if request.path contains routes.account_url %} main-menu--active{% endif %}" {{ text_hover }}>
+        <a href="{{ routes.account_url }}" class="navlink">
+          {%- if section.settings.use_icons -%}
+            {{ account_icon }}
+            <span class="visually-hidden">{{ 'customer.account.title' | t }}</span>
+          {%- else -%}
+            <span class="navtext">{{ 'layout.customer.account' | t }}</span>
+          {%- endif -%}
+        </a>
+      </div>
+    {% endif %}
+
+
+    
     <div class="header__desktop__button {% if request.path contains routes.cart_url %} main-menu--active{% endif %}" {{ text_hover }}>
       <a href="{{ routes.cart_url }}"
         class="navlink navlink--cart"
