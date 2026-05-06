@@ -320,15 +320,21 @@
 
 {% capture minimal %}
     <div class="header__mobile__left">
-      <button class="header__mobile__button"
-        data-drawer-toggle="hamburger"
-        aria-label="{{ 'general.accessibility.open_menu' | t }}"
-        aria-haspopup="true"
-        aria-expanded="false"
-        aria-controls="header-menu">
-        {{ hamburger_icon }}
-      </button>
-    </div>
+    <button class="header__mobile__button"
+      data-drawer-toggle="hamburger"
+      aria-label="{{ 'general.accessibility.open_menu' | t }}"
+      aria-haspopup="true"
+      aria-expanded="false"
+      aria-controls="header-menu">
+      {{ hamburger_icon }}
+    </button>
+    {% if section.settings.enable_search %}
+      <a class="header__mobile__button" href="{{ routes.search_url }}" data-popdown-toggle="search-popdown">
+        {{ search_icon }}
+        <span class="visually-hidden">{{ 'general.search.submit' | t }}</span>
+      </a>
+    {% endif %}
+  </div>
     {{ logos }}
     <div class="header__mobile__right">
       <a class="header__mobile__button"
