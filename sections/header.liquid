@@ -337,14 +337,20 @@
   </div>
     {{ logos }}
     <div class="header__mobile__right">
-      <a class="header__mobile__button"
-       data-drawer-toggle="drawer-cart"
-        href="{{ routes.cart_url }}">
-        {{ cart_icon }}
-        <span class="visually-hidden">{{ 'layout.cart.title' | t }}</span>
-        {{ cart_status }}
+    <a class="header__mobile__button"
+     data-drawer-toggle="drawer-cart"
+      href="{{ routes.cart_url }}">
+      {{ cart_icon }}
+      <span class="visually-hidden">{{ 'layout.cart.title' | t }}</span>
+      {{ cart_status }}
+    </a>
+    {%- if shop.customer_accounts_enabled and section.settings.enable_account -%}
+      <a class="header__mobile__button" href="{{ routes.account_url }}">
+        {{ account_icon }}
+        <span class="visually-hidden">{{ 'customer.account.title' | t }}</span>
       </a>
-    </div>
+    {%- endif -%}
+  </div>
 {% endcapture %}
 
 {% capture cart_content %}
