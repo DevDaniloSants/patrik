@@ -1,15 +1,10 @@
 <!-- sections/section-pair-before-after.liquid -->
 
 {%- liquid
-  assign p_data_shopify = product.metafields.shopify['gemstone-type'] | default: product.metafields.shopify['jewelry-material']
-  assign p_data_custom = product.metafields.custom['shopify--gemstone-type'] | default: product.metafields.custom['shopify--jewelry-material']
+  assign p_data = product.metafields.custom['tipo_de_pedra_preciosa']
   
-  assign p_data = p_data_shopify | default: p_data_custom
-  
-  assign product_data_text = p_data.value | json | downcase
-  if product_data_text == 'null' or product_data_text == blank
-    assign product_data_text = p_data | json | downcase
-  endif
+  assign product_data_text = p_data | join: ',' | downcase
+
 
   assign target_data = section.settings.target_data | downcase | strip
   assign show_section = true
