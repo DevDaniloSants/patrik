@@ -4,9 +4,11 @@
     "tailwindcss": "^4.1.18"
   },
   "scripts": {
-    "dev": "concurrently \"shopify theme dev\" \"npx @tailwindcss/cli -i ./assets/tailwind.input.css -o ./assets/tailwind.output.css --watch\""
+    "dev": "concurrently \"npx shopify theme dev\" \"npx @tailwindcss/cli -i ./assets/tailwind.input.css -o ./assets/tailwind.output.css --watch\""
   },
   "devDependencies": {
+    "@shopify/cli": "^3.94.3",
+    "@shopify/theme": "^3.58.2",
     "concurrently": "^9.2.1"
   }
 }

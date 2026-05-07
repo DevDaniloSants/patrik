@@ -131,8 +131,90 @@
             {%- continue -%}
           {%- endif -%}
 
-          {%- comment -%} Skip Price and Product Type (handled by Categorias logic) {%- endcomment -%}
-          {%- unless filter.type == 'price_range' or label_downcase == 'product type' or label_downcase == 'tipo de produto' -%}
+          {%- comment -%} Skip Product Type (handled by Categorias logic) {%- endcomment -%}
+          {%- unless label_downcase == 'product type' or label_downcase == 'tipo de produto' -%}
+
+            {%- if filter.type == 'price_range' -%}
+              {%- liquid
+                assign currencies_using_comma_decimals = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,TRY,UYU,VES,VND' | split: ','
+                assign uses_comma_decimals = false
+                if currencies_using_comma_decimals contains cart.currency.iso_code
+                  assign uses_comma_decimals = true
+                endif
+              -%}
+
+              <li class="border-b border-gray-100">
+                <button type="button" 
+                  class="w-full flex justify-between items-center py-6 px-5 text-left text-3xl font-black text-gray-900 bg-white hover:bg-gray-50 uppercase tracking-widest"
+                  data-accordion-toggle="mobile-filter-{{ filter.label | handle }}">
+                  <span class="underline underline-offset-4" style="font-weight: 900; font-size: 18px;">Preço</span>
+                  <span class="icon-plus font-bold" style="font-weight: 900; stroke-width: 3;">{% render 'icon-core-plus' %}</span>
+                  <span class="icon-minus hidden font-bold" style="font-weight: 900; stroke-width: 3;">{% render 'icon-core-minus' %}</span>
+                </button>
+
+                <div id="mobile-filter-{{ filter.label | handle }}" class="hidden bg-white border-t border-gray-100">
+                  <div class="py-5 px-5">
+                    <form method="get" action="{{ collection.url }}" class="flex flex-col gap-y-4">
+                      <input type="hidden" name="sort_by" value="{{ collection.sort_by }}">
+                      {% if collection.current_type %}
+                        <input type="hidden" name="q" value="{{ collection.current_type }}">
+                      {% endif %}
+                      {% if collection.current_vendor %}
+                        <input type="hidden" name="q" value="{{ collection.current_vendor }}">
+                      {% endif %}
+
+                      {%- comment -%} Preserve active non-price filters when applying price range {%- endcomment -%}
+                      {%- for f in collection.filters -%}
+                        {%- if f.type == 'price_range' -%}{%- continue -%}{%- endif -%}
+                        {%- for av in f.active_values -%}
+                          <input type="hidden" name="{{ av.param_name }}" value="{{ av.value }}">
+                        {%- endfor -%}
+                      {%- endfor -%}
+
+                      <div class="flex items-center justify-between gap-x-4">
+                        <div class="flex items-center gap-2">
+                          <span class="text-base font-bold text-gray-700">{{ cart.currency.symbol }}</span>
+                          <input
+                            class="w-28 border-b border-gray-300 p-2 text-right text-base font-bold text-gray-700 focus:border-black focus:outline-none"
+                            name="{{ filter.min_value.param_name }}"
+                            {%- if filter.min_value.value -%}
+                              {%- if uses_comma_decimals -%}value="{{ filter.min_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' }}"{%- else -%}value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"{%- endif -%}
+                            {%- endif -%}
+                            type="number"
+                            inputmode="decimal"
+                            placeholder="0"
+                            min="0"
+                            step="any">
+                          <span class="text-xs font-bold uppercase tracking-widest text-gray-500">Min</span>
+                        </div>
+
+                        <span class="text-base font-bold text-gray-500">-</span>
+
+                        <div class="flex items-center gap-2">
+                          <span class="text-base font-bold text-gray-700">{{ cart.currency.symbol }}</span>
+                          <input
+                            class="w-28 border-b border-gray-300 p-2 text-right text-base font-bold text-gray-700 focus:border-black focus:outline-none"
+                            name="{{ filter.max_value.param_name }}"
+                            {%- if filter.max_value.value -%}
+                              {%- if uses_comma_decimals -%}value="{{ filter.max_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' }}"{%- else -%}value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"{%- endif -%}
+                            {%- endif -%}
+                            type="number"
+                            inputmode="decimal"
+                            placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+                            min="0"
+                            step="any">
+                          <span class="text-xs font-bold uppercase tracking-widest text-gray-500">Max</span>
+                        </div>
+                      </div>
+
+                      <div class="pt-2">
+                        <button type="submit" class="text-xs font-bold uppercase tracking-widest border-b border-black hover:text-gray-600 hover:border-gray-600 pb-1">Aplicar</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </li>
+            {%- else -%}
             
             {%- assign display_label = filter.label -%}
             {%- if label_downcase contains 'material' or label_downcase contains 'metal' -%}
@@ -165,6 +247,7 @@
                 </ul>
               </div>
             </li>
+            {%- endif -%}
           {%- endunless -%}
         {%- endfor -%}
       </ul>

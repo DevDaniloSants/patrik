@@ -10108,8 +10108,22 @@
         }
         updateTotal() {
             if (this.cart && this.cart.total_price != undefined) {
-                const price = themeCurrency.formatMoney(this.cart.total_price, theme.moneyFormat);
-                this.finalPrice.innerHTML = price + ` ${theme.currencyCode}`;
+                const formatted = themeCurrency.formatMoney(this.cart.total_price, theme.moneyFormat);
+                const shouldShowCurrency = theme.settings && theme.settings.currency_code_enable && theme.currencyCode;
+                const formattedWithCurrency = shouldShowCurrency ? formatted + ` ${theme.currencyCode}` : formatted;
+
+                this.container.querySelectorAll(selectors$8.finalPrice).forEach((el)=>{
+                    el.innerHTML = formattedWithCurrency;
+                });
+
+                this.container.querySelectorAll('[data-cart-final-divided-by]').forEach((el)=>{
+                    const divisor = parseInt(el.getAttribute('data-cart-final-divided-by'), 10);
+                    const safeDivisor = !isNaN(divisor) && divisor > 0 ? divisor : 1;
+                    const dividedCents = Math.floor(this.cart.total_price / safeDivisor);
+                    const dividedFormatted = themeCurrency.formatMoney(dividedCents, theme.moneyFormat);
+                    const dividedWithCurrency = shouldShowCurrency ? dividedFormatted + ` ${theme.currencyCode}` : dividedFormatted;
+                    el.innerHTML = dividedWithCurrency;
+                });
             }
             if (this.subtotal && this.cart) {
                 window.fetch(`${window.theme.routes.root_url}?section_id=api-cart-subtotal`).then(this.handleErrors).then((response)=>{
