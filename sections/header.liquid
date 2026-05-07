@@ -134,6 +134,12 @@
     --LOGO-PADDING: {{ section.settings.logo_padding | append: 'px' }};
     --menu-backfill-height: auto;
   }
+
+  @media (max-width: 749px) {
+    .header__icons {
+      gap: 300px;
+    }
+  }
 {% endstyle %}
 
 {% capture logos %}
@@ -320,25 +326,37 @@
 
 {% capture minimal %}
     <div class="header__mobile__left">
-      <button class="header__mobile__button"
-        data-drawer-toggle="hamburger"
-        aria-label="{{ 'general.accessibility.open_menu' | t }}"
-        aria-haspopup="true"
-        aria-expanded="false"
-        aria-controls="header-menu">
-        {{ hamburger_icon }}
-      </button>
-    </div>
+    <button class="header__mobile__button"
+      data-drawer-toggle="hamburger"
+      aria-label="{{ 'general.accessibility.open_menu' | t }}"
+      aria-haspopup="true"
+      aria-expanded="false"
+      aria-controls="header-menu">
+      {{ hamburger_icon }}
+    </button>
+    {% if section.settings.enable_search %}
+      <a class="header__mobile__button" href="{{ routes.search_url }}" data-popdown-toggle="search-popdown">
+        {{ search_icon }}
+        <span class="visually-hidden">{{ 'general.search.submit' | t }}</span>
+      </a>
+    {% endif %}
+  </div>
     {{ logos }}
     <div class="header__mobile__right">
-      <a class="header__mobile__button"
-       data-drawer-toggle="drawer-cart"
-        href="{{ routes.cart_url }}">
-        {{ cart_icon }}
-        <span class="visually-hidden">{{ 'layout.cart.title' | t }}</span>
-        {{ cart_status }}
+    {%- if shop.customer_accounts_enabled and section.settings.enable_account -%}
+      <a class="header__mobile__button" href="{{ routes.account_url }}">
+        {{ account_icon }}
+        <span class="visually-hidden">{{ 'customer.account.title' | t }}</span>
       </a>
-    </div>
+    {%- endif -%}
+    <a class="header__mobile__button"
+     data-drawer-toggle="drawer-cart"
+      href="{{ routes.cart_url }}">
+      {{ cart_icon }}
+      <span class="visually-hidden">{{ 'layout.cart.title' | t }}</span>
+      {{ cart_status }}
+    </a>
+  </div>
 {% endcapture %}
 
 {% capture cart_content %}
@@ -355,19 +373,6 @@
 
   <div class="header__desktop__buttons{% if section.settings.use_icons %} header__desktop__buttons--icons{% endif %}" {{ text_wrapper }}>
 
-    {%- if shop.customer_accounts_enabled and section.settings.enable_account -%}
-      <div class="header__desktop__button {% if request.path contains routes.account_url %} main-menu--active{% endif %}" {{ text_hover }}>
-        <a href="{{ routes.account_url }}" class="navlink">
-          {%- if section.settings.use_icons -%}
-            {{ account_icon }}
-            <span class="visually-hidden">{{ 'customer.account.title' | t }}</span>
-          {%- else -%}
-            <span class="navtext">{{ 'layout.customer.account' | t }}</span>
-          {%- endif -%}
-        </a>
-      </div>
-    {% endif %}
-
     {% if section.settings.enable_search %}
       <div class="header__desktop__button {% if request.path contains routes.search_url %} main-menu--active{% endif %}" {{ text_hover }}>
         <a href="{{ routes.search_url }}" class="navlink" data-popdown-toggle="search-popdown">
@@ -381,6 +386,21 @@
       </div>
     {% endif %}
 
+  {%- if shop.customer_accounts_enabled and section.settings.enable_account -%}
+      <div class="header__desktop__button {% if request.path contains routes.account_url %} main-menu--active{% endif %}" {{ text_hover }}>
+        <a href="{{ routes.account_url }}" class="navlink">
+          {%- if section.settings.use_icons -%}
+            {{ account_icon }}
+            <span class="visually-hidden">{{ 'customer.account.title' | t }}</span>
+          {%- else -%}
+            <span class="navtext">{{ 'layout.customer.account' | t }}</span>
+          {%- endif -%}
+        </a>
+      </div>
+    {% endif %}
+
+
+    
     <div class="header__desktop__button {% if request.path contains routes.cart_url %} main-menu--active{% endif %}" {{ text_hover }}>
       <a href="{{ routes.cart_url }}"
         class="navlink navlink--cart"

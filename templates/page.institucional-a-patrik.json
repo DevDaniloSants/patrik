@@ -213,12 +213,12 @@
             "gap": 60,
             "content_gap": 20,
             "background_color": "#ffffff",
-            "kicker": "",
+            "kicker": "De Pai para Filho",
             "heading": "O Nome da Marca",
             "text": "<p>Por trás da Patrik está David Cohen, gemólogo formado pelo Gemological Institute of America (GIA) — referência mundial em gemologia.<br/><br/>Há décadas dedicado ao universo das joias, David desenvolveu um olhar raro para aquilo que torna cada gema extraordinária. Ao seu lado está Patrik, seu filho, que inspira o nome da marca e já segue o mesmo caminho, aprofundando-se no estudo das gemas e da joalheria.<br/><br/>A Patrik nasce desse encontro entre gerações — de conhecimento que se transmite, de valores que permanecem e de um olhar que continua.<br/><br/></p>",
             "button_text": "",
             "button_link": "",
-            "button_text_size": 13,
+            "button_text_size": 24,
             "button_padding_vertical": 8,
             "button_padding_horizontal": 16,
             "button_radius": 0,
@@ -235,11 +235,11 @@
             "loop": false,
             "mute_video": false,
             "show_controls": true,
-            "kicker_size": 12,
+            "kicker_size": 18,
             "kicker_color": "#006652",
-            "heading_size": 40,
+            "heading_size": 44,
             "heading_color": "#0a0a0c",
-            "text_size": 16,
+            "text_size": 19,
             "text_color": "#3c3f36",
             "mobile_video_first": false,
             "mobile_gap": 30
@@ -251,6 +251,56 @@
         "ai_gen_block_c322d72_XbfKd3"
       ],
       "settings": {}
+    },
+    "section_richtext_xaMcBi": {
+      "type": "section-richtext",
+      "blocks": {
+        "heading_6miMVh": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "text_size": 8
+          }
+        },
+        "text_eGrmb9": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        }
+      },
+      "block_order": [
+        "heading_6miMVh",
+        "text_eGrmb9"
+      ],
+      "name": "Espaçamento - Rich text",
+      "settings": {
+        "align_text": "text-center",
+        "text_color": "text--neutral",
+        "bg": "palette--light bg--neutral",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 0,
+        "padding_bottom": 2
+      }
+    },
+    "section_collection_6r6GMC": {
+      "type": "section-collection",
+      "name": "Product grid",
+      "settings": {
+        "title": "O ponto máximo da expressão Patrick — onde design e presença se encontram.",
+        "collection": "design-patrik",
+        "grid": 4,
+        "rows": 1,
+        "grid_mobile": "2",
+        "bg": "palette--light bg--neutral",
+        "show_view_all": false,
+        "width": "wrapper--full",
+        "padding_top": 84,
+        "padding_bottom": 88
+      }
     }
   },
   "order": [
@@ -258,6 +308,8 @@
     "section_hero_F6LiWT",
     "section_columns_Gj3NJc",
     "section_richtext_7nQqqJ",
-    "177756199056a08999"
+    "177756199056a08999",
+    "section_richtext_xaMcBi",
+    "section_collection_6r6GMC"
   ]
 }

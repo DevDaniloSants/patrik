@@ -33179,6 +33179,11 @@ body.template-product .section-padding {
   background: #000 !important;
   opacity: 1 !important;
 }
+@media screen and (min-width: 750px) {
+  #shopify-section-template--18823723319379__section_video_ykPNyn {
+    display: none;
+  }
+}
 
 
 #ShopifyChat {

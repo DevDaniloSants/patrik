@@ -15,7 +15,7 @@
         "7c3cb134-606a-4424-8af4-58a35c6d9088": {
           "type": "kicker",
           "settings": {
-            "kicker": "Da natureza nasce toda a inspiração humana",
+            "kicker": "",
             "enable_line": false,
             "text_size": 4
           }
@@ -78,10 +78,10 @@
       ],
       "name": "Hero",
       "settings": {
-        "image": "shopify://shop_images/banner_brn02197-anl02140-v1.png",
-        "mobile_image": "shopify://shop_images/Campanha_Organica_-_Mobile_-_720x1080_70ac4bc1-11b0-4fca-9760-4335f7ae9bae.png",
+        "image": "shopify://shop_images/banner_brn02052-clr01123-v3_1.png",
+        "mobile_image": "shopify://shop_images/banner_brn02052-clr01123-v3_1_a7b8cccf-262c-40c5-9b13-6a1c96c49426.png",
         "banner_link": "shopify://pages/colecao-organica",
-        "height": "use_screen_three_quarters",
+        "height": "use_screen_full",
         "overlay_opacity": 0,
         "overlay_color": "#3c190b",
         "enable_overlay_text": false,
@@ -466,6 +466,330 @@
         "padding_bottom": 0
       }
     },
+    "17779288275c16224c": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_93e46e3_83q8Mh": {
+          "type": "ai_gen_block_93e46e3",
+          "disabled": true,
+          "settings": {
+            "banner_image": "shopify://shop_images/ChatGPT_Image_4_de_mai._de_2026_17_36_39.png",
+            "desktop_width_percent": 100,
+            "hotspot_overlay_color": "#006652",
+            "hotspot_opacity": 0.3,
+            "hotspot_hover_opacity": 0.3,
+            "hotspot_border_color": "#ffffff",
+            "hotspot_border_width": 0,
+            "label_text_color": "#ffffff",
+            "label_font_size": 10,
+            "hotspot_1_enabled": true,
+            "hotspot_1_label": "",
+            "hotspot_1_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Esmeralda",
+            "hotspot_1_top": 27,
+            "hotspot_1_left": 0,
+            "hotspot_1_width": 10,
+            "hotspot_1_height": 50,
+            "hotspot_2_enabled": true,
+            "hotspot_2_label": "",
+            "hotspot_2_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Tanzanita",
+            "hotspot_2_top": 27,
+            "hotspot_2_left": 10,
+            "hotspot_2_width": 10,
+            "hotspot_2_height": 50,
+            "hotspot_3_enabled": true,
+            "hotspot_3_label": "",
+            "hotspot_3_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Rubi",
+            "hotspot_3_top": 27,
+            "hotspot_3_left": 20,
+            "hotspot_3_width": 9,
+            "hotspot_3_height": 50,
+            "hotspot_4_enabled": true,
+            "hotspot_4_label": "",
+            "hotspot_4_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Topázio",
+            "hotspot_4_top": 27,
+            "hotspot_4_left": 29,
+            "hotspot_4_width": 9,
+            "hotspot_4_height": 50,
+            "hotspot_5_enabled": true,
+            "hotspot_5_label": "",
+            "hotspot_5_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Água+Marinha",
+            "hotspot_5_top": 27,
+            "hotspot_5_left": 38,
+            "hotspot_5_width": 9,
+            "hotspot_5_height": 50,
+            "hotspot_6_enabled": true,
+            "hotspot_6_label": "",
+            "hotspot_6_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Turmalina+Paraiba",
+            "hotspot_6_top": 27,
+            "hotspot_6_left": 47,
+            "hotspot_6_width": 9,
+            "hotspot_6_height": 50,
+            "hotspot_7_enabled": true,
+            "hotspot_7_label": "",
+            "hotspot_7_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Diamante",
+            "hotspot_7_top": 27,
+            "hotspot_7_left": 56,
+            "hotspot_7_width": 9,
+            "hotspot_7_height": 50,
+            "hotspot_8_enabled": true,
+            "hotspot_8_label": "",
+            "hotspot_8_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Berilo+Verde",
+            "hotspot_8_top": 27,
+            "hotspot_8_left": 65,
+            "hotspot_8_width": 9,
+            "hotspot_8_height": 50,
+            "hotspot_9_enabled": true,
+            "hotspot_9_label": "",
+            "hotspot_9_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Safira",
+            "hotspot_9_top": 27,
+            "hotspot_9_left": 74,
+            "hotspot_9_width": 8,
+            "hotspot_9_height": 50,
+            "hotspot_10_enabled": true,
+            "hotspot_10_label": "",
+            "hotspot_10_url": "/collections/aneis?filter.p.m.custom.tipo_de_pedra_preciosa=Citrino",
+            "hotspot_10_top": 27,
+            "hotspot_10_left": 82,
+            "hotspot_10_width": 8,
+            "hotspot_10_height": 50,
+            "hotspot_11_enabled": true,
+            "hotspot_11_label": "Prasiolita",
+            "hotspot_11_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Prasiolita",
+            "hotspot_11_top": 27,
+            "hotspot_11_left": 90,
+            "hotspot_11_width": 15,
+            "hotspot_11_height": 50
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_93e46e3_83q8Mh"
+      ],
+      "settings": {}
+    },
+    "section_list_collections_LeYE9C": {
+      "type": "section-list-collections",
+      "blocks": {
+        "collection_U7JaxJ": {
+          "type": "collection",
+          "name": "Esmeraldas",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/both_earrings_has_to_be_on_yel_Nano_Banana_Pro_42600.png",
+            "mobile_image": "shopify://shop_images/both_earrings_has_to_be_on_yel_Nano_Banana_Pro_42600.png",
+            "overlay_color": "#616161",
+            "overlay_opacity": 0,
+            "top_text": "",
+            "top_text_disabled": true,
+            "title": "",
+            "title_disabled": true,
+            "bottom_text": "Esmeraldas",
+            "bottom_text_disabled": false,
+            "collection_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Esmeralda",
+            "text_color": "text--white"
+          }
+        },
+        "collection_XmWLNj": {
+          "type": "collection",
+          "name": "Água Marinha",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/take_out_that_earring_that_is__Nano_Banana_Pro_56236_92a3e30d-7e03-46ff-b040-36c99afc745c.png",
+            "mobile_image": "shopify://shop_images/take_out_that_earring_that_is__Nano_Banana_Pro_56236.png",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0,
+            "top_text": "",
+            "top_text_disabled": true,
+            "title": "",
+            "title_disabled": true,
+            "bottom_text": "Água-Marinha",
+            "bottom_text_disabled": false,
+            "collection_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Água+Marinha",
+            "text_color": "text--white"
+          }
+        },
+        "collection_68jAMA": {
+          "type": "collection",
+          "name": "Tanzanitas",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/now_change_the_product_composi_Nano_Banana_Pro_14381.png",
+            "mobile_image": "shopify://shop_images/now_change_the_product_composi_Nano_Banana_Pro_14381.png",
+            "overlay_color": "#616161",
+            "overlay_opacity": 0,
+            "top_text": "Product Count",
+            "top_text_disabled": true,
+            "title": "Collection Name",
+            "title_disabled": true,
+            "bottom_text": "Tanzanitas",
+            "bottom_text_disabled": false,
+            "collection_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Tanzanita",
+            "text_color": "text--white"
+          }
+        }
+      },
+      "block_order": [
+        "collection_U7JaxJ",
+        "collection_XmWLNj",
+        "collection_68jAMA"
+      ],
+      "custom_css": [
+        ".custom-scrollbar.small-down--show {display: none !important;}",
+        ".custom-scrollbar.small-down--show::-webkit-scrollbar {display: none;}",
+        ".kicker-flourished {font-size: 20px !important;}",
+        ".collection-grid-item__btn {font-size: 18px;}"
+      ],
+      "name": "Gemas",
+      "settings": {
+        "title": "As gemas mais icônicas da Patrik",
+        "bg": "palette--dark bg--invert--accent",
+        "carousel_enabled_on": "hidden",
+        "collection_limit": 35,
+        "wh_ratio": 0.7,
+        "grid_large": 3,
+        "grid_medium": 2,
+        "grid_mobile": 1,
+        "desktop_gutter": 25,
+        "text_layout": "outside",
+        "enable_hover": false,
+        "font_family": "body",
+        "title_size": 4,
+        "accent_size": 3,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_richtext_q8gnYc": {
+      "type": "section-richtext",
+      "blocks": {
+        "text_neYbgQ": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        }
+      },
+      "block_order": [
+        "text_neYbgQ"
+      ],
+      "name": "Espaçamento",
+      "settings": {
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "palette--dark bg--invert--accent",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "section_video_ykPNyn": {
+      "type": "section-video",
+      "blocks": {
+        "heading_DT7bw9": {
+          "type": "heading",
+          "settings": {
+            "title": "",
+            "text_size": 10
+          }
+        },
+        "text_HqTpwA": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 6
+          }
+        },
+        "button_bhUYPT": {
+          "type": "button",
+          "settings": {
+            "link_text_1": "",
+            "link_1": "",
+            "button_size_1": "btn--long",
+            "button_style_1": "btn",
+            "button_color_1": "btn--white",
+            "link_text_2": "",
+            "link_2": "",
+            "button_size_2": "btn--long",
+            "button_style_2": "btn-text-thick-line",
+            "button_color_2": "btn--white",
+            "link_text_3": "",
+            "link_3": "",
+            "button_size_3": "btn--long",
+            "button_style_3": "btn-text-thick-line",
+            "button_color_3": "btn--white"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DT7bw9",
+        "text_HqTpwA",
+        "button_bhUYPT"
+      ],
+      "name": "Video banner",
+      "settings": {
+        "height": "use_screen_full",
+        "color_bg": "palette--light bg--neutral",
+        "video_bg": "shopify://files/videos/patrik_1.mov",
+        "object_position": "center-center",
+        "image": "shopify://shop_images/Imagem_banner_home_8d053981-b069-46f1-ace8-f649b6a46226.png",
+        "banner_link": "",
+        "preload_image": false,
+        "text_align": "align--bottom-left",
+        "text_color": "text--black",
+        "overlay_opacity": 0,
+        "overlay_color": "#000000",
+        "enable_overlay_text": false,
+        "width": "wrapper--none",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "section_image_neGRcR": {
+      "type": "section-image",
+      "disabled": true,
+      "name": "Image",
+      "settings": {
+        "image": "shopify://shop_images/Collection_Vitral_desktop_2.png",
+        "mobile_image": "shopify://shop_images/Collection_Vitral_mobile_2.png",
+        "max_width": 100,
+        "x_align": "center",
+        "color_bg": "palette--dark bg--invert--accent",
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_richtext_jRYTUM": {
+      "type": "section-richtext",
+      "blocks": {
+        "text_jcWwEX": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        }
+      },
+      "block_order": [
+        "text_jcWwEX"
+      ],
+      "name": "Espaçamento",
+      "settings": {
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "palette--dark bg--invert--accent",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 26,
+        "padding_bottom": 26
+      }
+    },
     "section_list_collections_ftJBTL": {
       "type": "section-list-collections",
       "blocks": {
@@ -536,73 +860,6 @@
         "width": "wrapper",
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "section_richtext_q8gnYc": {
-      "type": "section-richtext",
-      "blocks": {
-        "text_neYbgQ": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_size": 4,
-            "text_columns": 1
-          }
-        }
-      },
-      "block_order": [
-        "text_neYbgQ"
-      ],
-      "name": "Espaçamento",
-      "settings": {
-        "align_text": "text-left",
-        "text_color": "text--neutral",
-        "bg": "palette--dark bg--invert--accent",
-        "content_width": 2000,
-        "width": "wrapper",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "section_image_neGRcR": {
-      "type": "section-image",
-      "disabled": true,
-      "name": "Image",
-      "settings": {
-        "image": "shopify://shop_images/Collection_Vitral_desktop_2.png",
-        "mobile_image": "shopify://shop_images/Collection_Vitral_mobile_2.png",
-        "max_width": 100,
-        "x_align": "center",
-        "color_bg": "palette--dark bg--invert--accent",
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "section_richtext_jRYTUM": {
-      "type": "section-richtext",
-      "blocks": {
-        "text_jcWwEX": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_size": 4,
-            "text_columns": 1
-          }
-        }
-      },
-      "block_order": [
-        "text_jcWwEX"
-      ],
-      "name": "Espaçamento",
-      "settings": {
-        "align_text": "text-left",
-        "text_color": "text--neutral",
-        "bg": "palette--dark bg--invert--accent",
-        "content_width": 2000,
-        "width": "wrapper",
-        "padding_top": 26,
-        "padding_bottom": 26
       }
     },
     "section_columns_X6EhLY": {
@@ -714,125 +971,6 @@
         "padding_bottom": 12
       }
     },
-    "section_list_collections_LeYE9C": {
-      "type": "section-list-collections",
-      "blocks": {
-        "collection_U7JaxJ": {
-          "type": "collection",
-          "name": "Esmeraldas",
-          "settings": {
-            "collection": "",
-            "image": "shopify://shop_images/both_earrings_has_to_be_on_yel_Nano_Banana_Pro_42600.png",
-            "mobile_image": "shopify://shop_images/both_earrings_has_to_be_on_yel_Nano_Banana_Pro_42600.png",
-            "overlay_color": "#616161",
-            "overlay_opacity": 0,
-            "top_text": "",
-            "top_text_disabled": true,
-            "title": "",
-            "title_disabled": true,
-            "bottom_text": "Esmeraldas",
-            "bottom_text_disabled": false,
-            "collection_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Esmeralda",
-            "text_color": "text--white"
-          }
-        },
-        "collection_XmWLNj": {
-          "type": "collection",
-          "name": "Água Marinha",
-          "settings": {
-            "collection": "",
-            "image": "shopify://shop_images/take_out_that_earring_that_is__Nano_Banana_Pro_56236_92a3e30d-7e03-46ff-b040-36c99afc745c.png",
-            "mobile_image": "shopify://shop_images/take_out_that_earring_that_is__Nano_Banana_Pro_56236.png",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "top_text": "",
-            "top_text_disabled": true,
-            "title": "",
-            "title_disabled": true,
-            "bottom_text": "Água-Marinha",
-            "bottom_text_disabled": false,
-            "collection_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Água+Marinha",
-            "text_color": "text--white"
-          }
-        },
-        "collection_68jAMA": {
-          "type": "collection",
-          "name": "Tanzanitas",
-          "settings": {
-            "collection": "",
-            "image": "shopify://shop_images/now_change_the_product_composi_Nano_Banana_Pro_14381.png",
-            "mobile_image": "shopify://shop_images/now_change_the_product_composi_Nano_Banana_Pro_14381.png",
-            "overlay_color": "#616161",
-            "overlay_opacity": 0,
-            "top_text": "Product Count",
-            "top_text_disabled": true,
-            "title": "Collection Name",
-            "title_disabled": true,
-            "bottom_text": "Tanzanitas",
-            "bottom_text_disabled": false,
-            "collection_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Tanzanita",
-            "text_color": "text--white"
-          }
-        }
-      },
-      "block_order": [
-        "collection_U7JaxJ",
-        "collection_XmWLNj",
-        "collection_68jAMA"
-      ],
-      "custom_css": [
-        ".custom-scrollbar.small-down--show {display: none !important;}",
-        ".custom-scrollbar.small-down--show::-webkit-scrollbar {display: none;}",
-        ".kicker-flourished {font-size: 20px !important;}",
-        ".collection-grid-item__btn {font-size: 18px;}"
-      ],
-      "name": "Gemas",
-      "settings": {
-        "title": "Conheça as famosas gemas da patrik",
-        "bg": "palette--dark bg--invert--accent",
-        "carousel_enabled_on": "hidden",
-        "collection_limit": 35,
-        "wh_ratio": 0.7,
-        "grid_large": 3,
-        "grid_medium": 2,
-        "grid_mobile": 1,
-        "desktop_gutter": 25,
-        "text_layout": "outside",
-        "enable_hover": false,
-        "font_family": "body",
-        "title_size": 4,
-        "accent_size": 3,
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "section_richtext_RTzH8K": {
-      "type": "section-richtext",
-      "blocks": {
-        "text_eDLqYV": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_size": 4,
-            "text_columns": 1
-          }
-        }
-      },
-      "block_order": [
-        "text_eDLqYV"
-      ],
-      "name": "Espaçamento",
-      "settings": {
-        "align_text": "text-left",
-        "text_color": "text--neutral",
-        "bg": "palette--dark bg--invert--accent",
-        "content_width": 2000,
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "section_richtext_UCkjER": {
       "type": "section-richtext",
       "blocks": {
@@ -859,40 +997,6 @@
         "padding_bottom": 30
       }
     },
-    "tabs": {
-      "type": "section-collection-tabs",
-      "blocks": {
-        "collection_TT7wEV": {
-          "type": "collection",
-          "settings": {
-            "collection": "aneis",
-            "title": "Conheça nossos Anéis"
-          }
-        }
-      },
-      "block_order": [
-        "collection_TT7wEV"
-      ],
-      "custom_css": [
-        ".custom-scrollbar.small-down--show {display: none !important;}",
-        ".custom-scrollbar.small-down--show::-webkit-scrollbar {display: none;}",
-        ".tab-link {font-size: 20px !important;}"
-      ],
-      "name": "Lista de Produtos",
-      "settings": {
-        "title": "",
-        "progress_bar": "mobile",
-        "grid_large": 3,
-        "grid_medium": 3,
-        "grid_mobile": 1,
-        "limit": 10,
-        "dark_gradient": true,
-        "bg": "palette--dark bg--invert--accent",
-        "width": "wrapper",
-        "padding_top": 20,
-        "padding_bottom": 100
-      }
-    },
     "section_columns_BncX3A": {
       "type": "section-columns",
       "blocks": {
@@ -900,7 +1004,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Gemini_Generated_Image_i3hdaqi3hdaqi3hd.png",
+            "image": "shopify://shop_images/DavidCohen_1.jpg",
             "shape_class": "",
             "title": "Gemólogo Certificado pelo GIA",
             "text": "<p>A PATRIK nasceu do amor de um de seus fundadores pela pedras preciosas. Nas peças únicas, David, Gemólogo certificado no GIA, escolhe a pedra e depois desenha a peça para aquela gema específica.</p>",
@@ -918,7 +1022,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/ChatGPT_Image_25_de_mar._de_2026_18_57_27.png",
+            "image": "shopify://shop_images/Gemini_Generated_Image_fbtnjlfbtnjlfbtn.png",
             "shape_class": "",
             "title": "Assessoria de Especialista",
             "text": "<p>Nossos especialistas estão disponíveis online e preparados para as melhores recomendações, a fim de que sua jóia seja perfeita para o momento a ser celebrado.</p>",
@@ -936,7 +1040,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/altere_onde_est_escrito_signat_Nano_Banana_2_42850.jpg",
+            "image": "shopify://shop_images/Gemini_Generated_Image_wpxl5wwpxl5wwpxl.png",
             "shape_class": "",
             "title": "Certificação da Jóia",
             "text": "<p>A PATRIK oferece, junto a sua jóia, um certificado de autenticidade do ouro 18k e das pedras, para que você tenha segurança da sua escolha. </p>",
@@ -1110,341 +1214,6 @@
         "padding_bottom": 36
       }
     },
-    "section_pair_hotspots_showcase_RGxViq": {
-      "type": "section-pair-hotspots-showcase",
-      "blocks": {
-        "hotspots": {
-          "type": "_pair-hotspots",
-          "static": true,
-          "settings": {},
-          "blocks": {
-            "pair_hotspots_hotspot_rpVzUk": {
-              "type": "_pair-hotspots-hotspot",
-              "name": "Hotspot",
-              "settings": {
-                "top": 30,
-                "left": 20,
-                "top_mobile": 60,
-                "left_mobile": 30
-              },
-              "blocks": {}
-            },
-            "pair_hotspot_Y6e3KW": {
-              "type": "_pair-hotspots-hotspot",
-              "settings": {
-                "top": 30,
-                "left": 72,
-                "top_mobile": 90,
-                "left_mobile": 61
-              },
-              "blocks": {}
-            },
-            "pair_hotspot_6x9fnz": {
-              "type": "_pair-hotspots-hotspot",
-              "settings": {
-                "top": 60,
-                "left": 30,
-                "top_mobile": 30,
-                "left_mobile": 72
-              },
-              "blocks": {}
-            },
-            "pair_hotspots_hotspot_8TWpYc": {
-              "type": "_pair-hotspots-hotspot",
-              "settings": {
-                "top": 50,
-                "left": 30,
-                "top_mobile": 30,
-                "left_mobile": 20
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "pair_hotspots_hotspot_rpVzUk",
-            "pair_hotspot_Y6e3KW",
-            "pair_hotspot_6x9fnz",
-            "pair_hotspots_hotspot_8TWpYc"
-          ]
-        },
-        "showcase": {
-          "type": "_pair-showcase",
-          "static": true,
-          "settings": {
-            "products": [
-              "anel-trillion-esmeralda-colombiana-e-brilhantes",
-              "2-anel-trillion-esmeralda-colombiana-e-brilhantes",
-              "3-anel-trillion-esmeralda-colombiana-e-brilhantes"
-            ],
-            "align_text": "text-center",
-            "text_color": "text--neutral",
-            "bg_color": "#006652",
-            "bg_accent": "#ffffff"
-          },
-          "blocks": {
-            "title": {
-              "type": "_pair-title",
-              "static": true,
-              "settings": {
-                "alignment": "center",
-                "gap": "sm"
-              },
-              "blocks": {
-                "theme_kicker_C4XyMd": {
-                  "type": "theme-kicker",
-                  "settings": {
-                    "kicker": "Coleção Naturaleza Colombiana",
-                    "enable_line": true,
-                    "text_size": 4
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "theme_kicker_C4XyMd"
-              ]
-            }
-          },
-          "block_order": []
-        }
-      },
-      "disabled": true,
-      "custom_css": [
-        ".custom-scrollbar.small-down--show {display: none !important;}",
-        ".hero__kicker.accent-size-4.block__kicker--flourished {color: #d4d6d0 !important;}"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/Ju_Bochner_PIN.png",
-        "image_mobile": "shopify://shop_images/Ju_Bochner_PIN.png",
-        "order": "showcase-first",
-        "dot_color": "#ffffff",
-        "brick_gutter": 0,
-        "borders": false,
-        "bg_color": "#006652",
-        "width": "wrapper--full",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "section_mosaic_FgTQfb": {
-      "type": "section-mosaic",
-      "blocks": {
-        "image_B7Cen8": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/copia_de_joia_Luiza_Rosas.png",
-            "overlay_opacity": 20,
-            "overlay_color": "#000000",
-            "title_text": "Coleção Resort",
-            "title_size": 8,
-            "text_align": "text-left tile--bottom",
-            "kicker_text": "",
-            "kicker_size": 3,
-            "link_text": "",
-            "link_url": "",
-            "link_size": 3
-          }
-        },
-        "image_fXNaUh": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/COLLECTION_PIN.png",
-            "overlay_opacity": 20,
-            "overlay_color": "#000000",
-            "title_text": "Coleção Diamonds",
-            "title_size": 8,
-            "text_align": "text-left tile--bottom",
-            "kicker_text": "",
-            "kicker_size": 3,
-            "link_text": "",
-            "link_url": "",
-            "link_size": 3
-          }
-        },
-        "image_7Tfwff": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Banner_Home_mobile_ABBA_V2.png",
-            "overlay_opacity": 20,
-            "overlay_color": "#000000",
-            "title_text": "Coleção Ouro Ancestral",
-            "title_size": 8,
-            "text_align": "text-left tile--bottom",
-            "kicker_text": "",
-            "kicker_size": 3,
-            "link_text": "",
-            "link_url": "",
-            "link_size": 3
-          }
-        }
-      },
-      "block_order": [
-        "image_B7Cen8",
-        "image_fXNaUh",
-        "image_7Tfwff"
-      ],
-      "disabled": true,
-      "name": "Mosaic",
-      "settings": {
-        "first_block_height": "short",
-        "wh_ratio": 1.3,
-        "split": "center",
-        "color_bg": "palette--light bg--neutral",
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "section_hero_p3denR": {
-      "type": "section-hero",
-      "blocks": {
-        "kicker_CxT8bF": {
-          "type": "kicker",
-          "settings": {
-            "kicker": "Conheça a coleção",
-            "enable_line": false,
-            "text_size": 3
-          }
-        },
-        "spacer_qDdxkL": {
-          "type": "spacer",
-          "settings": {
-            "spacer_padding": 10,
-            "show_line": false
-          }
-        },
-        "heading_cztbWd": {
-          "type": "heading",
-          "settings": {
-            "title": "Coleção Resort",
-            "text_size": 11
-          }
-        },
-        "text_xqB94U": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "richtext": "<p>Fresher than a bubble bath, cleaner than a network tv show</p>",
-            "text_size": 6
-          }
-        },
-        "button_NTGxKT": {
-          "type": "button",
-          "settings": {
-            "link_text_1": "Shop now",
-            "link_1": "shopify://collections",
-            "open_specialist_modal_1": false,
-            "specialist_message_1": "",
-            "button_size_1": "btn--medium",
-            "button_style_1": "btn uppercase",
-            "button_color_1": "btn--white",
-            "link_text_2": "",
-            "link_2": "",
-            "open_specialist_modal_2": false,
-            "specialist_message_2": "",
-            "button_size_2": "btn--long",
-            "button_style_2": "btn-text-thick-line",
-            "button_color_2": "btn--white",
-            "link_text_3": "",
-            "link_3": "",
-            "open_specialist_modal_3": false,
-            "specialist_message_3": "",
-            "button_size_3": "btn--long",
-            "button_style_3": "caps--link",
-            "button_color_3": "btn--white"
-          }
-        }
-      },
-      "block_order": [
-        "kicker_CxT8bF",
-        "spacer_qDdxkL",
-        "heading_cztbWd",
-        "text_xqB94U",
-        "button_NTGxKT"
-      ],
-      "disabled": true,
-      "name": "Hero",
-      "settings": {
-        "image": "shopify://shop_images/Imagem_banner_home.png",
-        "mobile_image": "shopify://shop_images/Imagem_banner_home_8d053981-b069-46f1-ace8-f649b6a46226.png",
-        "banner_link": "shopify://collections",
-        "height": "use_screen_three_quarters",
-        "overlay_opacity": 0,
-        "overlay_color": "#3c190b",
-        "enable_overlay_text": false,
-        "preload_image": true,
-        "content_width": 2000,
-        "text_align": "align--bottom-left",
-        "text_color": "text--white",
-        "color_bg": "hero__content--transparent",
-        "width": "wrapper--none",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "section_video_ykPNyn": {
-      "type": "section-video",
-      "blocks": {
-        "heading_DT7bw9": {
-          "type": "heading",
-          "settings": {
-            "title": "Coleção Resort",
-            "text_size": 10
-          }
-        },
-        "text_HqTpwA": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Conheça a coleção que transmite a elegância dos balneários</p>",
-            "text_size": 6
-          }
-        },
-        "button_bhUYPT": {
-          "type": "button",
-          "settings": {
-            "link_text_1": "Shop Now",
-            "link_1": "shopify://collections/aneis",
-            "button_size_1": "btn--long",
-            "button_style_1": "btn",
-            "button_color_1": "btn--white",
-            "link_text_2": "",
-            "link_2": "",
-            "button_size_2": "btn--long",
-            "button_style_2": "btn-text-thick-line",
-            "button_color_2": "btn--white",
-            "link_text_3": "",
-            "link_3": "",
-            "button_size_3": "btn--long",
-            "button_style_3": "btn-text-thick-line",
-            "button_color_3": "btn--white"
-          }
-        }
-      },
-      "block_order": [
-        "heading_DT7bw9",
-        "text_HqTpwA",
-        "button_bhUYPT"
-      ],
-      "disabled": true,
-      "name": "Video banner",
-      "settings": {
-        "height": "use_screen_three_quarters",
-        "color_bg": "palette--light bg--neutral",
-        "video_bg": "shopify://files/videos/Animação_de_Modelo_em_Monte_Carlo.mp4",
-        "object_position": "center-center",
-        "image": "shopify://shop_images/Imagem_banner_home_8d053981-b069-46f1-ace8-f649b6a46226.png",
-        "banner_link": "shopify://collections/aneis",
-        "preload_image": false,
-        "text_align": "align--bottom-left",
-        "text_color": "text--white",
-        "overlay_opacity": 15,
-        "overlay_color": "#000000",
-        "enable_overlay_text": false,
-        "width": "wrapper--none",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "section_icons_Fcggry": {
       "type": "section-icons",
       "blocks": {
@@ -1499,6 +1268,160 @@
         "padding_top": 50,
         "padding_bottom": 50
       }
+    },
+    "1777664169ac2559d7": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "17779271507e569dcf": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_56f6768_yUk4C9": {
+          "type": "ai_gen_block_56f6768",
+          "disabled": true,
+          "settings": {
+            "banner_image": "shopify://shop_images/ChatGPT_Image_4_de_mai._de_2026_17_36_39.png",
+            "hotspot_color": "#006652",
+            "hotspot_hover_color": "#3f9f85",
+            "hotspot_border_radius": 5,
+            "label_bg_color": "#3c3f36",
+            "label_text_color": "#ffffff",
+            "hotspot_1_enabled": true,
+            "hotspot_1_x": 10,
+            "hotspot_1_y": 20,
+            "hotspot_1_width": 20,
+            "hotspot_1_height": 15,
+            "hotspot_1_link": "",
+            "hotspot_1_label": "",
+            "hotspot_2_enabled": true,
+            "hotspot_2_x": 40,
+            "hotspot_2_y": 30,
+            "hotspot_2_width": 20,
+            "hotspot_2_height": 15,
+            "hotspot_2_link": "",
+            "hotspot_2_label": "",
+            "hotspot_3_enabled": true,
+            "hotspot_3_x": 29,
+            "hotspot_3_y": 29,
+            "hotspot_3_width": 8,
+            "hotspot_3_height": 41,
+            "hotspot_3_link": "",
+            "hotspot_3_label": "",
+            "hotspot_4_enabled": true,
+            "hotspot_4_x": 15,
+            "hotspot_4_y": 60,
+            "hotspot_4_width": 20,
+            "hotspot_4_height": 15,
+            "hotspot_4_link": "",
+            "hotspot_4_label": "",
+            "hotspot_5_enabled": true,
+            "hotspot_5_x": 45,
+            "hotspot_5_y": 70,
+            "hotspot_5_width": 20,
+            "hotspot_5_height": 15,
+            "hotspot_5_link": "",
+            "hotspot_5_label": "",
+            "hotspot_6_enabled": true,
+            "hotspot_6_x": 75,
+            "hotspot_6_y": 80,
+            "hotspot_6_width": 20,
+            "hotspot_6_height": 15,
+            "hotspot_6_link": "",
+            "hotspot_6_label": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_56f6768_yUk4C9"
+      ],
+      "settings": {}
+    },
+    "1777928059709e541e": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_86eca1a_AiKn73": {
+          "type": "ai_gen_block_86eca1a",
+          "disabled": true,
+          "settings": {
+            "banner_image": "shopify://shop_images/ChatGPT_Image_4_de_mai._de_2026_17_36_39.png",
+            "desktop_width_percent": 100,
+            "hotspot_hover_color": "#0000001a",
+            "hotspot_focus_color": "#006652",
+            "hotspot_1_enabled": true,
+            "hotspot_1_url": "https://collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Esmeraldacollections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Esmeralda",
+            "hotspot_1_top": 100,
+            "hotspot_1_left": 37,
+            "hotspot_1_width": 26,
+            "hotspot_1_height": 80,
+            "hotspot_2_enabled": true,
+            "hotspot_2_url": "",
+            "hotspot_2_top": 10,
+            "hotspot_2_left": 35,
+            "hotspot_2_width": 20,
+            "hotspot_2_height": 20,
+            "hotspot_3_enabled": false,
+            "hotspot_3_url": "",
+            "hotspot_3_top": 10,
+            "hotspot_3_left": 60,
+            "hotspot_3_width": 20,
+            "hotspot_3_height": 20,
+            "hotspot_4_enabled": false,
+            "hotspot_4_url": "",
+            "hotspot_4_top": 35,
+            "hotspot_4_left": 10,
+            "hotspot_4_width": 20,
+            "hotspot_4_height": 20,
+            "hotspot_5_enabled": false,
+            "hotspot_5_url": "",
+            "hotspot_5_top": 35,
+            "hotspot_5_left": 35,
+            "hotspot_5_width": 20,
+            "hotspot_5_height": 20,
+            "hotspot_6_enabled": false,
+            "hotspot_6_url": "",
+            "hotspot_6_top": 35,
+            "hotspot_6_left": 60,
+            "hotspot_6_width": 20,
+            "hotspot_6_height": 20,
+            "hotspot_7_enabled": false,
+            "hotspot_7_url": "",
+            "hotspot_7_top": 60,
+            "hotspot_7_left": 10,
+            "hotspot_7_width": 20,
+            "hotspot_7_height": 20,
+            "hotspot_8_enabled": false,
+            "hotspot_8_url": "",
+            "hotspot_8_top": 60,
+            "hotspot_8_left": 35,
+            "hotspot_8_width": 20,
+            "hotspot_8_height": 20,
+            "hotspot_9_enabled": false,
+            "hotspot_9_url": "",
+            "hotspot_9_top": 60,
+            "hotspot_9_left": 60,
+            "hotspot_9_width": 20,
+            "hotspot_9_height": 20,
+            "hotspot_10_enabled": false,
+            "hotspot_10_url": "",
+            "hotspot_10_top": 80,
+            "hotspot_10_left": 20,
+            "hotspot_10_width": 20,
+            "hotspot_10_height": 15,
+            "hotspot_11_enabled": false,
+            "hotspot_11_url": "",
+            "hotspot_11_top": 80,
+            "hotspot_11_left": 60,
+            "hotspot_11_width": 20,
+            "hotspot_11_height": 15
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_86eca1a_AiKn73"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -1509,22 +1432,21 @@
     "section_hero_mEN6xM",
     "section_richtext_kTiLHV",
     "section_hero_UhTiib",
-    "section_list_collections_ftJBTL",
+    "17779288275c16224c",
+    "section_list_collections_LeYE9C",
     "section_richtext_q8gnYc",
+    "section_video_ykPNyn",
     "section_image_neGRcR",
     "section_richtext_jRYTUM",
+    "section_list_collections_ftJBTL",
     "section_columns_X6EhLY",
     "section_richtext_Mijpwb",
-    "section_list_collections_LeYE9C",
-    "section_richtext_RTzH8K",
     "section_richtext_UCkjER",
-    "tabs",
     "section_columns_BncX3A",
     "section_logos_Cd4AwJ",
-    "section_pair_hotspots_showcase_RGxViq",
-    "section_mosaic_FgTQfb",
-    "section_hero_p3denR",
-    "section_video_ykPNyn",
-    "section_icons_Fcggry"
+    "section_icons_Fcggry",
+    "1777664169ac2559d7",
+    "17779271507e569dcf",
+    "1777928059709e541e"
   ]
 }

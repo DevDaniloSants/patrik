@@ -14,18 +14,17 @@
       "blocks": {
         "kicker-lookbook-block": {
           "type": "kicker",
-          "disabled": true,
           "settings": {
-            "kicker": "Introducing",
+            "kicker": "Formas que o tempo esculpe",
             "enable_line": false,
-            "text_size": 3
+            "text_size": 6
           }
         },
         "heading-lookbook-block": {
           "type": "heading",
           "settings": {
             "title": "Coleção Orgânica",
-            "text_size": 8
+            "text_size": 10
           }
         }
       },
@@ -34,21 +33,66 @@
         "heading-lookbook-block"
       ],
       "settings": {
-        "image": "shopify://shop_images/banner_brn02052-clr01123-v2.png",
+        "image": "shopify://shop_images/banner_brn02063-072378-v4_1.png",
         "mobile_image": "shopify://shop_images/banner_brn02063-072378-v2.png",
         "banner_link": "",
-        "height": "use_screen_three_quarters",
+        "height": "use_screen_full",
         "overlay_opacity": 0,
         "overlay_color": "#000000",
         "enable_overlay_text": false,
         "preload_image": true,
         "content_width": 2000,
-        "text_align": "align--middle-left",
+        "text_align": "align--bottom-left",
         "text_color": "text--white",
         "color_bg": "hero__content--transparent",
         "width": "wrapper--none",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "section_richtext_YmWhmT": {
+      "type": "section-richtext",
+      "blocks": {
+        "kicker_PmmkLb": {
+          "type": "kicker",
+          "disabled": true,
+          "settings": {
+            "kicker": "Introducing",
+            "enable_line": true,
+            "text_size": 4
+          }
+        },
+        "heading_Va8e6x": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Rich text",
+            "text_size": 8
+          }
+        },
+        "text_dYa47Q": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Na natureza, nada é perfeitamente simétrico — e ainda assim tudo é harmonia.<br/>Rochas, minerais e superfícies moldadas pelo temporevelam uma estética espontânea, orgânica e poderosa.<br/>Essa é a linguagem que inspira cada peça da coleção.</p>",
+            "text_size": 6,
+            "text_columns": 1
+          }
+        }
+      },
+      "block_order": [
+        "kicker_PmmkLb",
+        "heading_Va8e6x",
+        "text_dYa47Q"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "text-center",
+        "text_color": "text--white",
+        "bg": "palette--dark bg--invert--accent",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 72,
+        "padding_bottom": 70
       }
     },
     "page-lookbook-6": {
@@ -98,6 +142,7 @@
         "template--14288112255060__page-lookbook-6-166605104694452869-1",
         "template--14288112255060__page-lookbook-6-166605104694452869-3"
       ],
+      "disabled": true,
       "name": "Espaçamento",
       "settings": {
         "align_text": "text-center",
@@ -109,32 +154,14 @@
         "padding_bottom": 42
       }
     },
-    "section_double_VL4mjF": {
+    "section_double_tiqCKW": {
       "type": "section-double",
       "blocks": {
-        "text_Qc6T6j": {
-          "type": "text",
-          "name": "Narrativa Coleção",
-          "settings": {
-            "kicker": "A beleza que surge das formas de Gaia",
-            "title": "",
-            "text": "<p>A coleção ORGANICA nasce do entendimento de que toda criação humana — da arquitetura à inteligência artificial, das viagens espaciais aos algoritmos mais sofisticados — tem sua origem silenciosa na natureza.<br/>É a Terra que ensina.<br/><br/>As espirais das galáxias ecoam as conchas marinhas.<br/>Os circuitos lembram nervuras de folhas.<br/>Os fluxos de dados repetem os fluxos dos rios.<br/><br/>Nada é novo. Tudo é tradução.</p><p>A inovação tem suas raízes na natureza.</p>",
-            "font_size": 4,
-            "text_columns": 1,
-            "align_text": "text-left",
-            "button_text": "",
-            "button_url": "",
-            "button_color": "btn--neutral",
-            "button_style": "btn-text-thick-line",
-            "text_color": "text--white",
-            "bg_color": ""
-          }
-        },
-        "image_ji9aND": {
+        "image_dJxaHL": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/banner_072376-v2.png",
-            "overlay_opacity": 0,
+            "image": "shopify://shop_images/banner_072376-v4_1.png",
+            "overlay_opacity": 15,
             "overlay_color": "#000000",
             "enable_overlay_text": false,
             "kicker": "",
@@ -142,24 +169,41 @@
             "richtext": "",
             "text_align": "align--bottom-center",
             "text_color": "text--white",
-            "link_text": "Compre agora",
-            "link": "shopify://products/anel-em-ouro-branco-18k-com-diamante-hosgor-ceyran",
+            "link_text": "",
+            "link": "",
             "button_color": "btn--white",
             "button_style": "btn--outline"
+          }
+        },
+        "text_XdeyRA": {
+          "type": "text",
+          "settings": {
+            "kicker": "",
+            "title": "",
+            "text": "<p>Reconectar-se à natureza.<br/>Recordar que nela nasce toda inspiração humana.<br/>Sentir novamente que somos parte dela.<br/>A coleção Orgânica nasce desse chamado.<br/>Ela celebra as formas que o tempo esculpe —<br/>as curvas das rochas,<br/>as estruturas do reino mineral,<br/>as marcas deixadas por milhares de anos de transformação.</p>",
+            "font_size": 6,
+            "text_columns": 1,
+            "align_text": "text-center",
+            "button_text": "",
+            "button_url": "",
+            "button_color": "btn--white",
+            "button_style": "btn-text-thick-line",
+            "text_color": "text--white",
+            "bg_color": ""
           }
         }
       },
       "block_order": [
-        "text_Qc6T6j",
-        "image_ji9aND"
+        "image_dJxaHL",
+        "text_XdeyRA"
       ],
-      "name": "Narrativa Coleção",
+      "name": "Narrativa coleção",
       "settings": {
         "target_material": "",
         "height": "use_screen_one_half",
         "brick_gutter": 0,
         "borders": false,
-        "bg_color": "#192a26",
+        "bg_color": "#142b26",
         "preload_image": false,
         "width": "wrapper",
         "padding_top": 36,
@@ -184,6 +228,54 @@
         "padding_bottom": 36
       }
     },
+    "1777665162a2f00a62": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_6344db4_gNQXiz": {
+          "type": "ai_gen_block_6344db4",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "text": "<p>Na natureza, nada é perfeitamente simétrico —<br/>e ainda assim tudo é harmonia.<br/>Rochas, minerais e superfícies moldadas pelo tempo<br/>revelam uma estética espontânea, orgânica e poderosa.<br/>Essa é a linguagem que inspira cada peça da coleção.</p>",
+            "button_text": "",
+            "button_link": "",
+            "image_1": "shopify://shop_images/banner_anl02123-brn02201-pul00202-v3_1.png",
+            "image_3": "shopify://shop_images/banner_pul00532-anl02043-v4_1.png",
+            "image_width": 40,
+            "image_aspect_ratio": "1/1",
+            "show_dots": false,
+            "show_arrows": false,
+            "autoplay": true,
+            "autoplay_speed": 5,
+            "desktop_width_percent": 100,
+            "gap": 100,
+            "padding": 100,
+            "border_radius": 0,
+            "image_border_radius": 0,
+            "background_color": "#142b26",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "dot_color": "#ffffff",
+            "arrow_bg_color": "#ffffff",
+            "arrow_hover_bg_color": "#f4f4f4",
+            "arrow_color": "#000000",
+            "heading_size": 38,
+            "heading_spacing": 25,
+            "text_size": 21,
+            "button_bg_color": "#006652",
+            "button_hover_bg_color": "#004d3d",
+            "button_text_color": "#ffffff",
+            "button_spacing": 20,
+            "button_border_radius": 5
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_6344db4_gNQXiz"
+      ],
+      "settings": {}
+    },
     "section_richtext_pn4Uxe": {
       "type": "section-richtext",
       "blocks": {
@@ -201,7 +293,7 @@
           "disabled": true,
           "settings": {
             "heading": "Rich text",
-            "text_size": 7
+            "text_size": 6
           }
         },
         "button_4kMn6K": {
@@ -238,78 +330,13 @@
         "bg": "palette--dark bg--invert--accent",
         "content_width": 2000,
         "width": "wrapper",
-        "padding_top": 40,
-        "padding_bottom": 42
-      }
-    },
-    "section_richtext_FMkDrN": {
-      "type": "section-richtext",
-      "blocks": {
-        "kicker_ABVnh4": {
-          "type": "kicker",
-          "disabled": true,
-          "settings": {
-            "kicker": "",
-            "enable_line": true,
-            "text_size": 3
-          }
-        },
-        "text_Gh4xXh": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Orvalho ao amanhecer eternizado em ouro e luz.</p>",
-            "text_size": 4,
-            "text_columns": 1
-          }
-        },
-        "text_yEcmgy": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Um berilo verde luminoso envolto por um halo de diamantes, como a gota delicada que repousa sobre uma folha recém-nascida.</p>",
-            "text_size": 4,
-            "text_columns": 1
-          }
-        },
-        "button_j8ycAe": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "link_text_1": "Shop all",
-            "link_1": "shopify://collections/all",
-            "button_size_1": "btn--medium",
-            "button_style_1": "btn-text-thick-line",
-            "button_color_1": "btn--neutral",
-            "link_text_2": "",
-            "link_2": "",
-            "button_size_2": "btn--medium",
-            "button_style_2": "btn-text-thick-line",
-            "button_color_2": "btn--neutral",
-            "link_text_3": "",
-            "link_3": "",
-            "button_size_3": "btn--long",
-            "button_style_3": "btn-text-thick-line",
-            "button_color_3": "btn--white"
-          }
-        }
-      },
-      "block_order": [
-        "kicker_ABVnh4",
-        "text_Gh4xXh",
-        "text_yEcmgy",
-        "button_j8ycAe"
-      ],
-      "settings": {
-        "align_text": "text-center",
-        "text_color": "text--white",
-        "bg": "palette--dark bg--invert--accent",
-        "content_width": 2000,
-        "width": "wrapper",
-        "padding_top": 40,
-        "padding_bottom": 42
+        "padding_top": 12,
+        "padding_bottom": 14
       }
     },
     "page-lookbook-7": {
       "type": "collection-split",
+      "disabled": true,
       "name": "Conjunto Berilo - Drewdrops - Products with image",
       "settings": {
         "collection": "conjunto-berilo",
@@ -317,7 +344,7 @@
         "image": "shopify://shop_images/Berilo_verde_brinco_e_colar.png",
         "mobile_image": "shopify://shop_images/Berilo_verde_brinco_e_colar.png",
         "sticky_image_enable": true,
-        "swap": false,
+        "swap": true,
         "overlay_opacity": 15,
         "overlay_color": "#000000",
         "kicker": "Introduzindo o conjunto",
@@ -337,66 +364,9 @@
         "padding_bottom": 10
       }
     },
-    "section_richtext_U7xN3c": {
-      "type": "section-richtext",
-      "blocks": {
-        "kicker_kU4AE9": {
-          "type": "kicker",
-          "disabled": true,
-          "settings": {
-            "kicker": "Introducing",
-            "enable_line": true,
-            "text_size": 3
-          }
-        },
-        "heading_BXT3wU": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Rich text",
-            "text_size": 7
-          }
-        },
-        "button_XqNenM": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "link_text_1": "Shop all",
-            "link_1": "shopify://collections/all",
-            "button_size_1": "btn--medium",
-            "button_style_1": "btn-text-thick-line",
-            "button_color_1": "btn--neutral",
-            "link_text_2": "",
-            "link_2": "",
-            "button_size_2": "btn--medium",
-            "button_style_2": "btn-text-thick-line",
-            "button_color_2": "btn--neutral",
-            "link_text_3": "",
-            "link_3": "",
-            "button_size_3": "btn--long",
-            "button_style_3": "btn-text-thick-line",
-            "button_color_3": "btn--white"
-          }
-        }
-      },
-      "block_order": [
-        "kicker_kU4AE9",
-        "heading_BXT3wU",
-        "button_XqNenM"
-      ],
-      "name": "Espaçamento",
-      "settings": {
-        "align_text": "text-center",
-        "text_color": "text--white",
-        "bg": "palette--dark bg--invert--accent",
-        "content_width": 2000,
-        "width": "wrapper",
-        "padding_top": 40,
-        "padding_bottom": 42
-      }
-    },
     "section_image_hBPyj3": {
       "type": "section-image",
+      "disabled": true,
       "name": "Image",
       "settings": {
         "image": "shopify://shop_images/diamoonds_on_basalt_rocks.png",
@@ -411,6 +381,7 @@
     },
     "section_collection_slider_JBximM": {
       "type": "section-collection-slider",
+      "disabled": true,
       "name": "Product slider",
       "settings": {
         "collection": "organica-diamantes",
@@ -463,6 +434,7 @@
         "collection_6VGK4i",
         "collection_9T83mM"
       ],
+      "disabled": true,
       "name": "Collection product grid",
       "settings": {
         "title": "Catalog",
@@ -562,6 +534,7 @@
           "block_order": []
         }
       },
+      "disabled": true,
       "name": "Pair: Hotspots & Showcase",
       "settings": {
         "image": "shopify://shop_images/Berilo_verde_brinco_e_colar.png",
@@ -578,6 +551,7 @@
     },
     "section_collection_gUiQKm": {
       "type": "section-collection",
+      "disabled": true,
       "name": "Product grid",
       "settings": {
         "title": "Featured Products",
@@ -614,6 +588,7 @@
         "collection_7aqP7X",
         "collection_XkaGdf"
       ],
+      "disabled": true,
       "name": "Product slider tabs",
       "settings": {
         "title": "Featured products",
@@ -657,6 +632,7 @@
         "product_F8mbMz",
         "product_4TaFN3"
       ],
+      "disabled": true,
       "name": "Shop the look",
       "settings": {
         "image": "shopify://shop_images/Collection_Vitral_desktop_3.png",
@@ -673,23 +649,114 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "section_image_hzQCjr": {
+      "type": "section-image",
+      "name": "Image",
+      "settings": {
+        "image": "shopify://shop_images/banner_anl01671-brn01195-v3_1.png",
+        "mobile_image": "shopify://shop_images/banner_anl02123-brn02201-pul00202-v3_1.png",
+        "max_width": 100,
+        "x_align": "center",
+        "color_bg": "palette--dark bg--invert--accent",
+        "width": "wrapper--none",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_richtext_U7xN3c": {
+      "type": "section-richtext",
+      "blocks": {
+        "kicker_kU4AE9": {
+          "type": "kicker",
+          "disabled": true,
+          "settings": {
+            "kicker": "Introducing",
+            "enable_line": true,
+            "text_size": 3
+          }
+        },
+        "heading_BXT3wU": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Rich text",
+            "text_size": 7
+          }
+        },
+        "button_XqNenM": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "link_text_1": "Shop all",
+            "link_1": "shopify://collections/all",
+            "button_size_1": "btn--medium",
+            "button_style_1": "btn-text-thick-line",
+            "button_color_1": "btn--neutral",
+            "link_text_2": "",
+            "link_2": "",
+            "button_size_2": "btn--medium",
+            "button_style_2": "btn-text-thick-line",
+            "button_color_2": "btn--neutral",
+            "link_text_3": "",
+            "link_3": "",
+            "button_size_3": "btn--long",
+            "button_style_3": "btn-text-thick-line",
+            "button_color_3": "btn--white"
+          }
+        }
+      },
+      "block_order": [
+        "kicker_kU4AE9",
+        "heading_BXT3wU",
+        "button_XqNenM"
+      ],
+      "name": "Espaçamento",
+      "settings": {
+        "align_text": "text-center",
+        "text_color": "text--white",
+        "bg": "palette--dark bg--invert--accent",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 40,
+        "padding_bottom": 42
+      }
+    },
+    "section_collection_BJHPGq": {
+      "type": "section-collection",
+      "name": "Product grid",
+      "settings": {
+        "title": "Conheça os produtos da coleção Orgânica",
+        "collection": "organica",
+        "grid": 3,
+        "rows": 6,
+        "grid_mobile": "2",
+        "bg": "palette--dark bg--invert--accent",
+        "show_view_all": false,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "hero",
+    "section_richtext_YmWhmT",
     "page-lookbook-6",
-    "section_double_VL4mjF",
+    "section_double_tiqCKW",
     "main",
+    "1777665162a2f00a62",
     "section_richtext_pn4Uxe",
-    "section_richtext_FMkDrN",
     "page-lookbook-7",
-    "section_richtext_U7xN3c",
     "section_image_hBPyj3",
     "section_collection_slider_JBximM",
     "section_list_collections_products_E96FV9",
     "section_pair_hotspots_showcase_HkVhWL",
     "section_collection_gUiQKm",
     "section_collection_tabs_QNBKTq",
-    "section_look_RzWU8x"
+    "section_look_RzWU8x",
+    "section_image_hzQCjr",
+    "section_richtext_U7xN3c",
+    "section_collection_BJHPGq"
   ]
 }
