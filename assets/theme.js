@@ -2991,25 +2991,40 @@
             this.trigger = trigger;
             this.key = this.trigger.getAttribute(selectors$P.popdownTrigger);
             this.popdown = document.querySelector(`[id='${this.key}']`);
+            if (!this.popdown) {
+                return;
+            }
             this.input = this.popdown.querySelector(selectors$P.input);
             this.close = this.popdown.querySelector(selectors$P.close);
             this.wrapper = this.popdown.closest(selectors$P.wrapper);
-            this.underlay = this.wrapper.querySelector(selectors$P.underlay);
+            this.underlay = this.wrapper && this.wrapper.querySelector(selectors$P.underlay);
+            if (!this.input || !this.close || !this.wrapper || !this.underlay) {
+                return;
+            }
             this.initTriggerEvents();
             this.initPopdownEvents();
         }
     };
     const searchPopdown = {
         onLoad () {
-            sections$e[this.id] = {};
-            const trigger = this.container.querySelector(`[${selectors$P.popdownTrigger}]`);
-            if (trigger) {
-                sections$e[this.id] = new SearchPopdownTriggers(trigger);
+            sections$e[this.id] = [];
+            const triggers = this.container.querySelectorAll(`[${selectors$P.popdownTrigger}='search-popdown']`);
+            if (triggers && triggers.length) {
+                triggers.forEach((trigger)=>{
+                    sections$e[this.id].push(new SearchPopdownTriggers(trigger));
+                });
             }
         },
         onUnload: function() {
-            if (typeof sections$e[this.id].unload === 'function') {
-                sections$e[this.id].unload();
+            const instances = sections$e[this.id];
+            if (Array.isArray(instances)) {
+                instances.forEach((instance)=>{
+                    if (instance && typeof instance.unload === 'function') {
+                        instance.unload();
+                    }
+                });
+            } else if (instances && typeof instances.unload === 'function') {
+                instances.unload();
             }
         }
     };
