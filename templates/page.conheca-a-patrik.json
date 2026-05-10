@@ -115,7 +115,7 @@
       "type": "section-collection-slider",
       "name": "Product slider",
       "settings": {
-        "collection": "engagement-rings",
+        "collection": "organica",
         "product_limit": 12,
         "title": "Destaques da Coleção Orgânica",
         "align_text": "title-center",
@@ -124,6 +124,99 @@
         "grid_medium": 3,
         "grid_mobile": 1.2,
         "bg": "palette--light bg--neutral",
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_gallery_slider_cL9FJj": {
+      "type": "section-gallery-slider",
+      "blocks": {
+        "text_block_z9hzwQ": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Categorias-Anel_PATRIK-v7.png",
+            "shape_class": "",
+            "title": "Category title",
+            "text": "<p>Category description text goes here.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        },
+        "text_block_nBVJVy": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Categorias-_Brinco_PATRIK-v7.png",
+            "shape_class": "",
+            "title": "Category title",
+            "text": "<p>Category description text goes here.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        },
+        "text_block_cY8xbf": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "shape_class": "",
+            "title": "Category title",
+            "text": "<p>Category description text goes here.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        },
+        "text_block_AXx9Mk": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "shape_class": "",
+            "title": "Category title",
+            "text": "<p>Category description text goes here.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_z9hzwQ",
+        "text_block_nBVJVy",
+        "text_block_cY8xbf",
+        "text_block_AXx9Mk"
+      ],
+      "name": "Gallery Slider",
+      "settings": {
+        "title": "Gallery Slider",
+        "bg": "palette--light bg--neutral",
+        "align_text": "text-center",
+        "scale_image": true,
+        "wh_ratio": 1,
+        "slides_desktop": 5,
+        "slides_tablet": 4,
+        "slides_mobile": 1.8,
+        "show_arrows": true,
+        "show_pagination": false,
         "width": "wrapper",
         "padding_top": 36,
         "padding_bottom": 36
@@ -350,6 +443,7 @@
     "section_hero_F6LiWT",
     "section_richtext_FN8DKi",
     "section_collection_slider_T3cMTQ",
+    "section_gallery_slider_cL9FJj",
     "section_columns_Gj3NJc",
     "section_richtext_7nQqqJ",
     "section_hero_pyEpff",
