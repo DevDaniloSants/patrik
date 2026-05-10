@@ -111,6 +111,24 @@
         "padding_bottom": 36
       }
     },
+    "section_collection_slider_T3cMTQ": {
+      "type": "section-collection-slider",
+      "name": "Product slider",
+      "settings": {
+        "collection": "engagement-rings",
+        "product_limit": 12,
+        "title": "Destaques da Coleção Orgânica",
+        "align_text": "title-center",
+        "progress_bar": "mobile",
+        "grid_large": 4,
+        "grid_medium": 3,
+        "grid_mobile": 1.2,
+        "bg": "palette--light bg--neutral",
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "section_columns_Gj3NJc": {
       "type": "section-columns",
       "blocks": {
@@ -185,24 +203,6 @@
         "grid_medium": 3,
         "grid_mobile": 1.2,
         "progress_bar_mobile": false,
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "section_collection_slider_T3cMTQ": {
-      "type": "section-collection-slider",
-      "name": "Product slider",
-      "settings": {
-        "collection": "engagement-rings",
-        "product_limit": 12,
-        "title": "Escolha o seu Anel de Noivado",
-        "align_text": "title-center",
-        "progress_bar": "mobile",
-        "grid_large": 4,
-        "grid_medium": 3,
-        "grid_mobile": 1.2,
-        "bg": "palette--light bg--neutral",
         "width": "wrapper",
         "padding_top": 36,
         "padding_bottom": 36
@@ -349,8 +349,8 @@
     "main",
     "section_hero_F6LiWT",
     "section_richtext_FN8DKi",
-    "section_columns_Gj3NJc",
     "section_collection_slider_T3cMTQ",
+    "section_columns_Gj3NJc",
     "section_richtext_7nQqqJ",
     "section_hero_pyEpff",
     "section_richtext_UrJddg"
