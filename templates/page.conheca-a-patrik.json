@@ -33,7 +33,7 @@
         "kicker_C3kKAk": {
           "type": "kicker",
           "settings": {
-            "kicker": "Seleção Patrik",
+            "kicker": "Conheça a coleção",
             "enable_line": false,
             "text_size": 4
           }
@@ -41,14 +41,14 @@
         "heading_R4XdpU": {
           "type": "heading",
           "settings": {
-            "title": "Engagement Rings",
+            "title": "Orgânica",
             "text_size": 10
           }
         },
         "text_eBkXrd": {
           "type": "text",
           "settings": {
-            "richtext": "<p>Escolha o anel certo para o seu noivado</p>",
+            "richtext": "<p>Inspirada nas formas da natureza</p>",
             "text_size": 6
           }
         }
@@ -60,8 +60,8 @@
       ],
       "name": "Image banner",
       "settings": {
-        "image": "shopify://shop_images/Anel_de_Noivado_wide_-_edited.png",
-        "mobile_image": "shopify://shop_images/Enggement_Ring_mobile.png",
+        "image": "shopify://shop_images/banner_brn02063-072378-v1_-_copia.png",
+        "mobile_image": "shopify://shop_images/banner_brn02063-072378-v1_-_copia.png",
         "banner_link": "",
         "height": "use_screen_two_thirds",
         "overlay_opacity": 0,
