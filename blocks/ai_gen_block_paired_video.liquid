@@ -160,6 +160,17 @@
       grid-column: 1 !important;
       grid-row: auto !important;
     }
+    .apv-media-{{ ai_gen_id }} {
+  margin-left: calc(-1 * {{ block.settings.horizontal_padding }}px);
+  width: calc(100% + {{ block.settings.horizontal_padding | times: 2 }}px);
+  border-radius: 0;
+}
+
+.apv-video-{{ ai_gen_id }},
+.apv-placeholder-{{ ai_gen_id }} {
+  max-width: 100%;
+  max-height: none;
+}
 
     {% if block.settings.mobile_video_first %}
       .apv-content-1-{{ ai_gen_id }} { order: 2; }
