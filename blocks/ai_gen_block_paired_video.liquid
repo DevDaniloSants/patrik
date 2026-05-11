@@ -1,7 +1,7 @@
 {% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
 
 {% style %}
-  {% assign ratio_str = block.settings.aspect_ratio | default: '9/16' %}
+   {% assign ratio_str = block.settings.aspect_ratio | default: '9/16' %}
   {% assign ratio_parts = ratio_str | split: '/' %}
   {% assign ratio_w = ratio_parts[0] | times: 1.0 %}
   {% assign ratio_h = ratio_parts[1] | times: 1.0 %}
@@ -27,11 +27,8 @@
     gap: {{ block.settings.gap }}px;
   }
 
-  /* Row 1: vídeo esquerda, texto direita */
   .apv-media-1-{{ ai_gen_id }} { grid-column: 1; grid-row: 1; }
   .apv-content-1-{{ ai_gen_id }} { grid-column: 2; grid-row: 1; }
-
-  /* Row 2: texto esquerda, vídeo direita */
   .apv-content-2-{{ ai_gen_id }} { grid-column: 1; grid-row: 2; }
   .apv-media-2-{{ ai_gen_id }} { grid-column: 2; grid-row: 2; }
 
@@ -168,28 +165,22 @@
       .apv-media-2-{{ ai_gen_id }}   { order: 3; }
     {% endif %}
 
+    .apv-media-{{ ai_gen_id }} {
+      margin-left: calc(-1 * {{ block.settings.horizontal_padding }}px);
+      width: calc(100% + {{ block.settings.horizontal_padding | times: 2 }}px);
+      border-radius: 0;
+    }
+
+    .apv-video-{{ ai_gen_id }},
+    .apv-placeholder-{{ ai_gen_id }} {
+      max-width: 100%;
+      max-height: none;
+    }
+
     .apv-heading-{{ ai_gen_id }} { font-size: {{ block.settings.heading_size | times: 0.7 }}px; }
     .apv-kicker-{{ ai_gen_id }}  { font-size: {{ block.settings.kicker_size | times: 0.8 }}px; }
     .apv-text-{{ ai_gen_id }}    { font-size: {{ block.settings.text_size | times: 0.9 }}px; }
   }
-  .apv-media-{{ ai_gen_id }} {
-  margin-left: calc(-1 * {{ block.settings.horizontal_padding }}px);
-  width: calc(100% + {{ block.settings.horizontal_padding | times: 2 }}px);
-  border-radius: 0;
-}
-
-.apv-video-{{ ai_gen_id }},
-.apv-placeholder-{{ ai_gen_id }} {
-  max-width: 100%;
-  max-height: none;
-}
-.apv-content-{{ ai_gen_id }} {
-  width: 100%;
-  padding: 0;
-}
-.apv-container-{{ ai_gen_id }} {
-  padding: 0 {{ block.settings.horizontal_padding }}px;
-}
 
 {% endstyle %}
 
