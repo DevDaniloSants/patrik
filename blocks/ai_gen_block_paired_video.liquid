@@ -152,10 +152,7 @@
       grid-template-columns: 1fr;
       gap: {{ block.settings.mobile_gap }}px;
     }
-.apv-content-{{ ai_gen_id }} {
-  width: 100%;
-  padding: 0;
-}
+
     .apv-media-1-{{ ai_gen_id }},
     .apv-content-1-{{ ai_gen_id }},
     .apv-content-2-{{ ai_gen_id }},
@@ -163,20 +160,6 @@
       grid-column: 1 !important;
       grid-row: auto !important;
     }
-    .apv-media-{{ ai_gen_id }} {
-  margin-left: calc(-1 * {{ block.settings.horizontal_padding }}px);
-  width: calc(100% + {{ block.settings.horizontal_padding | times: 2 }}px);
-  border-radius: 0;
-}
-
-.apv-video-{{ ai_gen_id }},
-.apv-placeholder-{{ ai_gen_id }} {
-  max-width: 100%;
-  max-height: none;
-}
-.apv-container-{{ ai_gen_id }} {
-  padding: 0 {{ block.settings.horizontal_padding }}px;
-}
 
     {% if block.settings.mobile_video_first %}
       .apv-content-1-{{ ai_gen_id }} { order: 2; }
@@ -189,6 +172,25 @@
     .apv-kicker-{{ ai_gen_id }}  { font-size: {{ block.settings.kicker_size | times: 0.8 }}px; }
     .apv-text-{{ ai_gen_id }}    { font-size: {{ block.settings.text_size | times: 0.9 }}px; }
   }
+  .apv-media-{{ ai_gen_id }} {
+  margin-left: calc(-1 * {{ block.settings.horizontal_padding }}px);
+  width: calc(100% + {{ block.settings.horizontal_padding | times: 2 }}px);
+  border-radius: 0;
+}
+
+.apv-video-{{ ai_gen_id }},
+.apv-placeholder-{{ ai_gen_id }} {
+  max-width: 100%;
+  max-height: none;
+}
+.apv-content-{{ ai_gen_id }} {
+  width: 100%;
+  padding: 0;
+}
+.apv-container-{{ ai_gen_id }} {
+  padding: 0 {{ block.settings.horizontal_padding }}px;
+}
+
 {% endstyle %}
 
 {% assign play_icon = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5V19L19 12L8 5Z" fill="currentColor"/></svg>' %}
