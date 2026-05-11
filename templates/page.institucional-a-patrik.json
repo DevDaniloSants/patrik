@@ -225,7 +225,7 @@
             "section_padding": 40,
             "horizontal_padding": 100,
             "gap": 100,
-            "content_gap": 10,
+            "content_gap": 25,
             "background_color": "#ffffff",
             "aspect_ratio": "9/16",
             "video_width": 100,
