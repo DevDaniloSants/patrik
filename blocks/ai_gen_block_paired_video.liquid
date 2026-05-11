@@ -152,7 +152,10 @@
       grid-template-columns: 1fr;
       gap: {{ block.settings.mobile_gap }}px;
     }
-
+.apv-content-{{ ai_gen_id }} {
+  width: 100%;
+  padding: 0;
+}
     .apv-media-1-{{ ai_gen_id }},
     .apv-content-1-{{ ai_gen_id }},
     .apv-content-2-{{ ai_gen_id }},
@@ -170,6 +173,9 @@
 .apv-placeholder-{{ ai_gen_id }} {
   max-width: 100%;
   max-height: none;
+}
+.apv-container-{{ ai_gen_id }} {
+  padding: 0 {{ block.settings.horizontal_padding }}px;
 }
 
     {% if block.settings.mobile_video_first %}
