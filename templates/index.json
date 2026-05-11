@@ -55,7 +55,7 @@
       "custom_css": [],
       "name": "Video banner",
       "settings": {
-        "height": "use_screen_full",
+        "height": "use_image",
         "color_bg": "palette--light bg--neutral",
         "video_bg": "shopify://files/videos/patrik_1.mov",
         "object_position": "center-center",
