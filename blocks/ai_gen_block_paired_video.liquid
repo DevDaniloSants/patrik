@@ -159,11 +159,16 @@
     }
 
     {% if block.settings.mobile_video_first %}
-      .apv-content-1-{{ ai_gen_id }} { order: 2; }
-      .apv-media-1-{{ ai_gen_id }}   { order: 1; }
-      .apv-content-2-{{ ai_gen_id }} { order: 4; }
-      .apv-media-2-{{ ai_gen_id }}   { order: 3; }
-    {% endif %}
+  .apv-content-1-{{ ai_gen_id }} { order: 2; }
+  .apv-media-1-{{ ai_gen_id }}   { order: 1; }
+  .apv-content-2-{{ ai_gen_id }} { order: 4; }
+  .apv-media-2-{{ ai_gen_id }}   { order: 3; }
+{% else %}
+  .apv-content-1-{{ ai_gen_id }} { order: 1; }
+  .apv-media-1-{{ ai_gen_id }}   { order: 2; }
+  .apv-content-2-{{ ai_gen_id }} { order: 3; }
+  .apv-media-2-{{ ai_gen_id }}   { order: 4; }
+{% endif %}
 
     .apv-media-{{ ai_gen_id }} {
       margin-left: calc(-1 * {{ block.settings.horizontal_padding }}px);
