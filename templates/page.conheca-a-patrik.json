@@ -227,7 +227,7 @@
       ],
       "name": "Gallery Slider",
       "settings": {
-        "title": "Navegue por Categoria",
+        "title": "Descubra por Categoria",
         "bg": "palette--light bg--neutral",
         "align_text": "text-center",
         "scale_image": true,
@@ -240,6 +240,83 @@
         "width": "wrapper",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "section_hero_iGkArj": {
+      "type": "section-hero",
+      "blocks": {
+        "kicker_n39J6g": {
+          "type": "kicker",
+          "settings": {
+            "kicker": "Há mais de 20 anos desenvolvendo jóias com",
+            "enable_line": false,
+            "text_size": 4
+          }
+        },
+        "heading_Gy3JUR": {
+          "type": "heading",
+          "settings": {
+            "title": "Pedras Preciosas",
+            "text_size": 10
+          }
+        },
+        "text_7q4XrJ": {
+          "type": "text",
+          "settings": {
+            "richtext": "",
+            "text_size": 6
+          }
+        },
+        "button_UtiXed": {
+          "type": "button",
+          "settings": {
+            "link_text_1": "Saiba mais",
+            "link_1": "shopify://pages/a-patrik",
+            "open_specialist_modal_1": false,
+            "specialist_message_1": "",
+            "button_size_1": "btn--long",
+            "button_style_1": "btn",
+            "button_color_1": "btn--white",
+            "link_text_2": "",
+            "link_2": "",
+            "open_specialist_modal_2": false,
+            "specialist_message_2": "",
+            "button_size_2": "btn--long",
+            "button_style_2": "btn-text-thick-line",
+            "button_color_2": "btn--white",
+            "link_text_3": "",
+            "link_3": "",
+            "open_specialist_modal_3": false,
+            "specialist_message_3": "",
+            "button_size_3": "btn--long",
+            "button_style_3": "btn-text-thick-line",
+            "button_color_3": "btn--white"
+          }
+        }
+      },
+      "block_order": [
+        "kicker_n39J6g",
+        "heading_Gy3JUR",
+        "text_7q4XrJ",
+        "button_UtiXed"
+      ],
+      "name": "Image banner",
+      "settings": {
+        "image": "shopify://shop_images/David_examinando_Diamante_PB.jpg",
+        "mobile_image": "shopify://shop_images/David_examinando_diamante_PB_-_mobile.png",
+        "banner_link": "",
+        "height": "use_screen_two_thirds",
+        "overlay_opacity": 15,
+        "overlay_color": "#000",
+        "enable_overlay_text": false,
+        "preload_image": false,
+        "content_width": 2000,
+        "text_align": "align--middle-center",
+        "text_color": "text--white",
+        "color_bg": "hero__content--transparent",
+        "width": "wrapper--none",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "section_columns_Gj3NJc": {
@@ -464,6 +541,7 @@
     "section_richtext_FN8DKi",
     "section_collection_slider_T3cMTQ",
     "section_gallery_slider_cL9FJj",
+    "section_hero_iGkArj",
     "section_columns_Gj3NJc",
     "section_richtext_7nQqqJ",
     "section_hero_pyEpff",
