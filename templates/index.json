@@ -138,6 +138,7 @@
         "a74ee68a-ff75-4a7c-aa9c-6cdaf660dfdf",
         "fdfd9dcc-76bf-4071-80e8-20d097945246"
       ],
+      "disabled": true,
       "name": "Hero",
       "settings": {
         "image": "shopify://shop_images/banner_brn02052-clr01123-v3_1.png",
