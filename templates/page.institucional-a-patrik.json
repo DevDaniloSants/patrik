@@ -255,6 +255,7 @@
         },
         "ai_gen_block_c322d72_XbfKd3": {
           "type": "ai_gen_block_c322d72",
+          "disabled": true,
           "settings": {
             "layout": "video_left",
             "container_width": 1600,
@@ -298,6 +299,7 @@
         },
         "ai_gen_block_c322d72_tVtAhp": {
           "type": "ai_gen_block_c322d72",
+          "disabled": true,
           "settings": {
             "layout": "text_left",
             "container_width": 1600,
