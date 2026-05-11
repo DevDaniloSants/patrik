@@ -203,6 +203,55 @@
     "177756199056a08999": {
       "type": "_blocks",
       "blocks": {
+        "ai_gen_block_paired_video_PwRfTh": {
+          "type": "ai_gen_block_paired_video",
+          "name": "Par de vídeo e texto",
+          "settings": {
+            "kicker_1": "De Pai para Filho",
+            "heading_1": "O Nome da Marca",
+            "text_1": "<p>Por trás da Patrik está David Cohen, gemólogo formado pelo Gemological Institute of America (GIA) — referência mundial em gemologia.<br/><br/>Há décadas dedicado ao universo das joias, David desenvolveu um olhar raro para aquilo que torna cada gema extraordinária. Ao seu lado está Patrik, seu filho, que inspira o nome da marca e já segue o mesmo caminho, aprofundando-se no estudo das gemas e da joalheria.<br/><br/>A Patrik nasce desse encontro entre gerações — de conhecimento que se transmite, de valores que permanecem e de um olhar que continua.</p>",
+            "button_text_1": "",
+            "button_link_1": "",
+            "video_1": "shopify://files/videos/patrik_1.mov",
+            "video_url_1": "",
+            "kicker_2": "O olhar que revela a pedra",
+            "heading_2": "Antes do desenho, a observação",
+            "text_2": "<p>Antes do desenho, existe a observação.<br/>A escolha criteriosa da gema, sua pureza, sua estrutura, sua luz.Cada pedra possui uma identidade própria — e é a partir dela que a joia começa a existir.<br/></p><p>Nossa criação respeita aquilo que a natureza já fez de extraordinário.<br/>O design não impõe. Ele revela.</p><p><br/>Cada peça passa por um processo que une ciência, arte e emoção: selecionamos, analisamos, certificamos e transformamos pedras em joias que atravessam o tempo.</p>",
+            "button_text_2": "",
+            "button_link_2": "",
+            "video_url_2": "",
+            "container_width": 1200,
+            "section_padding": 40,
+            "horizontal_padding": 100,
+            "gap": 100,
+            "content_gap": 20,
+            "background_color": "#ffffff",
+            "aspect_ratio": "9/16",
+            "video_width": 100,
+            "media_radius": 10,
+            "auto_play": true,
+            "loop": true,
+            "mute_video": false,
+            "show_controls": false,
+            "kicker_size": 19,
+            "kicker_color": "#006652",
+            "heading_size": 40,
+            "heading_color": "#0a0a0c",
+            "text_size": 18,
+            "text_color": "#3c3f36",
+            "button_text_size": 16,
+            "button_padding_vertical": 14,
+            "button_padding_horizontal": 32,
+            "button_radius": 5,
+            "button_bg_color": "#006652",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#3c3f36",
+            "button_hover_text_color": "#ffffff",
+            "mobile_video_first": true,
+            "mobile_gap": 30
+          },
+          "blocks": {}
+        },
         "ai_gen_block_c322d72_XbfKd3": {
           "type": "ai_gen_block_c322d72",
           "settings": {
@@ -291,6 +340,7 @@
         }
       },
       "block_order": [
+        "ai_gen_block_paired_video_PwRfTh",
         "ai_gen_block_c322d72_XbfKd3",
         "ai_gen_block_c322d72_tVtAhp"
       ],
