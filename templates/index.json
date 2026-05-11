@@ -52,9 +52,7 @@
         "text_HqTpwA",
         "button_bhUYPT"
       ],
-      "custom_css": [
-        ".section-video {display: block !important;}"
-      ],
+      "custom_css": [],
       "name": "Video banner",
       "settings": {
         "height": "use_screen_full",
