@@ -240,16 +240,16 @@
             "heading_color": "#0a0a0c",
             "text_size": 18,
             "text_color": "#3c3f36",
-            "button_text_size": 16,
-            "button_padding_vertical": 14,
-            "button_padding_horizontal": 32,
-            "button_radius": 5,
+            "button_text_size": 24,
+            "button_padding_vertical": 30,
+            "button_padding_horizontal": 60,
+            "button_radius": 50,
             "button_bg_color": "#006652",
             "button_text_color": "#ffffff",
             "button_hover_bg_color": "#3c3f36",
             "button_hover_text_color": "#ffffff",
             "mobile_video_first": true,
-            "mobile_gap": 30
+            "mobile_gap": 20
           },
           "blocks": {}
         },
