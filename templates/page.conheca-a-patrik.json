@@ -225,7 +225,7 @@
         "text_block_AXx9Mk",
         "text_block_3wBXpC"
       ],
-      "name": "Gallery Slider",
+      "name": "Gallery Slider - Categorias",
       "settings": {
         "title": "Descubra por Categoria",
         "bg": "palette--light bg--neutral",
@@ -300,7 +300,7 @@
         "text_7q4XrJ",
         "button_UtiXed"
       ],
-      "name": "Image banner",
+      "name": "Image banner - Gemologia",
       "settings": {
         "image": "shopify://shop_images/David_examinando_Diamante_PB.jpg",
         "mobile_image": "shopify://shop_images/David_examinando_diamante_PB_-_mobile.png",
@@ -317,6 +317,74 @@
         "width": "wrapper--none",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "section_mosaic_8fwJGG": {
+      "type": "section-mosaic",
+      "blocks": {
+        "image_JydUdV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/diamante_e0033300-2d76-49df-9182-fd976f9aa469.png",
+            "overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "title_text": "Diamante",
+            "title_size": 8,
+            "text_align": "text-left tile--bottom",
+            "kicker_text": "",
+            "kicker_size": 3,
+            "link_text": "",
+            "link_url": "",
+            "link_size": 3
+          }
+        },
+        "image_C77ADp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/turmalina.png",
+            "overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "title_text": "Turmalina",
+            "title_size": 8,
+            "text_align": "text-left tile--bottom",
+            "kicker_text": "",
+            "kicker_size": 3,
+            "link_text": "",
+            "link_url": "",
+            "link_size": 3
+          }
+        },
+        "image_HaDwPj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/esmeralda_200e70e1-ab67-4d41-8934-fd5830db0451.png",
+            "overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "title_text": "Esmeralda",
+            "title_size": 8,
+            "text_align": "text-left tile--bottom",
+            "kicker_text": "",
+            "kicker_size": 3,
+            "link_text": "",
+            "link_url": "",
+            "link_size": 3
+          }
+        }
+      },
+      "block_order": [
+        "image_JydUdV",
+        "image_C77ADp",
+        "image_HaDwPj"
+      ],
+      "name": "Mosaic",
+      "settings": {
+        "first_block_height": "short",
+        "wh_ratio": 0.8,
+        "split": "center",
+        "color_bg": "palette--light bg--neutral",
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "section_columns_Gj3NJc": {
@@ -542,6 +610,7 @@
     "section_collection_slider_T3cMTQ",
     "section_gallery_slider_cL9FJj",
     "section_hero_iGkArj",
+    "section_mosaic_8fwJGG",
     "section_columns_Gj3NJc",
     "section_richtext_7nQqqJ",
     "section_hero_pyEpff",
