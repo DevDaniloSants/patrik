@@ -24,12 +24,12 @@
     padding: 0 {{ block.settings.horizontal_padding }}px;
   }
 
-  .ai-text-video-wrapper-{{ ai_gen_id }} {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: {{ block.settings.gap }}px;
-    align-items: center;
-  }
+ .ai-text-video-wrapper-{{ ai_gen_id }} {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: {{ block.settings.gap }}px;
+  align-items: start; /* ← topo alinhado */
+}
 
   .ai-text-video-wrapper-{{ ai_gen_id }}.reverse {
     direction: rtl;

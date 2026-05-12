@@ -1,0 +1,619 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "kicker": "",
+        "kicker_size": 3,
+        "show_title": true,
+        "title_size": 8,
+        "show_content": true,
+        "content_size": 5,
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "palette--light bg--neutral",
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_hero_F6LiWT": {
+      "type": "section-hero",
+      "blocks": {
+        "kicker_C3kKAk": {
+          "type": "kicker",
+          "settings": {
+            "kicker": "Conheça a coleção",
+            "enable_line": false,
+            "text_size": 4
+          }
+        },
+        "heading_R4XdpU": {
+          "type": "heading",
+          "settings": {
+            "title": "Orgânica",
+            "text_size": 10
+          }
+        },
+        "text_eBkXrd": {
+          "type": "text",
+          "settings": {
+            "richtext": "<p>Inspirada nas formas da natureza</p>",
+            "text_size": 6
+          }
+        }
+      },
+      "block_order": [
+        "kicker_C3kKAk",
+        "heading_R4XdpU",
+        "text_eBkXrd"
+      ],
+      "name": "Image banner",
+      "settings": {
+        "image": "shopify://shop_images/banner_brn02063-072378-v1_-_copia.png",
+        "mobile_image": "shopify://shop_images/banner_brn02063-072378-v1_-_copia.png",
+        "banner_link": "",
+        "height": "use_screen_two_thirds",
+        "overlay_opacity": 0,
+        "overlay_color": "#000000",
+        "enable_overlay_text": false,
+        "preload_image": false,
+        "content_width": 2000,
+        "text_align": "align--bottom-left",
+        "text_color": "text--white",
+        "color_bg": "hero__content--transparent",
+        "width": "wrapper--none",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "section_richtext_FN8DKi": {
+      "type": "section-richtext",
+      "blocks": {
+        "heading_FgTLwV": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "text_size": 8
+          }
+        },
+        "text_cy9xKn": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        }
+      },
+      "block_order": [
+        "heading_FgTLwV",
+        "text_cy9xKn"
+      ],
+      "name": "Espaçamento - Rich text",
+      "settings": {
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "palette--light bg--neutral",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_collection_slider_T3cMTQ": {
+      "type": "section-collection-slider",
+      "name": "Product slider",
+      "settings": {
+        "collection": "organica",
+        "product_limit": 12,
+        "title": "Destaques da Coleção Orgânica",
+        "align_text": "title-center",
+        "progress_bar": "mobile",
+        "grid_large": 5,
+        "grid_medium": 3,
+        "grid_mobile": 2.6,
+        "bg": "palette--light bg--neutral",
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_gallery_slider_cL9FJj": {
+      "type": "section-gallery-slider",
+      "blocks": {
+        "text_block_z9hzwQ": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Categorias-Anel_PATRIK-v7.png",
+            "shape_class": "",
+            "title": "Anéis",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        },
+        "text_block_nBVJVy": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Categorias-_Brinco_PATRIK-v7.png",
+            "shape_class": "",
+            "title": "Brincos",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        },
+        "text_block_cY8xbf": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Categorias-_PATRIK-Colares-v7.png",
+            "shape_class": "",
+            "title": "Colares",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        },
+        "text_block_AXx9Mk": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Categorias-_PATRIK-5.png",
+            "shape_class": "",
+            "title": "Pulseiras",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        },
+        "text_block_3wBXpC": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Categorias-_PATRIK-_Todas_V7.png",
+            "shape_class": "",
+            "title": "Todas as Jóias",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_z9hzwQ",
+        "text_block_nBVJVy",
+        "text_block_cY8xbf",
+        "text_block_AXx9Mk",
+        "text_block_3wBXpC"
+      ],
+      "name": "Gallery Slider - Categorias",
+      "settings": {
+        "title": "Descubra por Categoria",
+        "bg": "palette--light bg--neutral",
+        "align_text": "text-center",
+        "scale_image": true,
+        "wh_ratio": 1,
+        "slides_desktop": 5,
+        "slides_tablet": 4,
+        "slides_mobile": 1.8,
+        "show_arrows": true,
+        "show_pagination": false,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_hero_iGkArj": {
+      "type": "section-hero",
+      "blocks": {
+        "kicker_n39J6g": {
+          "type": "kicker",
+          "settings": {
+            "kicker": "Há mais de 20 anos desenvolvendo jóias com",
+            "enable_line": false,
+            "text_size": 4
+          }
+        },
+        "heading_Gy3JUR": {
+          "type": "heading",
+          "settings": {
+            "title": "Pedras Preciosas",
+            "text_size": 10
+          }
+        },
+        "text_7q4XrJ": {
+          "type": "text",
+          "settings": {
+            "richtext": "",
+            "text_size": 6
+          }
+        },
+        "button_UtiXed": {
+          "type": "button",
+          "settings": {
+            "link_text_1": "Saiba mais",
+            "link_1": "shopify://pages/a-patrik",
+            "open_specialist_modal_1": false,
+            "specialist_message_1": "",
+            "button_size_1": "btn--long",
+            "button_style_1": "btn",
+            "button_color_1": "btn--white",
+            "link_text_2": "",
+            "link_2": "",
+            "open_specialist_modal_2": false,
+            "specialist_message_2": "",
+            "button_size_2": "btn--long",
+            "button_style_2": "btn-text-thick-line",
+            "button_color_2": "btn--white",
+            "link_text_3": "",
+            "link_3": "",
+            "open_specialist_modal_3": false,
+            "specialist_message_3": "",
+            "button_size_3": "btn--long",
+            "button_style_3": "btn-text-thick-line",
+            "button_color_3": "btn--white"
+          }
+        }
+      },
+      "block_order": [
+        "kicker_n39J6g",
+        "heading_Gy3JUR",
+        "text_7q4XrJ",
+        "button_UtiXed"
+      ],
+      "name": "Image banner - Gemologia",
+      "settings": {
+        "image": "shopify://shop_images/David_examinando_Diamante_colorida.jpg",
+        "mobile_image": "shopify://shop_images/David_examinando_diamante_PB_-_mobile.png",
+        "banner_link": "",
+        "height": "use_screen_two_thirds",
+        "overlay_opacity": 30,
+        "overlay_color": "#ba8f73",
+        "enable_overlay_text": false,
+        "preload_image": false,
+        "content_width": 2000,
+        "text_align": "align--middle-center",
+        "text_color": "text--white",
+        "color_bg": "hero__content--transparent",
+        "width": "wrapper--none",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "section_mosaic_8fwJGG": {
+      "type": "section-mosaic",
+      "blocks": {
+        "image_JydUdV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/diamante_e0033300-2d76-49df-9182-fd976f9aa469.png",
+            "overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "title_text": "Jóias com Diamante",
+            "title_size": 7,
+            "text_align": "text-center",
+            "kicker_text": "",
+            "kicker_size": 3,
+            "link_text": "",
+            "link_url": "",
+            "link_size": 3
+          }
+        },
+        "image_C77ADp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/turmalina.png",
+            "overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "title_text": "Jóias Turmalina",
+            "title_size": 7,
+            "text_align": "text-center",
+            "kicker_text": "",
+            "kicker_size": 3,
+            "link_text": "",
+            "link_url": "",
+            "link_size": 3
+          }
+        },
+        "image_HaDwPj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/esmeralda_200e70e1-ab67-4d41-8934-fd5830db0451.png",
+            "overlay_opacity": 0,
+            "overlay_color": "#000000",
+            "title_text": "Jóias com Esmeralda",
+            "title_size": 7,
+            "text_align": "text-center",
+            "kicker_text": "",
+            "kicker_size": 3,
+            "link_text": "",
+            "link_url": "",
+            "link_size": 3
+          }
+        }
+      },
+      "block_order": [
+        "image_JydUdV",
+        "image_C77ADp",
+        "image_HaDwPj"
+      ],
+      "name": "Mosaic",
+      "settings": {
+        "first_block_height": "short",
+        "wh_ratio": 0.8,
+        "split": "center",
+        "color_bg": "palette--light bg--neutral",
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_columns_Gj3NJc": {
+      "type": "section-columns",
+      "blocks": {
+        "text_block_kXw6YF": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Engagement_Ring3_-_CROP_13d9536a-62df-4b03-97e2-61548e357429.png",
+            "shape_class": "",
+            "title": "Solitário",
+            "text": "<p>O anel solitário surgiu no século XV, quando o arquiduque Maximiliano da Áustria ofereceu um diamante à sua noiva Maria de Borgonha. A pedra única simboliza um amor singular e eterno, refletindo a força do diamante, considerado o mineral mais resistente da natureza. É a escolha clássica para quem quer celebrar um amor único e central na vida.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_specialist_modal": false,
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        },
+        "text_block_EYDPkN": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Meia_Alianca.png",
+            "shape_class": "",
+            "title": "Meia Aliança",
+            "text": "<p>A meia aliança traz uma sequência de diamantes alinhados, representando o caminho que o casal começa a construir juntos. Na tradição joalheira, os diamantes simbolizam permanência e luz, refletindo a ideia de um amor que cresce e se fortalece com o tempo. É perfeita para quem vê o noivado como o início de uma jornada compartilhada.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_specialist_modal": false,
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        },
+        "text_block_dy7CKW": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Alianca.png",
+            "shape_class": "",
+            "title": "Aliança",
+            "text": "<p>A aliança tem origem nas tradições do Egito Antigo, onde o círculo simbolizava eternidade e união sem começo nem fim. Ao longo dos séculos, passou a representar compromisso e fidelidade entre duas pessoas. Simples e simbólica, é uma escolha que celebra a união e a promessa de uma vida em comum.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_specialist_modal": false,
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_kXw6YF",
+        "text_block_EYDPkN",
+        "text_block_dy7CKW"
+      ],
+      "name": "Text columns with images",
+      "settings": {
+        "title": "Conheça os Três Anéis Clássicos da Patrik",
+        "bg": "palette--light bg--neutral",
+        "align_text": "text-center",
+        "scale_image": true,
+        "wh_ratio": 1,
+        "grid_large": 3,
+        "grid_medium": 3,
+        "grid_mobile": 1.2,
+        "progress_bar_mobile": false,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_richtext_7nQqqJ": {
+      "type": "section-richtext",
+      "blocks": {
+        "heading_RBD7Rt": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "text_size": 8
+          }
+        },
+        "text_GgdVJm": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        }
+      },
+      "block_order": [
+        "heading_RBD7Rt",
+        "text_GgdVJm"
+      ],
+      "name": "Espaçamento - Rich text",
+      "settings": {
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "palette--light bg--neutral",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_hero_pyEpff": {
+      "type": "section-hero",
+      "blocks": {
+        "heading_qJtYCy": {
+          "type": "heading",
+          "settings": {
+            "title": "Crie um Anel de Noivado",
+            "text_size": 10
+          }
+        },
+        "text_FC8Xfg": {
+          "type": "text",
+          "settings": {
+            "richtext": "<p>personalizado com nossos especialistas</p>",
+            "text_size": 6
+          }
+        },
+        "button_ahAWQB": {
+          "type": "button",
+          "settings": {
+            "link_text_1": "Saiba Mais",
+            "link_1": "",
+            "open_specialist_modal_1": true,
+            "specialist_message_1": "Olá! Gostaria de criar uma aliança de noivado!",
+            "button_size_1": "btn--long",
+            "button_style_1": "btn",
+            "button_color_1": "btn--white",
+            "link_text_2": "",
+            "link_2": "",
+            "open_specialist_modal_2": false,
+            "specialist_message_2": "",
+            "button_size_2": "btn--long",
+            "button_style_2": "btn-text-thick-line",
+            "button_color_2": "btn--white",
+            "link_text_3": "",
+            "link_3": "",
+            "open_specialist_modal_3": false,
+            "specialist_message_3": "",
+            "button_size_3": "btn--long",
+            "button_style_3": "btn-text-thick-line",
+            "button_color_3": "btn--white"
+          }
+        }
+      },
+      "block_order": [
+        "heading_qJtYCy",
+        "text_FC8Xfg",
+        "button_ahAWQB"
+      ],
+      "name": "Image banner",
+      "settings": {
+        "image": "shopify://shop_images/Projeto_customizado.png",
+        "mobile_image": "shopify://shop_images/Projeto_customizado_-_Mobile.png",
+        "banner_link": "",
+        "height": "use_screen_two_thirds",
+        "overlay_opacity": 30,
+        "overlay_color": "#000000",
+        "enable_overlay_text": false,
+        "preload_image": false,
+        "content_width": 2000,
+        "text_align": "align--middle-center",
+        "text_color": "text--white",
+        "color_bg": "hero__content--transparent",
+        "width": "wrapper--none",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "section_richtext_UrJddg": {
+      "type": "section-richtext",
+      "blocks": {
+        "heading_YbJGtz": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "text_size": 8
+          }
+        },
+        "text_ndBELz": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        }
+      },
+      "block_order": [
+        "heading_YbJGtz",
+        "text_ndBELz"
+      ],
+      "name": "Espaçamento - Rich text",
+      "settings": {
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "palette--light bg--neutral",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_hero_F6LiWT",
+    "section_richtext_FN8DKi",
+    "section_collection_slider_T3cMTQ",
+    "section_gallery_slider_cL9FJj",
+    "section_hero_iGkArj",
+    "section_mosaic_8fwJGG",
+    "section_columns_Gj3NJc",
+    "section_richtext_7nQqqJ",
+    "section_hero_pyEpff",
+    "section_richtext_UrJddg"
+  ]
+}
