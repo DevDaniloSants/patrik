@@ -47,6 +47,43 @@
             {%- continue -%}
           {%- endif -%}
 
+          {%- if filter.type == 'price_range' -%}
+            {%- assign current_sort = collection.sort_by | default: collection.default_sort_by -%}
+            <div class="border-b border-gray-200 py-6 desktop-filter-accordion">
+              <button type="button" 
+                class="flex justify-between items-center w-full text-left uppercase font-black tracking-widest text-base hover:text-gray-600 transition-colors"
+                data-desktop-accordion-toggle="desktop-filter-sort">
+                <span class="desktop-filter-label" style="font-size: 14px; font-weight: 800;">Classificar por</span>
+                <span class="icon-plus font-bold" style="font-weight: 900; stroke-width: 3;">{% render 'icon-core-plus' %}</span>
+                <span class="icon-minus hidden font-bold" style="font-weight: 900; stroke-width: 3;">{% render 'icon-core-minus' %}</span>
+              </button>
+              <div id="desktop-filter-sort" class="desktop-filter-content overflow-hidden" style="">
+                <div class="pt-6 pb-2">
+                  <ul class="flex flex-col gap-y-2">
+                    {% assign sort_options = "manual:Recomendado,best-selling:Mais vendido,price-descending:Maior para menor preço,price-ascending:Menor para maior preço" | split: "," %}
+                    {% for option in sort_options %}
+                      {% assign opt_val = option | split: ":" | first %}
+                      {% assign opt_name = option | split: ":" | last %}
+                      <li>
+                        <button type="button" onclick="updateSort('{{ opt_val }}')" class="flex justify-between items-center w-full text-left text-sm hover:text-black py-1 {% if current_sort == opt_val %}font-bold text-black{% else %}text-gray-600{% endif %}">
+                          <span>{{ opt_name }}</span>
+                          {% if current_sort == opt_val %}
+                            <span class="w-6 h-6 rounded-full border-2 border-black flex items-center justify-center shrink-0">
+                              <span class="block w-4 h-4 rounded-full bg-black"></span>
+                            </span>
+                          {% else %}
+                            <span class="w-6 h-6 rounded-full border border-gray-400 flex items-center justify-center shrink-0"></span>
+                          {% endif %}
+                        </button>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+            {%- continue -%}
+          {%- endif -%}
+
           {% render 'filters-desktop',
             filter: filter,
             forloop: forloop
@@ -135,83 +172,36 @@
           {%- unless label_downcase == 'product type' or label_downcase == 'tipo de produto' -%}
 
             {%- if filter.type == 'price_range' -%}
-              {%- liquid
-                assign currencies_using_comma_decimals = 'ANG,ARS,BRL,BYN,BYR,CLF,CLP,COP,CRC,CZK,DKK,EUR,HRK,HUF,IDR,ISK,MZN,NOK,PLN,RON,RUB,SEK,TRY,UYU,VES,VND' | split: ','
-                assign uses_comma_decimals = false
-                if currencies_using_comma_decimals contains cart.currency.iso_code
-                  assign uses_comma_decimals = true
-                endif
-              -%}
-
+              {%- assign current_sort = collection.sort_by | default: collection.default_sort_by -%}
               <li class="border-b border-gray-100">
                 <button type="button" 
                   class="w-full flex justify-between items-center py-6 px-5 text-left text-3xl font-black text-gray-900 bg-white hover:bg-gray-50 uppercase tracking-widest"
-                  data-accordion-toggle="mobile-filter-{{ filter.label | handle }}">
-                  <span class="underline underline-offset-4" style="font-weight: 900; font-size: 18px;">Preço</span>
+                  data-accordion-toggle="mobile-filter-sort">
+                  <span class="underline underline-offset-4" style="font-weight: 900; font-size: 18px;">Classificar por</span>
                   <span class="icon-plus font-bold" style="font-weight: 900; stroke-width: 3;">{% render 'icon-core-plus' %}</span>
                   <span class="icon-minus hidden font-bold" style="font-weight: 900; stroke-width: 3;">{% render 'icon-core-minus' %}</span>
                 </button>
 
-                <div id="mobile-filter-{{ filter.label | handle }}" class="hidden bg-white border-t border-gray-100">
-                  <div class="py-5 px-5">
-                    <form method="get" action="{{ collection.url }}" class="flex flex-col gap-y-4">
-                      <input type="hidden" name="sort_by" value="{{ collection.sort_by }}">
-                      {% if collection.current_type %}
-                        <input type="hidden" name="q" value="{{ collection.current_type }}">
-                      {% endif %}
-                      {% if collection.current_vendor %}
-                        <input type="hidden" name="q" value="{{ collection.current_vendor }}">
-                      {% endif %}
-
-                      {%- comment -%} Preserve active non-price filters when applying price range {%- endcomment -%}
-                      {%- for f in collection.filters -%}
-                        {%- if f.type == 'price_range' -%}{%- continue -%}{%- endif -%}
-                        {%- for av in f.active_values -%}
-                          <input type="hidden" name="{{ av.param_name }}" value="{{ av.value }}">
-                        {%- endfor -%}
-                      {%- endfor -%}
-
-                      <div class="flex items-center justify-between gap-x-4">
-                        <div class="flex items-center gap-2">
-                          <span class="text-base font-bold text-gray-700">{{ cart.currency.symbol }}</span>
-                          <input
-                            class="w-28 border-b border-gray-300 p-2 text-right text-base font-bold text-gray-700 focus:border-black focus:outline-none"
-                            name="{{ filter.min_value.param_name }}"
-                            {%- if filter.min_value.value -%}
-                              {%- if uses_comma_decimals -%}value="{{ filter.min_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' }}"{%- else -%}value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"{%- endif -%}
-                            {%- endif -%}
-                            type="number"
-                            inputmode="decimal"
-                            placeholder="0"
-                            min="0"
-                            step="any">
-                          <span class="text-xs font-bold uppercase tracking-widest text-gray-500">Min</span>
-                        </div>
-
-                        <span class="text-base font-bold text-gray-500">-</span>
-
-                        <div class="flex items-center gap-2">
-                          <span class="text-base font-bold text-gray-700">{{ cart.currency.symbol }}</span>
-                          <input
-                            class="w-28 border-b border-gray-300 p-2 text-right text-base font-bold text-gray-700 focus:border-black focus:outline-none"
-                            name="{{ filter.max_value.param_name }}"
-                            {%- if filter.max_value.value -%}
-                              {%- if uses_comma_decimals -%}value="{{ filter.max_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' }}"{%- else -%}value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"{%- endif -%}
-                            {%- endif -%}
-                            type="number"
-                            inputmode="decimal"
-                            placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
-                            min="0"
-                            step="any">
-                          <span class="text-xs font-bold uppercase tracking-widest text-gray-500">Max</span>
-                        </div>
-                      </div>
-
-                      <div class="pt-2">
-                        <button type="submit" class="text-xs font-bold uppercase tracking-widest border-b border-black hover:text-gray-600 hover:border-gray-600 pb-1">Aplicar</button>
-                      </div>
-                    </form>
-                  </div>
+                <div id="mobile-filter-sort" class="hidden bg-white border-t border-gray-100">
+                  <ul class="flex flex-col pl-4">
+                    {% assign sort_options = "manual:Recomendado,best-selling:Mais vendido,price-descending:Maior para menor preço,price-ascending:Menor para maior preço" | split: "," %}
+                    {% for option in sort_options %}
+                      {% assign opt_val = option | split: ":" | first %}
+                      {% assign opt_name = option | split: ":" | last %}
+                      <li class="border-b border-gray-200 last:border-0">
+                        <button type="button" onclick="updateSort('{{ opt_val }}')" class="w-full text-left py-4 pr-4 ml-4 text-base hover:text-black hover:bg-gray-50 flex justify-between items-center decoration-0 {% if current_sort == opt_val %}font-bold text-black{% else %}font-normal text-gray-600{% endif %}">
+                          <span style="font-size: 16px;">{{ opt_name }}</span>
+                          {%- if current_sort == opt_val -%}
+                            <span class="w-6 h-6 rounded-full border-2 border-black flex items-center justify-center shrink-0">
+                              <span class="block w-4 h-4 rounded-full bg-black"></span>
+                            </span>
+                          {%- else -%}
+                            <span class="w-6 h-6 rounded-full border border-gray-400 flex items-center justify-center shrink-0"></span>
+                          {%- endif -%}
+                        </button>
+                      </li>
+                    {% endfor %}
+                  </ul>
                 </div>
               </li>
             {%- else -%}
@@ -253,6 +243,12 @@
       </ul>
 
       <script>
+        window.updateSort = function(value) {
+          var searchParams = new URLSearchParams(window.location.search);
+          searchParams.set('sort_by', value);
+          window.location.search = searchParams.toString();
+        };
+
         document.addEventListener('DOMContentLoaded', function() {
           // Mobile Accordion
           var triggers = document.querySelectorAll('[data-accordion-toggle]');
