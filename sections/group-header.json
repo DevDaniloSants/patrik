@@ -58,7 +58,7 @@
         "header-block-toolbar": {
           "type": "toolbar",
           "settings": {
-            "announcement_text": "<p>Frete Expresso grátis em todos os pedidos</p>",
+            "announcement_text": "<p>Frete grátis em todos os pedidos | 10% OFF com o código PATRIK10 na primeira compra</p>",
             "secondary_linklist": "",
             "show_menu_desktop": true,
             "show_menu_mobile": true,
