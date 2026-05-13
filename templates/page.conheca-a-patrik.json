@@ -63,7 +63,7 @@
         "image": "shopify://shop_images/banner_brn02063-072378-v1_-_copia.png",
         "mobile_image": "shopify://shop_images/banner_brn02063-072378-v1_-_copia.png",
         "banner_link": "",
-        "height": "use_screen_two_thirds",
+        "height": "use_screen_three_quarters",
         "overlay_opacity": 0,
         "overlay_color": "#000000",
         "enable_overlay_text": false,
@@ -248,7 +248,7 @@
         "kicker_n39J6g": {
           "type": "kicker",
           "settings": {
-            "kicker": "Há mais de 20 anos desenvolvendo jóias com",
+            "kicker": "Há mais de 27 anos desenvolvendo jóias com",
             "enable_line": false,
             "text_size": 4
           }
