@@ -9,69 +9,6 @@
  */
 {
   "sections": {
-    "section_video_ykPNyn": {
-      "type": "section-video",
-      "blocks": {
-        "heading_DT7bw9": {
-          "type": "heading",
-          "settings": {
-            "title": "",
-            "text_size": 10
-          }
-        },
-        "text_HqTpwA": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_size": 6
-          }
-        },
-        "button_bhUYPT": {
-          "type": "button",
-          "settings": {
-            "link_text_1": "",
-            "link_1": "",
-            "button_size_1": "btn--long",
-            "button_style_1": "btn",
-            "button_color_1": "btn--white",
-            "link_text_2": "",
-            "link_2": "",
-            "button_size_2": "btn--long",
-            "button_style_2": "btn-text-thick-line",
-            "button_color_2": "btn--white",
-            "link_text_3": "",
-            "link_3": "",
-            "button_size_3": "btn--long",
-            "button_style_3": "btn-text-thick-line",
-            "button_color_3": "btn--white"
-          }
-        }
-      },
-      "block_order": [
-        "heading_DT7bw9",
-        "text_HqTpwA",
-        "button_bhUYPT"
-      ],
-      "custom_css": [],
-      "name": "Video banner",
-      "settings": {
-        "height": "use_screen_full",
-        "color_bg": "palette--light bg--neutral",
-        "video_bg": "shopify://files/videos/patrik_1.mov",
-        "object_position": "center-center",
-        "image": "shopify://shop_images/Imagem_banner_home_8d053981-b069-46f1-ace8-f649b6a46226.png",
-        "banner_link": "",
-        "preload_image": false,
-        "text_align": "align--bottom-left",
-        "text_color": "text--black",
-        "overlay_opacity": 0,
-        "overlay_color": "#000000",
-        "enable_overlay_text": false,
-        "width": "wrapper--none",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "hero": {
       "type": "section-hero",
       "blocks": {
@@ -261,7 +198,7 @@
             "enable_image": true,
             "image": "shopify://shop_images/Categorias-_PATRIK-_Todas_V7.png",
             "shape_class": "",
-            "title": "Todas as Jóias",
+            "title": "Todas as Joias",
             "text": "",
             "button_label": "",
             "button_link": "/collections/all",
@@ -324,6 +261,69 @@
         "width": "wrapper",
         "padding_top": 10,
         "padding_bottom": 32
+      }
+    },
+    "section_video_ykPNyn": {
+      "type": "section-video",
+      "blocks": {
+        "heading_DT7bw9": {
+          "type": "heading",
+          "settings": {
+            "title": "",
+            "text_size": 10
+          }
+        },
+        "text_HqTpwA": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 6
+          }
+        },
+        "button_bhUYPT": {
+          "type": "button",
+          "settings": {
+            "link_text_1": "",
+            "link_1": "",
+            "button_size_1": "btn--long",
+            "button_style_1": "btn",
+            "button_color_1": "btn--white",
+            "link_text_2": "",
+            "link_2": "",
+            "button_size_2": "btn--long",
+            "button_style_2": "btn-text-thick-line",
+            "button_color_2": "btn--white",
+            "link_text_3": "",
+            "link_3": "",
+            "button_size_3": "btn--long",
+            "button_style_3": "btn-text-thick-line",
+            "button_color_3": "btn--white"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DT7bw9",
+        "text_HqTpwA",
+        "button_bhUYPT"
+      ],
+      "custom_css": [],
+      "name": "Video banner",
+      "settings": {
+        "height": "use_screen_full",
+        "color_bg": "palette--light bg--neutral",
+        "video_bg": "shopify://files/videos/patrik_1.mov",
+        "object_position": "center-center",
+        "image": "shopify://shop_images/Imagem_banner_home_8d053981-b069-46f1-ace8-f649b6a46226.png",
+        "banner_link": "",
+        "preload_image": false,
+        "text_align": "align--bottom-left",
+        "text_color": "text--black",
+        "overlay_opacity": 0,
+        "overlay_color": "#000000",
+        "enable_overlay_text": false,
+        "width": "wrapper--none",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "section_hero_mEN6xM": {
@@ -807,7 +807,7 @@
             "top_text_disabled": true,
             "title": "",
             "title_disabled": true,
-            "bottom_text": "Jóias para Noivado",
+            "bottom_text": "Joias para Noivado",
             "bottom_text_disabled": false,
             "collection_url": "/pages/noivado",
             "text_color": "text--white"
@@ -825,7 +825,7 @@
             "top_text_disabled": true,
             "title": "Collection Name",
             "title_disabled": true,
-            "bottom_text": "Jóias para Casamento",
+            "bottom_text": "Joias para Casamento",
             "bottom_text_disabled": false,
             "collection_url": "shopify://pages/casamento",
             "text_color": "text--white"
@@ -872,7 +872,7 @@
             "enable_image": true,
             "image": "shopify://shop_images/Use_the_EXACT_same_background__Nano_Banana_Pro_14061.png",
             "shape_class": "rounded-lg",
-            "title": "Jóias para Nascimento",
+            "title": "Joias para Nascimento",
             "text": "<p>Personalize pulseiras e colares com o nome de seus filhos e netos. Realize gravações em medalhas e pingentes.</p>",
             "button_label": "",
             "button_link": "",
@@ -1043,7 +1043,7 @@
             "enable_image": true,
             "image": "shopify://shop_images/Gemini_Generated_Image_wpxl5wwpxl5wwpxl.png",
             "shape_class": "",
-            "title": "Certificação da Jóia",
+            "title": "Certificação da Joia",
             "text": "<p>A PATRIK oferece, junto a sua jóia, um certificado de autenticidade do ouro 18k e das pedras, para que você tenha segurança da sua escolha. </p>",
             "button_label": "",
             "button_link": "",
