@@ -71,6 +71,7 @@
     },
     "subfooter": {
       "type": "subfooter",
+      "disabled": true,
       "settings": {
         "footer_secondary_linklist": "footer",
         "footer_payment_enable": false,
