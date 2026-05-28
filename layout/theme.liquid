@@ -323,8 +323,6 @@
       /* Esconde o botão flutuante mas permite o modal aparecer */
       inbox-online-store-chat#ShopifyChat:not([is-open="true"]) {
         position: fixed !important;
-        {% comment %} bottom: 0 !important; {% endcomment %}
-        {% comment %} right: 0 !important; {% endcomment %}
         width: 0 !important;
         height: 0 !important;
         overflow: hidden !important;
@@ -372,46 +370,67 @@
             {%- endcomment -%}
 
     <!-- Paste popup code or third party scripts below this comment line ============== -->
+
+    {%- render 'specialist-modal', modal_id: 'specialist-modal-global' -%}
+    
+    <button id="custom-global-chat-btn" type="button" aria-label="Abrir Chat" onclick="openGlobalSpecialistModal()" style="position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; background-color: #111; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 14px rgba(0,0,0,0.15); border: none; cursor: pointer; z-index: 99999; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"/>
+      </svg>
+    </button>
+
     <script>
-          document.addEventListener('DOMContentLoaded', function() {
-      // Oculta APENAS o botão flutuante nativo em todas as páginas do site
-      function killFloatingButton(chatNode) {
-        if (chatNode && chatNode.shadowRoot && !chatNode.dataset.styleInjected) {
-          var style = document.createElement('style');
-          style.textContent = `
-            iframe[id*="dummy"],
-            iframe[id*="button"],
-            .chat-button {
-              display: none !important;
-              opacity: 0 !important;
-              pointer-events: none !important;
-            }
-          `;
-          chatNode.shadowRoot.appendChild(style);
-          chatNode.dataset.styleInjected = 'true';
+      function openGlobalSpecialistModal() {
+        var modal = document.querySelector('[id^="specialist-modal-"]');
+        if (modal) {
+          var card = modal.querySelector('.specialist-modal__card');
+          var backdrop = modal.querySelector('[style*="backdrop-filter"]');
+          if (card) card.style.display = '';
+          if (backdrop) backdrop.style.display = '';
+          modal.classList.add('specialist-modal--open');
+          modal.style.display = 'flex';
         }
       }
-          
-      var observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
-          mutation.addedNodes.forEach(function(node) {
-            if (node.tagName === 'SHOPIFY-CHAT' || node.id === 'shopify-chat') {
-              killFloatingButton(node);
-              setTimeout(function() { killFloatingButton(node); }, 500);
-              setTimeout(function() { killFloatingButton(node); }, 2000);
-            }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        // Oculta APENAS o botão flutuante nativo em todas as páginas do site
+        function killFloatingButton(chatNode) {
+          if (chatNode && chatNode.shadowRoot && !chatNode.dataset.styleInjected) {
+            var style = document.createElement('style');
+            style.textContent = `
+              iframe[id*="dummy"],
+              iframe[id*="button"],
+              .chat-button {
+                display: none !important;
+                opacity: 0 !important;
+                pointer-events: none !important;
+              }
+            `;
+            chatNode.shadowRoot.appendChild(style);
+            chatNode.dataset.styleInjected = 'true';
+          }
+        }
+            
+        var observer = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            mutation.addedNodes.forEach(function(node) {
+              if (node.tagName === 'SHOPIFY-CHAT' || node.id === 'shopify-chat') {
+                killFloatingButton(node);
+                setTimeout(function() { killFloatingButton(node); }, 500);
+                setTimeout(function() { killFloatingButton(node); }, 2000);
+              }
+            });
           });
         });
+            
+        observer.observe(document.body, { childList: true, subtree: true });
+            
+        var existingChat = document.querySelector('shopify-chat') || document.querySelector('#shopify-chat');
+        if (existingChat) {
+          killFloatingButton(existingChat);
+          setTimeout(function() { killFloatingButton(existingChat); }, 1000);
+        }
       });
-          
-      observer.observe(document.body, { childList: true, subtree: true });
-          
-      var existingChat = document.querySelector('shopify-chat') || document.querySelector('#shopify-chat');
-      if (existingChat) {
-        killFloatingButton(existingChat);
-        setTimeout(function() { killFloatingButton(existingChat); }, 1000);
-      }
-          });
     </script>
 
   <!-- And above this comment line ================================================== -->
