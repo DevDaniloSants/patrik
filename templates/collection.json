@@ -9,82 +9,6 @@
  */
 {
   "sections": {
-    "section_hero_Xifr6f": {
-      "type": "section-hero",
-      "blocks": {
-        "kicker_jUqDiK": {
-          "type": "kicker",
-          "settings": {
-            "kicker": "Introducing",
-            "enable_line": false,
-            "text_size": 4
-          }
-        },
-        "heading_d4HEgC": {
-          "type": "heading",
-          "settings": {
-            "title": "Image banner",
-            "text_size": 10
-          }
-        },
-        "text_KBA4aa": {
-          "type": "text",
-          "settings": {
-            "richtext": "<p>This area is used to describe your store.</p>",
-            "text_size": 6
-          }
-        },
-        "button_x6CQQN": {
-          "type": "button",
-          "settings": {
-            "link_text_1": "View products",
-            "link_1": "",
-            "open_specialist_modal_1": false,
-            "specialist_message_1": "",
-            "button_size_1": "btn--long",
-            "button_style_1": "btn",
-            "button_color_1": "btn--white",
-            "link_text_2": "Learn more",
-            "link_2": "",
-            "open_specialist_modal_2": false,
-            "specialist_message_2": "",
-            "button_size_2": "btn--long",
-            "button_style_2": "btn-text-thick-line",
-            "button_color_2": "btn--white",
-            "link_text_3": "",
-            "link_3": "",
-            "open_specialist_modal_3": false,
-            "specialist_message_3": "",
-            "button_size_3": "btn--long",
-            "button_style_3": "btn-text-thick-line",
-            "button_color_3": "btn--white"
-          }
-        }
-      },
-      "block_order": [
-        "kicker_jUqDiK",
-        "heading_d4HEgC",
-        "text_KBA4aa",
-        "button_x6CQQN"
-      ],
-      "name": "Image banner",
-      "settings": {
-        "image": "shopify://shop_images/joias_mais_leves_e_sem_a_sensa_Nano_Banana_Pro_40883.png",
-        "banner_link": "",
-        "height": "use_screen_two_thirds",
-        "overlay_opacity": 15,
-        "overlay_color": "#000",
-        "enable_overlay_text": false,
-        "preload_image": false,
-        "content_width": 2000,
-        "text_align": "align--middle-center",
-        "text_color": "text--white",
-        "color_bg": "hero__content--transparent",
-        "width": "wrapper--none",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "hero": {
       "type": "collection-hero",
       "settings": {
@@ -161,7 +85,6 @@
     }
   },
   "order": [
-    "section_hero_Xifr6f",
     "hero",
     "subcollections",
     "main"
