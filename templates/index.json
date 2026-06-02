@@ -30,7 +30,7 @@
         "407c1424-5f23-4fe9-8abc-21c4027807ef": {
           "type": "heading",
           "settings": {
-            "title": "O presente perfeito para o seu amor",
+            "title": "O presente que ela nunca vai esquecer",
             "text_size": 11
           }
         },
@@ -46,11 +46,11 @@
           "type": "button",
           "settings": {
             "link_text_1": "Conheça",
-            "link_1": "shopify://pages/colecao-organica",
+            "link_1": "shopify://collections/love",
             "open_specialist_modal_1": false,
             "specialist_message_1": "",
-            "button_size_1": "btn--medium",
-            "button_style_1": "btn uppercase",
+            "button_size_1": "btn--large",
+            "button_style_1": "btn",
             "button_color_1": "btn--white",
             "link_text_2": "",
             "link_2": "",
@@ -80,13 +80,13 @@
       "settings": {
         "image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0148_0a54ee3c-c9d2-4483-885c-4c50d42fb9c3.jpg",
         "mobile_image": "shopify://shop_images/banner_brn02052-clr01123-v3_1_a7b8cccf-262c-40c5-9b13-6a1c96c49426.png",
-        "banner_link": "shopify://pages/colecao-organica",
-        "height": "use_screen_full",
+        "banner_link": "shopify://collections/love",
+        "height": "use_screen_three_quarters",
         "overlay_opacity": 0,
         "overlay_color": "#3c190b",
         "enable_overlay_text": false,
         "preload_image": true,
-        "content_width": 2000,
+        "content_width": 800,
         "text_align": "align--bottom-left",
         "text_color": "text--white",
         "color_bg": "hero__content--transparent",
