@@ -121,27 +121,81 @@
         "padding_bottom": 0
       }
     },
+    "section_list_collections_ftJBTL": {
+      "type": "section-list-collections",
+      "blocks": {
+        "collection_ymAemN": {
+          "type": "collection",
+          "name": "Noivado",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Engagement_Ring3_-_CROP.png",
+            "mobile_image": "shopify://shop_images/Engagement_Ring3_-_CROP.png",
+            "overlay_color": "#616161",
+            "overlay_opacity": 0,
+            "top_text": "",
+            "top_text_disabled": true,
+            "title": "",
+            "title_disabled": true,
+            "bottom_text": "Joias para Noivado",
+            "bottom_text_disabled": false,
+            "collection_url": "/pages/noivado",
+            "text_color": "text--white"
+          }
+        },
+        "collection_GnhUgy": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/ChatGPT_Image_18_de_fev._de_2026_11_14_55.png",
+            "mobile_image": "shopify://shop_images/ChatGPT_Image_18_de_fev._de_2026_11_14_55.png",
+            "overlay_color": "#616161",
+            "overlay_opacity": 0,
+            "top_text": "Product Count",
+            "top_text_disabled": true,
+            "title": "Collection Name",
+            "title_disabled": true,
+            "bottom_text": "Joias para Casamento",
+            "bottom_text_disabled": false,
+            "collection_url": "shopify://pages/casamento",
+            "text_color": "text--white"
+          }
+        }
+      },
+      "block_order": [
+        "collection_ymAemN",
+        "collection_GnhUgy"
+      ],
+      "custom_css": [
+        ".custom-scrollbar.small-down--show {display: none !important;}",
+        ".custom-scrollbar.small-down--show::-webkit-scrollbar {display: none;}",
+        ".kicker-flourished {font-size: 20px !important;}",
+        ".collection-grid-item__btn {font-size: 18px;}"
+      ],
+      "name": "Noivado e Casamento",
+      "settings": {
+        "title": "A Assessoria da Patrik lhe acompanha nas escolhas mais importantes da sua vida",
+        "bg": "palette--light bg--accent",
+        "carousel_enabled_on": "hidden",
+        "collection_limit": 36,
+        "wh_ratio": 1,
+        "grid_large": 2,
+        "grid_medium": 2,
+        "grid_mobile": 1,
+        "desktop_gutter": 25,
+        "text_layout": "outside",
+        "enable_hover": false,
+        "font_family": "body",
+        "title_size": 4,
+        "accent_size": 3,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "section_columns_BncX3A": {
       "type": "section-columns",
       "blocks": {
-        "text_block_YxrWf8": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/DavidCohen_1.jpg",
-            "shape_class": "",
-            "title": "Gemólogo Certificado pelo GIA",
-            "text": "<p>A PATRIK nasceu do amor de um de seus fundadores pela pedras preciosas. Nas peças únicas, David, Gemólogo certificado no GIA, escolhe a pedra e depois desenha a peça para aquela gema específica.</p>",
-            "button_label": "",
-            "button_link": "",
-            "open_specialist_modal": false,
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
-        },
         "text_block_gCQYxk": {
           "type": "text_block",
           "settings": {
@@ -153,6 +207,24 @@
             "button_label": "",
             "button_link": "",
             "open_specialist_modal": true,
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        },
+        "text_block_YxrWf8": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/DavidCohen_1.jpg",
+            "shape_class": "",
+            "title": "Gemólogo Certificado pelo GIA",
+            "text": "<p>A PATRIK nasceu do amor de um de seus fundadores pela pedras preciosas. Nas peças únicas, David, Gemólogo certificado no GIA, escolhe a pedra e depois desenha a peça para aquela gema específica.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_specialist_modal": false,
             "button_color": "btn--neutral",
             "button_style": "btn--soft",
             "enable_video": false,
@@ -180,8 +252,8 @@
         }
       },
       "block_order": [
-        "text_block_YxrWf8",
         "text_block_gCQYxk",
+        "text_block_YxrWf8",
         "text_block_VedNxc"
       ],
       "name": "Experiência Patrik",
@@ -815,78 +887,6 @@
         "padding_bottom": 36
       }
     },
-    "section_list_collections_ftJBTL": {
-      "type": "section-list-collections",
-      "blocks": {
-        "collection_ymAemN": {
-          "type": "collection",
-          "name": "Noivado",
-          "settings": {
-            "collection": "",
-            "image": "shopify://shop_images/Engagement_Ring3_-_CROP.png",
-            "mobile_image": "shopify://shop_images/Engagement_Ring3_-_CROP.png",
-            "overlay_color": "#616161",
-            "overlay_opacity": 0,
-            "top_text": "",
-            "top_text_disabled": true,
-            "title": "",
-            "title_disabled": true,
-            "bottom_text": "Joias para Noivado",
-            "bottom_text_disabled": false,
-            "collection_url": "/pages/noivado",
-            "text_color": "text--white"
-          }
-        },
-        "collection_GnhUgy": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "image": "shopify://shop_images/ChatGPT_Image_18_de_fev._de_2026_11_14_55.png",
-            "mobile_image": "shopify://shop_images/ChatGPT_Image_18_de_fev._de_2026_11_14_55.png",
-            "overlay_color": "#616161",
-            "overlay_opacity": 0,
-            "top_text": "Product Count",
-            "top_text_disabled": true,
-            "title": "Collection Name",
-            "title_disabled": true,
-            "bottom_text": "Joias para Casamento",
-            "bottom_text_disabled": false,
-            "collection_url": "shopify://pages/casamento",
-            "text_color": "text--white"
-          }
-        }
-      },
-      "block_order": [
-        "collection_ymAemN",
-        "collection_GnhUgy"
-      ],
-      "custom_css": [
-        ".custom-scrollbar.small-down--show {display: none !important;}",
-        ".custom-scrollbar.small-down--show::-webkit-scrollbar {display: none;}",
-        ".kicker-flourished {font-size: 20px !important;}",
-        ".collection-grid-item__btn {font-size: 18px;}"
-      ],
-      "name": "Noivado e Casamento",
-      "settings": {
-        "title": "A Assessoria da Patrik lhe acompanha nas escolhas mais importantes da sua vida",
-        "bg": "palette--dark bg--invert--accent",
-        "carousel_enabled_on": "hidden",
-        "collection_limit": 36,
-        "wh_ratio": 1,
-        "grid_large": 2,
-        "grid_medium": 2,
-        "grid_mobile": 1,
-        "desktop_gutter": 25,
-        "text_layout": "outside",
-        "enable_hover": false,
-        "font_family": "body",
-        "title_size": 4,
-        "accent_size": 3,
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "section_columns_X6EhLY": {
       "type": "section-columns",
       "blocks": {
@@ -1373,6 +1373,7 @@
   "order": [
     "hero",
     "section_richtext_cnmM7B",
+    "section_list_collections_ftJBTL",
     "section_columns_BncX3A",
     "section_gallery_slider_LmhCKt",
     "section_gallery_slider_TNB3tT",
@@ -1382,7 +1383,6 @@
     "17779288275c16224c",
     "section_list_collections_LeYE9C",
     "section_image_neGRcR",
-    "section_list_collections_ftJBTL",
     "section_columns_X6EhLY",
     "section_richtext_Mijpwb",
     "section_richtext_UCkjER",
