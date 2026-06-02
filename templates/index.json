@@ -79,7 +79,7 @@
       "name": "Hero",
       "settings": {
         "image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0148_0a54ee3c-c9d2-4483-885c-4c50d42fb9c3.jpg",
-        "mobile_image": "shopify://shop_images/banner_brn02052-clr01123-v3_1_a7b8cccf-262c-40c5-9b13-6a1c96c49426.png",
+        "mobile_image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0148.jpg",
         "banner_link": "shopify://collections/love",
         "height": "use_screen_full",
         "overlay_opacity": 0,
@@ -307,7 +307,7 @@
         "text_block_kLaWpz": {
           "type": "text_block",
           "settings": {
-            "enable_image": true,
+            "enable_image": false,
             "shape_class": "",
             "title": "Category title",
             "text": "<p>Category description text goes here.</p>",
@@ -328,6 +328,7 @@
         "text_block_ki8XDT",
         "text_block_kLaWpz"
       ],
+      "disabled": true,
       "custom_css": [],
       "name": "Gallery Slider",
       "settings": {
@@ -337,13 +338,13 @@
         "scale_image": true,
         "wh_ratio": 2.1,
         "slides_desktop": 3,
-        "slides_tablet": 1,
+        "slides_tablet": 2,
         "slides_mobile": 1,
         "show_arrows": true,
         "show_pagination": true,
-        "width": "wrapper--narrow",
-        "padding_top": 20,
-        "padding_bottom": 20
+        "width": "wrapper--full",
+        "padding_top": 34,
+        "padding_bottom": 46
       }
     },
     "section_richtext_UkKtct": {
