@@ -9,82 +9,6 @@
  */
 {
   "sections": {
-    "section_columns_fzgkpQ": {
-      "type": "section-columns",
-      "blocks": {
-        "text_block_nPTb3y": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": false,
-            "shape_class": "",
-            "title": "Daniel K.",
-            "text": "<p>\"Comprei um par de de Brincos para celebrar um mometo especial com a minha esposa. O atendimento da Patrik foi muito cuidadoso  para me ajudar com a compra. Chegou muito rápido em São Paulo e com apresentação linda.\"</p>",
-            "button_label": "",
-            "button_link": "",
-            "open_specialist_modal": false,
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
-        },
-        "text_block_VCzbEL": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": false,
-            "shape_class": "",
-            "title": "Fernanda Costa",
-            "text": "<p>\"Meu noivado ficou ainda mais especial com a aliança de ouro branco da Patrik. A qualidade é impecável.\"</p>",
-            "button_label": "",
-            "button_link": "",
-            "open_specialist_modal": false,
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
-        },
-        "text_block_rjqfgY": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": false,
-            "shape_class": "",
-            "title": "Juliana Mendes",
-            "text": "<p>\"Cada detalhe é perfeito. As joias da Patrik Joias são investimentos em beleza e qualidade que duram para sempre.\"</p>",
-            "button_label": "",
-            "button_link": "",
-            "open_specialist_modal": false,
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
-        }
-      },
-      "block_order": [
-        "text_block_nPTb3y",
-        "text_block_VCzbEL",
-        "text_block_rjqfgY"
-      ],
-      "name": "Text columns with images",
-      "settings": {
-        "title": "O que nossos clientes dizem",
-        "bg": "palette--dark bg--invert--accent",
-        "align_text": "text-left",
-        "scale_image": false,
-        "wh_ratio": 0.5,
-        "grid_large": 3,
-        "grid_medium": 3,
-        "grid_mobile": 1.2,
-        "progress_bar_mobile": false,
-        "width": "wrapper",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
     "hero": {
       "type": "section-hero",
       "blocks": {
@@ -190,11 +114,11 @@
       "settings": {
         "align_text": "text-left",
         "text_color": "text--neutral",
-        "bg": "palette--dark bg--invert--accent",
+        "bg": "palette--light bg--accent",
         "content_width": 2000,
         "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "section_gallery_slider_LmhCKt": {
@@ -293,6 +217,7 @@
         "text_block_pPdqQA",
         "text_block_fCTMcc"
       ],
+      "disabled": true,
       "custom_css": [
         ".kicker-flourished {font-size: 20px !important;}"
       ],
@@ -301,8 +226,8 @@
         "title": "Descubra a Patrik",
         "bg": "palette--dark bg--invert--accent",
         "align_text": "text-center",
-        "scale_image": true,
-        "wh_ratio": 1.2,
+        "scale_image": false,
+        "wh_ratio": 1.4,
         "slides_desktop": 5,
         "slides_tablet": 4,
         "slides_mobile": 1.8,
@@ -311,6 +236,115 @@
         "width": "wrapper",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "section_gallery_slider_TNB3tT": {
+      "type": "section-gallery-slider",
+      "blocks": {
+        "text_block_MdU3pY": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "shape_class": "",
+            "title": "Daniel K.",
+            "text": "<p>Comprei um par de brincos para celebrar um momento especial com a minha esposa. O atendimento da Patrik foi muito cuidadoso para me ajudar com a compra. Chegou muito rápido em São Paulo e com apresentação linda.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        },
+        "text_block_qVeJ4R": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "shape_class": "",
+            "title": "Marina Silva",
+            "text": "<p>\"A Patrik Joias transformou meu momento especial. A qualidade e elegância de cada peça é incomparável. Recomendo de coração.\"</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        },
+        "text_block_cd9zKK": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "shape_class": "",
+            "title": "Juliana Costa",
+            "text": "<p>\"Encontrei a aliança perfeita para meu casamento. O atendimento foi impecável e a peça superou todas as minhas expectativas.\"</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        },
+        "text_block_ki8XDT": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "shape_class": "",
+            "title": "Fernanda Oliveira",
+            "text": "<p>\"Cada detalhe reflete a paixão pela joalharia. Patrik Joias é sinônimo de sofisticação e excelência. Voltarei com certeza.\"</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        },
+        "text_block_kLaWpz": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "shape_class": "",
+            "title": "Category title",
+            "text": "<p>Category description text goes here.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_MdU3pY",
+        "text_block_qVeJ4R",
+        "text_block_cd9zKK",
+        "text_block_ki8XDT",
+        "text_block_kLaWpz"
+      ],
+      "custom_css": [],
+      "name": "Gallery Slider",
+      "settings": {
+        "title": "O que nossos clientes dizem",
+        "bg": "palette--light bg--accent",
+        "align_text": "text-left",
+        "scale_image": false,
+        "wh_ratio": 4.4,
+        "slides_desktop": 3,
+        "slides_tablet": 1,
+        "slides_mobile": 1,
+        "show_arrows": true,
+        "show_pagination": true,
+        "width": "wrapper--full",
+        "padding_top": 50,
+        "padding_bottom": 76
       }
     },
     "section_richtext_UkKtct": {
@@ -1504,8 +1538,8 @@
   "order": [
     "hero",
     "section_richtext_cnmM7B",
-    "section_columns_fzgkpQ",
     "section_gallery_slider_LmhCKt",
+    "section_gallery_slider_TNB3tT",
     "section_richtext_UkKtct",
     "section_video_ykPNyn",
     "section_hero_mEN6xM",
