@@ -71,16 +71,6 @@
   .vbc-btn:hover { opacity: 0.85; }
 </style>
 
-{% if section.settings.hero_mode %}
-<style>
-  #shopify-section-{{ section.id }} {
-    margin-top: calc(-1 * var(--header-height, 80px));
-    position: relative;
-    z-index: 1;
-  }
-</style>
-{% endif %}
-
 <div class="vbc-hero-wrapper">
   {% if section.settings.video_shopify.sources != blank %}
     <video class="vbc-video" autoplay loop muted playsinline disablepictureinpicture>
@@ -111,12 +101,6 @@
 {
   "name": "Video Hero Custom",
   "settings": [
-    {
-      "type": "checkbox",
-      "id": "hero_mode",
-      "label": "Modo Hero (cobre o cabeçalho)",
-      "default": true
-    },
     {
       "type": "select",
       "id": "section_height",

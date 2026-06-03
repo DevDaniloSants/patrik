@@ -1540,9 +1540,9 @@
     }
   },
   "order": [
+    "hero",
     "video_banner_custom_xzTXwz",
     "section_richtext_kTiLHV",
-    "hero",
     "section_richtext_cnmM7B",
     "section_gallery_slider_LmhCKt",
     "section_gallery_slider_TNB3tT",
