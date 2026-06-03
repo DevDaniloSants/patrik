@@ -35,7 +35,7 @@
       ],
       "name": "Video banner",
       "settings": {
-        "height": "use_screen_full",
+        "height": "use_screen_three_quarters",
         "color_bg": "palette--light bg--neutral",
         "video_bg": "shopify://files/videos/inematic_jewelry_atelier_scene_Kling_30__07976.mp4",
         "object_position": "center-center",
@@ -49,6 +49,32 @@
         "width": "wrapper--none",
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "section_richtext_kTiLHV": {
+      "type": "section-richtext",
+      "blocks": {
+        "text_YPVMLb": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        }
+      },
+      "block_order": [
+        "text_YPVMLb"
+      ],
+      "name": "Espaçamento",
+      "settings": {
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "palette--dark bg--invert--accent",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 50,
+        "padding_bottom": 36
       }
     },
     "hero": {
@@ -564,33 +590,6 @@
         "width": "wrapper--none",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "section_richtext_kTiLHV": {
-      "type": "section-richtext",
-      "blocks": {
-        "text_YPVMLb": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_size": 4,
-            "text_columns": 1
-          }
-        }
-      },
-      "block_order": [
-        "text_YPVMLb"
-      ],
-      "disabled": true,
-      "name": "Espaçamento",
-      "settings": {
-        "align_text": "text-left",
-        "text_color": "text--neutral",
-        "bg": "palette--dark bg--invert--accent",
-        "content_width": 2000,
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "section_hero_UhTiib": {
@@ -1579,6 +1578,7 @@
   },
   "order": [
     "section_video_G8JLNm",
+    "section_richtext_kTiLHV",
     "hero",
     "section_richtext_cnmM7B",
     "section_gallery_slider_LmhCKt",
@@ -1586,7 +1586,6 @@
     "section_richtext_UkKtct",
     "section_video_ykPNyn",
     "section_hero_mEN6xM",
-    "section_richtext_kTiLHV",
     "section_hero_UhTiib",
     "17779288275c16224c",
     "section_list_collections_LeYE9C",
