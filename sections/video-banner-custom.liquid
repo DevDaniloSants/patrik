@@ -26,9 +26,9 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    align-items: {{ section.settings.text_horizontal }};
+    justify-content: {{ section.settings.text_vertical }};
+    text-align: {{ section.settings.text_align }};
     padding: 2rem;
     color: #fff;
   }
@@ -56,7 +56,20 @@
 </style>
 
 <div class="vbc-wrapper">
-  {% if section.settings.video_url != blank %}
+  {% if section.settings.video_shopify.sources != blank %}
+    <video
+      class="vbc-video"
+      autoplay
+      loop
+      muted
+      playsinline
+      disablepictureinpicture
+    >
+      {% for source in section.settings.video_shopify.sources %}
+        <source src="{{ source.url }}" type="{{ source.mime_type }}">
+      {% endfor %}
+    </video>
+  {% elsif section.settings.video_url != blank %}
     <video
       class="vbc-video"
       autoplay
@@ -89,10 +102,15 @@
   "name": "Video Banner Custom",
   "settings": [
     {
+      "type": "video",
+      "id": "video_shopify",
+      "label": "Vídeo (upload direto)"
+    },
+    {
       "type": "text",
       "id": "video_url",
-      "label": "URL do vídeo (.mp4)",
-      "info": "Cole a URL direta do vídeo hospedado no Shopify Files"
+      "label": "URL do vídeo (.mp4) — alternativa ao upload",
+      "info": "Usado apenas se nenhum vídeo for enviado acima"
     },
     {
       "type": "range",
@@ -111,6 +129,39 @@
       "max": 80,
       "step": 5,
       "default": 30
+    },
+    {
+      "type": "select",
+      "id": "text_horizontal",
+      "label": "Posição horizontal do texto",
+      "options": [
+        { "value": "flex-start", "label": "Esquerda" },
+        { "value": "center", "label": "Centro" },
+        { "value": "flex-end", "label": "Direita" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Alinhamento do texto",
+      "options": [
+        { "value": "left", "label": "Esquerda" },
+        { "value": "center", "label": "Centro" },
+        { "value": "right", "label": "Direita" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "text_vertical",
+      "label": "Posição vertical do texto",
+      "options": [
+        { "value": "flex-start", "label": "Topo" },
+        { "value": "center", "label": "Meio" },
+        { "value": "flex-end", "label": "Baixo" }
+      ],
+      "default": "center"
     },
     {
       "type": "text",

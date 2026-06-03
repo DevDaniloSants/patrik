@@ -1517,6 +1517,21 @@
         "ai_gen_block_86eca1a_AiKn73"
       ],
       "settings": {}
+    },
+    "video_banner_custom_xzTXwz": {
+      "type": "video-banner-custom",
+      "name": "Video Banner Custom",
+      "settings": {
+        "video_url": "",
+        "height": 600,
+        "overlay_opacity": 30,
+        "title": "Seu título aqui",
+        "subtitle": "Seu subtítulo aqui",
+        "button_label": "Saiba mais",
+        "button_url": "",
+        "button_color": "#ffffff",
+        "button_text_color": "#000000"
+      }
     }
   },
   "order": [
@@ -1542,6 +1557,7 @@
     "section_icons_Fcggry",
     "1777664169ac2559d7",
     "17779271507e569dcf",
-    "1777928059709e541e"
+    "1777928059709e541e",
+    "video_banner_custom_xzTXwz"
   ]
 }
