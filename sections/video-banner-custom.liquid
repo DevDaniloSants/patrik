@@ -1,10 +1,31 @@
 <style>
-  .vbc-wrapper {
+  .vbc-hero-outer {
     position: relative;
     width: 100%;
-    overflow: hidden;
-    height: {{ section.settings.height }}px;
   }
+
+  .vbc-hero-wrapper {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+
+    {% case section.settings.section_height %}
+      {% when 'full' %}
+        height: 100vh;
+      {% when 'three-quarters' %}
+        height: 75vh;
+      {% when 'half' %}
+        height: 50vh;
+      {% when 'auto' %}
+        height: auto;
+        min-height: 400px;
+    {% endcase %}
+  }
+
   .vbc-video {
     position: absolute;
     top: 50%;
@@ -55,52 +76,66 @@
   .vbc-btn:hover { opacity: 0.85; }
 </style>
 
-<div class="vbc-wrapper">
-  {% if section.settings.video_shopify.sources != blank %}
-    <video
-      class="vbc-video"
-      autoplay
-      loop
-      muted
-      playsinline
-      disablepictureinpicture
-    >
-      {% for source in section.settings.video_shopify.sources %}
-        <source src="{{ source.url }}" type="{{ source.mime_type }}">
-      {% endfor %}
-    </video>
-  {% elsif section.settings.video_url != blank %}
-    <video
-      class="vbc-video"
-      autoplay
-      loop
-      muted
-      playsinline
-      disablepictureinpicture
-    >
-      <source src="{{ section.settings.video_url }}" type="video/mp4">
-    </video>
-  {% endif %}
-  <div class="vbc-overlay"></div>
-  <div class="vbc-content">
-    {% if section.settings.title != blank %}
-      <h2 class="vbc-title">{{ section.settings.title }}</h2>
+{% if section.settings.hero_mode %}
+<style>
+  #shopify-section-{{ section.id }} {
+    margin-top: calc(-1 * var(--header-height, 80px));
+    position: relative;
+    z-index: 1;
+  }
+</style>
+{% endif %}
+
+<div class="vbc-hero-outer">
+  <div class="vbc-hero-wrapper">
+    {% if section.settings.video_shopify.sources != blank %}
+      <video class="vbc-video" autoplay loop muted playsinline disablepictureinpicture>
+        {% for source in section.settings.video_shopify.sources %}
+          <source src="{{ source.url }}" type="{{ source.mime_type }}">
+        {% endfor %}
+      </video>
+    {% elsif section.settings.video_url != blank %}
+      <video class="vbc-video" autoplay loop muted playsinline disablepictureinpicture>
+        <source src="{{ section.settings.video_url }}" type="video/mp4">
+      </video>
     {% endif %}
-    {% if section.settings.subtitle != blank %}
-      <p class="vbc-subtitle">{{ section.settings.subtitle }}</p>
-    {% endif %}
-    {% if section.settings.button_label != blank and section.settings.button_url != blank %}
-      <a class="vbc-btn" href="{{ section.settings.button_url }}">
-        {{ section.settings.button_label }}
-      </a>
-    {% endif %}
+    <div class="vbc-overlay"></div>
+    <div class="vbc-content">
+      {% if section.settings.title != blank %}
+        <h2 class="vbc-title">{{ section.settings.title }}</h2>
+      {% endif %}
+      {% if section.settings.subtitle != blank %}
+        <p class="vbc-subtitle">{{ section.settings.subtitle }}</p>
+      {% endif %}
+      {% if section.settings.button_label != blank and section.settings.button_url != blank %}
+        <a class="vbc-btn" href="{{ section.settings.button_url }}">{{ section.settings.button_label }}</a>
+      {% endif %}
+    </div>
   </div>
 </div>
 
 {% schema %}
 {
-  "name": "Video Banner Custom",
+  "name": "Video Hero Custom",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "hero_mode",
+      "label": "Modo Hero (cobre o cabeçalho)",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "section_height",
+      "label": "Altura da seção",
+      "options": [
+        { "value": "full", "label": "Tela inteira (100vh)" },
+        { "value": "three-quarters", "label": "3/4 da tela (75vh)" },
+        { "value": "half", "label": "Metade da tela (50vh)" },
+        { "value": "auto", "label": "Automático (conteúdo)" }
+      ],
+      "default": "full"
+    },
     {
       "type": "video",
       "id": "video_shopify",
@@ -111,15 +146,6 @@
       "id": "video_url",
       "label": "URL do vídeo (.mp4) — alternativa ao upload",
       "info": "Usado apenas se nenhum vídeo for enviado acima"
-    },
-    {
-      "type": "range",
-      "id": "height",
-      "label": "Altura da seção (px)",
-      "min": 300,
-      "max": 900,
-      "step": 50,
-      "default": 600
     },
     {
       "type": "range",
@@ -201,7 +227,7 @@
   ],
   "presets": [
     {
-      "name": "Video Banner Custom"
+      "name": "Video Hero Custom"
     }
   ]
 }
