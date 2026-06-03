@@ -9,6 +9,48 @@
  */
 {
   "sections": {
+    "section_video_G8JLNm": {
+      "type": "section-video",
+      "blocks": {
+        "heading_6yXFg8": {
+          "type": "heading",
+          "settings": {
+            "title": "Seu Vídeo em Destaque",
+            "text_size": 10
+          }
+        },
+        "video_iMbx66": {
+          "type": "video",
+          "settings": {
+            "video_link": "",
+            "popup_text": "Assistir Vídeo",
+            "button_width": 80,
+            "button_color": "text--white"
+          }
+        }
+      },
+      "block_order": [
+        "heading_6yXFg8",
+        "video_iMbx66"
+      ],
+      "name": "Video banner",
+      "settings": {
+        "height": "use_screen_full",
+        "color_bg": "palette--light bg--neutral",
+        "video_bg": "shopify://files/videos/inematic_jewelry_atelier_scene_Kling_30__07976.mp4",
+        "object_position": "center-center",
+        "banner_link": "",
+        "preload_image": false,
+        "text_align": "align--middle-center",
+        "text_color": "text--white",
+        "overlay_opacity": 15,
+        "overlay_color": "#000000",
+        "enable_overlay_text": false,
+        "width": "wrapper--none",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "hero": {
       "type": "section-hero",
       "blocks": {
@@ -1536,6 +1578,7 @@
     }
   },
   "order": [
+    "section_video_G8JLNm",
     "hero",
     "section_richtext_cnmM7B",
     "section_gallery_slider_LmhCKt",
