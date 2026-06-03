@@ -9,6 +9,38 @@
  */
 {
   "sections": {
+    "section_video_CypLxn": {
+      "type": "section-video",
+      "blocks": {
+        "heading_XQUGDm": {
+          "type": "heading",
+          "settings": {
+            "title": "O Sim mais feliz da sua vida começa na Patrik",
+            "text_size": 10
+          }
+        }
+      },
+      "block_order": [
+        "heading_XQUGDm"
+      ],
+      "name": "Video banner",
+      "settings": {
+        "height": "use_screen_full",
+        "color_bg": "palette--light bg--neutral",
+        "video_bg": "shopify://files/videos/cinematic_jewelry_atelier_scen_Kling_30__76798.mp4",
+        "object_position": "center-bottom",
+        "banner_link": "shopify://collections/engagement-rings",
+        "preload_image": true,
+        "text_align": "align--bottom-center",
+        "text_color": "text--white",
+        "overlay_opacity": 0,
+        "overlay_color": "#000",
+        "enable_overlay_text": false,
+        "width": "wrapper--none",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "hero": {
       "type": "section-hero",
       "blocks": {
@@ -1517,38 +1549,6 @@
         "ai_gen_block_86eca1a_AiKn73"
       ],
       "settings": {}
-    },
-    "section_video_CypLxn": {
-      "type": "section-video",
-      "blocks": {
-        "heading_XQUGDm": {
-          "type": "heading",
-          "settings": {
-            "title": "Featured video",
-            "text_size": 10
-          }
-        }
-      },
-      "block_order": [
-        "heading_XQUGDm"
-      ],
-      "name": "Video banner",
-      "settings": {
-        "height": "use_screen_full",
-        "color_bg": "palette--light bg--neutral",
-        "video_bg": "shopify://files/videos/cinematic_jewelry_atelier_scen_Kling_30__76798.mp4",
-        "object_position": "center-bottom",
-        "banner_link": "shopify://collections/engagement-rings",
-        "preload_image": false,
-        "text_align": "align--bottom-center",
-        "text_color": "text--white",
-        "overlay_opacity": 0,
-        "overlay_color": "#000",
-        "enable_overlay_text": false,
-        "width": "wrapper--none",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
     }
   },
   "order": [
