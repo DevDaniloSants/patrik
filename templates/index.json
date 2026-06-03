@@ -9,48 +9,6 @@
  */
 {
   "sections": {
-    "section_video_G8JLNm": {
-      "type": "section-video",
-      "blocks": {
-        "heading_6yXFg8": {
-          "type": "heading",
-          "settings": {
-            "title": "Planejando o Sim mais feliz da sua vida?",
-            "text_size": 10
-          }
-        },
-        "video_iMbx66": {
-          "type": "video",
-          "settings": {
-            "video_link": "",
-            "popup_text": "Conheça a coleção Casamento da Patrik",
-            "button_width": 20,
-            "button_color": "text--white"
-          }
-        }
-      },
-      "block_order": [
-        "heading_6yXFg8",
-        "video_iMbx66"
-      ],
-      "name": "Video banner",
-      "settings": {
-        "height": "use_screen_full",
-        "color_bg": "palette--light bg--neutral",
-        "video_bg": "shopify://files/videos/inematic_jewelry_atelier_scene_Kling_30__07976.mp4",
-        "object_position": "center-center",
-        "banner_link": "",
-        "preload_image": false,
-        "text_align": "align--bottom-center",
-        "text_color": "text--white",
-        "overlay_opacity": 15,
-        "overlay_color": "#000000",
-        "enable_overlay_text": false,
-        "width": "wrapper--none",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "section_richtext_kTiLHV": {
       "type": "section-richtext",
       "blocks": {
@@ -901,21 +859,6 @@
         "padding_bottom": 20
       }
     },
-    "section_image_neGRcR": {
-      "type": "section-image",
-      "disabled": true,
-      "name": "Image",
-      "settings": {
-        "image": "shopify://shop_images/Collection_Vitral_desktop_2.png",
-        "mobile_image": "shopify://shop_images/Collection_Vitral_mobile_2.png",
-        "max_width": 100,
-        "x_align": "center",
-        "color_bg": "palette--dark bg--invert--accent",
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "section_richtext_jRYTUM": {
       "type": "section-richtext",
       "blocks": {
@@ -1577,7 +1520,6 @@
     }
   },
   "order": [
-    "section_video_G8JLNm",
     "section_richtext_kTiLHV",
     "hero",
     "section_richtext_cnmM7B",
@@ -1590,7 +1532,6 @@
     "17779288275c16224c",
     "section_list_collections_LeYE9C",
     "section_richtext_q8gnYc",
-    "section_image_neGRcR",
     "section_richtext_jRYTUM",
     "section_list_collections_ftJBTL",
     "section_columns_X6EhLY",

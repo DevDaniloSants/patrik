@@ -1,0 +1,157 @@
+<style>
+  .vbc-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: {{ section.settings.height }}px;
+  }
+  .vbc-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    pointer-events: none;
+  }
+  .vbc-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,{{ section.settings.overlay_opacity | divided_by: 100.0 }});
+  }
+  .vbc-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    color: #fff;
+  }
+  .vbc-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  .vbc-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+  .vbc-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: {{ section.settings.button_color }};
+    color: {{ section.settings.button_text_color }};
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: opacity 0.2s;
+  }
+  .vbc-btn:hover { opacity: 0.85; }
+</style>
+
+<div class="vbc-wrapper">
+  {% if section.settings.video_url != blank %}
+    <video
+      class="vbc-video"
+      autoplay
+      loop
+      muted
+      playsinline
+      disablepictureinpicture
+    >
+      <source src="{{ section.settings.video_url }}" type="video/mp4">
+    </video>
+  {% endif %}
+  <div class="vbc-overlay"></div>
+  <div class="vbc-content">
+    {% if section.settings.title != blank %}
+      <h2 class="vbc-title">{{ section.settings.title }}</h2>
+    {% endif %}
+    {% if section.settings.subtitle != blank %}
+      <p class="vbc-subtitle">{{ section.settings.subtitle }}</p>
+    {% endif %}
+    {% if section.settings.button_label != blank and section.settings.button_url != blank %}
+      <a class="vbc-btn" href="{{ section.settings.button_url }}">
+        {{ section.settings.button_label }}
+      </a>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Video Banner Custom",
+  "settings": [
+    {
+      "type": "text",
+      "id": "video_url",
+      "label": "URL do vídeo (.mp4)",
+      "info": "Cole a URL direta do vídeo hospedado no Shopify Files"
+    },
+    {
+      "type": "range",
+      "id": "height",
+      "label": "Altura da seção (px)",
+      "min": 300,
+      "max": 900,
+      "step": 50,
+      "default": 600
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Opacidade do overlay (%)",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "default": 30
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Título",
+      "default": "Seu título aqui"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtítulo",
+      "default": "Seu subtítulo aqui"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Texto do botão",
+      "default": "Saiba mais"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Link do botão"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Cor do botão",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Cor do texto do botão",
+      "default": "#000000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video Banner Custom"
+    }
+  ]
+}
+{% endschema %}
