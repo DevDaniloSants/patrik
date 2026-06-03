@@ -124,12 +124,12 @@
         "fdfd9dcc-76bf-4071-80e8-20d097945246": {
           "type": "button",
           "settings": {
-            "link_text_1": "Conheça",
+            "link_text_1": "Dia dos namorados Patrik",
             "link_1": "shopify://collections/love",
             "open_specialist_modal_1": false,
             "specialist_message_1": "",
             "button_size_1": "btn--large",
-            "button_style_1": "btn",
+            "button_style_1": "btn--outline",
             "button_color_1": "btn--white",
             "link_text_2": "",
             "link_2": "",
@@ -166,7 +166,7 @@
         "enable_overlay_text": false,
         "preload_image": true,
         "content_width": 800,
-        "text_align": "align--bottom-left",
+        "text_align": "align--bottom-center",
         "text_color": "text--white",
         "color_bg": "hero__content--transparent",
         "width": "wrapper--none",
@@ -196,7 +196,7 @@
         "bg": "palette--dark bg--invert--accent",
         "content_width": 2000,
         "width": "wrapper",
-        "padding_top": 36,
+        "padding_top": 20,
         "padding_bottom": 36
       }
     },
@@ -859,6 +859,7 @@
         "collection_XmWLNj",
         "collection_68jAMA"
       ],
+      "disabled": true,
       "custom_css": [
         ".custom-scrollbar.small-down--show {display: none !important;}",
         ".custom-scrollbar.small-down--show::-webkit-scrollbar {display: none;}",
@@ -901,6 +902,7 @@
       "block_order": [
         "text_neYbgQ"
       ],
+      "disabled": true,
       "name": "Espaçamento",
       "settings": {
         "align_text": "text-left",
@@ -927,6 +929,7 @@
       "block_order": [
         "text_jcWwEX"
       ],
+      "disabled": true,
       "name": "Espaçamento",
       "settings": {
         "align_text": "text-left",
