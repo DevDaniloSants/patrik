@@ -9,6 +9,26 @@
  */
 {
   "sections": {
+    "video_banner_custom_xzTXwz": {
+      "type": "video-banner-custom",
+      "name": "Video Banner Custom",
+      "settings": {
+        "hero_mode": true,
+        "section_height": "full",
+        "video_shopify": "shopify://files/videos/cinematic_jewelry_atelier_scen_Kling_30__76798.mp4",
+        "video_url": "",
+        "overlay_opacity": 30,
+        "text_horizontal": "center",
+        "text_align": "center",
+        "text_vertical": "flex-end",
+        "title": "Seu título aqui",
+        "subtitle": "Seu subtítulo aqui",
+        "button_label": "Saiba mais",
+        "button_url": "shopify://collections/engagement-rings",
+        "button_color": "#ffffff",
+        "button_text_color": "#000000"
+      }
+    },
     "section_richtext_kTiLHV": {
       "type": "section-richtext",
       "blocks": {
@@ -1517,25 +1537,6 @@
         "ai_gen_block_86eca1a_AiKn73"
       ],
       "settings": {}
-    },
-    "video_banner_custom_xzTXwz": {
-      "type": "video-banner-custom",
-      "name": "Video Banner Custom",
-      "settings": {
-        "video_shopify": "shopify://files/videos/cinematic_jewelry_atelier_scen_Kling_30__76798.mp4",
-        "video_url": "",
-        "height": 600,
-        "overlay_opacity": 30,
-        "text_horizontal": "center",
-        "text_align": "center",
-        "text_vertical": "flex-end",
-        "title": "Seu título aqui",
-        "subtitle": "Seu subtítulo aqui",
-        "button_label": "Saiba mais",
-        "button_url": "shopify://collections/engagement-rings",
-        "button_color": "#ffffff",
-        "button_text_color": "#000000"
-      }
     }
   },
   "order": [
