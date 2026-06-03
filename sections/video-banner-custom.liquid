@@ -1,9 +1,4 @@
 <style>
-  .vbc-hero-outer {
-    position: relative;
-    width: 100%;
-  }
-
   .vbc-hero-wrapper {
     position: relative;
     width: 100vw;
@@ -86,31 +81,29 @@
 </style>
 {% endif %}
 
-<div class="vbc-hero-outer">
-  <div class="vbc-hero-wrapper">
-    {% if section.settings.video_shopify.sources != blank %}
-      <video class="vbc-video" autoplay loop muted playsinline disablepictureinpicture>
-        {% for source in section.settings.video_shopify.sources %}
-          <source src="{{ source.url }}" type="{{ source.mime_type }}">
-        {% endfor %}
-      </video>
-    {% elsif section.settings.video_url != blank %}
-      <video class="vbc-video" autoplay loop muted playsinline disablepictureinpicture>
-        <source src="{{ section.settings.video_url }}" type="video/mp4">
-      </video>
+<div class="vbc-hero-wrapper">
+  {% if section.settings.video_shopify.sources != blank %}
+    <video class="vbc-video" autoplay loop muted playsinline disablepictureinpicture>
+      {% for source in section.settings.video_shopify.sources %}
+        <source src="{{ source.url }}" type="{{ source.mime_type }}">
+      {% endfor %}
+    </video>
+  {% elsif section.settings.video_url != blank %}
+    <video class="vbc-video" autoplay loop muted playsinline disablepictureinpicture>
+      <source src="{{ section.settings.video_url }}" type="video/mp4">
+    </video>
+  {% endif %}
+  <div class="vbc-overlay"></div>
+  <div class="vbc-content">
+    {% if section.settings.title != blank %}
+      <h2 class="vbc-title">{{ section.settings.title }}</h2>
     {% endif %}
-    <div class="vbc-overlay"></div>
-    <div class="vbc-content">
-      {% if section.settings.title != blank %}
-        <h2 class="vbc-title">{{ section.settings.title }}</h2>
-      {% endif %}
-      {% if section.settings.subtitle != blank %}
-        <p class="vbc-subtitle">{{ section.settings.subtitle }}</p>
-      {% endif %}
-      {% if section.settings.button_label != blank and section.settings.button_url != blank %}
-        <a class="vbc-btn" href="{{ section.settings.button_url }}">{{ section.settings.button_label }}</a>
-      {% endif %}
-    </div>
+    {% if section.settings.subtitle != blank %}
+      <p class="vbc-subtitle">{{ section.settings.subtitle }}</p>
+    {% endif %}
+    {% if section.settings.button_label != blank and section.settings.button_url != blank %}
+      <a class="vbc-btn" href="{{ section.settings.button_url }}">{{ section.settings.button_label }}</a>
+    {% endif %}
   </div>
 </div>
 
@@ -192,14 +185,12 @@
     {
       "type": "text",
       "id": "title",
-      "label": "Título",
-      "default": "Seu título aqui"
+      "label": "Título"
     },
     {
       "type": "text",
       "id": "subtitle",
-      "label": "Subtítulo",
-      "default": "Seu subtítulo aqui"
+      "label": "Subtítulo"
     },
     {
       "type": "text",
