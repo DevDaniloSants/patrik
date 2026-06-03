@@ -9,111 +9,6 @@
  */
 {
   "sections": {
-    "hero": {
-      "type": "section-hero",
-      "blocks": {
-        "7c3cb134-606a-4424-8af4-58a35c6d9088": {
-          "type": "kicker",
-          "settings": {
-            "kicker": "",
-            "enable_line": false,
-            "text_size": 4
-          }
-        },
-        "3b0fccbc-3710-42f6-8b1f-211d5082b6ab": {
-          "type": "spacer",
-          "settings": {
-            "spacer_padding": 10,
-            "show_line": false
-          }
-        },
-        "407c1424-5f23-4fe9-8abc-21c4027807ef": {
-          "type": "heading",
-          "settings": {
-            "title": "O presente que ela nunca vai esquecer",
-            "text_size": 11
-          }
-        },
-        "a74ee68a-ff75-4a7c-aa9c-6cdaf660dfdf": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "richtext": "<p>Fresher than a bubble bath, cleaner than a network tv show</p>",
-            "text_size": 6
-          }
-        },
-        "fdfd9dcc-76bf-4071-80e8-20d097945246": {
-          "type": "button",
-          "settings": {
-            "link_text_1": "Conheça",
-            "link_1": "shopify://collections/love",
-            "open_specialist_modal_1": false,
-            "specialist_message_1": "",
-            "button_size_1": "btn--large",
-            "button_style_1": "btn",
-            "button_color_1": "btn--white",
-            "link_text_2": "",
-            "link_2": "",
-            "open_specialist_modal_2": false,
-            "specialist_message_2": "",
-            "button_size_2": "btn--long",
-            "button_style_2": "btn-text-thick-line",
-            "button_color_2": "btn--white",
-            "link_text_3": "",
-            "link_3": "",
-            "open_specialist_modal_3": false,
-            "specialist_message_3": "",
-            "button_size_3": "btn--long",
-            "button_style_3": "caps--link",
-            "button_color_3": "btn--white"
-          }
-        }
-      },
-      "block_order": [
-        "7c3cb134-606a-4424-8af4-58a35c6d9088",
-        "3b0fccbc-3710-42f6-8b1f-211d5082b6ab",
-        "407c1424-5f23-4fe9-8abc-21c4027807ef",
-        "a74ee68a-ff75-4a7c-aa9c-6cdaf660dfdf",
-        "fdfd9dcc-76bf-4071-80e8-20d097945246"
-      ],
-      "name": "Hero",
-      "settings": {
-        "image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0148_0a54ee3c-c9d2-4483-885c-4c50d42fb9c3.jpg",
-        "mobile_image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0148.jpg",
-        "banner_link": "shopify://collections/love",
-        "height": "use_screen_full",
-        "overlay_opacity": 0,
-        "overlay_color": "#3c190b",
-        "enable_overlay_text": false,
-        "preload_image": true,
-        "content_width": 800,
-        "text_align": "align--bottom-left",
-        "text_color": "text--white",
-        "color_bg": "hero__content--transparent",
-        "width": "wrapper--none",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "video_banner_custom_xzTXwz": {
-      "type": "video-banner-custom",
-      "name": "Video Banner Custom",
-      "settings": {
-        "section_height": "full",
-        "video_shopify": "shopify://files/videos/cinematic_jewelry_atelier_scen_Kling_30__76798.mp4",
-        "video_url": "",
-        "overlay_opacity": 30,
-        "text_horizontal": "center",
-        "text_align": "center",
-        "text_vertical": "flex-end",
-        "title": "O Sim mais feliz da sua vida começa aqui",
-        "subtitle": "Seu subtítulo aqui",
-        "button_label": "Saiba mais",
-        "button_url": "shopify://collections/engagement-rings",
-        "button_color": "#ffffff",
-        "button_text_color": "#000000"
-      }
-    },
     "section_richtext_kTiLHV": {
       "type": "section-richtext",
       "blocks": {
@@ -476,6 +371,92 @@
         "overlay_opacity": 0,
         "overlay_color": "#000000",
         "enable_overlay_text": false,
+        "width": "wrapper--none",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero": {
+      "type": "section-hero",
+      "blocks": {
+        "7c3cb134-606a-4424-8af4-58a35c6d9088": {
+          "type": "kicker",
+          "settings": {
+            "kicker": "",
+            "enable_line": false,
+            "text_size": 4
+          }
+        },
+        "3b0fccbc-3710-42f6-8b1f-211d5082b6ab": {
+          "type": "spacer",
+          "settings": {
+            "spacer_padding": 10,
+            "show_line": false
+          }
+        },
+        "407c1424-5f23-4fe9-8abc-21c4027807ef": {
+          "type": "heading",
+          "settings": {
+            "title": "O presente que ela nunca vai esquecer",
+            "text_size": 11
+          }
+        },
+        "a74ee68a-ff75-4a7c-aa9c-6cdaf660dfdf": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "richtext": "<p>Fresher than a bubble bath, cleaner than a network tv show</p>",
+            "text_size": 6
+          }
+        },
+        "fdfd9dcc-76bf-4071-80e8-20d097945246": {
+          "type": "button",
+          "settings": {
+            "link_text_1": "Conheça",
+            "link_1": "shopify://collections/love",
+            "open_specialist_modal_1": false,
+            "specialist_message_1": "",
+            "button_size_1": "btn--large",
+            "button_style_1": "btn",
+            "button_color_1": "btn--white",
+            "link_text_2": "",
+            "link_2": "",
+            "open_specialist_modal_2": false,
+            "specialist_message_2": "",
+            "button_size_2": "btn--long",
+            "button_style_2": "btn-text-thick-line",
+            "button_color_2": "btn--white",
+            "link_text_3": "",
+            "link_3": "",
+            "open_specialist_modal_3": false,
+            "specialist_message_3": "",
+            "button_size_3": "btn--long",
+            "button_style_3": "caps--link",
+            "button_color_3": "btn--white"
+          }
+        }
+      },
+      "block_order": [
+        "7c3cb134-606a-4424-8af4-58a35c6d9088",
+        "3b0fccbc-3710-42f6-8b1f-211d5082b6ab",
+        "407c1424-5f23-4fe9-8abc-21c4027807ef",
+        "a74ee68a-ff75-4a7c-aa9c-6cdaf660dfdf",
+        "fdfd9dcc-76bf-4071-80e8-20d097945246"
+      ],
+      "name": "Hero",
+      "settings": {
+        "image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0148_0a54ee3c-c9d2-4483-885c-4c50d42fb9c3.jpg",
+        "mobile_image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0148.jpg",
+        "banner_link": "shopify://collections/love",
+        "height": "use_screen_full",
+        "overlay_opacity": 0,
+        "overlay_color": "#3c190b",
+        "enable_overlay_text": false,
+        "preload_image": true,
+        "content_width": 800,
+        "text_align": "align--bottom-left",
+        "text_color": "text--white",
+        "color_bg": "hero__content--transparent",
         "width": "wrapper--none",
         "padding_top": 0,
         "padding_bottom": 0
@@ -1539,14 +1520,13 @@
     }
   },
   "order": [
-    "video_banner_custom_xzTXwz",
+    "hero",
     "section_richtext_kTiLHV",
     "section_richtext_cnmM7B",
     "section_gallery_slider_LmhCKt",
     "section_gallery_slider_TNB3tT",
     "section_richtext_UkKtct",
     "section_video_ykPNyn",
-    "hero",
     "section_hero_mEN6xM",
     "section_hero_UhTiib",
     "17779288275c16224c",
