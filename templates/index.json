@@ -35,7 +35,7 @@
       ],
       "name": "Video banner",
       "settings": {
-        "height": "use_screen_three_quarters",
+        "height": "use_screen_full",
         "color_bg": "palette--light bg--neutral",
         "video_bg": "shopify://files/videos/inematic_jewelry_atelier_scene_Kling_30__07976.mp4",
         "object_position": "center-center",
