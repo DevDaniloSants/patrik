@@ -18,10 +18,31 @@
             "title": "O Sim mais feliz da sua vida começa na Patrik",
             "text_size": 10
           }
+        },
+        "button_XyiAcD": {
+          "type": "button",
+          "settings": {
+            "link_text_1": "Descobrir as joias de casamento",
+            "link_1": "",
+            "button_size_1": "btn--long",
+            "button_style_1": "btn",
+            "button_color_1": "btn--white",
+            "link_text_2": "",
+            "link_2": "",
+            "button_size_2": "btn--long",
+            "button_style_2": "btn-text-thick-line",
+            "button_color_2": "btn--white",
+            "link_text_3": "",
+            "link_3": "",
+            "button_size_3": "btn--long",
+            "button_style_3": "btn-text-thick-line",
+            "button_color_3": "btn--white"
+          }
         }
       },
       "block_order": [
-        "heading_XQUGDm"
+        "heading_XQUGDm",
+        "button_XyiAcD"
       ],
       "name": "Video banner",
       "settings": {
