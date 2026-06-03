@@ -15,7 +15,7 @@
         "heading_6yXFg8": {
           "type": "heading",
           "settings": {
-            "title": "Seu Vídeo em Destaque",
+            "title": "Planejando o Sim mais feliz da sua vida?",
             "text_size": 10
           }
         },
@@ -23,8 +23,8 @@
           "type": "video",
           "settings": {
             "video_link": "",
-            "popup_text": "Assistir Vídeo",
-            "button_width": 80,
+            "popup_text": "Conheça a coleção Casamento da Patrik",
+            "button_width": 20,
             "button_color": "text--white"
           }
         }
@@ -41,7 +41,7 @@
         "object_position": "center-center",
         "banner_link": "",
         "preload_image": false,
-        "text_align": "align--middle-center",
+        "text_align": "align--bottom-center",
         "text_color": "text--white",
         "overlay_opacity": 15,
         "overlay_color": "#000000",
