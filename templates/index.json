@@ -379,29 +379,12 @@
             "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
             "video_button_color": "text--white"
           }
-        },
-        "text_block_eRLHrz": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "shape_class": "",
-            "title": "",
-            "text": "",
-            "button_label": "",
-            "button_link": "",
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
         }
       },
       "block_order": [
         "text_block_kdkqCx",
         "text_block_BWBzCF",
-        "text_block_FyjVaX",
-        "text_block_eRLHrz"
+        "text_block_FyjVaX"
       ],
       "custom_css": [
         ".kicker-flourished {font-size: 20px !important;}"
