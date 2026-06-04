@@ -196,7 +196,7 @@
         "text_block_DnzkAc": {
           "type": "text_block",
           "settings": {
-            "enable_image": true,
+            "enable_image": false,
             "shape_class": "rounded-full",
             "title": "Carolina R.",
             "text": "<p>\"Precisava de um presente de batizado para a minha afilhada que fez um ano. Em 2 dias recebi a pulseira personalizada em casa. A joia é muito delicada e perfeita para o momento Muito obrigada.!</p>",
@@ -212,7 +212,7 @@
         "text_block_AVcVf4": {
           "type": "text_block",
           "settings": {
-            "enable_image": true,
+            "enable_image": false,
             "shape_class": "",
             "title": "Category title",
             "text": "<p>Category description text goes here.</p>",
@@ -228,7 +228,7 @@
         "text_block_AhDGYA": {
           "type": "text_block",
           "settings": {
-            "enable_image": true,
+            "enable_image": false,
             "shape_class": "",
             "title": "Category title",
             "text": "<p>Category description text goes here.</p>",
@@ -271,13 +271,13 @@
         "bg": "palette--dark bg--invert--accent",
         "align_text": "text-left",
         "scale_image": false,
-        "wh_ratio": 3.9,
+        "wh_ratio": 1.2,
         "slides_desktop": 3,
         "slides_tablet": 1,
         "slides_mobile": 1.2,
-        "show_arrows": true,
+        "show_arrows": false,
         "show_pagination": true,
-        "width": "wrapper--full",
+        "width": "wrapper",
         "padding_top": 42,
         "padding_bottom": 20
       }
