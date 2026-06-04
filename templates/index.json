@@ -415,7 +415,7 @@
         "wh_ratio": 1.2,
         "slides_desktop": 3,
         "slides_tablet": 2,
-        "slides_mobile": 1.8,
+        "slides_mobile": 1,
         "show_arrows": false,
         "show_pagination": true,
         "width": "wrapper--full",
