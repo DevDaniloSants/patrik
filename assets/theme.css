@@ -33206,3 +33206,14 @@ body.template-product .section-padding {
   object-fit: cover;
   width: 100%;
   height: auto;
+#shopify-section-template--18823723319379__section_gallery_slider_BKFgHx .gallery-slider {
+  align-items: stretch !important;
+  gap: 40px !important;
+}
+
+#shopify-section-template--18823723319379__section_gallery_slider_BKFgHx .gallery-slider__item {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
