@@ -203,80 +203,6 @@
         "padding_bottom": 0
       }
     },
-    "section_gallery_slider_BKFgHx": {
-      "type": "section-gallery-slider",
-      "blocks": {
-        "text_block_f7JcnF": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": false,
-            "shape_class": "rounded-full",
-            "title": "Daniel K.",
-            "text": "<p>\"Comprei um par de brincos para celebrar um momento especial com a minha esposa. O atendimento da Patrik foi muito cuidadoso para me ajudar com a compra. Chegou muito rápido em São Paulo e com apresentação linda. \"</p>",
-            "button_label": "",
-            "button_link": "",
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
-        },
-        "text_block_DnzkAc": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": false,
-            "shape_class": "rounded-full",
-            "title": "Carolina R.",
-            "text": "<p>\"O time da patrik joias foi excepcional! Criamos uma joia personalizada pra uma ocasião super especial e ficou exatamente como queríamos. Além disso ficou pronta em tempo record. Viramos clientes fiéis da marca!\"</p>",
-            "button_label": "",
-            "button_link": "",
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
-        },
-        "text_block_AVcVf4": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": false,
-            "shape_class": "",
-            "title": "Guilherme P. L.",
-            "text": "<p>\"A experiência foi excelente do início ao fim. O atendimento foi super personalizado: descrevi rapidamente o que procurava e logo recebi várias opções exatamente no estilo que eu queria. A compra foi rápida, a entrega chegou antes do esperado e ainda fizeram questão de acompanhar depois para garantir que tinha dado tudo certo. As peças eram lindas e a que escolhi era exatamente o que eu estava buscando. Experiência nota 10.\"</p>",
-            "button_label": "",
-            "button_link": "",
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
-        }
-      },
-      "block_order": [
-        "text_block_f7JcnF",
-        "text_block_DnzkAc",
-        "text_block_AVcVf4"
-      ],
-      "name": "Gallery Slider",
-      "settings": {
-        "title": "Histórias reais de quem escolheu a Patrik",
-        "bg": "palette--dark bg--invert--accent",
-        "align_text": "text-left",
-        "scale_image": false,
-        "wh_ratio": 1.2,
-        "slides_desktop": 3,
-        "slides_tablet": 1,
-        "slides_mobile": 1.2,
-        "show_arrows": false,
-        "show_pagination": true,
-        "width": "wrapper",
-        "padding_top": 42,
-        "padding_bottom": 20
-      }
-    },
     "section_liquid_3xBTtK": {
       "type": "section-liquid",
       "name": "Custom Liquid",
@@ -396,6 +322,86 @@
         "show_arrows": false,
         "show_pagination": true,
         "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_gallery_slider_hxtEhm": {
+      "type": "section-gallery-slider",
+      "blocks": {
+        "text_block_kdkqCx": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image": "shopify://shop_images/Categorias-Anel_PATRIK-v7.png",
+            "shape_class": "",
+            "title": "Daniel K.",
+            "text": "<p>\"Comprei um par de brincos para celebrar um momento especial com a minha esposa. O atendimento da Patrik foi muito cuidadoso para me ajudar com a compra. Chegou muito rápido em São Paulo e com apresentação linda. \"</p>",
+            "button_label": "",
+            "button_link": "shopify://collections/aneis",
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        },
+        "text_block_BWBzCF": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image": "shopify://shop_images/Categorias-_Brinco_PATRIK-v7.png",
+            "shape_class": "",
+            "title": "Carolina R.",
+            "text": "<p>\"O time da patrik joias foi excepcional! Criamos uma joia personalizada pra uma ocasião super especial e ficou exatamente como queríamos. Além disso ficou pronta em tempo record. Viramos clientes fiéis da marca!\"</p>",
+            "button_label": "",
+            "button_link": "shopify://collections/brinco",
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        },
+        "text_block_FyjVaX": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": false,
+            "image": "shopify://shop_images/Categorias-_PATRIK-Colares-v7.png",
+            "shape_class": "",
+            "title": "Guilherme P. L.",
+            "text": "<p>\"A experiência foi excelente do início ao fim. O atendimento foi super personalizado: descrevi rapidamente o que procurava e logo recebi várias opções exatamente no estilo que eu queria. A compra foi rápida, a entrega chegou antes do esperado e ainda fizeram questão de acompanhar depois para garantir que tinha dado tudo certo. As peças eram lindas e a que escolhi era exatamente o que eu estava buscando. Experiência nota 10.\"</p>",
+            "button_label": "",
+            "button_link": "shopify://collections/colar",
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_kdkqCx",
+        "text_block_BWBzCF",
+        "text_block_FyjVaX"
+      ],
+      "custom_css": [
+        ".kicker-flourished {font-size: 20px !important;}"
+      ],
+      "name": "Categorias - Gallery Slider",
+      "settings": {
+        "title": "histórias de quem escolheu a patrik",
+        "bg": "palette--dark bg--invert--accent",
+        "align_text": "text-left",
+        "scale_image": false,
+        "wh_ratio": 1.2,
+        "slides_desktop": 3,
+        "slides_tablet": 2,
+        "slides_mobile": 1.8,
+        "show_arrows": false,
+        "show_pagination": true,
+        "width": "wrapper--full",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -1180,58 +1186,6 @@
         "padding_bottom": 36
       }
     },
-    "section_richtext_Mijpwb": {
-      "type": "section-richtext",
-      "blocks": {
-        "text_gYGFiK": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_size": 4,
-            "text_columns": 1
-          }
-        }
-      },
-      "block_order": [
-        "text_gYGFiK"
-      ],
-      "name": "Espaçamento",
-      "settings": {
-        "align_text": "text-left",
-        "text_color": "text--neutral",
-        "bg": "palette--dark bg--invert--accent",
-        "content_width": 2000,
-        "width": "wrapper",
-        "padding_top": 12,
-        "padding_bottom": 12
-      }
-    },
-    "section_richtext_UCkjER": {
-      "type": "section-richtext",
-      "blocks": {
-        "text_RcXgyd": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_size": 4,
-            "text_columns": 1
-          }
-        }
-      },
-      "block_order": [
-        "text_RcXgyd"
-      ],
-      "name": "Espaçamento",
-      "settings": {
-        "align_text": "text-left",
-        "text_color": "text--neutral",
-        "bg": "palette--dark bg--invert--accent",
-        "content_width": 2000,
-        "width": "wrapper",
-        "padding_top": 0,
-        "padding_bottom": 30
-      }
-    },
     "section_columns_BncX3A": {
       "type": "section-columns",
       "blocks": {
@@ -1578,9 +1532,9 @@
     "section_richtext_kTiLHV",
     "hero",
     "section_richtext_cnmM7B",
-    "section_gallery_slider_BKFgHx",
     "section_liquid_3xBTtK",
     "section_gallery_slider_LmhCKt",
+    "section_gallery_slider_hxtEhm",
     "section_gallery_slider_TNB3tT",
     "section_richtext_UkKtct",
     "section_video_ykPNyn",
@@ -1592,8 +1546,6 @@
     "section_richtext_jRYTUM",
     "section_list_collections_ftJBTL",
     "section_columns_X6EhLY",
-    "section_richtext_Mijpwb",
-    "section_richtext_UCkjER",
     "section_columns_BncX3A",
     "section_logos_Cd4AwJ",
     "section_icons_Fcggry",
