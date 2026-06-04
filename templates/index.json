@@ -157,7 +157,7 @@
       ],
       "name": "Hero",
       "settings": {
-        "image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0148_fb641864-9ba6-4b14-8f2f-01acb32c52b7.jpg",
+        "image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0148_0a54ee3c-c9d2-4483-885c-4c50d42fb9c3.jpg",
         "mobile_image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0148.jpg",
         "banner_link": "shopify://collections/love",
         "height": "use_screen_full",
@@ -171,7 +171,7 @@
         "color_bg": "hero__content--transparent",
         "width": "wrapper--none",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 2
       }
     },
     "section_richtext_cnmM7B": {
