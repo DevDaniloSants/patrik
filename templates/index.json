@@ -385,7 +385,7 @@
       ],
       "name": "Categorias - Gallery Slider",
       "settings": {
-        "title": "historias reais de quem escolheu a patrik",
+        "title": "Descubra a Patrik",
         "bg": "palette--dark bg--invert--accent",
         "align_text": "text-center",
         "scale_image": true,
