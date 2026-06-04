@@ -16,7 +16,7 @@
           "type": "heading",
           "settings": {
             "title": "O Sim mais feliz da sua vida começa na Patrik",
-            "text_size": 10
+            "text_size": 9
           }
         },
         "button_XyiAcD": {
@@ -43,6 +43,9 @@
       "block_order": [
         "heading_XQUGDm",
         "button_XyiAcD"
+      ],
+      "custom_css": [
+        "h2 {font-size: 0rem; /* ajuste esse valor */}"
       ],
       "name": "Video banner",
       "settings": {
