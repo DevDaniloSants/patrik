@@ -163,7 +163,7 @@
         "image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0148_0a54ee3c-c9d2-4483-885c-4c50d42fb9c3.jpg",
         "mobile_image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0148.jpg",
         "banner_link": "shopify://collections/love",
-        "height": "use_screen_full",
+        "height": "use_screen_three_quarters",
         "overlay_opacity": 0,
         "overlay_color": "#3c190b",
         "enable_overlay_text": false,
