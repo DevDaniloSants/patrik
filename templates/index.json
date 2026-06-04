@@ -81,7 +81,7 @@
       "settings": {
         "align_text": "text-left",
         "text_color": "text--neutral",
-        "bg": "palette--dark bg--invert--accent",
+        "bg": "palette--bright bg--bright",
         "content_width": 2000,
         "width": "wrapper",
         "padding_top": 2,
@@ -241,7 +241,7 @@
             "enable_image": false,
             "shape_class": "",
             "title": "Guilherme P. L.",
-            "text": "",
+            "text": "<p>\"Para celebrar uma grande conquista da Júlia, comprei um colar de esmeralda, pois ouvi ela falando para a mãe dela que ama essa pedra. O colar é lindo e ela adorou o presente.\"</p>",
             "button_label": "",
             "button_link": "",
             "button_color": "btn--neutral",
