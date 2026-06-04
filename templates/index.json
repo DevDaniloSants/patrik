@@ -96,7 +96,7 @@
           "settings": {
             "kicker": "",
             "enable_line": false,
-            "text_size": 4
+            "text_size": 3
           }
         },
         "3b0fccbc-3710-42f6-8b1f-211d5082b6ab": {
@@ -110,7 +110,7 @@
           "type": "heading",
           "settings": {
             "title": "O presente que ela nunca vai esquecer",
-            "text_size": 11
+            "text_size": 9
           }
         },
         "a74ee68a-ff75-4a7c-aa9c-6cdaf660dfdf": {
@@ -118,7 +118,7 @@
           "disabled": true,
           "settings": {
             "richtext": "<p>Fresher than a bubble bath, cleaner than a network tv show</p>",
-            "text_size": 6
+            "text_size": 5
           }
         },
         "fdfd9dcc-76bf-4071-80e8-20d097945246": {
