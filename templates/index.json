@@ -174,7 +174,7 @@
         "color_bg": "hero__content--transparent",
         "width": "wrapper--none",
         "padding_top": 0,
-        "padding_bottom": 20
+        "padding_bottom": 0
       }
     },
     "section_richtext_cnmM7B": {
@@ -196,7 +196,7 @@
       "settings": {
         "align_text": "text-left",
         "text_color": "text--neutral",
-        "bg": "palette--dark bg--invert--accent",
+        "bg": "palette--bright bg--bright",
         "content_width": 2000,
         "width": "wrapper",
         "padding_top": 0,
@@ -228,7 +228,7 @@
             "enable_image": false,
             "shape_class": "rounded-full",
             "title": "Carolina R.",
-            "text": "<p>\"Precisava de um presente de batizado para a minha afilhada que fez um ano. Em 2 dias recebi a pulseira personalizada em casa. A joia é muito delicada e perfeita para o momento. A caixa que veio junto torna a experiência perfeita.\"</p>",
+            "text": "<p>\"O time da patrik joias foi excepcional! Criamos uma joia personalizada pra uma ocasião super especial e ficou exatamente como queríamos. Além disso ficou pronta em tempo record. Viramos clientes fiéis da marca!\"</p>",
             "button_label": "",
             "button_link": "",
             "button_color": "btn--neutral",
@@ -244,7 +244,7 @@
             "enable_image": false,
             "shape_class": "",
             "title": "Guilherme P. L.",
-            "text": "<p>\"Para celebrar uma grande conquista da Júlia, comprei um colar de esmeralda, pois ouvi ela falando para a mãe dela que ama essa pedra. O colar é lindo e ela adorou o presente.\"</p>",
+            "text": "<p>\"A experiência foi excelente do início ao fim. O atendimento foi super personalizado: descrevi rapidamente o que procurava e logo recebi várias opções exatamente no estilo que eu queria. A compra foi rápida, a entrega chegou antes do esperado e ainda fizeram questão de acompanhar depois para garantir que tinha dado tudo certo. As peças eram lindas e a que escolhi era exatamente o que eu estava buscando. Experiência nota 10.\"</p>",
             "button_label": "",
             "button_link": "",
             "button_color": "btn--neutral",
