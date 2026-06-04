@@ -33217,3 +33217,7 @@ body.template-product .section-padding {
   justify-content: flex-start !important;
   align-items: flex-start !important;
 }
+#shopify-section-template--18823723319379__section_gallery_slider_BKFgHx .kicker,
+#shopify-section-template--18823723319379__section_gallery_slider_BKFgHx [class*="kicker"] {
+  font-size: 1.25rem; /* ajuste até igualar com a seção abaixo */
+}
