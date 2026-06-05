@@ -213,23 +213,6 @@
     "section_gallery_slider_LmhCKt": {
       "type": "section-gallery-slider",
       "blocks": {
-        "text_block_3ptcC6": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0079_1.jpg",
-            "shape_class": "",
-            "title": "Anéis",
-            "text": "",
-            "button_label": "",
-            "button_link": "shopify://collections/aneis",
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
-        },
         "text_block_j6E9FP": {
           "type": "text_block",
           "settings": {
@@ -247,11 +230,28 @@
             "video_button_color": "text--white"
           }
         },
+        "text_block_3ptcC6": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0079_1.jpg",
+            "shape_class": "",
+            "title": "Anéis",
+            "text": "",
+            "button_label": "",
+            "button_link": "shopify://collections/aneis",
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        },
         "text_block_Wjp9yX": {
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0228_1.jpg",
+            "image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0268_1.jpg",
             "shape_class": "",
             "title": "Colares",
             "text": "",
@@ -285,7 +285,7 @@
           "type": "text_block",
           "settings": {
             "enable_image": true,
-            "image": "shopify://shop_images/Categorias-_PATRIK-_Todas_V7.png",
+            "image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0169_1_1.jpg",
             "shape_class": "",
             "title": "Todas as Joias",
             "text": "",
@@ -300,8 +300,8 @@
         }
       },
       "block_order": [
-        "text_block_3ptcC6",
         "text_block_j6E9FP",
+        "text_block_3ptcC6",
         "text_block_Wjp9yX",
         "text_block_pPdqQA",
         "text_block_fCTMcc"
