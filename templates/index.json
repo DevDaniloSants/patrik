@@ -358,6 +358,32 @@
         "padding_bottom": 0
       }
     },
+    "section_richtext_UkKtct": {
+      "type": "section-richtext",
+      "blocks": {
+        "text_bpbjeb": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        }
+      },
+      "block_order": [
+        "text_bpbjeb"
+      ],
+      "name": "Espaçamento",
+      "settings": {
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "palette--dark bg--invert--accent",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 10,
+        "padding_bottom": 32
+      }
+    },
     "section_gallery_slider_hxtEhm": {
       "type": "section-gallery-slider",
       "blocks": {
@@ -434,6 +460,85 @@
         "show_arrows": false,
         "show_pagination": true,
         "width": "wrapper--full",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "section_columns_BncX3A": {
+      "type": "section-columns",
+      "blocks": {
+        "text_block_YxrWf8": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/DavidCohen_1.jpg",
+            "shape_class": "",
+            "title": "Gemólogo Certificado pelo GIA",
+            "text": "<p>A PATRIK nasceu do amor de um de seus fundadores pela pedras preciosas. Nas peças únicas, David, Gemólogo certificado no GIA, escolhe a pedra e depois desenha a peça para aquela gema específica.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_specialist_modal": false,
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        },
+        "text_block_gCQYxk": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Gemini_Generated_Image_fbtnjlfbtnjlfbtn.png",
+            "shape_class": "",
+            "title": "Assessoria de Especialista",
+            "text": "<p>Nossos especialistas estão disponíveis online e preparados para as melhores recomendações, a fim de que sua joia seja perfeita para o momento a ser celebrado.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_specialist_modal": true,
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        },
+        "text_block_VedNxc": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Gemini_Generated_Image_wpxl5wwpxl5wwpxl.png",
+            "shape_class": "",
+            "title": "Certificação da Joia",
+            "text": "<p>A PATRIK oferece, junto a sua joia, um certificado de autenticidade do ouro 18k e das pedras, para que você tenha segurança da sua escolha. </p>",
+            "button_label": "",
+            "button_link": "",
+            "open_specialist_modal": false,
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_YxrWf8",
+        "text_block_gCQYxk",
+        "text_block_VedNxc"
+      ],
+      "name": "Experiência Patrik",
+      "settings": {
+        "title": "Desfrute da experiência Patrik",
+        "bg": "palette--dark bg--invert--accent",
+        "align_text": "text-center",
+        "scale_image": true,
+        "wh_ratio": 1,
+        "grid_large": 3,
+        "grid_medium": 3,
+        "grid_mobile": 1.2,
+        "progress_bar_mobile": false,
+        "width": "wrapper",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -546,32 +651,6 @@
         "width": "wrapper--full",
         "padding_top": 34,
         "padding_bottom": 46
-      }
-    },
-    "section_richtext_UkKtct": {
-      "type": "section-richtext",
-      "blocks": {
-        "text_bpbjeb": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_size": 4,
-            "text_columns": 1
-          }
-        }
-      },
-      "block_order": [
-        "text_bpbjeb"
-      ],
-      "name": "Espaçamento",
-      "settings": {
-        "align_text": "text-left",
-        "text_color": "text--neutral",
-        "bg": "palette--dark bg--invert--accent",
-        "content_width": 2000,
-        "width": "wrapper",
-        "padding_top": 10,
-        "padding_bottom": 32
       }
     },
     "section_video_ykPNyn": {
@@ -1221,85 +1300,6 @@
         "padding_bottom": 36
       }
     },
-    "section_columns_BncX3A": {
-      "type": "section-columns",
-      "blocks": {
-        "text_block_YxrWf8": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/DavidCohen_1.jpg",
-            "shape_class": "",
-            "title": "Gemólogo Certificado pelo GIA",
-            "text": "<p>A PATRIK nasceu do amor de um de seus fundadores pela pedras preciosas. Nas peças únicas, David, Gemólogo certificado no GIA, escolhe a pedra e depois desenha a peça para aquela gema específica.</p>",
-            "button_label": "",
-            "button_link": "",
-            "open_specialist_modal": false,
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
-        },
-        "text_block_gCQYxk": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/Gemini_Generated_Image_fbtnjlfbtnjlfbtn.png",
-            "shape_class": "",
-            "title": "Assessoria de Especialista",
-            "text": "<p>Nossos especialistas estão disponíveis online e preparados para as melhores recomendações, a fim de que sua joia seja perfeita para o momento a ser celebrado.</p>",
-            "button_label": "",
-            "button_link": "",
-            "open_specialist_modal": true,
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
-        },
-        "text_block_VedNxc": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/Gemini_Generated_Image_wpxl5wwpxl5wwpxl.png",
-            "shape_class": "",
-            "title": "Certificação da Joia",
-            "text": "<p>A PATRIK oferece, junto a sua joia, um certificado de autenticidade do ouro 18k e das pedras, para que você tenha segurança da sua escolha. </p>",
-            "button_label": "",
-            "button_link": "",
-            "open_specialist_modal": false,
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
-        }
-      },
-      "block_order": [
-        "text_block_YxrWf8",
-        "text_block_gCQYxk",
-        "text_block_VedNxc"
-      ],
-      "name": "Experiência Patrik",
-      "settings": {
-        "title": "Desfrute da experiência Patrik",
-        "bg": "palette--dark bg--invert--accent",
-        "align_text": "text-center",
-        "scale_image": true,
-        "wh_ratio": 1,
-        "grid_large": 3,
-        "grid_medium": 3,
-        "grid_mobile": 1.2,
-        "progress_bar_mobile": false,
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "section_logos_Cd4AwJ": {
       "type": "section-logos",
       "blocks": {
@@ -1570,10 +1570,10 @@
     "section_liquid_3xBTtK",
     "section_gallery_slider_LmhCKt",
     "collection_split_4BRfHx",
+    "section_richtext_UkKtct",
     "section_gallery_slider_hxtEhm",
     "section_columns_BncX3A",
     "section_gallery_slider_TNB3tT",
-    "section_richtext_UkKtct",
     "section_video_ykPNyn",
     "section_hero_mEN6xM",
     "section_hero_UhTiib",
