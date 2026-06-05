@@ -16,7 +16,7 @@
           "type": "heading",
           "settings": {
             "title": "O Sim mais feliz da sua vida começa na Patrik",
-            "text_size": 10
+            "text_size": 9
           }
         },
         "button_XyiAcD": {
@@ -163,7 +163,7 @@
         "image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0174_1_1.jpg",
         "mobile_image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0174_1_1_2477bfc0-e150-4ceb-a71a-fea1e458fdbd.jpg",
         "banner_link": "shopify://collections/love",
-        "height": "use_screen_full",
+        "height": "use_screen_three_quarters",
         "overlay_opacity": 0,
         "overlay_color": "#3c190b",
         "enable_overlay_text": false,
