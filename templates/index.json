@@ -328,6 +328,10 @@
     },
     "collection_split_4BRfHx": {
       "type": "collection-split",
+      "custom_css": [
+        "/* Reposicionar o botão */.collection-split .btn {margin-top: 380px; margin-left:120px; text-align: left; /* ou center / right */}",
+        "/* Estilo do botão */.collection-split .btn {background-color: #1a1a1a; color: #fff; border-radius: 0; padding: 12px 24px; font-size: 13px; letter-spacing: 0.1em; }"
+      ],
       "name": "Products with image",
       "settings": {
         "collection": "religiosos",
