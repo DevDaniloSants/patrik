@@ -316,12 +316,12 @@
         "align_text": "text-center",
         "scale_image": true,
         "wh_ratio": 1.2,
-        "slides_desktop": 5,
+        "slides_desktop": 4,
         "slides_tablet": 4,
         "slides_mobile": 1.8,
         "show_arrows": false,
         "show_pagination": true,
-        "width": "wrapper--full",
+        "width": "wrapper",
         "padding_top": 36,
         "padding_bottom": 36
       }
