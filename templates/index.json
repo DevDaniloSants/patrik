@@ -316,7 +316,7 @@
         "align_text": "text-center",
         "scale_image": true,
         "wh_ratio": 1.2,
-        "slides_desktop": 4,
+        "slides_desktop": 3,
         "slides_tablet": 4,
         "slides_mobile": 1.8,
         "show_arrows": false,
