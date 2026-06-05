@@ -321,7 +321,7 @@
         "slides_mobile": 1.8,
         "show_arrows": false,
         "show_pagination": true,
-        "width": "wrapper",
+        "width": "wrapper--full",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -474,7 +474,7 @@
             "image": "shopify://shop_images/Use_the_EXACT_same_background__Nano_Banana_Pro_14061.png",
             "shape_class": "rounded-lg",
             "title": "Joias para Nascimento",
-            "text": "<p>Personalize pulseiras e colares com o nome de seus filhos e netos. Realize gravações em medalhas e pingentes.</p>",
+            "text": "<p>Crie pulseiras e colares com o nome de seus filhos e netos. Realize gravações em medalhas e pingentes.</p>",
             "button_label": "",
             "button_link": "",
             "open_specialist_modal": true,
@@ -492,7 +492,7 @@
             "image": "shopify://shop_images/Use_the_EXACT_same_background__Nano_Banana_Pro_52012.png",
             "shape_class": "rounded-lg",
             "title": "Celebre Ritos de Passagem",
-            "text": "<p>Presenteie os momentos marcantes, como Batizados, Bar Mitzvah, Casamentos, Formatura e Bodas.</p>",
+            "text": "<p>Presenteie os momentos marcantes, como Batizados, Bar Mitzvah, Casamentos, Formaturas e Bodas.</p>",
             "button_label": "",
             "button_link": "",
             "open_specialist_modal": true,
@@ -542,9 +542,35 @@
         "grid_medium": 3,
         "grid_mobile": 1.2,
         "progress_bar_mobile": false,
-        "width": "wrapper--full",
+        "width": "wrapper",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "section_richtext_q8gnYc": {
+      "type": "section-richtext",
+      "blocks": {
+        "text_neYbgQ": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        }
+      },
+      "block_order": [
+        "text_neYbgQ"
+      ],
+      "name": "Espaçamento",
+      "settings": {
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "palette--dark bg--invert--accent",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "section_columns_BncX3A": {
@@ -1172,33 +1198,6 @@
         "padding_bottom": 36
       }
     },
-    "section_richtext_q8gnYc": {
-      "type": "section-richtext",
-      "blocks": {
-        "text_neYbgQ": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_size": 4,
-            "text_columns": 1
-          }
-        }
-      },
-      "block_order": [
-        "text_neYbgQ"
-      ],
-      "disabled": true,
-      "name": "Espaçamento",
-      "settings": {
-        "align_text": "text-left",
-        "text_color": "text--neutral",
-        "bg": "palette--dark bg--invert--accent",
-        "content_width": 2000,
-        "width": "wrapper",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
     "section_richtext_jRYTUM": {
       "type": "section-richtext",
       "blocks": {
@@ -1572,6 +1571,7 @@
     "section_richtext_UkKtct",
     "section_gallery_slider_hxtEhm",
     "section_columns_X6EhLY",
+    "section_richtext_q8gnYc",
     "section_columns_BncX3A",
     "section_gallery_slider_TNB3tT",
     "section_video_ykPNyn",
@@ -1579,7 +1579,6 @@
     "section_hero_UhTiib",
     "17779288275c16224c",
     "section_list_collections_LeYE9C",
-    "section_richtext_q8gnYc",
     "section_richtext_jRYTUM",
     "section_list_collections_ftJBTL",
     "section_logos_Cd4AwJ",
