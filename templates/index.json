@@ -1441,28 +1441,6 @@
     "section_icons_Fcggry": {
       "type": "section-icons",
       "blocks": {
-        "icon_block_P9znDy": {
-          "type": "icon_block",
-          "settings": {
-            "icon_name": "icon-basket-return",
-            "icon_color": "#aaaaaa",
-            "title": "DEVOLUÇÃO GRÁTIS",
-            "text": "<p>Devolva o seu produto em até 7 dias e receba reembolso integral</p>",
-            "link_text": "",
-            "link_url": ""
-          }
-        },
-        "icon_block_m4JwpE": {
-          "type": "icon_block",
-          "settings": {
-            "icon_name": "icon-shipment",
-            "icon_color": "#aaaaaa",
-            "title": "ENTREGA EXPRESSA",
-            "text": "<p>Entregas rápidas em todo Brasil </p>",
-            "link_text": "",
-            "link_url": ""
-          }
-        },
         "icon_block_yfmBLw": {
           "type": "icon_block",
           "settings": {
@@ -1473,12 +1451,34 @@
             "link_text": "",
             "link_url": ""
           }
+        },
+        "icon_block_m4JwpE": {
+          "type": "icon_block",
+          "settings": {
+            "icon_name": "icon-shipment",
+            "icon_color": "#aaaaaa",
+            "title": "ENTREGA EXPRESSA SEM CUSTO",
+            "text": "<p>Entregas rápidas em todo Brasil com frete grátis</p>",
+            "link_text": "",
+            "link_url": ""
+          }
+        },
+        "icon_block_P9znDy": {
+          "type": "icon_block",
+          "settings": {
+            "icon_name": "icon-basket-return",
+            "icon_color": "#aaaaaa",
+            "title": "DEVOLUÇÃO GRÁTIS",
+            "text": "<p>Devolva o seu produto em até 7 dias e receba reembolso integral</p>",
+            "link_text": "",
+            "link_url": ""
+          }
         }
       },
       "block_order": [
-        "icon_block_P9znDy",
+        "icon_block_yfmBLw",
         "icon_block_m4JwpE",
-        "icon_block_yfmBLw"
+        "icon_block_P9znDy"
       ],
       "name": "Icon columns",
       "settings": {
