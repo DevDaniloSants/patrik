@@ -330,7 +330,7 @@
       "type": "collection-split",
       "custom_css": [
         "@media (min-width: 768px) {.collection-split .btn {position: absolute; bottom: 60px; right: 130px; background-color: #1a1a1a; color: #fff; border-radius: 45px; padding: 18px 30px; font-size: 15px; letter-spacing: 0.1em; }}",
-        " /* ── MOBILE (< 768px) ── */@media (max-width: 767px) {.collection-split .btn {position: static; margin-top: 16px; text-align: center; background-color: #1a1a1a; color: #fff; border-radius: 0; padding: 12px 24px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; }}"
+        " /* ── MOBILE (< 768px) ── */@media (max-width: 767px) {.collection-split .btn {position: static; margin-top: 30px; text-align: center; background-color: #1a1a1a; color: #fff; border-radius: 45px; padding: 12px 24px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; }}"
       ],
       "name": "Products with image",
       "settings": {
