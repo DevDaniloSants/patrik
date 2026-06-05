@@ -33,9 +33,18 @@
         "text-3": {
           "type": "text",
           "settings": {
-            "title": "A Patrik",
-            "text": "<p><br/>A Patrik nasce entre dois olhares complementares.<br/>O conhecimento preciso da gemologia.<br/>E o olhar sensível capaz de reconhecer beleza onde poucos veem.<br/>Esse equilíbrio define cada criação,<br/>capaz de transformar matéria em significado, revelando a beleza invisível que cada pedra carrega.<br/><br/><br/></p>",
+            "title": "",
+            "text": "<p>A Patrik nasce entre dois olhares complementares.<br/>O conhecimento preciso da gemologia.<br/>E o olhar sensível capaz de reconhecer beleza onde poucos veem.<br/>Esse equilíbrio define cada criação,<br/>capaz de transformar matéria em significado, revelando a beleza invisível que cada pedra carrega.<br/></p><p><br/></p>",
             "text_size": 3,
+            "accordion_default": ""
+          }
+        },
+        "text_WA4hHC": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p>Largo São Francisco de Paula, 26, Centro, Rio de Janeiro/RJ<br/>CNPJ: 63.653.683/0001-04</p><p><br/></p>",
+            "text_size": 2,
             "accordion_default": ""
           }
         },
@@ -59,6 +68,7 @@
         "linklist-1",
         "linklist_dqwdNM",
         "text-3",
+        "text_WA4hHC",
         "newsletter"
       ],
       "settings": {
