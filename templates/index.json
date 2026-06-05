@@ -464,6 +464,89 @@
         "padding_bottom": 36
       }
     },
+    "section_columns_X6EhLY": {
+      "type": "section-columns",
+      "blocks": {
+        "text_block_VezfKz": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Use_the_EXACT_same_background__Nano_Banana_Pro_14061.png",
+            "shape_class": "rounded-lg",
+            "title": "Joias para Nascimento",
+            "text": "<p>Personalize pulseiras e colares com o nome de seus filhos e netos. Realize gravações em medalhas e pingentes.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_specialist_modal": true,
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        },
+        "text_block_f78Fzx": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Use_the_EXACT_same_background__Nano_Banana_Pro_52012.png",
+            "shape_class": "rounded-lg",
+            "title": "Celebre Ritos de Passagem",
+            "text": "<p>Presenteie os momentos marcantes, como Batizados, Bar Mitzvah, Casamentos, Formatura e Bodas.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_specialist_modal": true,
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        },
+        "text_block_HLG8Pp": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Use_the_EXACT_same_background__Nano_Banana_Pro_93021.png",
+            "shape_class": "rounded-lg",
+            "title": "Gravações de Momentos Especiais",
+            "text": "<p>Realize gravações dos momentos especiais da sua vida, com datas, apelidos ou o que você quiser.</p>",
+            "button_label": "",
+            "button_link": "",
+            "open_specialist_modal": true,
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_VezfKz",
+        "text_block_f78Fzx",
+        "text_block_HLG8Pp"
+      ],
+      "custom_css": [
+        ".kicker-flourished {font-size: 20px !important;}",
+        ".accent-title-large {font-size: 18px;}"
+      ],
+      "name": "Momentos Marcantes da Vida",
+      "settings": {
+        "title": "personalize e Eternize os Momentos Marcantes da Vida",
+        "bg": "palette--dark bg--invert--accent",
+        "align_text": "text-center",
+        "scale_image": true,
+        "wh_ratio": 1,
+        "grid_large": 3,
+        "grid_medium": 3,
+        "grid_mobile": 1.2,
+        "progress_bar_mobile": false,
+        "width": "wrapper--full",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "section_columns_BncX3A": {
       "type": "section-columns",
       "blocks": {
@@ -1216,90 +1299,6 @@
         "padding_bottom": 36
       }
     },
-    "section_columns_X6EhLY": {
-      "type": "section-columns",
-      "blocks": {
-        "text_block_VezfKz": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/Use_the_EXACT_same_background__Nano_Banana_Pro_14061.png",
-            "shape_class": "rounded-lg",
-            "title": "Joias para Nascimento",
-            "text": "<p>Personalize pulseiras e colares com o nome de seus filhos e netos. Realize gravações em medalhas e pingentes.</p>",
-            "button_label": "",
-            "button_link": "",
-            "open_specialist_modal": true,
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
-        },
-        "text_block_f78Fzx": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/Use_the_EXACT_same_background__Nano_Banana_Pro_52012.png",
-            "shape_class": "rounded-lg",
-            "title": "Celebre Ritos de Passagem",
-            "text": "<p>Presenteie os momentos marcantes, como Batizados, Bar Mitzvah, Casamentos, Formatura e Bodas.</p>",
-            "button_label": "",
-            "button_link": "",
-            "open_specialist_modal": true,
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
-        },
-        "text_block_HLG8Pp": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/Use_the_EXACT_same_background__Nano_Banana_Pro_93021.png",
-            "shape_class": "rounded-lg",
-            "title": "Gravações de Momentos Especiais",
-            "text": "<p>Realize gravações dos momentos especiais da sua vida, com datas, apelidos ou o que você quiser.</p>",
-            "button_label": "",
-            "button_link": "",
-            "open_specialist_modal": true,
-            "button_color": "btn--neutral",
-            "button_style": "btn--soft",
-            "enable_video": false,
-            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "video_button_color": "text--white"
-          }
-        }
-      },
-      "block_order": [
-        "text_block_VezfKz",
-        "text_block_f78Fzx",
-        "text_block_HLG8Pp"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".kicker-flourished {font-size: 20px !important;}",
-        ".accent-title-large {font-size: 18px;}"
-      ],
-      "name": "Momentos Marcantes da Vida",
-      "settings": {
-        "title": "Eternize os Momentos Marcantes da Vida",
-        "bg": "palette--dark bg--invert--accent",
-        "align_text": "text-center",
-        "scale_image": true,
-        "wh_ratio": 1,
-        "grid_large": 3,
-        "grid_medium": 3,
-        "grid_mobile": 1.2,
-        "progress_bar_mobile": false,
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "section_logos_Cd4AwJ": {
       "type": "section-logos",
       "blocks": {
@@ -1572,6 +1571,7 @@
     "collection_split_4BRfHx",
     "section_richtext_UkKtct",
     "section_gallery_slider_hxtEhm",
+    "section_columns_X6EhLY",
     "section_columns_BncX3A",
     "section_gallery_slider_TNB3tT",
     "section_video_ykPNyn",
@@ -1582,7 +1582,6 @@
     "section_richtext_q8gnYc",
     "section_richtext_jRYTUM",
     "section_list_collections_ftJBTL",
-    "section_columns_X6EhLY",
     "section_logos_Cd4AwJ",
     "section_icons_Fcggry",
     "17779271507e569dcf",
