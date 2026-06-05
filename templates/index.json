@@ -330,7 +330,7 @@
       "type": "collection-split",
       "custom_css": [
         "@media (min-width: 768px) {.collection-split .btn {background-color: #1a1a1a; color: #fff; border-radius: 45px; padding: 18px 30px; font-size: 15px; letter-spacing: 0.1em; }}",
-        " /* ── MOBILE (< 750px) ── */@media (max-width: 749px) {btn {position: static !important; margin-top: 16px !important; display: block !important; width: 100% !important; }}"
+        " /* ── MOBILE (< 750px) ── */@media (max-width: 749px) {.btn {position: static !important; margin-top: 16px !important; display: block !important; width: 100% !important; }}"
       ],
       "name": "Products with image",
       "settings": {
