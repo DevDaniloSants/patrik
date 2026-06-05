@@ -329,8 +329,8 @@
     "collection_split_4BRfHx": {
       "type": "collection-split",
       "custom_css": [
-        "/* Reposicionar o botão */.collection-split .btn {margin-top: 400px; margin-left: 260px; text-align: left; /* ou center / right */}",
-        " /* Estilo do botão */.collection-split .btn {background-color: #1a1a1a; color: #fff; border-radius: 0; padding: 12px 24px; font-size: 13px; letter-spacing: 0.1em;}"
+        "@media (min-width: 768px) {.collection-split .btn {position: absolute; bottom: 40px; right: 80px; background-color: #1a1a1a; color: #fff; border-radius: 50px; padding: 12px 24px; font-size: 15px; letter-spacing: 0.1em; }}",
+        "/* ── MOBILE (< 768px) ── */@media (max-width: 767px) {.collection-split .btn {position: static; margin-top: 16px; text-align: center; background-color: #1a1a1a; color: #fff; border-radius: 0; padding: 12px 24px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; }}"
       ],
       "name": "Products with image",
       "settings": {
