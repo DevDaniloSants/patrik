@@ -9,6 +9,37 @@
  */
 {
   "sections": {
+    "collection_split_WCHLyb": {
+      "type": "collection-split",
+      "name": "Products with image",
+      "settings": {
+        "collection": "",
+        "product_list": [
+          "colar-love-com-perola-em-ouro-18k",
+          "colar-em-ouro-18k-love"
+        ],
+        "image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0043_1.jpg",
+        "sticky_image_enable": true,
+        "swap": false,
+        "overlay_opacity": 15,
+        "overlay_color": "#000000",
+        "kicker": "Introducing",
+        "heading": "Featured products",
+        "text_color": "text--white",
+        "link_text": "View products",
+        "link": "",
+        "button_color": "btn--white",
+        "button_style": "btn",
+        "grid_large": 2,
+        "grid_small": 1.2,
+        "limit": 10,
+        "bg": "palette--light bg--neutral",
+        "object_position": "center-center",
+        "width": "wrapper--none",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "hero": {
       "type": "collection-hero",
       "settings": {
@@ -85,6 +116,7 @@
     }
   },
   "order": [
+    "collection_split_WCHLyb",
     "hero",
     "subcollections",
     "main"
