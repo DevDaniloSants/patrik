@@ -179,19 +179,6 @@
     },
     "section_richtext_cnmM7B": {
       "type": "section-richtext",
-      "blocks": {
-        "text_UXrAWQ": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_size": 4,
-            "text_columns": 1
-          }
-        }
-      },
-      "block_order": [
-        "text_UXrAWQ"
-      ],
       "name": "Espaçamento",
       "settings": {
         "align_text": "text-left",

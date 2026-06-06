@@ -77,9 +77,9 @@
       "settings": {
         "collection": "",
         "product_limit": 12,
-        "title": "Featured Products",
+        "title": "a escolha da patrik",
         "align_text": "title-center",
-        "progress_bar": "mobile",
+        "progress_bar": "both",
         "grid_large": 4,
         "grid_medium": 3,
         "grid_mobile": 1.2,
