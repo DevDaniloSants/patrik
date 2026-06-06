@@ -105,7 +105,7 @@
             "unit_background": "rgba(255, 255, 255, 0.1)",
             "number_color": "#ffffff",
             "label_color": "#ffffff",
-            "number_size": 48,
+            "number_size": 40,
             "label_size": 14,
             "unit_spacing": 20,
             "unit_width": 100,
