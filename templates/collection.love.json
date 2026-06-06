@@ -71,6 +71,24 @@
         "padding_bottom": 36
       }
     },
+    "section_collection_slider_Rc7Jnx": {
+      "type": "section-collection-slider",
+      "name": "Product slider",
+      "settings": {
+        "collection": "",
+        "product_limit": 12,
+        "title": "Featured Products",
+        "align_text": "title-center",
+        "progress_bar": "mobile",
+        "grid_large": 4,
+        "grid_medium": 3,
+        "grid_mobile": 1.2,
+        "bg": "palette--light bg--neutral",
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "17807799651e1d366b": {
       "type": "_blocks",
       "blocks": {
@@ -198,6 +216,7 @@
   "order": [
     "collection_split_WCHLyb",
     "collection_split_hKV9PF",
+    "section_collection_slider_Rc7Jnx",
     "17807799651e1d366b",
     "hero",
     "subcollections",
