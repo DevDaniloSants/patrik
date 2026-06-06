@@ -16,7 +16,8 @@
         "collection": "",
         "product_list": [
           "colar-love-com-perola-em-ouro-18k",
-          "colar-em-ouro-18k-love"
+          "colar-em-ouro-18k-love",
+          "colar-em-ouro-18k-com-love-e-brilhantes"
         ],
         "image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0043_1.jpg",
         "sticky_image_enable": true,
@@ -77,7 +78,7 @@
       "settings": {
         "collection": "selecao-namorados",
         "product_limit": 12,
-        "title": "a escolha da patrik",
+        "title": "Seleção Especial para o Dia dos Namorados",
         "align_text": "title-center",
         "progress_bar": "both",
         "grid_large": 4,
