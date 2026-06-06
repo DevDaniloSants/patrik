@@ -40,6 +40,37 @@
         "padding_bottom": 36
       }
     },
+    "collection_split_hKV9PF": {
+      "type": "collection-split",
+      "name": "Products with image",
+      "settings": {
+        "collection": "",
+        "product_list": [
+          "anel-em-ouro-18k-com-esmeralda-coracao-e-brilhantes",
+          "brinco-em-ouro-18k-coracao-com-esmeralda"
+        ],
+        "image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0381_1.jpg",
+        "sticky_image_enable": true,
+        "swap": true,
+        "overlay_opacity": 15,
+        "overlay_color": "#000000",
+        "kicker": "",
+        "heading": "",
+        "text_color": "text--white",
+        "link_text": "View products",
+        "link": "",
+        "button_color": "btn--white",
+        "button_style": "btn",
+        "grid_large": 2,
+        "grid_small": 1.2,
+        "limit": 10,
+        "bg": "palette--light bg--neutral",
+        "object_position": "center-center",
+        "width": "wrapper--none",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "hero": {
       "type": "collection-hero",
       "settings": {
@@ -117,6 +148,7 @@
   },
   "order": [
     "collection_split_WCHLyb",
+    "collection_split_hKV9PF",
     "hero",
     "subcollections",
     "main"
