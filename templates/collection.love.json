@@ -75,7 +75,7 @@
       "type": "section-collection-slider",
       "name": "Product slider",
       "settings": {
-        "collection": "",
+        "collection": "selecao-namorados",
         "product_limit": 12,
         "title": "a escolha da patrik",
         "align_text": "title-center",
@@ -120,7 +120,7 @@
             "heading_size": 48,
             "subheading_size": 20,
             "spacing": 20,
-            "unit_background": "rgba(255, 255, 255, 0.1)",
+            "unit_background": "#ffffff1a",
             "number_color": "#ffffff",
             "label_color": "#ffffff",
             "number_size": 24,
