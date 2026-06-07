@@ -1,6 +1,6 @@
 {% doc %}
   @prompt
-    uma section onde eu consigo adicionar 3 imagens que eu possa clicar e direcionar para uma nova section dentro da própria pagina
+    uma section onde euConsigo adicionar 3 imagens que eu possa clicar e direcionar para uma nova section dentro da própria pagina
 {% enddoc %}
 {% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
 
@@ -14,7 +14,7 @@
 
   .ai-image-nav-container-{{ ai_gen_id }} {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: {{ block.settings.image_spacing }}px;
     width: 100%;
   }
@@ -25,7 +25,6 @@
       margin: 0 auto;
     }
   }
-
 
   .ai-image-nav-item-{{ ai_gen_id }} {
     position: relative;
@@ -98,7 +97,7 @@
     padding: {{ block.settings.text_padding }}px;
   }
 
- .ai-image-nav-btn-{{ ai_gen_id }} {
+  .ai-image-nav-btn-{{ ai_gen_id }} {
     display: inline-block;
     padding: 8px 24px;
     background-color: #ffffff;
@@ -116,6 +115,7 @@
     background-color: #3c3f36;
     color: #ffffff;
   }
+
   @media screen and (max-width: 749px) {
     .ai-image-nav-container-{{ ai_gen_id }} {
       display: flex;
@@ -132,29 +132,28 @@
       scroll-snap-align: start;
     }
 
-       .ai-image-nav-btn-{{ ai_gen_id }} {
+    .ai-image-nav-btn-{{ ai_gen_id }} {
       font-size: 13px;
       padding: 8px 16px;
     }
-
+  }
 {% endstyle %}
 
 <image-navigator-{{ ai_gen_id }} class="ai-image-nav-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
   <div class="ai-image-nav-container-{{ ai_gen_id }}">
-    {% for i in (1..3) %}
+    {% for i in (1..4) %}
       {% liquid
         assign image_key = 'image_' | append: i
         assign text_key = 'text_' | append: i
         assign target_key = 'target_section_' | append: i
-        
         assign image = block.settings[image_key]
         assign text = block.settings[text_key]
         assign target = block.settings[target_key]
       %}
-      
+
       <div class="ai-image-nav-item-{{ ai_gen_id }}">
-        <a 
-          href="#{{ target }}" 
+        <a
+          href="#{{ target }}"
           class="ai-image-nav-link-{{ ai_gen_id }}"
           data-scroll-target="{{ target }}"
         >
@@ -173,7 +172,7 @@
                 {{ 'image' | placeholder_svg_tag }}
               </div>
             {% endif %}
-            
+
             {% if text != blank %}
               <div class="ai-image-nav-overlay-{{ ai_gen_id }}">
                 <span class="ai-image-nav-btn-{{ ai_gen_id }}">{{ text }}</span>
@@ -203,11 +202,11 @@
           link.addEventListener('click', (e) => {
             e.preventDefault();
             const targetId = link.getAttribute('data-scroll-target');
-            
+
             if (!targetId) return;
-            
+
             const targetElement = document.getElementById(targetId);
-            
+
             if (targetElement) {
               const offset = {{ block.settings.scroll_offset }};
               const elementPosition = targetElement.getBoundingClientRect().top;
@@ -344,6 +343,26 @@
     {
       "type": "text",
       "id": "target_section_3",
+      "label": "Target section ID"
+    },
+    {
+      "type": "header",
+      "content": "Image 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_4",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "text_4",
+      "label": "Text",
+      "default": "Section 4"
+    },
+    {
+      "type": "text",
+      "id": "target_section_4",
       "label": "Target section ID"
     },
     {
