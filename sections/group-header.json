@@ -119,7 +119,7 @@
         "main_menu_linklist": "main-menu",
         "mobile_menu_linklist": "",
         "full_width": false,
-        "underline_current": true,
+        "underline_current": false,
         "enable_search": true,
         "enable_account": true,
         "use_icons": true,

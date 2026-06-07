@@ -9,24 +9,6 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "page",
-      "disabled": true,
-      "settings": {
-        "kicker": "",
-        "kicker_size": 3,
-        "show_title": true,
-        "title_size": 8,
-        "show_content": true,
-        "content_size": 5,
-        "align_text": "text-left",
-        "text_color": "text--neutral",
-        "bg": "palette--light bg--neutral",
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "17808666295756a33c": {
       "type": "_blocks",
       "blocks": {
@@ -145,12 +127,30 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "kicker": "",
+        "kicker_size": 3,
+        "show_title": true,
+        "title_size": 8,
+        "show_content": true,
+        "content_size": 5,
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "palette--light bg--neutral",
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main",
     "17808666295756a33c",
     "section_richtext_FN8DKi",
-    "section_richtext_UrJddg"
+    "section_richtext_UrJddg",
+    "main"
   ]
 }
