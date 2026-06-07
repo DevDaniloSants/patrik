@@ -33231,19 +33231,23 @@ body.template-product .section-padding {
   display: none !important;
 }
 
-#jornada-casamento .header-wrapper,
-#jornada-casamento header,
-#jornada-casamento .header--sticky,
-#jornada-casamento .header--fixed,
-#jornada-casamento [data-sticky-header] {
+#journada-casamento .header__backfill {
+  display: none !important;
+}
+
+#journada-casamento .header-wrapper,
+#journada-casamento header,
+#journada-casamento .header--sticky,
+#journada-casamento .header--fixed,
+#journada-casamento [data-sticky-header] {
   background: transparent !important;
   position: absolute !important;
   width: 100%;
   z-index: 10;
 }
 
-#jornada-casamento .header--scrolled,
-#jornada-casamento .header--pinned,
-#jornada-casamento .header--not-top {
+#journada-casamento .header--scrolled,
+#journada-casamento .header--pinned,
+#journada-casamento .header--not-top {
   background: transparent !important;
 }
