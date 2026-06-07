@@ -94,7 +94,7 @@
           "settings": {
             "desktop_width_percent": 100,
             "section_padding": 50,
-            "image_spacing": 30,
+            "image_spacing": 50,
             "border_radius": 14,
             "image_aspect_ratio": 1,
             "image_1": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0314_1.jpg",
@@ -106,12 +106,12 @@
             "image_3": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0337.jpg",
             "text_3": "Católicos",
             "target_section_3": "",
-            "text_size": 24,
+            "text_size": 34,
             "text_weight": "600",
             "text_alignment": "left",
             "text_color": "#ffffff",
             "text_padding": 20,
-            "overlay_opacity": 0.5,
+            "overlay_opacity": 0,
             "scroll_offset": 80
           },
           "blocks": {}
