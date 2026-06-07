@@ -33221,3 +33221,8 @@ body.template-product .section-padding {
 #shopify-section-template--18823723319379__section_gallery_slider_BKFgHx [class*="kicker"] {
   font-size: 3.5rem; /* ajuste até igualar com a seção abaixo */
 }
+/* Banner slider - texto canto superior esquerdo */
+[data-block-id="template--20028676374611__17808666295756a33c__ai_gen_block_b029aaf_U9WHVJ"] {
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+}
