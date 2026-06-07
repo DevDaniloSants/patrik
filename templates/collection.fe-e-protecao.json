@@ -70,6 +70,7 @@
       "name": "Image banner",
       "settings": {
         "image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0111_1_1_8e347e9e-b071-4c64-8360-aec97b9c2677.jpg",
+        "mobile_image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0111_1_1_98044ec1-c738-4f31-b734-5c08e8a6a15e.jpg",
         "banner_link": "",
         "height": "use_screen_two_thirds",
         "overlay_opacity": 15,
