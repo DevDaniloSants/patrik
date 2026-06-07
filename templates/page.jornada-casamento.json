@@ -33,7 +33,7 @@
         "ai_gen_block_b029aaf_U9WHVJ": {
           "type": "ai_gen_block_b029aaf",
           "settings": {
-            "slider_height": 600,
+            "slider_height": 800,
             "slider_height_mobile": 450,
             "desktop_width_percent": 100,
             "text_alignment": "left",
