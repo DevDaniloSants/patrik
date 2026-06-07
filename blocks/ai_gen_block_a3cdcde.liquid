@@ -100,8 +100,18 @@
 
   @media screen and (max-width: 749px) {
     .ai-image-nav-container-{{ ai_gen_id }} {
-      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
       gap: {{ block.settings.image_spacing | times: 0.7 }}px;
+      padding-bottom: 12px;
+    }
+
+    .ai-image-nav-item-{{ ai_gen_id }} {
+      flex: 0 0 70%;
+      scroll-snap-align: start;
     }
 
     .ai-image-nav-text-{{ ai_gen_id }} {
@@ -336,22 +346,10 @@
       "id": "text_weight",
       "label": "Text weight",
       "options": [
-        {
-          "value": "400",
-          "label": "Normal"
-        },
-        {
-          "value": "500",
-          "label": "Medium"
-        },
-        {
-          "value": "600",
-          "label": "Semi-bold"
-        },
-        {
-          "value": "700",
-          "label": "Bold"
-        }
+        { "value": "400", "label": "Normal" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi-bold" },
+        { "value": "700", "label": "Bold" }
       ],
       "default": "600"
     },
@@ -360,18 +358,9 @@
       "id": "text_alignment",
       "label": "Text alignment",
       "options": [
-        {
-          "value": "left",
-          "label": "Left"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "right",
-          "label": "Right"
-        }
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
       ],
       "default": "left"
     },
