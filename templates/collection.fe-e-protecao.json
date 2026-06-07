@@ -86,30 +86,6 @@
         "padding_bottom": 0
       }
     },
-    "hero": {
-      "type": "collection-hero",
-      "settings": {
-        "text_align": "align--top-left",
-        "show_title": true,
-        "show_title_below": false,
-        "show_description": false,
-        "show_description_below": false,
-        "color_bg": "palette--light bg--neutral",
-        "show_image": true,
-        "bg_position": "center-center",
-        "image_height": "use_screen_one_third",
-        "overlay_opacity": 20,
-        "overlay_color": "#000000",
-        "enable_overlay_text": false,
-        "text_color": "text--white",
-        "width": "wrapper--none",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "width_text": "wrapper--full",
-        "padding_top_text": 36,
-        "padding_bottom_text": 0
-      }
-    },
     "17807929911f284b59": {
       "type": "_blocks",
       "blocks": {
@@ -117,17 +93,17 @@
           "type": "ai_gen_block_a3cdcde",
           "settings": {
             "desktop_width_percent": 100,
-            "section_padding": 40,
-            "image_spacing": 20,
-            "border_radius": 8,
+            "section_padding": 50,
+            "image_spacing": 30,
+            "border_radius": 14,
             "image_aspect_ratio": 1,
-            "image_1": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0317_1.jpg",
+            "image_1": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0314_1.jpg",
             "text_1": "Proteção",
             "target_section_1": "",
             "image_2": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0342_1_1.jpg",
-            "text_2": "Section 2",
+            "text_2": "Judaicos",
             "target_section_2": "",
-            "text_3": "Section 3",
+            "text_3": "Católicos",
             "target_section_3": "",
             "text_size": 24,
             "text_weight": "600",
@@ -164,6 +140,30 @@
         "padding_bottom": 0
       }
     },
+    "hero": {
+      "type": "collection-hero",
+      "settings": {
+        "text_align": "align--top-left",
+        "show_title": true,
+        "show_title_below": false,
+        "show_description": false,
+        "show_description_below": false,
+        "color_bg": "palette--light bg--neutral",
+        "show_image": true,
+        "bg_position": "center-center",
+        "image_height": "use_screen_one_third",
+        "overlay_opacity": 20,
+        "overlay_color": "#000000",
+        "enable_overlay_text": false,
+        "text_color": "text--white",
+        "width": "wrapper--none",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "width_text": "wrapper--full",
+        "padding_top_text": 36,
+        "padding_bottom_text": 0
+      }
+    },
     "main": {
       "type": "collection",
       "blocks": {
@@ -198,9 +198,9 @@
   },
   "order": [
     "section_hero_Ddrgfn",
-    "hero",
     "17807929911f284b59",
     "subcollections",
+    "hero",
     "main"
   ]
 }
