@@ -9,6 +9,82 @@
  */
 {
   "sections": {
+    "section_hero_Ddrgfn": {
+      "type": "section-hero",
+      "blocks": {
+        "kicker_9dJbn4": {
+          "type": "kicker",
+          "settings": {
+            "kicker": "",
+            "enable_line": false,
+            "text_size": 4
+          }
+        },
+        "heading_rhrQXe": {
+          "type": "heading",
+          "settings": {
+            "title": "",
+            "text_size": 10
+          }
+        },
+        "text_9bgV8g": {
+          "type": "text",
+          "settings": {
+            "richtext": "",
+            "text_size": 6
+          }
+        },
+        "button_dzBbFf": {
+          "type": "button",
+          "settings": {
+            "link_text_1": "",
+            "link_1": "",
+            "open_specialist_modal_1": false,
+            "specialist_message_1": "",
+            "button_size_1": "btn--long",
+            "button_style_1": "btn",
+            "button_color_1": "btn--white",
+            "link_text_2": "",
+            "link_2": "",
+            "open_specialist_modal_2": false,
+            "specialist_message_2": "",
+            "button_size_2": "btn--long",
+            "button_style_2": "btn-text-thick-line",
+            "button_color_2": "btn--white",
+            "link_text_3": "",
+            "link_3": "",
+            "open_specialist_modal_3": false,
+            "specialist_message_3": "",
+            "button_size_3": "btn--long",
+            "button_style_3": "btn-text-thick-line",
+            "button_color_3": "btn--white"
+          }
+        }
+      },
+      "block_order": [
+        "kicker_9dJbn4",
+        "heading_rhrQXe",
+        "text_9bgV8g",
+        "button_dzBbFf"
+      ],
+      "name": "Image banner",
+      "settings": {
+        "image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0111_1_1_8e347e9e-b071-4c64-8360-aec97b9c2677.jpg",
+        "banner_link": "",
+        "height": "use_screen_two_thirds",
+        "overlay_opacity": 15,
+        "overlay_color": "#000",
+        "enable_overlay_text": false,
+        "preload_image": false,
+        "content_width": 2000,
+        "text_align": "align--middle-center",
+        "text_color": "text--white",
+        "color_bg": "hero__content--transparent",
+        "width": "wrapper--none",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "hero": {
       "type": "collection-hero",
       "settings": {
@@ -82,40 +158,12 @@
         "padding_top": 20,
         "padding_bottom": 64
       }
-    },
-    "collection_split_WDFB6H": {
-      "type": "collection-split",
-      "name": "Products with image",
-      "settings": {
-        "collection": "",
-        "product_list": [],
-        "image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0347_1.jpg",
-        "sticky_image_enable": true,
-        "swap": false,
-        "overlay_opacity": 15,
-        "overlay_color": "#000000",
-        "kicker": "Introducing",
-        "heading": "Featured products",
-        "text_color": "text--white",
-        "link_text": "View products",
-        "link": "",
-        "button_color": "btn--white",
-        "button_style": "btn",
-        "grid_large": 2,
-        "grid_small": 1.2,
-        "limit": 10,
-        "bg": "palette--light bg--neutral",
-        "object_position": "center-center",
-        "width": "wrapper--none",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
+    "section_hero_Ddrgfn",
     "hero",
     "subcollections",
-    "main",
-    "collection_split_WDFB6H"
+    "main"
   ]
 }
