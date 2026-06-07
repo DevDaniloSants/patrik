@@ -96,7 +96,7 @@
             "section_padding": 50,
             "image_spacing": 50,
             "border_radius": 14,
-            "image_aspect_ratio": 1,
+            "image_aspect_ratio": 0.9,
             "image_1": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0314_1.jpg",
             "text_1": "Proteção",
             "target_section_1": "",
@@ -110,7 +110,7 @@
             "text_weight": "600",
             "text_alignment": "left",
             "text_color": "#ffffff",
-            "text_padding": 20,
+            "text_padding": 15,
             "overlay_opacity": 0,
             "scroll_offset": 80
           },
