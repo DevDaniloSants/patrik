@@ -33227,14 +33227,23 @@ body.template-product .section-padding {
   justify-content: flex-start !important;
 }
 /* Header transparente na página jornada-casamento */
-#a-patrik .header__backfill {
+#jornada-casamento .header__backfill {
   display: none !important;
 }
 
-#a-patrik .header-wrapper,
-#a-patrik header {
+#jornada-casamento .header-wrapper,
+#jornada-casamento header,
+#jornada-casamento .header--sticky,
+#jornada-casamento .header--fixed,
+#jornada-casamento [data-sticky-header] {
   background: transparent !important;
   position: absolute !important;
   width: 100%;
   z-index: 10;
+}
+
+#jornada-casamento .header--scrolled,
+#jornada-casamento .header--pinned,
+#jornada-casamento .header--not-top {
+  background: transparent !important;
 }
