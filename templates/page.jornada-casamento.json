@@ -44,7 +44,7 @@
             "show_overlay": false,
             "overlay_opacity": 0,
             "show_arrows": true,
-            "arrow_size": 45,
+            "arrow_size": 30,
             "arrow_background": "#ffffff",
             "arrow_color": "#000000",
             "show_dots": false,
