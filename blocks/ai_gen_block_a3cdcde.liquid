@@ -14,14 +14,14 @@
 
   .ai-image-nav-container-{{ ai_gen_id }} {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: {{ block.settings.image_spacing }}px;
     width: 100%;
   }
 
   @media screen and (min-width: 750px) {
     .ai-image-nav-container-{{ ai_gen_id }} {
-      width: 90%;
+      width: 100%;
       margin: 0 auto;
     }
   }
@@ -60,24 +60,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-
-  .ai-image-nav-placeholder-{{ ai_gen_id }} {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #f4f4f4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .ai-image-nav-placeholder-{{ ai_gen_id }} svg {
-    width: 60%;
-    height: 60%;
-    opacity: 0.3;
   }
 
   .ai-image-nav-overlay-{{ ai_gen_id }} {
@@ -151,36 +133,32 @@
         assign target = block.settings[target_key]
       %}
 
-      <div class="ai-image-nav-item-{{ ai_gen_id }}">
-        <a
-          href="#{{ target }}"
-          class="ai-image-nav-link-{{ ai_gen_id }}"
-          data-scroll-target="{{ target }}"
-        >
-          <div class="ai-image-nav-image-wrapper-{{ ai_gen_id }}">
-            {% if image %}
+      {% if image %}
+        <div class="ai-image-nav-item-{{ ai_gen_id }}">
+          <a
+            href="#{{ target }}"
+            class="ai-image-nav-link-{{ ai_gen_id }}"
+            data-scroll-target="{{ target }}"
+          >
+            <div class="ai-image-nav-image-wrapper-{{ ai_gen_id }}">
               <img
-                src="{{ image | image_url: width: 800 }}"
+                src="{{ image | image_url: width: 1200 }}"
                 alt="{{ text | escape }}"
                 loading="lazy"
-                width="800"
-                height="{{ 800 | times: block.settings.image_aspect_ratio | round }}"
+                width="1200"
+                height="{{ 1200 | times: block.settings.image_aspect_ratio | round }}"
                 class="ai-image-nav-image-{{ ai_gen_id }}"
               >
-            {% else %}
-              <div class="ai-image-nav-placeholder-{{ ai_gen_id }}">
-                {{ 'image' | placeholder_svg_tag }}
-              </div>
-            {% endif %}
 
-            {% if text != blank %}
-              <div class="ai-image-nav-overlay-{{ ai_gen_id }}">
-                <span class="ai-image-nav-btn-{{ ai_gen_id }}">{{ text }}</span>
-              </div>
-            {% endif %}
-          </div>
-        </a>
-      </div>
+              {% if text != blank %}
+                <div class="ai-image-nav-overlay-{{ ai_gen_id }}">
+                  <span class="ai-image-nav-btn-{{ ai_gen_id }}">{{ text }}</span>
+                </div>
+              {% endif %}
+            </div>
+          </a>
+        </div>
+      {% endif %}
     {% endfor %}
   </div>
 </image-navigator-{{ ai_gen_id }}>
