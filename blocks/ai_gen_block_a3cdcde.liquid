@@ -92,23 +92,22 @@
 
   .ai-image-nav-btn-{{ ai_gen_id }} {
     display: inline-block;
-    color: {{ block.settings.text_color }};
+    padding: 14px 32px;
+    background-color: {{ block.settings.text_color }};
+    color: #000000;
     font-size: {{ block.settings.text_size }}px;
     font-weight: {{ block.settings.text_weight }};
-    text-align: {{ block.settings.text_alignment }};
-    border: 2px solid {{ block.settings.text_color }};
-    padding: 10px 20px;
-    border-radius: 4px;
-    background: transparent;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease, color 0.3s ease;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    letter-spacing: 0.03em;
   }
 
   .ai-image-nav-item-{{ ai_gen_id }}:hover .ai-image-nav-btn-{{ ai_gen_id }} {
-    background: {{ block.settings.text_color }};
-    color: #000;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: {{ block.settings.text_color }};
   }
 
   @media screen and (max-width: 749px) {
@@ -129,7 +128,7 @@
 
     .ai-image-nav-btn-{{ ai_gen_id }} {
       font-size: {{ block.settings.text_size | times: 0.9 }}px;
-      padding: 8px 14px;
+      padding: 10px 20px;
     }
   }
 {% endstyle %}
