@@ -249,6 +249,61 @@
         "padding_top": 20,
         "padding_bottom": 0
       }
+    },
+    "blocks_4Bgcx4": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_32c97b6_VJdRFb": {
+          "type": "ai_gen_block_32c97b6",
+          "settings": {
+            "desktop_width_percent": 100,
+            "content_max_width": 800,
+            "text_alignment": "center",
+            "background_color": "#ffffff",
+            "section_padding_top": 50,
+            "section_padding_bottom": 50,
+            "section_padding_horizontal": 20,
+            "section_padding_top_mobile": 30,
+            "section_padding_bottom_mobile": 30,
+            "section_padding_horizontal_mobile": 15,
+            "title": "",
+            "title_size": 40,
+            "title_size_mobile": 28,
+            "title_color": "#000000",
+            "title_font_weight": "700",
+            "title_line_height": 1.2,
+            "title_margin_bottom": 20,
+            "subtitle": "",
+            "subtitle_size": 18,
+            "subtitle_size_mobile": 16,
+            "subtitle_color": "#666666",
+            "subtitle_font_weight": "400",
+            "subtitle_line_height": 1.5,
+            "subtitle_margin_bottom": 30,
+            "button_text": "Mais opções de Joias",
+            "button_link": "shopify://collections/todos-os-produtos",
+            "button_font_size": 16,
+            "button_font_size_mobile": 14,
+            "button_font_weight": "600",
+            "button_padding_vertical": 15,
+            "button_padding_horizontal": 40,
+            "button_border_radius": 45,
+            "button_bg_color": "#006652",
+            "button_text_color": "#ffffff",
+            "button_bg_hover_color": "#3c3f36",
+            "button_text_hover_color": "#ffffff",
+            "button_border_width": 0,
+            "button_border_color": "#006652",
+            "button_border_hover_color": "#3c3f36"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_32c97b6_VJdRFb"
+      ],
+      "name": "Text with button",
+      "settings": {}
     }
   },
   "order": [
@@ -259,6 +314,7 @@
     "section_collection_slider_KeKibV",
     "hero",
     "main",
-    "subcollections"
+    "subcollections",
+    "blocks_4Bgcx4"
   ]
 }
