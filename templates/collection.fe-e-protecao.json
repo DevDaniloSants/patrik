@@ -122,25 +122,6 @@
       ],
       "settings": {}
     },
-    "subcollections": {
-      "type": "collection-sub",
-      "settings": {
-        "subcollections": [],
-        "limit": 6,
-        "color_bg": "palette--light bg--neutral",
-        "text_color": "text--white",
-        "text_align": "align--middle-center",
-        "select_image": "collection",
-        "bg_position": "center-center",
-        "wh_ratio": 1.7,
-        "overlay_opacity": 20,
-        "overlay_color": "#000000",
-        "grid_mobile": 1.2,
-        "width": "wrapper",
-        "padding_top": 20,
-        "padding_bottom": 0
-      }
-    },
     "hero": {
       "type": "collection-hero",
       "settings": {
@@ -195,13 +176,32 @@
         "padding_top": 20,
         "padding_bottom": 64
       }
+    },
+    "subcollections": {
+      "type": "collection-sub",
+      "settings": {
+        "subcollections": [],
+        "limit": 6,
+        "color_bg": "palette--light bg--neutral",
+        "text_color": "text--primary",
+        "text_align": "align--middle-center",
+        "select_image": "collection",
+        "bg_position": "center-center",
+        "wh_ratio": 1.7,
+        "overlay_opacity": 20,
+        "overlay_color": "#000000",
+        "grid_mobile": 1.2,
+        "width": "wrapper",
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "section_hero_Ddrgfn",
     "17807929911f284b59",
-    "subcollections",
     "hero",
-    "main"
+    "main",
+    "subcollections"
   ]
 }
