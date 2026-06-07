@@ -33226,13 +33226,13 @@ body.template-product .section-padding {
   align-items: flex-start !important;
   justify-content: flex-start !important;
 }
-/* Força header transparente na página jornada-casamento */
-.template-page-jornada-casamento .header__backfill {
+/* Header transparente na página jornada-casamento */
+#a-patrik .header__backfill {
   display: none !important;
 }
 
-.template-page-jornada-casamento .header-wrapper,
-.template-page-jornada-casamento header {
+#a-patrik .header-wrapper,
+#a-patrik header {
   background: transparent !important;
   position: absolute !important;
   width: 100%;
