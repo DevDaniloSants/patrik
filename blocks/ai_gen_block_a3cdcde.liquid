@@ -12,13 +12,20 @@
     padding: {{ block.settings.section_padding }}px 0;
   }
 
-.ai-image-nav-container-{{ ai_gen_id }} {
+  .ai-image-nav-container-{{ ai_gen_id }} {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: {{ block.settings.image_spacing }}px;
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
   }
+
+  @media screen and (min-width: 750px) {
+    .ai-image-nav-container-{{ ai_gen_id }} {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+
 
   .ai-image-nav-item-{{ ai_gen_id }} {
     position: relative;
