@@ -86,16 +86,29 @@
     );
     display: flex;
     align-items: flex-end;
+    justify-content: {{ block.settings.text_alignment }};
     padding: {{ block.settings.text_padding }}px;
   }
 
-  .ai-image-nav-text-{{ ai_gen_id }} {
+  .ai-image-nav-btn-{{ ai_gen_id }} {
+    display: inline-block;
     color: {{ block.settings.text_color }};
     font-size: {{ block.settings.text_size }}px;
     font-weight: {{ block.settings.text_weight }};
-    margin: 0;
     text-align: {{ block.settings.text_alignment }};
-    width: 100%;
+    border: 2px solid {{ block.settings.text_color }};
+    padding: 10px 20px;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .ai-image-nav-item-{{ ai_gen_id }}:hover .ai-image-nav-btn-{{ ai_gen_id }} {
+    background: {{ block.settings.text_color }};
+    color: #000;
   }
 
   @media screen and (max-width: 749px) {
@@ -114,8 +127,9 @@
       scroll-snap-align: start;
     }
 
-    .ai-image-nav-text-{{ ai_gen_id }} {
+    .ai-image-nav-btn-{{ ai_gen_id }} {
       font-size: {{ block.settings.text_size | times: 0.9 }}px;
+      padding: 8px 14px;
     }
   }
 {% endstyle %}
@@ -157,7 +171,7 @@
             
             {% if text != blank %}
               <div class="ai-image-nav-overlay-{{ ai_gen_id }}">
-                <h3 class="ai-image-nav-text-{{ ai_gen_id }}">{{ text }}</h3>
+                <span class="ai-image-nav-btn-{{ ai_gen_id }}">{{ text }}</span>
               </div>
             {% endif %}
           </div>
