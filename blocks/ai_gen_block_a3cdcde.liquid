@@ -16,7 +16,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: {{ block.settings.image_spacing }}px;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
   }
 
   .ai-image-nav-item-{{ ai_gen_id }} {
@@ -39,12 +40,11 @@
     text-decoration: none;
   }
 
-   .ai-image-nav-container-{{ ai_gen_id }} {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: {{ block.settings.image_spacing }}px;
-    width: 80%;
-    margin: 0 auto;
+   .ai-image-nav-image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    padding-bottom: {{ block.settings.image_aspect_ratio | times: 75 }}%;
+    overflow: hidden;
   }
 
   .ai-image-nav-image-{{ ai_gen_id }} {
