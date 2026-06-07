@@ -110,6 +110,41 @@
         "padding_bottom_text": 0
       }
     },
+    "17807929911f284b59": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_a3cdcde_ctUFdj": {
+          "type": "ai_gen_block_a3cdcde",
+          "settings": {
+            "desktop_width_percent": 100,
+            "section_padding": 40,
+            "image_spacing": 20,
+            "border_radius": 8,
+            "image_aspect_ratio": 1,
+            "image_1": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0317_1.jpg",
+            "text_1": "Proteção",
+            "target_section_1": "",
+            "image_2": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0342_1_1.jpg",
+            "text_2": "Section 2",
+            "target_section_2": "",
+            "text_3": "Section 3",
+            "target_section_3": "",
+            "text_size": 24,
+            "text_weight": "600",
+            "text_alignment": "left",
+            "text_color": "#ffffff",
+            "text_padding": 20,
+            "overlay_opacity": 0.5,
+            "scroll_offset": 80
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_a3cdcde_ctUFdj"
+      ],
+      "settings": {}
+    },
     "subcollections": {
       "type": "collection-sub",
       "settings": {
@@ -164,6 +199,7 @@
   "order": [
     "section_hero_Ddrgfn",
     "hero",
+    "17807929911f284b59",
     "subcollections",
     "main"
   ]
