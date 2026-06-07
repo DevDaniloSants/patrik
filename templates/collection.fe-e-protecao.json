@@ -99,7 +99,7 @@
             "image_aspect_ratio": 0.9,
             "image_1": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0314_1.jpg",
             "text_1": "Proteção",
-            "target_section_1": "",
+            "target_section_1": "https://admin.shopify.com/store/heq2wz-cr/themes/142675378259/editor?previewPath=%2Fcollections%2Freligiosos§ion=template--20023708155987__17807929911f284b59&block=template--20023708155987__17807929911f284b59__ai_gen_block_a3cdcde_ctUFdj",
             "image_2": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0342_1_1.jpg",
             "text_2": "Judaicos",
             "target_section_2": "",
@@ -121,6 +121,24 @@
         "ai_gen_block_a3cdcde_ctUFdj"
       ],
       "settings": {}
+    },
+    "section_collection_slider_q3LJ7e": {
+      "type": "section-collection-slider",
+      "name": "Product slider",
+      "settings": {
+        "collection": "protecao",
+        "product_limit": 12,
+        "title": "Proteção",
+        "align_text": "title-center",
+        "progress_bar": "mobile",
+        "grid_large": 4,
+        "grid_medium": 3,
+        "grid_mobile": 1.2,
+        "bg": "palette--light bg--neutral",
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     },
     "hero": {
       "type": "collection-hero",
@@ -195,32 +213,14 @@
         "padding_top": 20,
         "padding_bottom": 0
       }
-    },
-    "section_collection_slider_q3LJ7e": {
-      "type": "section-collection-slider",
-      "name": "Product slider",
-      "settings": {
-        "collection": "protecao",
-        "product_limit": 12,
-        "title": "Proteção",
-        "align_text": "title-center",
-        "progress_bar": "mobile",
-        "grid_large": 4,
-        "grid_medium": 3,
-        "grid_mobile": 1.2,
-        "bg": "palette--light bg--neutral",
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "section_hero_Ddrgfn",
     "17807929911f284b59",
+    "section_collection_slider_q3LJ7e",
     "hero",
     "main",
-    "subcollections",
-    "section_collection_slider_q3LJ7e"
+    "subcollections"
   ]
 }
