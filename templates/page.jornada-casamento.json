@@ -147,12 +147,84 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "178087092688e5a9ed": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_a3cdcde_ph9wdx": {
+          "type": "ai_gen_block_a3cdcde",
+          "settings": {
+            "desktop_width_percent": 100,
+            "section_padding": 50,
+            "image_spacing": 50,
+            "border_radius": 14,
+            "image_aspect_ratio": 0.9,
+            "image_1": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0314_1.jpg",
+            "text_1": "Proteção",
+            "target_section_1": "shopify-section-template--20023708155987__section_collection_slider_q3LJ7e",
+            "image_2": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0342_1_1.jpg",
+            "text_2": "Judaicos",
+            "target_section_2": "shopify-section-template--20023708155987__section_collection_slider_TbXUgH",
+            "image_3": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0337_1.jpg",
+            "text_3": "Católicos",
+            "target_section_3": "shopify-section-template--20023708155987__section_collection_slider_KeKibV",
+            "text_size": 34,
+            "text_weight": "600",
+            "text_alignment": "left",
+            "text_color": "#ffffff",
+            "text_padding": 15,
+            "overlay_opacity": 0,
+            "scroll_offset": 80
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_c64c5c2_gKCPmB": {
+          "type": "ai_gen_block_c64c5c2",
+          "settings": {
+            "main_title": "Explore our collections",
+            "title_size": 28,
+            "title_color": "#3c3f36",
+            "title_alignment": "center",
+            "title_spacing": 60,
+            "desktop_width_percent": 100,
+            "section_padding": 80,
+            "columns_desktop": "4",
+            "columns_mobile": "1",
+            "grid_gap": 35,
+            "image_aspect_ratio": 1,
+            "image_border_radius": 30,
+            "enable_hover_zoom": true,
+            "placeholder_bg_color": "#f7f5f4",
+            "item_title_size": 20,
+            "overlay_text_color": "#ffffff",
+            "overlay_text_alignment": "left",
+            "overlay_gradient": "linear-gradient(to top, rgba(0,0,0,0.6), transparent)",
+            "overlay_padding": 20,
+            "hide_overlay_on_hover": false,
+            "title_1": "Collection 1",
+            "link_1": "",
+            "title_2": "Collection 2",
+            "link_2": "",
+            "title_3": "Collection 3",
+            "link_3": "",
+            "title_4": "Collection 4",
+            "link_4": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_a3cdcde_ph9wdx",
+        "ai_gen_block_c64c5c2_gKCPmB"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "17808666295756a33c",
     "section_richtext_FN8DKi",
     "section_richtext_UrJddg",
-    "main"
+    "main",
+    "178087092688e5a9ed"
   ]
 }
