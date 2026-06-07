@@ -140,6 +140,24 @@
         "padding_bottom": 36
       }
     },
+    "section_collection_slider_TbXUgH": {
+      "type": "section-collection-slider",
+      "name": "Product slider",
+      "settings": {
+        "collection": "judaicos",
+        "product_limit": 12,
+        "title": "Judaicos",
+        "align_text": "title-center",
+        "progress_bar": "mobile",
+        "grid_large": 4,
+        "grid_medium": 3,
+        "grid_mobile": 1.2,
+        "bg": "palette--light bg--neutral",
+        "width": "wrapper",
+        "padding_top": 78,
+        "padding_bottom": 36
+      }
+    },
     "hero": {
       "type": "collection-hero",
       "settings": {
@@ -219,6 +237,7 @@
     "section_hero_Ddrgfn",
     "17807929911f284b59",
     "section_collection_slider_q3LJ7e",
+    "section_collection_slider_TbXUgH",
     "hero",
     "main",
     "subcollections"
