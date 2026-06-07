@@ -195,6 +195,24 @@
         "padding_top": 20,
         "padding_bottom": 0
       }
+    },
+    "section_collection_slider_q3LJ7e": {
+      "type": "section-collection-slider",
+      "name": "Product slider",
+      "settings": {
+        "collection": "protecao",
+        "product_limit": 12,
+        "title": "Proteção",
+        "align_text": "title-center",
+        "progress_bar": "mobile",
+        "grid_large": 4,
+        "grid_medium": 3,
+        "grid_mobile": 1.2,
+        "bg": "palette--light bg--neutral",
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -202,6 +220,7 @@
     "17807929911f284b59",
     "hero",
     "main",
-    "subcollections"
+    "subcollections",
+    "section_collection_slider_q3LJ7e"
   ]
 }
