@@ -90,26 +90,24 @@
     padding: {{ block.settings.text_padding }}px;
   }
 
-  .ai-image-nav-btn-{{ ai_gen_id }} {
+.ai-image-nav-btn-{{ ai_gen_id }} {
     display: inline-block;
     padding: 14px 32px;
-    background-color: {{ block.settings.text_color }};
-    color: #000000;
-    font-size: {{ block.settings.text_size }}px;
+    background-color: #006652;
+    color: #ffffff;
+    font-size: 16px;
     font-weight: {{ block.settings.text_weight }};
     text-align: center;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
-    letter-spacing: 0.03em;
   }
 
   .ai-image-nav-item-{{ ai_gen_id }}:hover .ai-image-nav-btn-{{ ai_gen_id }} {
-    background-color: rgba(0, 0, 0, 0.75);
-    color: {{ block.settings.text_color }};
+    background-color: #3c3f36;
+    color: #ffffff;
   }
-
   @media screen and (max-width: 749px) {
     .ai-image-nav-container-{{ ai_gen_id }} {
       display: flex;
