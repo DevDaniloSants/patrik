@@ -100,7 +100,8 @@
     border: none;
     border-radius: 45px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+    opacity: {{ block.settings.button_opacity | divided_by: 100.0 }};
   }
 
   .ai-image-nav-item-{{ ai_gen_id }}:hover .ai-image-nav-btn-{{ ai_gen_id }} {
@@ -464,6 +465,20 @@
       "step": 5,
       "unit": "px",
       "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Botão"
+    },
+    {
+      "type": "range",
+      "id": "button_opacity",
+      "label": "Opacidade do botão",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
     },
     {
       "type": "header",
