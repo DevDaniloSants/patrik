@@ -12,6 +12,15 @@
     padding: {{ block.settings.section_padding }}px 0;
   }
 
+  .ai-image-nav-title-{{ ai_gen_id }} {
+    text-align: center;
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: {{ block.settings.title_weight }};
+    color: {{ block.settings.title_color }};
+    margin-bottom: {{ block.settings.title_margin_bottom }}px;
+    padding: 0 20px;
+  }
+
   .ai-image-nav-container-{{ ai_gen_id }} {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -122,6 +131,11 @@
 {% endstyle %}
 
 <image-navigator-{{ ai_gen_id }} class="ai-image-nav-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+
+  {% if block.settings.title != blank %}
+    <h2 class="ai-image-nav-title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+  {% endif %}
+
   <div class="ai-image-nav-container-{{ ai_gen_id }}">
     {% for i in (1..4) %}
       {% liquid
@@ -209,6 +223,54 @@
   "name": "Image navigator",
   "tag": null,
   "settings": [
+    {
+      "type": "header",
+      "content": "Título"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Título",
+      "default": "Explore nossas coleções"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Tamanho do título",
+      "min": 16,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "select",
+      "id": "title_weight",
+      "label": "Peso do título",
+      "options": [
+        { "value": "400", "label": "Normal" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semi-bold" },
+        { "value": "700", "label": "Bold" }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Cor do título",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "title_margin_bottom",
+      "label": "Espaço abaixo do título",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    },
     {
       "type": "header",
       "content": "Layout"

@@ -118,7 +118,7 @@
         "logo_text_size": 5,
         "main_menu_linklist": "main-menu",
         "mobile_menu_linklist": "",
-        "full_width": false,
+        "full_width": true,
         "underline_current": false,
         "enable_search": true,
         "enable_account": true,

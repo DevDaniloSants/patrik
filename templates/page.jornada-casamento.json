@@ -9,57 +9,6 @@
  */
 {
   "sections": {
-    "17808666295756a33c": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_b029aaf_U9WHVJ": {
-          "type": "ai_gen_block_b029aaf",
-          "settings": {
-            "slider_height": 800,
-            "slider_height_mobile": 450,
-            "desktop_width_percent": 100,
-            "text_alignment": "left",
-            "content_max_width": 450,
-            "title_size": 48,
-            "text_size": 18,
-            "text_color": "#ffffff",
-            "show_overlay": false,
-            "overlay_opacity": 0,
-            "show_arrows": true,
-            "arrow_size": 30,
-            "arrow_background": "#ffffff",
-            "arrow_color": "#000000",
-            "show_dots": false,
-            "dot_color": "#ffffff",
-            "autoplay": true,
-            "autoplay_speed": 4,
-            "slide_1_enabled": true,
-            "slide_1_image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0261_1.jpg",
-            "slide_1_title": "",
-            "slide_1_text": "",
-            "slide_2_enabled": true,
-            "slide_2_image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0260_1.jpg",
-            "slide_2_title": "",
-            "slide_2_text": "",
-            "slide_3_enabled": true,
-            "slide_3_image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0259_1.jpg",
-            "slide_3_title": "",
-            "slide_3_text": "",
-            "slide_4_enabled": false,
-            "slide_4_title": "",
-            "slide_4_text": "",
-            "slide_5_enabled": false,
-            "slide_5_title": "",
-            "slide_5_text": ""
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_b029aaf_U9WHVJ"
-      ],
-      "settings": {}
-    },
     "section_richtext_FN8DKi": {
       "type": "section-richtext",
       "blocks": {
@@ -219,6 +168,57 @@
       "block_order": [
         "ai_gen_block_a3cdcde_ph9wdx",
         "ai_gen_block_c64c5c2_gKCPmB"
+      ],
+      "settings": {}
+    },
+    "17808666295756a33c": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_b029aaf_U9WHVJ": {
+          "type": "ai_gen_block_b029aaf",
+          "settings": {
+            "slider_height": 800,
+            "slider_height_mobile": 450,
+            "desktop_width_percent": 100,
+            "text_alignment": "left",
+            "content_max_width": 450,
+            "title_size": 48,
+            "text_size": 18,
+            "text_color": "#ffffff",
+            "show_overlay": false,
+            "overlay_opacity": 0,
+            "show_arrows": true,
+            "arrow_size": 30,
+            "arrow_background": "#ffffff",
+            "arrow_color": "#000000",
+            "show_dots": false,
+            "dot_color": "#ffffff",
+            "autoplay": true,
+            "autoplay_speed": 4,
+            "slide_1_enabled": true,
+            "slide_1_image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0261_1.jpg",
+            "slide_1_title": "",
+            "slide_1_text": "",
+            "slide_2_enabled": true,
+            "slide_2_image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0260_1.jpg",
+            "slide_2_title": "",
+            "slide_2_text": "",
+            "slide_3_enabled": true,
+            "slide_3_image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0259_1.jpg",
+            "slide_3_title": "",
+            "slide_3_text": "",
+            "slide_4_enabled": false,
+            "slide_4_title": "",
+            "slide_4_text": "",
+            "slide_5_enabled": false,
+            "slide_5_title": "",
+            "slide_5_text": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_b029aaf_U9WHVJ"
       ],
       "settings": {}
     }
