@@ -254,6 +254,58 @@
         "ai_gen_block_347402a_ghqiFG"
       ],
       "settings": {}
+    },
+    "1780943867bab9d473": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_f118a34_PBrLNj": {
+          "type": "ai_gen_block_f118a34",
+          "settings": {
+            "container_width": 1200,
+            "section_padding": 60,
+            "gap_between_sliders": 40,
+            "background_color": "#ffffff",
+            "image_1": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0302_2_2.jpg",
+            "image_1_title": "",
+            "image_1_description": "",
+            "image_2_title": "",
+            "image_2_description": "",
+            "image_3_title": "",
+            "image_3_description": "",
+            "image_4_title": "",
+            "image_4_description": "",
+            "image_5_title": "",
+            "image_5_description": "",
+            "image_border_radius": 8,
+            "text_title_size": 24,
+            "text_description_size": 14,
+            "product_1": "",
+            "product_2": "",
+            "product_3": "",
+            "product_4": "",
+            "product_5": "",
+            "product_6": "",
+            "product_7": "",
+            "product_8": "",
+            "product_9": "",
+            "product_10": "",
+            "product_gap": 20,
+            "product_border_radius": 8,
+            "product_card_bg": "#ffffff",
+            "product_text_color": "#3c3f36",
+            "product_title_size": 16,
+            "product_price_size": 14,
+            "arrow_size": 40,
+            "arrow_bg_color": "#ffffff",
+            "arrow_color": "#3c3f36"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_f118a34_PBrLNj"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -262,6 +314,7 @@
     "section_richtext_UrJddg",
     "main",
     "178087092688e5a9ed",
-    "1780890255bc399d2f"
+    "1780890255bc399d2f",
+    "1780943867bab9d473"
   ]
 }
