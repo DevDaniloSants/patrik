@@ -182,6 +182,7 @@
             "text_alignment": "center",
             "text_color": "#ffffff",
             "text_padding": 10,
+            "button_opacity": 55,
             "overlay_opacity": 0,
             "scroll_offset": 80
           },
