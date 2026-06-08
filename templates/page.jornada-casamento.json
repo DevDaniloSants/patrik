@@ -161,7 +161,7 @@
             "title_margin_bottom": 80,
             "background_color": "#f3f3f3",
             "desktop_width_percent": 100,
-            "section_padding": 30,
+            "section_padding": 50,
             "image_spacing": 25,
             "border_radius": 20,
             "image_aspect_ratio": 1,
