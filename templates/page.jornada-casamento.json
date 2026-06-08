@@ -159,6 +159,7 @@
             "title_weight": "600",
             "title_color": "#000000",
             "title_margin_bottom": 56,
+            "background_color": "#d7d7d7",
             "desktop_width_percent": 100,
             "section_padding": 100,
             "image_spacing": 50,
