@@ -9,7 +9,8 @@
     display: block;
     width: {{ block.settings.desktop_width_percent }}%;
     max-width: 100%;
-    padding: {{ block.settings.section_padding }}px 0;
+    padding: {{ block.settings.section_padding }}px 20px;
+    background-color: {{ block.settings.background_color }};
   }
 
   .ai-image-nav-title-{{ ai_gen_id }} {
@@ -274,6 +275,12 @@
     {
       "type": "header",
       "content": "Layout"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Cor de fundo",
+      "default": "#ffffff"
     },
     {
       "type": "range",
