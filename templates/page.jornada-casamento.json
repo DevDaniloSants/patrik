@@ -20,7 +20,7 @@
             "desktop_width_percent": 100,
             "text_alignment": "left",
             "content_max_width": 450,
-            "title_size": 44,
+            "title_size": 36,
             "text_size": 12,
             "text_color": "#ffffff",
             "show_overlay": false,
