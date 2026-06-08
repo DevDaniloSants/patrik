@@ -24,6 +24,9 @@
   .ai-text-image-content-{{ ai_gen_id }} {
     flex: 1;
     text-align: {{ block.settings.text_alignment }};
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .ai-text-image-media-{{ ai_gen_id }} {
@@ -105,6 +108,7 @@
     border: {{ block.settings.button_border_width }}px solid {{ block.settings.button_border_color }};
     text-transform: {% if block.settings.button_uppercase %}uppercase{% else %}none{% endif %};
     letter-spacing: {% if block.settings.button_uppercase %}0.05em{% else %}normal{% endif %};
+    opacity: {{ block.settings.button_opacity | divided_by: 100.0 }};
     z-index: 2;
   }
 
@@ -251,22 +255,23 @@
       "label": "Link do botão"
     },
     {
+      "type": "range",
+      "id": "button_opacity",
+      "label": "Opacidade do botão",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
       "type": "select",
       "id": "button_position_vertical",
       "label": "Posição vertical",
       "options": [
-        {
-          "value": "top",
-          "label": "Topo"
-        },
-        {
-          "value": "center",
-          "label": "Centro"
-        },
-        {
-          "value": "bottom",
-          "label": "Inferior"
-        }
+        { "value": "top", "label": "Topo" },
+        { "value": "center", "label": "Centro" },
+        { "value": "bottom", "label": "Inferior" }
       ],
       "default": "bottom"
     },
@@ -275,18 +280,9 @@
       "id": "button_position_horizontal",
       "label": "Posição horizontal",
       "options": [
-        {
-          "value": "left",
-          "label": "Esquerda"
-        },
-        {
-          "value": "center",
-          "label": "Centro"
-        },
-        {
-          "value": "right",
-          "label": "Direita"
-        }
+        { "value": "left", "label": "Esquerda" },
+        { "value": "center", "label": "Centro" },
+        { "value": "right", "label": "Direita" }
       ],
       "default": "center"
     },
@@ -339,24 +335,12 @@
       "id": "button_font_weight",
       "label": "Peso da fonte",
       "options": [
-        {
-          "value": "400",
-          "label": "Normal"
-        },
-        {
-          "value": "500",
-          "label": "Médio"
-        },
-        {
-          "value": "600",
-          "label": "Semi-negrito"
-        },
-        {
-          "value": "700",
-          "label": "Negrito"
-        }
+        { "value": "400", "label": "Normal" },
+        { "value": "500", "label": "Médio" },
+        { "value": "600", "label": "Semi-negrito" },
+        { "value": "700", "label": "Negrito" }
       ],
-      "default": "500"
+      "default": "600"
     },
     {
       "type": "checkbox",
@@ -513,18 +497,9 @@
       "id": "text_alignment",
       "label": "Alinhamento do texto",
       "options": [
-        {
-          "value": "left",
-          "label": "Esquerda"
-        },
-        {
-          "value": "center",
-          "label": "Centro"
-        },
-        {
-          "value": "right",
-          "label": "Direita"
-        }
+        { "value": "left", "label": "Esquerda" },
+        { "value": "center", "label": "Centro" },
+        { "value": "right", "label": "Direita" }
       ],
       "default": "left"
     },
@@ -563,18 +538,9 @@
       "id": "text_alignment_mobile",
       "label": "Alinhamento do texto mobile",
       "options": [
-        {
-          "value": "left",
-          "label": "Esquerda"
-        },
-        {
-          "value": "center",
-          "label": "Centro"
-        },
-        {
-          "value": "right",
-          "label": "Direita"
-        }
+        { "value": "left", "label": "Esquerda" },
+        { "value": "center", "label": "Centro" },
+        { "value": "right", "label": "Direita" }
       ],
       "default": "center"
     },
