@@ -194,60 +194,65 @@
       ],
       "settings": {}
     },
-    "section_double_BDMcq3": {
-      "type": "section-double",
+    "1780890255bc399d2f": {
+      "type": "_blocks",
       "blocks": {
-        "text_jPtAtg": {
-          "type": "text",
+        "ai_gen_block_347402a_ghqiFG": {
+          "type": "ai_gen_block_347402a",
           "settings": {
-            "kicker": "",
             "title": "Sua história é única. Sua joia também pode ser.",
-            "text": "<p><br/>Desenvolvemos joias personalizadas para celebrar os momentos mais importantes da sua vida.<br/><br/></p>",
-            "font_size": 4,
-            "text_columns": 1,
-            "align_text": "text-center",
-            "button_text": "",
-            "button_url": "",
-            "button_color": "btn--neutral",
-            "button_style": "btn-text-thick-line",
-            "text_color": "text--bright--primary",
-            "bg_color": ""
-          }
-        },
-        "image_DqEtaz": {
-          "type": "image",
-          "settings": {
-            "overlay_opacity": 15,
-            "overlay_color": "#000",
-            "enable_overlay_text": false,
-            "kicker": "",
-            "title": "",
-            "richtext": "",
-            "text_align": "align--middle-center",
-            "text_color": "text--white",
-            "link_text": "Shop Now",
-            "link": "",
-            "button_color": "btn--white",
-            "button_style": "btn"
-          }
+            "text": "<p>Desenvolvemos joias personalizadas para celebrar os momentos mais importantes da sua vida.<br/><br/></p>",
+            "image": "shopify://shop_images/Gemini_Generated_Image_43fazs43fazs43fa.png",
+            "button_text": "trtyrty",
+            "button_link": "",
+            "button_position_vertical": "center",
+            "button_position_horizontal": "center",
+            "button_offset_vertical": 30,
+            "button_offset_horizontal": 30,
+            "button_font_size": 14,
+            "button_font_size_mobile": 12,
+            "button_font_weight": "500",
+            "button_uppercase": false,
+            "button_padding_vertical": 12,
+            "button_padding_horizontal": 24,
+            "button_padding_vertical_mobile": 10,
+            "button_padding_horizontal_mobile": 20,
+            "button_border_radius": 5,
+            "button_border_width": 1,
+            "button_bg_color": "#ffffff",
+            "button_text_color": "#000000",
+            "button_border_color": "#000000",
+            "button_bg_color_hover": "#000000",
+            "button_text_color_hover": "#ffffff",
+            "button_border_color_hover": "#000000",
+            "image_width": 65,
+            "image_height": 200,
+            "max_width": 1200,
+            "spacing": 40,
+            "text_alignment": "center",
+            "mobile_text_first": false,
+            "image_height_mobile": 225,
+            "spacing_mobile": 30,
+            "text_alignment_mobile": "center",
+            "title_size": 26,
+            "title_size_mobile": 28,
+            "title_spacing": 20,
+            "text_size": 16,
+            "text_size_mobile": 14,
+            "title_color": "#3c3f36",
+            "text_color": "#3c3f36",
+            "padding_top": 50,
+            "padding_bottom": 50,
+            "padding_horizontal": 20,
+            "image_border_radius": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "text_jPtAtg",
-        "image_DqEtaz"
+        "ai_gen_block_347402a_ghqiFG"
       ],
-      "name": "Image with text",
-      "settings": {
-        "target_material": "",
-        "height": "use_screen_one_fifth",
-        "brick_gutter": 10,
-        "borders": false,
-        "bg_color": "",
-        "preload_image": false,
-        "width": "wrapper--none",
-        "padding_top": 16,
-        "padding_bottom": 14
-      }
+      "settings": {}
     }
   },
   "order": [
@@ -256,6 +261,6 @@
     "section_richtext_UrJddg",
     "main",
     "178087092688e5a9ed",
-    "section_double_BDMcq3"
+    "1780890255bc399d2f"
   ]
 }
