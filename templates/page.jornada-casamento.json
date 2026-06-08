@@ -230,7 +230,7 @@
             "max_width": 1200,
             "spacing": 40,
             "text_alignment": "center",
-            "mobile_text_first": false,
+            "mobile_text_first": true,
             "image_height_mobile": 225,
             "spacing_mobile": 30,
             "text_alignment_mobile": "center",
