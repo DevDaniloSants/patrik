@@ -193,6 +193,61 @@
         "ai_gen_block_a3cdcde_ph9wdx"
       ],
       "settings": {}
+    },
+    "section_double_BDMcq3": {
+      "type": "section-double",
+      "blocks": {
+        "text_jPtAtg": {
+          "type": "text",
+          "settings": {
+            "kicker": "",
+            "title": "Sua história é única. Sua joia também pode ser.",
+            "text": "<p><br/>Desenvolvemos joias personalizadas para celebrar os momentos mais importantes da sua vida.<br/><br/></p>",
+            "font_size": 4,
+            "text_columns": 1,
+            "align_text": "text-center",
+            "button_text": "",
+            "button_url": "",
+            "button_color": "btn--neutral",
+            "button_style": "btn-text-thick-line",
+            "text_color": "text--bright--primary",
+            "bg_color": ""
+          }
+        },
+        "image_DqEtaz": {
+          "type": "image",
+          "settings": {
+            "overlay_opacity": 15,
+            "overlay_color": "#000",
+            "enable_overlay_text": false,
+            "kicker": "",
+            "title": "",
+            "richtext": "",
+            "text_align": "align--middle-center",
+            "text_color": "text--white",
+            "link_text": "Shop Now",
+            "link": "",
+            "button_color": "btn--white",
+            "button_style": "btn"
+          }
+        }
+      },
+      "block_order": [
+        "text_jPtAtg",
+        "image_DqEtaz"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "target_material": "",
+        "height": "use_screen_one_fifth",
+        "brick_gutter": 10,
+        "borders": false,
+        "bg_color": "",
+        "preload_image": false,
+        "width": "wrapper--none",
+        "padding_top": 16,
+        "padding_bottom": 14
+      }
     }
   },
   "order": [
@@ -200,6 +255,7 @@
     "section_richtext_FN8DKi",
     "section_richtext_UrJddg",
     "main",
-    "178087092688e5a9ed"
+    "178087092688e5a9ed",
+    "section_double_BDMcq3"
   ]
 }
