@@ -154,12 +154,12 @@
         "ai_gen_block_a3cdcde_ph9wdx": {
           "type": "ai_gen_block_a3cdcde",
           "settings": {
-            "title": "Explore nossas coleções",
-            "title_size": 32,
-            "title_weight": "600",
+            "title": "",
+            "title_size": 30,
+            "title_weight": "700",
             "title_color": "#000000",
-            "title_margin_bottom": 56,
-            "background_color": "#d7d7d7",
+            "title_margin_bottom": 80,
+            "background_color": "#f3f3f3",
             "desktop_width_percent": 100,
             "section_padding": 100,
             "image_spacing": 50,
