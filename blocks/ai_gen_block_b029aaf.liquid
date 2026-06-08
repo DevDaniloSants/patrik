@@ -30,8 +30,8 @@
     height: 100%;
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   .ai-banner-slide-image-{{ ai_gen_id }} {
@@ -72,12 +72,18 @@
   }
 
   .ai-banner-slide-content-{{ ai_gen_id }} {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     z-index: 2;
     text-align: {{ block.settings.text_alignment }};
-    padding: 40px;
+    padding: 60px 60px 40px 60px;
     max-width: {{ block.settings.content_max_width }}px;
     color: {{ block.settings.text_color }};
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   .ai-banner-slide-title-{{ ai_gen_id }} {
@@ -90,7 +96,8 @@
   .ai-banner-slide-text-{{ ai_gen_id }} {
     font-size: {{ block.settings.text_size }}px;
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.6;
+    white-space: pre-wrap;
   }
 
   .ai-banner-slider-arrow-{{ ai_gen_id }} {
@@ -162,7 +169,7 @@
     }
 
     .ai-banner-slide-content-{{ ai_gen_id }} {
-      padding: 20px;
+      padding: 30px 20px 20px 20px;
     }
 
     .ai-banner-slide-title-{{ ai_gen_id }} {
@@ -246,15 +253,7 @@
         class="ai-banner-slider-arrow-{{ ai_gen_id }} ai-banner-slider-arrow-{{ ai_gen_id }}--prev"
         aria-label="Slide anterior"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <polyline points="15 18 9 12 15 6"></polyline>
         </svg>
       </button>
@@ -263,15 +262,7 @@
         class="ai-banner-slider-arrow-{{ ai_gen_id }} ai-banner-slider-arrow-{{ ai_gen_id }}--next"
         aria-label="Próximo slide"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <polyline points="9 18 15 12 9 6"></polyline>
         </svg>
       </button>
@@ -462,30 +453,21 @@
       "id": "text_alignment",
       "label": "Alinhamento do texto",
       "options": [
-        {
-          "value": "left",
-          "label": "Esquerda"
-        },
-        {
-          "value": "center",
-          "label": "Centro"
-        },
-        {
-          "value": "right",
-          "label": "Direita"
-        }
+        { "value": "left", "label": "Esquerda" },
+        { "value": "center", "label": "Centro" },
+        { "value": "right", "label": "Direita" }
       ],
-      "default": "center"
+      "default": "left"
     },
     {
       "type": "range",
       "id": "content_max_width",
       "label": "Largura máxima do conteúdo",
       "min": 300,
-      "max": 1000,
+      "max": 1200,
       "step": 50,
       "unit": "px",
-      "default": 600
+      "default": 800
     },
     {
       "type": "range",
