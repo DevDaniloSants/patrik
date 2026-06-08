@@ -211,7 +211,7 @@
             "button_offset_vertical": 35,
             "button_offset_horizontal": 30,
             "button_font_size": 14,
-            "button_font_size_mobile": 12,
+            "button_font_size_mobile": 10,
             "button_font_weight": "700",
             "button_uppercase": false,
             "button_padding_vertical": 12,
