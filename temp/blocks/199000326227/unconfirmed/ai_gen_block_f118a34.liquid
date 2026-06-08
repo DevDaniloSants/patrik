@@ -1,6 +1,811 @@
+{% doc %}
+  @prompt
+    gostaria de uma section onde eu posso colocar um slider de imagens (com texto) de um lado e do outro um slider de produtos que eu consiga ir para o lado com setinha  
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-dual-slider-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.section_padding }}px 0;
+  }
+
+  .ai-dual-slider-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.container_width }}px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-dual-slider-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: {{ block.settings.gap_between_sliders }}px;
+    align-items: center;
+  }
+
+  .ai-dual-slider-column-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+  }
+
+  .ai-dual-slider-image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    overflow: hidden;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .ai-dual-slider-image-track-{{ ai_gen_id }} {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .ai-dual-slider-image-slide-{{ ai_gen_id }} {
+    min-width: 100%;
+    position: relative;
+  }
+
+  .ai-dual-slider-image-slide-{{ ai_gen_id }} img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .ai-dual-slider-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-dual-slider-image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  .ai-dual-slider-text-overlay-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    color: #ffffff;
+    padding: 30px 20px;
+  }
+
+  .ai-dual-slider-text-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.text_title_size }}px;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+  }
+
+  .ai-dual-slider-text-description-{{ ai_gen_id }} {
+    font-size: {{ block.settings.text_description_size }}px;
+    margin: 0;
+    opacity: 0.9;
+  }
+
+  .ai-dual-slider-products-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ai-dual-slider-products-track-{{ ai_gen_id }} {
+    display: flex;
+    gap: {{ block.settings.product_gap }}px;
+    transition: transform 0.5s ease;
+  }
+
+  .ai-dual-slider-product-slide-{{ ai_gen_id }} {
+    min-width: calc((100% - {{ block.settings.product_gap }}px) / 2);
+    flex-shrink: 0;
+  }
+
+  .ai-dual-slider-product-card-{{ ai_gen_id }} {
+    background-color: {{ block.settings.product_card_bg }};
+    border-radius: {{ block.settings.product_border_radius }}px;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .ai-dual-slider-product-card-{{ ai_gen_id }}:hover {
+    transform: translateY(-4px);
+  }
+
+  .ai-dual-slider-product-image-{{ ai_gen_id }} {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+  }
+
+  .ai-dual-slider-product-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-dual-slider-product-image-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+  }
+
+  .ai-dual-slider-product-info-{{ ai_gen_id }} {
+    padding: 15px;
+  }
+
+  .ai-dual-slider-product-title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.product_title_size }}px;
+    margin: 0 0 8px 0;
+    color: {{ block.settings.product_text_color }};
+    font-weight: 600;
+  }
+
+  .ai-dual-slider-product-price-{{ ai_gen_id }} {
+    font-size: {{ block.settings.product_price_size }}px;
+    color: {{ block.settings.product_text_color }};
+    margin: 0;
+  }
+
+  .ai-dual-slider-nav-{{ ai_gen_id }} {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: {{ block.settings.arrow_bg_color }};
+    color: {{ block.settings.arrow_color }};
+    border: none;
+    width: {{ block.settings.arrow_size }}px;
+    height: {{ block.settings.arrow_size }}px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+  }
+
+  .ai-dual-slider-nav-{{ ai_gen_id }}:hover {
+    opacity: 0.8;
+  }
+
+  .ai-dual-slider-nav-{{ ai_gen_id }}:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  .ai-dual-slider-nav-prev-{{ ai_gen_id }} {
+    left: 10px;
+  }
+
+  .ai-dual-slider-nav-next-{{ ai_gen_id }} {
+    right: 10px;
+  }
+
+  .ai-dual-slider-nav-{{ ai_gen_id }} svg {
+    width: 50%;
+    height: 50%;
+  }
+
+  .ai-dual-slider-empty-state-{{ ai_gen_id }} {
+    text-align: center;
+    padding: 40px 20px;
+    color: #999;
+    font-style: italic;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-dual-slider-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .ai-dual-slider-product-slide-{{ ai_gen_id }} {
+      min-width: 100%;
+    }
+
+    .ai-dual-slider-text-title-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.text_title_size }}px * 0.8);
+    }
+
+    .ai-dual-slider-text-description-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.text_description_size }}px * 0.9);
+    }
+  }
+{% endstyle %}
+
+<dual-slider-{{ ai_gen_id }} class="ai-dual-slider-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-dual-slider-container-{{ ai_gen_id }}">
+    <div class="ai-dual-slider-grid-{{ ai_gen_id }}">
+      <div class="ai-dual-slider-column-{{ ai_gen_id }}">
+        <div class="ai-dual-slider-image-wrapper-{{ ai_gen_id }}">
+          <div class="ai-dual-slider-image-track-{{ ai_gen_id }}" data-image-track>
+            {% for i in (1..5) %}
+              {% liquid
+                assign image_key = 'image_' | append: i
+                assign title_key = 'image_' | append: i | append: '_title'
+                assign description_key = 'image_' | append: i | append: '_description'
+                assign image = block.settings[image_key]
+                assign title = block.settings[title_key]
+                assign description = block.settings[description_key]
+              %}
+              
+              {% if image != blank %}
+                <div class="ai-dual-slider-image-slide-{{ ai_gen_id }}">
+                  <img
+                    src="{{ image | image_url: width: 1200 }}"
+                    alt="{{ image.alt | escape }}"
+                    loading="lazy"
+                    width="{{ image.width }}"
+                    height="{{ image.height }}"
+                  >
+                  {% if title != blank or description != blank %}
+                    <div class="ai-dual-slider-text-overlay-{{ ai_gen_id }}">
+                      {% if title != blank %}
+                        <h3 class="ai-dual-slider-text-title-{{ ai_gen_id }}">{{ title }}</h3>
+                      {% endif %}
+                      {% if description != blank %}
+                        <p class="ai-dual-slider-text-description-{{ ai_gen_id }}">{{ description }}</p>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+
+          <button
+            class="ai-dual-slider-nav-{{ ai_gen_id }} ai-dual-slider-nav-prev-{{ ai_gen_id }}"
+            data-image-prev
+            aria-label="Imagem anterior"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button
+            class="ai-dual-slider-nav-{{ ai_gen_id }} ai-dual-slider-nav-next-{{ ai_gen_id }}"
+            data-image-next
+            aria-label="Próxima imagem"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="ai-dual-slider-column-{{ ai_gen_id }}">
+        {% assign has_products = false %}
+        {% for i in (1..10) %}
+          {% liquid
+            assign product_key = 'product_' | append: i
+            assign product = block.settings[product_key]
+          %}
+          {% if product != blank %}
+            {% assign has_products = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% if has_products %}
+          <div class="ai-dual-slider-products-wrapper-{{ ai_gen_id }}">
+            <div class="ai-dual-slider-products-track-{{ ai_gen_id }}" data-products-track>
+              {% for i in (1..10) %}
+                {% liquid
+                  assign product_key = 'product_' | append: i
+                  assign product = block.settings[product_key]
+                %}
+                
+                {% if product != blank %}
+                  <div class="ai-dual-slider-product-slide-{{ ai_gen_id }}">
+                    <a href="{{ product.url }}" class="ai-dual-slider-product-card-{{ ai_gen_id }}">
+                      {% if product.featured_image %}
+                        <img
+                          src="{{ product.featured_image | image_url: width: 600 }}"
+                          alt="{{ product.featured_image.alt | escape }}"
+                          class="ai-dual-slider-product-image-{{ ai_gen_id }}"
+                          loading="lazy"
+                          width="600"
+                          height="600"
+                        >
+                      {% else %}
+                        <div class="ai-dual-slider-product-image-placeholder-{{ ai_gen_id }}">
+                          {{ 'product-1' | placeholder_svg_tag }}
+                        </div>
+                      {% endif %}
+                      <div class="ai-dual-slider-product-info-{{ ai_gen_id }}">
+                        <h4 class="ai-dual-slider-product-title-{{ ai_gen_id }}">{{ product.title }}</h4>
+                        <p class="ai-dual-slider-product-price-{{ ai_gen_id }}">{{ product.price | money }}</p>
+                      </div>
+                    </a>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+
+            <button
+              class="ai-dual-slider-nav-{{ ai_gen_id }} ai-dual-slider-nav-prev-{{ ai_gen_id }}"
+              data-products-prev
+              aria-label="Produto anterior"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button
+              class="ai-dual-slider-nav-{{ ai_gen_id }} ai-dual-slider-nav-next-{{ ai_gen_id }}"
+              data-products-next
+              aria-label="Próximo produto"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        {% else %}
+          <div class="ai-dual-slider-empty-state-{{ ai_gen_id }}">
+            Adicione produtos para exibir neste slider
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</dual-slider-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class DualSlider{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.imageTrack = this.querySelector('[data-image-track]');
+        this.productsTrack = this.querySelector('[data-products-track]');
+        this.imagePrev = this.querySelector('[data-image-prev]');
+        this.imageNext = this.querySelector('[data-image-next]');
+        this.productsPrev = this.querySelector('[data-products-prev]');
+        this.productsNext = this.querySelector('[data-products-next]');
+        
+        this.imageIndex = 0;
+        this.productsIndex = 0;
+      }
+
+      connectedCallback() {
+        if (this.imageTrack) {
+          this.imageSlides = this.imageTrack.querySelectorAll('.ai-dual-slider-image-slide-{{ ai_gen_id }}');
+          this.imageCount = this.imageSlides.length;
+        }
+
+        if (this.productsTrack) {
+          this.productSlides = this.productsTrack.querySelectorAll('.ai-dual-slider-product-slide-{{ ai_gen_id }}');
+          this.productCount = this.productSlides.length;
+        }
+
+        this.setupEventListeners();
+        this.updateButtons();
+      }
+
+      setupEventListeners() {
+        if (this.imagePrev) {
+          this.imagePrev.addEventListener('click', () => this.navigateImages(-1));
+        }
+        if (this.imageNext) {
+          this.imageNext.addEventListener('click', () => this.navigateImages(1));
+        }
+        if (this.productsPrev) {
+          this.productsPrev.addEventListener('click', () => this.navigateProducts(-1));
+        }
+        if (this.productsNext) {
+          this.productsNext.addEventListener('click', () => this.navigateProducts(1));
+        }
+      }
+
+      navigateImages(direction) {
+        this.imageIndex = Math.max(0, Math.min(this.imageCount - 1, this.imageIndex + direction));
+        this.updateImagePosition();
+        this.updateButtons();
+      }
+
+      navigateProducts(direction) {
+        const maxIndex = Math.max(0, this.productCount - 2);
+        this.productsIndex = Math.max(0, Math.min(maxIndex, this.productsIndex + direction));
+        this.updateProductsPosition();
+        this.updateButtons();
+      }
+
+      updateImagePosition() {
+        if (this.imageTrack) {
+          const offset = -this.imageIndex * 100;
+          this.imageTrack.style.transform = 'translateX(' + offset + '%)';
+        }
+      }
+
+      updateProductsPosition() {
+        if (this.productsTrack) {
+          const slideWidth = this.productSlides[0].offsetWidth;
+          const gap = {{ block.settings.product_gap }};
+          const offset = -this.productsIndex * (slideWidth + gap);
+          this.productsTrack.style.transform = 'translateX(' + offset + 'px)';
+        }
+      }
+
+      updateButtons() {
+        if (this.imagePrev && this.imageNext) {
+          this.imagePrev.disabled = this.imageIndex === 0;
+          this.imageNext.disabled = this.imageIndex === this.imageCount - 1;
+        }
+
+        if (this.productsPrev && this.productsNext) {
+          const maxIndex = Math.max(0, this.productCount - 2);
+          this.productsPrev.disabled = this.productsIndex === 0;
+          this.productsNext.disabled = this.productsIndex >= maxIndex;
+        }
+      }
+    }
+
+    customElements.define('dual-slider-{{ ai_gen_id }}', DualSlider{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Slider duplo",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "container_width",
+      "label": "Largura do container",
+      "min": 800,
+      "max": 1600,
+      "step": 50,
+      "unit": "px",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "label": "Espaçamento vertical",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "gap_between_sliders",
+      "label": "Espaço entre sliders",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Cor de fundo",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Imagem 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Imagem"
+    },
+    {
+      "type": "text",
+      "id": "image_1_title",
+      "label": "Título"
+    },
+    {
+      "type": "textarea",
+      "id": "image_1_description",
+      "label": "Descrição"
+    },
+    {
+      "type": "header",
+      "content": "Imagem 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Imagem"
+    },
+    {
+      "type": "text",
+      "id": "image_2_title",
+      "label": "Título"
+    },
+    {
+      "type": "textarea",
+      "id": "image_2_description",
+      "label": "Descrição"
+    },
+    {
+      "type": "header",
+      "content": "Imagem 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Imagem"
+    },
+    {
+      "type": "text",
+      "id": "image_3_title",
+      "label": "Título"
+    },
+    {
+      "type": "textarea",
+      "id": "image_3_description",
+      "label": "Descrição"
+    },
+    {
+      "type": "header",
+      "content": "Imagem 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_4",
+      "label": "Imagem"
+    },
+    {
+      "type": "text",
+      "id": "image_4_title",
+      "label": "Título"
+    },
+    {
+      "type": "textarea",
+      "id": "image_4_description",
+      "label": "Descrição"
+    },
+    {
+      "type": "header",
+      "content": "Imagem 5"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_5",
+      "label": "Imagem"
+    },
+    {
+      "type": "text",
+      "id": "image_5_title",
+      "label": "Título"
+    },
+    {
+      "type": "textarea",
+      "id": "image_5_description",
+      "label": "Descrição"
+    },
+    {
+      "type": "header",
+      "content": "Estilo das imagens"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "label": "Arredondamento",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "text_title_size",
+      "label": "Tamanho do título",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "text_description_size",
+      "label": "Tamanho da descrição",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Produto 1"
+    },
+    {
+      "type": "product",
+      "id": "product_1",
+      "label": "Produto"
+    },
+    {
+      "type": "header",
+      "content": "Produto 2"
+    },
+    {
+      "type": "product",
+      "id": "product_2",
+      "label": "Produto"
+    },
+    {
+      "type": "header",
+      "content": "Produto 3"
+    },
+    {
+      "type": "product",
+      "id": "product_3",
+      "label": "Produto"
+    },
+    {
+      "type": "header",
+      "content": "Produto 4"
+    },
+    {
+      "type": "product",
+      "id": "product_4",
+      "label": "Produto"
+    },
+    {
+      "type": "header",
+      "content": "Produto 5"
+    },
+    {
+      "type": "product",
+      "id": "product_5",
+      "label": "Produto"
+    },
+    {
+      "type": "header",
+      "content": "Produto 6"
+    },
+    {
+      "type": "product",
+      "id": "product_6",
+      "label": "Produto"
+    },
+    {
+      "type": "header",
+      "content": "Produto 7"
+    },
+    {
+      "type": "product",
+      "id": "product_7",
+      "label": "Produto"
+    },
+    {
+      "type": "header",
+      "content": "Produto 8"
+    },
+    {
+      "type": "product",
+      "id": "product_8",
+      "label": "Produto"
+    },
+    {
+      "type": "header",
+      "content": "Produto 9"
+    },
+    {
+      "type": "product",
+      "id": "product_9",
+      "label": "Produto"
+    },
+    {
+      "type": "header",
+      "content": "Produto 10"
+    },
+    {
+      "type": "product",
+      "id": "product_10",
+      "label": "Produto"
+    },
+    {
+      "type": "header",
+      "content": "Estilo dos produtos"
+    },
+    {
+      "type": "range",
+      "id": "product_gap",
+      "label": "Espaço entre produtos",
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "product_border_radius",
+      "label": "Arredondamento",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "color",
+      "id": "product_card_bg",
+      "label": "Fundo do card",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "product_text_color",
+      "label": "Cor do texto",
+      "default": "#3c3f36"
+    },
+    {
+      "type": "range",
+      "id": "product_title_size",
+      "label": "Tamanho do título",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "product_price_size",
+      "label": "Tamanho do preço",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Setas de navegação"
+    },
+    {
+      "type": "range",
+      "id": "arrow_size",
+      "label": "Tamanho das setas",
+      "min": 30,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "color",
+      "id": "arrow_bg_color",
+      "label": "Fundo das setas",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "arrow_color",
+      "label": "Cor das setas",
+      "default": "#3c3f36"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Slider duplo"
+    }
+  ]
+}
 {% endschema %}
