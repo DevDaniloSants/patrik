@@ -2,7 +2,7 @@
   @prompt
       text with slider with 3 images in the left side
   {% enddoc %}
-  {% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
 
 {% style %}
 .ai-text-image-slider-{{ ai_gen_id }} {
@@ -31,7 +31,19 @@
 .ai-text-image-slider__slider-{{ ai_gen_id }} {
   position: relative;
   width: 100%;
-  aspect-ratio: {{ block.settings.image_aspect_ratio }};
+  height: 0;
+  {% case block.settings.image_aspect_ratio %}
+    {% when '1/1' %}
+      padding-bottom: 100%;
+    {% when '4/3' %}
+      padding-bottom: 75%;
+    {% when '16/9' %}
+      padding-bottom: 56.25%;
+    {% when '3/4' %}
+      padding-bottom: 133.33%;
+    {% else %}
+      padding-bottom: 100%;
+  {% endcase %}
 }
 
 .ai-text-image-slider__slide-{{ ai_gen_id }} {
@@ -133,7 +145,6 @@
   height: 20px;
 }
 
-/* ✅ ALTERAÇÃO 1: texto centralizado */
 .ai-text-image-slider__content-{{ ai_gen_id }} {
   flex: 1;
   color: {{ block.settings.text_color }};
@@ -170,11 +181,18 @@
 @media screen and (max-width: 749px) {
   .ai-text-image-slider__container-{{ ai_gen_id }} {
     flex-direction: column;
+    padding: 0;
+    gap: 0;
   }
 
   .ai-text-image-slider__images-{{ ai_gen_id }} {
     flex: 0 0 auto;
     width: 100%;
+    border-radius: 0;
+  }
+
+  .ai-text-image-slider__content-{{ ai_gen_id }} {
+    padding: 24px {{ block.settings.padding }}px;
   }
 
   .ai-text-image-slider__heading-{{ ai_gen_id }} {
@@ -187,7 +205,6 @@
 }
 {% endstyle %}
 
-<!-- ✅ ALTERAÇÃO 2: posição da imagem controlada pelo setting -->
 <text-image-slider-{{ ai_gen_id }} class="ai-text-image-slider-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
   <div class="ai-text-image-slider__container-{{ ai_gen_id }}" style="{% if block.settings.image_position == 'right' %}flex-direction: row-reverse;{% endif %}">
     <div class="ai-text-image-slider__images-{{ ai_gen_id }}">
