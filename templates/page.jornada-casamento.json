@@ -375,6 +375,24 @@
         "padding_bottom": 76
       }
     },
+    "section_collection_slider_wDcyrE": {
+      "type": "section-collection-slider",
+      "name": "Product slider",
+      "settings": {
+        "collection": "engagement-rings",
+        "product_limit": 12,
+        "title": "Alianças de noivado",
+        "align_text": "title-center",
+        "progress_bar": "mobile",
+        "grid_large": 3,
+        "grid_medium": 3,
+        "grid_mobile": 1.2,
+        "bg": "palette--light bg--neutral",
+        "width": "wrapper--full",
+        "padding_top": 72,
+        "padding_bottom": 76
+      }
+    },
     "blocks_38DBfm": {
       "type": "_blocks",
       "blocks": {
@@ -435,6 +453,7 @@
     "1780943867bab9d473",
     "blocks_g3VEzz",
     "section_collection_slider_zTVfhX",
-    "blocks_38DBfm"
+    "blocks_38DBfm",
+    "section_collection_slider_wDcyrE"
   ]
 }
