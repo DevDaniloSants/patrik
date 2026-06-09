@@ -169,13 +169,13 @@
           "settings": {
             "title": "Sua história é única. Sua joia também pode ser.",
             "text": "<p>Desenvolvemos joias personalizadas para celebrar os momentos mais importantes da sua vida.<br/><br/></p>",
-            "image": "shopify://shop_images/Projeto_customizado.png",
+            "image": "shopify://shop_images/Projeto_customizado_-_Mobile.png",
             "image_position_desktop": "right",
             "content_padding_top": 50,
             "content_padding_bottom": 0,
             "button_text": "Fale com um especialista",
             "button_link": "#open-specialist-modal",
-            "button_opacity": 65,
+            "button_opacity": 50,
             "button_position_vertical": "center",
             "button_position_horizontal": "center",
             "button_offset_vertical": 35,
@@ -409,12 +409,12 @@
           "type": "ai_gen_block_6344db4",
           "settings": {
             "image_position": "right",
-            "heading": "Quando o amor ganha promessa",
-            "text": "<p>As alianças de noivado celebram essa escolha, tornando visível uma promessa feita a dois. Com design atemporal e acabamento refinado, nossas peças são desenvolvidas para representar a singularidade de cada história, transformando um gesto de amor em um símbolo que poderá ser carregado todos os dias.<br/><br/><br/></p>",
+            "heading": "Para o dia em que o amor é celebrado",
+            "text": "<p>Há momentos que acontecem uma única vez, mas permanecem para sempre. Das alianças aos detalhes que completam a produção da noiva, cada joia carrega a emoção de um dos dias mais importantes da sua história, transformando lembranças em algo que pode ser guardado e revivido por toda a vida.<br/><br/><br/></p>",
             "button_text": "",
             "button_link": "",
-            "image_1": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0302_2_2_f1aef735-cd2e-4df8-844b-c063f8da9d83.jpg",
-            "image_2": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0240_1_1.jpg",
+            "image_1": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0290_1.jpg",
+            "image_2": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0268_3_2.jpg",
             "image_width": 50,
             "image_height_desktop": 500,
             "image_width_mobile": 100,
@@ -454,6 +454,24 @@
       ],
       "name": "Text with image slider",
       "settings": {}
+    },
+    "section_collection_slider_3pGbmW": {
+      "type": "section-collection-slider",
+      "name": "Product slider",
+      "settings": {
+        "collection": "dia-da-noiva",
+        "product_limit": 20,
+        "title": "Alianças de noivado",
+        "align_text": "title-center",
+        "progress_bar": "mobile",
+        "grid_large": 3,
+        "grid_medium": 3,
+        "grid_mobile": 1.2,
+        "bg": "palette--light bg--neutral",
+        "width": "wrapper--full",
+        "padding_top": 24,
+        "padding_bottom": 76
+      }
     }
   },
   "order": [
@@ -467,6 +485,7 @@
     "section_collection_slider_zTVfhX",
     "blocks_g3VEzz",
     "section_collection_slider_wDcyrE",
-    "blocks_4t9Ryh"
+    "blocks_4t9Ryh",
+    "section_collection_slider_3pGbmW"
   ]
 }
