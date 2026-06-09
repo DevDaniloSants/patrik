@@ -15,9 +15,9 @@
 .ai-text-image-slider__container-{{ ai_gen_id }} {
   display: flex;
   gap: {{ block.settings.gap }}px;
-  align-items: center;
+  align-items: stretch;
   background-color: {{ block.settings.background_color }};
-  padding: {{ block.settings.padding }}px;
+  padding: {{ block.settings.padding }}px 0;
   border-radius: {{ block.settings.border_radius }}px;
 }
 
@@ -26,7 +26,6 @@
   position: relative;
   overflow: hidden;
   border-radius: {{ block.settings.image_border_radius }}px;
-  align-self: center;
 }
 
 .ai-text-image-slider__slider-{{ ai_gen_id }} {
@@ -137,11 +136,11 @@
 .ai-text-image-slider__content-{{ ai_gen_id }} {
   flex: 1;
   color: {{ block.settings.text_color }};
-  text-align: center;
+  text-align: justify;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-self: stretch;
+  padding: 0 {{ block.settings.padding }}px;
   gap: {{ block.settings.heading_spacing }}px;
 }
 
@@ -159,7 +158,6 @@
 
 .ai-text-image-slider__button-{{ ai_gen_id }} {
   display: inline-block;
-  margin-top: {{ block.settings.button_spacing }}px;
   padding: 12px 24px;
   background-color: {{ block.settings.button_bg_color }};
   color: {{ block.settings.button_text_color }};
@@ -177,6 +175,7 @@
     flex-direction: column !important;
     padding: 0;
     gap: 0;
+    align-items: flex-start;
   }
 
   .ai-text-image-slider__images-{{ ai_gen_id }} {
@@ -195,7 +194,6 @@
     box-sizing: border-box;
     padding: 24px {{ block.settings.padding }}px;
     justify-content: flex-start;
-    align-self: auto;
   }
 
   .ai-text-image-slider__heading-{{ ai_gen_id }} {
@@ -558,7 +556,7 @@
       "type": "range",
       "id": "gap",
       "label": "Gap between image and text",
-      "min": 20,
+      "min": 0,
       "max": 100,
       "step": 10,
       "unit": "px",
