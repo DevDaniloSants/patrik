@@ -1,6 +1,6 @@
 {% doc %}
   @prompt
-    preciso criar uma section exatamente igual ao text with image, que eu possa diminuir e aumentar o titulo e o texto e que o texto possa vir antes da imagem no mobile, a imagem precisa ficar na horizontal, tamanho menor. preciso conseguir ajustar isso. preciso conseguir centralizar o texto também, na imagem precisa ter um botão exatamente com as mesmas configurações da section image navigator dessa página. preciso conseguir alterar essas configurações, você botou todas as configurações mas o botão não apareceu na imagem, o titulo e o texto precisam ficar sempre centralizados horizontalmente com a imagem, errou. o titulo e texto precisa ficar na mesma linha que a imagem no desk, sempre centralizados
+    preciso criar uma section exatamente igual ao text with image, que eu possa diminuir e aumentar o titulo e o texto e que o texto possa vir antes da imagem no mobile, a imagem precisa ficar na horizontal, tamanho menor. preciso conseguir ajustar isso. preciso conseguir centralizar o texto também, na imagem precisa ter um botón exatamente com as mesmo configurações da section image navigator dessa página. preciso conseguir alterar essas configurações, você botou todas as configurações mas o botón não apareceu na imagem, o titulo e o texto precisam ficar sempre centralizados horizontalmente com a imagem, errou. o titulo e texto precisa ficar na mesma linha que a imagem no desk, sempre centralizados
 {% enddoc %}
 {% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
 
@@ -12,7 +12,7 @@
 
   .ai-text-image-container-{{ ai_gen_id }} {
     display: flex;
-    flex-direction: row;
+    flex-direction: {% if block.settings.image_position_desktop == 'right' %}row-reverse{% else %}row{% endif %};
     align-items: center;
     justify-content: center;
     max-width: {{ block.settings.max_width }}px;
@@ -27,6 +27,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: {{ block.settings.content_padding_top }}px;
+    padding-bottom: {{ block.settings.content_padding_bottom }}px;
+    box-sizing: border-box;
   }
 
   .ai-text-image-media-{{ ai_gen_id }} {
@@ -148,6 +151,8 @@
 
     .ai-text-image-content-{{ ai_gen_id }} {
       text-align: {{ block.settings.text_alignment_mobile }};
+      padding-top: 0;
+      padding-bottom: 0;
     }
 
     .ai-text-image-media-{{ ai_gen_id }} {
@@ -241,23 +246,57 @@
     },
     {
       "type": "header",
+      "content": "Posição do conteúdo (desktop)"
+    },
+    {
+      "type": "select",
+      "id": "image_position_desktop",
+      "label": "Posição da imagem no desktop",
+      "options": [
+        { "value": "left", "label": "Esquerda" },
+        { "value": "right", "label": "Direita" }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "range",
+      "id": "content_padding_top",
+      "label": "Distância do título ao topo",
+      "min": 0,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "content_padding_bottom",
+      "label": "Distância do texto à base",
+      "min": 0,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
       "content": "Botão na imagem"
     },
     {
       "type": "text",
       "id": "button_text",
-      "label": "Texto do botão",
+      "label": "Texto do botón",
       "default": "Saiba mais"
     },
     {
       "type": "url",
       "id": "button_link",
-      "label": "Link do botão"
+      "label": "Link do botón"
     },
     {
       "type": "range",
       "id": "button_opacity",
-      "label": "Opacidade do botão",
+      "label": "Opacidade do botón",
       "min": 0,
       "max": 100,
       "step": 5,
@@ -308,7 +347,7 @@
     },
     {
       "type": "header",
-      "content": "Estilo do botão"
+      "content": "Estilo do botón"
     },
     {
       "type": "range",
@@ -410,7 +449,7 @@
     },
     {
       "type": "header",
-      "content": "Cores do botão"
+      "content": "Cores do botón"
     },
     {
       "type": "color",
