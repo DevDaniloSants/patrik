@@ -53,7 +53,7 @@
         "color_bg": "palette--light bg--neutral",
         "video_bg": "shopify://files/videos/cinematic_jewelry_atelier_scen_Kling_30__68934.mp4",
         "object_position": "center-bottom",
-        "banner_link": "shopify://collections/engagement-rings",
+        "banner_link": "shopify://pages/jornada-casamento",
         "preload_image": true,
         "text_align": "align--bottom-center",
         "text_color": "text--white",
