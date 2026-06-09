@@ -385,7 +385,7 @@
           "settings": {
             "image_position": "right",
             "heading": "Quando o amor ganha promessa",
-            "text": "<p>Antes mesmo do casamento, existe um momento especial: a decisão de seguir o mesmo caminho. As alianças de noivado celebram essa escolha, tornando visível uma promessa feita a dois. Com design atemporal e acabamento refinado, nossas peças são desenvolvidas para representar a singularidade de cada história, transformando um gesto de amor em um símbolo que poderá ser carregado todos os dias.<br/><br/><br/></p>",
+            "text": "<p>As alianças de noivado celebram essa escolha, tornando visível uma promessa feita a dois. Com design atemporal e acabamento refinado, nossas peças são desenvolvidas para representar a singularidade de cada história, transformando um gesto de amor em um símbolo que poderá ser carregado todos os dias.<br/><br/><br/></p>",
             "button_text": "",
             "button_link": "",
             "image_1": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0304_1.jpg",
@@ -412,7 +412,7 @@
             "arrow_color": "#000000",
             "heading_size": 32,
             "heading_spacing": 20,
-            "text_size": 19,
+            "text_size": 18,
             "button_bg_color": "#006652",
             "button_hover_bg_color": "#004d3d",
             "button_text_color": "#ffffff",
