@@ -96,41 +96,6 @@
         "padding_bottom": 36
       }
     },
-    "section_richtext_UrJddg": {
-      "type": "section-richtext",
-      "blocks": {
-        "heading_YbJGtz": {
-          "type": "heading",
-          "settings": {
-            "heading": "",
-            "text_size": 8
-          }
-        },
-        "text_ndBELz": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_size": 4,
-            "text_columns": 1
-          }
-        }
-      },
-      "block_order": [
-        "heading_YbJGtz",
-        "text_ndBELz"
-      ],
-      "disabled": true,
-      "name": "Espaçamento - Rich text",
-      "settings": {
-        "align_text": "text-left",
-        "text_color": "text--neutral",
-        "bg": "palette--light bg--neutral",
-        "content_width": 2000,
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "main": {
       "type": "page",
       "disabled": true,
@@ -260,6 +225,40 @@
       ],
       "name": "Personalize",
       "settings": {}
+    },
+    "section_richtext_UrJddg": {
+      "type": "section-richtext",
+      "blocks": {
+        "heading_YbJGtz": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "text_size": 8
+          }
+        },
+        "text_ndBELz": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        }
+      },
+      "block_order": [
+        "heading_YbJGtz",
+        "text_ndBELz"
+      ],
+      "name": "Espaçamento - Rich text",
+      "settings": {
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "palette--light bg--neutral",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     },
     "blocks_kqP4VH": {
       "type": "_blocks",
@@ -402,18 +401,72 @@
         "padding_top": 76,
         "padding_bottom": 76
       }
+    },
+    "blocks_4t9Ryh": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_6344db4_VweQC4": {
+          "type": "ai_gen_block_6344db4",
+          "settings": {
+            "image_position": "right",
+            "heading": "Quando o amor ganha promessa",
+            "text": "<p>As alianças de noivado celebram essa escolha, tornando visível uma promessa feita a dois. Com design atemporal e acabamento refinado, nossas peças são desenvolvidas para representar a singularidade de cada história, transformando um gesto de amor em um símbolo que poderá ser carregado todos os dias.<br/><br/><br/></p>",
+            "button_text": "",
+            "button_link": "",
+            "image_1": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0302_2_2_f1aef735-cd2e-4df8-844b-c063f8da9d83.jpg",
+            "image_2": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0240_1_1.jpg",
+            "image_width": 50,
+            "image_height_desktop": 500,
+            "image_width_mobile": 100,
+            "image_height_mobile": 350,
+            "content_padding_top": 170,
+            "content_padding_bottom": 80,
+            "show_dots": false,
+            "show_arrows": true,
+            "autoplay": true,
+            "autoplay_speed": 4,
+            "desktop_width_percent": 100,
+            "gap": 20,
+            "padding": 20,
+            "border_radius": 10,
+            "image_border_radius": 10,
+            "background_color": "#ffffff",
+            "heading_color": "#000000",
+            "text_color": "#3c3f36",
+            "dot_color": "#ffffff",
+            "arrow_bg_color": "#ffffff",
+            "arrow_hover_bg_color": "#f4f4f4",
+            "arrow_color": "#000000",
+            "heading_size": 32,
+            "heading_spacing": 20,
+            "text_size": 18,
+            "button_bg_color": "#006652",
+            "button_hover_bg_color": "#004d3d",
+            "button_text_color": "#ffffff",
+            "button_spacing": 20,
+            "button_border_radius": 5
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_6344db4_VweQC4"
+      ],
+      "name": "Text with image slider",
+      "settings": {}
     }
   },
   "order": [
     "17808666295756a33c",
     "section_richtext_FN8DKi",
-    "section_richtext_UrJddg",
     "main",
     "178087092688e5a9ed",
     "1780890255bc399d2f",
+    "section_richtext_UrJddg",
     "blocks_kqP4VH",
     "section_collection_slider_zTVfhX",
     "blocks_g3VEzz",
-    "section_collection_slider_wDcyrE"
+    "section_collection_slider_wDcyrE",
+    "blocks_4t9Ryh"
   ]
 }
