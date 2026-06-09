@@ -26,7 +26,6 @@
   position: relative;
   overflow: hidden;
   border-radius: {{ block.settings.image_border_radius }}px;
-  align-self: center;
 }
 
 .ai-text-image-slider__slider-{{ ai_gen_id }} {
@@ -137,7 +136,7 @@
 .ai-text-image-slider__content-{{ ai_gen_id }} {
   flex: 1;
   color: {{ block.settings.text_color }};
-  text-align: justify;
+  text-align: center;
 }
 
 .ai-text-image-slider__heading-{{ ai_gen_id }} {
@@ -186,8 +185,6 @@
   }
 
   .ai-text-image-slider__content-{{ ai_gen_id }} {
-    width: 100%;
-    box-sizing: border-box;
     padding: 24px {{ block.settings.padding }}px;
   }
 
