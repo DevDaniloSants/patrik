@@ -136,7 +136,11 @@
 .ai-text-image-slider__content-{{ ai_gen_id }} {
   flex: 1;
   color: {{ block.settings.text_color }};
-  text-align: center;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: stretch;
 }
 
 .ai-text-image-slider__heading-{{ ai_gen_id }} {
