@@ -342,7 +342,7 @@
             "arrow_hover_bg_color": "#f4f4f4",
             "arrow_color": "#000000",
             "heading_size": 38,
-            "heading_spacing": 10,
+            "heading_spacing": 40,
             "text_size": 17,
             "button_bg_color": "#006652",
             "button_hover_bg_color": "#004d3d",
