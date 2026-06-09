@@ -134,15 +134,16 @@
 }
 
 .ai-text-image-slider__content-{{ ai_gen_id }} {
-  flex: 1;
+   flex: 1;
   color: {{ block.settings.text_color }};
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-self: stretch;
+  height: {{ block.settings.image_height_desktop }}px;
   padding: 0 {{ block.settings.padding }}px;
   gap: {{ block.settings.heading_spacing }}px;
+  box-sizing: border-box;
 }
 
 .ai-text-image-slider__heading-{{ ai_gen_id }} {
