@@ -322,7 +322,7 @@
             "image_1": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0302_2_2_f1aef735-cd2e-4df8-844b-c063f8da9d83.jpg",
             "image_2": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0240_1_1.jpg",
             "image_width": 50,
-            "image_aspect_ratio": "16/9",
+            "image_aspect_ratio": "1/1",
             "show_dots": false,
             "show_arrows": true,
             "autoplay": true,
@@ -389,7 +389,7 @@
             "image_1": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0304_1.jpg",
             "image_2": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0246_1.jpg",
             "image_width": 50,
-            "image_aspect_ratio": "16/9",
+            "image_aspect_ratio": "4/3",
             "show_dots": false,
             "show_arrows": true,
             "autoplay": true,
@@ -438,7 +438,7 @@
         "grid_mobile": 1.2,
         "bg": "palette--light bg--neutral",
         "width": "wrapper--full",
-        "padding_top": 72,
+        "padding_top": 76,
         "padding_bottom": 76
       }
     }
