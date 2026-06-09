@@ -58,6 +58,7 @@
       "block_order": [
         "ai_gen_block_b029aaf_U9WHVJ"
       ],
+      "name": "Hero topo",
       "settings": {}
     },
     "section_richtext_FN8DKi": {
@@ -192,6 +193,7 @@
       "block_order": [
         "ai_gen_block_a3cdcde_ph9wdx"
       ],
+      "name": "Jornada",
       "settings": {}
     },
     "1780890255bc399d2f": {
@@ -253,87 +255,35 @@
       "block_order": [
         "ai_gen_block_347402a_ghqiFG"
       ],
+      "name": "Personalize",
       "settings": {}
     },
-    "1780943867bab9d473": {
+    "blocks_kqP4VH": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_f118a34_PBrLNj": {
-          "type": "ai_gen_block_f118a34",
-          "disabled": true,
-          "settings": {
-            "container_width": 1200,
-            "section_padding": 60,
-            "gap_between_sliders": 40,
-            "background_color": "#ffffff",
-            "image_1": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0302_2_2.jpg",
-            "image_1_title": "",
-            "image_1_description": "",
-            "image_2_title": "",
-            "image_2_description": "",
-            "image_3_title": "",
-            "image_3_description": "",
-            "image_4_title": "",
-            "image_4_description": "",
-            "image_5_title": "",
-            "image_5_description": "",
-            "image_border_radius": 12,
-            "text_title_size": 24,
-            "text_description_size": 14,
-            "product_1": "anel-meia-alianca-em-ouro-branco-18k-com-brilhantes",
-            "product_2": "alianca-em-ouro-18k-com-brilhantes",
-            "product_3": "anel-solitario-meia-alianca-em-ouro-branco-18k-e-brilhantes",
-            "product_4": "",
-            "product_5": "",
-            "product_6": "",
-            "product_7": "",
-            "product_8": "",
-            "product_9": "",
-            "product_10": "",
-            "product_gap": 20,
-            "product_border_radius": 8,
-            "product_card_bg": "#ffffff",
-            "product_text_color": "#3c3f36",
-            "product_title_size": 16,
-            "product_price_size": 14,
-            "arrow_size": 40,
-            "arrow_bg_color": "#ffffff",
-            "arrow_color": "#3c3f36"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_f118a34_PBrLNj"
-      ],
-      "settings": {}
-    },
-    "blocks_38DBfm": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_6344db4_4aBpTi": {
+        "ai_gen_block_6344db4_mzHaBR": {
           "type": "ai_gen_block_6344db4",
           "settings": {
-            "image_position": "left",
+            "image_position": "right",
             "heading": "Quando o amor ganha promessa",
-            "text": "<p>Com design atemporal e acabamento refinado, nossas peças são desenvolvidas para representar a singularidade de cada história, transformando um gesto de amor em um símbolo que poderá ser carregado todos os dias.<br/><br/><br/></p>",
+            "text": "<p>As alianças de noivado celebram essa escolha, tornando visível uma promessa feita a dois. Com design atemporal e acabamento refinado, nossas peças são desenvolvidas para representar a singularidade de cada história, transformando um gesto de amor em um símbolo que poderá ser carregado todos os dias.<br/><br/><br/></p>",
             "button_text": "",
             "button_link": "",
             "image_1": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0302_2_2_f1aef735-cd2e-4df8-844b-c063f8da9d83.jpg",
             "image_2": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0240_1_1.jpg",
             "image_width": 50,
-            "image_height_desktop": 350,
+            "image_height_desktop": 500,
             "image_width_mobile": 100,
             "image_height_mobile": 350,
-            "content_padding_top": 80,
+            "content_padding_top": 170,
             "content_padding_bottom": 80,
             "show_dots": false,
             "show_arrows": true,
             "autoplay": true,
             "autoplay_speed": 4,
             "desktop_width_percent": 100,
-            "gap": 60,
-            "padding": 70,
+            "gap": 20,
+            "padding": 20,
             "border_radius": 10,
             "image_border_radius": 10,
             "background_color": "#ffffff",
@@ -343,20 +293,20 @@
             "arrow_bg_color": "#ffffff",
             "arrow_hover_bg_color": "#f4f4f4",
             "arrow_color": "#000000",
-            "heading_size": 38,
-            "heading_spacing": 40,
-            "text_size": 17,
+            "heading_size": 32,
+            "heading_spacing": 20,
+            "text_size": 18,
             "button_bg_color": "#006652",
             "button_hover_bg_color": "#004d3d",
             "button_text_color": "#ffffff",
-            "button_spacing": 15,
+            "button_spacing": 20,
             "button_border_radius": 5
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_6344db4_4aBpTi"
+        "ai_gen_block_6344db4_mzHaBR"
       ],
       "name": "Text with image slider",
       "settings": {}
@@ -385,7 +335,7 @@
         "ai_gen_block_6344db4_DpcDWw": {
           "type": "ai_gen_block_6344db4",
           "settings": {
-            "image_position": "right",
+            "image_position": "left",
             "heading": "Quando o amor ganha promessa",
             "text": "<p>As alianças de noivado celebram essa escolha, tornando visível uma promessa feita a dois. Com design atemporal e acabamento refinado, nossas peças são desenvolvidas para representar a singularidade de cada história, transformando um gesto de amor em um símbolo que poderá ser carregado todos os dias.<br/><br/><br/></p>",
             "button_text": "",
@@ -458,8 +408,7 @@
     "main",
     "178087092688e5a9ed",
     "1780890255bc399d2f",
-    "1780943867bab9d473",
-    "blocks_38DBfm",
+    "blocks_kqP4VH",
     "section_collection_slider_zTVfhX",
     "blocks_g3VEzz",
     "section_collection_slider_wDcyrE"
