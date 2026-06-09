@@ -61,106 +61,6 @@
       "name": "Hero topo",
       "settings": {}
     },
-    "section_richtext_FN8DKi": {
-      "type": "section-richtext",
-      "blocks": {
-        "heading_FgTLwV": {
-          "type": "heading",
-          "settings": {
-            "heading": "",
-            "text_size": 8
-          }
-        },
-        "text_cy9xKn": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_size": 4,
-            "text_columns": 1
-          }
-        }
-      },
-      "block_order": [
-        "heading_FgTLwV",
-        "text_cy9xKn"
-      ],
-      "disabled": true,
-      "name": "Espaçamento - Rich text",
-      "settings": {
-        "align_text": "text-left",
-        "text_color": "text--neutral",
-        "bg": "palette--light bg--neutral",
-        "content_width": 2000,
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "main": {
-      "type": "page",
-      "disabled": true,
-      "settings": {
-        "kicker": "",
-        "kicker_size": 3,
-        "show_title": false,
-        "title_size": 8,
-        "show_content": false,
-        "content_size": 5,
-        "align_text": "text-left",
-        "text_color": "text--neutral",
-        "bg": "palette--light bg--neutral",
-        "width": "wrapper",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "178087092688e5a9ed": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_a3cdcde_ph9wdx": {
-          "type": "ai_gen_block_a3cdcde",
-          "settings": {
-            "title": "UMa História celebrada em cada capítulo",
-            "title_size": 28,
-            "title_weight": "700",
-            "title_color": "#3c3f36",
-            "title_margin_bottom": 60,
-            "background_color": "#f3f3f3",
-            "desktop_width_percent": 100,
-            "section_padding": 70,
-            "image_spacing": 25,
-            "border_radius": 20,
-            "image_aspect_ratio": 1,
-            "image_1": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0231_2.jpg",
-            "text_1": "Noivado",
-            "target_section_1": "shopify-section-template--20023708155987__section_collection_slider_q3LJ7e",
-            "image_2": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0242_1.jpg",
-            "text_2": "Casamento",
-            "target_section_2": "shopify-section-template--20023708155987__section_collection_slider_TbXUgH",
-            "image_3": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0282_1.jpg",
-            "text_3": "Joias para o grande dia",
-            "target_section_3": "shopify-section-template--20023708155987__section_collection_slider_KeKibV",
-            "image_4": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0251_1.jpg",
-            "text_4": "Bodas",
-            "target_section_4": "",
-            "text_size": 32,
-            "text_weight": "600",
-            "text_alignment": "center",
-            "text_color": "#3c3f36",
-            "text_padding": 10,
-            "button_opacity": 55,
-            "overlay_opacity": 0,
-            "scroll_offset": 80
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_a3cdcde_ph9wdx"
-      ],
-      "name": "Jornada",
-      "settings": {}
-    },
     "1780890255bc399d2f": {
       "type": "_blocks",
       "blocks": {
@@ -224,6 +124,106 @@
         "ai_gen_block_347402a_ghqiFG"
       ],
       "name": "Personalize",
+      "settings": {}
+    },
+    "section_richtext_FN8DKi": {
+      "type": "section-richtext",
+      "blocks": {
+        "heading_FgTLwV": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "text_size": 8
+          }
+        },
+        "text_cy9xKn": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        }
+      },
+      "block_order": [
+        "heading_FgTLwV",
+        "text_cy9xKn"
+      ],
+      "disabled": true,
+      "name": "Espaçamento - Rich text",
+      "settings": {
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "palette--light bg--neutral",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "kicker": "",
+        "kicker_size": 3,
+        "show_title": false,
+        "title_size": 8,
+        "show_content": false,
+        "content_size": 5,
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "palette--light bg--neutral",
+        "width": "wrapper",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "178087092688e5a9ed": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_a3cdcde_ph9wdx": {
+          "type": "ai_gen_block_a3cdcde",
+          "settings": {
+            "title": "Uma História celebrada em cada capítulo",
+            "title_size": 28,
+            "title_weight": "700",
+            "title_color": "#3c3f36",
+            "title_margin_bottom": 60,
+            "background_color": "#f3f3f3",
+            "desktop_width_percent": 100,
+            "section_padding": 70,
+            "image_spacing": 25,
+            "border_radius": 20,
+            "image_aspect_ratio": 1,
+            "image_1": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0231_2.jpg",
+            "text_1": "Noivado",
+            "target_section_1": "shopify-section-template--20023708155987__section_collection_slider_q3LJ7e",
+            "image_2": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0242_1.jpg",
+            "text_2": "Casamento",
+            "target_section_2": "shopify-section-template--20023708155987__section_collection_slider_TbXUgH",
+            "image_3": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0282_1.jpg",
+            "text_3": "Joias para o grande dia",
+            "target_section_3": "shopify-section-template--20023708155987__section_collection_slider_KeKibV",
+            "image_4": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0251_1.jpg",
+            "text_4": "Bodas",
+            "target_section_4": "",
+            "text_size": 32,
+            "text_weight": "600",
+            "text_alignment": "center",
+            "text_color": "#3c3f36",
+            "text_padding": 10,
+            "button_opacity": 55,
+            "overlay_opacity": 0,
+            "scroll_offset": 80
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_a3cdcde_ph9wdx"
+      ],
+      "name": "Jornada",
       "settings": {}
     },
     "section_richtext_UrJddg": {
@@ -315,7 +315,7 @@
     },
     "section_collection_slider_zTVfhX": {
       "type": "section-collection-slider",
-      "name": "Product slider",
+      "name": "Produtos Aliança Noivado",
       "settings": {
         "collection": "engagement-rings",
         "product_limit": 20,
@@ -580,6 +580,24 @@
       ],
       "name": "Text with image slider",
       "settings": {}
+    },
+    "section_collection_slider_dzAXM7": {
+      "type": "section-collection-slider",
+      "name": "Produtos Aliança Noivado",
+      "settings": {
+        "collection": "bodas",
+        "product_limit": 20,
+        "title": "Joias para bodas",
+        "align_text": "title-center",
+        "progress_bar": "mobile",
+        "grid_large": 3,
+        "grid_medium": 3,
+        "grid_mobile": 1.2,
+        "bg": "palette--light bg--neutral",
+        "width": "wrapper--full",
+        "padding_top": 24,
+        "padding_bottom": 76
+      }
     }
   },
   "order": [
@@ -596,6 +614,7 @@
     "blocks_4t9Ryh",
     "section_collection_slider_3pGbmW",
     "blocks_ETendr",
-    "blocks_3iGREn"
+    "blocks_3iGREn",
+    "section_collection_slider_dzAXM7"
   ]
 }
