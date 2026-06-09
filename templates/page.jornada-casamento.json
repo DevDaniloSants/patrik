@@ -308,80 +308,13 @@
       ],
       "settings": {}
     },
-    "blocks_g3VEzz": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_6344db4_DpcDWw": {
-          "type": "ai_gen_block_6344db4",
-          "settings": {
-            "image_position": "right",
-            "heading": "Quando o amor ganha promessa",
-            "text": "<p>Antes mesmo do casamento, existe um momento especial: a decisão de seguir o mesmo caminho. As alianças de noivado celebram essa escolha, tornando visível uma promessa feita a dois. Com design atemporal e acabamento refinado, nossas peças são desenvolvidas para representar a singularidade de cada história, transformando um gesto de amor em um símbolo que poderá ser carregado todos os dias.<br/><br/><br/></p>",
-            "button_text": "",
-            "button_link": "",
-            "image_1": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0302_2_2.jpg",
-            "image_2": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0240_1_1.jpg",
-            "image_width": 50,
-            "image_aspect_ratio": "16/9",
-            "show_dots": false,
-            "show_arrows": true,
-            "autoplay": true,
-            "autoplay_speed": 4,
-            "desktop_width_percent": 100,
-            "gap": 20,
-            "padding": 20,
-            "border_radius": 10,
-            "image_border_radius": 10,
-            "background_color": "#ffffff",
-            "heading_color": "#000000",
-            "text_color": "#3c3f36",
-            "dot_color": "#ffffff",
-            "arrow_bg_color": "#ffffff",
-            "arrow_hover_bg_color": "#f4f4f4",
-            "arrow_color": "#000000",
-            "heading_size": 32,
-            "heading_spacing": 20,
-            "text_size": 19,
-            "button_bg_color": "#006652",
-            "button_hover_bg_color": "#004d3d",
-            "button_text_color": "#ffffff",
-            "button_spacing": 20,
-            "button_border_radius": 5
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_6344db4_DpcDWw"
-      ],
-      "name": "Text with image slider",
-      "settings": {}
-    },
-    "section_collection_slider_zTVfhX": {
-      "type": "section-collection-slider",
-      "name": "Product slider",
-      "settings": {
-        "collection": "engagement-rings",
-        "product_limit": 12,
-        "title": "Alianças de noivado",
-        "align_text": "title-center",
-        "progress_bar": "mobile",
-        "grid_large": 3,
-        "grid_medium": 3,
-        "grid_mobile": 1.2,
-        "bg": "palette--light bg--neutral",
-        "width": "wrapper--full",
-        "padding_top": 72,
-        "padding_bottom": 76
-      }
-    },
     "blocks_38DBfm": {
       "type": "_blocks",
       "blocks": {
         "ai_gen_block_6344db4_4aBpTi": {
           "type": "ai_gen_block_6344db4",
           "settings": {
-            "image_position": "left",
+            "image_position": "right",
             "heading": "Quando o amor ganha promessa",
             "text": "<p>Antes mesmo do casamento, existe um momento especial: a decisão de seguir o mesmo caminho. As alianças de noivado celebram essa escolha, tornando visível uma promessa feita a dois. Com design atemporal e acabamento refinado, nossas peças são desenvolvidas para representar a singularidade de cada história, transformando um gesto de amor em um símbolo que poderá ser carregado todos os dias.<br/><br/><br/></p>",
             "button_text": "",
@@ -424,6 +357,73 @@
       "name": "Text with image slider",
       "settings": {}
     },
+    "section_collection_slider_zTVfhX": {
+      "type": "section-collection-slider",
+      "name": "Product slider",
+      "settings": {
+        "collection": "engagement-rings",
+        "product_limit": 20,
+        "title": "Alianças de noivado",
+        "align_text": "title-center",
+        "progress_bar": "mobile",
+        "grid_large": 3,
+        "grid_medium": 3,
+        "grid_mobile": 1.2,
+        "bg": "palette--light bg--neutral",
+        "width": "wrapper--full",
+        "padding_top": 24,
+        "padding_bottom": 76
+      }
+    },
+    "blocks_g3VEzz": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_6344db4_DpcDWw": {
+          "type": "ai_gen_block_6344db4",
+          "settings": {
+            "image_position": "left",
+            "heading": "Quando o amor ganha promessa",
+            "text": "<p>Antes mesmo do casamento, existe um momento especial: a decisão de seguir o mesmo caminho. As alianças de noivado celebram essa escolha, tornando visível uma promessa feita a dois. Com design atemporal e acabamento refinado, nossas peças são desenvolvidas para representar a singularidade de cada história, transformando um gesto de amor em um símbolo que poderá ser carregado todos os dias.<br/><br/><br/></p>",
+            "button_text": "",
+            "button_link": "",
+            "image_1": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0304_1.jpg",
+            "image_2": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0240_1_1.jpg",
+            "image_width": 50,
+            "image_aspect_ratio": "16/9",
+            "show_dots": false,
+            "show_arrows": true,
+            "autoplay": true,
+            "autoplay_speed": 4,
+            "desktop_width_percent": 100,
+            "gap": 20,
+            "padding": 20,
+            "border_radius": 10,
+            "image_border_radius": 10,
+            "background_color": "#ffffff",
+            "heading_color": "#000000",
+            "text_color": "#3c3f36",
+            "dot_color": "#ffffff",
+            "arrow_bg_color": "#ffffff",
+            "arrow_hover_bg_color": "#f4f4f4",
+            "arrow_color": "#000000",
+            "heading_size": 32,
+            "heading_spacing": 20,
+            "text_size": 19,
+            "button_bg_color": "#006652",
+            "button_hover_bg_color": "#004d3d",
+            "button_text_color": "#ffffff",
+            "button_spacing": 20,
+            "button_border_radius": 5
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_6344db4_DpcDWw"
+      ],
+      "name": "Text with image slider",
+      "settings": {}
+    },
     "section_collection_slider_wDcyrE": {
       "type": "section-collection-slider",
       "name": "Product slider",
@@ -451,9 +451,9 @@
     "178087092688e5a9ed",
     "1780890255bc399d2f",
     "1780943867bab9d473",
-    "blocks_g3VEzz",
-    "section_collection_slider_zTVfhX",
     "blocks_38DBfm",
+    "section_collection_slider_zTVfhX",
+    "blocks_g3VEzz",
     "section_collection_slider_wDcyrE"
   ]
 }
