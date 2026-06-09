@@ -461,7 +461,7 @@
       "settings": {
         "collection": "dia-da-noiva",
         "product_limit": 20,
-        "title": "Alianças de noivado",
+        "title": "Dia da noiva",
         "align_text": "title-center",
         "progress_bar": "mobile",
         "grid_large": 3,
@@ -472,6 +472,59 @@
         "padding_top": 24,
         "padding_bottom": 76
       }
+    },
+    "blocks_3iGREn": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_6344db4_gf6RWQ": {
+          "type": "ai_gen_block_6344db4",
+          "settings": {
+            "image_position": "left",
+            "heading": "Para o dia em que o amor é celebrado",
+            "text": "<p>Há momentos que acontecem uma única vez, mas permanecem para sempre. Das alianças aos detalhes que completam a produção da noiva, cada joia carrega a emoção de um dos dias mais importantes da sua história, transformando lembranças em algo que pode ser guardado e revivido por toda a vida.<br/><br/><br/></p>",
+            "button_text": "",
+            "button_link": "",
+            "image_1": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0290_1.jpg",
+            "image_2": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0268_3_2.jpg",
+            "image_width": 50,
+            "image_height_desktop": 500,
+            "image_width_mobile": 100,
+            "image_height_mobile": 350,
+            "content_padding_top": 170,
+            "content_padding_bottom": 80,
+            "show_dots": false,
+            "show_arrows": true,
+            "autoplay": true,
+            "autoplay_speed": 4,
+            "desktop_width_percent": 100,
+            "gap": 20,
+            "padding": 20,
+            "border_radius": 10,
+            "image_border_radius": 10,
+            "background_color": "#ffffff",
+            "heading_color": "#000000",
+            "text_color": "#3c3f36",
+            "dot_color": "#ffffff",
+            "arrow_bg_color": "#ffffff",
+            "arrow_hover_bg_color": "#f4f4f4",
+            "arrow_color": "#000000",
+            "heading_size": 32,
+            "heading_spacing": 20,
+            "text_size": 18,
+            "button_bg_color": "#006652",
+            "button_hover_bg_color": "#004d3d",
+            "button_text_color": "#ffffff",
+            "button_spacing": 20,
+            "button_border_radius": 5
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_6344db4_gf6RWQ"
+      ],
+      "name": "Text with image slider",
+      "settings": {}
     }
   },
   "order": [
@@ -486,6 +539,7 @@
     "blocks_g3VEzz",
     "section_collection_slider_wDcyrE",
     "blocks_4t9Ryh",
-    "section_collection_slider_3pGbmW"
+    "section_collection_slider_3pGbmW",
+    "blocks_3iGREn"
   ]
 }
