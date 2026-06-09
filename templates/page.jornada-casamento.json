@@ -314,7 +314,7 @@
         "ai_gen_block_6344db4_DpcDWw": {
           "type": "ai_gen_block_6344db4",
           "settings": {
-            "image_position": "right",
+            "image_position": "left",
             "heading": "Quando o amor ganha promessa",
             "text": "<p>Antes mesmo do casamento, existe um momento especial: a decisão de seguir o mesmo caminho. As alianças de noivado celebram essa escolha, tornando visível uma promessa feita a dois. Com design atemporal e acabamento refinado, nossas peças são desenvolvidas para representar a singularidade de cada história, transformando um gesto de amor em um símbolo que poderá ser carregado todos os dias.<br/><br/><br/></p>",
             "button_text": "",
@@ -358,24 +358,6 @@
       "settings": {}
     },
     "section_collection_slider_zTVfhX": {
-      "type": "section-collection-slider",
-      "name": "Product slider",
-      "settings": {
-        "collection": "engagement-rings",
-        "product_limit": 12,
-        "title": "Alianças de noivado",
-        "align_text": "title-center",
-        "progress_bar": "mobile",
-        "grid_large": 3,
-        "grid_medium": 3,
-        "grid_mobile": 1.2,
-        "bg": "palette--light bg--neutral",
-        "width": "wrapper--full",
-        "padding_top": 72,
-        "padding_bottom": 76
-      }
-    },
-    "section_collection_slider_wDcyrE": {
       "type": "section-collection-slider",
       "name": "Product slider",
       "settings": {
@@ -441,6 +423,24 @@
       ],
       "name": "Text with image slider",
       "settings": {}
+    },
+    "section_collection_slider_wDcyrE": {
+      "type": "section-collection-slider",
+      "name": "Product slider",
+      "settings": {
+        "collection": "engagement-rings",
+        "product_limit": 12,
+        "title": "Alianças de noivado",
+        "align_text": "title-center",
+        "progress_bar": "mobile",
+        "grid_large": 3,
+        "grid_medium": 3,
+        "grid_mobile": 1.2,
+        "bg": "palette--light bg--neutral",
+        "width": "wrapper--full",
+        "padding_top": 72,
+        "padding_bottom": 76
+      }
     }
   },
   "order": [
