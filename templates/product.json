@@ -95,7 +95,11 @@
           "type": "icon",
           "repeater": "{{ product.metafields.shopify[\"gemstone-type\"].value }}",
           "settings": {
-            "text": "<p>Pedra preciosa: {{ block.repeater.label.value }}</p>"
+            "icon_name": "",
+            "icon_size": 16,
+            "icon_color": "#4b4b4b",
+            "text": "<p>Pedra preciosa: {{ block.repeater.label.value }}</p>",
+            "padding_bottom": 8
           }
         },
         "description": {
@@ -161,7 +165,7 @@
         ".product-form__cart-submit:hover {background-color: var(--color-bright-accent-hover) !important; border-color: var(--color-bright-accent-hover) !important;}"
       ],
       "settings": {
-        "layout": "none@mosaic",
+        "layout": "thumbnails-below@slides",
         "image_width": "half",
         "image_spacing": 50,
         "align": "left",
