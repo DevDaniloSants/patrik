@@ -165,7 +165,7 @@
         ".product-form__cart-submit:hover {background-color: var(--color-bright-accent-hover) !important; border-color: var(--color-bright-accent-hover) !important;}"
       ],
       "settings": {
-        "layout": "none@mosaic",
+        "layout": "thumbnails-below@slides",
         "image_width": "wide",
         "image_spacing": 50,
         "align": "left",
