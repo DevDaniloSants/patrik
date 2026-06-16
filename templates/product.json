@@ -18,7 +18,7 @@
             "show_line": false,
             "target_device": "hidden-mobile",
             "padding_top": 0,
-            "padding_bottom": 0
+            "padding_bottom": 40
           }
         },
         "title": {
