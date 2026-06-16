@@ -461,46 +461,6 @@
     }
   }
 </style>
-<script>
-document.addEventListener('click', function(e) {
-  var trigger = e.target.closest('[href="#open-specialist-modal"]');
-  if (trigger) {
-    e.preventDefault();
-    var modal = document.querySelector('[id^="specialist-modal-"]');
-    if (modal) {
-      modal.style.display = '';
-      modal.classList.add('specialist-modal--open');
-    }
-  }
-});
-</script>
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  function fixSlider() {
-    var slider = document.querySelector('.product__grid--slides');
-    if (!slider) return;
-    
-    var viewport = slider.querySelector('.flickity-viewport');
-    if (!viewport) return;
-    
-    // Captura a altura inicial e trava
-    var fixedHeight = viewport.offsetHeight;
-    
-    // Observa mudanças no style inline e reverte
-    var observer = new MutationObserver(function() {
-      if (viewport.style.height !== fixedHeight + 'px') {
-        viewport.style.height = fixedHeight + 'px';
-      }
-    });
-    
-    observer.observe(viewport, { attributes: true, attributeFilter: ['style'] });
-  }
-  
-  // Aguarda o Flickity inicializar
-  setTimeout(fixSlider, 1000);
-});
 </script>
   <!-- And above this comment line ================================================== -->
 
