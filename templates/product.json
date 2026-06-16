@@ -172,7 +172,7 @@
         "image_spacing": 50,
         "align": "left",
         "bg": "palette--light bg--neutral",
-        "mobile_layout": "thumbs",
+        "mobile_layout": "carousel",
         "enable_video_looping": true,
         "zoom_enable": true,
         "alt_text_enable": true,
