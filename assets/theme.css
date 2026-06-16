@@ -29313,6 +29313,10 @@ html.no-js .password-section noscript {
 .product__grid--slides .flickity-viewport {
   transition: height 0.4s;
 }
+.product__grid--slides .flickity-viewport {
+  height: 100vh !important;
+  transition: none !important;
+}
 
 .product__grid--slides .flickity-slider>* {
   width: 100%;
