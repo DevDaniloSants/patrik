@@ -478,16 +478,28 @@ document.addEventListener('click', function(e) {
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  var slider = document.querySelector('.product__grid--slides');
-  if (!slider) return;
-  var Flickity = window.Flickity;
-  if (!Flickity) return;
-  var flkty = Flickity.data(slider);
-  if (!flkty) return;
-  flkty.on('change', function() {
-    slider.querySelector('.flickity-viewport').style.height = 
-      slider.querySelector('.flickity-viewport').style.height;
-  });
+  function fixSlider() {
+    var slider = document.querySelector('.product__grid--slides');
+    if (!slider) return;
+    
+    var viewport = slider.querySelector('.flickity-viewport');
+    if (!viewport) return;
+    
+    // Captura a altura inicial e trava
+    var fixedHeight = viewport.offsetHeight;
+    
+    // Observa mudanças no style inline e reverte
+    var observer = new MutationObserver(function() {
+      if (viewport.style.height !== fixedHeight + 'px') {
+        viewport.style.height = fixedHeight + 'px';
+      }
+    });
+    
+    observer.observe(viewport, { attributes: true, attributeFilter: ['style'] });
+  }
+  
+  // Aguarda o Flickity inicializar
+  setTimeout(fixSlider, 1000);
 });
 </script>
   <!-- And above this comment line ================================================== -->
