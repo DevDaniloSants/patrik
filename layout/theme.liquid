@@ -475,18 +475,22 @@ document.addEventListener('click', function(e) {
 });
 </script>
 </script>
-  <!-- And above this comment line ================================================== -->
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   var slider = document.querySelector('.product__grid--slides');
   if (!slider) return;
-  var flkty = window.Flickity.data(slider);
+  var Flickity = window.Flickity;
+  if (!Flickity) return;
+  var flkty = Flickity.data(slider);
   if (!flkty) return;
   flkty.on('change', function() {
-    flkty.resize();
+    slider.querySelector('.flickity-viewport').style.height = 
+      slider.querySelector('.flickity-viewport').style.height;
   });
 });
 </script>
+  <!-- And above this comment line ================================================== -->
 
   </body>
 </html>
