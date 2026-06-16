@@ -19,7 +19,7 @@
             "product_show_cutline": true,
             "show_rating": false,
             "show_rating_count": false,
-            "padding_bottom": 0
+            "padding_bottom": 100
           }
         },
         "price": {
@@ -91,6 +91,13 @@
             "padding_bottom": 22
           }
         },
+        "icon_KixHr7": {
+          "type": "icon",
+          "repeater": "{{ product.metafields.shopify[\"gemstone-type\"].value }}",
+          "settings": {
+            "text": "<p>Pedra preciosa: {{ block.repeater.label.value }}</p>"
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -143,6 +150,7 @@
         "quantity",
         "buttons",
         "spacer_yCjLBw",
+        "icon_KixHr7",
         "description",
         "pickup",
         "sharing"
@@ -150,12 +158,12 @@
       "custom_css": [
         ".product__block__description {font-size: 14px; color: #888888;}",
         ".product-form__cart-submit {background-color: var(--color-bright-accent) !important; border-color: var(--color-bright-accent) !important; color: var(--color-bright-accent-text) !important;}",
-        ".product-form__cart-submit:hover {background-color: var(--color-bright-accent-hover) !important; border-color: var(--color-bright-accent-hover) !important; }"
+        ".product-form__cart-submit:hover {background-color: var(--color-bright-accent-hover) !important; border-color: var(--color-bright-accent-hover) !important;}"
       ],
       "settings": {
         "layout": "none@mosaic",
         "image_width": "half",
-        "image_spacing": 0,
+        "image_spacing": 50,
         "align": "left",
         "bg": "palette--light bg--neutral",
         "mobile_layout": "thumbs",
