@@ -17,7 +17,7 @@
           "settings": {
             "show_line": false,
             "target_device": "hidden-mobile",
-            "padding_top": 40,
+            "padding_top": 0,
             "padding_bottom": 0
           }
         },
