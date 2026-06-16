@@ -33251,6 +33251,14 @@ body.template-product .section-padding {
 #journada-casamento .header--not-top {
   background: transparent !important;
 }
-/* Product media over header */
-.product__media{position:relative;z-index:200!important}
-header{z-index:100!important}
+/* Galeria inicia no topo, sobre o header */
+.product__media-wrapper,
+.product__media-list {
+  position: fixed;
+  top: 0;
+  z-index: 200;
+}
+
+header, .header-wrapper {
+  z-index: 100;
+}
