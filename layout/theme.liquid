@@ -475,6 +475,21 @@ document.addEventListener('click', function(e) {
 });
 </script>
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var slider = document.querySelector('.product__grid--slides');
+  if (!slider) return;
+  var Flickity = window.Flickity;
+  if (!Flickity) return;
+  var flkty = Flickity.data(slider);
+  if (!flkty) return;
+  flkty.on('change', function() {
+    slider.querySelector('.flickity-viewport').style.height = 
+      slider.querySelector('.flickity-viewport').style.height;
+  });
+});
+</script>
   <!-- And above this comment line ================================================== -->
 
   </body>
