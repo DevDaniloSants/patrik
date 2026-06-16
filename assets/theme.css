@@ -29311,9 +29311,7 @@ html.no-js .password-section noscript {
 }
 
 .product__grid--slides .flickity-viewport {
-  transition: none !important;
-  height: auto !important;
-  min-height: 100% !important;
+  transition: height 0.4s;
 }
 
 .product__grid--slides {
