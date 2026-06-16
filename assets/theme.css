@@ -33259,10 +33259,16 @@ body.template-product .section-padding {
   padding-top: 0 !important;
 }
 
-/* Remove padding do template de produto */
-.template-product .page-width,
-.template-product main,
-.template-product .product {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
+.product__media__wrapper {
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+}
+
+.flickity-viewport {
+  height: 100vh !important;
+}
+
+.product__grid--slides .flickity-slider > * {
+  height: 100vh !important;
 }
