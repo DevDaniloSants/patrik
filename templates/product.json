@@ -166,7 +166,7 @@
       ],
       "settings": {
         "layout": "thumbnails-below@slides",
-        "image_width": "half",
+        "image_width": "wide",
         "image_spacing": 50,
         "align": "left",
         "bg": "palette--light bg--neutral",
