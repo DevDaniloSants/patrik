@@ -29311,7 +29311,17 @@ html.no-js .password-section noscript {
 }
 
 .product__grid--slides .flickity-viewport {
-  transition: height 0.4s;
+  transition: none !important;
+  height: auto !important;
+  min-height: 100% !important;
+}
+
+.product__grid--slides {
+  height: 100vh;
+}
+
+.product__grid--slides .flickity-slider > * {
+  height: 100% !important;
 }
 
 
