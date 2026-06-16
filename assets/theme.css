@@ -33251,3 +33251,6 @@ body.template-product .section-padding {
 #journada-casamento .header--not-top {
   background: transparent !important;
 }
+/* Product media over header */
+.product__media{position:relative;z-index:200!important}
+header{z-index:100!important}
