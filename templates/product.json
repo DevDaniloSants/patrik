@@ -16,7 +16,7 @@
           "type": "spacer",
           "settings": {
             "show_line": false,
-            "target_device": "mobile-only",
+            "target_device": "hidden-mobile",
             "padding_top": 0,
             "padding_bottom": 40
           }
