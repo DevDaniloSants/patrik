@@ -177,7 +177,7 @@
         "alt_text_icon": "icon-ruler",
         "product_breadcrumbs_enable": true,
         "product_breadcrumbs_list": [],
-        "width": "wrapper--none",
+        "width": "wrapper--full",
         "padding_top": 0,
         "padding_bottom": 0
       }
