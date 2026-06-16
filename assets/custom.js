@@ -66,3 +66,21 @@
   // ^^ Keep your scripts inside this IIFE function call to avoid leaking your
   // variables into the global scope.
 })();
+/ Fix Flickity adaptive height on product slider
+document.addEventListener('DOMContentLoaded', function() {
+  var slider = document.querySelector('.product__grid--slides');
+  if (!slider) return;
+
+  function lockHeight() {
+    var viewport = slider.querySelector('.flickity-viewport');
+    if (!viewport) return;
+    var h = viewport.offsetHeight;
+    if (h > 100) {
+      new MutationObserver(function() {
+        viewport.style.setProperty('height', h + 'px', 'important');
+      }).observe(viewport, { attributes: true, attributeFilter: ['style'] });
+    }
+  }
+
+  setTimeout(lockHeight, 1500);
+});
