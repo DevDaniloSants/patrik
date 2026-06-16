@@ -33251,14 +33251,18 @@ body.template-product .section-padding {
 #journada-casamento .header--not-top {
   background: transparent !important;
 }
-/* Galeria inicia no topo, sobre o header */
+/* Remove espaço entre header e galeria do produto */
 .product__media-wrapper,
-.product__media-list {
-  position: fixed;
-  top: 0;
-  z-index: 200;
+.product__media-list,
+.product-media-container {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
 
-header, .header-wrapper {
-  z-index: 100;
+/* Remove padding do template de produto */
+.template-product .page-width,
+.template-product main,
+.template-product .product {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
 }
