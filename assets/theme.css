@@ -29314,15 +29314,6 @@ html.no-js .password-section noscript {
   transition: height 0.4s;
 }
 
-.product__grid--slides {
-  height: 100vh;
-}
-
-.product__grid--slides .flickity-slider > * {
-  height: 100% !important;
-}
-
-
 .product__grid--slides .flickity-slider>* {
   width: 100%;
 }
