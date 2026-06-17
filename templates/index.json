@@ -1552,9 +1552,9 @@
           "type": "ai_gen_block_c322d72",
           "settings": {
             "layout": "video_left",
-            "container_width": 1150,
-            "section_padding": 20,
-            "horizontal_padding": 40,
+            "container_width": 800,
+            "section_padding": 0,
+            "horizontal_padding": 0,
             "gap": 60,
             "content_gap": 50,
             "background_color": "#142b26",
