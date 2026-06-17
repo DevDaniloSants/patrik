@@ -28,7 +28,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: {{ block.settings.gap }}px;
-    align-items: center; /* ← centraliza verticalmente em relação ao vídeo */
+    align-items: stretch; /* ← centraliza verticalmente em relação ao vídeo */
   }
 
   .ai-text-video-wrapper-{{ ai_gen_id }}.reverse {
@@ -40,13 +40,13 @@
   }
 
   .ai-text-video-content-{{ ai_gen_id }} {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* ← centraliza verticalmente o conteúdo interno */
-    align-items: flex-start; /* alinha à esquerda por padrão */
-    gap: {{ block.settings.content_gap }}px;
-    height: 100%;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: {{ block.settings.content_gap }}px;
+  align-self: stretch; /* ← força a coluna a ocupar toda a altura da linha do grid */
+}
 
   .ai-text-video-kicker-{{ ai_gen_id }} {
     color: {{ block.settings.kicker_color }};
