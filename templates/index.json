@@ -378,9 +378,9 @@
           "settings": {
             "layout": "video_left",
             "container_width": 1250,
-            "section_padding": 20,
+            "section_padding": 70,
             "horizontal_padding": 40,
-            "gap": 60,
+            "gap": 90,
             "content_gap": 50,
             "background_color": "#142B26",
             "kicker": "",
@@ -422,6 +422,32 @@
       ],
       "name": "Texto e vídeo",
       "settings": {}
+    },
+    "section_richtext_L3KwLw": {
+      "type": "section-richtext",
+      "blocks": {
+        "text_VkFQey": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": 4,
+            "text_columns": 1
+          }
+        }
+      },
+      "block_order": [
+        "text_VkFQey"
+      ],
+      "name": "Espaçamento",
+      "settings": {
+        "align_text": "text-left",
+        "text_color": "text--neutral",
+        "bg": "palette--dark bg--invert--accent",
+        "content_width": 2000,
+        "width": "wrapper",
+        "padding_top": 10,
+        "padding_bottom": 32
+      }
     },
     "section_gallery_slider_hxtEhm": {
       "type": "section-gallery-slider",
@@ -1144,100 +1170,6 @@
       ],
       "settings": {}
     },
-    "section_list_collections_LeYE9C": {
-      "type": "section-list-collections",
-      "blocks": {
-        "collection_U7JaxJ": {
-          "type": "collection",
-          "name": "Esmeraldas",
-          "settings": {
-            "collection": "",
-            "image": "shopify://shop_images/both_earrings_has_to_be_on_yel_Nano_Banana_Pro_42600.png",
-            "mobile_image": "shopify://shop_images/both_earrings_has_to_be_on_yel_Nano_Banana_Pro_42600.png",
-            "overlay_color": "#616161",
-            "overlay_opacity": 0,
-            "top_text": "",
-            "top_text_disabled": true,
-            "title": "",
-            "title_disabled": true,
-            "bottom_text": "Esmeraldas",
-            "bottom_text_disabled": false,
-            "collection_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Esmeralda",
-            "text_color": "text--white"
-          }
-        },
-        "collection_XmWLNj": {
-          "type": "collection",
-          "name": "Água Marinha",
-          "settings": {
-            "collection": "",
-            "image": "shopify://shop_images/take_out_that_earring_that_is__Nano_Banana_Pro_56236_92a3e30d-7e03-46ff-b040-36c99afc745c.png",
-            "mobile_image": "shopify://shop_images/take_out_that_earring_that_is__Nano_Banana_Pro_56236.png",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "top_text": "",
-            "top_text_disabled": true,
-            "title": "",
-            "title_disabled": true,
-            "bottom_text": "Água-Marinha",
-            "bottom_text_disabled": false,
-            "collection_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Água+Marinha",
-            "text_color": "text--white"
-          }
-        },
-        "collection_68jAMA": {
-          "type": "collection",
-          "name": "Tanzanitas",
-          "settings": {
-            "collection": "",
-            "image": "shopify://shop_images/now_change_the_product_composi_Nano_Banana_Pro_14381.png",
-            "mobile_image": "shopify://shop_images/now_change_the_product_composi_Nano_Banana_Pro_14381.png",
-            "overlay_color": "#616161",
-            "overlay_opacity": 0,
-            "top_text": "Product Count",
-            "top_text_disabled": true,
-            "title": "Collection Name",
-            "title_disabled": true,
-            "bottom_text": "Tanzanitas",
-            "bottom_text_disabled": false,
-            "collection_url": "/collections/all?filter.p.m.custom.tipo_de_pedra_preciosa=Tanzanita",
-            "text_color": "text--white"
-          }
-        }
-      },
-      "block_order": [
-        "collection_U7JaxJ",
-        "collection_XmWLNj",
-        "collection_68jAMA"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".custom-scrollbar.small-down--show {display: none !important;}",
-        ".custom-scrollbar.small-down--show::-webkit-scrollbar {display: none;}",
-        ".kicker-flourished {font-size: 20px !important;}",
-        ".collection-grid-item__btn {font-size: 18px;}"
-      ],
-      "name": "Gemas",
-      "settings": {
-        "title": "As gemas mais icônicas da Patrik",
-        "bg": "palette--dark bg--invert--accent",
-        "carousel_enabled_on": "hidden",
-        "collection_limit": 35,
-        "wh_ratio": 0.7,
-        "grid_large": 3,
-        "grid_medium": 2,
-        "grid_mobile": 1,
-        "desktop_gutter": 25,
-        "text_layout": "outside",
-        "enable_hover": false,
-        "font_family": "body",
-        "title_size": 4,
-        "accent_size": 3,
-        "width": "wrapper",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "section_richtext_jRYTUM": {
       "type": "section-richtext",
       "blocks": {
@@ -1530,74 +1462,6 @@
         "padding_top": 50,
         "padding_bottom": 50
       }
-    },
-    "17779271507e569dcf": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_56f6768_yUk4C9": {
-          "type": "ai_gen_block_56f6768",
-          "disabled": true,
-          "settings": {
-            "banner_image": "shopify://shop_images/ChatGPT_Image_4_de_mai._de_2026_17_36_39.png",
-            "hotspot_color": "#006652",
-            "hotspot_hover_color": "#3f9f85",
-            "hotspot_border_radius": 5,
-            "label_bg_color": "#3c3f36",
-            "label_text_color": "#ffffff",
-            "hotspot_1_enabled": true,
-            "hotspot_1_x": 10,
-            "hotspot_1_y": 20,
-            "hotspot_1_width": 20,
-            "hotspot_1_height": 15,
-            "hotspot_1_link": "",
-            "hotspot_1_label": "",
-            "hotspot_2_enabled": true,
-            "hotspot_2_x": 40,
-            "hotspot_2_y": 30,
-            "hotspot_2_width": 20,
-            "hotspot_2_height": 15,
-            "hotspot_2_link": "",
-            "hotspot_2_label": "",
-            "hotspot_3_enabled": true,
-            "hotspot_3_x": 29,
-            "hotspot_3_y": 29,
-            "hotspot_3_width": 8,
-            "hotspot_3_height": 41,
-            "hotspot_3_link": "",
-            "hotspot_3_label": "",
-            "hotspot_4_enabled": true,
-            "hotspot_4_x": 15,
-            "hotspot_4_y": 60,
-            "hotspot_4_width": 20,
-            "hotspot_4_height": 15,
-            "hotspot_4_link": "",
-            "hotspot_4_label": "",
-            "hotspot_5_enabled": true,
-            "hotspot_5_x": 45,
-            "hotspot_5_y": 70,
-            "hotspot_5_width": 20,
-            "hotspot_5_height": 15,
-            "hotspot_5_link": "",
-            "hotspot_5_label": "",
-            "hotspot_6_enabled": true,
-            "hotspot_6_x": 75,
-            "hotspot_6_y": 80,
-            "hotspot_6_width": 20,
-            "hotspot_6_height": 15,
-            "hotspot_6_link": "",
-            "hotspot_6_label": ""
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_56f6768_yUk4C9"
-      ],
-      "settings": {}
-    },
-    "17806038668d0366e8": {
-      "type": "_blocks",
-      "settings": {}
     }
   },
   "order": [
@@ -1610,6 +1474,7 @@
     "collection_split_4BRfHx",
     "section_richtext_UkKtct",
     "blocks_Vmh4bz",
+    "section_richtext_L3KwLw",
     "section_gallery_slider_hxtEhm",
     "section_columns_X6EhLY",
     "section_richtext_q8gnYc",
@@ -1619,12 +1484,9 @@
     "section_hero_mEN6xM",
     "section_hero_UhTiib",
     "17779288275c16224c",
-    "section_list_collections_LeYE9C",
     "section_richtext_jRYTUM",
     "section_list_collections_ftJBTL",
     "section_logos_Cd4AwJ",
-    "section_icons_Fcggry",
-    "17779271507e569dcf",
-    "17806038668d0366e8"
+    "section_icons_Fcggry"
   ]
 }
