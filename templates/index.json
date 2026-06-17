@@ -367,7 +367,7 @@
         "content_width": 2000,
         "width": "wrapper",
         "padding_top": 10,
-        "padding_bottom": 32
+        "padding_bottom": 4
       }
     },
     "blocks_Vmh4bz": {
@@ -412,7 +412,7 @@
             "text_size": 17,
             "text_color": "#dff3fd",
             "mobile_video_first": true,
-            "mobile_gap": 20
+            "mobile_gap": 40
           },
           "blocks": {}
         }
