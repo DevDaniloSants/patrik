@@ -28,7 +28,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: {{ block.settings.gap }}px;
-    align-items: stretch; /* ← centraliza verticalmente em relação ao vídeo */
+    align-items: stretch;
   }
 
   .ai-text-video-wrapper-{{ ai_gen_id }}.reverse {
@@ -40,13 +40,14 @@
   }
 
   .ai-text-video-content-{{ ai_gen_id }} {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: {{ block.settings.content_gap }}px;
-  align-self: stretch; /* ← força a coluna a ocupar toda a altura da linha do grid */
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: {{ block.settings.content_gap }}px;
+    align-self: stretch;
+  }
 
   .ai-text-video-kicker-{{ ai_gen_id }} {
     color: {{ block.settings.kicker_color }};
@@ -194,6 +195,16 @@
         order: -1;
       }
     {% endif %}
+
+    .ai-text-video-content-{{ ai_gen_id }} {
+      align-items: center;
+      text-align: center;
+      width: 100%;
+    }
+
+    .ai-text-video-media-{{ ai_gen_id }} {
+      width: 100%;
+    }
 
     .ai-text-video-heading-{{ ai_gen_id }} {
       font-size: {{ block.settings.heading_size | times: 0.7 }}px;
