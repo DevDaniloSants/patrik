@@ -24,12 +24,12 @@
     padding: 0 {{ block.settings.horizontal_padding }}px;
   }
 
- .ai-text-video-wrapper-{{ ai_gen_id }} {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: {{ block.settings.gap }}px;
-  align-items: start; /* ← topo alinhado */
-}
+  .ai-text-video-wrapper-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: {{ block.settings.gap }}px;
+    align-items: center; /* ← centraliza verticalmente em relação ao vídeo */
+  }
 
   .ai-text-video-wrapper-{{ ai_gen_id }}.reverse {
     direction: rtl;
@@ -42,7 +42,10 @@
   .ai-text-video-content-{{ ai_gen_id }} {
     display: flex;
     flex-direction: column;
+    justify-content: center; /* ← centraliza verticalmente o conteúdo interno */
+    align-items: flex-start; /* alinha à esquerda por padrão */
     gap: {{ block.settings.content_gap }}px;
+    height: 100%;
   }
 
   .ai-text-video-kicker-{{ ai_gen_id }} {
@@ -227,7 +230,7 @@
           </div>
         {% endif %}
 
-        {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+        {% if block.settings.button_text != blank %}
           <div>
             <a href="{{ block.settings.button_link }}" class="ai-text-video-button-{{ ai_gen_id }}">
               {{ block.settings.button_text }}
