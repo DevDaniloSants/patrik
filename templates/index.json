@@ -1554,8 +1554,8 @@
             "layout": "video_left",
             "container_width": 1150,
             "section_padding": 20,
-            "horizontal_padding": 100,
-            "gap": 20,
+            "horizontal_padding": 40,
+            "gap": 60,
             "content_gap": 50,
             "background_color": "#142b26",
             "kicker": "personalize e Eternize os Momentos Marcantes da Vida",
@@ -1570,7 +1570,7 @@
             "button_bg_color": "#250066",
             "button_text_color": "#ffffff",
             "button_hover_bg_color": "#3c3f36",
-            "button_hover_text_color": "#FFFFFF",
+            "button_hover_text_color": "#ffffff",
             "video_width": 100,
             "video": "shopify://files/videos/personalização_feed.mov",
             "video_url": "",
@@ -1587,7 +1587,7 @@
             "text_size": 16,
             "text_color": "#dff3fd",
             "mobile_video_first": true,
-            "mobile_gap": 30
+            "mobile_gap": 20
           },
           "blocks": {}
         }
