@@ -242,12 +242,16 @@
         {% endif %}
 
         {% if block.settings.button_text != blank %}
-          <div>
-            <a href="{{ block.settings.button_link }}" class="ai-text-video-button-{{ ai_gen_id }}">
-              {{ block.settings.button_text }}
-            </a>
-          </div>
-        {% endif %}
+  <div>
+    <button
+      type="button"
+      class="ai-text-video-button-{{ ai_gen_id }}"
+      onclick="openGlobalSpecialistModal()"
+    >
+      {{ block.settings.button_text }}
+    </button>
+  </div>
+{% endif %}
       </div>
 
       <div class="ai-text-video-media-{{ ai_gen_id }}">
