@@ -210,11 +210,15 @@
           </div>
         </div>
       {% endif %}
-      {% if block.settings.button_text != blank %}
-        <a href="{{ block.settings.button_link }}" class="ai-text-image-button-{{ ai_gen_id }}">
-          {{ block.settings.button_text }}
-        </a>
-      {% endif %}
+     {% if block.settings.button_text != blank %}
+  <button
+    type="button"
+    class="ai-text-image-button-{{ ai_gen_id }}"
+    onclick="openGlobalSpecialistModal()"
+  >
+    {{ block.settings.button_text }}
+  </button>
+{% endif %}
     </div>
   </div>
 </div>
