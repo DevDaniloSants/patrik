@@ -73,6 +73,14 @@
             "padding_bottom": 20
           }
         },
+        "specs": {
+          "type": "specs-accordion",
+          "settings": {
+            "title": "Detalhes",
+            "expanded": false,
+            "padding_bottom": 20
+          }
+        },
         "buttons": {
           "type": "add-buttons",
           "settings": {
@@ -152,6 +160,7 @@
         "variants",
         "subscriptions",
         "quantity",
+        "specs",
         "buttons",
         "spacer_yCjLBw",
         "icon_KixHr7",

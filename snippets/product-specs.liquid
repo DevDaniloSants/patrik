@@ -1,0 +1,250 @@
+<!-- /snippets/product-specs.liquid -->
+{% comment %}
+  Accordion de especificações (atributos) do produto.
+  Monta uma lista linha-a-linha a partir dos metafields do produto e a exibe
+  dentro de um único accordion (reaproveita o padrão .product-accordion).
+  Linhas sem valor são omitidas automaticamente.
+
+  Uso:
+    {% render 'product-specs', product: product, block: block %}
+
+  Cada atributo é definido como "namespace|chave|sid|rótulo_padrão" (na ordem de exibição).
+  O rótulo e o ícone são editáveis no admin via block.settings['label_<sid>'] e ['icon_<sid>'].
+  O valor é formatado automaticamente conforme o TIPO do metafield:
+    - list.*            -> junta os itens com vírgula (texto ou label de metaobjeto)
+    - boolean           -> Sim / Não
+    - weight/dimension/volume -> valor + unidade abreviada
+    - metaobject        -> label do metaobjeto
+    - demais (texto/número) -> valor direto
+{% endcomment %}
+
+{%- liquid
+  assign field_defs = 'shopify|jewelry-material|material|Material|custom|shopify--jewelry-material;;custom|tipo_de_pedra_preciosa|stone|Pedra|shopify|gemstone-type;;custom|custom_total_weight|weight|Peso total;;custom|custom_diamantes_quilates|carats|Quilatagem;;custom|stone_dimension|stonedims|Dimensões da pedra;;custom|custom_chain_length|chain|Comprimento da corrente;;custom|tipo_de_anel|ringtype|Tipo de anel;;shopify|earring-design|earringtype|Design do brinco;;custom|resizable|resizable|Redimensionável' | split: ';;'
+
+  assign rows_html = ''
+-%}
+
+{%- comment %} ===== TEMP DEBUG: remover depois de diagnosticar ===== {%- endcomment %}
+<script>
+  console.group('🔎 SPECS DEBUG | produto: {{ product.handle }}');
+  console.log('--- TODOS os metafields CUSTOM ---');
+  {%- for f in product.metafields.custom -%}
+  console.log('custom.{{ f[0] }}', '| type:', {{ f[1].type | json }}, '| value:', {{ f[1].value | json }});
+  {%- endfor -%}
+  console.log('--- TODOS os metafields SHOPIFY ---');
+  {%- for f in product.metafields.shopify -%}
+  console.log('shopify.{{ f[0] }}', '| type:', {{ f[1].type | json }}, '| value:', {{ f[1].value | json }});
+  {%- endfor -%}
+  console.log('--- Status dos ICONES/labels do bloco ---');
+  {%- assign dbg_sids = 'material,stone,weight,carats,stonedims,chain,ringtype,earringtype,resizable' | split: ',' -%}
+  {%- for s in dbg_sids -%}
+    {%- assign dbg_lk = 'label_' | append: s -%}
+    {%- assign dbg_ik = 'icon_' | append: s -%}
+  console.log('sid={{ s }}', '| label:', {{ block.settings[dbg_lk] | json }}, '| icon:', {{ block.settings[dbg_ik] | json }});
+  {%- endfor -%}
+  console.groupEnd();
+</script>
+{%- comment %} ===== /TEMP DEBUG ===== {%- endcomment %}
+
+{%- for def in field_defs -%}
+  {%- assign parts = def | split: '|' -%}
+  {%- assign ns = parts[0] -%}
+  {%- assign key = parts[1] -%}
+  {%- assign sid = parts[2] -%}
+  {%- assign default_label = parts[3] -%}
+  {%- assign fallback_ns = parts[4] -%}
+  {%- assign fallback_key = parts[5] -%}
+
+  {%- comment %} Rótulo e ícone editáveis no admin (fallback para o rótulo padrão) {%- endcomment %}
+  {%- assign label_key = 'label_' | append: sid -%}
+  {%- assign icon_key = 'icon_' | append: sid -%}
+  {%- assign label = block.settings[label_key] | default: default_label -%}
+  {%- assign icon = block.settings[icon_key] -%}
+
+  {%- comment %} Resolve o metafield com fallback se configurado no array {%- endcomment %}
+  {%- if ns == 'shopify' -%}
+    {%- assign mf = product.metafields.shopify[key] -%}
+  {%- else -%}
+    {%- assign mf = product.metafields.custom[key] -%}
+  {%- endif -%}
+
+  {%- if mf == blank and fallback_ns != blank and fallback_key != blank -%}
+    {%- if fallback_ns == 'shopify' -%}
+      {%- assign mf = product.metafields.shopify[fallback_key] -%}
+    {%- else -%}
+      {%- assign mf = product.metafields.custom[fallback_key] -%}
+    {%- endif -%}
+  {%- endif -%}
+
+  {%- assign value = '' -%}
+
+  {%- if mf != blank -%}
+    {%- assign mtype = mf.type -%}
+
+    {%- if mtype contains 'list' -%}
+      {%- assign parts_list = '' -%}
+      {%- for entry in mf.value -%}
+        {%- capture entry_label -%}{{ entry.name.value | default: entry.name | default: entry.label.value | default: entry.label | default: entry }}{%- endcapture -%}
+        {%- assign entry_label = entry_label | strip -%}
+        {%- if entry_label != '' -%}
+          {%- if parts_list == '' -%}
+            {%- assign parts_list = entry_label -%}
+          {%- else -%}
+            {%- assign parts_list = parts_list | append: ', ' | append: entry_label -%}
+          {%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- assign value = parts_list -%}
+
+    {%- elsif mtype == 'boolean' -%}
+      {%- if mf.value -%}
+        {%- assign value = 'Sim' -%}
+      {%- else -%}
+        {%- assign value = 'Não' -%}
+      {%- endif -%}
+
+    {%- elsif mtype contains 'weight' or mtype contains 'dimension' or mtype contains 'volume' -%}
+      {%- assign unit_disp = mf.value.unit -%}
+      {%- case mf.value.unit -%}
+        {%- when 'GRAMS' -%}
+          {%- assign unit_disp = 'g' -%}
+        {%- when 'KILOGRAMS' -%}
+          {%- assign unit_disp = 'kg' -%}
+        {%- when 'OUNCES' -%}
+          {%- assign unit_disp = 'oz' -%}
+        {%- when 'POUNDS' -%}
+          {%- assign unit_disp = 'lb' -%}
+        {%- when 'MILLIMETERS' -%}
+          {%- assign unit_disp = 'mm' -%}
+        {%- when 'CENTIMETERS' -%}
+          {%- assign unit_disp = 'cm' -%}
+        {%- when 'METERS' -%}
+          {%- assign unit_disp = 'm' -%}
+        {%- when 'INCHES' -%}
+          {%- assign unit_disp = 'in' -%}
+        {%- when 'FEET' -%}
+          {%- assign unit_disp = 'ft' -%}
+        {%- when 'YARDS' -%}
+          {%- assign unit_disp = 'yd' -%}
+        {%- when 'MILLILITERS' -%}
+          {%- assign unit_disp = 'ml' -%}
+        {%- when 'CENTILITERS' -%}
+          {%- assign unit_disp = 'cl' -%}
+        {%- when 'LITERS' -%}
+          {%- assign unit_disp = 'l' -%}
+      {%- endcase -%}
+      {%- capture value -%}{{ mf.value.value }} {{ unit_disp }}{%- endcapture -%}
+
+    {%- elsif mtype contains 'metaobject' -%}
+      {%- capture value -%}{{ mf.value.name.value | default: mf.value.name | default: mf.value.label.value | default: mf.value.label | default: mf.value }}{%- endcapture -%}
+
+    {%- else -%}
+      {%- capture value -%}{{ mf.value }}{%- endcapture -%}
+    {%- endif -%}
+  {%- endif -%}
+
+  {%- assign value = value | strip -%}
+
+  <script>
+    console.group('🔍 Spec Row Debug: ' + {{ sid | json }});
+    console.log('Namespace:', {{ ns | json }}, '| Key:', {{ key | json }});
+    console.log('Label:', {{ label | json }}, '| Icon:', {{ icon | json }});
+    console.log('Metafield object:', {{ mf | json }});
+    console.log('Metafield value:', {{ mf.value | json }});
+    console.log('Metafield type:', {{ mf.type | json }});
+    console.log('Resolved formatted value:', {{ value | json }});
+    console.groupEnd();
+  </script>
+
+  {%- if value != '' and value != 'null' -%}
+    {%- capture rows_html -%}
+      {{ rows_html }}
+      <div class="product-specs__row">
+        {%- if icon != blank -%}<img class="product-specs__icon" src="{{ icon | image_url: width: 48 }}" alt="" width="24" height="24" loading="lazy">{%- endif -%}
+        <dt class="product-specs__label">{{ label }}:</dt>
+        <dd class="product-specs__value">{{ value }}</dd>
+      </div>
+    {%- endcapture -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- assign rows_html = rows_html | strip -%}
+
+{%- if rows_html != '' -%}
+  {%- assign specs_title = block.settings.title | default: 'Detalhes' -%}
+  {%- assign specs_open = block.settings.expanded -%}
+  {%- assign accordion_id = 'product-specs-' | append: block.id -%}
+
+  <div
+    class="product__block__specs product-specs"
+    style="padding-bottom: {{ block.settings.padding_bottom }}px;"
+    {{ block.shopify_attributes }}
+  >
+    <style>
+      .product-specs__list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem 2rem;
+        margin: 0;
+      }
+      .product-specs__row {
+        display: flex;
+        align-items: center;
+        gap: 0.45rem;
+        margin: 0;
+      }
+      .product-specs__icon {
+        height: 50px;
+        width: auto;
+        flex: 0 0 auto;
+        object-fit: contain;
+      }
+      .product-specs__label {
+        margin: 0;
+      }
+      .product-specs__value {
+        margin: 0;
+      }
+    </style>
+
+    <div class="product-accordion" data-accordion-group>
+      <div class="accordion__wrapper">
+        <button
+          class="accordion__title js{% if specs_open %} accordion-is-open{% endif %}"
+          data-accordion-trigger="{{ accordion_id }}"
+          aria-controls="{{ accordion_id }}"
+          aria-haspopup="true"
+          aria-expanded="{{ specs_open }}"
+        >
+          {{ specs_title }}
+        </button>
+
+        <input
+          type="checkbox"
+          name="accordion-{{ accordion_id }}"
+          id="accordion-{{ accordion_id }}-checkbox"
+          class="no-js no-js-checkbox"
+          {% if specs_open %}
+            checked
+          {% endif %}
+        >
+
+        <label for="accordion-{{ accordion_id }}-checkbox" class="accordion__title no-js">
+          {{ specs_title }}
+        </label>
+
+        <div class="accordion__body no-js-accordion" id="{{ accordion_id }}" data-accordion-body>
+          <dl class="product-specs__list">
+            {{ rows_html }}
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+{%- elsif request.design_mode -%}
+  <div class="product__block__specs" {{ block.shopify_attributes }}>
+    <p class="bg-black text-white p-3 text-xs w-full text-center border border-white/20">
+      Nenhum atributo preenchido neste produto — o accordion de especificações ficará oculto na loja.
+    </p>
+  </div>
+{%- endif -%}
