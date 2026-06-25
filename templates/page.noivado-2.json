@@ -201,6 +201,27 @@
       "name": "Text with image slider",
       "settings": {}
     },
+    "blocks_ETendr": {
+      "type": "_blocks",
+      "name": "Botão",
+      "settings": {}
+    },
+    "section_collection_yzTQLA": {
+      "type": "section-collection",
+      "name": "Product grid",
+      "settings": {
+        "title": "Alianças de noivado",
+        "collection": "engagement-rings",
+        "grid": 3,
+        "rows": 8,
+        "grid_mobile": "2",
+        "bg": "palette--light bg--neutral",
+        "show_view_all": false,
+        "width": "wrapper--full",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "1780890255bc399d2f": {
       "type": "_blocks",
       "blocks": {
@@ -265,27 +286,6 @@
       ],
       "name": "Personalize",
       "settings": {}
-    },
-    "blocks_ETendr": {
-      "type": "_blocks",
-      "name": "Botão",
-      "settings": {}
-    },
-    "section_collection_yzTQLA": {
-      "type": "section-collection",
-      "name": "Product grid",
-      "settings": {
-        "title": "Featured Products",
-        "collection": "engagement-rings",
-        "grid": 3,
-        "rows": 8,
-        "grid_mobile": "2",
-        "bg": "palette--light bg--neutral",
-        "show_view_all": false,
-        "width": "wrapper--full",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
