@@ -73,10 +73,39 @@
             "padding_bottom": 20
           }
         },
+        "buttons": {
+          "type": "add-buttons",
+          "settings": {
+            "enable_payment_button": false,
+            "enable_gift_card_recipient": false,
+            "whatsapp_number": "",
+            "padding_bottom": 20
+          }
+        },
+        "spacer_yCjLBw": {
+          "type": "spacer",
+          "settings": {
+            "show_line": false,
+            "target_device": "hidden-mobile",
+            "padding_top": 8,
+            "padding_bottom": 22
+          }
+        },
+        "icon_KixHr7": {
+          "type": "icon",
+          "repeater": "{{ product.metafields.shopify[\"gemstone-type\"].value }}",
+          "settings": {
+            "icon_name": "",
+            "icon_size": 16,
+            "icon_color": "#4b4b4b",
+            "text": "<p>Pedra preciosa: {{ block.repeater.label.value }}</p>",
+            "padding_bottom": 8
+          }
+        },
         "specs": {
           "type": "specs-accordion",
           "settings": {
-            "title": "detalhes técnicos",
+            "title": "Ver detalhes técnicos",
             "expanded": false,
             "label_material": "Material",
             "icon_material": "shopify://shop_images/WhatsApp_Image_2026-06-23_at_12.38.29_87450709-b96a-4100-8a91-c54596a41e82.png",
@@ -96,36 +125,7 @@
             "icon_resizable": "shopify://shop_images/WhatsApp_Image_2026-06-23_at_12.38.29_3.png",
             "label_earringtype": "Tipo de brinco",
             "icon_earringtype": "shopify://shop_images/WhatsApp_Image_2026-06-23_at_12.38.28.png",
-            "padding_bottom": 20
-          }
-        },
-        "buttons": {
-          "type": "add-buttons",
-          "settings": {
-            "enable_payment_button": false,
-            "enable_gift_card_recipient": false,
-            "whatsapp_number": "",
-            "padding_bottom": 20
-          }
-        },
-        "spacer_yCjLBw": {
-          "type": "spacer",
-          "settings": {
-            "show_line": true,
-            "target_device": "hidden-mobile",
-            "padding_top": 22,
             "padding_bottom": 22
-          }
-        },
-        "icon_KixHr7": {
-          "type": "icon",
-          "repeater": "{{ product.metafields.shopify[\"gemstone-type\"].value }}",
-          "settings": {
-            "icon_name": "",
-            "icon_size": 16,
-            "icon_color": "#4b4b4b",
-            "text": "<p>Pedra preciosa: {{ block.repeater.label.value }}</p>",
-            "padding_bottom": 8
           }
         },
         "description": {
