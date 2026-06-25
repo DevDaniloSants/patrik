@@ -17541,9 +17541,9 @@ html:not(.no-js) body:not(.focus-enabled) *:focus {
 } */
 
 @media only screen and (min-width: 1024px) {
-  .flickity-lock-height {
+  .product__grid--slides {
     position: relative;
-    top: -112px !important;
+    top: calc(var(--header-height) * -1) !important;
   }
 }
 
@@ -20665,7 +20665,6 @@ html.js [x-data^="announcementSlider"]:not(.flickity-enabled)>*:not(:first-child
 /* ================ Generic accordion ================ */
 .accordion__wrapper {
   border-bottom: 1px solid var(--border);
-  border-top: 1px solid var(--border);
 }
 
 .accordion__wrapper+.accordion__wrapper {
@@ -33179,6 +33178,7 @@ body.template-product .section-padding {
   background: #000 !important;
   opacity: 1 !important;
 }
+
 @media screen and (min-width: 750px) {
   #shopify-section-template--18823723319379__section_video_ykPNyn {
     display: none;
@@ -33195,6 +33195,7 @@ body.template-product .section-padding {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
+
 [data-product-slideshow]:hover .flickity-button {
   opacity: 1;
 }
@@ -33206,69 +33207,75 @@ body.template-product .section-padding {
   object-fit: cover;
   width: 100%;
   height: auto;
-#shopify-section-template--18823723319379__section_gallery_slider_BKFgHx .gallery-slider {
-  align-items: stretch !important;
-  gap: 40px !important;
-}
 
-#shopify-section-template--18823723319379__section_gallery_slider_BKFgHx .gallery-slider__item {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: flex-start !important;
-  align-items: flex-start !important;
-}
-#shopify-section-template--18823723319379__section_gallery_slider_BKFgHx .kicker,
-#shopify-section-template--18823723319379__section_gallery_slider_BKFgHx [class*="kicker"] {
-  font-size: 3.5rem; /* ajuste até igualar com a seção abaixo */
-}
-/* Banner slider - texto canto superior esquerdo */
-[data-block-id="template--20028676374611__17808666295756a33c__ai_gen_block_b029aaf_U9WHVJ"] {
-  align-items: flex-start !important;
-  justify-content: flex-start !important;
-}
-/* Header transparente na página jornada-casamento */
-#jornada-casamento .header__backfill {
-  display: none !important;
-}
+  #shopify-section-template--18823723319379__section_gallery_slider_BKFgHx .gallery-slider {
+    align-items: stretch !important;
+    gap: 40px !important;
+  }
 
-#journada-casamento .header__backfill {
-  display: none !important;
-}
+  #shopify-section-template--18823723319379__section_gallery_slider_BKFgHx .gallery-slider__item {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+  }
 
-#journada-casamento .header-wrapper,
-#journada-casamento header,
-#journada-casamento .header--sticky,
-#journada-casamento .header--fixed,
-#journada-casamento [data-sticky-header] {
-  background: transparent !important;
-  position: absolute !important;
-  width: 100%;
-  z-index: 10;
-}
+  #shopify-section-template--18823723319379__section_gallery_slider_BKFgHx .kicker,
+  #shopify-section-template--18823723319379__section_gallery_slider_BKFgHx [class*="kicker"] {
+    font-size: 3.5rem;
+    /* ajuste até igualar com a seção abaixo */
+  }
 
-#journada-casamento .header--scrolled,
-#journada-casamento .header--pinned,
-#journada-casamento .header--not-top {
-  background: transparent !important;
-}
-/* Remove espaço entre header e galeria do produto */
-.product__media-wrapper,
-.product__media-list,
-.product-media-container {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
+  /* Banner slider - texto canto superior esquerdo */
+  [data-block-id="template--20028676374611__17808666295756a33c__ai_gen_block_b029aaf_U9WHVJ"] {
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
 
-.product__media__wrapper {
-  position: sticky;
-  top: 0;
-  align-self: flex-start;
-}
+  /* Header transparente na página jornada-casamento */
+  #jornada-casamento .header__backfill {
+    display: none !important;
+  }
 
-.flickity-viewport {
-  height: 100vh !important;
-}
+  #journada-casamento .header__backfill {
+    display: none !important;
+  }
 
-.product__grid--slides .flickity-slider > * {
-  height: 100vh !important;
-}
+  #journada-casamento .header-wrapper,
+  #journada-casamento header,
+  #journada-casamento .header--sticky,
+  #journada-casamento .header--fixed,
+  #journada-casamento [data-sticky-header] {
+    background: transparent !important;
+    position: absolute !important;
+    width: 100%;
+    z-index: 10;
+  }
+
+  #journada-casamento .header--scrolled,
+  #journada-casamento .header--pinned,
+  #journada-casamento .header--not-top {
+    background: transparent !important;
+  }
+
+  /* Remove espaço entre header e galeria do produto */
+  .product__media-wrapper,
+  .product__media-list,
+  .product-media-container {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .product__media__wrapper {
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+  }
+
+  .flickity-viewport {
+    height: 100vh !important;
+  }
+
+  .product__grid--slides .flickity-slider>* {
+    height: 100vh !important;
+  }

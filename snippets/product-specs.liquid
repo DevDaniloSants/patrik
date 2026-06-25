@@ -172,7 +172,7 @@
 
 {%- if rows_html != '' -%}
   {%- assign specs_title = block.settings.title | default: 'Detalhes' -%}
-  {%- assign specs_open = block.settings.expanded -%}
+  {%- assign specs_open = true -%}
   {%- assign accordion_id = 'product-specs-' | append: block.id -%}
 
   <div
