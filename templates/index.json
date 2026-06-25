@@ -51,8 +51,8 @@
       "settings": {
         "height": "use_screen_full",
         "color_bg": "palette--light bg--neutral",
-        "video_bg": "shopify://files/videos/cinematic_jewelry_atelier_scen_Kling_30__68934.mp4",
         "object_position": "center-bottom",
+        "image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0231_3_3.jpg",
         "banner_link": "shopify://pages/jornada-casamento",
         "preload_image": true,
         "text_align": "align--bottom-center",
