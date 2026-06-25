@@ -22,7 +22,7 @@
         "button_XyiAcD": {
           "type": "button",
           "settings": {
-            "link_text_1": "Ver joias de casamento",
+            "link_text_1": "Ver alianças de casamento",
             "link_1": "",
             "button_size_1": "btn--medium",
             "button_style_1": "btn--outline",
@@ -52,8 +52,8 @@
         "height": "use_screen_full",
         "color_bg": "palette--light bg--neutral",
         "object_position": "center-bottom",
-        "image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0231_3_3.jpg",
-        "banner_link": "shopify://pages/jornada-casamento",
+        "image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0246_1.jpg",
+        "banner_link": "shopify://pages/casamento",
         "preload_image": true,
         "text_align": "align--bottom-center",
         "text_color": "text--white",
