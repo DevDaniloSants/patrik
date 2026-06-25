@@ -89,10 +89,10 @@
         "align_text": "text-left",
         "text_color": "text--neutral",
         "bg": "palette--light bg--accent",
-        "content_width": 2000,
+        "content_width": 100,
         "width": "wrapper",
-        "padding_top": 12,
-        "padding_bottom": 24
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "blocks_g3VEzz": {
