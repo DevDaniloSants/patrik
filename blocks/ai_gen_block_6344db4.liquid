@@ -178,10 +178,11 @@
     flex-direction: column !important;
     padding: 0;
     gap: 0;
-    order: -1;
     align-items: flex-start;
   }
-
+  .ai-text-image-slider__content-{{ ai_gen_id }} {
+  order: -1;
+}
   .ai-text-image-slider__images-{{ ai_gen_id }} {
     flex: 0 0 auto;
     width: {{ block.settings.image_width_mobile }}%;
