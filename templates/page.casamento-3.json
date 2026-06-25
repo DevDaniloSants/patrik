@@ -16,7 +16,7 @@
           "type": "ai_gen_block_b029aaf",
           "settings": {
             "slider_height": 550,
-            "slider_height_mobile": 400,
+            "slider_height_mobile": 300,
             "desktop_width_percent": 100,
             "text_alignment": "left",
             "content_max_width": 450,
