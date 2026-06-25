@@ -153,6 +153,7 @@
       "blocks": {
         "ai_gen_block_347402a_ghqiFG": {
           "type": "ai_gen_block_347402a",
+          "disabled": true,
           "settings": {
             "title": "Sua história é única. Sua joia também pode ser.",
             "text": "<p>Desenvolvemos joias personalizadas para celebrar os momentos mais importantes da sua vida.<br/><br/></p>",
