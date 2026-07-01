@@ -91,17 +91,6 @@
             "padding_bottom": 22
           }
         },
-        "icon_KixHr7": {
-          "type": "icon",
-          "repeater": "{{ product.metafields.shopify[\"gemstone-type\"].value }}",
-          "settings": {
-            "icon_name": "",
-            "icon_size": 16,
-            "icon_color": "#4b4b4b",
-            "text": "<p>Pedra preciosa: {{ block.repeater.label.value }}</p>",
-            "padding_bottom": 8
-          }
-        },
         "specs": {
           "type": "specs-accordion",
           "settings": {
@@ -180,7 +169,6 @@
         "quantity",
         "buttons",
         "spacer_yCjLBw",
-        "icon_KixHr7",
         "specs",
         "description",
         "pickup",
