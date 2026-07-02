@@ -17,7 +17,7 @@
  
   /* Cabeçalho da categoria */
   .pj-category-head{text-align:center;padding:30px 24px 14px;background:#fff}
-  .pj-category-head h1{font-size:38px;letter-spacing:.03em;margin-bottom:10px}
+  .pj-category-head h1{font-size:38px;letter-spacing:.03em;margin-bottom:22px}
   .pj-category-head>p{max-width:640px;margin:0 auto;color:var(--pj-grey);font-size:15.5px;line-height:1.7}
  
   /* Filtro de modelos (título + imagem pequena embaixo) */
@@ -56,7 +56,6 @@
   .pj-price-row{display:flex;justify-content:center;align-items:flex-start;gap:10px}
   .pj-product .pj-price{font-size:14px;font-weight:600}
   .pj-product .pj-installments{font-size:11.5px;color:var(--pj-grey);margin-top:2px}
-  .pj-heart{width:17px;height:17px;stroke:var(--pj-grey);fill:none;stroke-width:1.5;flex:0 0 auto;margin-top:2px}
   .pj-finish{font-size:11.5px;margin-top:12px;text-align:center}
   .pj-swatches{display:flex;justify-content:center;gap:7px;margin-top:8px}
   .pj-swatch{width:16px;height:16px;border-radius:50%;border:1px solid #fff;box-shadow:0 0 0 1px var(--pj-line)}
@@ -187,7 +186,6 @@
                       <div class="pj-installments">{{ section.settings.parcelas }} x de {{ pj_inst | money }}</div>
                     {%- endif -%}
                   </div>
-                  <svg class="pj-heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5C7 16.6 3.5 13.4 3.5 9.7 3.5 7 5.6 5 8.1 5c1.6 0 3 .8 3.9 2.1C12.9 5.8 14.3 5 15.9 5c2.5 0 4.6 2 4.6 4.7 0 3.7-3.5 6.9-8.5 10.8z"/></svg>
                 </div>
                 {%- if block.settings.acabamento != blank -%}
                   <div class="pj-finish">{{ block.settings.acabamento }}</div>
