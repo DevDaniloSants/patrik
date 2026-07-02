@@ -33,7 +33,7 @@
   .pj-chips::-webkit-scrollbar{display:none}
   .pj-chip{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:8px;padding:4px 2px}
   .pj-chip .pj-chip-title{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--pj-ink);border-bottom:1px solid transparent;padding-bottom:2px;transition:.25s;white-space:nowrap}
-  .pj-chip .pj-chip-img{width:62px;height:62px;border-radius:50%;overflow:hidden;border:1px solid var(--pj-line);background:#fff;transition:.25s}
+  .pj-chip .pj-chip-img{width:{{ section.settings.chip_size | default: 96 }}px;height:{{ section.settings.chip_size | default: 96 }}px;border-radius:50%;overflow:hidden;border:1px solid var(--pj-line);background:#fff;transition:.25s}
   .pj-chip .pj-chip-img img{width:100%;height:100%;object-fit:cover}
   .pj-chip:hover .pj-chip-img,.pj-chip.active .pj-chip-img{border-color:var(--pj-gold);box-shadow:0 0 0 1px var(--pj-gold)}
   .pj-chip:hover .pj-chip-title,.pj-chip.active .pj-chip-title{color:var(--pj-gold);border-color:var(--pj-gold)}
@@ -41,7 +41,7 @@
  
   /* Seções: imagem + texto em cima, produtos embaixo */
   .pj-line-section{max-width:1280px;margin:0 auto;padding:64px 24px 40px;border-bottom:1px solid var(--pj-line)}
-  .pj-line-head{display:grid;grid-template-columns:380px 1fr;gap:44px;align-items:center;margin-bottom:40px}
+  .pj-line-head{display:grid;grid-template-columns:{{ section.settings.img_width | default: 560 }}px 1fr;gap:44px;align-items:center;margin-bottom:40px}
   .pj-line-img{aspect-ratio:4/5;background:var(--pj-soft);border-radius:2px;overflow:hidden}
   .pj-line-img img{width:100%;height:100%;object-fit:cover}
   .pj-line-info .pj-eyebrow{display:flex;align-items:center;gap:8px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--pj-gold);margin-bottom:12px}
@@ -80,7 +80,7 @@
  
   @media(max-width:1024px){
     .pj-line-head{grid-template-columns:1fr;gap:24px}
-    .pj-line-img{max-width:520px;width:100%;margin:0 auto}
+    .pj-line-img{max-width:640px;width:100%;margin:0 auto}
     .pj-products{grid-template-columns:repeat(3,1fr)}
   }
   @media(max-width:860px){
@@ -89,7 +89,7 @@
     /* setinhas do filtro: apenas no mobile */
     .pj-chip-arrow{display:flex}
     .pj-chips{margin:0}
-    .pj-chip .pj-chip-img{width:52px;height:52px}
+    .pj-chip .pj-chip-img{width:{{ section.settings.chip_size | default: 96 | times: 0.78 | round }}px;height:{{ section.settings.chip_size | default: 96 | times: 0.78 | round }}px}
   }
   @media(max-width:560px){
     .pj-products{grid-template-columns:repeat(2,1fr);gap:22px 12px}
@@ -117,13 +117,13 @@
                 <span class="pj-chip-title">{{ line_title }}</span>
                 <span class="pj-chip-img">
                   {%- if block.settings.img_topo -%}
-                    <img src="{{ block.settings.img_topo | image_url: width: 140 }}" alt="{{ line_title | escape }}" loading="lazy">
+                    <img src="{{ block.settings.img_topo | image_url: width: 320 }}" alt="{{ line_title | escape }}" loading="lazy">
                   {%- elsif block.settings.img_secao -%}
-                    <img src="{{ block.settings.img_secao | image_url: width: 140 }}" alt="{{ line_title | escape }}" loading="lazy">
+                    <img src="{{ block.settings.img_secao | image_url: width: 320 }}" alt="{{ line_title | escape }}" loading="lazy">
                   {%- elsif col.image -%}
-                    <img src="{{ col.image | image_url: width: 140 }}" alt="{{ line_title | escape }}" loading="lazy">
+                    <img src="{{ col.image | image_url: width: 320 }}" alt="{{ line_title | escape }}" loading="lazy">
                   {%- elsif col.products.first.featured_image -%}
-                    <img src="{{ col.products.first.featured_image | image_url: width: 140 }}" alt="{{ line_title | escape }}" loading="lazy">
+                    <img src="{{ col.products.first.featured_image | image_url: width: 320 }}" alt="{{ line_title | escape }}" loading="lazy">
                   {%- endif -%}
                 </span>
               </a>
@@ -145,11 +145,11 @@
           <div class="pj-line-head">
             <div class="pj-line-img">
               {%- if block.settings.img_secao -%}
-                <img src="{{ block.settings.img_secao | image_url: width: 900 }}" alt="{{ line_title | escape }}" loading="lazy">
+                <img src="{{ block.settings.img_secao | image_url: width: 1400 }}" alt="{{ line_title | escape }}" loading="lazy">
               {%- elsif col.image -%}
-                <img src="{{ col.image | image_url: width: 900 }}" alt="{{ line_title | escape }}" loading="lazy">
+                <img src="{{ col.image | image_url: width: 1400 }}" alt="{{ line_title | escape }}" loading="lazy">
               {%- elsif col.products.first.featured_image -%}
-                <img src="{{ col.products.first.featured_image | image_url: width: 900 }}" alt="{{ line_title | escape }}" loading="lazy">
+                <img src="{{ col.products.first.featured_image | image_url: width: 1400 }}" alt="{{ line_title | escape }}" loading="lazy">
               {%- endif -%}
             </div>
             <div class="pj-line-info">
@@ -274,6 +274,26 @@ window.addEventListener("scroll", () => {
       "id": "etiqueta",
       "label": "Etiqueta na foto do produto (vazio = sem etiqueta)",
       "default": "Ouro 18k"
+    },
+    {
+      "type": "range",
+      "id": "chip_size",
+      "label": "Tamanho da imagem do topo (bolinha)",
+      "min": 48,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "img_width",
+      "label": "Largura da imagem de cada modelo",
+      "min": 300,
+      "max": 720,
+      "step": 20,
+      "unit": "px",
+      "default": 560
     },
     {
       "type": "range",
