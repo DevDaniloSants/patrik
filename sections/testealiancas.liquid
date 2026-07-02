@@ -35,7 +35,10 @@
  
   /* Seções: imagem + texto em cima, produtos embaixo */
   .pj-line-section{max-width:none;margin:0;padding:64px 36px 40px;border-bottom:1px solid var(--pj-line)}
-  .pj-line-head{display:grid;grid-template-columns:{{ section.settings.img_width | default: 560 }}px 1fr;gap:44px;align-items:center;margin-bottom:40px}
+  .pj-line-head{display:grid;grid-template-columns:{{ section.settings.img_width | default: 560 }}px 1fr;gap:44px;align-items:center;max-width:1080px;margin:0 auto 44px}
+  /* modelos pares: imagem à direita, texto à esquerda */
+  .pj-flip .pj-line-head{grid-template-columns:1fr {{ section.settings.img_width | default: 560 }}px}
+  .pj-flip .pj-line-img{order:2}
   .pj-line-img{aspect-ratio:4/5;background:var(--pj-soft);border-radius:2px;overflow:hidden}
   .pj-line-img img{width:100%;height:100%;object-fit:cover}
   .pj-line-info{text-align:center}
@@ -75,7 +78,8 @@
   .pj-accordion-item .pj-a p{padding:0 4px 24px;color:var(--pj-grey);font-size:14.5px;line-height:1.8}
  
   @media(max-width:1024px){
-    .pj-line-head{grid-template-columns:1fr;gap:24px}
+    .pj-line-head,.pj-flip .pj-line-head{grid-template-columns:1fr;gap:24px}
+    .pj-flip .pj-line-img{order:0}
     .pj-line-img{max-width:640px;width:100%;margin:0 auto}
     .pj-products{grid-template-columns:repeat(3,1fr)}
   }
@@ -132,13 +136,16 @@
     </div>
   </div>
  
-  {%- comment -%} Uma seção por modelo: imagem + texto em cima, produtos embaixo {%- endcomment -%}
+  {%- comment -%} Uma seção por modelo: imagem + texto em cima, produtos embaixo (alternando esquerda/direita) {%- endcomment -%}
+  {%- assign modelo_i = 0 -%}
   {%- for block in section.blocks -%}
     {%- if block.type == 'modelo' -%}
       {%- assign col = block.settings.colecao -%}
       {%- if col != blank -%}
         {%- assign line_title = block.settings.titulo | default: col.title -%}
-        <section class="pj-line-section" id="linha-{{ col.handle }}" {{ block.shopify_attributes }}>
+        {%- assign modelo_i = modelo_i | plus: 1 -%}
+        {%- assign resto = modelo_i | modulo: 2 -%}
+        <section class="pj-line-section{% if resto == 0 %} pj-flip{% endif %}" id="linha-{{ col.handle }}" {{ block.shopify_attributes }}>
           <div class="pj-line-head">
             <div class="pj-line-img">
               {%- if block.settings.img_secao -%}
