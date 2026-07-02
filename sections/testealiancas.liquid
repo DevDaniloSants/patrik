@@ -1,3 +1,4 @@
+
 {%- comment -%} Sem font-family: títulos e textos herdam automaticamente as fontes do tema {%- endcomment -%}
 <style>
   .pj-page{
@@ -35,20 +36,24 @@
   .pj-line-head{display:grid;grid-template-columns:{{ section.settings.img_width | default: 560 }}px 1fr;gap:44px;align-items:center;margin-bottom:40px}
   .pj-line-img{aspect-ratio:4/5;background:var(--pj-soft);border-radius:2px;overflow:hidden}
   .pj-line-img img{width:100%;height:100%;object-fit:cover}
-  .pj-line-info h2{font-size:38px;margin-bottom:14px}
-  .pj-line-info .pj-desc{color:var(--pj-grey);font-size:15px;line-height:1.75;max-width:680px}
+  .pj-line-info{text-align:center}
+  .pj-line-info h2{font-size:26px;text-transform:uppercase;letter-spacing:.18em;margin-bottom:16px}
+  .pj-line-info .pj-desc{color:var(--pj-grey);font-size:13px;line-height:1.8;max-width:360px;margin:0 auto}
  
   /* Grade: 4 no desktop, 2 no mobile */
   .pj-products{display:grid;grid-template-columns:repeat(4,1fr);gap:28px 20px}
-  .pj-product{text-align:center;display:block}
+  .pj-product{text-align:left;display:block}
   .pj-product .pj-thumb{position:relative;aspect-ratio:4/5;background:var(--pj-soft);border-radius:2px;overflow:hidden;margin-bottom:14px}
   .pj-product .pj-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
   .pj-product:hover .pj-thumb img{transform:scale(1.05)}
   .pj-product .pj-tag{position:absolute;top:10px;left:10px;background:#fff;font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;color:var(--pj-grey)}
-  .pj-product h3{font-weight:400;font-size:13.5px;line-height:1.5;letter-spacing:.02em;min-height:3em;margin-bottom:8px}
-  .pj-product .pj-price{font-size:16px;font-weight:500}
-  .pj-product .pj-installments{font-size:12px;color:var(--pj-grey);margin-top:2px}
-  .pj-swatches{display:flex;justify-content:center;gap:7px;margin-top:10px}
+  .pj-product h3{font-weight:400;font-size:11px;text-transform:uppercase;line-height:1.6;letter-spacing:.06em;min-height:2.8em;margin-bottom:8px}
+  .pj-price-row{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+  .pj-product .pj-price{font-size:14px;font-weight:600}
+  .pj-product .pj-installments{font-size:11.5px;color:var(--pj-grey);margin-top:2px}
+  .pj-heart{width:17px;height:17px;stroke:var(--pj-grey);fill:none;stroke-width:1.5;flex:0 0 auto;margin-top:2px}
+  .pj-finish{font-size:11.5px;margin-top:12px}
+  .pj-swatches{display:flex;justify-content:flex-start;gap:7px;margin-top:8px}
   .pj-swatch{width:16px;height:16px;border-radius:50%;border:1px solid #fff;box-shadow:0 0 0 1px var(--pj-line)}
   .pj-swatch.amarelo{background:linear-gradient(135deg,#e8c977,#c9a24d)}
   .pj-swatch.branco{background:linear-gradient(135deg,#f2f2f0,#c9c9c4)}
@@ -164,10 +169,18 @@
                   {%- endif -%}
                 </div>
                 <h3>{{ product.title }}</h3>
-                <div class="pj-price">{{ product.price | money }}</div>
-                {%- if section.settings.parcelas > 1 -%}
-                  {%- assign pj_inst = product.price | divided_by: section.settings.parcelas -%}
-                  <div class="pj-installments">{{ section.settings.parcelas }} x de {{ pj_inst | money }}</div>
+                <div class="pj-price-row">
+                  <div>
+                    <div class="pj-price">{{ product.price | money }}</div>
+                    {%- if section.settings.parcelas > 1 -%}
+                      {%- assign pj_inst = product.price | divided_by: section.settings.parcelas -%}
+                      <div class="pj-installments">{{ section.settings.parcelas }} x de {{ pj_inst | money }}</div>
+                    {%- endif -%}
+                  </div>
+                  <svg class="pj-heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5C7 16.6 3.5 13.4 3.5 9.7 3.5 7 5.6 5 8.1 5c1.6 0 3 .8 3.9 2.1C12.9 5.8 14.3 5 15.9 5c2.5 0 4.6 2 4.6 4.7 0 3.7-3.5 6.9-8.5 10.8z"/></svg>
+                </div>
+                {%- if block.settings.acabamento != blank -%}
+                  <div class="pj-finish">{{ block.settings.acabamento }}</div>
                 {%- endif -%}
                 <div class="pj-swatches">
                   <span class="pj-swatch amarelo" title="Ouro amarelo"></span>
@@ -331,6 +344,12 @@ window.addEventListener("scroll", () => {
           "type": "textarea",
           "id": "descricao",
           "label": "Descrição do modelo (vazio = usa a descrição da coleção)"
+        },
+        {
+          "type": "text",
+          "id": "acabamento",
+          "label": "Acabamento exibido nos produtos (vazio = não mostrar)",
+          "default": "Polido"
         },
         {
           "type": "image_picker",
