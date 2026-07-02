@@ -1,0 +1,333 @@
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+ 
+<style>
+  .pj-page{
+    --pj-gold:#b39055; --pj-ink:#1e1e1e; --pj-grey:#6f6f6f;
+    --pj-line:#e8e2d8; --pj-soft:#faf7f2;
+    --pj-serif:'Cormorant Garamond',serif; --pj-sans:'Jost',sans-serif;
+    font-family:var(--pj-sans); color:var(--pj-ink); font-weight:300;
+  }
+  .pj-page *{margin:0;padding:0;box-sizing:border-box}
+  .pj-page a{color:inherit;text-decoration:none}
+  .pj-page button{font-family:inherit;cursor:pointer}
+ 
+  /* Cabeçalho da categoria */
+  .pj-category-head{text-align:center;padding:54px 24px 20px;background:var(--pj-soft)}
+  .pj-breadcrumb{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--pj-grey);margin-bottom:22px}
+  .pj-category-head h1{font-family:var(--pj-serif);font-weight:500;font-size:44px;letter-spacing:.03em;margin-bottom:14px}
+  .pj-category-head>p{max-width:640px;margin:0 auto;color:var(--pj-grey);font-size:15.5px;line-height:1.7}
+ 
+  /* Chips de linhas */
+  .pj-lines-filter{position:sticky;top:0;z-index:30;background:var(--pj-soft);border-bottom:1px solid var(--pj-line);padding:16px 0}
+  .pj-lines-filter-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;gap:8px;padding:0 16px}
+  .pj-chips{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;padding:2px}
+  .pj-chips::-webkit-scrollbar{display:none}
+  .pj-chip{flex:0 0 auto;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;padding:9px 20px;border:1px solid var(--pj-line);border-radius:999px;background:#fff;transition:.25s;color:var(--pj-ink)}
+  .pj-chip:hover,.pj-chip.active{background:var(--pj-ink);color:#fff;border-color:var(--pj-ink)}
+  .pj-chip-arrow{flex:0 0 auto;width:32px;height:32px;border-radius:50%;border:1px solid var(--pj-line);background:#fff;color:var(--pj-grey);display:flex;align-items:center;justify-content:center}
+  .pj-chip-arrow:hover{color:var(--pj-gold);border-color:var(--pj-gold)}
+ 
+  /* Seções */
+  .pj-line-section{max-width:1280px;margin:0 auto;padding:70px 24px 30px;border-bottom:1px solid var(--pj-line)}
+  .pj-line-grid{display:grid;grid-template-columns:440px 1fr;gap:48px;align-items:start}
+  .pj-line-section:nth-of-type(even) .pj-line-grid{grid-template-columns:1fr 440px}
+  .pj-line-section:nth-of-type(even) .pj-carousel{order:2}
+ 
+  .pj-carousel{position:relative;overflow:hidden;border-radius:2px;aspect-ratio:4/5;background:var(--pj-soft)}
+  .pj-carousel .pj-slides{display:flex;height:100%;transition:transform .5s ease}
+  .pj-carousel .pj-slide{flex:0 0 100%;height:100%}
+  .pj-ph{width:100%;height:100%;background-size:cover;background-position:center}
+  .pj-carousel .pj-nav{position:absolute;bottom:14px;right:14px;display:flex;gap:8px}
+  .pj-carousel .pj-nav button{width:36px;height:36px;border-radius:50%;border:none;background:rgba(255,255,255,.9);color:var(--pj-ink);font-size:16px;display:flex;align-items:center;justify-content:center;transition:.25s}
+  .pj-carousel .pj-nav button:hover{background:var(--pj-gold);color:#fff}
+  .pj-carousel .pj-dots{position:absolute;bottom:22px;left:18px;display:flex;gap:6px}
+  .pj-carousel .pj-dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.55)}
+  .pj-carousel .pj-dots i.on{background:#fff}
+ 
+  .pj-line-info .pj-eyebrow{display:flex;align-items:center;gap:8px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--pj-gold);margin-bottom:12px}
+  .pj-line-info .pj-eyebrow::before{content:"";width:26px;height:1px;background:var(--pj-gold)}
+  .pj-line-info h2{font-family:var(--pj-serif);font-weight:500;font-size:38px;margin-bottom:14px}
+  .pj-line-info>p{color:var(--pj-grey);font-size:15px;line-height:1.75;max-width:640px;margin-bottom:34px}
+ 
+  .pj-products{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:26px 20px}
+  .pj-product{text-align:center;display:block}
+  .pj-product .pj-thumb{position:relative;aspect-ratio:4/5;background:var(--pj-soft);border-radius:2px;overflow:hidden;margin-bottom:14px}
+  .pj-product .pj-thumb .pj-ph{transition:transform .5s}
+  .pj-product:hover .pj-thumb .pj-ph{transform:scale(1.05)}
+  .pj-product .pj-tag{position:absolute;top:10px;left:10px;background:#fff;font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;color:var(--pj-grey)}
+  .pj-product h3{font-weight:400;font-size:13.5px;line-height:1.5;letter-spacing:.02em;min-height:3em;margin-bottom:8px}
+  .pj-product .pj-price{font-size:16px;font-weight:500}
+  .pj-product .pj-installments{font-size:12px;color:var(--pj-grey);margin-top:2px}
+  .pj-product .pj-finish{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--pj-gold);margin-top:10px}
+  .pj-swatches{display:flex;justify-content:center;gap:7px;margin-top:9px}
+  .pj-swatch{width:16px;height:16px;border-radius:50%;border:1px solid #fff;box-shadow:0 0 0 1px var(--pj-line);transition:.2s}
+  .pj-swatch:hover{box-shadow:0 0 0 1.5px var(--pj-gold)}
+  .pj-swatch.amarelo{background:linear-gradient(135deg,#e8c977,#c9a24d)}
+  .pj-swatch.branco{background:linear-gradient(135deg,#f2f2f0,#c9c9c4)}
+  .pj-swatch.rose{background:linear-gradient(135deg,#eec3ad,#d49678)}
+ 
+  /* FAQ */
+  .pj-faq{max-width:880px;margin:0 auto;padding:80px 24px}
+  .pj-faq h2{font-family:var(--pj-serif);font-weight:500;font-size:36px;text-align:center;letter-spacing:.08em;margin-bottom:8px}
+  .pj-faq .pj-sub{text-align:center;color:var(--pj-grey);font-size:14.5px;margin-bottom:44px}
+  .pj-accordion-item{border-bottom:1px solid var(--pj-line)}
+  .pj-accordion-item button.pj-q{width:100%;background:none;border:none;text-align:left;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 4px;font-size:16.5px;font-weight:400;color:var(--pj-ink)}
+  .pj-accordion-item button.pj-q::after{content:"+";font-family:var(--pj-serif);font-size:26px;color:var(--pj-gold);transition:.3s}
+  .pj-accordion-item.open button.pj-q::after{transform:rotate(45deg)}
+  .pj-accordion-item .pj-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+  .pj-accordion-item .pj-a p{padding:0 4px 24px;color:var(--pj-grey);font-size:14.5px;line-height:1.8}
+ 
+  @media(max-width:1024px){
+    .pj-line-grid,.pj-line-section:nth-of-type(even) .pj-line-grid{grid-template-columns:1fr}
+    .pj-line-section:nth-of-type(even) .pj-carousel{order:0}
+    .pj-carousel{max-width:520px;margin:0 auto;width:100%}
+  }
+  @media(max-width:860px){
+    .pj-category-head h1{font-size:34px}
+    .pj-line-info h2{font-size:30px}
+  }
+  @media(max-width:560px){
+    .pj-products{grid-template-columns:repeat(2,1fr);gap:20px 12px}
+  }
+</style>
+ 
+<div class="pj-page">
+ 
+  <section class="pj-category-head">
+    <div class="pj-breadcrumb"><a href="/">Início</a> &nbsp;›&nbsp; {{ page.title }}</div>
+    <h1>{{ page.title }}</h1>
+    <p>Sua Aliança de Casamento em Ouro 18k Amarelo, Branco ou Rosé. Alianças de Casamento como eterno símbolo do amor. Envio de 3 a 7 dias.</p>
+  </section>
+ 
+  <div class="pj-lines-filter">
+    <div class="pj-lines-filter-inner">
+      <button class="pj-chip-arrow" onclick="pjScrollChips(-260)">‹</button>
+      <div class="pj-chips" id="pj-chips"></div>
+      <button class="pj-chip-arrow" onclick="pjScrollChips(260)">›</button>
+    </div>
+  </div>
+ 
+  <div id="pj-sections"></div>
+ 
+  <section class="pj-faq">
+    <h2>Questions</h2>
+    <p class="pj-sub">Algumas das perguntas recorrentes enviadas por nossos clientes.</p>
+    <div id="pj-accordion"></div>
+  </section>
+ 
+</div>
+ 
+<script>
+/* =====================================================================
+   DADOS DAS LINHAS — edite aqui.
+   • n: nome do produto  • p: preço em reais  • url: link do produto na
+     sua loja (ex.: "/products/alianca-square-2mm")
+   • img: URL da foto do produto (envie as fotos em Content > Files no
+     admin do Shopify e cole o link aqui). Sem img, usa placeholder.
+   • gallery: fotos do carrossel da linha (mesma lógica).
+   ===================================================================== */
+const PJ_LINES = [
+  {
+    name:"Square",
+    desc:"A Linha Square oferece uma mistura de formas: ângulos vivos na porção externa, combinados com o acabamento anatômico interno. Esse contraste resulta em uma aliança minimalista, com um leve toque de contemporaneidade.",
+    finish:"Polido",
+    gallery:[],
+    products:[
+      {n:"Aliança de casamento square 1,5mm em ouro amarelo 18k", p:2370, url:"#", img:""},
+      {n:"Aliança de casamento square 2mm em ouro amarelo 18k", p:2570, url:"#", img:""},
+      {n:"Aliança de casamento square 3mm em ouro amarelo 18k", p:3870, url:"#", img:""},
+      {n:"Aliança de casamento square 4mm em ouro amarelo 18k", p:5800, url:"#", img:""},
+    ]
+  },
+  {
+    name:"Classic",
+    desc:"A Linha Classic garante, além de um design atemporal, curvas internas que se delineiam em joias super confortáveis. Em diferentes tons: rosé, branco ou o tradicional ouro amarelo.",
+    finish:"Polido",
+    gallery:[],
+    products:[
+      {n:"Aliança de casamento classic 1,5mm em ouro amarelo 18k", p:2370, url:"#", img:""},
+      {n:"Aliança de casamento classic 2mm em ouro amarelo 18k", p:2770, url:"#", img:""},
+      {n:"Aliança de casamento classic 3mm em ouro amarelo 18k", p:4220, url:"#", img:""},
+      {n:"Aliança de casamento classic 4mm em ouro amarelo 18k", p:5740, url:"#", img:""},
+    ]
+  },
+  {
+    name:"Bombé",
+    desc:"Bordas elevadas e curvas acentuadas são as características que dão forma à Linha de Alianças Bombé. Disponíveis nos três tons de ouro (amarelo, branco e rosé).",
+    finish:"Polido",
+    gallery:[],
+    products:[
+      {n:"Aliança de casamento bombé 2mm em ouro amarelo 18k", p:4480, url:"#", img:""},
+      {n:"Aliança de casamento bombé 3mm em ouro amarelo 18k", p:7520, url:"#", img:""},
+      {n:"Aliança de casamento bombé 4mm em ouro amarelo 18k", p:10920, url:"#", img:""},
+    ]
+  },
+  {
+    name:"Élo",
+    desc:"Élo nasce do encontro entre formas delicadas e detalhes que se conectam. Pensadas para serem usadas sozinhas ou em composição, as joias exploram a ideia de vínculo através de pequenos gestos de design.",
+    finish:"Polido",
+    gallery:[],
+    products:[
+      {n:"Aliança de casamento Élo em ouro amarelo 18k", p:3300, url:"#", img:""},
+      {n:"Aliança de casamento Élo em ouro amarelo 18k com diamante natural", p:3250, url:"#", img:""},
+      {n:"Aliança de casamento Élo em ouro amarelo 18k com diamante natural", p:4080, url:"#", img:""},
+    ]
+  },
+  {
+    name:"Gleam",
+    desc:"Um novo olhar sobre o universo das Alianças nos levou a formas expressivas como a Linha Gleam.",
+    finish:"Polido",
+    gallery:[],
+    products:[
+      {n:"Aliança de casamento gleam em ouro amarelo 18k com diamantes naturais", p:5090, url:"#", img:""},
+      {n:"Aliança de casamento gleam em ouro amarelo 18k", p:4960, url:"#", img:""},
+    ]
+  },
+  {
+    name:"Blade Cut",
+    desc:"Cortes profundos que proporcionam novas e interessantes formas para o Ouro. Descubra o universo próprio das Alianças Blade Cut.",
+    finish:"Polido",
+    gallery:[],
+    products:[
+      {n:"Aliança de casamento blade cut em ouro amarelo 18k com diamantes naturais", p:4030, url:"#", img:""},
+      {n:"Aliança de casamento blade cut em ouro amarelo 18k", p:3370, url:"#", img:""},
+      {n:"Aliança de casamento blade cut one em ouro amarelo 18k com diamante natural", p:6430, url:"#", img:""},
+      {n:"Aliança de casamento blade cut edge em ouro amarelo 18k", p:7120, url:"#", img:""},
+    ]
+  },
+  {
+    name:"Filigrans",
+    desc:"Uma composição surpreendente entre texturas de Ouro Polido e de Veludo. Os desenhos no metal, trabalhando volume e diferentes dimensões sobrepostas, revelam uma nova experiência visual.",
+    finish:"Polido",
+    gallery:[],
+    products:[
+      {n:"Aliança de casamento filigrans slim em ouro amarelo 18k com diamantes naturais", p:6610, url:"#", img:""},
+      {n:"Aliança de casamento filigrans slim em ouro amarelo 18k", p:6460, url:"#", img:""},
+      {n:"Aliança de casamento filigrans large em ouro amarelo 18k", p:10030, url:"#", img:""},
+    ]
+  },
+  {
+    name:"Bold",
+    desc:"De estrutura encorpada, a Linha Bold redefine o conceito de harmonia no universo das alianças de casamento. É o design de joias em estado de arte.",
+    finish:"Acetinado",
+    gallery:[],
+    products:[
+      {n:"Aliança de casamento bold em ouro branco 18k com diamante natural", p:11220, url:"#", img:""},
+      {n:"Aliança de casamento bold em ouro branco 18k", p:11400, url:"#", img:""},
+    ]
+  },
+];
+ 
+const PJ_FAQ = [
+  {q:"Em qual mão a Aliança de casamento é usada?",
+   a:"Tradicionalmente, as alianças de casamento são usadas na mão esquerda. A tradição vem de culturas antigas, como a egípcia, que acreditava existir uma veia ligando o dedo anelar esquerdo diretamente ao coração — símbolo do vínculo eterno entre o casal."},
+  {q:"Como descobrir a numeração da Aliança de casamento?",
+   a:"Uma das formas mais comuns é utilizando uma aneleira (medidor de anéis). Você também pode medir a circunferência do dedo com uma linha e comparar com a nossa tabela de medidas, ou falar com nossa equipe pelo WhatsApp."},
+  {q:"Como é feito o envio da Aliança de Casamento?",
+   a:"Após a aprovação do pedido, o prazo para manuseio e expedição é de 3 até 7 dias úteis, somado ao tempo de entrega da transportadora. Todos os envios possuem seguro completo, sem custo adicional."},
+  {q:"Qual a diferença entre Anel de Noivado e Aliança de casamento?",
+   a:"O anel de noivado simboliza o pedido e o início do compromisso, enquanto as alianças são trocadas durante a cerimônia, representando a união oficial."},
+  {q:"O que preciso saber para escolher a minha aliança?",
+   a:"Verifique se a aliança é anatômica: interior suavemente arredondado que se ajusta melhor ao dedo e proporciona mais conforto. Vale saber também se a estrutura é maciça, pois isso afeta diretamente o peso e o conforto do anel."},
+];
+ 
+/* Placeholder (usado quando img/gallery estão vazios) */
+const PJ_TONES = [["#f3ede2","#e4d6bd"],["#efe9e4","#ddd2c8"],["#f5efe6","#e9dcc6"],["#f0ebe6","#e0d5c5"],["#f4eee3","#e6d8bf"],["#f1ece7","#e2d7ca"]];
+function pjPh(seed, label){
+  const t = PJ_TONES[seed % PJ_TONES.length];
+  const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='${t[0]}'/><stop offset='1' stop-color='${t[1]}'/></linearGradient></defs><rect width='400' height='500' fill='url(#g)'/><circle cx='200' cy='240' r='78' fill='none' stroke='#b39055' stroke-width='14' opacity='.85'/><circle cx='200' cy='240' r='78' fill='none' stroke='#fff' stroke-width='3' opacity='.5'/><text x='200' y='420' text-anchor='middle' font-family='Georgia' font-size='19' fill='#9a8a6b' opacity='.8'>${label}</text></svg>`;
+  return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
+}
+function pjImg(url, seed, label){
+  const src = url || pjPh(seed, label);
+  return `<div class="pj-ph" style="background-image:url(&quot;${src}&quot;)"></div>`;
+}
+ 
+const pjFmt = v => "R$ " + v.toLocaleString("pt-BR");
+const pjSlug = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/\s+/g,"-");
+ 
+/* Renderização */
+const pjChipsEl = document.getElementById("pj-chips");
+const pjSectionsEl = document.getElementById("pj-sections");
+ 
+PJ_LINES.forEach((line, i) => {
+  const chip = document.createElement("a");
+  chip.className = "pj-chip";
+  chip.href = "#linha-" + pjSlug(line.name);
+  chip.textContent = line.name;
+  pjChipsEl.appendChild(chip);
+ 
+  const gallery = (line.gallery && line.gallery.length) ? line.gallery : [null,null,null];
+  const sec = document.createElement("section");
+  sec.className = "pj-line-section";
+  sec.id = "linha-" + pjSlug(line.name);
+  sec.innerHTML = `
+    <div class="pj-line-grid">
+      <div class="pj-carousel" data-i="0">
+        <div class="pj-slides">
+          ${gallery.map((g,k)=>`<div class="pj-slide">${pjImg(g, i*3+k, line.name)}</div>`).join("")}
+        </div>
+        <div class="pj-dots">${gallery.map((_,k)=>`<i class="${k===0?'on':''}"></i>`).join("")}</div>
+        <div class="pj-nav">
+          <button onclick="pjMoveSlide(this,-1)" aria-label="Anterior">‹</button>
+          <button onclick="pjMoveSlide(this,1)" aria-label="Próximo">›</button>
+        </div>
+      </div>
+      <div class="pj-line-info">
+        <div class="pj-eyebrow">Aliança de Casamento</div>
+        <h2>${line.name}</h2>
+        <p>${line.desc}</p>
+        <div class="pj-products">
+          ${line.products.map((pr,j)=>`
+            <a class="pj-product" href="${pr.url || '#'}">
+              <div class="pj-thumb">${pjImg(pr.img, i*7+j+2, "")}<span class="pj-tag">Ouro 18k</span></div>
+              <h3>${pr.n}</h3>
+              <div class="pj-price">${pjFmt(pr.p)}</div>
+              <div class="pj-installments">10 x de ${pjFmt(Math.round(pr.p/10))}</div>
+              <div class="pj-finish">${line.finish}</div>
+              <div class="pj-swatches">
+                <span class="pj-swatch amarelo" title="Ouro amarelo"></span>
+                <span class="pj-swatch branco" title="Ouro branco"></span>
+                <span class="pj-swatch rose" title="Ouro rosé"></span>
+              </div>
+            </a>`).join("")}
+        </div>
+      </div>
+    </div>`;
+  pjSectionsEl.appendChild(sec);
+});
+ 
+/* FAQ */
+const pjAcc = document.getElementById("pj-accordion");
+PJ_FAQ.forEach(item => {
+  const div = document.createElement("div");
+  div.className = "pj-accordion-item";
+  div.innerHTML = `<button class="pj-q">${item.q}</button><div class="pj-a"><p>${item.a}</p></div>`;
+  div.querySelector(".pj-q").addEventListener("click", () => {
+    const open = div.classList.toggle("open");
+    div.querySelector(".pj-a").style.maxHeight = open ? div.querySelector(".pj-a").scrollHeight + "px" : 0;
+  });
+  pjAcc.appendChild(div);
+});
+ 
+/* Carrossel */
+function pjMoveSlide(btn, dir){
+  const c = btn.closest(".pj-carousel");
+  const total = c.querySelectorAll(".pj-slide").length;
+  let i = (parseInt(c.dataset.i) + dir + total) % total;
+  c.dataset.i = i;
+  c.querySelector(".pj-slides").style.transform = `translateX(-${i*100}%)`;
+  c.querySelectorAll(".pj-dots i").forEach((d,k)=>d.classList.toggle("on",k===i));
+}
+ 
+/* Chips */
+function pjScrollChips(delta){ pjChipsEl.scrollBy({left:delta,behavior:"smooth"}); }
+ 
+const pjSections = [...document.querySelectorAll(".pj-line-section")];
+const pjChips = [...document.querySelectorAll(".pj-chip")];
+window.addEventListener("scroll", () => {
+  let current = 0;
+  pjSections.forEach((s,i)=>{ if(s.getBoundingClientRect().top < 200) current = i; });
+  pjChips.forEach((c,i)=>c.classList.toggle("active", i===current));
+}, {passive:true});
+</script>pt>
