@@ -12,6 +12,14 @@
     "aliancas": {
       "type": "testealiancas",
       "blocks": {
+        "modelo-2": {
+          "type": "modelo",
+          "settings": {
+            "colecao": "plana-reta-copia",
+            "titulo": "Meia Cana",
+            "descricao": ""
+          }
+        },
         "modelo-1": {
           "type": "modelo",
           "settings": {
@@ -21,18 +29,10 @@
             "img_secao": "shopify://shop_images/WhatsApp_Image_2026-07-02_at_11.59.14.jpg"
           }
         },
-        "modelo-2": {
-          "type": "modelo",
-          "settings": {
-            "colecao": "dia-da-noiva",
-            "titulo": "dfsdfsdfsdfs",
-            "descricao": "fgdfgdfgd fgdbdb nfgh hwaeweaeaweaweavweawe awe"
-          }
-        },
         "modelo-3": {
           "type": "modelo",
           "settings": {
-            "colecao": "",
+            "colecao": "fio-redondo",
             "titulo": "",
             "descricao": ""
           }
@@ -106,8 +106,8 @@
         }
       },
       "block_order": [
-        "modelo-1",
         "modelo-2",
+        "modelo-1",
         "modelo-3",
         "modelo-4",
         "modelo-5",
@@ -120,7 +120,7 @@
         "faq-5"
       ],
       "settings": {
-        "titulo": "rsfdfsdfsdf",
+        "titulo": "Alianças Patrik",
         "descricao": "Sua Aliança de Casamento em Ouro 18k Amarelo, Branco ou Rosé. Alianças de Casamento como eterno símbolo do amor. Envio de 3",
         "etiqueta": "Ouro 18k",
         "chip_size": 96,
