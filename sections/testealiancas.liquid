@@ -39,11 +39,15 @@
   /* modelos pares: imagem à direita, texto à esquerda */
   .pj-flip .pj-line-head{grid-template-columns:1fr {{ section.settings.img_width | default: 480 }}px}
   .pj-flip .pj-line-img{order:2}
-  .pj-line-img{aspect-ratio:1/1;background:var(--pj-soft);border-radius:2px;overflow:hidden}
-  .pj-line-img img{width:100%;height:100%;object-fit:cover}
-  .pj-line-info{text-align:center}
-  .pj-line-info h2{font-size:26px;text-transform:uppercase;letter-spacing:.18em;margin-bottom:16px}
-  .pj-line-info .pj-desc{color:var(--pj-grey);font-size:13px;line-height:1.8;max-width:360px;margin:0 auto}
+  .pj-line-img{aspect-ratio:1/1;background:var(--pj-soft);border-radius:2px;position:relative}
+  .pj-line-img::before{content:"";position:absolute;top:22px;right:-22px;bottom:-22px;left:22px;background:var(--pj-soft);z-index:0}
+  .pj-flip .pj-line-img::before{right:22px;left:-22px}
+  .pj-line-img img{width:100%;height:100%;object-fit:cover;position:relative;z-index:1;border-radius:2px}
+  .pj-line-info{text-align:left}
+  .pj-line-num{font-size:12px;letter-spacing:.34em;color:var(--pj-gold);margin-bottom:12px}
+  .pj-line-info h2{font-size:26px;text-transform:uppercase;letter-spacing:.18em;margin-bottom:0}
+  .pj-line-info h2::after{content:"";display:block;width:44px;height:1px;background:var(--pj-gold);margin:18px 0 20px}
+  .pj-line-info .pj-desc{color:var(--pj-grey);font-size:13px;line-height:1.85;max-width:430px;margin:0}
  
   /* Grade: 4 no desktop, 2 no mobile */
   .pj-products{display:grid;grid-template-columns:repeat(4,1fr);gap:28px 20px}
@@ -65,10 +69,17 @@
  
   .pj-warn{max-width:1280px;margin:20px auto;padding:14px 18px;border:1px dashed var(--pj-gold);color:var(--pj-grey);font-size:13.5px}
  
-  /* FAQ */
-  .pj-faq{max-width:880px;margin:0 auto;padding:80px 24px}
-  .pj-faq h2{font-size:36px;text-align:center;letter-spacing:.08em;margin-bottom:8px}
-  .pj-faq .pj-sub{text-align:center;color:var(--pj-grey);font-size:14.5px;margin-bottom:44px}
+  /* Bloco exclusivo Patrik */
+  .pj-cta{background:#3c3f36;color:#fff;text-align:center;padding:76px 24px}
+  .pj-cta h2{font-size:28px;text-transform:uppercase;letter-spacing:.16em;margin-bottom:16px}
+  .pj-cta p{max-width:540px;margin:0 auto 30px;font-size:14.5px;line-height:1.85;color:rgba(255,255,255,.82)}
+  .pj-cta-btn{display:inline-block;border:1px solid #fff;padding:14px 36px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#fff;transition:.3s}
+  .pj-cta-btn:hover{background:#fff;color:#3c3f36}
+ 
+  /* FAQ em duas colunas */
+  .pj-faq{max-width:1180px;margin:0 auto;padding:80px 24px;display:grid;grid-template-columns:320px 1fr;gap:56px;align-items:start}
+  .pj-faq h2{font-size:30px;text-align:left;letter-spacing:.08em;margin-bottom:14px}
+  .pj-faq .pj-sub{text-align:left;color:var(--pj-grey);font-size:14.5px;line-height:1.8;margin-bottom:0}
   .pj-accordion-item{border-bottom:1px solid var(--pj-line)}
   .pj-accordion-item button.pj-q{width:100%;background:none;border:none;text-align:left;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 4px;font-size:16.5px;font-weight:400;color:var(--pj-ink)}
   .pj-accordion-item button.pj-q::after{content:"+";font-size:26px;color:var(--pj-gold);transition:.3s}
@@ -80,6 +91,8 @@
     .pj-line-head,.pj-flip .pj-line-head{grid-template-columns:1fr;gap:24px}
     .pj-flip .pj-line-img{order:0}
     .pj-line-img{max-width:640px;width:100%;margin:0 auto}
+    .pj-line-img::before,.pj-flip .pj-line-img::before{top:14px;right:-10px;bottom:-14px;left:10px}
+    .pj-faq{grid-template-columns:1fr;gap:20px}
     .pj-products{grid-template-columns:repeat(3,1fr)}
   }
   @media(max-width:860px){
@@ -156,6 +169,7 @@
               {%- endif -%}
             </div>
             <div class="pj-line-info">
+              <div class="pj-line-num">{{ modelo_i | prepend: '0' }}</div>
               <h2>{{ line_title }}</h2>
               <div class="pj-desc">
                 {%- if block.settings.descricao != blank -%}
@@ -205,6 +219,19 @@
     {%- endif -%}
   {%- endfor -%}
  
+  {%- comment -%} Bloco exclusivo Patrik {%- endcomment -%}
+  {%- if section.settings.cta_titulo != blank -%}
+    <section class="pj-cta">
+      <h2>{{ section.settings.cta_titulo }}</h2>
+      {%- if section.settings.cta_texto != blank -%}
+        <p>{{ section.settings.cta_texto }}</p>
+      {%- endif -%}
+      {%- if section.settings.cta_botao != blank and section.settings.cta_link != blank -%}
+        <a class="pj-cta-btn" href="{{ section.settings.cta_link }}">{{ section.settings.cta_botao }}</a>
+      {%- endif -%}
+    </section>
+  {%- endif -%}
+ 
   {%- comment -%} FAQ: cada pergunta é um bloco editável {%- endcomment -%}
   {%- assign tem_pergunta = false -%}
   {%- for block in section.blocks -%}
@@ -212,8 +239,10 @@
   {%- endfor -%}
   {%- if tem_pergunta -%}
     <section class="pj-faq">
-      <h2>{{ section.settings.faq_titulo }}</h2>
-      <p class="pj-sub">{{ section.settings.faq_subtitulo }}</p>
+      <div class="pj-faq-head">
+        <h2>{{ section.settings.faq_titulo }}</h2>
+        <p class="pj-sub">{{ section.settings.faq_subtitulo }}</p>
+      </div>
       <div id="pj-accordion">
         {%- for block in section.blocks -%}
           {%- if block.type == 'pergunta' and block.settings.pergunta != blank -%}
@@ -315,6 +344,33 @@ window.addEventListener("scroll", () => {
       "max": 12,
       "step": 1,
       "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Bloco Patrik (faixa antes do FAQ)"
+    },
+    {
+      "type": "text",
+      "id": "cta_titulo",
+      "label": "Título (vazio = não mostrar o bloco)",
+      "default": "Crie sua joia exclusiva"
+    },
+    {
+      "type": "textarea",
+      "id": "cta_texto",
+      "label": "Texto",
+      "default": "Alguns momentos merecem ser lembrados para sempre. Transformamos a sua história em uma aliança única, desenhada e produzida especialmente para vocês."
+    },
+    {
+      "type": "text",
+      "id": "cta_botao",
+      "label": "Texto do botão",
+      "default": "Fale com nossos especialistas"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "Link do botão"
     },
     {
       "type": "header",
