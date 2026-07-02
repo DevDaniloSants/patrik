@@ -1,11 +1,13 @@
-
 {%- comment -%} Sem font-family: títulos e textos herdam automaticamente as fontes do tema {%- endcomment -%}
 <style>
   .pj-page{
     --pj-gold:#b39055; --pj-ink:#1e1e1e; --pj-grey:#6f6f6f;
     --pj-line:#e8e2d8; --pj-soft:#faf7f2;
     color:var(--pj-ink);
-    max-width:100%; overflow-x:clip;
+    overflow-x:clip;
+    /* ocupa a largura total da tela, mesmo se o tema limitar o container */
+    width:100vw;
+    margin-left:calc(50% - 50vw);
   }
   .pj-line-head,.pj-products,.pj-line-info{min-width:0}
   .pj-page *{margin:0;padding:0;box-sizing:border-box}
@@ -20,7 +22,7 @@
  
   /* Filtro de modelos (título + imagem pequena embaixo) */
   .pj-lines-filter{position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--pj-line);padding:16px 0 14px}
-  .pj-lines-filter-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;gap:8px;padding:0 16px}
+  .pj-lines-filter-inner{max-width:none;margin:0;display:flex;align-items:center;gap:8px;padding:0 16px}
   .pj-chips{display:flex;gap:22px;overflow-x:auto;scrollbar-width:none;padding:2px 6px;margin:0 auto}
   .pj-chips::-webkit-scrollbar{display:none}
   .pj-chip{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:8px;padding:4px 2px}
@@ -32,7 +34,7 @@
   .pj-chip-arrow{flex:0 0 auto;width:32px;height:32px;border-radius:50%;border:1px solid var(--pj-line);background:#fff;color:var(--pj-grey);display:none;align-items:center;justify-content:center}
  
   /* Seções: imagem + texto em cima, produtos embaixo */
-  .pj-line-section{max-width:1280px;margin:0 auto;padding:64px 24px 40px;border-bottom:1px solid var(--pj-line)}
+  .pj-line-section{max-width:none;margin:0;padding:64px 36px 40px;border-bottom:1px solid var(--pj-line)}
   .pj-line-head{display:grid;grid-template-columns:{{ section.settings.img_width | default: 560 }}px 1fr;gap:44px;align-items:center;margin-bottom:40px}
   .pj-line-img{aspect-ratio:4/5;background:var(--pj-soft);border-radius:2px;overflow:hidden}
   .pj-line-img img{width:100%;height:100%;object-fit:cover}
@@ -87,6 +89,7 @@
   }
   @media(max-width:560px){
     .pj-products{grid-template-columns:repeat(2,1fr);gap:22px 12px}
+    .pj-line-section{padding:48px 16px 32px}
   }
 </style>
  
