@@ -1,11 +1,20 @@
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
- 
+
+{%- comment -%} Fontes: herdam automaticamente as fontes do tema {%- endcomment -%}
 <style>
   .pj-page{
     --pj-gold:#b39055; --pj-ink:#1e1e1e; --pj-grey:#6f6f6f;
     --pj-line:#e8e2d8; --pj-soft:#faf7f2;
-    --pj-serif:'Cormorant Garamond',serif; --pj-sans:'Jost',sans-serif;
-    font-family:var(--pj-sans); color:var(--pj-ink); font-weight:300;
+    {%- if settings.type_header_font %}
+    --pj-serif: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+    {%- else %}
+    --pj-serif: var(--font-heading-family, inherit);
+    {%- endif %}
+    {%- if settings.type_body_font %}
+    --pj-sans: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+    {%- else %}
+    --pj-sans: var(--font-body-family, inherit);
+    {%- endif %}
+    font-family:var(--pj-sans); color:var(--pj-ink);
   }
   .pj-page *{margin:0;padding:0;box-sizing:border-box}
   .pj-page a{color:inherit;text-decoration:none}
