@@ -44,8 +44,6 @@
   .pj-line-head{display:grid;grid-template-columns:{{ section.settings.img_width | default: 560 }}px 1fr;gap:44px;align-items:center;margin-bottom:40px}
   .pj-line-img{aspect-ratio:4/5;background:var(--pj-soft);border-radius:2px;overflow:hidden}
   .pj-line-img img{width:100%;height:100%;object-fit:cover}
-  .pj-line-info .pj-eyebrow{display:flex;align-items:center;gap:8px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--pj-gold);margin-bottom:12px}
-  .pj-line-info .pj-eyebrow::before{content:"";width:26px;height:1px;background:var(--pj-gold)}
   .pj-line-info h2{font-family:var(--pj-serif);font-weight:500;font-size:38px;margin-bottom:14px}
   .pj-line-info .pj-desc{color:var(--pj-grey);font-size:15px;line-height:1.75;max-width:680px}
  
@@ -153,7 +151,6 @@
               {%- endif -%}
             </div>
             <div class="pj-line-info">
-              <div class="pj-eyebrow">{{ section.settings.eyebrow }}</div>
               <h2>{{ line_title }}</h2>
               <div class="pj-desc">
                 {%- if block.settings.descricao != blank -%}
@@ -262,12 +259,6 @@ window.addEventListener("scroll", () => {
     {
       "type": "header",
       "content": "Modelos"
-    },
-    {
-      "type": "text",
-      "id": "eyebrow",
-      "label": "Texto pequeno acima do nome do modelo",
-      "default": "Aliança de Casamento"
     },
     {
       "type": "text",
@@ -398,3 +389,4 @@ window.addEventListener("scroll", () => {
   ]
 }
 {% endschema %}
+ 
