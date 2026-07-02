@@ -14,31 +14,59 @@
       "blocks": {
         "modelo-1": {
           "type": "modelo",
-          "settings": {}
+          "settings": {
+            "colecao": "aneis",
+            "titulo": "",
+            "descricao": ""
+          }
         },
         "modelo-2": {
           "type": "modelo",
-          "settings": {}
+          "settings": {
+            "colecao": "dia-da-noiva",
+            "titulo": "dfsdfsdfsdfs",
+            "descricao": "fgdfgdfgd fgdbdb nfgh hwaeweaeaweaweavweawe awe"
+          }
         },
         "modelo-3": {
           "type": "modelo",
-          "settings": {}
+          "settings": {
+            "colecao": "",
+            "titulo": "",
+            "descricao": ""
+          }
         },
         "modelo-4": {
           "type": "modelo",
-          "settings": {}
+          "settings": {
+            "colecao": "",
+            "titulo": "",
+            "descricao": ""
+          }
         },
         "modelo-5": {
           "type": "modelo",
-          "settings": {}
+          "settings": {
+            "colecao": "",
+            "titulo": "",
+            "descricao": ""
+          }
         },
         "modelo-6": {
           "type": "modelo",
-          "settings": {}
+          "settings": {
+            "colecao": "",
+            "titulo": "",
+            "descricao": ""
+          }
         },
         "modelo-7": {
           "type": "modelo",
-          "settings": {}
+          "settings": {
+            "colecao": "",
+            "titulo": "",
+            "descricao": ""
+          }
         },
         "faq-1": {
           "type": "pergunta",
@@ -90,7 +118,16 @@
         "faq-4",
         "faq-5"
       ],
-      "settings": {}
+      "settings": {
+        "titulo": "",
+        "descricao": "Sua Aliança de Casamento em Ouro 18k Amarelo, Branco ou Rosé. Alianças de Casamento como eterno símbolo do amor. Envio de 3 a 7 dias.",
+        "eyebrow": "Aliança de Casamento",
+        "etiqueta": "Ouro 18k",
+        "products_limit": 8,
+        "parcelas": 10,
+        "faq_titulo": "Questions",
+        "faq_subtitulo": "Algumas das perguntas recorrentes enviadas por nossos clientes."
+      }
     }
   },
   "order": [

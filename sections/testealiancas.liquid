@@ -14,7 +14,6 @@
  
   /* Cabeçalho da categoria */
   .pj-category-head{text-align:center;padding:54px 24px 20px;background:var(--pj-soft)}
-  .pj-breadcrumb{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--pj-grey);margin-bottom:22px}
   .pj-category-head h1{font-family:var(--pj-serif);font-weight:500;font-size:44px;letter-spacing:.03em;margin-bottom:14px}
   .pj-category-head>p{max-width:640px;margin:0 auto;color:var(--pj-grey);font-size:15.5px;line-height:1.7}
  
@@ -91,7 +90,6 @@
 <div class="pj-page">
  
   <section class="pj-category-head">
-    <div class="pj-breadcrumb"><a href="/">Início</a> &nbsp;›&nbsp; {{ page.title }}</div>
     <h1>{{ section.settings.titulo | default: page.title }}</h1>
     <p>{{ section.settings.descricao }}</p>
   </section>
@@ -370,4 +368,4 @@ window.addEventListener("scroll", () => {
     }
   ]
 }
-{% endschema %}>
+{% endschema %}
