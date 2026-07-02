@@ -17,7 +17,8 @@
           "settings": {
             "colecao": "aneis",
             "titulo": "",
-            "descricao": ""
+            "descricao": "",
+            "img_secao": "shopify://shop_images/WhatsApp_Image_2026-07-02_at_11.59.14.jpg"
           }
         },
         "modelo-2": {
@@ -121,8 +122,9 @@
       "settings": {
         "titulo": "",
         "descricao": "Sua Aliança de Casamento em Ouro 18k Amarelo, Branco ou Rosé. Alianças de Casamento como eterno símbolo do amor. Envio de 3 a 7 dias.",
-        "eyebrow": "Aliança de Casamento",
         "etiqueta": "Ouro 18k",
+        "chip_size": 96,
+        "img_width": 560,
         "products_limit": 8,
         "parcelas": 10,
         "faq_titulo": "Questions",
