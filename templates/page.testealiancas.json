@@ -61,10 +61,10 @@
         "modelo-6": {
           "type": "modelo",
           "settings": {
-            "colecao": "",
-            "titulo": "",
+            "colecao": "piramide-copia",
+            "titulo": "Solitário",
             "descricao": "",
-            "acabamento": "Polido"
+            "acabamento": ""
           }
         },
         "modelo-7": {
