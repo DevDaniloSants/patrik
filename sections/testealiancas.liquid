@@ -16,16 +16,16 @@
   .pj-page img{display:block;max-width:100%}
  
   /* Cabeçalho da categoria */
-  .pj-category-head{text-align:center;padding:48px 24px 14px;background:#fff}
-  .pj-category-head h1{font-size:38px;letter-spacing:.03em;margin-bottom:34px}
-  .pj-category-head>p{max-width:640px;margin:0 auto;color:var(--pj-grey);font-size:15.5px;line-height:1.7}
+  .pj-category-head{text-align:center;padding:68px 24px 40px;background:#fff}
+  .pj-category-head h1{font-size:30px;letter-spacing:.04em;margin-bottom:42px}
+  .pj-category-head>p{max-width:600px;margin:0 auto;color:var(--pj-grey);font-size:13.5px;line-height:1.85}
  
   /* Filtro de modelos (título + imagem pequena embaixo) */
-  .pj-lines-filter{position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--pj-line);padding:10px 0 10px}
+  .pj-lines-filter{position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid var(--pj-line);padding:22px 0 20px}
   .pj-lines-filter-inner{max-width:none;margin:0;display:flex;align-items:center;gap:8px;padding:0 16px}
   .pj-chips{display:flex;gap:22px;overflow-x:auto;scrollbar-width:none;padding:2px 6px;margin:0 auto}
   .pj-chips::-webkit-scrollbar{display:none}
-  .pj-chip{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:8px;padding:4px 2px}
+  .pj-chip{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:14px;padding:4px 2px}
   .pj-chip .pj-chip-title{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--pj-ink);border-bottom:1px solid transparent;padding-bottom:2px;transition:.25s;white-space:nowrap;max-width:38vw;overflow:hidden;text-overflow:ellipsis}
   .pj-chip .pj-chip-img{width:{{ section.settings.chip_size | default: 96 | times: 2.8 | round }}px;height:{{ section.settings.chip_size | default: 96 | times: 1.3 | round }}px;border-radius:12px;overflow:hidden;background:#fff;transition:.25s}
   .pj-chip .pj-chip-img img{width:100%;height:100%;object-fit:cover}
@@ -43,7 +43,6 @@
   .pj-flip .pj-line-img::before{right:22px;left:-22px}
   .pj-line-img img{width:100%;height:100%;object-fit:cover;position:relative;z-index:1;border-radius:2px}
   .pj-line-info{text-align:left}
-  .pj-line-num{font-size:12px;letter-spacing:.34em;color:var(--pj-gold);margin-bottom:12px}
   .pj-line-info h2{font-size:26px;text-transform:uppercase;letter-spacing:.18em;margin-bottom:0}
   .pj-line-info h2::after{content:"";display:block;width:44px;height:1px;background:var(--pj-gold);margin:18px 0 20px}
   .pj-line-info .pj-desc{color:var(--pj-grey);font-size:13px;line-height:1.85;max-width:430px;margin:0}
@@ -168,7 +167,6 @@
               {%- endif -%}
             </div>
             <div class="pj-line-info">
-              <div class="pj-line-num">{{ modelo_i | prepend: '0' }}</div>
               <h2>{{ line_title }}</h2>
               <div class="pj-desc">
                 {%- if block.settings.descricao != blank -%}
