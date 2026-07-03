@@ -16,9 +16,9 @@
           "type": "modelo",
           "settings": {
             "colecao": "plana-reta-copia",
-            "titulo": "Meia Cana",
-            "descricao": "",
-            "acabamento": "Polido"
+            "titulo": "Origem",
+            "descricao": "A forma que deu origem a todas as alianças. Com superfície abaulada e interior anatômico, a Linha Origem é a escolha de quem valoriza o design atemporal — confortável hoje, clássica para sempre. Disponível em ouro amarelo, branco e rosé 18k.",
+            "acabamento": ""
           }
         },
         "modelo-1": {
@@ -129,8 +129,8 @@
       "settings": {
         "titulo": "Alianças de casamento Patrik",
         "descricao": "Sua Aliança de Casamento em Ouro 18k Amarelo, Branco ou Rosé. Alianças de Casamento como eterno símbolo do amor. Envio de 3",
-        "etiqueta": "Ouro 18k",
-        "chip_size": 96,
+        "etiqueta": "",
+        "chip_size": 48,
         "img_width": 560,
         "products_limit": 8,
         "parcelas": 10,

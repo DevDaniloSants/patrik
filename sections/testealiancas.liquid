@@ -73,7 +73,7 @@
   .pj-cta{background:#3c3f36;color:#fff;text-align:center;padding:76px 24px}
   .pj-cta h2{font-size:28px;text-transform:uppercase;letter-spacing:.16em;margin-bottom:16px}
   .pj-cta p{max-width:540px;margin:0 auto 30px;font-size:14.5px;line-height:1.85;color:rgba(255,255,255,.82)}
-  .pj-cta-btn{display:inline-block;border:1px solid #fff;padding:14px 36px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#fff;transition:.3s}
+  .pj-cta-btn{display:inline-block;border:1px solid #fff;background:transparent;padding:14px 36px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#fff;transition:.3s;cursor:pointer}
   .pj-cta-btn:hover{background:#fff;color:#3c3f36}
  
   /* FAQ em duas colunas */
@@ -226,8 +226,14 @@
       {%- if section.settings.cta_texto != blank -%}
         <p>{{ section.settings.cta_texto }}</p>
       {%- endif -%}
-      {%- if section.settings.cta_botao != blank and section.settings.cta_link != blank -%}
-        <a class="pj-cta-btn" href="{{ section.settings.cta_link }}">{{ section.settings.cta_botao }}</a>
+      {%- if section.settings.cta_botao != blank -%}
+        {%- if section.settings.cta_modal != blank -%}
+          <button class="pj-cta-btn" type="button" data-pj-modal="{{ section.settings.cta_modal | escape }}">{{ section.settings.cta_botao }}</button>
+        {%- elsif section.settings.cta_link != blank -%}
+          <a class="pj-cta-btn" href="{{ section.settings.cta_link }}">{{ section.settings.cta_botao }}</a>
+        {%- else -%}
+          <button class="pj-cta-btn" type="button" data-pj-chat="auto" data-pj-fallback="https://wa.me/5521974956097?text=Ol%C3%A1%2C%20gostaria%20de%20criar%20uma%20joia%20exclusiva%20com%20a%20Patrik">{{ section.settings.cta_botao }}</button>
+        {%- endif -%}
       {%- endif -%}
     </section>
   {%- endif -%}
@@ -263,6 +269,38 @@ document.querySelectorAll(".pj-accordion-item").forEach(div => {
   div.querySelector(".pj-q").addEventListener("click", () => {
     const open = div.classList.toggle("open");
     div.querySelector(".pj-a").style.maxHeight = open ? div.querySelector(".pj-a").scrollHeight + "px" : 0;
+  });
+});
+ 
+/* Botão do bloco Patrik: aciona o gatilho do modal de contato existente */
+document.querySelectorAll("[data-pj-modal]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const alvo = document.querySelector(btn.dataset.pjModal);
+    if (alvo) alvo.click();
+  });
+});
+ 
+/* Detecção automática do chat/modal (bolinha do canto) */
+document.querySelectorAll('[data-pj-chat="auto"]').forEach(btn => {
+  btn.addEventListener("click", () => {
+    try {
+      if (window.tidioChatApi) { tidioChatApi.show(); tidioChatApi.open(); return; }
+      if (window.jivo_api) { jivo_api.open(); return; }
+      if (window.Tawk_API && Tawk_API.maximize) { Tawk_API.maximize(); return; }
+      if (window.$crisp) { $crisp.push(["do","chat:open"]); return; }
+      if (window.$zopim) { $zopim.livechat.window.show(); return; }
+      if (window.HubSpotConversations) { HubSpotConversations.widget.open(); return; }
+    } catch (e) {}
+    const gatilhos = [
+      ".chaty-button", "#chaty-widget", '[class*="chaty"] .cta-button',
+      '[aria-label*="chat" i]', '[aria-label*="whatsapp" i]', '[aria-label*="contato" i]',
+      ".floating-chat", ".chat-toggle", ".concierge-toggle", '[class*="concierge"]'
+    ];
+    for (const s of gatilhos) {
+      const el = document.querySelector(s);
+      if (el) { el.click(); return; }
+    }
+    if (btn.dataset.pjFallback) window.open(btn.dataset.pjFallback, "_blank");
   });
 });
  
@@ -370,7 +408,13 @@ window.addEventListener("scroll", () => {
     {
       "type": "url",
       "id": "cta_link",
-      "label": "Link do botão"
+      "label": "Link do botão (usado se o campo abaixo estiver vazio)"
+    },
+    {
+      "type": "text",
+      "id": "cta_modal",
+      "label": "Seletor CSS do gatilho do modal (ex.: .chat-button)",
+      "info": "Se preenchido, o botão abre o modal de contato do site em vez de navegar para o link."
     },
     {
       "type": "header",
