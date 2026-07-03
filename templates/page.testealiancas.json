@@ -27,7 +27,7 @@
             "colecao": "alianca-plana-reta",
             "titulo": "Linear",
             "descricao": "Superfície plana, linhas precisas e presença contemporânea. A Linha Linear traduz o minimalismo em ouro: nada além do essencial, executado com perfeição. Para casais que preferem o design limpo e moderno. Disponível em ouro amarelo, branco e rosé 18k.",
-            "acabamento": "Polido",
+            "acabamento": "",
             "img_secao": "shopify://shop_images/WhatsApp_Image_2026-07-02_at_11.59.14.jpg"
           }
         },
@@ -46,7 +46,7 @@
             "colecao": "fio-redondo-copia",
             "titulo": "FACETA",
             "descricao": "Cortes em ângulo que lapidam o ouro como uma gema. As bordas chanfradas da Linha Faceta criam jogos de luz a cada movimento, dando personalidade a uma aliança de espírito clássico. Disponível em ouro amarelo, branco e rosé 18k.",
-            "acabamento": "Polido"
+            "acabamento": ""
           }
         },
         "modelo-5": {
@@ -55,7 +55,7 @@
             "colecao": "piramide",
             "titulo": "PIRÂMIDE",
             "descricao": "Cortes em ângulo que lapidam o ouro como uma gema. As bordas chanfradas da Linha Faceta criam jogos de luz a cada movimento, dando personalidade a uma aliança de espírito clássico. Disponível em ouro amarelo, branco e rosé 18k.",
-            "acabamento": "Polido"
+            "acabamento": ""
           }
         },
         "modelo-6": {
@@ -73,11 +73,12 @@
             "colecao": "alianca-casamento-linha-diamantes",
             "titulo": "Constelação",
             "descricao": "Diamantes naturais cravados lado a lado, como estrelas em órbita ao redor do dedo. A Linha Constelação é a expressão máxima do brilho em uma aliança — para quem quer celebrar o amor com luz por todos os ângulos. Disponível em ouro amarelo, branco e rosé 18k.",
-            "acabamento": "Polido"
+            "acabamento": ""
           }
         },
         "faq-1": {
           "type": "pergunta",
+          "disabled": true,
           "settings": {
             "pergunta": "Em qual mão a Aliança de casamento é usada?",
             "resposta": "Tradicionalmente, as alianças de casamento são usadas na mão esquerda. A tradição vem de culturas antigas, como a egípcia, que acreditava existir uma veia ligando o dedo anelar esquerdo diretamente ao coração — símbolo do vínculo eterno entre o casal."
@@ -85,6 +86,7 @@
         },
         "faq-2": {
           "type": "pergunta",
+          "disabled": true,
           "settings": {
             "pergunta": "Como descobrir a numeração da Aliança de casamento?",
             "resposta": "Uma das formas mais comuns é utilizando uma aneleira (medidor de anéis). Você também pode medir a circunferência do dedo com uma linha e comparar com a nossa tabela de medidas, ou falar com nossa equipe pelo WhatsApp."
@@ -92,6 +94,7 @@
         },
         "faq-3": {
           "type": "pergunta",
+          "disabled": true,
           "settings": {
             "pergunta": "Como é feito o envio da Aliança de Casamento?",
             "resposta": "Após a aprovação do pedido, o prazo para manuseio e expedição é de 3 até 7 dias úteis, somado ao tempo de entrega da transportadora. Todos os envios possuem seguro completo, sem custo adicional."
@@ -99,6 +102,7 @@
         },
         "faq-4": {
           "type": "pergunta",
+          "disabled": true,
           "settings": {
             "pergunta": "Qual a diferença entre Anel de Noivado e Aliança de casamento?",
             "resposta": "O anel de noivado simboliza o pedido e o início do compromisso, enquanto as alianças são trocadas durante a cerimônia, representando a união oficial."
@@ -106,6 +110,7 @@
         },
         "faq-5": {
           "type": "pergunta",
+          "disabled": true,
           "settings": {
             "pergunta": "O que preciso saber para escolher a minha aliança?",
             "resposta": "Verifique se a aliança é anatômica: interior suavemente arredondado que se ajusta melhor ao dedo e proporciona mais conforto. Vale saber também se a estrutura é maciça, pois isso afeta diretamente o peso e o conforto do anel."
