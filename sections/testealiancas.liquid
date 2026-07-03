@@ -43,10 +43,10 @@
   /* modelos pares: imagem à direita, texto à esquerda */
   .pj-flip .pj-line-head{grid-template-columns:1fr {{ section.settings.img_width | default: 480 }}px}
   .pj-flip .pj-line-img{order:2}
-  .pj-line-img{aspect-ratio:1/1;background:var(--pj-soft);border-radius:2px;position:relative}
+  .pj-line-img{aspect-ratio:1/1;background:#f1f1ef;border-radius:2px;position:relative}
   .pj-line-img::before{content:"";position:absolute;top:22px;right:-22px;bottom:-22px;left:22px;background:var(--pj-frame);z-index:0}
   .pj-flip .pj-line-img::before{right:22px;left:-22px}
-  .pj-line-img img{width:100%;height:100%;object-fit:cover;position:relative;z-index:1;border-radius:2px;background:var(--pj-soft)}
+  .pj-line-img img{width:100%;height:100%;object-fit:cover;position:relative;z-index:1;border-radius:2px;background:#f1f1ef}
   .pj-line-info{text-align:left}
   .pj-line-info h2{font-size:26px;text-transform:uppercase;letter-spacing:.18em;margin-bottom:0}
   .pj-line-info h2::after{content:"";display:block;width:44px;height:1px;background:var(--pj-gold);margin:18px 0 20px}
