@@ -16,12 +16,16 @@
   /* estende a cor de fundo para o corpo da página (área do cabeçalho) */
   body{background-color:#faf7f2}
   /* cabeçalho do tema no mesmo tom (vale só nesta página) */
-  #shopify-section-header,
+  header,
+  #shopify-section-header, #SiteHeader, #header, #site-header,
   [id^="shopify-section-sections--"][id$="__header"],
   .shopify-section-group-header-group,
+  .shopify-section:has(header),
   header.site-header, .site-header, .header-wrapper, sticky-header,
-  header.header, .header, .main-header, .site-header__wrapper{
+  header.header, .header, .Header, .main-header, .site-header__wrapper,
+  .header-section, .section-header, .header__inner, .header__wrapper{
     background-color:#faf7f2 !important;
+    background:#faf7f2 !important;
   }
   .pj-page *{margin:0;padding:0;box-sizing:border-box}
   .pj-page a{color:inherit;text-decoration:none}
@@ -31,7 +35,7 @@
   /* Cabeçalho da categoria */
   .pj-category-head{text-align:center;padding:68px 24px 40px}
   .pj-category-head h1{font-size:30px;letter-spacing:.04em;margin-bottom:42px}
-  .pj-category-head>p{max-width:600px;margin:0 auto;color:var(--pj-grey);font-size:13.5px;line-height:1.85}
+  .pj-category-head>p{max-width:420px;margin:0 auto;color:var(--pj-grey);font-size:13.5px;line-height:1.85}
  
   /* Filtro de modelos (título + imagem pequena embaixo) */
   .pj-lines-filter{position:sticky;top:0;z-index:30;background:var(--pj-bg);border-bottom:1px solid var(--pj-line);padding:22px 0 20px}
