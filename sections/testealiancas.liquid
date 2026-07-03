@@ -27,9 +27,8 @@
   .pj-chips::-webkit-scrollbar{display:none}
   .pj-chip{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:8px;padding:4px 2px}
   .pj-chip .pj-chip-title{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--pj-ink);border-bottom:1px solid transparent;padding-bottom:2px;transition:.25s;white-space:nowrap;max-width:38vw;overflow:hidden;text-overflow:ellipsis}
-  .pj-chip .pj-chip-img{width:{{ section.settings.chip_size | default: 96 | times: 2.8 | round }}px;height:{{ section.settings.chip_size | default: 96 | times: 1.3 | round }}px;border-radius:12px;overflow:hidden;border:1px solid var(--pj-line);background:#fff;transition:.25s}
+  .pj-chip .pj-chip-img{width:{{ section.settings.chip_size | default: 96 | times: 2.8 | round }}px;height:{{ section.settings.chip_size | default: 96 | times: 1.3 | round }}px;border-radius:12px;overflow:hidden;background:#fff;transition:.25s}
   .pj-chip .pj-chip-img img{width:100%;height:100%;object-fit:cover}
-  .pj-chip:hover .pj-chip-img,.pj-chip.active .pj-chip-img{border-color:var(--pj-gold);box-shadow:0 0 0 1px var(--pj-gold)}
   .pj-chip:hover .pj-chip-title,.pj-chip.active .pj-chip-title{color:var(--pj-gold);border-color:var(--pj-gold)}
   .pj-chip-arrow{flex:0 0 auto;width:32px;height:32px;border-radius:50%;border:1px solid var(--pj-line);background:#fff;color:var(--pj-grey);display:none;align-items:center;justify-content:center}
  
