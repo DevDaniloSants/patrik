@@ -24,16 +24,27 @@
   header.site-header, .site-header, .header-wrapper, sticky-header,
   header.header, .header, .Header, .main-header, .site-header__wrapper,
   .header-section, .section-header, .header__inner, .header__wrapper{
-    background-color:#fdfbf6 !important;
-    background:#fdfbf6 !important;
+    background-color:#faf7f2 !important;
+    background:#faf7f2 !important;
   }
-  /* faixa de avisos (topo) num bege um pouco mais presente */
+  /* faixa de avisos no mesmo tom */
   #shopify-section-announcement-bar,
   [id^="shopify-section-sections--"][id$="__announcement-bar"],
   .announcement-bar, .announcement, .announcement__bar, .top-bar,
   [class*="announcement-bar"]{
-    background-color:#f1ead9 !important;
-    background:#f1ead9 !important;
+    background-color:#faf7f2 !important;
+    background:#faf7f2 !important;
+  }
+  /* linhas leves separando faixa, cabeçalho e conteúdo */
+  #shopify-section-announcement-bar,
+  [id^="shopify-section-sections--"][id$="__announcement-bar"],
+  .announcement-bar{
+    border-bottom:1px solid #e8e2d8 !important;
+  }
+  #shopify-section-header,
+  [id^="shopify-section-sections--"][id$="__header"],
+  .shopify-section:has(header){
+    border-bottom:1px solid #e8e2d8 !important;
   }
   .pj-page *{margin:0;padding:0;box-sizing:border-box}
   .pj-page a{color:inherit;text-decoration:none}
