@@ -24,16 +24,23 @@
   header.site-header, .site-header, .header-wrapper, sticky-header,
   header.header, .header, .Header, .main-header, .site-header__wrapper,
   .header-section, .section-header, .header__inner, .header__wrapper{
-    background-color:#ffffff !important;
-    background:#ffffff !important;
+    background-color:#faf7f2 !important;
+    background:#faf7f2 !important;
   }
-  /* faixa de avisos em branco */
-  #shopify-section-announcement-bar,
-  [id^="shopify-section-sections--"][id$="__announcement-bar"],
-  .announcement-bar, .announcement, .announcement__bar, .top-bar,
-  [class*="announcement-bar"]{
-    background-color:#ffffff !important;
-    background:#ffffff !important;
+  /* faixa de avisos no mesmo tom */
+  [id*="announcement" i], [class*="announcement" i],
+  [id*="marquee" i], [class*="marquee" i],
+  [id*="ticker" i], [class*="ticker" i],
+  .top-bar, .topbar, [class*="top-bar" i]{
+    background-color:#faf7f2 !important;
+    background:#faf7f2 !important;
+  }
+  /* linha entre a faixa de avisos e o cabeçalho */
+  [id*="announcement" i], [class*="announcement" i],
+  [id*="marquee" i], [class*="marquee" i],
+  [id*="ticker" i], [class*="ticker" i],
+  .top-bar, .topbar, [class*="top-bar" i]{
+    border-bottom:1px solid #e8e2d8 !important;
   }
   /* linhas leves separando faixa, cabeçalho e conteúdo */
   #shopify-section-announcement-bar,
