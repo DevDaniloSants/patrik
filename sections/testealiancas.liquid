@@ -27,7 +27,7 @@
   .pj-chips::-webkit-scrollbar{display:none}
   .pj-chip{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:8px;padding:4px 2px}
   .pj-chip .pj-chip-title{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--pj-ink);border-bottom:1px solid transparent;padding-bottom:2px;transition:.25s;white-space:nowrap;max-width:38vw;overflow:hidden;text-overflow:ellipsis}
-  .pj-chip .pj-chip-img{width:{{ section.settings.chip_size | default: 96 | times: 1.5 | round }}px;height:{{ section.settings.chip_size | default: 96 | times: 0.82 | round }}px;border-radius:12px;overflow:hidden;border:1px solid var(--pj-line);background:#fff;transition:.25s}
+  .pj-chip .pj-chip-img{width:{{ section.settings.chip_size | default: 96 | times: 1.75 | round }}px;height:{{ section.settings.chip_size | default: 96 | times: 0.82 | round }}px;border-radius:12px;overflow:hidden;border:1px solid var(--pj-line);background:#fff;transition:.25s}
   .pj-chip .pj-chip-img img{width:100%;height:100%;object-fit:cover}
   .pj-chip:hover .pj-chip-img,.pj-chip.active .pj-chip-img{border-color:var(--pj-gold);box-shadow:0 0 0 1px var(--pj-gold)}
   .pj-chip:hover .pj-chip-title,.pj-chip.active .pj-chip-title{color:var(--pj-gold);border-color:var(--pj-gold)}
@@ -101,7 +101,7 @@
     /* setinhas do filtro: apenas no mobile */
     .pj-chip-arrow{display:flex}
     .pj-chips{margin:0}
-    .pj-chip .pj-chip-img{width:{{ section.settings.chip_size | default: 96 | times: 1.15 | round }}px;height:{{ section.settings.chip_size | default: 96 | times: 0.63 | round }}px}
+    .pj-chip .pj-chip-img{width:{{ section.settings.chip_size | default: 96 | times: 1.35 | round }}px;height:{{ section.settings.chip_size | default: 96 | times: 0.63 | round }}px}
   }
   @media(max-width:560px){
     .pj-products{grid-template-columns:repeat(2,1fr);gap:22px 12px}
