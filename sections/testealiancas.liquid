@@ -38,12 +38,15 @@
   /* linhas leves separando faixa, cabeçalho e conteúdo */
   #shopify-section-announcement-bar,
   [id^="shopify-section-sections--"][id$="__announcement-bar"],
-  .announcement-bar{
+  .announcement-bar, .announcement, .announcement__bar, .top-bar,
+  [class*="announcement-bar"]{
     border-bottom:1px solid #e8e2d8 !important;
   }
-  #shopify-section-header,
+  header,
+  #shopify-section-header, #SiteHeader, #header, #site-header,
   [id^="shopify-section-sections--"][id$="__header"],
-  .shopify-section:has(header){
+  header.site-header, .site-header, .header-wrapper, sticky-header,
+  header.header, .header, .Header, .main-header{
     border-bottom:1px solid #e8e2d8 !important;
   }
   .pj-page *{margin:0;padding:0;box-sizing:border-box}
@@ -544,6 +547,5 @@ window.addEventListener("scroll", () => {
         { "type": "pergunta" }
       ]
     }
-  ]
-}
+  ]}
 {% endschema %}
