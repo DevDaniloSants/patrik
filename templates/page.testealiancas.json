@@ -25,8 +25,8 @@
           "type": "modelo",
           "settings": {
             "colecao": "alianca-plana-reta",
-            "titulo": "",
-            "descricao": "",
+            "titulo": "Linear",
+            "descricao": "Superfície plana, linhas precisas e presença contemporânea. A Linha Linear traduz o minimalismo em ouro: nada além do essencial, executado com perfeição. Para casais que preferem o design limpo e moderno. Disponível em ouro amarelo, branco e rosé 18k.",
             "acabamento": "Polido",
             "img_secao": "shopify://shop_images/WhatsApp_Image_2026-07-02_at_11.59.14.jpg"
           }
@@ -35,17 +35,17 @@
           "type": "modelo",
           "settings": {
             "colecao": "fio-redondo",
-            "titulo": "",
-            "descricao": "",
-            "acabamento": "Polido"
+            "titulo": "FIO",
+            "descricao": "Delicada como um fio de ouro contornando o dedo. A Linha Fio aposta na leveza: perfil fino e arredondado, presença sutil e conforto absoluto no uso diário. Perfeita sozinha ou em composição com outros anéis. Disponível em ouro amarelo, branco e rosé 18k.",
+            "acabamento": ""
           }
         },
         "modelo-4": {
           "type": "modelo",
           "settings": {
             "colecao": "fio-redondo-copia",
-            "titulo": "",
-            "descricao": "",
+            "titulo": "FACETA",
+            "descricao": "Cortes em ângulo que lapidam o ouro como uma gema. As bordas chanfradas da Linha Faceta criam jogos de luz a cada movimento, dando personalidade a uma aliança de espírito clássico. Disponível em ouro amarelo, branco e rosé 18k.",
             "acabamento": "Polido"
           }
         },
@@ -53,8 +53,8 @@
           "type": "modelo",
           "settings": {
             "colecao": "piramide",
-            "titulo": "",
-            "descricao": "",
+            "titulo": "PIRÂMIDE",
+            "descricao": "Cortes em ângulo que lapidam o ouro como uma gema. As bordas chanfradas da Linha Faceta criam jogos de luz a cada movimento, dando personalidade a uma aliança de espírito clássico. Disponível em ouro amarelo, branco e rosé 18k.",
             "acabamento": "Polido"
           }
         },
@@ -62,8 +62,8 @@
           "type": "modelo",
           "settings": {
             "colecao": "piramide-copia",
-            "titulo": "Solitário",
-            "descricao": "",
+            "titulo": "PONTO DE LUZ",
+            "descricao": "Um único diamante natural, cravado com precisão no ouro 18k. A Linha Ponto de Luz une a simplicidade da aliança clássica ao brilho de um diamante solitário — o detalhe que transforma o símbolo em joia. Disponível em ouro amarelo, branco e rosé 18k.",
             "acabamento": ""
           }
         },
@@ -71,8 +71,8 @@
           "type": "modelo",
           "settings": {
             "colecao": "alianca-casamento-linha-diamantes",
-            "titulo": "Diamantes",
-            "descricao": "",
+            "titulo": "Constelação",
+            "descricao": "Diamantes naturais cravados lado a lado, como estrelas em órbita ao redor do dedo. A Linha Constelação é a expressão máxima do brilho em uma aliança — para quem quer celebrar o amor com luz por todos os ângulos. Disponível em ouro amarelo, branco e rosé 18k.",
             "acabamento": "Polido"
           }
         },
@@ -134,6 +134,11 @@
         "img_width": 560,
         "products_limit": 8,
         "parcelas": 10,
+        "cta_titulo": "Crie sua joia exclusiva",
+        "cta_texto": "Alguns momentos merecem ser lembrados para sempre. Transformamos a sua história em uma aliança única, desenhada e produzida especialmente para vocês.",
+        "cta_botao": "Fale com nossos especialistas",
+        "cta_link": "",
+        "cta_modal": "",
         "faq_titulo": "Questions",
         "faq_subtitulo": "Algumas das perguntas recorrentes enviadas por nossos clientes."
       }
