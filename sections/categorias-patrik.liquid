@@ -1,20 +1,21 @@
+
 <style>
   .pj-cats{padding:{{ section.settings.pad_topo }}px 24px {{ section.settings.pad_base }}px;background:{{ section.settings.fundo }}}
   .pj-cats-inner{max-width:1280px;margin:0 auto}
   .pj-cats-titulo{text-align:center;font-size:22px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 8px;color:#1e1e1e}
   .pj-cats-sub{text-align:center;font-size:13.5px;color:#6f6f6f;margin:0 0 34px}
-  .pj-cats-grid{display:grid;grid-template-columns:repeat({{ section.settings.colunas }},minmax(0,1fr));gap:18px 14px}
+  .pj-cats-grid{display:grid;grid-template-columns:repeat({{ section.settings.colunas }},minmax(0,1fr));gap:10px}
   .pj-cat{display:block;text-align:center;text-decoration:none}
-  .pj-cat-img{aspect-ratio:{{ section.settings.formato }};border-radius:6px;overflow:hidden;background:#f1f1ef}
+  .pj-cat-img{aspect-ratio:{{ section.settings.formato }};border-radius:4px;overflow:hidden;background:#f1f1ef}
   .pj-cat-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
   .pj-cat:hover .pj-cat-img img{transform:scale(1.05)}
-  .pj-cat-nome{display:block;margin-top:11px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:#1e1e1e;border-bottom:1px solid transparent;transition:.25s}
+  .pj-cat-nome{display:block;margin-top:10px;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:#1e1e1e;transition:.25s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .pj-cat:hover .pj-cat-nome{color:#b39055}
+  /* abaixo do desktop: continua UMA linha, com rolagem lateral */
   @media(max-width:1024px){
-    .pj-cats-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-  }
-  @media(max-width:640px){
-    .pj-cats-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 10px}
+    .pj-cats-grid{display:flex;overflow-x:auto;scrollbar-width:none;gap:10px;padding-bottom:4px}
+    .pj-cats-grid::-webkit-scrollbar{display:none}
+    .pj-cat{flex:0 0 132px}
     .pj-cats-titulo{font-size:18px}
     .pj-cats{padding-left:16px;padding-right:16px}
   }
@@ -52,8 +53,7 @@
     {
       "type": "text",
       "id": "titulo",
-      "label": "Título",
-      "default": "Descubra a Patrik"
+      "label": "Título (vazio = não mostrar)"
     },
     {
       "type": "text",
@@ -67,7 +67,7 @@
       "min": 3,
       "max": 8,
       "step": 1,
-      "default": 4
+      "default": 8
     },
     {
       "type": "select",
@@ -76,9 +76,10 @@
       "options": [
         { "value": "1/1", "label": "Quadrado" },
         { "value": "4/5", "label": "Retrato" },
-        { "value": "5/4", "label": "Paisagem" }
+        { "value": "3/4", "label": "Retrato alongado" },
+        { "value": "2/3", "label": "Retrato extra alongado" }
       ],
-      "default": "1/1"
+      "default": "3/4"
     },
     {
       "type": "color",
