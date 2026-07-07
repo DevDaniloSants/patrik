@@ -1490,7 +1490,7 @@
         "categoria_BgnDXR": {
           "type": "categoria",
           "settings": {
-            "nome": "",
+            "nome": "fdgdfgd",
             "link": ""
           }
         },
@@ -1535,11 +1535,11 @@
       ],
       "name": "Grade de categorias",
       "settings": {
-        "titulo": "Descubra a Patrik",
+        "titulo": "",
         "subtitulo": "",
-        "colunas": 4,
-        "formato": "1/1",
-        "fundo": "#FFFFFF",
+        "colunas": 8,
+        "formato": "2/3",
+        "fundo": "#ffffff",
         "pad_topo": 56,
         "pad_base": 56
       }
