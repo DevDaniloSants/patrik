@@ -787,7 +787,7 @@
       "name": "Experiência Patrik",
       "settings": {
         "title": "Desfrute da experiência Patrik",
-        "bg": "palette--light bg--neutral",
+        "bg": "palette--light bg--accent",
         "align_text": "text-center",
         "scale_image": true,
         "wh_ratio": 1,
