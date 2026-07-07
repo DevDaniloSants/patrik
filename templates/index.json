@@ -84,10 +84,10 @@
       "settings": {
         "align_text": "text-left",
         "text_color": "text--neutral",
-        "bg": "palette--dark bg--invert--accent",
+        "bg": "palette--light bg--neutral",
         "content_width": 2000,
         "width": "wrapper",
-        "padding_top": 10,
+        "padding_top": 0,
         "padding_bottom": 4
       }
     },
@@ -184,10 +184,10 @@
       "settings": {
         "align_text": "text-left",
         "text_color": "text--neutral",
-        "bg": "palette--dark bg--invert--accent",
+        "bg": "palette--light bg--neutral",
         "content_width": 2000,
         "width": "wrapper",
-        "padding_top": 16,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
@@ -196,6 +196,86 @@
       "name": "Custom Liquid",
       "settings": {
         "custom_liquid": "<style>\n/* Gallery Slider - Container com align-items: stretch */\n#shopify-section-template--18823723319379__section_gallery_slider_BKFgHx .gallery-slider {\n  gap: 40px !important;\n  align-items: stretch !important;\n}\n\n/* Gallery Slider - Itens com altura igual e conteúdo no topo */\n#shopify-section-template--18823723319379__section_gallery_slider_BKFgHx .gallery-slider__item {\n  min-width: 320px !important;\n  display: flex !important;\n  flex-direction: column !important;\n  justify-content: flex-start !important;\n  align-items: flex-start !important;\n}\n\n/* Gallery Slider - Garantir que elementos filhos ocupem largura total */\n#shopify-section-template--18823723319379__section_gallery_slider_BKFgHx .gallery-slider__item > * {\n  width: 100% !important;\n}\n\n/* Gallery Slider - Remover margens superiores de títulos e textos */\n#shopify-section-template--18823723319379__section_gallery_slider_BKFgHx .gallery-slider__item h2,\n#shopify-section-template--18823723319379__section_gallery_slider_BKFgHx .gallery-slider__item h3,\n#shopify-section-template--18823723319379__section_gallery_slider_BKFgHx .gallery-slider__item p {\n  margin-top: 0 !important;\n}\n</style>"
+      }
+    },
+    "categorias_patrik_9MkbFb": {
+      "type": "categorias-patrik",
+      "blocks": {
+        "categoria_dVC8AG": {
+          "type": "categoria",
+          "settings": {
+            "imagem": "shopify://shop_images/072368_3_f27a1a57-d596-4387-84b6-96b1fc356145.jpg",
+            "nome": "Anéis",
+            "link": ""
+          }
+        },
+        "categoria_Rq3Ykt": {
+          "type": "categoria",
+          "settings": {
+            "imagem": "shopify://shop_images/BRN02052_2_87c62df1-4069-4f45-b699-cf076a6a1c96.jpg",
+            "nome": "Brincos",
+            "link": ""
+          }
+        },
+        "categoria_7r6VUT": {
+          "type": "categoria",
+          "settings": {
+            "imagem": "shopify://shop_images/072603_1.jpg",
+            "nome": "Colares",
+            "link": ""
+          }
+        },
+        "categoria_3DK9fW": {
+          "type": "categoria",
+          "disabled": true,
+          "settings": {
+            "nome": "",
+            "link": ""
+          }
+        },
+        "categoria_BgnDXR": {
+          "type": "categoria",
+          "settings": {
+            "imagem": "shopify://shop_images/PUL00303_2_7b54f066-f11f-4ba4-9d9f-d618ce6a01b8.jpg",
+            "nome": "Pulseiras",
+            "link": ""
+          }
+        },
+        "categoria_6HEfgG": {
+          "type": "categoria",
+          "settings": {
+            "imagem": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0169_1_1_d5882ef5-80da-40b2-88da-57ab7d6576a7.jpg",
+            "nome": "",
+            "link": ""
+          }
+        },
+        "categoria_9EXtzC": {
+          "type": "categoria",
+          "disabled": true,
+          "settings": {
+            "nome": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "categoria_dVC8AG",
+        "categoria_Rq3Ykt",
+        "categoria_7r6VUT",
+        "categoria_3DK9fW",
+        "categoria_BgnDXR",
+        "categoria_6HEfgG",
+        "categoria_9EXtzC"
+      ],
+      "name": "Grade de categorias",
+      "settings": {
+        "titulo": "",
+        "subtitulo": "",
+        "colunas": 3,
+        "formato": "2/3",
+        "fundo": "#ffffff",
+        "pad_topo": 56,
+        "pad_base": 56
       }
     },
     "section_gallery_slider_LmhCKt": {
@@ -1461,77 +1541,6 @@
         "width": "wrapper",
         "padding_top": 50,
         "padding_bottom": 50
-      }
-    },
-    "categorias_patrik_9MkbFb": {
-      "type": "categorias-patrik",
-      "blocks": {
-        "categoria_dVC8AG": {
-          "type": "categoria",
-          "settings": {
-            "imagem": "shopify://shop_images/072368_3_f27a1a57-d596-4387-84b6-96b1fc356145.jpg",
-            "nome": "Anéis",
-            "link": ""
-          }
-        },
-        "categoria_Rq3Ykt": {
-          "type": "categoria",
-          "settings": {
-            "imagem": "shopify://shop_images/BRN02052_2_87c62df1-4069-4f45-b699-cf076a6a1c96.jpg",
-            "nome": "Brincos",
-            "link": ""
-          }
-        },
-        "categoria_7r6VUT": {
-          "type": "categoria",
-          "settings": {
-            "imagem": "shopify://shop_images/072603_1.jpg",
-            "nome": "Colares",
-            "link": ""
-          }
-        },
-        "categoria_BgnDXR": {
-          "type": "categoria",
-          "settings": {
-            "imagem": "shopify://shop_images/PUL00303_2_7b54f066-f11f-4ba4-9d9f-d618ce6a01b8.jpg",
-            "nome": "Pulseiras",
-            "link": ""
-          }
-        },
-        "categoria_6HEfgG": {
-          "type": "categoria",
-          "settings": {
-            "imagem": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0169_1_1_d5882ef5-80da-40b2-88da-57ab7d6576a7.jpg",
-            "nome": "",
-            "link": ""
-          }
-        },
-        "categoria_9EXtzC": {
-          "type": "categoria",
-          "disabled": true,
-          "settings": {
-            "nome": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "categoria_dVC8AG",
-        "categoria_Rq3Ykt",
-        "categoria_7r6VUT",
-        "categoria_BgnDXR",
-        "categoria_6HEfgG",
-        "categoria_9EXtzC"
-      ],
-      "name": "Grade de categorias",
-      "settings": {
-        "titulo": "",
-        "subtitulo": "",
-        "colunas": 3,
-        "formato": "2/3",
-        "fundo": "#ffffff",
-        "pad_topo": 56,
-        "pad_base": 56
       }
     }
   },
