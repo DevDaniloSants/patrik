@@ -51,14 +51,14 @@
   <div class="product__price__wrap">
     <div class="product__price__main" data-price-wrapper>
       <span class="product__price">
-        <span data-product-price class="text-white! md:text-[#3c3f36]!" {% if compare_at_price > price %} class="product__price--sale"{% endif %}>
+        <span data-product-price class="md:text-[#3c3f36]!" {% if compare_at_price > price %} class="product__price--sale"{% endif %}>
           {%- if settings.currency_code_enable -%}
             {{ price | money_with_currency }}
           {%- else -%}
             {{ price | money }}
           {%- endif -%}
         </span>
-        <span class="product__price--installments block mt-1 {{ price_size_class }} text-white! md:text-[#3c3f36]!">
+        <span class="product__price--installments block mt-1 {{ price_size_class }}  md:text-[#3c3f36]!">
             ou 10x de {{ price | divided_by: 10.0 | money }}
         </span>
       </span>
