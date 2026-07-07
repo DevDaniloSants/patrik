@@ -196,25 +196,49 @@
 
          {% comment %} Mobile product info - abaixo da imagem, no fluxo normal {% endcomment %}
           <style>
-            @media (max-width: 767px) {
-              .mobile-product-content .product__title,
-              .mobile-product-content .mobile-product-info p,
-              .mobile-product-content .product__block__price,
-              .mobile-product-content .product__block__price * {
-                color: #3c3f36 !important;
-              }
-              .mobile-product-content .mobile-product-buy a,
-              .mobile-product-content .mobile-product-buy button {
-                display: block !important;
-                width: 100% !important;
-                margin: 8px 0 !important;
-                text-align: center !important;
-              }
-              [data-product-slideshow] [style*="--wh-ratio"] {
-                --wh-ratio: 1 !important;
-              }
-            }
-          </style>
+  @media (max-width: 767px) {
+    .mobile-product-content .product__title,
+    .mobile-product-content .mobile-product-info p,
+    .mobile-product-content .product__block__price,
+    .mobile-product-content .product__block__price * {
+      color: #3c3f36 !important;
+    }
+    [data-product-slideshow] [style*="--wh-ratio"] {
+      --wh-ratio: 0.85 !important;
+    }
+    /* botões lado a lado, mesma altura */
+    .mobile-product-content .product__submit {
+      display: flex !important;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: stretch;
+    }
+    .mobile-product-content .add-action-errors {
+      width: 100%;
+    }
+    .mobile-product-content .product__submit__buttons {
+      flex: 1 1 0;
+      min-width: 0;
+    }
+    .mobile-product-content .product__submit > .flex.w-full.mt-2 {
+      flex: 1 1 0;
+      min-width: 0;
+      width: auto !important;
+      margin-top: 0 !important;
+    }
+    .mobile-product-content .mobile-product-buy a,
+    .mobile-product-content .mobile-product-buy button {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 100% !important;
+      height: 48px !important;
+      max-height: none !important;
+      margin: 0 !important;
+      text-align: center !important;
+    }
+  }
+</style>
           <div
             class="mobile-product-content md:hidden! px-5 pt-3 w-full!"
           >
