@@ -206,7 +206,7 @@
           "settings": {
             "imagem": "shopify://shop_images/072368_3_f27a1a57-d596-4387-84b6-96b1fc356145.jpg",
             "nome": "Anéis",
-            "link": ""
+            "link": "shopify://collections/aneis"
           }
         },
         "categoria_Rq3Ykt": {
@@ -214,7 +214,7 @@
           "settings": {
             "imagem": "shopify://shop_images/BRN02052_2_87c62df1-4069-4f45-b699-cf076a6a1c96.jpg",
             "nome": "Brincos",
-            "link": ""
+            "link": "shopify://collections/brinco"
           }
         },
         "categoria_7r6VUT": {
@@ -222,7 +222,7 @@
           "settings": {
             "imagem": "shopify://shop_images/072603_1.jpg",
             "nome": "Colares",
-            "link": ""
+            "link": "shopify://collections/colar"
           }
         },
         "categoria_3DK9fW": {
@@ -238,15 +238,15 @@
           "settings": {
             "imagem": "shopify://shop_images/PUL00303_2_7b54f066-f11f-4ba4-9d9f-d618ce6a01b8.jpg",
             "nome": "Pulseiras",
-            "link": ""
+            "link": "shopify://collections/pulseira"
           }
         },
         "categoria_6HEfgG": {
           "type": "categoria",
           "settings": {
             "imagem": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0169_1_1_d5882ef5-80da-40b2-88da-57ab7d6576a7.jpg",
-            "nome": "",
-            "link": ""
+            "nome": "Todas as Joias",
+            "link": "shopify://collections/todos-os-produtos"
           }
         },
         "categoria_9EXtzC": {
@@ -274,7 +274,7 @@
         "colunas": 3,
         "formato": "4/5",
         "mobile_visiveis": "1.6",
-        "fundo": "#F7F5F4",
+        "fundo": "#f7f5f4",
         "pad_topo": 56,
         "pad_base": 56
       }
@@ -464,7 +464,7 @@
             "horizontal_padding": 40,
             "gap": 90,
             "content_gap": 50,
-            "background_color": "#F7F5F4",
+            "background_color": "#f7f5f4",
             "kicker": "",
             "heading": "personalize e Eternize Momentos Marcantes da Vida",
             "text": "<p>Alguns momentos merecem ser lembrados para sempre. Transformamos suas histórias em joias únicas, criadas para celebrar conquistas, tradições e laços que atravessam gerações.<br/><br/></p>",
@@ -597,7 +597,7 @@
       "name": "Categorias - Gallery Slider",
       "settings": {
         "title": "histórias de quem escolheu a patrik",
-        "bg": "palette--light bg--accent",
+        "bg": "palette--light bg--neutral",
         "align_text": "text-left",
         "scale_image": true,
         "wh_ratio": 1.2,
