@@ -1537,7 +1537,7 @@
       "settings": {
         "titulo": "",
         "subtitulo": "",
-        "colunas": 8,
+        "colunas": 3,
         "formato": "2/3",
         "fundo": "#ffffff",
         "pad_topo": 56,
