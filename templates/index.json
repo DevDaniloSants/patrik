@@ -482,7 +482,7 @@
             "video": "shopify://files/videos/personalização_feed.mov",
             "video_url": "",
             "aspect_ratio": "3/4",
-            "media_radius": 40,
+            "media_radius": 0,
             "auto_play": false,
             "loop": true,
             "mute_video": false,
