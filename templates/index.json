@@ -472,8 +472,8 @@
         "text_block_BWBzCF": {
           "type": "text_block",
           "settings": {
-            "enable_image": false,
-            "image": "shopify://shop_images/Categorias-_Brinco_PATRIK-v7.png",
+            "enable_image": true,
+            "image": "shopify://shop_images/WhatsApp_Image_2026-07-07_at_12.47.01.jpg",
             "shape_class": "",
             "title": "Carolina R.",
             "text": "<p>\"O time da patrik joias foi excepcional! Criamos uma joia personalizada pra uma ocasião super especial e ficou exatamente como queríamos. Além disso ficou pronta em tempo record. Viramos clientes fiéis da marca!\"</p>",
@@ -517,7 +517,7 @@
         "title": "histórias de quem escolheu a patrik",
         "bg": "palette--dark bg--invert--accent",
         "align_text": "text-left",
-        "scale_image": false,
+        "scale_image": true,
         "wh_ratio": 1.2,
         "slides_desktop": 3,
         "slides_tablet": 2,
