@@ -5,6 +5,8 @@
    ============================================================ */
  
 /* ===== regras gerais (já existentes) ===== */
+
+body{border-top:6px solid red!important}
 .product__block__description {
   font-size: 14px;
   color: #888;
