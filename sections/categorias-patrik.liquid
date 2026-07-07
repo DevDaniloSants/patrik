@@ -3,17 +3,16 @@
   .pj-cats-inner{max-width:1280px;margin:0 auto}
   .pj-cats-titulo{text-align:center;font-size:22px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 8px;color:#1e1e1e}
   .pj-cats-sub{text-align:center;font-size:13.5px;color:#6f6f6f;margin:0 0 34px}
-  .pj-cats-grid{display:grid;grid-template-columns:repeat({{ section.settings.colunas }},minmax(0,1fr));gap:10px}
-  .pj-cat{display:block;text-align:center;text-decoration:none}
+  {%- assign gap_total = section.settings.colunas | minus: 1 | times: 10 -%}
+  .pj-cats-grid{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:6px}
+  .pj-cats-grid::-webkit-scrollbar{display:none}
+  .pj-cat{display:block;text-align:center;text-decoration:none;flex:0 0 calc((100% - {{ gap_total }}px)/{{ section.settings.colunas }});scroll-snap-align:start}
   .pj-cat-img{aspect-ratio:{{ section.settings.formato }};border-radius:4px;overflow:hidden;background:#f1f1ef}
   .pj-cat-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
   .pj-cat:hover .pj-cat-img img{transform:scale(1.05)}
   .pj-cat-nome{display:block;margin-top:10px;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:#1e1e1e;transition:.25s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .pj-cat:hover .pj-cat-nome{color:#b39055}
-  /* abaixo do desktop: continua UMA linha, com rolagem lateral */
   @media(max-width:1024px){
-    .pj-cats-grid{display:flex;overflow-x:auto;scrollbar-width:none;gap:10px;padding-bottom:4px}
-    .pj-cats-grid::-webkit-scrollbar{display:none}
     .pj-cat{flex:0 0 132px}
     .pj-cats-titulo{font-size:18px}
     .pj-cats{padding-left:16px;padding-right:16px}
@@ -62,11 +61,11 @@
     {
       "type": "range",
       "id": "colunas",
-      "label": "Colunas no desktop",
+      "label": "Cartões visíveis no desktop (o resto desliza)",
       "min": 3,
-      "max": 8,
+      "max": 10,
       "step": 1,
-      "default": 8
+      "default": 6
     },
     {
       "type": "select",
@@ -148,4 +147,3 @@
   ]
 }
 {% endschema %}
- 
