@@ -1469,54 +1469,46 @@
         "categoria_dVC8AG": {
           "type": "categoria",
           "settings": {
-            "nome": "",
+            "imagem": "shopify://shop_images/072368_3_f27a1a57-d596-4387-84b6-96b1fc356145.jpg",
+            "nome": "Anéis",
             "link": ""
           }
         },
         "categoria_Rq3Ykt": {
           "type": "categoria",
           "settings": {
-            "nome": "",
+            "imagem": "shopify://shop_images/BRN02052_2_87c62df1-4069-4f45-b699-cf076a6a1c96.jpg",
+            "nome": "Brincos",
             "link": ""
           }
         },
         "categoria_7r6VUT": {
           "type": "categoria",
           "settings": {
-            "nome": "",
+            "imagem": "shopify://shop_images/072603_1.jpg",
+            "nome": "Colares",
             "link": ""
           }
         },
         "categoria_BgnDXR": {
           "type": "categoria",
           "settings": {
-            "nome": "fdgdfgd",
+            "imagem": "shopify://shop_images/PUL00303_2_7b54f066-f11f-4ba4-9d9f-d618ce6a01b8.jpg",
+            "nome": "Pulseiras",
             "link": ""
           }
         },
         "categoria_6HEfgG": {
           "type": "categoria",
           "settings": {
+            "imagem": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0169_1_1_d5882ef5-80da-40b2-88da-57ab7d6576a7.jpg",
             "nome": "",
             "link": ""
           }
         },
         "categoria_9EXtzC": {
           "type": "categoria",
-          "settings": {
-            "nome": "",
-            "link": ""
-          }
-        },
-        "categoria_Nkip39": {
-          "type": "categoria",
-          "settings": {
-            "nome": "",
-            "link": ""
-          }
-        },
-        "categoria_TPG6UK": {
-          "type": "categoria",
+          "disabled": true,
           "settings": {
             "nome": "",
             "link": ""
@@ -1529,9 +1521,7 @@
         "categoria_7r6VUT",
         "categoria_BgnDXR",
         "categoria_6HEfgG",
-        "categoria_9EXtzC",
-        "categoria_Nkip39",
-        "categoria_TPG6UK"
+        "categoria_9EXtzC"
       ],
       "name": "Grade de categorias",
       "settings": {
@@ -1551,6 +1541,7 @@
     "hero",
     "section_richtext_cnmM7B",
     "section_liquid_3xBTtK",
+    "categorias_patrik_9MkbFb",
     "section_gallery_slider_LmhCKt",
     "collection_split_4BRfHx",
     "section_richtext_UkKtct",
@@ -1568,7 +1559,6 @@
     "section_richtext_jRYTUM",
     "section_list_collections_ftJBTL",
     "section_logos_Cd4AwJ",
-    "section_icons_Fcggry",
-    "categorias_patrik_9MkbFb"
+    "section_icons_Fcggry"
   ]
 }
