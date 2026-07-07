@@ -355,7 +355,7 @@
       ".product__media {position: relative; z-index: 200 !important;}",
       "header {z-index: 100 !important;}",
       "@media (min-width: 1024px) {.product__grid .product__media {aspect-ratio: 4/5; height: auto !important; background: rgba(0, 0, 0, 0.015); border-radius: 4px; overflow: hidden; } .product__grid .product__media > div, .product__grid .product__media .product-image-wrapper, .product__grid .product__media .product-image-wrapper > div {height: 100% !important; aspect-ratio: auto !important; } .product__grid .product__media img {width: 100% !important; height: 100% !important; }}",
-      "@media(max-width:1023px){[data-product-slideshow]{--default-ratio:100%!important}}"
+      "@media(max-width:1023px){[data-product-slideshow] [style*=\"--wh-ratio\"]{--wh-ratio:1!important}.mobile-product-content{position:static!important;display:block!important;pointer-events:auto!important;padding:16px 20px 0!important}.mobile-product-content>*{width:100%!important;max-width:100%!important}.mobile-product-content *:not(a):not(button):not(a *):not(button *){color:#1e1e1e!important}.mobile-product-content a,.mobile-product-content button{width:100%!important;margin:6px 0!important}}"
     ]
   }
 }
