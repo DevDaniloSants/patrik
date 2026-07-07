@@ -1462,6 +1462,87 @@
         "padding_top": 50,
         "padding_bottom": 50
       }
+    },
+    "categorias_patrik_9MkbFb": {
+      "type": "categorias-patrik",
+      "blocks": {
+        "categoria_dVC8AG": {
+          "type": "categoria",
+          "settings": {
+            "nome": "",
+            "link": ""
+          }
+        },
+        "categoria_Rq3Ykt": {
+          "type": "categoria",
+          "settings": {
+            "nome": "",
+            "link": ""
+          }
+        },
+        "categoria_7r6VUT": {
+          "type": "categoria",
+          "settings": {
+            "nome": "",
+            "link": ""
+          }
+        },
+        "categoria_BgnDXR": {
+          "type": "categoria",
+          "settings": {
+            "nome": "",
+            "link": ""
+          }
+        },
+        "categoria_6HEfgG": {
+          "type": "categoria",
+          "settings": {
+            "nome": "",
+            "link": ""
+          }
+        },
+        "categoria_9EXtzC": {
+          "type": "categoria",
+          "settings": {
+            "nome": "",
+            "link": ""
+          }
+        },
+        "categoria_Nkip39": {
+          "type": "categoria",
+          "settings": {
+            "nome": "",
+            "link": ""
+          }
+        },
+        "categoria_TPG6UK": {
+          "type": "categoria",
+          "settings": {
+            "nome": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "categoria_dVC8AG",
+        "categoria_Rq3Ykt",
+        "categoria_7r6VUT",
+        "categoria_BgnDXR",
+        "categoria_6HEfgG",
+        "categoria_9EXtzC",
+        "categoria_Nkip39",
+        "categoria_TPG6UK"
+      ],
+      "name": "Grade de categorias",
+      "settings": {
+        "titulo": "Descubra a Patrik",
+        "subtitulo": "",
+        "colunas": 4,
+        "formato": "1/1",
+        "fundo": "#FFFFFF",
+        "pad_topo": 56,
+        "pad_base": 56
+      }
     }
   },
   "order": [
@@ -1487,6 +1568,7 @@
     "section_richtext_jRYTUM",
     "section_list_collections_ftJBTL",
     "section_logos_Cd4AwJ",
-    "section_icons_Fcggry"
+    "section_icons_Fcggry",
+    "categorias_patrik_9MkbFb"
   ]
 }
