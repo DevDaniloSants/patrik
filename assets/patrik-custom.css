@@ -75,7 +75,7 @@ header {
   html body .mobile-product-content .mobile-product-info p,
   html body .mobile-product-content .product__block__price,
   html body .mobile-product-content .product__block__price * {
-    color: var(--color-text, #3c3f36) !important;
+    color: #3c3f36 !important;
     width: 100% !important;
     max-width: 100% !important;
   }
