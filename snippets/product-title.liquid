@@ -11,7 +11,7 @@
       }
     }
   </style>
-  <p class="p text-[12px] font-light text-white lg:text-black" data-product-reference>
+  <p class="p text-[12px] font-light lg:text-black" data-product-reference>
   <span data-product-reference-value class="md:text-black!">{{ product_reference_code }}</span>
   </p>
 {%- endif -%}
@@ -25,7 +25,7 @@
 <div class="product__block__title !pb-0" {{ block.shopify_attributes }}>
   <div class="product__headline">
     <div class="product__title__wrapper lg:w-full">
-      <h1 class="product__title text-white! md:text-[#3c3f36]! {{ heading_size_class }}">
+      <h1 class="product__title md:text-[#3c3f36]! {{ heading_size_class }}">
         {% if template contains 'product' and block %}
           {{ product.title }}
         {% else %}
