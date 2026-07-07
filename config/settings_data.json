@@ -354,7 +354,7 @@
       ".product-form__cart-submit:hover{background-color:var(--color-bright-accent-hover)!important;border-color:var(--color-bright-accent-hover)!important}",
       ".product__media{position:relative;z-index:200!important}",
       "header{z-index:100!important}",
-      "@media(min-width:1024px){.product__grid .product__media{aspect-ratio:2/3;height:auto!important;background:#f4f2ee;border-radius:4px;overflow:hidden}.product__grid .product__media>div,.product__grid .product__media .product-image-wrapper,.product__grid .product__media .product-image-wrapper>div{height:100%!important;aspect-ratio:auto!important}.product__grid .product__media img{width:100%!important;height:100%!important}}"
+      "@media(min-width:1024px){.product__grid .product__media{aspect-ratio:4/5;height:auto!important;background:#f4f2ee;border-radius:4px;overflow:hidden}.product__grid .product__media>div,.product__grid .product__media .product-image-wrapper,.product__grid .product__media .product-image-wrapper>div{height:100%!important;aspect-ratio:auto!important}.product__grid .product__media img{width:100%!important;height:100%!important}}"
     ]
   }
 }
