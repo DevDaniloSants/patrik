@@ -165,7 +165,7 @@
               data-vertical-images
             {% endunless %}
             {% if first_product_media.aspect_ratio > 0 %}
-              style="--default-ratio: {{ 1 | divided_by: first_product_media.aspect_ratio | times: 100 | at_most: 150 }}%"
+              style="--default-ratio: {{ 1 | divided_by: first_product_media.aspect_ratio | times: 100 | at_most: 100 }}%"
             {% endif %}
           >
             {% if product_media.size > 0 %}
