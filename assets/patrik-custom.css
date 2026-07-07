@@ -1,4 +1,4 @@
-/* ===== Patrik Joias — CSS personalizado (versão limpa) ===== */
+/* ===== Patrik Joias — CSS personalizado ===== */
 
 .product__block__description{font-size:14px;color:#888}
 .product-form__cart-submit{background-color:var(--color-bright-accent)!important;border-color:var(--color-bright-accent)!important;color:var(--color-bright-accent-text)!important}
@@ -16,13 +16,14 @@ header{z-index:100!important}
 /* ===== produto MOBILE ===== */
 @media (max-width:1023px){
 [data-product-slideshow] [style*="--wh-ratio"]{--wh-ratio:1!important}
-#MainContent .mobile-product-content{position:static!important;display:block!important;pointer-events:auto!important;padding:16px 20px 0!important}
-#MainContent .mobile-product-content .mobile-product-info,
-#MainContent .mobile-product-content .mobile-product-buy{display:block!important;width:100%!important;max-width:100%!important}
-#MainContent .mobile-product-content h1.product__title,
-#MainContent .mobile-product-content .mobile-product-info p,
-#MainContent .mobile-product-content .product__block__price,
-#MainContent .mobile-product-content .product__block__price *{color:#3c3f36!important;width:100%!important;max-width:100%!important}
-#MainContent .mobile-product-content .mobile-product-buy a,
-#MainContent .mobile-product-content .mobile-product-buy button{display:block!important;width:100%!important;margin:8px 0!important;text-align:center!important}
+html body .mobile-product-content{position:static!important;display:block!important;pointer-events:auto!important;padding:16px 20px 0!important}
+html body .mobile-product-content .mobile-product-info,
+html body .mobile-product-content .mobile-product-buy{display:block!important;width:100%!important;max-width:100%!important}
+html body .mobile-product-content h1.product__title,
+html body .mobile-product-content p[data-product-reference],
+html body .mobile-product-content .mobile-product-info p,
+html body .mobile-product-content .product__block__price,
+html body .mobile-product-content .product__block__price *{color:#3c3f36!important;width:100%!important;max-width:100%!important}
+html body .mobile-product-content .mobile-product-buy a,
+html body .mobile-product-content .mobile-product-buy button{display:block!important;width:100%!important;margin:8px 0!important;text-align:center!important}
 }
