@@ -27,3 +27,10 @@ html body .mobile-product-content .product__block__price *{color:#3c3f36!importa
 html body .mobile-product-content .mobile-product-buy a,
 html body .mobile-product-content .mobile-product-buy button{display:block!important;width:100%!important;margin:8px 0!important;text-align:center!important}
 }
+/* título e preço dos cartões da grade sempre em preto */
+.product__grid__info,
+.product__grid__info a,
+.product__grid__info p,
+.product__grid__info span {
+  color: #000 !important;
+}
