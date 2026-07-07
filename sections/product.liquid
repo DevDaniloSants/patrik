@@ -194,13 +194,31 @@
             {% endif %}
           </div>
 
-          {% comment %} Mobile product info - rendered outside the carousel {% endcomment %}
-          {% comment %} Descomentar dependendo do que vier da reunião adicionar absolute bottom-0{% endcomment %}
+         {% comment %} Mobile product info - abaixo da imagem, no fluxo normal {% endcomment %}
+          <style>
+            @media (max-width: 767px) {
+              .mobile-product-content .product__title,
+              .mobile-product-content .mobile-product-info p,
+              .mobile-product-content .product__block__price,
+              .mobile-product-content .product__block__price * {
+                color: #3c3f36 !important;
+              }
+              .mobile-product-content .mobile-product-buy a,
+              .mobile-product-content .mobile-product-buy button {
+                display: block !important;
+                width: 100% !important;
+                margin: 8px 0 !important;
+                text-align: center !important;
+              }
+              [data-product-slideshow] [style*="--wh-ratio"] {
+                --wh-ratio: 1 !important;
+              }
+            }
+          </style>
           <div
-            class="mobile-product-content flex md:hidden! px-5 pt-3 absolute bottom-[5px] w-full! justify-between! z-[40]! pointer-events-none! items-end!"
-            style="align-items: end; padding-bottom: 8px;"
+            class="mobile-product-content md:hidden! px-5 pt-3 w-full!"
           >
-            <div class="mobile-product-info flex flex-col pointer-events-auto!">
+            <div class="mobile-product-info flex flex-col w-full">
               {% for block in section.blocks %}
                 {% case block.type %}
                   {% when 'title' %}
@@ -210,7 +228,7 @@
                 {% endcase %}
               {% endfor %}
             </div>
-            <div class="mobile-product-buy pointer-events-auto! self-end">
+            <div class="mobile-product-buy w-full">
               {% for block in section.blocks %}
                 {% case block.type %}
                   {% when 'add-buttons' %}
