@@ -102,13 +102,22 @@ a.navlink--toplevel .navtext,
 #product-section-main li {
   font-family: 'Gantari', sans-serif !important;
 }
-/* Gantari em todo o site */
+/* Gantari no site — exceto títulos (mantêm o serif do tema) */
 body,
 button,
 input,
 select,
 textarea,
-h1, h2, h3, h4, h5, h6,
-p, a, span, div, li {
+p, a, span, li,
+.btn, .button,
+.product__block__price,
+.rte {
   font-family: 'Gantari', sans-serif !important;
+}
+
+/* títulos permanecem no serif do tema */
+h1, h2, h3, h4, h5, h6,
+.product__title,
+.h1, .h2, .h3 {
+  font-family: inherit !important;
 }
