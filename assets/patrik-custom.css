@@ -102,7 +102,7 @@ a.navlink--toplevel .navtext,
 #product-section-main li {
   font-family: 'Gantari', sans-serif !important;
 }
-/* Gantari no site — exceto títulos (mantêm o serif do tema) 
+/* Gantari no site — exceto títulos (mantêm o serif do tema) */
 body,
 button,
 input,
@@ -117,11 +117,11 @@ p, a, span, li,
   font-weight: 300 !important;
 }
 
-títulos: serif do tema + maiúsculo + espaçamento justo (estilo Blue Nile) 
+/*títulos: serif do tema + maiúsculo + espaçamento justo (estilo Blue Nile) */
 h1, h2, h3, h4, h5, h6,
 .product__title,
 .h1, .h2, .h3 {
   font-family: inherit !important;
-  text-transform: uppercase !important;
+  
   letter-spacing: .00em !important;
 }*/
