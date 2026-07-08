@@ -149,10 +149,9 @@ h1, h2, h3, h4, h5, h6,
     border-radius: 0 !important;
   }
 }
-/* Caixa "Atendimento Concierge" mais transparente no mobile */
+
+/* Some com o balão de texto do concierge só no produto/mobile */
 @media (max-width:1023px){
-  #custom-chat-wrapper > div{
-    opacity:0.6 !important;
-  }
+  .template-product #chat-tooltip{ display:none !important; }
 }
 
