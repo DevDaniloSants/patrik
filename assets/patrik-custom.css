@@ -1,5 +1,7 @@
 /* ===== Patrik Joias — CSS personalizado ===== */
 
+@import url('https://fonts.googleapis.com/css2?family=Gantari:wght@400;500;600&display=swap');
+
 .product__block__description{font-size:14px;color:#888}
 .product-form__cart-submit{background-color:var(--color-bright-accent)!important;border-color:var(--color-bright-accent)!important;color:var(--color-bright-accent-text)!important}
 .product-form__cart-submit:hover{background-color:var(--color-bright-accent-hover)!important;border-color:var(--color-bright-accent-hover)!important}
@@ -33,4 +35,13 @@ html body .mobile-product-content .mobile-product-buy button{display:block!impor
 .product__grid__info p,
 .product__grid__info span {
   color: #000 !important;
+}
+.header__inner nav a,
+.header__inline-menu a,
+.header__menu a,
+.site-nav a,
+.header a[href] {
+  font-family: 'Gantari', sans-serif !important;
+  font-weight: 500 !important;
+  letter-spacing: .04em;
 }
