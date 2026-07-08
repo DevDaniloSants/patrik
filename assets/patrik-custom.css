@@ -76,7 +76,7 @@ a.navlink--toplevel .navtext,
   html body .header__mobile__right{ display:contents !important; }
 
   html body .header__logo{ order:1 !important; flex:1 1 auto !important; justify-content:flex-start !important; }
-  html body .header__logo .header__logo__link{ --LOGO-WIDTH:82px !important; }
+
 
   html body .header__mobile__left  > *:last-child { order:2 !important; }  /* lupa */
   html body .header__mobile__right > *:first-child{ order:3 !important; }  /* login */
