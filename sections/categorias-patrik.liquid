@@ -17,11 +17,13 @@
   .pj-cat-nome{display:block;margin-top:14px;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:#1e1e1e;transition:.25s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:left}
   .pj-cat:hover .pj-cat-nome{color:#b39055}
   @media(max-width:1024px){
-    .pj-cats-grid{padding:8px 15% 4px;gap:12px}
-    .pj-cat{flex:0 0 calc(100%/{{ section.settings.mobile_visiveis | default: '1.4' }} - 12px);scroll-snap-align:center;transform:scale(.86);transform-origin:center;transition:transform .35s ease}
+    .pj-cats-grid{padding:8px 11% 4px;gap:12px}
+    .pj-cat{position:relative;flex:0 0 78%;scroll-snap-align:center;transform:scale(.9);transform-origin:center;transition:transform .35s ease}
     .pj-cat.pj-ativo{transform:scale(1)}
-    .pj-cat .pj-cat-nome{opacity:.35;transition:opacity .3s}
+    /* nome centralizado sobre a imagem, sem cor de destaque */
+    .pj-cat .pj-cat-nome{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);margin:0;text-align:center;color:#fff !important;font-size:13px;letter-spacing:.2em;text-shadow:0 1px 12px rgba(0,0,0,.5);opacity:.45;transition:opacity .3s;border:none}
     .pj-cat.pj-ativo .pj-cat-nome{opacity:1}
+    .pj-cat:hover .pj-cat-nome,.pj-cat:active .pj-cat-nome{color:#fff !important}
     .pj-cats-titulo{font-size:18px}
     .pj-cats{padding-left:8px;padding-right:8px}
     .pj-cats-seta{display:flex;width:36px;height:36px}
