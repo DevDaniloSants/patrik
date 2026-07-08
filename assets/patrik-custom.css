@@ -89,3 +89,16 @@ a.navlink--toplevel .navtext,
   html body .header__mobile__left > * svg,
   html body .header__mobile__right > * svg{ width:21px !important; height:21px !important; }
 }
+/* Fonte Gantari na página de produto */
+#product-section-main,
+#product-section-main h1,
+#product-section-main h2,
+#product-section-main h3,
+#product-section-main p,
+#product-section-main span,
+#product-section-main a,
+#product-section-main div,
+#product-section-main button,
+#product-section-main li {
+  font-family: 'Gantari', sans-serif !important;
+}
