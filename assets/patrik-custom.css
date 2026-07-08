@@ -69,9 +69,9 @@ a.navlink--toplevel .navtext,
   padding-top: 9px !important;
   padding-bottom: 9px !important;
 }
-/* Reordenar ícones do cabeçalho no mobile */
+/* Cabeçalho mobile estilo Blue Nile */
 @media (max-width:1023px){
-  .header__mobile{ display:flex !important; align-items:center; gap:2px; }
+  .header__mobile{ display:flex !important; align-items:center; gap:6px; }
   .header__mobile__left,
   .header__mobile__right{ display:contents !important; }
 
