@@ -8,7 +8,7 @@ header{z-index:100!important}
 
 /* ===== produto DESKTOP: galeria 2 colunas ===== */
 @media (min-width:1024px){
-.product__grid .product__media{aspect-ratio:4/5;height:auto!important;background:rgba(0,0,0,.007);border-radius:4px;overflow:hidden}
+.product__grid .product__media{aspect-ratio:4/5;height:auto!important;background:rgba(0,0,0,.008);border-radius:4px;overflow:hidden}
 .product__grid .product__media>div,.product__grid .product__media .product-image-wrapper,.product__grid .product__media .product-image-wrapper>div{height:100%!important;aspect-ratio:auto!important}
 .product__grid .product__media img{width:100%!important;height:100%!important}
 }
