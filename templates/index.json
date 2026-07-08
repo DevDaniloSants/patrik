@@ -45,7 +45,7 @@
         "button_XyiAcD"
       ],
       "custom_css": [
-        "h2 {font-size: 0rem; /* ajuste esse valor */}"
+        ".button {border-radius: 8px;}"
       ],
       "name": "Video banner",
       "settings": {
