@@ -126,27 +126,21 @@ h1, h2, h3, h4, h5, h6,
   letter-spacing: .00em !important;
 }*/
 
-/* Página de produto: imagem maior + info encostada à direita */
+/* Banner TOPO apenas (.section-video): desktop meio-direita, mobile centro-base */
 @media (min-width:1024px){
-  html body .product__media__wrapper{ flex:0 0 72% !important; max-width:72% !important; }
-  html body .product__main__content{ flex:0 0 28% !important; max-width:28% !important; }
-  html body .product__inner{ margin-left:auto !important; padding-left:24px !important; }
-}
-/* Banner topo: desktop meio-direita, mobile centro-base */
-@media (min-width:1024px){
-  html body .hero__content__wrapper{
+  html body .section-video .hero__content__wrapper{
     justify-content:flex-end !important;
     align-items:center !important;
     text-align:right !important;
   }
 }
 @media (max-width:1023px){
-  html body .hero__content__wrapper{
+  html body .section-video .hero__content__wrapper{
     justify-content:center !important;
     align-items:flex-end !important;
     text-align:center !important;
     padding-bottom:44px !important;
   }
-  html body .hero__content{ text-align:center !important; width:100% !important; }
-  html body .hero__cta__wrapper{ align-items:center !important; }  /* centraliza o botão */
+  html body .section-video .hero__content{ text-align:center !important; width:100% !important; }
+  html body .section-video .hero__cta__wrapper{ align-items:center !important; }
 }
