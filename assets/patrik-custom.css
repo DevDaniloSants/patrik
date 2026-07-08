@@ -69,14 +69,14 @@ a.navlink--toplevel .navtext,
   padding-top: 9px !important;
   padding-bottom: 9px !important;
 }
-/* Cabeçalho mobile estilo Blue Nile — logo esquerda, ícones à direita */
+/* Cabeçalho mobile — logo esquerda, 4 ícones agrupados à direita com espaçamento igual */
 @media (max-width:1023px){
-  html body .header__mobile{ display:flex !important; align-items:center !important; gap:0 !important; width:100% !important; }
+  html body .header__mobile{ display:flex !important; align-items:center !important; gap:9px !important; width:100% !important; }
   html body .header__mobile__left,
   html body .header__mobile__right{ display:contents !important; }
 
   html body .header__logo{ order:1 !important; flex:1 1 auto !important; justify-content:flex-start !important; }
-  html body .header__logo .header__logo__link{ --LOGO-WIDTH:90px !important; }
+  html body .header__logo .header__logo__link{ --LOGO-WIDTH:82px !important; }
 
   html body .header__mobile__left  > *:last-child { order:2 !important; }  /* lupa */
   html body .header__mobile__right > *:first-child{ order:3 !important; }  /* login */
@@ -84,7 +84,7 @@ a.navlink--toplevel .navtext,
   html body .header__mobile__left  > *:first-child{ order:5 !important; }  /* hambúrguer */
 
   html body .header__mobile__left > *,
-  html body .header__mobile__right > *{ width:40px !important; min-width:0 !important; padding:0 !important; }
+  html body .header__mobile__right > *{ width:38px !important; min-width:0 !important; padding:0 !important; display:flex !important; align-items:center !important; justify-content:center !important; }
   html body .header__mobile__left > * svg,
   html body .header__mobile__right > * svg{ width:21px !important; height:21px !important; }
 }
