@@ -71,13 +71,13 @@ a.navlink--toplevel .navtext,
 }
 /* Cabeçalho mobile estilo Blue Nile */
 @media (max-width:1023px){
-  .header__mobile{ display:flex !important; align-items:center; gap:6px; }
+  .header__mobile{ display:flex !important; align-items:center; gap:8px !important; }
   .header__mobile__left,
   .header__mobile__right{ display:contents !important; }
 
-  .header__logo{ order:1 !important; }                                              /* logo à esquerda */
-  .header__mobile__left  > *:last-child { order:2 !important; margin-left:auto !important; } /* lupa (empurra o grupo pra direita) */
-  .header__mobile__right > *:first-child{ order:3 !important; }                     /* login */
-  .header__mobile__right > *:last-child { order:4 !important; }                     /* bolsa */
-  .header__mobile__left  > *:first-child{ order:5 !important; }                     /* hambúrguer */
+  .header__logo{ order:1 !important; margin:0 auto 0 0 !important; }
+  .header__mobile__left  > *:last-child { order:2 !important; }  /* lupa */
+  .header__mobile__right > *:first-child{ order:3 !important; }  /* login */
+  .header__mobile__right > *:last-child { order:4 !important; }  /* bolsa */
+  .header__mobile__left  > *:first-child{ order:5 !important; }  /* hambúrguer */
 }
