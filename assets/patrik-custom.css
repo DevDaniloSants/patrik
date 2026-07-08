@@ -119,6 +119,5 @@ p, a, span, li,
 h1, h2, h3, h4, h5, h6,
 .product__title,
 .h1, .h2, .h3 {
-  font-family: inherit !important;
   text-transform: uppercase !important;
 }
