@@ -66,6 +66,6 @@ a.navlink--toplevel .navtext,
 .header__inner--bar {
   background: #1a1a1a !important;
   border-bottom: none !important;
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
+  padding-top: 9px !important;
+  padding-bottom: 9px !important;
 }
