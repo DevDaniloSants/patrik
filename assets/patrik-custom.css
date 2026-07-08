@@ -48,3 +48,19 @@ a.navlink--toplevel .navtext,
   letter-spacing: .02em;
   text-transform: uppercase !important;
 }
+/* Faixa superior estilo Blue Nile */
+.header__inner--bar {
+  background: #14142b !important;   /* <-- troque pelo valor exato da Blue Nile */
+  border-bottom: none !important;
+}
+.header__inner--bar p,
+.header__inner--bar a,
+.header__inner--bar span,
+.header__inner--bar .toolbar__text {
+  color: #ffffff !important;
+  font-family: 'Gantari', sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: .08em !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
