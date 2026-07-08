@@ -117,7 +117,7 @@
         "logo_padding": 12,
         "logo_text_size": 5,
         "main_menu_linklist": "menu-principal-teste",
-        "mobile_menu_linklist": "main-menu",
+        "mobile_menu_linklist": "",
         "full_width": true,
         "underline_current": false,
         "enable_search": true,
