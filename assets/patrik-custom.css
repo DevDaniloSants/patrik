@@ -124,4 +124,11 @@ h1, h2, h3, h4, h5, h6,
   font-family: inherit !important;
   
   letter-spacing: .00em !important;
-}*/
+}
+
+/* Página de produto: imagem maior + info encostada à direita */
+@media (min-width:1024px){
+  html body .product__media__wrapper{ flex:0 0 72% !important; max-width:72% !important; }
+  html body .product__main__content{ flex:0 0 28% !important; max-width:28% !important; }
+  html body .product__inner{ margin-left:auto !important; padding-left:24px !important; }
+}
