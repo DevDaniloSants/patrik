@@ -92,6 +92,12 @@
         "ai_gen_block_a3cdcde_ctUFdj": {
           "type": "ai_gen_block_a3cdcde",
           "settings": {
+            "title": "Explore nossas coleções",
+            "title_size": 32,
+            "title_weight": "600",
+            "title_color": "#000000",
+            "title_margin_bottom": 24,
+            "background_color": "#ffffff",
             "desktop_width_percent": 100,
             "section_padding": 50,
             "image_spacing": 50,
@@ -106,11 +112,14 @@
             "image_3": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0337_1.jpg",
             "text_3": "Católicos",
             "target_section_3": "shopify-section-template--20023708155987__section_collection_slider_KeKibV",
+            "text_4": "Section 4",
+            "target_section_4": "",
             "text_size": 34,
             "text_weight": "600",
             "text_alignment": "left",
             "text_color": "#ffffff",
             "text_padding": 15,
+            "button_opacity": 100,
             "overlay_opacity": 0,
             "scroll_offset": 80
           },
@@ -135,7 +144,7 @@
         "grid_medium": 3,
         "grid_mobile": 1.2,
         "bg": "palette--light bg--neutral",
-        "width": "wrapper",
+        "width": "wrapper--full",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -153,7 +162,7 @@
         "grid_medium": 3,
         "grid_mobile": 1.2,
         "bg": "palette--light bg--neutral",
-        "width": "wrapper",
+        "width": "wrapper--full",
         "padding_top": 78,
         "padding_bottom": 36
       }
@@ -171,7 +180,7 @@
         "grid_medium": 3,
         "grid_mobile": 1.2,
         "bg": "palette--light bg--neutral",
-        "width": "wrapper",
+        "width": "wrapper--full",
         "padding_top": 78,
         "padding_bottom": 36
       }
