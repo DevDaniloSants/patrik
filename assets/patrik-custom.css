@@ -113,6 +113,8 @@ p, a, span, li,
 .product__block__price,
 .rte {
   font-family: 'Gantari', sans-serif !important;
+  letter-spacing: .02em;
+  font-weight: 300 !important;
 }
 
 /* títulos permanecem no serif do tema + maiúsculo */
@@ -121,4 +123,6 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3 {
   font-family: inherit !important;
   text-transform: uppercase !important;
+  letter-spacing: .02em;
+  font-weight: 300 !important;
 }
