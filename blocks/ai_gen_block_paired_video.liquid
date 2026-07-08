@@ -69,6 +69,7 @@
     background-color: {{ block.settings.button_bg_color }};
     color: {{ block.settings.button_text_color }};
     text-decoration: none;
+    border-radius: {{ block.settings.button_radius }}px;
     transition: background-color 0.3s ease;
     border: none;
     cursor: pointer;
@@ -84,6 +85,7 @@
     position: relative;
     width: {{ block.settings.video_width | default: 100 }}%;
     margin: 0 auto;
+    border-radius: {{ block.settings.media_radius }}px;
     overflow: hidden;
     align-self: start;
   }
@@ -110,7 +112,7 @@
     transform: translate(-50%, -50%);
     width: 64px; height: 64px;
     background-color: rgba(0,0,0,0.6);
-    
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -171,7 +173,7 @@
     .apv-media-{{ ai_gen_id }} {
       margin-left: calc(-1 * {{ block.settings.horizontal_padding }}px);
       width: calc(100% + {{ block.settings.horizontal_padding | times: 2 }}px);
-   
+      border-radius: 0;
     }
 
     .apv-video-{{ ai_gen_id }},
