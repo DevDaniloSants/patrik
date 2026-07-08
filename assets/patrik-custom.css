@@ -117,12 +117,11 @@ p, a, span, li,
   font-weight: 300 !important;
 }
 
-/* títulos permanecem no serif do tema + maiúsculo */
+/* títulos: serif do tema + maiúsculo + espaçamento justo (estilo Blue Nile) */
 h1, h2, h3, h4, h5, h6,
 .product__title,
 .h1, .h2, .h3 {
-  font-family: 'Gantari';
+  font-family: inherit !important;
   text-transform: uppercase !important;
-  letter-spacing: .02em;
-  font-weight: 100 !important;
+  letter-spacing: .02em !important;
 }
