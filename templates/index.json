@@ -22,10 +22,10 @@
         "button_XyiAcD": {
           "type": "button",
           "settings": {
-            "link_text_1": "Ver alianças de casamento",
+            "link_text_1": "VER ALIANÇAS DE CASAMENTO",
             "link_1": "shopify://pages/casamento-3",
-            "button_size_1": "btn--large",
-            "button_style_1": "btn--outline",
+            "button_size_1": "btn--long",
+            "button_style_1": "btn",
             "button_color_1": "btn--white",
             "link_text_2": "",
             "link_2": "",
