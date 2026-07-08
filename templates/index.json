@@ -88,7 +88,7 @@
         "content_width": 2000,
         "width": "wrapper",
         "padding_top": 0,
-        "padding_bottom": 4
+        "padding_bottom": 0
       }
     },
     "hero": {
