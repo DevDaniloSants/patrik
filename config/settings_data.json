@@ -59,6 +59,7 @@
     "button_radius": 5,
     "animations_scroll_enable": true,
     "parallax_enable": true,
+    "icon_stroke_width": 1.5,
     "favicon": "shopify://shop_images/Simbolo_K_cz_-_transp.png",
     "collection_text_alignment": "text-center",
     "product_card_manual_slider_enable": false,
