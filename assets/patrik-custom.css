@@ -44,6 +44,6 @@ a.navlink--toplevel .navtext,
 .header__drawer a {
   font-family: 'Gantari', sans-serif !important;
   font-weight: 400 !important;
-  letter-spacing: .08em;
+  letter-spacing: .04em;
   text-transform: uppercase !important;
 }
