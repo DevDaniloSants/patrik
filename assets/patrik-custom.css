@@ -64,10 +64,10 @@ a.navlink--toplevel .navtext,
   font-weight: 500 !important;
 }
 .header__inner--bar {
-  background: #1a1a1a !important;
+  background: #001464ff !important;
   border-bottom: none !important;
-  padding-top: 9px !important;
-  padding-bottom: 9px !important;
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
 }
 /* Cabeçalho mobile — logo esquerda, 4 ícones agrupados à direita com espaçamento igual */
 @media (max-width:1023px){
