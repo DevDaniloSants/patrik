@@ -17,10 +17,14 @@
   .pj-cat-nome{display:block;margin-top:14px;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:#1e1e1e;transition:.25s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:left}
   .pj-cat:hover .pj-cat-nome{color:#b39055}
   @media(max-width:1024px){
-    .pj-cat{flex:0 0 calc(100%/{{ section.settings.mobile_visiveis | default: '1.6' }} - 12px)}
+    .pj-cats-grid{padding:8px 15% 4px;gap:12px}
+    .pj-cat{flex:0 0 calc(100%/{{ section.settings.mobile_visiveis | default: '1.4' }} - 12px);scroll-snap-align:center;transform:scale(.86);transform-origin:center;transition:transform .35s ease}
+    .pj-cat.pj-ativo{transform:scale(1)}
+    .pj-cat .pj-cat-nome{opacity:.35;transition:opacity .3s}
+    .pj-cat.pj-ativo .pj-cat-nome{opacity:1}
     .pj-cats-titulo{font-size:18px}
-    .pj-cats{padding-left:16px;padding-right:16px}
-    .pj-cats-seta{display:none}
+    .pj-cats{padding-left:8px;padding-right:8px}
+    .pj-cats-seta{display:flex;width:36px;height:36px}
   }
 </style>
  
@@ -64,6 +68,27 @@
       grid.scrollBy({left: passo, behavior: 'smooth'});
     });
   });
+ 
+  /* cartão central em destaque (estilo carrossel) */
+  function pjMarcaAtivo(){
+    var meio = grid.scrollLeft + grid.clientWidth / 2;
+    var melhor = null, dist = 1e9;
+    grid.querySelectorAll('.pj-cat').forEach(function(c){
+      var cm = c.offsetLeft + c.offsetWidth / 2;
+      var d = Math.abs(cm - meio);
+      if (d < dist) { dist = d; melhor = c; }
+    });
+    grid.querySelectorAll('.pj-cat').forEach(function(c){
+      c.classList.toggle('pj-ativo', c === melhor);
+    });
+  }
+  var pjRaf;
+  grid.addEventListener('scroll', function(){
+    cancelAnimationFrame(pjRaf);
+    pjRaf = requestAnimationFrame(pjMarcaAtivo);
+  }, {passive:true});
+  window.addEventListener('resize', pjMarcaAtivo);
+  pjMarcaAtivo();
 })();
 </script>
  
