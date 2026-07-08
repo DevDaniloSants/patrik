@@ -1,5 +1,5 @@
 /* ===== Patrik Joias — CSS personalizado ===== */
-body{border-top:6px solid red !important}
+
 .product__block__description{font-size:14px;color:#888}
 .product-form__cart-submit{background-color:var(--color-bright-accent)!important;border-color:var(--color-bright-accent)!important;color:var(--color-bright-accent-text)!important}
 .product-form__cart-submit:hover{background-color:var(--color-bright-accent-hover)!important;border-color:var(--color-bright-accent-hover)!important}
