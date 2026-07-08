@@ -102,3 +102,13 @@ a.navlink--toplevel .navtext,
 #product-section-main li {
   font-family: 'Gantari', sans-serif !important;
 }
+/* Gantari em todo o site */
+body,
+button,
+input,
+select,
+textarea,
+h1, h2, h3, h4, h5, h6,
+p, a, span, div, li {
+  font-family: 'Gantari', sans-serif !important;
+}
