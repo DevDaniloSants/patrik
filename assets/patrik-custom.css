@@ -59,7 +59,6 @@ a.navlink--toplevel .navtext,
 .header__inner--bar .toolbar__text {
   color: #ffffff !important;
   font-family: 'Gantari', sans-serif !important;
-  text-transform: uppercase !important;
   letter-spacing: .08em !important;
   font-size: 12px !important;
   font-weight: 500 !important;
