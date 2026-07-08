@@ -34,11 +34,11 @@ html body .mobile-product-content .mobile-product-buy button{display:block!impor
 .product__grid__info span {
   color: #000 !important;
 }
-.header__inner nav a,
-.header__inline-menu a,
-.header__menu a,
-.site-nav a,
-.header a[href] {
+header a,
+.header a,
+nav a,
+[class*="header__"] a,
+[class*="menu"] a {
   font-family: 'Gantari', sans-serif !important;
   font-weight: 500 !important;
   letter-spacing: .04em;
