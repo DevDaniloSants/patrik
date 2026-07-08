@@ -115,9 +115,10 @@ p, a, span, li,
   font-family: 'Gantari', sans-serif !important;
 }
 
-/* títulos permanecem no serif do tema */
+/* títulos permanecem no serif do tema + maiúsculo */
 h1, h2, h3, h4, h5, h6,
 .product__title,
 .h1, .h2, .h3 {
   font-family: inherit !important;
+  text-transform: uppercase !important;
 }
