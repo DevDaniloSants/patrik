@@ -147,6 +147,6 @@ h1, h2, h3, h4, h5, h6,
     text-align:center !important;
     padding-bottom:44px !important;
   }
-  html body .hero__content{ text-align:center !important; }
-  html body .hero__cta__wrapper{ justify-content:center !important; }
+  html body .hero__content{ text-align:center !important; width:100% !important; }
+  html body .hero__cta__wrapper{ align-items:center !important; }  /* centraliza o botão */
 }
