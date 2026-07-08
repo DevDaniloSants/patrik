@@ -55,7 +55,7 @@
         "image": "shopify://shop_images/2026_05_25_PBUCHER_PATRIK_0246_1.jpg",
         "banner_link": "shopify://pages/casamento-3",
         "preload_image": true,
-        "text_align": "align--bottom-center",
+        "text_align": "align--middle-right",
         "text_color": "text--white",
         "overlay_opacity": 0,
         "overlay_color": "#000",
