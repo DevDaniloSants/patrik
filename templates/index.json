@@ -80,6 +80,7 @@
       "block_order": [
         "text_YPVMLb"
       ],
+      "disabled": true,
       "name": "Espaçamento",
       "settings": {
         "align_text": "text-left",
