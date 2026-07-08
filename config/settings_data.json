@@ -56,7 +56,7 @@
     "layout_site_width": 1200,
     "layout_gutter": 5,
     "layout_outer": 50,
-    "button_radius": 5,
+    "button_radius": 0,
     "animations_scroll_enable": true,
     "parallax_enable": true,
     "icon_stroke_width": 1.5,
