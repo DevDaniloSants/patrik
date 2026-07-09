@@ -174,3 +174,17 @@ html body .specialist-btn{
   html body .product__main__content{ flex:0 0 28% !important; max-width:28% !important; }
   html body .product__inner{ margin-left:auto !important; padding-left:24px !important; }
 }
+/* Banner topo desktop: quebra o título + botão menor */
+@media (min-width:1024px){
+  .section-video .hero__title{
+    max-width:430px !important;
+    margin-left:auto !important;
+  }
+  .section-video .hero__btn{
+    font-size:11px !important;
+    padding:9px 20px !important;
+    height:auto !important;
+    min-height:0 !important;
+    max-height:none !important;
+  }
+}
