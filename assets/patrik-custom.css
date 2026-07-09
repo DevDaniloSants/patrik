@@ -188,3 +188,15 @@ html body .specialist-btn{
     max-height:none !important;
   }
 }
+/* Todos os botões com a fonte do banner do topo (Avenir) + maiúsculo — exceto o chat */
+html body .btn,
+html body .standard__cta,
+html body .hero__btn,
+html body .btn--add-to-cart,
+html body .specialist-btn,
+html body .product-form__cart-submit,
+html body [class*="btn--"],
+html body button[type="submit"]{
+  font-family: Avenir, sans-serif !important;
+  text-transform: uppercase !important;
+}
