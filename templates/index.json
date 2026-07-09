@@ -398,7 +398,7 @@
     "collection_split_4BRfHx": {
       "type": "collection-split",
       "custom_css": [
-        "@media (min-width: 768px) {.collection-split .btn {background-color: #1a1a1a; color: #fff; border-radius: 45px; padding: 14px 20px; font-size: 15px; letter-spacing: 0.1em; }}",
+        "@media (min-width: 768px) {.collection-split .btn {background-color: #1a1a1a; color: #fff; padding: 14px 20px; font-size: 15px; letter-spacing: 0.1em; }}",
         " /* ── MOBILE (< 750px) ── */@media (max-width: 749px) {.btn {position: static !important; margin-top: 16px !important; display: block !important; width: 100% !important; }}"
       ],
       "name": "Products with image",
@@ -471,10 +471,10 @@
             "text": "<p>Alguns momentos merecem ser lembrados para sempre. Transformamos suas histórias em joias únicas, criadas para celebrar conquistas, tradições e laços que atravessam gerações.<br/><br/></p>",
             "button_text": "Crie sua joia exclusiva",
             "button_link": "#open-specialist-modal",
-            "button_text_size": 17,
-            "button_padding_vertical": 8,
+            "button_text_size": 18,
+            "button_padding_vertical": 12,
             "button_padding_horizontal": 32,
-            "button_radius": 50,
+            "button_radius": 0,
             "button_bg_color": "#3c3f36",
             "button_text_color": "#ffffff",
             "button_hover_bg_color": "#3c3f36",
