@@ -177,7 +177,7 @@ html body .specialist-btn{
 /* Banner topo desktop: quebra o título + botão menor */
 @media (min-width:1024px){
   .section-video .hero__title{
-    max-width:380px !important;
+    max-width:300px !important;
     margin-left:auto !important;
   }
   .section-video .hero__btn{
