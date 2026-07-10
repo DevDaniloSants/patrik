@@ -535,6 +535,23 @@
     "section_gallery_slider_hxtEhm": {
       "type": "section-gallery-slider",
       "blocks": {
+        "text_block_tf9Cyh": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/WhatsApp_Image_2026-07-10_at_12.56.08.jpg",
+            "shape_class": "",
+            "title": "Guilherme D.",
+            "text": "<p><br/>Fechar com a Patrik foi uma decisão muito acertada. Eu tinha uma ideia do que queria e eles conseguiram transformar isso em um anel exatamente do jeito que imaginei. Durante todo o processo fui acompanhando a criação e isso passou muita confiança. O resultado final ficou incrível.<br/><br/></p>",
+            "button_label": "",
+            "button_link": "",
+            "button_color": "btn--neutral",
+            "button_style": "btn--soft",
+            "enable_video": false,
+            "video_link": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_button_color": "text--white"
+          }
+        },
         "text_block_BWBzCF": {
           "type": "text_block",
           "settings": {
@@ -588,6 +605,7 @@
         }
       },
       "block_order": [
+        "text_block_tf9Cyh",
         "text_block_BWBzCF",
         "text_block_kdkqCx",
         "text_block_FyjVaX"
