@@ -138,6 +138,75 @@
   </div>
 </div>
 
+<script>
+  if (!window.aroPendingGuardReady) {
+    window.aroPendingGuardReady = true;
+    var aroState = {};
+
+    var findAroSelector = function (formId) {
+      return Array.from(document.querySelectorAll('[data-aro-option]')).find(function (el) {
+        return el.dataset.aroOption === formId;
+      });
+    };
+
+    var syncAroSelectors = function () {
+      document.querySelectorAll('[data-aro-pending]').forEach(function (el) {
+        if (!aroState[el.dataset.aroPending]) aroState[el.dataset.aroPending] = 'pending';
+      });
+      document.querySelectorAll('[data-aro-option]').forEach(function (el) {
+        if (aroState[el.dataset.aroOption] !== 'pending') return;
+        var label = el.querySelector('[data-option-value]');
+        var toggle = el.querySelector('[data-popout-toggle]');
+        var textNode = toggle && Array.from(toggle.childNodes).find(function (node) {
+          return node.nodeType === 3 && node.nodeValue.trim();
+        });
+        if (label && label.textContent !== 'Escolher aro') label.textContent = 'Escolher aro';
+        if (textNode && textNode.nodeValue.trim() !== 'Escolher aro') textNode.nodeValue = 'Escolher aro';
+        el.querySelectorAll('.select-popout__item--current').forEach(function (item) {
+          item.classList.remove('select-popout__item--current');
+        });
+        el.querySelectorAll('[aria-current]').forEach(function (option) {
+          option.removeAttribute('aria-current');
+        });
+        el.querySelectorAll('input[type="radio"]:checked').forEach(function (input) {
+          input.checked = false;
+        });
+      });
+    };
+
+    document.addEventListener('DOMContentLoaded', function () {
+      syncAroSelectors();
+      new MutationObserver(syncAroSelectors).observe(document.body, { childList: true, subtree: true, characterData: true });
+    });
+
+    document.addEventListener('click', function (event) {
+      var aroOption = event.target.closest('[data-aro-option] [data-popout-option], [data-aro-option] label, [data-aro-option] input[type="radio"]');
+      if (aroOption) {
+        aroState[aroOption.closest('[data-aro-option]').dataset.aroOption] = 'chosen';
+        return;
+      }
+      var button = event.target.closest('[data-add-to-cart], .pj-sacola');
+      if (!button || !button.form) return;
+      var formId = button.form.getAttribute('id');
+      if (aroState[formId] !== 'pending') return;
+      var aroSelector = findAroSelector(formId);
+      if (!aroSelector) return;
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      var errorDisplay = button.closest('[data-add-action-wrapper]') || button.form;
+      errorDisplay = errorDisplay.querySelector('[data-error-display]');
+      if (errorDisplay) {
+        var errorMessage = document.createElement('div');
+        errorMessage.className = 'errors';
+        errorMessage.textContent = 'Escolha o tamanho do aro para continuar.';
+        errorDisplay.replaceChildren(errorMessage);
+        errorDisplay.style.display = 'block';
+      }
+      aroSelector.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, true);
+  }
+</script>
+
 
 {%- unless hidden -%}
   {%- assign sm_modal_id = 'specialist-modal-' | append: uniq_id -%}

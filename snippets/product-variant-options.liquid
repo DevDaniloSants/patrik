@@ -43,6 +43,16 @@
           if settings.variant_form == 'auto' and longest_value < 16
             assign variant_style = 'button'
           endif
+
+          assign option_words = option.name | handleize | split: '-'
+          assign is_aro_option = false
+          if option_words contains 'aro' or option_words contains 'anel' or option_words contains 'tamanho' or option_words contains 'tamano'
+            assign is_aro_option = true
+          endif
+          assign aro_pending = is_aro_option
+          if product.selected_variant != nil
+            assign aro_pending = false
+          endif
         -%}
         {%- if settings.swatches_enable -%}
           {% assign is_swatch_option = false %}
@@ -70,12 +80,14 @@
           class="selector-wrapper {% if is_swatch_option %}selector-wrapper--color{% endif %}{% if is_swatch_option or variant_style == 'button' %} selector-wrapper--fullwidth{% endif %} js"
           data-select-label="{{ option.name }}"
           data-option-position="{{ option.position }}"
+          {% if is_aro_option %}data-aro-option="{{ uniq_id }}"{% endif %}
+          {% if aro_pending %}data-aro-pending="{{ uniq_id }}"{% endif %}
         >
           {%- if variant_style == 'button' or is_swatch_option -%}
             <fieldset class="radio__fieldset">
               <legend class="radio__legend" aria-label="{{ option.name | escape_once }}">
                 <span class="radio__legend__label">{{ option.name | escape_once }}</span>
-                <span data-option-value data-swapper-target>{{ option.selected_value.name }}</span>
+                <span data-option-value data-swapper-target>{% if aro_pending %}Escolher aro{% else %}{{ option.selected_value.name }}{% endif %}</span>
               </legend>
               {%- if is_swatch_option -%}
                 {%- assign lock_width_class = 'radio__inputs--swatch' -%}
@@ -171,7 +183,7 @@
                             changeVariant('{{- request.origin | append: variant_url -}}', {{- value.variant.id | json -}}, {{- value.variant.featured_media.id | json -}});
                           {% endif %}
                         "
-                        {% if value.selected %}
+                        {% if value.selected and aro_pending == false %}
                           checked
                         {% endif %}
                       >
@@ -201,7 +213,7 @@
               <popout-select>
                 <div class="select-popout" data-popout data-popout-prevent="true">
                   <button type="button" class="select-popout__toggle border-t-0!" aria-expanded="false" aria-controls="{{ uniq_id }}-select-{{ option.name | handle }}-{{ forloop.index }}" aria-labelledby="{{ uniq_id }}-select-{{ option.name | handle }}-label-{{ forloop.index }}" data-popout-toggle>
-                    {{ option.selected_value }}
+                    {% if aro_pending %}Escolher aro{% else %}{{ option.selected_value }}{% endif %}
                     {%- render 'icon-core-chevron-down-transparent' -%}
                   </button>
 
@@ -215,7 +227,7 @@
                           value_id: value.id
                         -%}
                       {%- endcapture -%}
-                      <li class="select-popout__item {% if option.selected_value == value %}select-popout__item--current{% endif %}">
+                      <li class="select-popout__item {% if option.selected_value == value and aro_pending == false %}select-popout__item--current{% endif %}">
                         <a
                           class="
                             select-popout__option
@@ -235,7 +247,7 @@
                               x-intersect.once="preloadVariant('{{- variant_url -}}')"
                             {% endunless %}
                           {% endif %}
-                          {% if option.selected_value == value -%}aria-current="true"{%- endif -%}
+                          {% if option.selected_value == value and aro_pending == false -%}aria-current="true"{%- endif -%}
                           data-value="{{ value | escape_once }}" data-popout-option
                         >
                           <span>
